@@ -1,4 +1,4 @@
 InGrid Documentation
 ====================
 
-http://informationgrid.github.io/docs
+http://informationgrid.github.io/
