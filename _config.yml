@@ -3,7 +3,7 @@ name: InGrid
 
 # use for local testing
 # baseurl: /github-pages
-baseurl: /
+baseurl: 
 
 
 # versions of the software (current is first)
