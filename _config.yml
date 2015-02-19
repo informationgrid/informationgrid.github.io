@@ -1,7 +1,10 @@
 # name of the software
 name: InGrid
 
-baseurl: /github-pages
+# use for local testing
+# baseurl: /github-pages
+baseurl: /
+
 
 # versions of the software (current is first)
 versions:
