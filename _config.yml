@@ -1,0 +1,33 @@
+# name of the software
+name: InGrid
+
+baseurl: /github-pages
+
+# versions of the software (current is first)
+versions:
+  - 3.5
+  - 3.4
+
+# licence of the software
+license: EUPL V1.1
+licenseUrl: https://joinup.ec.europa.eu/software/page/eupl
+
+# list of additional links on the right of the top menu
+headerLinks:
+  - title: GitHub
+    url: https://github.com/informationgrid/docs
+
+# list of additional links on the footer
+footerLinks:
+  - title: GitHub
+    url: https://github.com/informationgrid/docs
+  - title: Issues
+    url: https://github.com/informationgrid/docs/issues?state=open
+
+gems:
+  - jekyll-redirect-from
+
+# DON'T MODIFY
+highlighter: pygments
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile']

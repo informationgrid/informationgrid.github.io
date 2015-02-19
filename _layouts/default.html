@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{site.name}} - {{page.title}}</title>
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link href="{{site.baseurl}}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/assets/bootstrap-docs/css/docs.min.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="{{site.baseurl}}/assets/bootstrap-docs/js/docs.min.js"></script>
+  <script src="{{site.baseurl}}/assets/js/main.js"></script>
+</head>
+
+<body>
+
+  {% comment %} Get version from path e.g. /1.0/index.html -> 1.0 {% endcomment %}
+  {% assign path = page.path | split: '/' %}
+  {% assign thisVersion = path[0] %}
+  {% assign latestVersion = site.versions | last %}
+
+  <!-- Main navigation
+  =========================================== -->
+  <header class="navbar navbar-static-top bs-docs-nav" id="top">
+    <div class="container">
+      <div class="navbar-header" role="banner">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{site.baseurl}}/{{thisVersion}}/index.html">{{site.name}}</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+{% capture renderThis %}
+        {% assign versionUrl = '/'|append:thisVersion|append:'/' %}
+        {% for p in site.pages %}{% if p.isHome and p.menu and p.url contains thisVersion %}{% for item in p.menu %}{% if item.menu %}
+              <li class="dropdown">
+                <a href="{{item.href}}" class="dropdown-toggle" data-toggle="dropdown">{{item.title}} <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                {% for subitem in item.menu %}
+                  {% if subitem.type %}
+          <li role="presentation" class="divider"></li>        
+          <li role="presentation" class="dropdown-header">{{subitem.title}}</li>
+                  {% else %}
+          <li{% if page.url contains subitem.href %} class="active"{% endif %}><a href="{{site.baseurl}}/{{thisVersion}}/{{subitem.href}}">{{subitem.title}}</a></li>
+          {% endif %}{% endfor %}
+                </ul>
+              </li>
+              {% else %}
+              <li><a href="{{site.baseurl}}/{{thisVersion}}/{{item.href}}">{{item.title}}</a></li>
+              {% endif %}
+              </li>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+{% endcapture %}
+{{ renderThis | strip_newlines | replace:'  ','' }}    
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        {% for p in site.headerLinks %}
+          <li>
+            <a href="{{p.url}}">{{p.title}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Header
+  =========================================== -->
+  <div class="bs-docs-header" id="content">
+    <div class="container">
+      <h1>{{page.title}}</h1>
+      <p class="lead">{{page.description}}</p>
+    
+{% capture renderThis %}
+    <div id="breadcrumb">
+      <span><a href="{{site.baseurl}}/">InGrid</a></span> 
+      {% assign crumbs = page.url | split: '/' %}
+      {% assign crumbs_total = crumbs | size | minus: 1 %}
+      {% for crumb in crumbs offset: 1 %}
+        {% if crumb != "index.html" %}
+          {% assign crumbTxt = crumb %}
+          {% for p in site.pages %}
+            {% if p.isHome and p.menu and p.url contains thisVersion %}
+              {% for item in p.menu %}
+                {% assign itemPaths = item.href | split: '/' %}
+                {% if itemPaths.last == crumb %}
+                  {% assign crumbTxt = item.title %}
+                {% endif %}
+                {% if item.menu %}
+                  {% for subItem in item.menu %}
+                    {% if  subItem.href %}
+                      {% assign subItemPaths = subItem.href | split: '/' %}
+                      {% if subItemPaths.last == crumb %}
+                        {% assign crumbTxt = subItem.title %}
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          / <span><a href="{{site.baseurl}}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{% if forloop.index > crumbs_total %}{{ crumb }}{% else %}{{ crumb | append: '/' }}{% endif %}{% endfor %}">{{ crumbTxt | replace:'-',' ' }}</a></span> 
+        {% endif %}
+      {% endfor %}
+    </div>    
+{% endcapture %}
+{{ renderThis | strip_newlines | replace:'  ','' }}    
+    </div>
+  </div>
+
+  <div class="container bs-docs-container">
+    <div class="row">
+      <!-- Content
+      =========================================== -->
+      <div class="col-md-9" role="main">
+        {{content}}
+      </div>
+
+      <!-- Page navigation
+      =========================================== -->
+      <div class="col-md-3" role="complementary">
+        <div class="bs-docs-sidebar hidden-print">
+          <select class="form-control input-sm" onchange="document.location.href='../'+this.value+'/'">
+          {% for v in site.versions %}
+            {% capture vStr %}{{v}}{% endcapture %}
+            {% if vStr == thisVersion %}
+            <option selected value="{{v}}">Version {{v}}</option>
+            {% else %}
+            <option value="{{v}}">Version {{v}}</option>
+            {% endif %}
+          {% endfor %}
+          </select>
+          <ul class="nav bs-docs-sidenav">
+          </ul>
+          <a class="back-to-top" href="#top">
+            <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer
+  =========================================== -->
+  <footer class="bs-docs-footer" role="contentinfo">
+    <div class="container">
+      <p>
+        {{site.name}} ist unter <a href="{{site.licenseUrl}}" target="_blank">{{site.license}}</a>,
+        die Dokumentation ist unter <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a> lizensiert.
+      </p>
+
+      <ul class="bs-docs-footer-links muted">
+        <li>Aktuellste Version v{{latestVersion}}</li>
+      {% for l in site.footerLinks %}
+        <li>&middot;</li>
+        <li><a href="{{l.url}}">{{l.title}}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </footer>
+  
+  <script type="text/javascript" src="https://www.draw.io/embed.js"></script>
+  
+  <!-- Add fancyBox -->
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  <!-- Optionally add helpers - button, thumbnail and/or media -->
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+  <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+  <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+  <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("img").each(function() {
+        // wrap images in a tag, for fancybox's sake
+        var parent = $(this).parent();
+        var clone = $(this).clone();
+        var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
+        newParent.fancybox({
+          closeClick: true,
+          helpers : {
+            title : {
+              type : 'inside'
+            }
+          }
+        });
+        parent.replaceWith(newParent);
+      });
+    });
+  </script>  
+  
+  
+</body>
+</html>

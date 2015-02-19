@@ -1,0 +1,61 @@
+.bs-docs-masthead {
+  padding-top:50px;
+  padding-bottom:40px;
+  margin-bottom:20px;
+  background-color:#196EA2;
+  background-image:none;
+}
+
+.bs-docs-header {
+  background-color:#196EA2;
+  background-image:none;
+  padding-bottom: 10px;
+}
+
+.bs-docs-header .lead {
+  color:#fff;
+}
+
+.bs-docs-nav .navbar-brand, .bs-docs-nav .navbar-nav>li>a {
+  color:#196EA2;
+}
+
+.bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active:focus>a {
+  color:#196EA2;
+  border-left:2px solid #196EA2;
+}
+
+.bs-docs-header h1, .bs-docs-header p {
+  margin-right:0px;
+}
+
+.bs-docs-sidebar .nav > li > a {
+  font-size:15px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+  font-size:14px;
+}
+.back-top-top {
+  font-size:13px;
+}
+
+#breadcrumb, #breadcrumb a {
+  margin-top: 20px;
+  font-size:15px;
+  color:#fff;
+}
+
+h4 {
+  margin-top: 20px
+}
+
+blockquote {
+  font-size:14px;
+  border-left: 3px solid #196EA2;
+}
+
+img {
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  height: auto;
+}
