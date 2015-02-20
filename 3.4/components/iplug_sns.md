@@ -6,7 +6,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Der SNS-iPlug bietet eine Schnittstelle zum [Netzwerk Service (SNS) des Umweltbundesamtes](http://www.semantic-network.de/).
+Der SNS-iPlug bietet eine Schnittstelle zum [Semantischen Netzwerk Service (SNS) des Umweltbundesamtes](http://www.semantic-network.de/).
 
 Der Semantische Netzwerk Service bietet folgende Dienste:
 
