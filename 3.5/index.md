@@ -1,6 +1,6 @@
 ---
 layout: default
-title: InGrid
+title: Informationgrid: Indexieren, Recherchieren, Visualisieren, Teilen
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 isHome: true
 menu: 
