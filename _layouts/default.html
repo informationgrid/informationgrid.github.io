@@ -136,7 +136,7 @@
       =========================================== -->
       <div class="col-md-3" role="complementary">
         <div class="bs-docs-sidebar hidden-print">
-          <select class="form-control input-sm" onchange="document.location.href='../'+this.value+'/'">
+          <select class="form-control input-sm" onchange="document.location.href='{{site.baseurl}}/'+this.value+'/'">
           {% for v in site.versions %}
             {% capture vStr %}{{v}}{% endcapture %}
             {% if vStr == thisVersion %}
