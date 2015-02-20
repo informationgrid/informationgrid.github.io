@@ -75,7 +75,7 @@ menu:
         href: components/iplug_dsc_mapclient.html
       - title: Schnittstellenkomponenten
         type: header
-      - title: Search Schnittstelle (OpenSearch, ATOM Download Service)
+      - title: Such-Schnittstelle
         href: components/interface_search.html
       - title: CSW Schnittstelle
         href: components/interface_csw.html

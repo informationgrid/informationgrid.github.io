@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Such Schnittstelle (OpenSearch, ATOM Download Service)
+title: Such-Schnittstelle
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
