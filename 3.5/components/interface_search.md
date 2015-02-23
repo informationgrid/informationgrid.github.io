@@ -236,6 +236,13 @@ Die Grundidee dabei ist, dass vom Metadaten-Erfasser im InGridCatalog/IGE Serivc
 
 Alle an dieses Dienste-Metadatenobjekt gekoppelten Daten-Metadaten werden im Service-Feed eingetragen. Für jeden Daten-Metadatensatz kann sodann ein Daten-Feed abgerufen werden, dessen URL als entry-Element des Service-Feeds annonciert wird. Im Daten-Feed werden alle Download-Optionen für diesen Datensatz eingetragen.
 
+Folgende Kopplungen können im InGrid Catalog (Editor) angegeben werden:
+
+- Auswahl eines entsprechenden Daten Objektes über "Dargestellte Daten"
+- Erstellen eines getRecordByID CSW Requested als "Datendownload" Verweis (Der Verweis wird von der ATOM Schnittstelle automatisch verfolgt.)
+
+Im InGrid Catalog/InGrid Editor kann dies entweder über einen Eintrag in "gekoppelte Daten" im Geodatenservice
+
 Eine weitere Anforderung an die dynamisch generierten Download-Services ist die Bereitstellung eines OpenSearch-Interfaces mit einem fest definierten Satz an Operationen. 
 
 ### Methoden
