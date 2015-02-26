@@ -26,6 +26,8 @@ footerLinks:
     url: https://github.com/informationgrid/informationgrid.github.io
   - title: Issues
     url: https://github.com/informationgrid/docs/issues?state=open
+  - title: Impressum
+    url: about/disclaimer.html
 
 gems:
   - jekyll-redirect-from
