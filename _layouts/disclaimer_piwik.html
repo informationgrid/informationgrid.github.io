@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>{{site.name}} - {{page.title}}</title>
 
@@ -15,19 +13,12 @@
 
   <link href="{{site.baseurl}}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="{{site.baseurl}}/assets/bootstrap-docs/css/docs.min.css" rel="stylesheet">
+  <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
 
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="{{site.baseurl}}/assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="{{site.baseurl}}/assets/bootstrap-docs/js/docs.min.js"></script>
-
-  <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
   <script src="{{site.baseurl}}/assets/js/main.js"></script>
-  
 </head>
 
 <body>
@@ -54,26 +45,23 @@
         <ul class="nav navbar-nav">
 {% capture renderThis %}
         {% assign versionUrl = '/'|append:thisVersion|append:'/' %}
-        {% for p in site.pages %}
-          {% if p.isHome and p.menu and p.url contains thisVersion %}
-            {% for item in p.menu %}
-              {% if item.menu %}
+        {% for p in site.pages %}{% if p.isHome and p.menu and p.url contains thisVersion %}{% for item in p.menu %}{% if item.menu %}
               <li class="dropdown">
                 <a href="{{item.href}}" class="dropdown-toggle" data-toggle="dropdown">{{item.title}} <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                 {% for subitem in item.menu %}
                   {% if subitem.type %}
-                  <li role="presentation" class="divider"></li>        
-                  <li role="presentation" class="dropdown-header">{{subitem.title}}</li>
+          <li role="presentation" class="divider"></li>        
+          <li role="presentation" class="dropdown-header">{{subitem.title}}</li>
                   {% else %}
-                  <li{% if page.url contains subitem.href %} class="active"{% endif %}><a href="{{site.baseurl}}/{{thisVersion}}/{{subitem.href}}">{{subitem.title}}</a></li>
-                  {% endif %}
-                {% endfor %}
+          <li{% if page.url contains subitem.href %} class="active"{% endif %}><a href="{{site.baseurl}}/{{thisVersion}}/{{subitem.href}}">{{subitem.title}}</a></li>
+          {% endif %}{% endfor %}
                 </ul>
               </li>
               {% else %}
               <li><a href="{{site.baseurl}}/{{thisVersion}}/{{item.href}}">{{item.title}}</a></li>
               {% endif %}
+              </li>
             {% endfor %}
           {% endif %}
         {% endfor %}
@@ -142,6 +130,8 @@
       =========================================== -->
       <div class="col-md-9" role="main">
         {{content}}
+        
+        <iframe style="border: 0; height: 200px; width: 100%;" src="https://piwik.wemove.com/index.php?module=CustomOptOut&action=optOut&idSite=5&language=de"></iframe>
       </div>
 
       <!-- Page navigation

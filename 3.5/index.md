@@ -15,6 +15,8 @@ menu:
         href: about/applications.html
       - title: Glossar
         href: about/glossar.html
+      - title: Impressum
+        href: about/disclaimer.html
   - title: System
     href: "system"
     menu: 
