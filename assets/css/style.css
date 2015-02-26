@@ -2,12 +2,12 @@
   padding-top:50px;
   padding-bottom:40px;
   margin-bottom:20px;
-  background-color:#196EA2;
+  background-color:#196EA2 !important;
   background-image:none;
 }
 
 .bs-docs-header {
-  background-color:#196EA2;
+  background-color:#196EA2 !important;
   background-image:none;
   padding-bottom: 10px;
 }
@@ -21,8 +21,8 @@
 }
 
 .bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>.active:hover>a, .bs-docs-sidebar .nav>.active:focus>a {
-  color:#196EA2;
-  border-left:2px solid #196EA2;
+  color:#196EA2 !important;
+  border-left:2px solid #196EA2 !important;
 }
 
 .bs-docs-header h1, .bs-docs-header p {
@@ -51,7 +51,7 @@ h4 {
 
 blockquote {
   font-size:14px;
-  border-left: 3px solid #196EA2;
+  border-left: 3px solid #196EA2 !important;
 }
 
 img {
