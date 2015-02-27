@@ -4,7 +4,28 @@ title: Überblick
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-## Überblick
+## Das Projekt
+
+Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege und Weiterentwicklung der InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen" (VKoopUIS-Projekt Nr. 50) unter dem Dach "Verwaltungskooperation Umweltinformationssysteme" (VKoopUIS) weiter entwickelt.
+
+Beteiligt sind die Partner:
+* Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
+* Bundesanstalt für IT-Dienstleistungen
+* Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft Brandenburg
+* GeoInformation Bremen
+* Behörde für Stadtentwicklung und Umwelt Hamburg
+* Landesamt für Umwelt, Naturschutz und Geologie Mecklenburg-Vorpommern
+* Landesamt für Vermessung, Geoinformation und Landentwicklung Saarland
+* Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie
+* Ministerium für Landwirtschaft und Umwelt des Landes Sachsen-Anhalt
+
+Im Rahmen des Projektes wird die Software InGrid gepflegt und weiter entwickelt. InGrid wurde zwischen 2005 und 2014 im Rahmen der Bund/Länder-Verwaltungsvereinbarung UDK/GEIN ("PortalU") entwickelt, u.a. um die Verpflichtungen, die sich aus der Umsetzung der relevanten europäischen und nationalen Gesetzgebungen (z.B. Umweltinformtionsrichtlinie/Umweltinformationsgesetze, INSPIRE-Richtlinie/Geodatenzugangsgesetze) ergeben, zu erfüllen.
+
+Seit dem 01.01.2015 stehen die InGrid-Software-Komponenten unter der "European Union Public License" (EUPL; siehe https://joinup.ec.europa.eu/software/page/eupl).
+
+Sollten Sie Fragen zum Projekt, Interesse an der Nutzung bestimmter InGrid-Komponenten oder an einer Projektmitarbeit haben, wenden Sie sich bitte per E-Mail an vkoopuis AT informationgrid.eu
+
+## InGrid Überblick
 
 Die InGrid-Software stellt modulare Technologien für den Aufbau von Datenportalen zur Verfügung. Sie wurde u.a. entlang der Vorgaben und Empfehlungen der Geodateninfrastruktur Deutschland (GDI-DE) entwickelt und eignet sich daher auch zum Aufbau INSPIRE- und GDI-DE-konformer Geodateninfrastrukturen.
 
