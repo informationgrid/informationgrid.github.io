@@ -15,9 +15,9 @@ Schematische Darstellung eines InGrid-Portals
 
 <br>
 
-Der Name "InGrid" entstand aus dem englischen "information grid" und trägt dem modularen und verteilten Ansatz der Software Rechnung: Die Komponenten bilden eine Art "Informationsnetz" in dem verschiedene Datenquellen über Schnittstellen angebunden werden. Die Datenquellen werden über einen verteilten Index integriert, der sowohl über das Portal, als auch über verschiedene Schnittstellen verarbeitet werden kann. Die einzelnen Kompnenten können physikalisch über beliebig viele Standorte verteilt werden.
+Der Name "InGrid" entstand aus dem englischen "information grid" und trägt dem modularen und verteilten Ansatz der Software Rechnung: Die Komponenten bilden eine Art "Informationsnetz" in dem verschiedene Datenquellen über Schnittstellen angebunden werden. Die Datenquellen werden über einen verteilten Index integriert, der sowohl über das Portal, als auch über verschiedene Schnittstellen verarbeitet werden kann. Die einzelnen Bausteine können physikalisch über beliebig viele Standorte verteilt werden.
 
-Die wichtigste Komponenten von InGrid sind:
+Die wichtigsten Komponenten von InGrid sind:
 
 * eine nutzerfreundliche, personalisierbare und flexibel konfigurierbare Portaloberfläche,
 * der ISO19115/19119-, INSPIRE- und GDI-DE-konforme, web-basierte Datenkatalog "InGridEditor",
