@@ -28,7 +28,7 @@ InGrid wurde zwischen 2005 und 2014 im Rahmen der Bund/Länder-Verwaltungsverein
 
 Die Bund/Länder-Verwaltungsvereinbarung UDK/GEIN ("PortalU") endete 2014. Seit dem 01.01.2015 werden die InGrid-Software-Komponenten daher im Rahmen des o.g. VKoopUIS-Projekts als Free/Open Source Software (F/OSS) unter der [European Union Public License](https://joinup.ec.europa.eu/software/page/eupl) (EUPL) weiter entwickelt.
 
-Sollten Sie Fragen zum Projekt, Interesse an der Nutzung bestimmter InGrid-Komponenten oder an einer Projektmitarbeit haben, wenden Sie sich bitte per E-Mail an vkoopuis@informationgrid.eu
+Sollten Sie Fragen zum Projekt, Interesse an der Nutzung bestimmter InGrid-Komponenten oder an einer Projektmitarbeit haben, wenden Sie sich bitte per E-Mail an <vkoopuis@informationgrid.eu>.
 
 ## InGrid Überblick
 
