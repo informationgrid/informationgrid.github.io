@@ -41,9 +41,9 @@ InGrid ist modular aufgebaut. Verschiedene Komponenten bilden eine Art "Informat
 
 Die wichtigste Komponenten von InGrid sind:
 
-* eine nutzerfreundliche, personalisierbare und flexibel konfigurierbare Portaloberfläche
-* der INSPIRE- und GDI-DE-konforme, web-basierte Datenkatalog "InGridCatalog"
-* eine Visualisierungskomponente für OGC-, INSPIRE- und GDI-DE-konforme Kartendienste
-* Diverse An- und Abfrageschnittstellen zur Recherche in angeschlossenen Systemen bzw. für den Transfer von Informationen, z.B. eine OGC-, INSPIRE- und GDI-DE-konforme Katalogschnittstelle sowie eine OpenSearch-Schnittstelle
+* eine nutzerfreundliche, personalisierbare und flexibel konfigurierbare Portaloberfläche,
+* der ISO19115/19119-, INSPIRE- und GDI-DE-konforme, web-basierte Datenkatalog "InGridEditor",
+* eine Visualisierungskomponente für OGC-konforme Kartendienste (OGC WMS),
+* Diverse An- und Abfrageschnittstellen zur Recherche in angeschlossenen Systemen bzw. für den Transfer von Informationen, z.B. eine OGC-, INSPIRE- und GDI-DE-konforme Katalogschnittstelle (OGC CSW) sowie eine OpenSearch-Schnittstelle.
 
 
