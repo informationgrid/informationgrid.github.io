@@ -9,6 +9,7 @@ description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege und Weiterentwicklung der InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen" (VKoopUIS-Projekt Nr. 50) unter dem Dach "Verwaltungskooperation Umweltinformationssysteme" (VKoopUIS) weiter entwickelt.
 
 Beteiligt sind die Partner:
+
 * Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
 * Bundesanstalt für IT-Dienstleistungen
 * Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft Brandenburg
