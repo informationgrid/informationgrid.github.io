@@ -4,6 +4,29 @@ title: Überblick
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## InGrid
+
+InGrid ist eine modular aufgebaute Software, die vielseitig eingesetzt werden kann: Kernkomponenten sind ein Web-Portal, eine Suchmaschine, ein INSPIRE-konformer Metadatenkatalog, eine Visualisierungskomponente für OGC Web Map Services sowie diverse An- und Abfrageschnittstellen, die für die Recherche der angeschlossenen Komponenten, aber auch für die Weiterleitung der Ergebnisse an externe Systeme zuständig sind.
+
+InGrid wurde u.a. entlang der Vorgaben und Empfehlungen der [Geodateninfrastruktur Deutschland](http://www.geoportal.de/) (GDI-DE) entwickelt und eignet sich daher auch zum Aufbau INSPIRE- und GDI-DE-konformer Geodateninfrastrukturen.
+
+![Schematische Darstellung eines InGrid-Systems](../images/ingrid_chart.png "Schematische Darstellung eines InGrid-Systems")
+
+<figcaption class="figcaption">Schematische Darstellung eines InGrid-Systems</figcaption>
+
+<br>
+
+Der Name "InGrid" entstand aus dem englischen "information grid" und trägt dem modularen und verteilten Ansatz der Software Rechnung: Die Komponenten bilden eine Art "Informationsnetz" in dem verschiedene Datenquellen über Schnittstellen angebunden werden. Die Datenquellen werden über einen verteilten Index integriert, der sowohl über das Portal, als auch über verschiedene Schnittstellen verarbeitet werden kann. Die einzelnen Bausteine können physikalisch über beliebig viele Standorte verteilt werden.
+
+Die wichtigsten Komponenten von InGrid sind:
+
+- eine nutzerfreundliche, personalisierbare und flexibel konfigurierbare Portaloberfläche,
+- der ISO19115/19119-, INSPIRE- und GDI-DE-konforme, web-basierte Datenkatalog "InGridEditor",
+- eine auf [OpenLayers](http://openlayers.org/) basierende Visualisierungskomponente für OGC-konforme Kartendienste ([OGC WMS](http://www.opengeospatial.org/standards/wms)),
+- Diverse An- und Abfrageschnittstellen zur Recherche in angeschlossenen Systemen bzw. für den Transfer von Informationen, z.B. eine OGC-, INSPIRE- und GDI-DE-konforme Katalogschnittstelle ([OGC CSW](http://www.opengeospatial.org/standards/cat)) sowie eine [OpenSearch](http://www.opensearch.org/Home)-Schnittstelle. Die CSW-Schnittstellen erlaubt es zum Beispiel, Metadaten aus einem InGridCatalog an Portale wie das [Geoportal Deutschland](http://www.geoportal.de/DE/Geoportal), das [GovData-Datenportal für Deutschland](https://www.govdata.de/) oder das [INSPIRE-Geoportal](http://inspire-geoportal.ec.europa.eu/) abzugeben.
+
+
+
 ## Das Projekt
 
 Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege und Weiterentwicklung der InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen" (VKoopUIS-Projekt Nr. 50) unter dem Dach "Verwaltungskooperation Umweltinformationssysteme" (VKoopUIS) weiter entwickelt.
@@ -29,23 +52,4 @@ InGrid wurde zwischen 2005 und 2014 im Rahmen der Bund/Länder-Verwaltungsverein
 Die Bund/Länder-Verwaltungsvereinbarung UDK/GEIN ("PortalU") endete am 31.12.2014. Seit dem 01.01.2015 werden die InGrid-Software-Komponenten im Rahmen des oben genannten VKoopUIS-Projekts als Free/Open Source Software (F/OSS) unter der [European Union Public License](https://joinup.ec.europa.eu/software/page/eupl) (EUPL) weiter entwickelt.
 
 Sollten Sie Fragen zum Projekt, Interesse an der Nutzung bestimmter InGrid-Komponenten oder an einer Projektmitarbeit haben, wenden Sie sich bitte per E-Mail an <vkoopuis@informationgrid.eu>.
-
-## InGrid Überblick
-
-Die InGrid-Software stellt modulare Technologien für den Aufbau von Datenportalen zur Verfügung. Sie wurde u.a. entlang der Vorgaben und Empfehlungen der [Geodateninfrastruktur Deutschland](http://www.geoportal.de/) (GDI-DE) entwickelt und eignet sich daher auch zum Aufbau INSPIRE- und GDI-DE-konformer Geodateninfrastrukturen.
-
-
-![Schematische Darstellung eines InGrid-Systems](../images/ingrid_chart.png "Schematische Darstellung eines InGrid-Systems")
-
-<figcaption class="figcaption">Schematische Darstellung eines InGrid-Systems</figcaption>
-
-InGrid ist modular aufgebaut. Verschiedene Komponenten bilden eine Art "Informationsnetz" (englisch: information grid). In diesem Netz können verschiedene Datenquellen über Schnittstellen angebunden werden. Die Datenquellen werden über einen verteilten Index integriert, der sowohl über das Portal, als auch über verschiedene Schnittstellen verarbeitet werden kann.
-
-Die wichtigste Komponenten von InGrid sind:
-
-* eine nutzerfreundliche, personalisierbare und flexibel konfigurierbare Portaloberfläche,
-* der ISO19115/19119-, INSPIRE- und GDI-DE-konforme, web-basierte Datenkatalog "InGridEditor",
-* eine Visualisierungskomponente für OGC-konforme Kartendienste ([OGC WMS](http://www.opengeospatial.org/standards/wms)),
-* Diverse An- und Abfrageschnittstellen zur Recherche in angeschlossenen Systemen bzw. für den Transfer von Informationen, z.B. eine OGC-, INSPIRE- und GDI-DE-konforme Katalogschnittstelle ([OGC CSW](http://www.opengeospatial.org/standards/cat)) sowie eine OpenSearch-Schnittstelle. Die CSW-Schnittstellen erlaubt es zum Beispiel, Metadaten aus einem InGridCatalog an Portale wie das [Geoportal Deutschland](http://www.geoportal.de/DE/Geoportal), das [GovData-Datenportal für Deutschland](https://www.govdata.de/) oder das [INSPIRE-Geoportal](http://inspire-geoportal.ec.europa.eu/) abzugeben.
-
 
