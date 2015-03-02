@@ -6,9 +6,11 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Das iPLug Opensearch dient der Einbindung von openSearch Schnittstellen in die InGrid-Recherche. InGrid Anfragen werden über das iPlug an die Opensearch Schnittstelle weitergeleitet, die Ergebnisse werden in das InGrid System zurückgespielt.
+Das iPlug Opensearch dient der Einbindung von openSearch Schnittstellen in die InGrid-Recherche. InGrid Anfragen werden über das iPlug an die Opensearch Schnittstelle weitergeleitet, die Ergebnisse werden in das InGrid System zurückgespielt.
 
-<div class="mxgraph" style="position:relative;overflow:hidden;width:683px;height:321px;margin:30px 0;"><div style="width:1px;height:1px;overflow:hidden;">3Zhtj6M2EMc/TV4mAszjy32+U291W2XVU/umcrAB6wAjYy7Z/fQ3JuMEQq67VZKtVCVSzHjww2/+HtuZkZtq86BoUzxKxsuZ57DNjNzOPM/1iQ8/xvKytcRRuDXkSjB02huW4pWj0UFrJxhvR45aylKLZmxMZV3zVI9smSzHXTQ0t83vDcuUllPrN8F0gVY3TPYVn7jIC+wn9nAyrX6xbTCe0a7U894Edaa6orYtnNXG2T56Ebb8ggY32HVVj8b0KmU1Mije7mHhfAWOC3tZScW4Gpk4sz6F1gbh1cy7hy9T4gdfMEXXCyF7E3lwrh1n+edv2V0bf/n2R/lX+0jK6vG7+/X59fdta6Wovw/DQO5ACkpK6MKUqs0NL40cbKTDjPoxSVM/8l3fj5L5dlT373XfxUfxGqfxL5vMoow4fpAklNMo9ecYvx+07JDl14bXS05VWpjXnsoun3lhCb1drxSUclOaBF3Jrmbc9OFC9boQmi8bmpraNawLsBW6KrG66VQDL2475kpzu1jeMbs9ZlhxXFZcqxejp607uKGc8NnF+a0HaiZoKwZCDlEeFKOZ75res4QC4vxFtLwopG4Yhiyg1EnZnJAJ3Am4HMg1v0SBi5qurDsO8wREiYNtIKLAQ2QDRKG7CKI4dEMSQJeuFx4hFjiLxBl8cMSnACRBGqVxTHzfd9KU+VbuA353G81VTeGtQ0mOZPu5BrfM6O/M0n2BEcs1FCS4CG0YBsjzvEr24nGYjirZyuHcSvbjlZcxxw8pTWiUeJhT/lHIbUEbU2SyA7VeKdVjYkKBfoU0ubyVnRn5W4iV1BTfSGBTuM4V5/BwceK+pWmJ2zYHxMkR4HY0ZwUeTIB/en5+mkCH6RtND+jRUuQGXQoYzNZ3bSAJ2OGvsKISjJnXj4ZBgnfWC/y2AL+e+4fxd1Dhlr89KA34B/GUv4e2k/iT1HHDzPUCFq8y3z8ieHHdtaflDmUcL48xGssYEv40cfiXShyHHKcZ/HP9YA6+nnMjq6qrQZr9Yn87T3+E1lf9MD9A6ngysDEiuN4HMUqiaYhs2M4aIkzlgxA9SaXNFnuK2EcId/vmRfQ+ZulaHY+OfEdgXkTv7zjxnW2jPEDca/cCgHcHRARMjgAm2M3Z98VDvjiUEd83M4clLqr++jtkaDPGF7ri5ZNsBYZgJbU2981JStHSRKFv6aptthduQx/bvh3fKlNWk4WAU3wmYOmoRQptwl2Tago/xg5byn0lNhwuC2xuDYFrCDVK5opWFVd/k9u568WLps4/IDmFhydPe2EYxNu6DONtbWeN9/QcdLn1dPSgc3gevQRwe0/8Lw6eh8Cn/wf8DxIYZv/dbnuxBAaP+39/+rrBv4Lk7ic=</div></div>
+![InGrid Komponente iPlug Opensearch](../images/ingrid_iplug_opensearch.png "InGrid Komponente iPlug Opensearch")
+
+<figcaption class="figcaption">InGrid Komponente iPlug Opensearch</figcaption>
 
 
 ## Systemvoraussetzungen

@@ -6,15 +6,16 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Die Such Schnittstelle beinhaltet alle Schnittstellen, die Anfragen direkt an die InGrid Recherche stellen. Dabei werden die Anfragen in InGrid Queries transformiert, an den iBus versendet und die Antworten in das jeweils geforderte Format umgewandelt.
+Die Such-Schnittstelle beinhaltet alle Schnittstellen, die Anfragen direkt an die InGrid Recherche stellen. Dabei werden die Anfragen in InGrid Queries transformiert, an den iBus versendet und die Antworten in das jeweils geforderte Format umgewandelt.
 
 Unterstützte Schnittstellen:
 
 - OpenSearch Schnittstelle
 - ATOM Download Service
 
+![InGrid Komponente Such-Schnittstelle](../images/ingrid_interface_search.png "InGrid Komponente Such-Schnittstelle")
 
-<div class="mxgraph" style="position:relative;overflow:hidden;width:624px;height:601px;margin:30px 0"><div style="width:1px;height:1px;overflow:hidden;">3ZhRc5s4EMc/jR+TEUggeIyTNNfpdXozvptc+yZLAjQFxMgQJ/30leyVDcGt0zFOLzf2jPFfYiX9dtmVmOHr6vHOsKb4qIUsZyESjzN8MwvDgGBif5zytFUSGm+F3CgBnfbCQn2TICJQOyXkatCx1bpsVTMUua5ryduBlulyOETDcm9+Lyw4K8fqvRJtAWoQp/uGP6TKCxgnCWExq/bJ2xAyY13ZXmwk2+aaK+Ztwaoe0fYvDsHyEwgJ4GpYPZjSN62rgWDkas8KlqtgWjDIUhshzUCSwvcp2tYRvJqF7+xXGPUgL4Vh60ulNxK+Q3OEFp8/ZLer5M/75b9zze4fP39BX7T85+vWWqnqr30v4FsbCUZrO4S7qh6vZemiwTs6zhhJMOeEkoAQml5sZ/Xupd137jGyhmX8osmMZhiRKE2ZZJQT6I0eWNkBSzXvViOfGt3VQjobwQzP14Vq5aJh3LWubdhbrWirEpqN6zjXtl21LugjGOSn04alPUjTSv/s7JDah0vqSrbmyYUORA4Gs/BcEQqxtt4HbkihT9GL2Rg0Bp7Ld6b33OwFoHsZRngKehhnYVzaAedLY69ydzWVspDM8MKO9r5upcmcFw7cdYoDm8409sZXcNrOGcecFpAJvBaHNGZBHMciYgxxcYHxAb89I5dbdM0JLHaZmS29yc1SfsgoRUNGUQgpsccoDi4jmsRBjCNrLghjCMA+sghdpqj3gdmcApCkSCxjLrI0oUm4jHeL/nncTxCL588nJEgG2GM0zicpSFOnkxFX8Pj/gmv4jGvwG7lG43L3V9nlbxcufgbXJ7DfATcYZ4NNiaplO8JpTdkNrEO0KljjRF7qzu0bjqA9T1Xym1DYg0KY9IsSgS6DouSr2SkYoyDidvIZRZwzSg/syEbwPDKhO1tTrozRa0tGKGOrjNJu37zSnZv5MZiD8LTh74Y8R5SSYZRGBEz0AGOQhhVserwvqPge70rV+R7vsU2vbhnAv0jPCxNu8ftef7TpwTwUrOeI1XE6fV/fuWNtiK51VXW14lsox/OrXb3Te0RZqXKHk1t47hQ3d4yswfIKGiolxCbLHnKNtr2z0nnuprD9pL1h65JXOJkQKN/eQ8E4n6R07KEptriUWEcnhGNOaZqG+FfSyWnx3j80HNgEH0f8Q54RAn7+0BCOeUYH0scUET/iCfh6PD81sn7dM9m0eJ9Xv935q4c38ONMvYkY8R3n56u/P320yo1e16Vmm9xSKrfYN0OY+Ndn/wnCh84WbywjYDrMsGfMCPbv/oXepq33nhfffgc=</div></div>
+<figcaption class="figcaption">InGrid Komponente Such-Schnittstelle</figcaption>
 
 
 ## Systemvoraussetzungen

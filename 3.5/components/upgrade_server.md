@@ -17,7 +17,9 @@ Berücksichtigt werden hierbei nur Archive, welche auf ".jar" oder ".zip" enden 
 Anwendung findet der Upgrade Server z.B. im Portal integrierten [Upgrade Client](portal.html#upgrade-client), der die Versionen einer InGrid Installation automatisch auf Aktualisierungen hin überwacht.
 
 
-<div class="mxgraph" style="position:relative;overflow:hidden;width:329px;height:228px;margin:30px 0"><div style="width:1px;height:1px;overflow:hidden;">zVfvj5s4EP1r8pEIMOHHx+x2s3e69lpdelfdfXOwAWsNRsbZ7Pav7xjGCSw5bSolUqVIgWczxu/NvDELcl+/PGraVp8U43IR+uxlQT4swjCISAR/FnkdkDSJB6DUguGkE7AV3zmCPqJ7wXg3mWiUkka0UzBXTcNzM8EKJadLtLR04U/ANqdyjn4TzFSIBnF2GviNi7LCddIQN9OZVxeD8YLupfF6CMbscE1dLNzViz/chgFGfkUgSPGRljaTd/quVD0BNO9OZOF+Bb4XrrJTmnE9gThzcypjLIXrRbiBH9PimS+ZpoelUD1EHv0739/++0fx0KUfv+Wkuvvr63+f/3z6R279pyGaFM3TWAbyAKmglYIl7FX9cs+lTQendFzQKCV5HiVREEVJ5g1vtbl0+lEfzRvcxk+GDMkqoLuQZJynbMcinO4/U7lHMr8obSg8E0tY4m6n4aq0V3+3paaMw+R7Kez6sxmzXNBq3zBulw5g+FAJw7ctze3oAcoFsMrUEocVjAhjy2QFyXD3Ci+uDhdsGEl55tpwV3ZHMaAuuaq50a8265ADlwxYkkFKhvvDKOfdnGqU7jFiFDUvj6FPjMMFkn6hAEE6U+DE9JZr2Ne1mS4151BdGOW65EbOEn4NctFeRuTOqOsq2trLTjSl5GutIevepVArQ41Q1qO8zKbrwOktCI3xESQ0jLGjjAiFgpnxSa7AZ8xAviLJsjTLAj8+5xZXpzNIb1v9JEL+XIJmWIAjPpPVbfgMiyQOw3y1i5MkTQIP2buETlH3vXtMmt2zgOb9ke64/KI6gQzulDG2WR4nrKUo7YBRlvY+0rprh9OCJRtjf5i2xJw10VLAuaIQYC16mUNMaJTUUPizeAf/XU2l9BqvkBQawiYEbjf22MG111eEF4Tpsm3Kt/5+XrRLtP7/QllNnYe4I9RIWGcyVzeeN8Ki542E/b15tAc+OAiKzmix2/dizYx94O4CwwfiLD5KBwirnvi9ksoeeRrV2HQphJRvIIrZkAPR9nQ0S5NaMGaXOVu0CmYXtjQhXWDeqI9cWU0ytT2SzNUMnMJjOaMbyImOMZJz/fXzpws0uT7XaIxnlT2bAWAgrA/RdylJO8vLTQqQxMm0U7mY73Qqd2K4pmJo4L+sswbvOit8M3EtqPQYfxaQFWCuwN2G5jnvOs+Imh+99QZarvw3pw7XEsfld6ZLOuwntITb0ydTPzb6lCYPPwA=</div></div>
+![InGrid Komponente Upgrade Server](../images/ingrid_upgrade_server.png "InGrid Komponente Upgrade Server")
+
+<figcaption class="figcaption">InGrid Komponente Upgrade Server</figcaption>
 
 
 ## Systemvoraussetzungen

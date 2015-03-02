@@ -8,7 +8,10 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Der iBus (information bus) bildet in einem InGrid-System das zentrale Element. Er fungiert als Verteilungsstation zwischen Datenquellen und Suchanfragen. So nimmt der iBus eine Suchanfrage von der Portaloberfläche oder einer anderen übergeordneten Schnittstelle entgegen, bereitet die Anfrage auf und gibt an die angeschlossenen iPlugs weiter. Die Anfrageergebnisse der einzelnen iPlugs (Datenquellen) werden vom iBus eingesammelt und als Ergebnislisten an das anfragende System zurückgegeben.
 
-<div class="mxgraph" style="position:relative;overflow:hidden;width:390px;height:481px;margin:30px 0 30px 0"><div style="width:1px;height:1px;overflow:hidden;">3Zhtb+I4EMc/DdLdi1ZJbEh4WfrAVndddcVJVV86sZP46sTIOAX66WuTMUmg0lJ1aVokJMzfZmz/ZsZPA3RZrKaKzPM7SZkYBB5dDdDVIAh8jLD5ssq6VqJwVAuZ4hQaNcKMvzAQPVArTtmi01BLKTSfd8VEliVLdEdLpeh2MSeZM98Is4SIffWBU52D6o/GTcUPxrMc+okCmMxCr50NylJSCX22kUydrS6IswWzWnn1T+SBsAbBH267KjtjepGy6AiKLRpYMF8O4wKjsVSUqY7EqGuTa20RXgyCG/Ohij+zc6rI8pzLjYSm3sTzZo//pNeL6N8H8kRl7P28upvm6eP/v2prgpdPbTegaxMKSkrThS0Vq0smbDg4T49SgiOUJDjEPsbh+Kwe1c2hzbf+UayEabzTZBqmyMPD8ZgwEiYYWnvPRFTAkk+qxZ5TlaxKyqwNf4Amy5xrNpuTxNYuTdwbLdeFgGplGtZWmdLMZcIBQ28YmnRismBarW2wuFgBG5BJKBjWv5dNqAYhhE/eitIRTJKAq7Kt6QaUKQCrw7jBUFrcBsFImA4nsTKlzJY+RnFeqbn940SaJlzbSQ+dt47KFTteLa6+y59jc4UF4yS4+jtcwx65ov08vxdV9n3hOhsObtQjXNjiW3DvpdLE/OUjLDPFmNkDPz3//T5RwpJ+xPyPN5aPThVjd7IBi32uqnBKO4VVdZdrr7tVeEJcndmvsFtFJ7ZbbYP0K+xW7mZ5AmvsTsz6fcasO+21sN6WmqnUQvqmfHfC9lNPBiFm8XgcpziJEoQi9sZVdQ/iIidzW6SyigW7UEouDSbKlXkZ4dI+KCxkZUf+O8AdssD7GIDd+wkADkZwlGwBRtBNm69z9x/l+9bV69vzhfOkW3fdc1MffPevYLfl1D4C2se7oqhKnpANxcD767/L+78PWDQMKqu3wBLBM+uHxCCzT18TC9QYFhdQUXBKN3veWx6SpnUqrFOvctNuc/34rLXGrS0uFYb7qTCG81bHVZBB73CV+dm80W3qWm+36PoV</div></div>
+
+![InGrid Komponente iBus](../images/ingrid_ibus.png "InGrid Komponente iBus")
+
+<figcaption class="figcaption">InGrid Komponente iBus</figcaption>
 
 
 ## Systemvoraussetzungen

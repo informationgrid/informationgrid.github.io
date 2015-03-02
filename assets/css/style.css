@@ -56,7 +56,16 @@ blockquote {
 }
 
 img {
-  margin-bottom: 20px;
-  border: 1px solid #eee;
-  height: auto;
+  margin: 3em auto 1em;
+}
+
+.img-responsive {
+  width:auto;
+}
+
+figcaption, .figcaption {
+    font-size: 90%;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 3em;
 }

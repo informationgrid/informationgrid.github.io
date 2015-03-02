@@ -8,11 +8,6 @@
 
   <title>{{site.name}} - {{page.title}}</title>
 
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
   <link href="{{site.baseurl}}/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="{{site.baseurl}}/assets/bootstrap-docs/css/docs.min.css" rel="stylesheet">
 
@@ -188,8 +183,6 @@
     </div>
   </footer>
   
-  <script type="text/javascript" src="https://www.draw.io/embed.js"></script>
-  
   <!-- Add fancyBox -->
   <link rel="stylesheet" href="{{site.baseurl}}/assets/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -202,23 +195,30 @@
   <link rel="stylesheet" href="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
   <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
   
+<!--[if IE 8]>
+<script type="text/javascript">
+    ie = 8;
+</script>
+<![endif]-->
   <script type="text/javascript">
     $(document).ready(function() {
-      $("img").each(function() {
-        // wrap images in a tag, for fancybox's sake
-        var parent = $(this).parent();
-        var clone = $(this).clone();
-        var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
-        newParent.fancybox({
-          closeClick: true,
-          helpers : {
-            title : {
-              type : 'inside'
+      if( typeof ie === 'undefined'  ) {
+        $("img").each(function() {
+          // wrap images in a tag, for fancybox's sake
+          var parent = $(this).parent();
+          var clone = $(this).clone();
+          var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
+          newParent.fancybox({
+            closeClick: true,
+            helpers : {
+              title : {
+                type : 'inside'
+              }
             }
-          }
+          });
+          parent.replaceWith(newParent);
         });
-        parent.replaceWith(newParent);
-      });
+      }
     });
   </script>  
   
