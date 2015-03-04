@@ -63,6 +63,8 @@ menu:
         type: header
       - title: iPlug DSC
         href: components/iplug_dsc_scripted.html
+      - title: iPlug SE (Search Engine)
+        href: components/iplug_se.html
       - title: iPlug CSW
         href: components/iplug_dsc_csw.html
       - title: iPlug OpenSearch
@@ -134,6 +136,7 @@ InGrid besteht aus Modulen, die über eine performante Kommunikationsschicht mit
 ### Datenanbindung
 
 - [iPlug DSC](components/iplug_dsc_scripted.html) - Indexierung von Datenbankinhalten
+- [iPlug SE (Search Engine)](components/iplug_se.html) - Indexierung von Webseiten
 - [iPlug CSW](components/iplug_dsc_csw.html) - Indexierung von CSW-Diensten (Catalog Service Web)
 - [iPlug OpenSearch](components/iplug_opensearch.html) - Anbindung von externen OpenSearch Schnittstellen
 - [iPlug WFS](components/iplug_dsc_wfs.html) - Indexierung von WFS-Diensten (Web Feature Service)

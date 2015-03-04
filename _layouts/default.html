@@ -210,6 +210,8 @@
           var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
           newParent.fancybox({
             closeClick: true,
+            scrolling: 'yes',
+            fitToView: false,
             helpers : {
               title : {
                 type : 'inside'
