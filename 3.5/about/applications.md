@@ -55,7 +55,7 @@ Technisch gesehen unterscheidet sich der Einsatz von InGrid auf europäischer Eb
         
 ### Andere Ressorts
 
-* Amtsinternes Geoportal der Bundesanstalt für IT-Dienstleistungen im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur
+* Geoportal der Wasser- und Schifffahrtsverwaltung des Bundes im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur
 
 		
 ## InGrid auf EU-Ebene:
