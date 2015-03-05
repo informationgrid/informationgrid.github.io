@@ -119,7 +119,7 @@ Ein IGE-iPlug besitzt keine `plugdescription.xml` , da dieses nicht in die Porta
 
 ### IGE-iBus
 
-> Achtung: Der MDEK-Ibus oder IGE-iBus ist ein zweiter IBUS. Es handelt sich nicht um den IBUS den die DSCs ansprechen. Der MDEK-IPLUG benötigt einen anderen TCP-PORT als die DSC-Iplugs um sich mit dem IBUS zu verbinden.
+> Achtung: Der MDEK-iBus oder IGE-iBus ist ein zweiter, separater iBus mit dem sich der IGE-iPlug verbindet. Es handelt sich nicht um den iBus den die DSCs ansprechen. Der IGE-iPlug benötigt einen anderen TCP-PORT als die DSC-iPlugs um sich mit dem IGE-iBus zu verbinden. 
 
 Definiert ist der IGE-iBus Port in der Datei
 
