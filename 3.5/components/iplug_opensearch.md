@@ -110,9 +110,10 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 
 Bei der `Auswahl der Quelle` wird die anzuschließende Opensearch-Schnittstelle eingetragen. 
 
-Dabei kann entweder einen Deskriptor angeben, welcher die eigentliche Anfrage beschreibt, oder eine Url mit Platzhaltern angegeben werden. Die Platzhalter werden benötigt, um bspw. die Suchbegriffe und die Anzahl der abzufragenden Ergebnisse korrekt in die Url einzufügen, mit der dann die eigentliche Abfrage getätigt werden kann. 
+Dabei kann entweder einen Deskriptor angeben, welcher die eigentliche Anfrage beschreibt, oder eine Url mit Platzhaltern angegeben werden. Die Platzhalter werden benötigt, um bspw. die Suchbegriffe und die Anzahl der abzufragenden Ergebnisse korrekt in die Url einzufügen, mit der dann die eigentliche Abfrage getätigt werden kann. Das Ergebnis der Abfrage muss von der OpenSearch Datenquelle RSS Format zurückgegeben werden.
 
-Parameter die ein "?" enthalten sind optional und müssen nicht ausgefüllt werden. Das Opensearch-iPlug versucht alle Opensearch-spezifischen Parameter mit Werten zu füllen, welche in der InGrid Anfrage enthalten sind. Weiter Informationen über den Deskriptor und die Beschreibung der Parameter kann man hier ()[http://www.opensearch.org/Specifications/OpenSearch](http://www.opensearch.org/Specifications/OpenSearch)) finden.
+Parameter die ein "?" enthalten sind optional und müssen nicht ausgefüllt werden. Das Opensearch-iPlug versucht alle Opensearch-spezifischen Parameter mit Werten zu füllen, welche in der InGrid Anfrage enthalten sind.
+Weitere Informationen über den Deskriptor und die Beschreibung der Parameter kann man hier ()[http://www.opensearch.org/Specifications/OpenSearch](http://www.opensearch.org/Specifications/OpenSearch)) finden.
 
 Über die InGrid Query werden die `searchTerms`  (Query), `count` (Anzahl der Ergebnisse pro Seite = 10) und `startIndex` ( (Seitenzahl-1) x count ) übergeben. Dies wird im iPlug verarbeitet, um eine gültige Opensearch-Query zu erstellen.
 
