@@ -28,7 +28,7 @@ Das iPlug fragt die CSW Schnittstelle regelmäßig (z.B. einmal täglich) ab. Di
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-csw/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-csw/)
+Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
