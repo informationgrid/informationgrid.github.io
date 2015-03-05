@@ -13,6 +13,8 @@ menu:
         href: about/features.html
       - title: Anwendungen
         href: about/applications.html
+      - title: Lizensierung
+        href: about/license.html
       - title: Glossar
         href: about/glossar.html
       - title: Impressum
@@ -103,6 +105,9 @@ InGrid besteht aus Modulen, die über eine performante Kommunikationsschicht mit
 - [Überblick](about/overview.html)
 - [Funktionen](about/features.html)
 - [Anwendungen](about/applications.html)
+- [Lizensierung](about/license.html)
+- [Glossar](about/glossar.html)
+- [Impressum](about/disclaimer.html)
 
 ## Systeminformationen
 
