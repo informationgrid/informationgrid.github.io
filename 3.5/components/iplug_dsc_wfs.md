@@ -27,7 +27,7 @@ Das iPlug fragt die WFS Schnittstelle regelmäßig (z.B. einmal täglich) ab. Di
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-wfs/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-wfs/)
+Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
