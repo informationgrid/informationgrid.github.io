@@ -404,13 +404,26 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 Folgende Bedingungen müssen erfüllt sein, so dass ein Dienst mit seinen Download-Referenzen angezeigt wird:
 
+*Kopplung mit Geodatensatz*
+
 1. Der anzuzeigende Service muss von der Art "Download-Dienste" sein.
 2. Es muss die Option "Als ATOM-Download Dienst bereitstellen" aktiviert sein.
-3. Es muss mindestens eine Referenz auf eine Karte vorhanden sein.
-4. Diese Karte muss mindestens einen Verweis vom Typ "Download" besitzen.
-5. Dieser Verweis muss die folgende Zeichenkette enthalten: "REQUEST=GetRecordById"
-6. Ein angeschlossenes iPlug-DSC muss die Daten des IGC indexiert haben.
+3. Es muss mindestens eine Referenz auf ein Objekt vom Typ "Geodatensatz" vorhanden sein.
+4. Dieser Geodatensatz muss mindestens einen Verweis vom Typ "Download" besitzen.
+5. Ein angeschlossenes iPlug-DSC muss die Daten des IGC indexiert haben.
+ 
+*Kopplung mit externem Datensatz* (ab Version 3.5.1)
 
-Seit Version 3.5.1 ist es auch möglich einen externen Verweis (anstelle eines Kartenobjekts) anzugeben. Dadurch lassen sich auch extern verwaltete Karten referenzieren. Hierzu muss alternativ zum Schritt 3. ein externer Datensatz hinzugefügt werden, der in der URL die Zeichenkette "REQUEST=GetRecordById" enthalten muss. 
+1. wie oben
+2. wie oben
+3. Es muss mindestens ein externer Datensatz in den "gekoppelten Daten" hinzugefügt werden
+4. Dieser Datensatz muss als URL die Zeichenkette "REQUEST=GetRecordById" enthalten
+5. Ein angeschlossenes iPlug-DSC muss die Daten des IGC indexiert haben.
 
+*Direkter Verweis auf externem Datensatz*
 
+1. wie oben
+2. wie oben
+3. Es muss mindestens ein Verweis vom Typ "Datendownload" hinzugefügt werden
+4. Dieser Verweis muss als URL die Zeichenkette "REQUEST=GetRecordById" enthalten
+5. Ein angeschlossenes iPlug-DSC muss die Daten des IGC indexiert haben.
