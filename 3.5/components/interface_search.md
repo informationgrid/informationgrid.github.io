@@ -400,5 +400,17 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 ## FAQ
 
+### Unter welchen Bedingungen werden die Dienste im ATOM-Feed Client angezeigt?
+
+Folgende Bedingungen müssen erfüllt sein, so dass ein Dienst mit seinen Download-Referenzen angezeigt wird:
+
+1. Der anzuzeigende Service muss von der Art "Download-Dienste" sein.
+2. Es muss die Option "Als ATOM-Download Dienst bereitstellen" aktiviert sein.
+3. Es muss mindestens eine Referenz auf eine Karte vorhanden sein.
+4. Diese Karte muss mindestens einen Verweis vom Typ "Download" besitzen.
+5. Dieser Verweis muss die folgende Zeichenkette enthalten: "REQUEST=GetRecordById"
+6. Ein angeschlossenes iPlug-DSC muss die Daten des IGC indexiert haben.
+
+Seit Version 3.5.1 ist es auch möglich einen externen Verweis (anstelle eines Kartenobjekts) anzugeben. Dadurch lassen sich auch extern verwaltete Karten referenzieren. Hierzu muss alternativ zum Schritt 3. ein externer Datensatz hinzugefügt werden, der in der URL die Zeichenkette "REQUEST=GetRecordById" enthalten muss. 
 
 
