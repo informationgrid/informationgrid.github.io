@@ -330,7 +330,8 @@ Mögliche Ursachen:
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs.
+Bitte analysieren Sie das log file des iPlugs. 
+Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
-Nach einer Änderung der Konfiguration muss das iPlug neu gestartet werden.
+Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
 

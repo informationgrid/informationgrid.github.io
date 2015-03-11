@@ -301,7 +301,8 @@ Mögliche Ursachen:
 * Keine Verbindung zum iBus
 * Sie versuchen sich mit einem Benutzer anzumelden, der keine entsprechenden Rechte besitzt. Bitte richten Sie im Portal einen Benutzer mit den Rechten portal-admin ein! 
 
-Bitte analysieren Sie das log file des iPlugs.
+Bitte analysieren Sie das log file des iPlugs. 
+Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
-Sie müssen nach einer Änderung der Konfiguration das iPlug neu starten
+Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
 
