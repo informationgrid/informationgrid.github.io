@@ -287,7 +287,7 @@ Wollen Sie eine MS-Access Datenbank verwenden, bedarf es zuvor der Einbindung di
 
 Dazu gehen Sie zu der ODBC Konfigurationsverwaltung. Ist Ihre Datenbank bisher noch nicht in der Liste enthalten, können Sie diese hier aufnehmen.
 
-Ist dies getan können Sie bei der IPlug-Konfiguration den Typ "Access" auswählen. Im Feld "DB URL" wird automatisch "jdbc:odbc:" erscheinen. Fügen Sie nun hier den von Ihnen vergebenen Datenbanknamen hinten an.
+Ist dies getan können Sie bei der iPlug-Konfiguration den Typ "Access" auswählen. Im Feld "DB URL" wird automatisch "jdbc:odbc:" erscheinen. Fügen Sie nun hier den von Ihnen vergebenen Datenbanknamen hinten an.
 
 Eine Authentifizierung ist bei MS-Access Datenbanken nicht möglich, daher bleiben die Felder "Benutzername" und "Passwort" leer. 
 
