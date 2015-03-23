@@ -10,21 +10,23 @@ $(function() {
 
   for(var i=0, count=headers.length; i<count; i++) {
     var header = headers[i];
-    var level = getLevel(header);
-    if (level === 2) {
-      if (openSection) {
-        html += "</ul>";
-        openSection = false;
+    if ($(header).closest(".no-toc").length == 0) {
+      var level = getLevel(header);
+      if (level === 2) {
+        if (openSection) {
+          html += "</ul>";
+          openSection = false;
+        }
+        html += '<li><a href="#'+header.id +'">'+header.innerHTML+'</a>';
+        var nextLevel = i<count-1 ? getLevel(headers[i+1]) : 0;
+        if (nextLevel > 2) {
+          html += '<ul class="nav">';
+          openSection = true;
+        }
       }
-      html += '<li><a href="#'+header.id +'">'+header.innerHTML+'</a>';
-      var nextLevel = i<count-1 ? getLevel(headers[i+1]) : 0;
-      if (nextLevel > 2) {
-        html += '<ul class="nav">';
-        openSection = true;
+      else {
+        html+= '<li><a href="#'+header.id +'">'+header.innerHTML+'</a></li>';
       }
-    }
-    else {
-      html+= '<li><a href="#'+header.id +'">'+header.innerHTML+'</a></li>';
     }
   }
   if (openSection) {

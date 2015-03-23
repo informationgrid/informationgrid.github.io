@@ -90,17 +90,9 @@ menu:
 published: true
 ---
 
+{% include head.html %}
+
 ## Einführung
-
-InGrid ist eine komponentenbasierte, service-orientierte Softwareplattform zum
-
-- Indexieren und Recherchieren verschiedenster verteilter Datenquellen, z.B. Webseiten, Textdokumente, Tabellen, PDFs, etc.
-- Visualisieren, Recherchieren und Kombinieren von OGC-konformen Kartendiensten
-- Aufbau einer INSPIRE-kompatiblen Metadateninfrastruktur mit einem leistungsfähigen, erweiterbaren und ergonomischen Web-Erfassungsclient sowie einer INSPIRE- und GDI-DE-konformen Katalogschnittstelle
-
-InGrid besteht aus Modulen, die über eine performante Kommunikationsschicht miteinander gekoppelt sind. Dies ermöglicht dezentrale, vernetzte und an den jeweiligen Einsatzbereich angepasste Strukturen. 
-
-## Was ist InGrid?
 
 - [Überblick](about/overview.html)
 - [Funktionen](about/features.html)
