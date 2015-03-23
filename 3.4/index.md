@@ -3,6 +3,7 @@ layout: default
 title: InGrid
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 isHome: true
+sitemap: false
 menu: 
   - title: "Über InGrid"
     href: "about"
