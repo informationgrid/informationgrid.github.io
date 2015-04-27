@@ -90,6 +90,8 @@ start.sh [start|stop|restart|status]
 
 Die LOG Ausgaben finden sich in der Datei `log.log`.
 
+**Alle iPlugs, die NEU an den iBus angeschlossen werden, müssen vorab über die iBus Administrationsoberfläche freigeschaltet werden.**
+
 
 ## Konfiguration
 
