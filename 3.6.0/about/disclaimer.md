@@ -6,15 +6,31 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Betreiber
 
+Verwaltungskooperation Umweltinformationssysteme (VKoopUIS) Projekt Nr. 50: InGrid - Pflege und Weiterentwicklung der 
+InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen<br>
+E-Mail: vkoopuis@informationgrid.eu
+
+Projektpartner Öffentliche Verwaltung:
+
+- Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz
+- Bundesanstalt für IT-Dienstleistungen
+- Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft Brandenburg
+- GeoInformation Bremen
+- Behörde für Stadtentwicklung und Umwelt Hamburg
+- Landesamt für Umwelt, Naturschutz und Geologie Mecklenburg-Vorpommern
+- Landesamt für Vermessung, Geoinformation und Landentwicklung Saarland
+- Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie
+- Ministerium für Landwirtschaft und Umwelt des Landes Sachsen-Anhalt
+
+Projektpartner Wirtschaft:
+
 wemove digital solutions GmbH<br>
 Eschersheimer Landstr. 5-7<br>
 D-60322 Frankfurt am Main<br>
 Tel.: +49 69 759 003 - 0<br>
-E-Mail: ingrid@wemove.com<br>
+E-Mail: ingrid@wemove.com
 
-Geschäftsführer
-
-Joachim Müller und Stefan Hartmann
+Geschäftsführer: Joachim Müller und Stefan Hartmann
 
 ## Allgemeine inhaltliche Veranwortung / Haftung
 
