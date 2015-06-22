@@ -52,7 +52,7 @@
 {% capture renderThis %}
         {% assign versionUrl = '/'|append:thisVersion|append:'/' %}
         {% for p in site.pages %}
-          {% if p.isHome and p.menu and p.url contains thisVersion %}
+          {% if p.isHome and p.menu and p.url contains versionUrl %}
             {% for item in p.menu %}
               {% if item.menu %}
               <li class="dropdown">
