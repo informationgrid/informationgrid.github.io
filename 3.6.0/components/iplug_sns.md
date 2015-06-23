@@ -178,7 +178,7 @@ Geben Sie hier in der Administrationsoberfläche die Konfiguration des SNS WebSe
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche SNS WebService Verbindungsparameter 
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
