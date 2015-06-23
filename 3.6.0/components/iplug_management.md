@@ -314,5 +314,5 @@ Mögliche Ursachen:
 Bitte analysieren Sie das log file des iPlugs. 
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
-Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
+Sie müssen nach einer Änderung der Konfiguration das iPlug nur neu starten, wenn der Zugriff auf die Administrationsoberfläche geändert wurde (Adminport).
 
