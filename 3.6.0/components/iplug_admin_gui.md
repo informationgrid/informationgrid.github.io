@@ -6,7 +6,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Die Administration eines iPlugs kann über eine Admin GUI erfoglgen. Die Admin GUI ist über den Browser zu bedienen.
+Die Administration eines iPlugs kann über eine Admin GUI erfolgen. Die Admin GUI ist über den Browser zu bedienen.
 
 ## Admin GUI
 
@@ -22,7 +22,7 @@ Hier werden die InGrid Kommunikationseinstellungen bearbeitet. Es muss mind. ein
 
 Die Proxy Service URL des iPlugs besteht aus einer Gruppe, zu welcher der iBus gehört, an den man sich anschließt und der ID des iPlugs. Der Name sollte noch nicht vergeben sein. Um dies zu erreichen, sollte man spezifische Begriffe des Anbieters einarbeiten. Die Adresse hat folgendes Format: `/<InGrid Gruppe>:<InGrid iPlug ID>`, z.B. `/ibus-hh:iplug-csw-lgv`. Alles zwischen den spitzen Klammern (und die Klammern) muss mit den nötigen Werten ersetzt werden. Alle Komponenten einer InGRid Installation sollten der gleichen InGrid Gruppe angehören.
 
-> Die Definition eines iBus ist nötig, um im weiteren Verlauf eine einen Anbieter auswählen zu können. Partner und Anbieter werden vom Management iPlug über den ersten angeschlossenen iBus zur Verfügung gestellt.
+> Die Definition eines iBus ist nötig, um im weiteren Verlauf einen Anbieter auswählen zu können. Partner und Anbieter werden vom Management iPlug über den ersten angeschlossenen iBus zur Verfügung gestellt.
 
 ![InGrid Communication](../images/iplug_admin_gui_communication.png "InGrid Communication")
 
@@ -38,7 +38,7 @@ Der Anbieter des iPlugs wird durch die Auswahl von Partner und Anbieter definier
 
 Der Ansprechpartner für das iPlug kann frei definiert werden, ebenso der Name und die Beschreibung der Datenquelle.
 
-Einwichtiger Parameter ist die zur Art der Datenquelle . Hier sind die entsprechenden, zur Datenquelle passenden Typen zu wählen. Die hier getroffene Auswahl entscheidet darüber, ob das iPlug bei einer bestimmten Suchanfrage vom iBus angesprochen wird. Wird z.B. Metadatenbank (datatype : metadata) ausgewählt, wird die Datenquelle bei der Einschränkung der Suche auf Metadaten angesprochen, nicht aber bei einer Suche nach Webseiten.
+Ein wichtiger Parameter ist die Art der Datenquelle . Hier sind die entsprechenden, zur Datenquelle passenden Typen zu wählen. Die hier getroffene Auswahl entscheidet darüber, ob das iPlug bei einer bestimmten Suchanfrage vom iBus angesprochen wird. Wird z.B. Metadatenbank (datatype : metadata) ausgewählt, wird die Datenquelle bei der Einschränkung der Suche auf Metadaten angesprochen, nicht aber bei einer Suche nach Webseiten.
 
 Die Angabe entscheidet auch über die Darstellung im Portal, Metadaten-Treffer werden z.B. anders dargestellt als Webseiten-Treffer.
 
@@ -63,7 +63,7 @@ Die Angabe entscheidet auch über die Darstellung im Portal, Metadaten-Treffer w
 | Openseach | opensearch | Das iPlug liefert Ergebnisse aus einer OpenSearch Schnittstelle |
 
 
-> Beim der Anbindung einer IGC-DSC Datenbank gibt es den Sonderfall, dass zusätzlich die Adresse eines korrespondierenden iPlugs (Objekt- und Adress iPlug aus einer IGC Datenbank) anzugeben sind. Siehe dazu auch [hier](iplug_dsc_scripted.html#sonderfall-ingrid-catalog-objekte-und-adressen).
+> Bei der Anbindung einer IGC Datenbank gibt es den Sonderfall, dass zusätzlich die Adresse eines korrespondierenden iPlugs (Objekt- und Adress iPlug aus einer IGC Datenbank) anzugeben sind. Siehe dazu auch [hier](iplug_dsc_scripted.html#sonderfall-ingrid-catalog-objekte-und-adressen).
 
 Die *URL* des *Administrationsinterfaces* ist anzugeben, wenn die Administration über einen Proxy erreichbar sein soll. Diese URL wird in der Portaladministration angezeigt. Die Angaben für den Port und ein Kennwort sind zu vervollständigen. Der Benutzer für diese Oberfläche heißt immer `admin`. Wenn sie zu einem späteren Zeitpunkt das *Kennwort* und den *Port* für die Administrationsoberfläche ändern, müssen Sie das iPlug neu starten. Bei allen anderen Optionen werden Änderungen auch ohne einen Neustart übernommen.
 
