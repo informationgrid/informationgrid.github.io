@@ -74,7 +74,7 @@ Die Aktualisierung erfolgt über den Installer.
 java -jar ingrid-ibus-NEW-VERSION-installer.jar
 {% endhighlight %}
 
-Während der Installation bitte "Upgrade" auswählen und das Installationsverzeichnis Verzeichnis angeben.
+Während der Installation bitte "Update" auswählen und das vorhandene Installationsverzeichnis angeben.
 
 iBus starten.
 
