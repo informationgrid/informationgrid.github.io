@@ -102,7 +102,7 @@ Die Aktualisierung erfolgt über den Installer.
 java -jar ingrid-iplug-sns-NEW-VERSION-installer.jar
 {% endhighlight %}
 
-Während der Installation bitte "Upgrade" auswählen und das Installationsverzeichnis Verzeichnis angeben.
+Während der Installation bitte "Update" auswählen und das vorhandene Installationsverzeichnis angeben.
 
 iPlug starten.
 
@@ -149,13 +149,24 @@ Die einzelnen Parameter haben folgende Bedeutung:
 |-------------------------------------|----------------------------------------------------------|
 | client/@name                        | Eindeutige ID des iPLugs  |
 | server/@name                        | Eindeutige ID des InGrid iBus  |
-| socket/@port                        | Port unter dem die Administrations GUI zu erreichen ist |
+| socket/@port                        | Port unter dem der iBus erreichbar ist (Verbindungsaufnahme) |
 | socket/@timeout               | Timeout der Socketverbindungen in sec |
 | message/@maximumSize                | max. zulässige Größe einer Message in Bytes, die über den iBus versendet werden kann |
 | message/@threadCount                | Anzahl der Verbindungen (Threads), die der iBus gleichzeitig aufrecht erhalten kann |
 | message/@handleTimeout              | Timeout einer Message in sec (Wie lange wartet der iBus auf die Beantwortung einer Message.) |
 | message/@queueSize                  | Message Queue (Wie viele Nachrichten können in der Warteschlange des iBus enthalten sein.) |
 
+### WebService Daten
+
+Geben Sie hier die Konfiguration des SNS WebService an.
+
+| Eingabefeld                         | Inhalt                                             |
+|-------------------------------------|----------------------------------------------------------|
+| WebService-URL:                     | http://www.semantic-network.de/service-xtm-2.0/xtm/soap  |
+| maximal zu analysierende Wörter:    | 1000  |
+| Benutzername: 	                  | "Ihr SNS Zugang" |
+| Kennwort:                           | "Ihr SNS Passwort" |
+| Sprache:                            | de |
 
 
 ## FAQ
