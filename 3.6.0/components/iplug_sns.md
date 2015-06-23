@@ -158,7 +158,7 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 ### WebService Daten
 
-Geben Sie hier die Konfiguration des SNS WebService an.
+Geben Sie hier in der Administrationsoberfläche die Konfiguration des SNS WebService an. Die Daten werden in der Datei `conf/plugdescription.xml` abgelegt.
 
 | Eingabefeld                         | Inhalt                                             |
 |-------------------------------------|----------------------------------------------------------|
