@@ -47,22 +47,13 @@ sh start.sh start
 
 starten. 
 
-Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
+Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können. Geben Sie als PORT den bei der Installation angegebenen Port für die Administration an.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
-
-
-Nach der ersten Installation wird die Administrations-GUI unter
-
-{% highlight text %}
-http://localhost:8082/admin
-{% endhighlight %}
-
-aufgerufen und die Konfiguration vervollständigt.
 
 
 ## Aktualisierung
@@ -88,7 +79,7 @@ Die Aktualisierung erfolgt über den Installer.
 java -jar ingrid-iplug-management-NEW-VERSION-installer.jar
 {% endhighlight %}
 
-Während der Installation bitte "Upgrade" auswählen und das Installationsverzeichnis Verzeichnis angeben.
+Während der Installation bitte "Update" auswählen und das vorhandene Installationsverzeichnis angeben.
 
 iPlug starten.
 
@@ -107,16 +98,20 @@ Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
 ## Konfiguration
 
+Über die Administrationsoberfläche wird die Konfiguration des iPlugs vorgenommen.
+Alle benutzerspezifischen Parameter werden in der Datei `conf/config.override.properties` abgelegt, damit diese bei einer Aktualisierung der Installation (Update im Installer) nicht überschrieben werden.
+Aus dieser Datei werden beim Start des iPlugs weitere benötigte Dateien generiert (`communication.xml`, `plugdescription.xml`).
+
 ### Basiskonfiguration
 
 Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen werden.
 
-
 ### Datenbank-Konfiguration
 
-In der Datei `conf/repository_database.xml` werden die Parameter der Portal-Datenbank angegeben. Der Konfiguration über den Installer unterstützt ausschließlich MySQL Datenbanken. Wenn Sie keine MySQL Datenbank als Portaldatenbank verwenden, müssen Sie diese Datei manuell anpassen.
+Die Parameter der Portal-Datenbank werden bereits im Installer eingegeben und können über die Administrationsoberfläche angepasst werden (Datenbankeinstellungen). Unterstützt werden MySQL und Oracle Datenbanken.
+Die Datenbankparameter werden in der Datei `conf/repository_database.xml` abgelegt.
 
-Die Anpassungen müssen im folgenden Abschnitt vorgenommen werden:
+Im folgenden ist die Konfiguration einer MySQL-Datenbank wiedergegeben:
 
 {% highlight xml %}
 <jdbc-connection-descriptor
@@ -134,12 +129,27 @@ Die Anpassungen müssen im folgenden Abschnitt vorgenommen werden:
 >
  {% endhighlight %}
 
-Die Konfiguration ist hier für eine MYSQL-Datenbank wiedergegeben worden. Wenn eine andere Datenbank eingesetzt werden soll, muss der JDBC-Treiber in das /lib Verzeichnis kopiert und die Konfiguration angepasst werden. 
+Für Oracle hier eine beispielhafte Konfiguration:
+
+{% highlight xml %}
+<jdbc-connection-descriptor
+	   jcd-alias="databaseOracle"
+	   default-connection="true"
+	   platform="Oracle"
+	   jdbc-level="3.0"
+	   driver="oracle.jdbc.OracleDriver"
+	   protocol="jdbc"
+	   subprotocol="oracle"
+	   dbalias="thin:@localhost:1521:XE"
+	   username="dbUsername"
+	   password="dbPassword"
+	   useAutoCommit="1"
+>
+ {% endhighlight %}
 
 ### InGrid Communication
 
-
-Die Datei `conf/communication.xml` enthält die Konfigurationen der InGrid Kommunikationsschicht.
+Die Datei `conf/communication.xml` enthält die Konfigurationen der InGrid Kommunikationsschicht. Diese wird aus den benutzerspezifischen Inhalten der Datei `conf/config.override.properties` generiert (s.o.).
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -161,9 +171,9 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 | Parameter                           | Beschreibung                                             |
 |-------------------------------------|----------------------------------------------------------|
-| client/@name                        | Eindeutige ID des iPLugs  |
+| client/@name                        | Eindeutige ID des iPlugs  |
 | server/@name                        | Eindeutige ID des InGrid iBus  |
-| socket/@port                        | Port unter dem die Administrations GUI zu erreichen ist |
+| socket/@port                        | Port unter dem der iBus erreichbar ist (Verbindungsaufnahme) |
 | socket/@timeout               | Timeout der Socketverbindungen in sec |
 | message/@maximumSize                | max. zulässige Größe einer Message in Bytes, die über den iBus versendet werden kann |
 | message/@threadCount                | Anzahl der Verbindungen (Threads), die der iBus gleichzeitig aufrecht erhalten kann |
