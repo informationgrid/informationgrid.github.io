@@ -123,7 +123,7 @@ Die einzelnen Parameter haben folgende Bedeutung:
 | Parameter                           | Beschreibung                                             |
 |-------------------------------------|----------------------------------------------------------|
 | server/@name                        | Eindeutige ID des InGrid iBus  |
-| socket/@port                        | Port unter dem die Administrations GUI zu erreichen ist |
+| socket/@port                        | Port unter dem der iBus zu erreichen ist (Verbindungsaufnahme) |
 | socket/@timeout               	  | Timeout der Socketverbindungen in sec |
 | message/@maximumSize                | max. zulässige Größe einer Message in Bytes, die über den iBus versendet werden kann |
 | message/@threadCount                | Anzahl der Verbindungen (Threads), die der iBus gleichzeitig aufrecht erhalten kann |
