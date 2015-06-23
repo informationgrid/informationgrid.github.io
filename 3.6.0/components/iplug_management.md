@@ -47,7 +47,7 @@ sh start.sh start
 
 starten. 
 
-Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können. Geben Sie als PORT den bei der Installation angegebenen Port für die Administration an.
+Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können. Geben Sie als `PORT` den bei der Installation angegebenen Port für die Administration an.
 
 {% highlight text %}
 http://localhost:PORT
@@ -149,7 +149,7 @@ Für Oracle hier eine beispielhafte Konfiguration:
 
 ### InGrid Communication
 
-Die Datei `conf/communication.xml` enthält die Konfigurationen der InGrid Kommunikationsschicht. Diese wird aus den benutzerspezifischen Inhalten der Datei `conf/config.override.properties` generiert (s.o.).
+Die Datei `conf/communication.xml` enthält die Konfiguration der InGrid Kommunikationsschicht. Diese wird aus den benutzerspezifischen Inhalten der Datei `conf/config.override.properties` generiert (s.o.).
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
