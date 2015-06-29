@@ -9,6 +9,8 @@ menu:
     menu: 
       - title: Überblick
         href: about/overview.html
+      - title: Neuigkeiten
+        href: about/history.html
       - title: Funktionen
         href: about/features.html
       - title: Anwendungen
