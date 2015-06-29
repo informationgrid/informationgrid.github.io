@@ -22,7 +22,29 @@ Im InGrid Editor kann im Dialog "Dargestellte Daten" für einen Geodatendienst e
 
 ![Externe Daten-Dienste Kopplung](../images/ingrid_external_coupling.png "Externe Daten-Dienste Kopplung")
 
-Dadurch wird es jetzt möglich Daten und Dienste Objekte, die in unterschiedlichen Katalogen gepflegt werden, INSPIRE udn GDI-DE konform zu koppeln.
+Dadurch wird es jetzt möglich Daten und Dienste Objekte, die in unterschiedlichen Katalogen gepflegt werden, INSPIRE und GDI-DE konform zu koppeln.
+
+Die gekoppelten Daten stehen über den ATOM Download Service INSPIRE kompatibel zur Verfügung.
+
+
+### CSW Schnittstelle: Verbesserung des Harvesting Prozesses
+
+Der Harvesting Prozess wurde in der CSW Schnittstelle überarbeitet und optimiert. Die Schnittstelle unterstützt nun das Harvesting von sehr umfangreichen Katalogen (mehrere 100.000 Datensätze).
+
+
+### Fehlerbehebung
+
+Portal
+
+- Captcha Funktionalität ist nun kompatibel mit OpenJDK 7
+- Zoomen auf Orte außerhalb der initialen Bounding Box wird im Karten Client unterstützt
+- Geschützte WMS Dienste werden in der Detaildarstellung nun nicht mehr verlinkt
+
+Ingrid Editor
+
+- Vollständige Anzeige der Vorschau auf kleineren Displays
+- Rechtliche Grundlagen werden nun wieder gespeichert
+- Dienste Kompatibilität im GetCapabilities wurde erhöht
 
 
 
