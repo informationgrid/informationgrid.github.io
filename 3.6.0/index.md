@@ -9,7 +9,7 @@ menu:
     menu: 
       - title: Überblick
         href: about/overview.html
-      - title: Neuigkeiten
+      - title: Was ist neu?
         href: about/history.html
       - title: Funktionen
         href: about/features.html
