@@ -32,7 +32,7 @@ Die gekoppelten Daten stehen über den ATOM Download Service INSPIRE kompatibel 
 Der Harvesting Prozess wurde in der CSW Schnittstelle überarbeitet und optimiert. Die Schnittstelle unterstützt nun das Harvesting von sehr umfangreichen Katalogen (mehrere 100.000 Datensätze).
 
 
-### Fehlerbehebung
+### Weitere Funktionalitäten und Fehlerbehebungen
 
 Portal
 
