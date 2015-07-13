@@ -38,6 +38,7 @@ Portal
 
 - Captcha Funktionalität ist nun kompatibel mit OpenJDK 7
 - Zoomen auf Orte außerhalb der initialen Bounding Box wird im Karten Client unterstützt
+- Export von Text und Farben wird im Karten Client unterstützt (Redlining)
 - Geschützte WMS Dienste werden in der Detaildarstellung nun nicht mehr verlinkt
 
 Ingrid Editor
