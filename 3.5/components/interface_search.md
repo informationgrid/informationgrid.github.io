@@ -108,7 +108,7 @@ Folgende Parameter sind zulässig:
 | Methode | Parameter | Beschreibung |
 | === | === | === |
 | descriptor |   | Keine Parameter, liefert den OpenSearch Descriptor, der die Such-Anfrage Syntax beschreibt |
-| query | q | Die Query entspricht dem Query-String im Portal (siehe Beschreibung der [Ingrid-Querysyntax](../system/querysyntax.md)). |
+| query | q | Die Query entspricht dem Query-String im Portal (siehe Beschreibung der [Ingrid-Querysyntax](../system/querysyntax.html)). |
 | | p | angeforderte Seite der Suchergebnisse; Standard: 1 |
 | | h | Treffer pro Seite; Standard: 10 |
 | | t | Timeout für die Such-Anfragen an das InGrid System.<br><br>Dieses Timeout beeinflusst nur die Such-Anfragen an die iPlugs, welche nur einen Teil der Kommunikation darstellen. Die eigentliche Dauer eines OpenSearch Aufrufen ist etwas länger, dennoch kann die Ausführungszeit, evtl. auf Kosten der Ergebnismenge, beeinflusst werden. Das max. Timeout wird über die Einstellung `ibus.search.max.timeout` in der `ingrid-opensearch.properties` gesetzt. Über den Parameter `t` kann kein Timeout definiert werden, was höher als das maximale Timeout ist. Wird der Parameter nicht angegeben, wird als Timeout immer das maximale Timeout verwendet. |
