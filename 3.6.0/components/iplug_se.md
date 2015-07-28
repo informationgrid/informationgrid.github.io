@@ -391,6 +391,29 @@ Es kann sein, dass die URL zu der weitergeleitet wird, nicht mehr Teil des defin
 
 Die Ermittlung des Scores hängt von vielen Faktoren ab. ElasticSearch bietet die Möglichkeit, die [Scorebildung zu erläutern](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-explain.html).
 
+### Die Reports sollen ohne Authentifizierung erreichbar sein.
+
+Um die Reports in das Admin GUI von der Authentifizierung auszuschließen muss die Datei
+
+{% highlight text %}
+webapp/WEB-INF/web.xml
+{% endhighlight %}
+
+wie folgt angepasst werden:
+
+{% highlight xml %}
+<security-constraint>
+    <web-resource-collection>
+        <web-resource-name>Free</web-resource-name>
+        ...
+        <url-pattern>/rest/urlerrors/*</url-pattern>
+        <url-pattern>/rest/status/*</url-pattern>
+        <url-pattern>/iplug-pages/instanceReports.html</url-pattern>
+    </web-resource-collection>
+</security-constraint>
+{% endhighlight %}
+
+
 
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
 

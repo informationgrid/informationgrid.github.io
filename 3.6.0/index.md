@@ -97,6 +97,7 @@ published: true
 ## Einführung
 
 - [Überblick](about/overview.html)
+- [Was ist neu?](about/history.html)
 - [Funktionen](about/features.html)
 - [Anwendungen](about/applications.html)
 - [Lizensierung](about/license.html)
