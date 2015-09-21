@@ -208,19 +208,23 @@
         $("img").each(function() {
           // wrap images in a tag, for fancybox's sake
           var parent = $(this).parent();
-          var clone = $(this).clone();
-          var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
-          newParent.fancybox({
-            closeClick: true,
-            scrolling: 'yes',
-            fitToView: false,
-            helpers : {
-              title : {
-                type : 'inside'
+	  if (parent.text().trim() == "") {
+            var clone = $(this).clone();
+            var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
+            newParent.fancybox({
+              closeClick: true,
+              scrolling: 'yes',
+              fitToView: false,
+              helpers : {
+                title : {
+                  type : 'inside'
+                }
               }
-            }
-          });
-          parent.replaceWith(newParent);
+            });
+            parent.replaceWith(newParent);
+	  } else {
+	    $(this).addClass('inline');
+	  }
         });
       }
     });
