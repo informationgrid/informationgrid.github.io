@@ -145,15 +145,16 @@ Um den "Zeige Punktkoordinaten"-Link im Portal für einen Treffer in der Ergebni
 Im Index-Mapping des iPlugs muss diese Eigenschaft hinzugefügt werden:
 
 {% highlight javascript %}
-IDX.addNumeric("spatial_ref_value.x", row.get("x"));
-IDX.addNumeric("spatial_ref_value.y", row.get("y"));
+//KML
+IDX.addNumeric("spatial_ref_value.x1", row.get("x1"));
+IDX.addNumeric("spatial_ref_value.y1", row.get("y1"));
 
-if(row.get("x") = null & row.get("y") = null) {
+if(row.get("x1") != null & row.get("y1") != null) {
 	IDX.addNumeric("kml", 1);
 }
 {% endhighlight %}
 
-Diese markierten Zeilen fügen einem Lucene-Dokument das Attribut `kml` mit dem Wert `1` hinzu, falls `x`  und `y` vorhanden ist.
+Diese markierten Zeilen fügen einem Lucene-Dokument das Attribut `kml` mit dem Wert `1` hinzu, falls `x1`  und `y1` vorhanden ist.
 
 KML-Erstellung
 
@@ -173,37 +174,37 @@ kml.addAttribute("xmlns:kml", DOM.getNS("kml"));
 var rowSpatialReference = SQL.all("SELECT * FROM spatial_reference WHERE obj_id=?", [objId]);
 
 if(hasValue(rowSpatialReference)) {
-    var rowT01Object = SQL.first("SELECT * FROM t01_object WHERE id=?", [objId]);
+  var rowT01Object = SQL.first("SELECT * FROM t01_object WHERE id=?", [objId]);
 
-    if(hasValue(rowT01Object)){
-		var kmlDocument = DOM.createElement("kml:Document");
-		var value = rowT01Object.get("obj_name");
-		kmlDocument.addElement("kml:name").addText( value );
+  if(hasValue(rowT01Object)){
+    var kmlDocument = DOM.createElement("kml:Document");
+    var value = rowT01Object.get("obj_name");
+    kmlDocument.addElement("kml:name").addText( value );
 
-		for (i=0; i < rowSpatialReference.size(); i++) {
+    for (i=0; i < rowSpatialReference.size(); i++) {
 
-			var spatialRefId = rowSpatialReference.get(i).get("spatial_ref_id");
-			var rowSpatialRefValue = SQL.first("SELECT * FROM spatial_ref_value WHERE id=?", [spatialRefId]);
+      var spatialRefId = rowSpatialReference.get(i).get("spatial_ref_id");
+      var rowSpatialRefValue = SQL.first("SELECT * FROM spatial_ref_value WHERE id=?", [spatialRefId]);
 
-			var name = rowSpatialRefValue.get("name_value");
-			var description= rowSpatialRefValue.get("nativekey");
-			var x = rowSpatialRefValue.get("x");
-			var y = rowSpatialRefValue.get("y");
+      var name = rowSpatialRefValue.get("name_value");
+      var description= rowSpatialRefValue.get("nativekey");
+      var x = rowSpatialRefValue.get("x1");
+      var y = rowSpatialRefValue.get("y1");
 
-			if(x = null && y = null){
-				var kmlPlacemark = DOM.createElement("kml:Placemark");
-				kmlPlacemark.addElement("kml:name").addText(name);
-				kmlPlacemark.addElement("kml:description").addText(description);
+      if(x != null && y != null){
+        var kmlPlacemark = DOM.createElement("kml:Placemark");
+        kmlPlacemark.addElement("kml:name").addText(name);
+        kmlPlacemark.addElement("kml:description").addText(description);
 
-				var kmlPoint = DOM.createElement("kml:Point");
-				kmlPoint.addElement("kml:coordinates").addText(x + "," + y);
+        var kmlPoint = DOM.createElement("kml:Point");
+        kmlPoint.addElement("kml:coordinates").addText(x + "," + y);
 
-				kmlPlacemark.addElement(kmlPoint);
-				kmlDocument.addElement(kmlPlacemark);
-				kml.addElement(kmlDocument);
-			}
-		}
+        kmlPlacemark.addElement(kmlPoint);
+        kmlDocument.addElement(kmlPlacemark);
+        kml.addElement(kmlDocument);
+      }
     }
+  }
 }
 
 ...
