@@ -25,6 +25,7 @@
   <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
   <script src="{{site.baseurl}}/assets/js/main.js"></script>
 
+
 </head>
 
 <body>
@@ -162,15 +163,15 @@
           </a>
           <h4 id="newsletter"  class="page-header">Newsletter Anmeldung</h4>
           <p>Melden Sie sich hier an um über Neuigkeiten und Updates informiert zu werden.</p>
-          <form role="form" action="//formspree.io/info@informationgrid.eu" method="POST">
-            <input type="hidden" name="_next" value={{page.url}} />
+          <form role="form" name="newsletterForm" action="//formspree.io/info@informationgrid.eu" method="POST">
+            <input type="hidden" name="_next" value="/" />
             <div class="form-group">
               <label for="email">E-Mail-Adresse:</label>
               <input type="email" class="form-control" placeholder="Email" name="_replyto" id="email" required>
             </div>
             <div class="form-group">
               <label for="name">Name (optional):</label>
-              <input type="text" class="form-control" placeholder="Name" id="name">
+              <input type="text" class="form-control" placeholder="Name" name="name" id="name">
             </div>
             <div class="form-group">
               <label class="radio-inline">
@@ -218,6 +219,8 @@
 
   <link rel="stylesheet" href="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
   <script type="text/javascript" src="{{site.baseurl}}/assets/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+  <script src="{{site.baseurl}}/assets/js/history.js"></script>
 
 <!--[if IE 8]>
 <script type="text/javascript">
