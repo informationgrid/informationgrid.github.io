@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: history
 title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
@@ -12,7 +12,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 - iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.0.3/))
 - iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.3/))
 - iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.0.3/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.0.3/)) 
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.0.3/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
 - iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.0.3/))
 - iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.0.3/))
@@ -117,7 +117,3 @@ Ingrid Editor
 - Vollständige Anzeige der Vorschau auf kleineren Displays
 - Rechtliche Grundlagen werden nun wieder gespeichert
 - Dienste Kompatibilität im GetCapabilities wurde erhöht
-
-
-
-
