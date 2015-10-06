@@ -138,20 +138,28 @@
       <!-- Content
       =========================================== -->
       <div class="col-md-9" role="main">
+        <h2 id="newsletter"  class="page-header">Newsletter Anmeldung</h2>
+        <p>Melden Sie sich hier an um über Neuigkeiten und Updates informiert zu werden.</p>
+        <form role="form" action="//formspree.io/info@informationgrid.eu" method="POST">
+          <div class="form-group">
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" class="form-control" name="_replyto" id="email">
+          </div>
+          <div class="form-group">
+            <label for="name">Name (optional):</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label class="radio-inline">
+              <input type="radio" name="_subject" checked>Anmelden
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="_subject">Abmelden
+            </label>
+          </div>
+          <button type="submit" class="btn btn-default">Abschicken</button>
+        </form>
         {{content}}
-        <h4>Newsletter Anmeldung</h4>
-        Melden Sie sich hier an um über Neuigkeiten und Updates informiert zu werden.
-        <form action="//formspree.io/info@informationgrid.eu"  method="POST">
-            <h5>Name:</h5>
-            <div>
-              <input type="text" name="name">
-            </div>
-            <h5>Mail:</h5>
-            <div>
-              <input type="email" name="_replyto">
-            </div>
-            <input type="submit" value="Anmelden">
-          </form>
       </div>
 
       <!-- Page navigation
