@@ -17,8 +17,9 @@ document.forms["newsletterForm"].onsubmit = function() {
   this.innerHTML = "<p><b>Erfolgreich übertragen!</b></p>" + this.innerHTML;
   var unsub = document.getElementById('unsubscribe').checked;
   var nextURL = document.getElementById("nextURL");
-
-  if (unsub == "true") {
+  nextURL = nextURL.split("?")[0];
+  
+  if (unsub) {
     nextURL.value += "?unsubscribe";
   } else {
     nextURL.value += "?subscribe";
