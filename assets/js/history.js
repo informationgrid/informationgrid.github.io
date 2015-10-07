@@ -10,18 +10,17 @@ window.onload = function() {
       subForm.innerHTML += "<p><b>Erfolgreich abgemeldet!</b></p>";
       break;
   }
-
 };
 
 document.forms["newsletterForm"].onsubmit = function() {
-  this.innerHTML = "<p><b>Erfolgreich übertragen!</b></p>" + this.innerHTML;
   var unsub = document.getElementById('unsubscribe').checked;
   var nextURL = document.getElementById("nextURL");
-  nextURL = nextURL.split("?")[0];
-  
+  var baseURL = window.location.href;
+  baseURL = baseURL.split("?")[0];
+
   if (unsub) {
-    nextURL.value += "?unsubscribe";
+    nextURL.value = baseURL + "?unsubscribe";
   } else {
-    nextURL.value += "?subscribe";
+    nextURL.value = baseURL + "?subscribe";
   }
 }
