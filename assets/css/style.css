@@ -79,3 +79,7 @@ figcaption, .figcaption {
 table {
   font-size: 90%;
 }
+
+#gotgroup{
+  display: none;
+}
