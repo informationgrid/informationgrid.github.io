@@ -3,10 +3,10 @@ window.onload = function() {
   var subForm = document.forms["newsletterForm"];
 
   switch (subOrUnsub) {
-    case "subscribe":
+    case "?subscribe":
       subForm.innerHTML += "<p><b>Erfolgreich angemeldet!</b></p>";
       break;
-    case "unsubscribe":
+    case "?unsubscribe":
       subForm.innerHTML += "<p><b>Erfolgreich abgemeldet!</b></p>";
       break;
   }
