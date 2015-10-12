@@ -6,12 +6,12 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Der SNS-iPlug bietet eine Schnittstelle zum [Semantischen Netzwerk Service (SNS) des Umweltbundesamtes](http://www.semantic-network.de/).
+Der SNS-iPlug bietet eine Schnittstelle zum [Semantischen Netzwerk Service (SNS) des Umweltbundesamtes](http://sns.uba.de/umthes/).
 
 Der Semantische Netzwerk Service bietet folgende Dienste:
 
 - Umwelt Thesarus (UMTHES)
-- Gazeteer
+- Gazetteer
 - Umweltchronik
 
 Die Dienste werden an verschiedenen Stellen in der InGrid Software verwendet:
@@ -147,10 +147,10 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 | Parameter                           | Beschreibung                                             |
 |-------------------------------------|----------------------------------------------------------|
-| client/@name                        | Eindeutige ID des iPLugs  |
+| client/@name                        | Eindeutige ID des iPlugs  |
 | server/@name                        | Eindeutige ID des InGrid iBus  |
 | socket/@port                        | Port unter dem der iBus erreichbar ist (Verbindungsaufnahme) |
-| socket/@timeout               | Timeout der Socketverbindungen in sec |
+| socket/@timeout                     | Timeout der Socketverbindungen in sec |
 | message/@maximumSize                | max. zulässige Größe einer Message in Bytes, die über den iBus versendet werden kann |
 | message/@threadCount                | Anzahl der Verbindungen (Threads), die der iBus gleichzeitig aufrecht erhalten kann |
 | message/@handleTimeout              | Timeout einer Message in sec (Wie lange wartet der iBus auf die Beantwortung einer Message.) |
@@ -158,15 +158,14 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 ### WebService Daten
 
-Geben Sie hier in der Administrationsoberfläche die Konfiguration des SNS WebService an. Die Daten werden in der Datei `conf/plugdescription.xml` abgelegt.
+In der Datei sns.properties können die Einstellung für den SNS vorgenommen werden.
 
-| Eingabefeld                         | Inhalt                                             |
-|-------------------------------------|----------------------------------------------------------|
-| WebService-URL:                     | http://www.semantic-network.de/service-xtm-2.0/xtm/soap  |
-| maximal zu analysierende Wörter:    | 1000  |
-| Benutzername: 	                  | "Ihr SNS Zugang" |
-| Kennwort:                           | "Ihr SNS Passwort" |
-| Sprache:                            | de |
+| Eingabefeld                               | Inhalt                                             |
+|-------------------------------------------|----------------------------------------------------|
+| Thesaurus-URL (sns.serviceURL.thesaurus): | http://sns.uba.de/umthes  |
+| Chronik-URL (sns.serviceURL.chronicle):   | http://sns.uba.de/chronik  |
+| Gazetteer-URL (sns.serviceURL.gazetteer): | http://sns.uba.de/gazetteer  |
+| Sprache (sns.language):                   | de |
 
 
 ## FAQ
