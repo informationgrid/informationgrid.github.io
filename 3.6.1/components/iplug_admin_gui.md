@@ -43,7 +43,7 @@ Ein wichtiger Parameter ist die Art der Datenquelle . Hier sind die entsprechend
 Die Angabe entscheidet auch über die Darstellung im Portal, Metadaten-Treffer werden z.B. anders dargestellt als Webseiten-Treffer.
 
 | Art der Datenquelle | datatype | Erläuterung |
-| === | === | === | 
+| === | === | === |
 | Forschungsdatenbank | research | Das iPLug liefert Ergebnisse aus einer Forschungsdatenbank. |
 | Andere Datenbank | dsc_other | Das iPlug liefert Ergebnisse aus einer Datenbank, diese ist aber keine IGC Datenbank. Die Darstellung der Detaildaten im Portal erfolgt in generischer Detaildarstellung. |
 | Rechtsvorschriften | law | Das iPlug liefert Ergebnisse zu Rechtsvorschriften. Ergebnisse werden bei Suche unter Rubrik "Rechtsvorschriften" berücksichtigt. |
@@ -146,12 +146,19 @@ Hier kann der Cache des iPlugs eingestellt werden. Sich wiederholende Anfragen i
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
 
+### Ich habe das Passwort für die Admin GUI vergessen.
+
+Für diesen Fall ist es möglich, das Passwort über die Kommandozeile zurückzusetzen. Gehen Sie dafür in das Verzeichnis des iPlugs, wo sich auch das start-Skript befindet und geben Sie folgenden Befehl ein:
+
+`sh start.sh resetPassword <newPassword>`
+
+wobei `<newPassword>` das neu zu vergebene Passwort sein soll. Dieses wird dann verschlüsselt in der Datei "config.override.properties" abgelegt und nach einem Neustart des iPlugs verwendet.
