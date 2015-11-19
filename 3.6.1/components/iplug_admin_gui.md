@@ -65,7 +65,7 @@ Die Angabe entscheidet auch über die Darstellung im Portal, Metadaten-Treffer w
 
 > Bei der Anbindung einer IGC Datenbank gibt es den Sonderfall, dass zusätzlich die Adresse eines korrespondierenden iPlugs (Objekt- und Adress iPlug aus einer IGC Datenbank) anzugeben sind. Siehe dazu auch [hier](iplug_dsc_scripted.html#sonderfall-ingrid-catalog-objekte-und-adressen).
 
-Die *URL* des *Administrationsinterfaces* ist anzugeben, wenn die Administration über einen Proxy erreichbar sein soll. Diese URL wird in der Portaladministration angezeigt. Die Angaben für den Port und ein Kennwort sind zu vervollständigen. Der Benutzer für diese Oberfläche heißt immer `admin`. Wenn sie zu einem späteren Zeitpunkt das *Kennwort* und den *Port* für die Administrationsoberfläche ändern, müssen Sie das iPlug neu starten. Bei allen anderen Optionen werden Änderungen auch ohne einen Neustart übernommen.
+Die *URL* des *Administrationsinterfaces* ist anzugeben, wenn die Administration über einen Proxy erreichbar sein soll. Diese URL wird in der Portaladministration angezeigt. Die Angaben für den Port und ein Kennwort sind zu vervollständigen. Das Kennwort muss mit seiner Wiederholung übereinstimmen, um Tippfehler zu vermeiden. Ist das Kennwort-Feld leer, so wird dieses beim Speichern nicht verändert. Der Benutzer für diese Oberfläche heißt immer `admin`. Wenn sie zu einem späteren Zeitpunkt das *Kennwort* und den *Port* für die Administrationsoberfläche ändern, müssen Sie das iPlug neu starten. Bei allen anderen Optionen werden Änderungen auch ohne einen Neustart übernommen.
 
 ![Angaben zu Betreiber und Datenquelle](../images/iplug_admin_gui_operator.png "Angaben zu Betreiber und Datenquelle")
 
@@ -110,6 +110,12 @@ Für indexierende iPlugs, kann hier eingestellt werden, wann die Indexierung der
 Für indexierende iPlugs, kann hier der Index Prozess manuell angestoßen werden.
 
 ![Indexieren](../images/iplug_admin_gui_index.png "Indexieren")
+
+### Index Status
+
+Für indexierende iPlugs, kann hier der Status des Indexes angesehen werden. Hier wird neben dem Status des Clusters auch der aktuell verwendete Index und die Anzahl der darin befindlichen Dokumente angezeigt. Des Weiteren wird das Mapping für die einzelnen Indexfelder mit ausgegeben, so dass überprüft werden kann, ob einem Feld ein falscher Typ zugeordnet wurde. Dieses Mapping kann in der Datei "conf/default-mapping.json" angepasst werden und wird beim nächsten Indexiervorgang verwendet.
+
+![Index Status](../images/iplug_admin_gui_index_status.png "Index Status")
 
 ### Kommunikations Setup
 
