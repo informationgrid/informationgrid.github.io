@@ -30,7 +30,6 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 - Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
  
 
-
 ### Änderungen
 
 - [Feature] [Portal] Entfernung aller PortalU Referenzen aus dem InGrid Portal Standard Profil ([REDMINE-14](https://dev.informationgrid.eu/redmine/issues/14))
@@ -81,8 +80,6 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 - [Bug] [CSW Interface] CSW harvestet nicht alle Dokumente ([REDMINE-179](https://dev.informationgrid.eu/redmine/issues/179))
 - [Bug] [iPlug SE] Falsche Gruppierung beim SE-iPlug ([REDMINE-181](https://dev.informationgrid.eu/redmine/issues/181))
 - [Bug] [System] Wildcards werden nicht korrekt umgesetzt innerhalb von Feldern ([REDMINE-211](https://dev.informationgrid.eu/redmine/issues/211))
-
-
 
 
 ## Version 3.6.0.3
