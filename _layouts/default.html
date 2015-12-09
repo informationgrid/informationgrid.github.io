@@ -179,7 +179,13 @@
         <li>Aktuellste Version v{{latestVersion}}</li>
       {% for l in site.footerLinks %}
         <li>&middot;</li>
-        <li><a href="{{l.url}}">{{l.title}}</a></li>
+        {% assign prefix_1 = l.url | truncate: 1, '' %}
+        {% assign prefix_4 = l.url | truncate: 4, '' %}
+        {% if prefix_1 != "/" and prefix_4 != "http" %}
+          <li><a href="/{{thisVersion}}/{{l.url}}">{{l.title}}</a></li>
+        {% else %}
+          <li><a href="{{l.url}}">{{l.title}}</a></li>
+        {% endif %}
       {% endfor %}
       </ul>
     </div>
