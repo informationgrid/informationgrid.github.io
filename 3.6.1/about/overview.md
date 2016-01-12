@@ -37,11 +37,12 @@ Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege un
 Aus der öffentlichen Verwaltung sind folgende Partner beteiligt:
 
 - Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
-- Bundesanstalt für IT-Dienstleistungen
+- Informationstechnikzentrum Bund (ITZBund)
 - Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft Brandenburg
 - GeoInformation Bremen
-- Behörde für Stadtentwicklung und Umwelt Hamburg
+- Behörde für Umwelt und Energie Hamburg
 - Landesamt für Umwelt, Naturschutz und Geologie Mecklenburg-Vorpommern
+- Ministerium für Umwelt, Landwirtschaft, Ernährung, Weinbau und Forsten Rheinland-Pfalz
 - Landesamt für Vermessung, Geoinformation und Landentwicklung Saarland
 - Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie
 - Ministerium für Landwirtschaft und Umwelt des Landes Sachsen-Anhalt
