@@ -154,6 +154,10 @@ Es werden jeweils nur die ersten 10 Treffer angezeigt. Ein Klick auf ein Sucherg
 
 ## FAQ
 
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+
+In der Datei env.sh können Systemvariablen iPlug spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
 ### Die Schnittstelle liefert keine Ergebnisse.
 
 Folgende Fehlerquellen können vorliegen:
