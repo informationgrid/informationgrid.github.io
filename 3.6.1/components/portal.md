@@ -329,6 +329,7 @@ Bitte in der Datei TOMCAT/bin/catalina.sh folgende Zeile eintragen:
 
 {% highlight text %}
 JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword"
+JAVA_OPTS="$JAVA_OPTS -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword"
 {% endhighlight %}
 
 ### Sortierung der Suchergebnisse nach Aktualität, woher stammt die Aktualitätsinfo ?
