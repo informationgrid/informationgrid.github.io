@@ -383,6 +383,11 @@ Die URLs können sowohl über ein URL Teilstring oder über einen Fehlercode gef
 
 ## FAQ
 
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+
+In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
+
 ### Ein URL Raum wird nicht indexiert, die Start URL hat einen Redirect Status.
 
 Es kann sein, dass die URL zu der weitergeleitet wird, nicht mehr Teil des definierten URL Raumes ist. Bitte die URL im Browser aufrufen und den URL Raum auf Basis der Weiterleitungs-URL neu erstellen.
