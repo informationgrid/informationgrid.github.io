@@ -166,6 +166,10 @@ Nach Änderungen muss der iBus neu gestartet werden.
 
 ## FAQ
 
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+
+In der Datei env.sh können Systemvariablen iPlug spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
 ### Der iBus soll auf einem Port unterhalb von 1024 betrieben werden.
 
 Der iBus muss als user root gestartet werden. Dazu muss die Variable `INGRID_USER=root` als Umgebungsvariable gesetzt, oder der entsprechende Eintrag in der Datei `start.sh` angepasst werden.
