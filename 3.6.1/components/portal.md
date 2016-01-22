@@ -325,12 +325,18 @@ upgrade.server.url=http://INGRID_PORTAL_DOMAIN/update
 
 ### Mein System verwendet einen Proxy für HTTP Zugriffe. Wie kann ich die Proxy-Konfiguration einstellen?
 
-Bitte in der Datei TOMCAT/bin/catalina.sh folgende Zeile eintragen:
+Bitte in der Datei TOMCAT/bin/env.sh folgende Eigenschaften eintragen:
 
 {% highlight text %}
-JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword"
-JAVA_OPTS="$JAVA_OPTS -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword"
+-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword
 {% endhighlight %}
+
+User und Passwort sind ggf. nicht einzutragen.
+
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+
+In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
 
 ### Sortierung der Suchergebnisse nach Aktualität, woher stammt die Aktualitätsinfo ?
 
@@ -368,9 +374,11 @@ RewriteRule ^/(.\\&#42;) /ingrid-portal/$1 [PT,NC]
 
 ### Wie kann ich dem Tomcat mehr Speicher zuweisen?
 
-Unter Linux: Tragen Sie in der catalina.sh Datei folgende Zeile ein:
+Bitet ergänzen Sie in der `env.sh` bzw. `user.env.sh`:
 
-CATALINA_OPTS="-server Xmx20148m"
+{% highlight text %}
+-server Xmx20148m
+{% endhighlight %}
 
 Der Tomcat hat nun bis zu 2048 MB zur Verfügung. Bitte beachten Sie, dass ab Java 5 der max. verfügbare Speicher per Default bereits bei 1 GB liegt ([http://docs.oracle.com/javase/6/docs/technotes/guides/vm/gc-ergonomics.html](http://docs.oracle.com/javase/6/docs/technotes/guides/vm/gc-ergonomics.html)).
 
