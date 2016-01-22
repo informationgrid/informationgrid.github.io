@@ -319,6 +319,15 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 ## FAQ
 
+### Mein System verwendet einen Proxy für HTTP(S) Zugriffe. Wie kann ich die Proxy-Konfiguration einstellen?
+
+Bitte in der Datei env.sh folgendes zusätzlich eintragen:
+
+{% highlight text %}
+-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword
+{% endhighlight %}
+
+User und Passwort müssen nicht unbedingt angegeben werden.
 
 
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
