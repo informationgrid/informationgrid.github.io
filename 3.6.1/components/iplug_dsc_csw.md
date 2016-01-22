@@ -254,6 +254,8 @@ Bitte in der Datei env.sh folgendes zusätzlich eintragen:
 
 User und Passwort müssen nicht unbedingt angegeben werden.
 
+Sollen die Einstellungen nach einem update der Komponente erhalten bleiben, kopieren sie die Datei `env.sh` nach `user.env.sh`.
+
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
 
 
