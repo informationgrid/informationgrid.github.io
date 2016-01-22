@@ -292,6 +292,10 @@ Ist dies getan können Sie bei der iPlug-Konfiguration den Typ "Access" auswähl
 
 Eine Authentifizierung ist bei MS-Access Datenbanken nicht möglich, daher bleiben die Felder "Benutzername" und "Passwort" leer. 
 
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+
+In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
 
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
 
