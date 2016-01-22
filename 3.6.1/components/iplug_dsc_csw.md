@@ -254,7 +254,9 @@ Bitte in der Datei env.sh folgendes zusätzlich eintragen:
 
 User und Passwort müssen nicht unbedingt angegeben werden.
 
-Sollen die Einstellungen nach einem update der Komponente erhalten bleiben, kopieren sie die Datei `env.sh` nach `user.env.sh`.
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei Upgrade verhindern.
+
+Kopieren sie die Datei `env.sh` nach `user.env.sh`. Die Änderungen in `user.env.sh` werden nicht überschrieben.
 
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
 
