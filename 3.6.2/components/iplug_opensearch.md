@@ -40,12 +40,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -54,7 +54,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -77,7 +77,7 @@ cp -r /opt/ingrid/ingrid-iplug-opensearch BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-opensearch-NEW-VERSION-installer.jar
@@ -108,7 +108,7 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 
 ### Einbindung einer OpenSearch Datenquelle (Opensearch Parameter )
 
-Bei der `Auswahl der Quelle` wird die anzuschließende Opensearch-Schnittstelle eingetragen. 
+Bei der `Auswahl der Quelle` wird die anzuschließende Opensearch-Schnittstelle eingetragen.
 
 Dabei kann entweder einen Deskriptor angeben, welcher die eigentliche Anfrage beschreibt, oder eine Url mit Platzhaltern angegeben werden. Die Platzhalter werden benötigt, um bspw. die Suchbegriffe und die Anzahl der abzufragenden Ergebnisse korrekt in die Url einzufügen, mit der dann die eigentliche Abfrage getätigt werden kann. Um erfolgreich eingebunden zu werden, muss das Ergebnis der Abfragen von der OpenSearch Datenquelle im RSS Format zurückgegeben werden.
 
@@ -119,7 +119,7 @@ Weitere Informationen über den Deskriptor und die Beschreibung der Parameter ka
 
 Unterstützt die anzuschließende Opensearch-Schnittstelle ein Ranking muss ggf. eine Anpassung des Ranking-Wertebereiches an den InGrid Wertebereich (0..1.0) erfolgen. Dafür gibt es die Modifikatoren für die Multiplikation und Addition, die auf das Ranking angewendet werden.
 
-Bsp: Besitzt die anzuschließende OpenSearch Schnittstelle ein Ranking von `0..10`, muss ein Multiplikator von `0.1` eingegeben werden. 
+Bsp: Besitzt die anzuschließende OpenSearch Schnittstelle ein Ranking von `0..10`, muss ein Multiplikator von `0.1` eingegeben werden.
 
 ![Opensearch Konfiguration](../images/iplug_opensearch_parameter.jpg "Opensearch Konfiguration")
 
@@ -207,7 +207,7 @@ I = InGrid-Score
 p = Position des Scores innerhalb der Scores mit der selben Höhe. Wert: 0 ... (n-1)
 n = Anzahl der Scores mit der selben Höhe.
 
-I = Minimum(G) + [ { (Median(G) - Minimum(G) ) / n } * (n - p) ] 
+I = Minimum(G) + [ { (Median(G) - Minimum(G) ) / n } * (n - p) ]
 {% endhighlight %}
 
 Beispiel mit 3 Treffern jeweils Score=9 und o.g. Konfiguration (für Score 9 Median=1, Minimum=0)
@@ -220,14 +220,14 @@ Beispiel mit 3 Treffern jeweils Score=9 und o.g. Konfiguration (für Score 9 Med
 
 Die konfigurierten minimalen und maximalen Scores geben den Score Range vor, d.h. für eingehende Scores über dem maximalen Wert wird der maximale konfigurierte Score Wert genommen (im Bsp. 10). Für eingehende Scores unter dem minimalen Wert wird der minimale konfigurierte Score Wert genommen (im Bsp. 0).
 
-> Nach der Änderung muss das iPlug neu gestartet werden. 
+> Nach der Änderung muss das iPlug neu gestartet werden.
 
 
 ### Opensearch Mapping
 
 Hier besteht die Möglichkeit, die Abfrage der angeschlossenen Opensearch-Schnittstelle zu erweitern. Es möglich Einstellungen vorzunehmen, um nach einer Domäne, einem Partner und/oder einem Anbieter zu filtern. Dies muss allerdings von der Opensearch-Schnittstelle unterstützt werden!
 
-Da die Parameter für die Filterung von Schnittstelle zu Schnittstelle unterschiedlich ausfallen kann, muss hier ein Mapping vorgenommen werden. Aktiviert man das Mapping bspw. für Domain, so muss der Wert von der InGrid Query korrekt auf die Opensearch-Schnittstelle abgebildet werden. Dazu schreibt man den Opensearch-Parameter in das Feld *zu mappen auf:*. Nun gibt es die Möglichkeit, dass der Parameter innerhalb der Suchbegriffe auftaucht, oder als URL-Request Parameter an die Anfrage angehängt wird. Situationsbedingt wählt man dann die Checkbox *als Parameter hinzufügen*. 
+Da die Parameter für die Filterung von Schnittstelle zu Schnittstelle unterschiedlich ausfallen kann, muss hier ein Mapping vorgenommen werden. Aktiviert man das Mapping bspw. für Domain, so muss der Wert von der InGrid Query korrekt auf die Opensearch-Schnittstelle abgebildet werden. Dazu schreibt man den Opensearch-Parameter in das Feld *zu mappen auf:*. Nun gibt es die Möglichkeit, dass der Parameter innerhalb der Suchbegriffe auftaucht, oder als URL-Request Parameter an die Anfrage angehängt wird. Situationsbedingt wählt man dann die Checkbox *als Parameter hinzufügen*.
 
 ![Opensearch Mapping](../images/iplug_opensearch_mapping.jpg "Opensearch Mapping")
 
@@ -268,8 +268,8 @@ Hier kann im folgenden Bereich die Facette konfiguriert werden.
    </property>
    <property name="facetClassDefinitions">
       <list>
-      <!-- 
-         Add facets for this iplug. 
+      <!--
+         Add facets for this iplug.
          If facet fits, all results will be added to the facet
 
          <value>type:www</value>  
@@ -279,7 +279,7 @@ Hier kann im folgenden Bereich die Facette konfiguriert werden.
 </bean>
 {% endhighlight %}
 
-Die Änderungen werden nach Neustart der Komponente übernommen. 
+Die Änderungen werden nach Neustart der Komponente übernommen.
 
 ### InGrid Communication
 
@@ -339,12 +339,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

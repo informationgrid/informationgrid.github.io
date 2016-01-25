@@ -41,12 +41,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -55,7 +55,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -78,7 +78,7 @@ cp -r /opt/ingrid/ingrid-iplug-xml BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-xml-NEW-VERSION-installer.jar
@@ -120,10 +120,10 @@ Um eine neue Datei zu mappen, drücken Sie den Button `Neue Excel Datei mappen`.
 Existieren bereits abgebildete Dateien gibt es folgende Möglichkeiten die Einstellungen zu überarbeiten:
 
 - `Löschen`: löscht eine Abbildung
-- `Bearbeiten`: öffnet das Mapping des XML Files, damit man diese bearbeiten kann 
-- `Datei aktualisieren`: für den Fall, dass sich der Inhalt der originalen Datei geändert hat 
+- `Bearbeiten`: öffnet das Mapping des XML Files, damit man diese bearbeiten kann
+- `Datei aktualisieren`: für den Fall, dass sich der Inhalt der originalen Datei geändert hat
 
-#### Datei auswählen 
+#### Datei auswählen
 
 Fügen Sie eine XML Datei zum mapping hinzu, müssen Sie als erstes die Datei selbst und das Hauptelement angeben.
 
@@ -155,17 +155,17 @@ Der Inhalt bzw. die Struktur einer solchen XML Datei könnte folgendermaßen aus
 </store>
 {% endhighlight %}
 
-Die `item` Elemente können mit XPath demnach entweder 
+Die `item` Elemente können mit XPath demnach entweder
 
-- (1) explizit mit `store/wares/item` angegeben werden oder aber 
-- (2) über einen relativen Pfadausdruck wie `//item`. 
+- (1) explizit mit `store/wares/item` angegeben werden oder aber
+- (2) über einen relativen Pfadausdruck wie `//item`.
 
-Diese Ausdrücke lassen sich wie ein Verzeichnispfad lesen: 
+Diese Ausdrücke lassen sich wie ein Verzeichnispfad lesen:
 
-- (1) ein `item` liegt in dem Element `wares` welches wiederum im Hauptelement `store` liegt oder 
+- (1) ein `item` liegt in dem Element `wares` welches wiederum im Hauptelement `store` liegt oder
 - (2) irgendwo unterhalb des Wurzelknotens `/`.
 
-#### Felder definieren 
+#### Felder definieren
 
 Sobald eine XML Datei erfolgreich hochgeladen worden ist, können Sie einzelne Felder definieren, welche später indexiert werden.
 
@@ -197,7 +197,7 @@ Es gibt vier verschiedene Feldtypen :
 - `TEXT` : für Text aller Art.
 - `KEYWORD` : ebenfalls Text, jedoch ein Schlüsselbegriff (meistens nur ein Wort).
 - `NUMBER` : Zahlen aller Art (ganze und Fließkommazahlen).
-- `BOOLEAN` : Werte für wahr ( *true* ) und falsch ( *false* ). 
+- `BOOLEAN` : Werte für wahr ( *true* ) und falsch ( *false* ).
 
 Die Auswahl des **Feldtyps** spielt eine Rolle für Filter und Indexierung.
 
@@ -236,7 +236,7 @@ Um nun auf dieses Feld einen Filter anzuwenden, müssen wir nur auf den Link `Fi
 - `CONTAINS` : lässt nur Felder zu, die den Wert enhalten.
 - `NOT_CONTAIN` : lässt nur Felder zu, die den Wert nicht enhalten.
 - `EQUAL` : lässt nur Felder zu, die dem Wert gleichen.
-- `NOT_EQUAL` : lässt nur Felder zu, die dem Wert nicht gleichen. 
+- `NOT_EQUAL` : lässt nur Felder zu, die dem Wert nicht gleichen.
 
 Der Wert ist hierbei frei wählbar und kann sowohl eine Zahl als auch eine Zeichenkette sein.
 
@@ -246,17 +246,17 @@ Als Ergebnis für oben genanntes Beispiel (durch einen "GREATER_THAN 1"-Filter) 
 
 ![Hinzugefügte Filter in der Vorschau](../images/iplug_xml_filter_preview.png "Hinzugefügte Filter in der Vorschau")
 
-Ein Klick auf das Kreuz neben dem Filter entfernt diesen. 
+Ein Klick auf das Kreuz neben dem Filter entfernt diesen.
 
 **Anmerkungen zur Verwendung des Feldtyps:**
 
-Der Filter ist unabhängig vom Datentyp des Ergebnisses eines XPath-Ausdrucks beziehungsweise eines indexierten XML-Elements. Entscheidend für das funktionieren des Filters ist, ob der Inhalt eines Feldes entsprechend des Filtertyps interpretiert werden kann. D.h., wenn ein `GREATER THAN` Filter verwendet wird, sollte der Inhalt als numerischer Wert interpretierbar sein. 
+Der Filter ist unabhängig vom Datentyp des Ergebnisses eines XPath-Ausdrucks beziehungsweise eines indexierten XML-Elements. Entscheidend für das funktionieren des Filters ist, ob der Inhalt eines Feldes entsprechend des Filtertyps interpretiert werden kann. D.h., wenn ein `GREATER THAN` Filter verwendet wird, sollte der Inhalt als numerischer Wert interpretierbar sein.
 
-> ACHTUNG: Die Filter `GREATER THAN` und `LOWER THAN` lassen sich (leider) nicht zur alphanumerischen Sortierung verwenden (B > A). Die Anwendung eines Filters dieser Art auf einen nicht-numerischen Eintrag würde keine Ergebnisse zurücklassen. 
+> ACHTUNG: Die Filter `GREATER THAN` und `LOWER THAN` lassen sich (leider) nicht zur alphanumerischen Sortierung verwenden (B > A). Die Anwendung eines Filters dieser Art auf einen nicht-numerischen Eintrag würde keine Ergebnisse zurücklassen.
 
 ### Weitere Hinweise
 
-#### Verwenden der Indexspalten in der InGrid Suche 
+#### Verwenden der Indexspalten in der InGrid Suche
 
 Indexspalten können direkt als Parameter in der InGrid Suche verwendet werden. Dies ist allerdings nicht mit der Filterfunktion zu verwechseln. Während der Filter mit Vergleichsoperationen arbeitet, wird bei der Verwendung der Indexspalte als Query-Parameter lediglich auf die Gleichheit (Existenz) eines Wertes geprüft.
 
@@ -289,7 +289,7 @@ Beim Anlegen des Mappings muss sich also der Administrator / Datenpfleger gut ü
 
 #### Große XML-Dateien
 
-Für sehr große XML-Dateien ist das XML-DSC in der jetzigen Implementierung nicht geeignet. Für das Mapping der XML_Struktur auf einen Index wird das XML-Dokument als DOM im Hauptspeicher repräsentiert. Bei hinreichend großen Dokumenten hierfür der bereitgestellte Arbeitsspeicher des iPlugs nicht aus. Das Problem dürfte bei Dokumenten ab einer Größe von `>50MB` auftreten, womöglich auch schon bei kleineren. Um das Indexieren für große XML-Dateien zu realisieren, müsste das Dokument mit einem SAX-Parser o.ä. geparsed werden. 
+Für sehr große XML-Dateien ist das XML-DSC in der jetzigen Implementierung nicht geeignet. Für das Mapping der XML_Struktur auf einen Index wird das XML-Dokument als DOM im Hauptspeicher repräsentiert. Bei hinreichend großen Dokumenten hierfür der bereitgestellte Arbeitsspeicher des iPlugs nicht aus. Das Problem dürfte bei Dokumenten ab einer Größe von `>50MB` auftreten, womöglich auch schon bei kleineren. Um das Indexieren für große XML-Dateien zu realisieren, müsste das Dokument mit einem SAX-Parser o.ä. geparsed werden.
 
 
 ### InGrid Communication
@@ -340,12 +340,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

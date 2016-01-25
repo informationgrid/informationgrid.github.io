@@ -25,15 +25,15 @@ Ein Indexierungsdurchlauf besteht aus mehreren Phasen:
 | Fetch | Die URLs werden heruntergeladen. |
 | Update CrawlDB | Die Nutch CrawlDB wird mit den neu ermittelten Outlinks der heruntergeladenen Seiten aktualisiert. |
 | Update Metadata | Die neuen URLs werden mit den Metadaten aus der URL Raum Definition aktualisiert. |
-| Create Host Statistics | Eine Host Statistik wird erzeugt (Anzahl URLs pro Host). | 
-| Create Url Error Statistics | Eine Statistik über fehlerhafte URLs wird erzeugt. | 
-| Create Url Report | Ein Statusreport für Start-URLs wird erzeugt. | 
-| Merge Segments | Vorhandene Segmente werden zu einem Segment konsolidiert. | 
-| Filter Segments | Vorhandene Segmente werden gegen die CrawlDB gefiltert. Daten von gelöschten URL Räumen werden entfernt. | 
-| Webgraph | Ein Webgraph wird anhand der Verlinkung der einzelnen URLs erstellt. Der Webgraph gibt Auskunft, wie stark URLs miteinander vernetzt sind. Diese Information geht in die Ermittlung eines Webseiten-Scores bei der Indexierung ein. | 
-| Update LinkDB | Die Nutch LinkDB wird aktualisiert. | 
-| Deduplication | Anhand von einem Fingerprint werden Duplikate von Webseiten identifiziert und markiert. | 
-| Index | Der Index wird aktualisiert. | 
+| Create Host Statistics | Eine Host Statistik wird erzeugt (Anzahl URLs pro Host). |
+| Create Url Error Statistics | Eine Statistik über fehlerhafte URLs wird erzeugt. |
+| Create Url Report | Ein Statusreport für Start-URLs wird erzeugt. |
+| Merge Segments | Vorhandene Segmente werden zu einem Segment konsolidiert. |
+| Filter Segments | Vorhandene Segmente werden gegen die CrawlDB gefiltert. Daten von gelöschten URL Räumen werden entfernt. |
+| Webgraph | Ein Webgraph wird anhand der Verlinkung der einzelnen URLs erstellt. Der Webgraph gibt Auskunft, wie stark URLs miteinander vernetzt sind. Diese Information geht in die Ermittlung eines Webseiten-Scores bei der Indexierung ein. |
+| Update LinkDB | Die Nutch LinkDB wird aktualisiert. |
+| Deduplication | Anhand von einem Fingerprint werden Duplikate von Webseiten identifiziert und markiert. |
+| Index | Der Index wird aktualisiert. |
 | Cleanup Index | Duplikate werden aus dem Index entfernt. |
 | Cleanup Crawl | Temp. Dateien werden gelöscht. |
 
@@ -65,12 +65,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -79,7 +79,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -102,7 +102,7 @@ cp -r /opt/ingrid/ingrid-iplug-se BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-se-NEW-VERSION-installer.jar
@@ -163,17 +163,17 @@ Die URL Pflege erlaubt das Verwalten von URL Räumen, die indexiert werden solle
 
 
 | Start-URL | Einstiegs-URL in den URL Raum |
-| Limit URL Muster | Ein oder mehrere URL Muster, die nicht verlassen werden dürfen | 
+| Limit URL Muster | Ein oder mehrere URL Muster, die nicht verlassen werden dürfen |
 | Exclude URL Muster | Ein oder mehrere URL Muster, die innerhalb des URL Raumes ausgeschlossen sind |
 
-Ein URl Muster ist hier immer entweder 
+Ein URl Muster ist hier immer entweder
 
 - ein rechts-trunkiertes Muster
 
   ```http://www.domain.com/pfad```
 
   das alle URLs beginnend mit dem Muster inkludiert
-  
+
 - oder ein regulärer Ausdruck
 
   ```/http://www.domain.com/[Reguärer Ausdruck]/```
@@ -181,9 +181,9 @@ Ein URl Muster ist hier immer entweder
   der alle URL inkludiert, die dem regulären Ausdruck entsprechen. Es ist hier darauf zu achten, dass der reguläre Ausdruck sich immer nur auf den Pfad bezieht. Alle URL Muster müssen zwingend mit einer Domain beginnen.
 
 > Änderungen am URL Raum werden im Index erst nach einem weiteren Indexierungsdurchgang sichtbar.
-  
-  
-Auf der Übersichtsseite wird die Liste aller URL Räume angezeigt. Diese kann über einen URL Filter oder die Angabe von bestimmten Metadaten eingeschränkt werden. 
+
+
+Auf der Übersichtsseite wird die Liste aller URL Räume angezeigt. Diese kann über einen URL Filter oder die Angabe von bestimmten Metadaten eingeschränkt werden.
 
 ![SE iPlug URL Pflege - Übersicht](../images/iplug_se_url_maintenance.png "SE iPlug URL Pflege - Übersicht")
 
@@ -194,7 +194,7 @@ Für jeden URL Raum wird ein Status angegeben, der sich aufg die Start URL bezie
 | Status | Erläuterung |
 | === | === |
 | db_fetched | URL wurde erfolgreich geladen. |
-| db_redir_temp | Es wurde ein temporärer Redirect erkannt.| 
+| db_redir_temp | Es wurde ein temporärer Redirect erkannt.|
 | db_redir_perm | Es wurde ein permanenter Redirect erkannt. |
 | db_unfetched | Die URL wurde zur Überprüfung vorgemerkt, aber noch nicht geladen. |
 | db_gone | Beim Laden der URL wurde ein Fehler festgestellt. Die URL wurde als nicht mehr existierend klassifiziert. |
@@ -356,7 +356,7 @@ Folgende Reports stehen zur Verfügung:
 
 **Host Report**
 
-Der Host Report liefert Informationen über die Anzahl der 
+Der Host Report liefert Informationen über die Anzahl der
 
 - bekannten (in der CrawlDB vermerkten)
 - analysierten (in einem Durchlauf analysierten und ggf. indexierten)
@@ -425,12 +425,11 @@ wie folgt angepasst werden:
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

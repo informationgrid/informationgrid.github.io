@@ -10,7 +10,7 @@ Der WFS-iPlug bietet eine Schnittstelle zu WFS (Web Feature Service)-Datenquelle
 
 Eine Anfrage an das iPlug generiert also KEINE Anfrage an die zugrunde liegende WFS Schnittstelle. Diese Vorgehensweise wurde insbesondere im Hinblick auf eine performante Abfrage des iPlugs gewählt.
 
-Das iPlug fragt die WFS Schnittstelle regelmäßig (z.B. einmal täglich) ab. Die Abfrage-Frequenz kann über die Admin-Oberfläche gesteuert werden. 
+Das iPlug fragt die WFS Schnittstelle regelmäßig (z.B. einmal täglich) ab. Die Abfrage-Frequenz kann über die Admin-Oberfläche gesteuert werden.
 
 ![InGrid Komponente iPlug WFS](../images/ingrid_iplug_wfs.png "InGrid Komponente iPlug WFS")
 
@@ -43,12 +43,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -57,7 +57,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -80,7 +80,7 @@ cp -r /opt/ingrid/ingrid-iplug-dsc-wfs BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-dsc-wfs-NEW-VERSION-installer.jar
@@ -123,7 +123,7 @@ Es kann eingestellt werden, ob die Anfrage per GET, POST oder Soap Request erfol
 
 - GET -> KVPGetRequest
 - POST -> PostRequest
-- Soap -> SoapRequest 
+- Soap -> SoapRequest
 
 {% highlight xml %}
 <map>
@@ -138,7 +138,7 @@ Es kann eingestellt werden, ob die Anfrage per GET, POST oder Soap Request erfol
 In folgendem Abschnitt wird eingestellt, mit welcher Strategie das Harvesting der Features mittels GetFeature Operation abläuft.
 
 - `PagingUpdateStrategy`: Die Features eines Feature Typs werden nach und nach geholt, wobei zunächst die Gesamtanzahl der Features abgefragt und dann eine Maximalanzahl per request geholt wird (Paging Mechanismus).<br>Der Parameter maxFeatures bestimmt dabei die maximale Anzahl per Request.<br>Diese Strategie ist weniger speicheraufwendig und sollte angewandt werden, wenn der Service eine Anfrage mit maxFeatures und startIndex unterstützt.
-- `DefaultUpdateStrategy`: Die Features eines Feature Typs werden mittels eines Requests geholt, d.h. die gesamte Anzahl der Features wird übertragen.<br>Bei einer hohen Anzahl von Features kann dies sehr speicheraufwendig werden und zu OutOfMemory Exceptions führen. 
+- `DefaultUpdateStrategy`: Die Features eines Feature Typs werden mittels eines Requests geholt, d.h. die gesamte Anzahl der Features wird übertragen.<br>Bei einer hohen Anzahl von Features kann dies sehr speicheraufwendig werden und zu OutOfMemory Exceptions führen.
 
 Bei beiden Strategien kann mit dem requestPause Parameter eingestellt werden, wie lange zwischen den Requests gewartet werden soll (in Millisekunden).
 
@@ -170,7 +170,7 @@ Index (Mapping nach Lucene):
 ...
 		 <value>classpath:mapping/pegelonline-wfs-1.1.0_to_lucene-igc-1.0.3.js</value>
 	  </list>
-	</property> 
+	</property>
 	<property name="compile" value="true"/>
 </bean>
 {% endhighlight %}
@@ -184,7 +184,7 @@ Detaildarstellung (Mapping nach IDF = InGrid? Data Format):
 ...
 		 <value>classpath:mapping/pegelonline-wfs-1.1.0_to_idf-1.0.0.js</value>
 	  </list>
-	</property> 
+	</property>
 	<property name="compile" value="true"/>
 </bean>
 {% endhighlight %}
@@ -249,12 +249,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

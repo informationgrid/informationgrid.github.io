@@ -40,12 +40,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -54,7 +54,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -77,7 +77,7 @@ cp -r /opt/ingrid/ingrid-iplug-dsc-scripted BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-dsc-scripted-NEW-VERSION-installer.jar
@@ -228,7 +228,7 @@ Beispiel-Ergebnis:
 </kml:Document>
 </kml:kml>
 {% endhighlight %}
-    
+
 
 Diese KML DAten werden im Portal in einer temporären Datei erstellt. Der Pfad für die temporären Daten kann in der Karten-Konfigurations-Datei `wms_interface.properties` im Portal angeben werden. Dafür existiert in der Datei die Eigenschaft "temp_service_path".
 
@@ -241,7 +241,7 @@ temp_service_path = /opt/portalu/ingrid-auto/ingrid-portal-3.2.0-SNAPSHOT/apache
 
 Um die Anzahl der hier erzeugten Dateien zu begrenzen, existiert in der gleichen Konfigurationsdatei die Eigenschaft `temp_service_limit`. Diese kann mit einer Zahl, z.B. 2000, definiert werden und würde bei einer Anzahl von mehr als 2000 Dateien zunächst alle Dateien in dem konfigurierten Verzeichnis löschen, bevor eine neue KML-Datei erzeugt wird.
 
-Am Ende erhält die Kartenkomponente vom Portal den Pfad zur KML-Datei sowie den Treffer-Titel, erstellt aus diesem eine Layer und fügt des der Kartenkomponente unter "Aktiven Dienste" hinzu. 
+Am Ende erhält die Kartenkomponente vom Portal den Pfad zur KML-Datei sowie den Treffer-Titel, erstellt aus diesem eine Layer und fügt des der Kartenkomponente unter "Aktiven Dienste" hinzu.
 
 
 ### InGrid Communication
@@ -290,7 +290,7 @@ Dazu gehen Sie zu der ODBC Konfigurationsverwaltung. Ist Ihre Datenbank bisher n
 
 Ist dies getan können Sie bei der iPlug-Konfiguration den Typ "Access" auswählen. Im Feld "DB URL" wird automatisch "jdbc:odbc:" erscheinen. Fügen Sie nun hier den von Ihnen vergebenen Datenbanknamen hinten an.
 
-Eine Authentifizierung ist bei MS-Access Datenbanken nicht möglich, daher bleiben die Felder "Benutzername" und "Passwort" leer. 
+Eine Authentifizierung ist bei MS-Access Datenbanken nicht möglich, daher bleiben die Felder "Benutzername" und "Passwort" leer.
 
 ### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
 
@@ -302,12 +302,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

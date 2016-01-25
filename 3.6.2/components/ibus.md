@@ -46,7 +46,7 @@ starten.
 Der iBus besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -68,7 +68,7 @@ cp -r /opt/ingrid/ingrid-ibus <BACKUP-DIRECTORY>
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-ibus-NEW-VERSION-installer.jar
@@ -157,7 +157,7 @@ Bsp. `globalRanking.properties`:
 {% highlight properties %}
 # iPlug ID = value
 # Push results ranking of iPlug up with values > 1.0
-# Pull results ranking down with values 0.0 < value < 1.0 
+# Pull results ranking down with values 0.0 < value < 1.0
 /ingrid-group\:iplug-se=0.9
 {% endhighlight %}
 
@@ -173,4 +173,3 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 ### Der iBus soll auf einem Port unterhalb von 1024 betrieben werden.
 
 Der iBus muss als user root gestartet werden. Dazu muss die Variable `INGRID_USER=root` als Umgebungsvariable gesetzt, oder der entsprechende Eintrag in der Datei `start.sh` angepasst werden.
-

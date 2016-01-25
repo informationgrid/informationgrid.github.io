@@ -41,12 +41,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -55,7 +55,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -78,7 +78,7 @@ cp -r /opt/ingrid/ingrid-iplug-excel BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-excel-NEW-VERSION-installer.jar
@@ -120,17 +120,17 @@ Um eine neue Datei zu mappen, drücken Sie den Button `Neue Excel Datei mappen`.
 Existieren bereits gemappte Dateien bzw. Sheets gibt es folgende Möglichkeiten die Einstellungen zu überarbeiten:
 
 - `Löschen`: löscht ein gemapptes Sheet wieder
-- `Bearbeiten`: öffnet das Mapping des Sheets, damit man diese bearbeiten kann 
+- `Bearbeiten`: öffnet das Mapping des Sheets, damit man diese bearbeiten kann
 - `Weiteres Sheet`: um ein weiteres Sheet der selben Excel-Datei zu mappen
-- `Datei aktualisieren`: für den Fall, dass sich der Inhalt der originalen Datei geändert hat 
+- `Datei aktualisieren`: für den Fall, dass sich der Inhalt der originalen Datei geändert hat
 
-#### Datei auswählen 
+#### Datei auswählen
 
 Um eine neue Excel Datei zu mappen, wählen Sie diese einfach aus und bestätigen Sie mit `Upload`.
 
 ![Excel Datei Öffnen](../images/iplug_excel_file.png "Excel Datei Öffnen")
 
-#### Sheet auswählen 
+#### Sheet auswählen
 
 Falls ihre Datei mehrere Sheets (Tabellen) besitzt, gelangen sie nach dem hochladen der Excel Datei zu einer Vorschau, in welcher Sie wählen können, welches Sheet sie zum Mapping hinzufügen wollen.
 
@@ -146,7 +146,7 @@ Es können bestimmte Grundeinstellungen für das Sheets vorgenommen.
 Ein Sheet kann in zwei verschiedene Weisen aufgebaut sein:
 
 - eine Zeile (ROW) enthält ein Dokument
-- eine Spalte (COLUMN) enthält ein Dokument 
+- eine Spalte (COLUMN) enthält ein Dokument
 
 ![Sheet Einstellungen](../images/iplug_excel_cheet_properties.png "Sheet Einstellungen")
 
@@ -183,16 +183,16 @@ Es gibt vier verschiedene Feldtypen :
 - `TEXT` : für Text aller Art.
 - `KEYWORD` : ebenfalls Text, jedoch ein Schlüsselbegriff (meistens nur ein Wort).
 - `NUMBER` : Zahlen aller Art (ganze und Fließkommazahlen).
-- `BOOLEAN` : Werte für wahr ( *true* ) und falsch ( *false* ). 
+- `BOOLEAN` : Werte für wahr ( *true* ) und falsch ( *false* ).
 
-Näheres zum Mapping der verschiedenen Feldtypen in den Index siehe XML-iPlug. 
+Näheres zum Mapping der verschiedenen Feldtypen in den Index siehe XML-iPlug.
 
 Ein Beispiel, wie ein fertig abgebildetes Sheet aussehen könnte:
 
 ![Beispiel](../images/iplug_excel_field_mapping_sample.png "Beispiel")
 
 
-#### Bereich definieren 
+#### Bereich definieren
 
 Ein Sheet kann viele Daten beinhalten und dadurch auch sehr unübersichtlich werden.
 
@@ -209,7 +209,7 @@ Entschließt man sich dazu, den ausgeschlossenen Datensatz wieder hinzuzufügen,
 ![Datensatz ausschließen](../images/iplug_excel_exclude.png "Datensatz ausschließen")
 
 
-#### Filter hinzufügen 
+#### Filter hinzufügen
 
 Manchmal ist es nicht gewollt, dass alle Datensätze im Index erscheinen aus diesem Grund ist das definieren von Filtern möglich.
 
@@ -224,7 +224,7 @@ Dabei gibt es sechs verschiedene Filter :
 - `CONTAINS` : lässt nur Felder zu, die den Wert enhalten.
 - `NOT_CONTAIN` : lässt nur Felder zu, die den Wert nicht enhalten.
 - `EQUAL` : lässt nur Felder zu, die dem Wert gleichen.
-- `NOT_EQUAL` : lässt nur Felder zu, die dem Wert nicht gleichen. 
+- `NOT_EQUAL` : lässt nur Felder zu, die dem Wert nicht gleichen.
 
 Der Wert ist hierbei frei wählbar und kann sowohl eine Zahl als auch eine Zeichenkette sein.
 
@@ -285,12 +285,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

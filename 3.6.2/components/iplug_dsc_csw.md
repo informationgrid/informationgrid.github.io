@@ -10,7 +10,7 @@ Das CSW-iPlug bietet eine Schnittstelle zu CSW (Catalog Service Web)-Datenquelle
 
 Eine Anfrage an das iPlug generiert also KEINE Anfrage an die zugrundeliegende CSW Schnittstelle. Diese Vorgehensweise wurde insbesondere im Hinblick auf eine performante Abfrage des iPlugs gewählt.
 
-Das iPlug fragt die CSW Schnittstelle regelmäßig (z.B. einmal täglich) ab. Die Abfrage-Frequenz kann über die Admin-Oberfläche gesteuert werden. 
+Das iPlug fragt die CSW Schnittstelle regelmäßig (z.B. einmal täglich) ab. Die Abfrage-Frequenz kann über die Admin-Oberfläche gesteuert werden.
 
 ![InGrid Komponente iPlug CSW](../images/ingrid_iplug_csw.png "InGrid Komponente iPlug CSW")
 
@@ -44,12 +44,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -58,7 +58,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -81,7 +81,7 @@ cp -r /opt/ingrid/ingrid-iplug-dsc-csw BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-dsc-csw-NEW-VERSION-installer.jar
@@ -125,20 +125,20 @@ Es handelt sich per Default hierbei um die URL zum SOAP Interface der Schnittste
 
 Im iPlug kann die Art der Abfragen definiert werden, die verwendet werden, um alle Daten der CSW Schnittstelle zu laden. Per Default wird keine spezifische Abfrage verwendet, so dass die CSW Schnittstelle ohne Constraint in der CSW Anfrage angefragt wird. Es ist aber möglich beliebige Filter für die Anfrage zu definieren, so dass hier der Umfang der CSW Daten gesteuert werden kann oder die Belastung der CSW Schnittstelle eingeschränkt werden kann.
 
-Die Konfiguration wird in der Datei webapp/WEB-INF/spring.xml gehalten. Der folgende Ausschnitt zeigt, wie die Konfiguration festgelegt wird: 
+Die Konfiguration wird in der Datei webapp/WEB-INF/spring.xml gehalten. Der folgende Ausschnitt zeigt, wie die Konfiguration festgelegt wird:
 
 {% highlight xml %}
 <!--
   Define the CSW filter queries to query the CSW data source. Duplicates resulting from
   the queries will be detected based on the Identifier and be removed.
-  
+
   To produce one CSW Query without a Constraint element, please remove any <value> elements.
   Many systems support this to get all results from the CSW data source.
  -->
 <bean id="cswHarvestFilter" class="org.springframework.beans.factory.config.SetFactoryBean">
   <property name="sourceSet">
     <set>
-      <!-- 
+      <!--
       <value>
         <![CDATA[<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
         <ogc:PropertyIsLike escapeChar="\\" singleChar="?" wildCard="*">
@@ -165,7 +165,7 @@ Dafür muss in der SOAP Request Implementierung eine Pre-Processor Implementieru
 <!--
   GeoPortal.WSV specific! This pre processor retrieves a SAML Ticket and adds a SOAP header.  
 
-  <property name="preProcessor" ref="samlTicketSoapRequestPreprocessor" /> 
+  <property name="preProcessor" ref="samlTicketSoapRequestPreprocessor" />
 -->
 </bean>
 {% endhighlight %}
@@ -175,9 +175,9 @@ Mit der zugehörigen Implementierung ist es nun möglich einen entsprechenden SO
 Das SAML Ticket wird für eine bestimmte Dauer gecached, damit ein Verfall des Tickets während des Harvesting verhindert wird. Außerdem wird der Authentifizierungsdienst dadurch entlastet.
 
 {% highlight xml %}
-<!-- 
+<!--
   This pre-processor retrieves a SAML ticket via a provider and adds a SOAP header to every Axis service client.
-  
+
   It is used for the Geoportal.WSV Installation but could be used elsewhere.
 -->
 <bean id="samlTicketSoapRequestPreprocessor" class="de.ingrid.iplug.csw.dsc.cswclient.impl.SamlTicketSoapRequestPreprocessor">
@@ -194,9 +194,9 @@ Das SAML Ticket wird für eine bestimmte Dauer gecached, damit ein Verfall des T
   <property name="samlTicketProvider" ref="samlTicketProvider" />
 </bean>
 
-<!-- 
+<!--
   This is a SAML Ticket provider that queries an URL for a SAML Ticket.
-  
+
   The configuration is Geoportal.WSV specific!!!
  -->
 <bean id="samlTicketProvider" class="de.ingrid.iplug.csw.dsc.cswclient.impl.SamlTicketProvider">
@@ -263,12 +263,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

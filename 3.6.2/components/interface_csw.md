@@ -8,7 +8,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Die CSW-Schnittstelle bietet Zugang zur InGrid-Suche über die [OGC CSW 2.0.2 AP ISO 1.0](http://www.opengeospatial.org/standards/cat) Schnittstellenspezifikation. Die Komponente bezieht die grundlegenden Daten aus einer oder mehreren Datenquellen. Die Datenquellen werden regelmäßig indexiert. Es wird ein lokaler Index vorgehalten, so dass eine CSW-Anfrage nicht zur Abfrage von den Datenquellen führt. Dies sichert die hohe Performance der Schnittstelle und vermeidet Inkompatibilitäten zwischen der [OGC CSW 2.0.2 AP ISO 1.0](http://www.opengeospatial.org/standards/cat) eigenen Abfragesprache und der InGrid Query.
 
-Die Schnittstelle bietet die Möglichkeit bestimmte Einschränkungen in der Anfrage vorzunehmen, um z.B. ausschließlich Anbieter-spezifische Daten auszuliefern. 
+Die Schnittstelle bietet die Möglichkeit bestimmte Einschränkungen in der Anfrage vorzunehmen, um z.B. ausschließlich Anbieter-spezifische Daten auszuliefern.
 
 ![InGrid Komponente CSW Schnittstelle](../images/ingrid_interface_csw.png "InGrid Komponente CSW Schnittstelle")
 
@@ -57,12 +57,12 @@ Sie können nun die Komponente mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Die Komponente besitzt eine Administrationsoberfläche.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -70,7 +70,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -93,7 +93,7 @@ cp -r /opt/ingrid/ingrid-interface-csw BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-interface-csw-NEW-VERSION-installer.jar
@@ -129,9 +129,9 @@ Mit dem InGrid iBus harvester, können iPlugs aus eine InGrid System in der CSW 
 
 Ablauf:
 
-- Mit der Angabe der Kommunikations-Daten für den iBus werden alle iPlugs, die am iBus abgeschlossen sind gelistet 
+- Mit der Angabe der Kommunikations-Daten für den iBus werden alle iPlugs, die am iBus abgeschlossen sind gelistet
 - ein oder mehrere iPlugs können aktiviert werden
-- Bestimmte Eigenschaften, wie die abzusetzende InGrid?-Query und Abfrage-Paraneter können in der Detailansicht des iPlugs editiert werden 
+- Bestimmte Eigenschaften, wie die abzusetzende InGrid?-Query und Abfrage-Paraneter können in der Detailansicht des iPlugs editiert werden
 
 **GDI-DE test data harvester**
 
@@ -149,7 +149,7 @@ Hier kann der Harvesting-Prozess manuell angestoßen werden.
 
 Die Test-Suche erlaubt die Suche im Datenbestand. Als Suchbegriff wird ein Einzelnes Wort (mit `*` als Wildcard), oder ein kompletter GetRecords-Request (XML Format) akzeptiert.
 
-Es werden jeweils nur die ersten 10 Treffer angezeigt. Ein Klick auf ein Suchergebnis öffnet die ISO Daten des Datensatzes. 
+Es werden jeweils nur die ersten 10 Treffer angezeigt. Ein Klick auf ein Suchergebnis öffnet die ISO Daten des Datensatzes.
 
 
 ## FAQ
@@ -162,7 +162,7 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Folgende Fehlerquellen können vorliegen:
 
-- Falsche CSW Querysyntax 
+- Falsche CSW Querysyntax
 
 Bitte überprüfen Sie zunächst das log file.
 
@@ -174,7 +174,7 @@ Weblinks:
 
 - SoapUI: [http://www.soapui.org/](http://www.soapui.org/)
 - Poster: [https://addons.mozilla.org/en-US/firefox/addon/2691/](https://addons.mozilla.org/en-US/firefox/addon/2691/)
- 
+
 
 **GetCapabilities, GET**
 
@@ -224,10 +224,10 @@ https://dev.informationgrid.eu/csw?SERVICE=CSW&REQUEST=GetRecordById&VERSION=2.0
 Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort.
 
 {% highlight xml %}
-<GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2" 
-service="CSW" version="2.0.2" 
-outputSchema="http://www.opengis.net/cat/csw/2.0.2" 
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2"
+service="CSW" version="2.0.2"
+outputSchema="http://www.opengis.net/cat/csw/2.0.2"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" >
    <Id>98E56BC3-20EC-43A7-8270-1352F0A53AD4</Id>
    <ElementSetName>full</ElementSetName>
@@ -240,16 +240,16 @@ xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" >
 https://dev.informationgrid.eu/csw?SERVICE=CSW&REQUEST=DescribeRecord&VERSION=2.0.2
 {% endhighlight %}
 
- 
+
 **DescribeRecord, SOAP**
 
 Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
-<DescribeRecord xmlns="http://www.opengis.net/cat/csw/2.0.2" 
-xmlns:gmd="http://www.isotc211.org/2005/gmd" 
-schemaLanguage="http://www.w3.org/XML/Schema" 
+<DescribeRecord xmlns="http://www.opengis.net/cat/csw/2.0.2"
+xmlns:gmd="http://www.isotc211.org/2005/gmd"
+schemaLanguage="http://www.w3.org/XML/Schema"
 service="CSW" version="2.0.2">
 </DescribeRecord>
 {% endhighlight %}
@@ -280,7 +280,7 @@ conf/csw_capabilities_test.xml
 kann über die URL
 
 {% highlight text %}
-http://dev.informationgrid.eu/csw?REQUEST=GetCapabilities&SERVICE=CSW&partner=test 
+http://dev.informationgrid.eu/csw?REQUEST=GetCapabilities&SERVICE=CSW&partner=test
 {% endhighlight %}
 
 abgerufen werden. Existiert keine Datei mit entsprechender Erweiterung, wird die Standard-Capabilities `conf/csw_capabilities.xml` ausgeliefert
@@ -320,4 +320,3 @@ RewriteRule ^/csw/provider/(.*)$ http://127.0.0.1:8083/csw?provider\=$1 [P]
 {% endhighlight %}
 
 Die Einschränkungen können auch direkt in der CSW Anfrage formuliert werden. Intern ist es tatsächlich so, dass die Einschränkungen in der URL in eine Einschränkung innerhalb der Filter-Query der CSW Anfrage umgesetzt werden.
- 

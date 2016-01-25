@@ -17,7 +17,7 @@ Eine direkte Kommunikation zum Codelist-Repository geschieht von allen Komponent
 <figcaption class="figcaption">InGrid Komponente Codelist Repository</figcaption>
 
 
-Eine Kopie der Codelistdaten wird gewöhnlich in einer XML-Datei "data/codelists.xml" gehalten. Die Ausnahme bildet der InGrid-Editor, wo (aus Kompatibilitätsgründen) die Codelisten direkt in der Datenbank verwaltet werden. 
+Eine Kopie der Codelistdaten wird gewöhnlich in einer XML-Datei "data/codelists.xml" gehalten. Die Ausnahme bildet der InGrid-Editor, wo (aus Kompatibilitätsgründen) die Codelisten direkt in der Datenbank verwaltet werden.
 
 
 
@@ -48,15 +48,15 @@ Sie können nun die Komponente mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
-Die Codelist-Repository-Administration wird im Webbrowser unter der folgenden Adresse 
+Die Codelist-Repository-Administration wird im Webbrowser unter der folgenden Adresse
 
 {% highlight text %}
-http://localhost:IHR_ADMIN_PORT/admin
+http://localhost:IHR_ADMIN_PORT
 {% endhighlight %}
 
-gestartet. Anstelle von localhost können Sie auch die IP-Adresse des Computers eingeben! Authentifizieren Sie sich als `admin` mit dem von Ihnen vergebenen Passwort. 
+gestartet. Anstelle von localhost können Sie auch die IP-Adresse des Computers eingeben! Authentifizieren Sie sich als `admin` mit dem von Ihnen vergebenen Passwort.
 
 
 ## Aktualisierung
@@ -76,7 +76,7 @@ cp -r /opt/ingrid/ingrid-codelist-repository <BACKUP-DIRECTORY>
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-codelist-repository-NEW-VERSION-installer.jar
@@ -125,7 +125,7 @@ In der "Codelist Overview" besteht die Möglichkeit einen Eintrag als Defaultein
 
 Bei einem ausgewählten Eintrag, bewirkt ein Klick auf "Remove Entry", dass dieser aus der Liste entfernt wird. Endgültig jedoch erst nach dem Betätigen der "Save"-Schaltfläche! Mit "Add Entry" wird ein neuer Eintrag angelegt. Dieser muss mindestens eine eindeutige ID und eine gültige Lokalisierung aufweisen, bevor dieser gespeichert werden kann.
 
-Ein Textfeld im oberen Bereich dient der schnellen Suche nach einem Codelisteneintrag. Nachdem man den eingegebenen Text mit Enter oder der "Go"-Schaltfläche betätigt, wird in der Schaltfläche daneben die Anzahl der Treffer angezeigt. Mit dieser Schaltfläche kann direkt zu den gefundenen Einträgen gesprungen werden. 
+Ein Textfeld im oberen Bereich dient der schnellen Suche nach einem Codelisteneintrag. Nachdem man den eingegebenen Text mit Enter oder der "Go"-Schaltfläche betätigt, wird in der Schaltfläche daneben die Anzahl der Treffer angezeigt. Mit dieser Schaltfläche kann direkt zu den gefundenen Einträgen gesprungen werden.
 
 ## Konfiguration
 
@@ -162,9 +162,9 @@ Folgende Codelisten stellen Ausnahmen dar und können in jedem Einzelkatalog wei
 - Geo-Information/Karte - Fachbezug - Schlüsselkatalog
 - Geo-Information/Karte - Fachbezug - Symbolkatalog
 - Verfügbarkeit - Zugangsbeschränkungen
-- Verfügbarkeit - Nutzungsbedingungen 
+- Verfügbarkeit - Nutzungsbedingungen
 
-Wenn Sie eine eigene InGrid-Katalog-Installation betreiben oder vornehmen wollen, so können Sie also entweder für diesen Katalog ein eigenes Codelisten- Repository installieren und den Katalog damit verbinden, oder aber Sie verbinden den Katalog mit dem zentralen Codelisten-Repository, welches von der Koordinierungsstelle PortalU betrieben wird. Letzteres wird von uns empfohlen, da damit sichergestellt ist, dass in allen Katalogen einheitliche Bezeichnungen in den Auswahllisten verwendet werden. 
+Wenn Sie eine eigene InGrid-Katalog-Installation betreiben oder vornehmen wollen, so können Sie also entweder für diesen Katalog ein eigenes Codelisten- Repository installieren und den Katalog damit verbinden, oder aber Sie verbinden den Katalog mit dem zentralen Codelisten-Repository, welches von der Koordinierungsstelle PortalU betrieben wird. Letzteres wird von uns empfohlen, da damit sichergestellt ist, dass in allen Katalogen einheitliche Bezeichnungen in den Auswahllisten verwendet werden.
 
 ### Wie verwendet man ein anderes Codelist-Repository?
 
@@ -193,4 +193,3 @@ Bei jeder Installation wird der Zeitstempel von allen Codelisten auf das Install
 6300 | Version und Spezifikation in Hochkommata getrennt von einem Komma<br><br>z.B.: "Version 1.1","Spez. 4" | Die zusätzlichen Angaben für einen Eintrag aus dem INSPIRE-Datenformat werden im DSC-scripted verwendet, um das IDF-Dokument zu generieren. Sind Version und Spezifikation mit angegeben, so werden diese unter MD_Format mit ausgegeben.
 1100 | Leerzeichen separierte Liste von Koordinaten<br><br>z.B.: "9,605 52,304 9,918 52,454" | Diese Liste wird nicht im Codelist-Repository sondern im IGE selbst gepflegt. Zu jedem freien Raumbezug können die BoundingBox-Koordinaten mit angegeben werden, die bei der Auswahl des Eintrags in der Objektbearbeitung, automatisch in die dazugehörigen Feldern eingetragen werden.
 2000 | Kommata separierte Liste von Objektklassen<br><br>z.B.: "1,3,6" | Im Verweisdialog eines Objekts kann ein Verweistyp ausgewählt werden. Diese werden über die Codeliste 2000 definiert. Durch die Angabe der Objektklassen im Data-Feld, wird bestimmt, in welcher Klasse des Objekts dieser Typ angezeigt werden soll. Ist das Data-Feld leer, so wird der Verweistyp niemals in diesem Dialog angezeigt. Jedoch kann dieser für die interne Verarbeitung genutzt werden, wie es bspw. mit dem Eintrag "Gekoppelte Daten" (3600) geschieht.
-

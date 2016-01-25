@@ -44,12 +44,12 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -58,7 +58,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -81,7 +81,7 @@ cp -r /opt/ingrid/ingrid-iplug-dsc-mapclient BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-dsc-mapclient-NEW-VERSION-installer.jar
@@ -112,7 +112,7 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 
 ### Indexierung von WMS Diensten
 
-Das iPlug benötigt eine Datei in der die Capability URLs der zu indexierenden WMS Dienste hinterlegt sind. Die Daten müssen im XML-Format vorliegen und die Urls müssen mit dem Bezeichner `<capabilitiesUrl></capabilitiesUrl>` eingeschlossen sein. 
+Das iPlug benötigt eine Datei in der die Capability URLs der zu indexierenden WMS Dienste hinterlegt sind. Die Daten müssen im XML-Format vorliegen und die Urls müssen mit dem Bezeichner `<capabilitiesUrl></capabilitiesUrl>` eingeschlossen sein.
 
 In der Regel ist dies das Konfigurationsfile des MapClient 'ingrid_webmap_client_config.xml'.
 
@@ -175,12 +175,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-

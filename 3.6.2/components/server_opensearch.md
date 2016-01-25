@@ -22,9 +22,9 @@ Nach dem Start des Servers stehen folgende Dienste zur Verfügung:
 
 | Dienst | Beschreibung |
 | == | == |
-| http://server:port/path/descriptor | Unter dieser Adresse erhält man den Deskriptor, der die Verwendung der Opensearch-Schnittstelle beschreibt. Die darin enthaltene Template-URL beschreibt mit Hilfe von Platzhaltern, wie ein korrekter Aufruf erfolgen kann. |
-| http://server:port/path/admin | Hier wird die Administrationsoberfläche bereitgestellt unter der der Server konfiguriert werden kann. |
-| http://server:port/path/query?q= | Hier befindet sich die eigentliche Abfrage des Indexes über die Opensearch-Schnittstelle. Diese Url sollte mit der im Deskriptor übereinstimmen. |
+| http://server:port/descriptor | Unter dieser Adresse erhält man den Deskriptor, der die Verwendung der Opensearch-Schnittstelle beschreibt. Die darin enthaltene Template-URL beschreibt mit Hilfe von Platzhaltern, wie ein korrekter Aufruf erfolgen kann. |
+| http://server:port | Hier wird die Administrationsoberfläche bereitgestellt unter der der Server konfiguriert werden kann. |
+| http://server:port/query?q= | Hier befindet sich die eigentliche Abfrage des Indexes über die Opensearch-Schnittstelle. Diese Url sollte mit der im Deskriptor übereinstimmen. |
 
 
 ## Systemvoraussetzungen
@@ -54,12 +54,12 @@ Sie können nun die Komponente mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Die Komponete besitzt eine Administrationsoberfläche.
 
 {% highlight text %}
-http://localhost:PORT/admin
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
@@ -68,7 +68,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 Nach der ersten Installation wird die Administrations-GUI unter
 
 {% highlight text %}
-http://localhost:8082/admin
+http://localhost:8082
 {% endhighlight %}
 
 aufgerufen und die Konfiguration vervollständigt.
@@ -91,7 +91,7 @@ cp -r /opt/ingrid/ingrid-server-opensearch BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-server-opensearch-NEW-VERSION-installer.jar
@@ -112,5 +112,3 @@ start.sh [start|stop|restart|status]
 {% endhighlight %}
 
 Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
-
-
