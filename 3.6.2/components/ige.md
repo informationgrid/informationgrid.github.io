@@ -10,7 +10,7 @@ Der InGrid Editor erlaubt die Erfassung und Publizierung von ISO 19115/19119/OGC
 
 ![Erfassungsmaske InGrid Editor](../images/ingrid_ige_hierarchy.png "Erfassungsmaske InGrid Editor")
 
-Die Komponente ist normalerweise Bestandteil des Portals und wird mit diesem installiert. Es ist aber auch möglich den InGrid-Editor separat zu installieren und ohne ein Portal zu betreiben. Daraus ergibt sich eine neue Benutzerverwaltung, die sonst vom Portal bereitgestellt wurde. Wie diese Benutzerverwaltung betrieben wird, wird in diesem Dokument beschrieben. 
+Die Komponente ist normalerweise Bestandteil des Portals und wird mit diesem installiert. Es ist aber auch möglich den InGrid-Editor separat zu installieren und ohne ein Portal zu betreiben. Daraus ergibt sich eine neue Benutzerverwaltung, die sonst vom Portal bereitgestellt wurde. Wie diese Benutzerverwaltung betrieben wird, wird in diesem Dokument beschrieben.
 
 
 ## Systemvoraussetzungen
@@ -28,7 +28,7 @@ Der InGrid-Editor wird über den Installer des Portals installiert. Die Vorgehen
 
 Im nächsten Schritt wird das Passwort für den Administrator vergeben, mit dem man sich auf der Administrationsseite einloggen kann. Über diesen Zugang hat man exklusiven Zugang zu der Benutzer- und Katalogverwaltung.
 
-Nachdem die Informationen für das Codelist-Repository eingegeben wurden, kann die Installation beginnen. 
+Nachdem die Informationen für das Codelist-Repository eingegeben wurden, kann die Installation beginnen.
 
 
 ## Aktualisierung
@@ -40,7 +40,7 @@ Siehe Portal Aktualisierung.
 
 ### Benutzerverwaltung
 
-Die Bentzerverwaltung besteht aus einer Tabelle mit den gesamten bisher angelegten Benutzern und einer Schaltfläche, die es erlaubt einen neuen Benutzer anzulegen. Zu jedem Benutzer gibt es zudem eine Bearbeiten- und Entfernen-Schaltfläche.
+Die Benutzerverwaltung besteht aus einer Tabelle mit den gesamten bisher angelegten Benutzern und einer Schaltfläche, die es erlaubt einen neuen Benutzer anzulegen. Zu jedem Benutzer gibt es zudem eine Bearbeiten- und Entfernen-Schaltfläche.
 
 Klickt man auf "Add User" öffnet sich ein Dialog, in dem die Benutzerdaten eingegeben werden können. Alle Felder müssen hierbei ausgefüllt werden, wobei der "Login" eindeutig und das Passwort korrekt in der Wiederholung eingegeben sein muss. Andernfalls wird man auf eine Fehleingabe hingewiesen. Mit einem letzten Klick auf die Dialogschaltfläche "Add User" wird der Benutzer letztendlich in die Datenbank hinzugefügt.
 
@@ -48,7 +48,7 @@ Wird die "edit"-Schaltfläche neben einem Benutzereintrag in der Tabelle ausgew�
 
 Ein Klick auf die Schaltfläche "delete" neben einem Benutzer erzeugt einen Dialog, in der die Löschung eines Benutzers nochmals bestätigt werden muss.
 
-> In den InGrid-Editor können sich nur IGE-Benutzer einloggen. Dabei wird zwischen dem Katalogadministrator und anderen Nutzern unterschieden. Ersterer wird auf der Administrationsseite in der Katalogverwaltung erstellt. Alle anderen Nutzer werden im IGE in der Nutzerverwaltung hinzugefügt. 
+> In den InGrid-Editor können sich nur IGE-Benutzer einloggen. Dabei wird zwischen dem Katalogadministrator und anderen Nutzern unterschieden. Ersterer wird auf der Administrationsseite in der Katalogverwaltung erstellt. Alle anderen Nutzer werden im IGE in der Nutzerverwaltung hinzugefügt.
 
 ### Katalogverwaltung
 
@@ -56,7 +56,7 @@ In der Katalogverwaltung gibt es zwei Tabellen, die die verbundenen Kataloge mit
 
 Existiert ein Katalog, der nicht angeschlossen ist, so wird dieser in der unteren Tabelle (verfügbarer Kataloge) angezeigt. Klickt man auf die "add"-Schaltfläche, erscheint ein Dialog, wo ein Benutzer ausgewählt werden kann, der mit diesem Katalog verbunden werden soll. Dabei werden nur die Benutzer aufgelistet, die noch keine IGE-Benutzer sind. Gibt es keinen freien Benutzer so wird mit einem Dialog darauf hingewiesen. Nach einem Klick auf "Connect Catalogue", ist die Verbindung hergestellt und der Katalog sollte in der oberen Tabelle erscheinen.
 
-Klickt man auf die "delete"-Schaltfläche eines verbundenen Kataloges, erscheint ein Dialog mit einer zusätzlichen Abfrage, ob diese Verbindung wirklich gelöscht werden soll. Da es sich hier nur um eine zu löschende Verbindung handelt, kann diese, wie schon beschrieben, schnell wieder hergestellt werden. 
+Klickt man auf die "delete"-Schaltfläche eines verbundenen Kataloges, erscheint ein Dialog mit einer zusätzlichen Abfrage, ob diese Verbindung wirklich gelöscht werden soll. Da es sich hier nur um eine zu löschende Verbindung handelt, kann diese, wie schon beschrieben, schnell wieder hergestellt werden.
 
 
 ## FAQ
@@ -77,7 +77,7 @@ Links von ">>" wird das aktuelle Entity identifiziert und zwar via UUID, ORIG_ID
 
 Rechts von ">>" stehen ausgeführte Aktionen z.B. auch Änderung von Ids (z.B. Parent UUID wenn verschoben) oder Nachrichten (z.B. bei Unstimmigkeiten).
 
-Unstimmigkeiten werden mit "! " am Anfang der Protokollzeile dargestellt. 
+Unstimmigkeiten werden mit "! " am Anfang der Protokollzeile dargestellt.
 
 **Beispiel Protokoll**
 
@@ -125,7 +125,4 @@ Das Objekt referenziert eine Adresse, die im Katalog nicht vorhanden ist. Das Ob
 ! Object UUID:E86679ED-ACDC-4E8A-A2E0-9FB238B88AE8 >> REMOVED object reference of type "Hamburgische Telekommunikationsnetz" to non existing object 04DE7D5E-8AC9-4928-A2ED-B00DC05B1EE1
 {% endhighlight %}
 
-Eine Referenz auf ein Objekt wird entfernt, da dieses Objekt im bestehenden Katalog nicht gefunden wurde. Dies wird nach dem Import aller Objekte ausgeführt, um zu vermeiden, daß sich die Import Reihenfolge auf die Querverweise auswirkt (z.B. bei Verweis auf ein neues Objekt, das per Import angelegt wird). 
-
-
-
+Eine Referenz auf ein Objekt wird entfernt, da dieses Objekt im bestehenden Katalog nicht gefunden wurde. Dies wird nach dem Import aller Objekte ausgeführt, um zu vermeiden, daß sich die Import Reihenfolge auf die Querverweise auswirkt (z.B. bei Verweis auf ein neues Objekt, das per Import angelegt wird).
