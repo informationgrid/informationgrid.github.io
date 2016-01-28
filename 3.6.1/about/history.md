@@ -4,7 +4,9 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-## Version 3.6.1.2 (22.01.2016)
+## Version 3.6.1.2
+
+Relaase: 22.01.2016
 
 ### Komponenten
 
@@ -38,7 +40,9 @@ Es wurden verschiedene Fehler am InGrid Editor, dem MapClient, im Portal, dem WF
 (Authorisierung wird benötigt)
 
 
-## Version 3.6.1.1 (03.12.2015)
+## Version 3.6.1.1
+
+Relaase: 03.12.2015
 
 ### Komponenten
 
@@ -134,7 +138,9 @@ Es wurden verschiedene Fehler am InGrid Editor, dem MapClient und der Suchmaschi
 - [Bug] [System] Wildcards werden nicht korrekt umgesetzt innerhalb von Feldern ([REDMINE-211](https://dev.informationgrid.eu/redmine/issues/211))
 
 
-## Version 3.6.0.4 (28.09.2015)
+## Version 3.6.0.4
+
+Relaase: 28.09.2015
 
 ### Komponenten
 
