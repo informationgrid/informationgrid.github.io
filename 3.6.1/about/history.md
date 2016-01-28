@@ -6,7 +6,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Version 3.6.1.2
 
-Relaase: 22.01.2016
+Release: 22.01.2016
 
 ### Komponenten
 
@@ -42,7 +42,7 @@ Es wurden verschiedene Fehler am InGrid Editor, dem MapClient, im Portal, dem WF
 
 ## Version 3.6.1.1
 
-Relaase: 03.12.2015
+Release: 03.12.2015
 
 ### Komponenten
 
@@ -140,7 +140,7 @@ Es wurden verschiedene Fehler am InGrid Editor, dem MapClient und der Suchmaschi
 
 ## Version 3.6.0.4
 
-Relaase: 28.09.2015
+Release: 28.09.2015
 
 ### Komponenten
 
