@@ -35,9 +35,7 @@ Es wurden verschiedene Fehler am InGrid Editor, dem MapClient, im Portal, dem WF
 * [IPlug WFS-DSC] Initaile Konfiguration via Admin GUI schreibt ranking:off statt ranking:score
 * [OpenSearch Interface] Opensearch Schnittstelle hängt sich auf mit "Committed before 500 Internal error!"
 
-[Eine Liste der Änderungen findet sich hier.](https://dev.informationgrid.eu/redmine/versions/17)
-
-(Authorisierung wird benötigt)
+[Eine Liste der Änderungen findet sich hier.](https://dev.informationgrid.eu/redmine/versions/17) (Authorisierung wird benötigt)
 
 
 ## Version 3.6.1.1
@@ -56,9 +54,7 @@ Release: 03.12.2015
 
 Es wurden verschiedene Fehler am InGrid Editor, dem MapClient und der Suchmaschinenkomponente behoben.
 
-[Eine Liste der Änderungen findet sich hier.](https://dev.informationgrid.eu/redmine/versions/16)
-
-(Authorisierung wird benötigt)
+[Eine Liste der Änderungen findet sich hier.](https://dev.informationgrid.eu/redmine/versions/16) (Authorisierung wird benötigt)
 
 
 ## Version 3.6.1
@@ -155,9 +151,7 @@ Es wurden Probleme bei der Konfiguration von WFS und DSC iPlug behoben.
 * [iPlug WFS]  Flexiblere Konfiguration des iPlug WFS
 * [iPlug DSC]  Flexiblere Konfiguration des DSCs
 
-[Eine Liste der Änderungen findet sich hier.](https://dev.informationgrid.eu/redmine/versions/12)
-
-(Authorisierung wird benötigt)
+[Eine Liste der Änderungen findet sich hier.](https://dev.informationgrid.eu/redmine/versions/12) (Authorisierung wird benötigt)
 
 ## Version 3.6.0.3
 
