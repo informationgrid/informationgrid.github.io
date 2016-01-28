@@ -4,6 +4,27 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.1.1 (03.12.2015)
+
+### Komponenten
+
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.1.1/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.1.1/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1.1/))
+
+
+### Änderungen
+
+Es wurden verschiedene Fehler am InGrid Editor, dem MapClient und der Suchmaschinenkomponente behoben.
+
+Eine Liste der Änderungen findet sich hier:
+
+https://dev.informationgrid.eu/redmine/versions/16
+
+(Authorisierung wird benötigt)
+
+
 ## Version 3.6.1
 
 ### Komponenten
@@ -27,8 +48,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 - iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.1/))
 - Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1/))
 - Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
-- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
- 
+
 
 ### Änderungen
 
