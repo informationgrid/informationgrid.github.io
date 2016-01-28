@@ -4,6 +4,42 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.1.2 (22.01.2016)
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1.2/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.1.2/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.1.2/))
+- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.1.2/))
+
+
+### Änderungen
+
+Es wurden verschiedene Fehler am InGrid Editor, dem MapClient, im Portal, dem WFS iPlug und der Suchmaschinenkomponente behoben.
+
+* [Portal] SMTP-Angaben für das Portal im Installer nicht möglich
+* [Portal] Blättern im Portal defekt
+* [Portal] Fehlerhafte Anzeige unter "Durch die Ressource abgedeckte Zeitspanne"
+* [IGE] Objektverweise in Adressen kein Paging
+* [IGE] Neues Objekt im Index synchronisiert erzeugen
+* [IGE] Session wird nicht aktualisiert
+* [MapClient] Fehler Anzeige Hintergrundkarte Umschaltung WGS84 -> DHDN GK3
+* [MapClient] Ortssuche in "Raumbezug auf Karte festlegen" geht nicht
+* [MapClient] Fehler_Wechsel des Raumbezugssystems
+* [MapClient] Fehler_Speichern der Karte
+* [iPlug SE] Admin-GUI stürzt ab bei initialer Konfiguration
+* [iPlug SE] URL-Fehlerstatistik im iPlug SE instabil
+* [IPlug WFS-DSC] Initaile Konfiguration via Admin GUI schreibt ranking:off statt ranking:score
+* [OpenSearch Interface] Opensearch Schnittstelle hängt sich auf mit "Committed before 500 Internal error!"
+
+Eine Liste der Änderungen findet sich hier:
+
+https://dev.informationgrid.eu/redmine/versions/17
+
+(Authorisierung wird benötigt)
+
+
 ## Version 3.6.1.1 (03.12.2015)
 
 ### Komponenten
