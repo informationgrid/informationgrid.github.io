@@ -253,14 +253,14 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 Bitte in der Datei env.user.sh folgendes zusätzlich eintragen:
 
 {% highlight text %}
--Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword -http.nonProxyHosts=localhost|127.\*\|\[::1\]
+-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword -http.nonProxyHosts=localhost|127.*|[::1]
 {% endhighlight %}
 
 User und Passwort müssen nicht unbedingt angegeben werden.
 
 Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin escaped werden:
 
-{% highlight text %}-http.nonProxyHosts=localhost^\|127.* ^\|[::1]{% endhighlight %}
+{% highlight text %}-http.nonProxyHosts=localhost^|127.*^|[::1]{% endhighlight %}
 
 
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
