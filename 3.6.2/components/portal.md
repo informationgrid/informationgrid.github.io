@@ -17,14 +17,14 @@ Das Portal enthält den InGrid-Editor (IGE), eine Oberfläche zum Erfassen und P
 Funktionsumfang
 
 - Freie Suche in allen angeschlossenen Datenquellen
-- Suche in vorgeordneten Informationen (Service, Messwerte, Umweltthemen, Umweltchronik) 
+- Suche in vorgeordneten Informationen (Service, Messwerte, Umweltthemen, Umweltchronik)
 
-- Query-Builder zum Erstellen von Such-Queries 
+- Query-Builder zum Erstellen von Such-Queries
 - News-Feed-Concentrator (Zusammenfassen verschiedener News-Feeds) für den Umweltbereich
 
 - Personalisierung der Startseite
 - Personalisierung von Sucheinstellungen
-- personalisierte Administrationsfunktionalitäten 
+- personalisierte Administrationsfunktionalitäten
 
 - Erfassung/Pflege von Metadaten in Datenkatalogen (IGC - InGrid Catalog) mittels IGE für ausgewählte Benutzer
 
@@ -62,7 +62,7 @@ Bei der Verwendung einer MySQL-Datenbank unter Unix wird normalerweise nach Gro�
 {% highlight text %}
 [mysqld]
 ...
-*lower_case_table_names=1* 
+*lower_case_table_names=1*
 {% endhighlight %}
 
 
@@ -113,7 +113,7 @@ java -jar ingrid-portal-VERSION-installer.jar
 {% endhighlight %}
 
 
-> Hinweis: Bei Aktualisierungen des Portals, wird empfohlen, den Installer immer im gleichen Verzeichnis auszuführen. Die bei der letzten Installation verwendeten Einstellungen wurden in einer Datei "ant.install.properties" gespeichert und können bei einem Update wiederverwendet werden. Dazu muss sich diese Datei im selben Verzeichnis befinden, wie der Installer! 
+> Hinweis: Bei Aktualisierungen des Portals, wird empfohlen, den Installer immer im gleichen Verzeichnis auszuführen. Die bei der letzten Installation verwendeten Einstellungen wurden in einer Datei "ant.install.properties" gespeichert und können bei einem Update wiederverwendet werden. Dazu muss sich diese Datei im selben Verzeichnis befinden, wie der Installer!
 
 Der Installer ist sowohl per graphischer Oberfläche als auch Kommandozeileneingabe ausführbar. Im folgenden wird die Eingabe per graphischer Oberfläche beschrieben.
 
@@ -187,7 +187,7 @@ Diese Einstellungen werden für den integrierten Karten Client benötigt.
 | Webmapdatenverzeichnis | Datenverzeichnis des Karten Clients. Das Verzeichnis sollte nicht im Installationsverzeichnis des Karten Clients liegen, damit die Konfigurationen nicht bei einem Update überschrieben werden. (z.B.: /home/ingrid/webmapdata) |
 | Konfiguration überschreiben | Soll die Konfiguration des Karten Clients überschrieben werden? |
 
-#### 12.) Einstellungen für das Codelist Repository 
+#### 12.) Einstellungen für das Codelist Repository
 
 Das InGrid System besitzt ein Codelist Repository in dem Parameterlisten, die von mehreren Komponenten benutzt werden, abgelegt sind. Das Portal nutzt dieses vor allem um die Detailansicht von INSPIRE kompatiblen Metadaten korrekt anzuzeigen.
 
@@ -246,7 +246,7 @@ cp -r /opt/ingrid/ingrid-portal <BACKUP-DIRECTORY>
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-portal-NEW-VERSION-installer.jar
@@ -323,19 +323,23 @@ upgrade.server.url=http://INGRID_PORTAL_DOMAIN/update
 
 ## FAQ
 
-### Mein System verwendet einen Proxy für HTTP Zugriffe. Wie kann ich die Proxy-Konfiguration einstellen?
-
-Bitte in der Datei TOMCAT/bin/env.sh folgende Eigenschaften eintragen:
-
-{% highlight text %}
--Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword
-{% endhighlight %}
-
-User und Passwort sind ggf. nicht einzutragen.
-
-### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+### Wie kann ich ein Überschreiben der Datei `TOMCAT/bin/env.sh` bei einer Aktualisierung verhindern.
 
 In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
+
+### Mein System verwendet einen Proxy für HTTP(S) Zugriffe. Wie kann ich die Proxy-Konfiguration einstellen?
+
+Bitte in der Datei TOMCAT/bin/env.user.sh folgende Eigenschaften eintragen:
+
+{% highlight text %}
+-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword -http.nonProxyHosts=localhost|127.\*\|\[::1\]
+{% endhighlight %}
+
+User und Passwort müssen nicht unbedingt angegeben werden.
+
+Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin escaped werden: -http.nonProxyHosts=localhost^|127.* ^|[::1].
+
 
 
 ### Sortierung der Suchergebnisse nach Aktualität, woher stammt die Aktualitätsinfo ?
@@ -401,7 +405,7 @@ Das Session timeout kann in der TOMCAT/conf/web.xml verändert werden. Der jetzi
 
 Unter `ingrid-portal-apps.properties` kann die Eigenschaft `portal.rss.news.number` verwendet werden. Diese definiert die Anzahl der RSS Feeds auf der Startseite.
 
-Ist diese Eigenschaft nicht gesetzt, so wird die definierte Anzahl (Preference `noOfEntriesDisplayed`) in der `portlet.xml` verwendet. 
+Ist diese Eigenschaft nicht gesetzt, so wird die definierte Anzahl (Preference `noOfEntriesDisplayed`) in der `portlet.xml` verwendet.
 
 
 ### Wie oft werden RSS Feeds aktualisiert?

@@ -44,7 +44,7 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
 
@@ -81,7 +81,7 @@ cp -r /opt/ingrid/ingrid-iplug-dsc-mapclient BACKUP_DIRECTORY
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-dsc-mapclient-NEW-VERSION-installer.jar
@@ -112,7 +112,7 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 
 ### Indexierung von WMS Diensten
 
-Das iPlug benötigt eine Datei in der die Capability URLs der zu indexierenden WMS Dienste hinterlegt sind. Die Daten müssen im XML-Format vorliegen und die Urls müssen mit dem Bezeichner `<capabilitiesUrl></capabilitiesUrl>` eingeschlossen sein. 
+Das iPlug benötigt eine Datei in der die Capability URLs der zu indexierenden WMS Dienste hinterlegt sind. Die Daten müssen im XML-Format vorliegen und die Urls müssen mit dem Bezeichner `<capabilitiesUrl></capabilitiesUrl>` eingeschlossen sein.
 
 In der Regel ist dies das Konfigurationsfile des MapClient 'ingrid_webmap_client_config.xml'.
 
@@ -155,19 +155,21 @@ Die einzelnen Parameter haben folgende Bedeutung:
 
 ## FAQ
 
+### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
+
+In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
 ### Mein System verwendet einen Proxy für HTTP(S) Zugriffe. Wie kann ich die Proxy-Konfiguration einstellen?
 
-Bitte in der Datei env.sh folgendes zusätzlich eintragen:
+Bitte in der Datei env.user.sh folgendes zusätzlich eintragen:
 
 {% highlight text %}
--Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword
+-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword -http.nonProxyHosts=localhost|127.\*\|\[::1\]
 {% endhighlight %}
 
 User und Passwort müssen nicht unbedingt angegeben werden.
 
-### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
-
-In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin escaped werden: -http.nonProxyHosts=localhost^|127.* ^|[::1].
 
 
 ### Die iPlug Administration funktioniert nicht, es können keine Partner/Anbieter ausgewählt werden.
@@ -175,12 +177,11 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Mögliche Ursachen:
 
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
 * iPlug Management funktioniert nicht
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
-
