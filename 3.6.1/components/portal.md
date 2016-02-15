@@ -337,7 +337,7 @@ Bitte in der Datei TOMCAT/bin/env.user.sh folgendes zusätzlich eintragen:
 
 User und Passwort müssen nicht unbedingt angegeben werden.
 
-Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin escaped werden: -http.nonProxyHosts=localhost^|127.* ^|[::1].
+Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin escaped werden: -http.nonProxyHosts=localhost\^\|127.* \^\|[::1].
 
 
 ### Sortierung der Suchergebnisse nach Aktualität, woher stammt die Aktualitätsinfo ?
