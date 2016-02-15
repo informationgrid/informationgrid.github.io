@@ -3,7 +3,7 @@ name: Informationgrid
 
 # use for local testing
 # baseurl: /github-pages
-baseurl: 
+baseurl:
 
 
 # versions of the software (current is first)
@@ -36,6 +36,6 @@ gems:
   - jekyll-sitemap
 
 # DON'T MODIFY
-highlighter: pygments
+highlighter: rouge
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
