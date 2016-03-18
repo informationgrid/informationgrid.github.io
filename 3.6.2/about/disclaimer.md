@@ -13,10 +13,10 @@ E-Mail: vkoopuis@informationgrid.eu
 Projektpartner Öffentliche Verwaltung:
 
 - Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz
-- Bundesanstalt für IT-Dienstleistungen
+- Informationstechnikzentrum Bund (ITZBund) im Auftrag der Wasser- und Schifffahrtsverwaltung des Bundes (WSV) im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur (BMVI)
 - Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft Brandenburg
 - GeoInformation Bremen
-- Behörde für Stadtentwicklung und Umwelt Hamburg
+- Behörde für Umwelt und Energie Hamburg
 - Landesamt für Umwelt, Naturschutz und Geologie Mecklenburg-Vorpommern
 - Landesamt für Vermessung, Geoinformation und Landentwicklung Saarland
 - Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie
