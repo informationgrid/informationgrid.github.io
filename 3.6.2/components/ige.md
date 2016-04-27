@@ -61,6 +61,10 @@ Klickt man auf die "delete"-Schaltfläche eines verbundenen Kataloges, erscheint
 
 ## FAQ
 
+### Es kommen keine Ergebnisse vom SNS (SSL-Problem)
+
+Siehe hierzu die FAQ vom [iPlug-Management](iplug_sns.html#faq).
+
 ### Was ist das Import Protokoll?
 
 Im Import Protokoll werden die getätigten Schritte bei einem Datenimport sequentiell protokolliert. Das Protokoll wird im InGrid Editor nach einem Import angezeigt.

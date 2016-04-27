@@ -45,7 +45,7 @@ Sie können nun das iPlug mit
 sh start.sh start
 {% endhighlight %}
 
-starten. 
+starten.
 
 Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können. Geben Sie als `PORT` den bei der Installation angegebenen Port für die Administration an.
 
@@ -73,7 +73,7 @@ cp -r /opt/ingrid/ingrid-iplug-management <BACKUP-DIRECTORY>
 {% endhighlight %}
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 {% highlight text %}
 java -jar ingrid-iplug-management-NEW-VERSION-installer.jar
@@ -198,11 +198,11 @@ Diese Schnittstellenmethode erlaubt es, den iBus-Benutzer in der Portal-Datenban
 management_request_type | "0" | Identifiziert die Schnittstellenmethode (authenticate)|
 |login | | Name des Benutzers|
 
-**QueryString:** 
+**QueryString:**
 
 `datatype:management login:<user_name> digest:<codiertes oder uncodiertes passwort des Benutzers> management_request_type:0`
 
-**Ergebnisse:** 
+**Ergebnisse:**
 
 Für jede Berechtigung (Permission) des Benutzers wird ein Ingrid-Hit erzeugt und zurückgegeben. Innerhalb des Hits sind folgende Eigenschaften definiert:
 
@@ -238,16 +238,16 @@ Die Liste der Partner und deren Anbieter können über folgende Struktur (unter 
 
 {% highlight text %}
 { partner: [
-	{ partnerid="bund", 
-	name="Bund", 
-	providers= [ 
-		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} , 
+	{ partnerid="bund",
+	name="Bund",
+	providers= [
+		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} ,
 		{providerid="bu_bfn", name="Name des Providers", url="URL des providers"}
 	]},
-	{ partnerid="ni", 
-	name="Niedersachsen", 
-	providers= [ 
-		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} , 
+	{ partnerid="ni",
+	name="Niedersachsen",
+	providers= [
+		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} ,
 		{providerid="bu_bfn", name="Name des Providers", url="URL des providers"}
 	]}
   ]
@@ -278,7 +278,7 @@ Die Liste der Anbieter wird über die folgende Abfrage erstellt:
 
 {% highlight text %}
 { provider: [
-		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} , 
+		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} ,
 		{providerid="bu_bfn", name="Name des Providers", url="URL des providers"}
 	]
 }
@@ -312,12 +312,27 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 Mögliche Ursachen:
 
 * Keine Datenbankverbindung
-* Falsche Datenbank Verbindungsparameter 
+* Falsche Datenbank Verbindungsparameter
 * Keine Verbindung zum iBus
-* Sie versuchen sich mit einem Benutzer anzumelden, der keine entsprechenden Rechte besitzt. Bitte richten Sie im Portal einen Benutzer mit den Rechten portal-admin ein! 
+* Sie versuchen sich mit einem Benutzer anzumelden, der keine entsprechenden Rechte besitzt. Bitte richten Sie im Portal einen Benutzer mit den Rechten portal-admin ein!
 
-Bitte analysieren Sie das log file des iPlugs. 
+Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug nur neu starten, wenn der Zugriff auf die Administrationsoberfläche geändert wurde (Adminport).
 
+### Es kommen keine Ergebnisse vom SNS (SSL-Problem)
+
+Mit der Umstellung des SNS-Dienstes nach HTTPS wird ein zusätzliches Zertifikat in Java benötigt, um die Anfragen absetzen zu können. Ab der Version 3.6.2 sollten die URLs zu den Diensten in der Datei "sns.properties" bereits mit "https" beginnen. Dies betrifft die Schlüssel "sns.serviceURL.[chronicle|thesaurus|gazetteer]". Bei vorherigen Versionen muss dies manuell umgestellt werden.
+
+Als nächstes muss das Zertifikat "Let’s Encrypt Authority X3" von https://letsencrypt.org/certificates/ heruntergeladen werden. Dies kann mittels folgendermaßen geschehen:
+
+`wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem`
+
+Dieses Zertifikat wird dann mittels des keytool-Kommandos in Java importiert. Hierbei ist es wichtig, dass man die Javaversion aktualisiert, die auch zum Starten der Komponente verwendet wird.
+
+`sudo <path-to-jdk>/jre/bin/keytool -trustcacerts -keystore <path-to-jdk>/jre/lib/security/cacerts -importcert -file lets-encrypt-x3-cross-signed.pem`
+
+Hierbei wird der aktuelle "keystore" mit dem neuen Zertifikat aktualisiert. Wenn der keystore noch nicht existiert, so wird zusätzlich nach einem neuen Passwort nachgefragt. Falls der keystore schon existiert, so wird stattdessen nach dem dazugehörigen Passwort gefragt. Dieses ist standardmäßig "**changeit**".
+
+Nach einem Neustart des SNS-iPlugs, sollte der SNS wieder Ergebnisse liefern.
