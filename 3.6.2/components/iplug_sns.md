@@ -206,7 +206,7 @@ Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
 
 ### Es kommen keine Ergebnisse vom SNS (SSL-Problem)
 
-Mit der Umstellung des SNS-Dienstes nach HTTPS wird ein zusätzliches Zertifikat in Java benötigt, um die Anfragen absetzen zu können. Ab der Version 3.6.2 sollten die URLs zu den Diensten in der Datei "sns.properties" bereits mit "https" beginnen. Dies betrifft die Schlüssel "sns.serviceURL.[chronicle|thesaurus|gazetteer]". Bei vorherigen Versionen muss dies manuell umgestellt werden.
+Mit der Umstellung des SNS-Dienstes nach HTTPS wird ein zusätzliches Zertifikat in Java benötigt, um die Anfragen absetzen zu können. Ab der Version 3.6.2 sollten die URLs zu den Diensten in der Datei "sns.properties" bereits mit "https" beginnen. Dies betrifft die Schlüssel "sns.serviceURL.\[chronicle|thesaurus|gazetteer\]". Bei vorherigen Versionen muss dies manuell umgestellt werden.
 
 Als nächstes muss das Zertifikat "Let’s Encrypt Authority X3" von https://letsencrypt.org/certificates/ heruntergeladen werden. Dies kann mittels folgendermaßen geschehen:
 
