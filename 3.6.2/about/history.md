@@ -4,6 +4,127 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2
+
+
+### Änderungen
+
+
+#### Zusammenlegung von IGE iPlug, DSC Object iPlug, DSC Address iPlug
+
+Die bisher für die Verwaltung von Metadaten benötigten iPlugs IGE iPlug, DSC Object iPlug, DSC Address iPlug wurde zu einem IGE iPlug konsolidiert. Dies erspart bei Installationen mit vielen Katalogen Ressourcen: es werden pro Katalog nur noch ein statt drei iPlugs installiert werden.
+
+Achtung! Eine automatissche Migration ist durch die Zusammenlegung mehrerer iPlugs nicht möglich. Das neue IGE iPlug muss manuell installiert werden.
+
+#### Sofortige Indexierung und Generierung von ISO 19139 XML Metadaten
+
+Nach Veröffentlichung eines Metadatensatzes wird der Index im IGE iPlug sofort aktualisiert. Im Zuge der Indexierung wird die Transformation der Metadaten in der ISO 19139 XML Format vorgenommen. Die Daten stehen dadurch sofort für eine Recherche zur Verfügung.
+
+Das zeitgesteuerte Indexieren des gesamten Datenbestandes wird nach wie vor beibehalten, um evtl. Inkonsistenzen im Datenbestand vorzubeugen (Empfehlung: Indexierung alle 24h).
+
+#### Vorschau auf ISO 19139 XML Format im IGE Editor
+
+Im IGE kann ein Metadatensatz nach Speicherung sofort im ISO 19139 XML Format angezeigt werden. Dazu wurde eine Vorschau implementiert, die auch einen Vergleich von veröffentlichter und Bearbeitungskopie ermöglicht.
+
+![ISO XML Preview](../images/ingrid_ige_iso_xml_preview.png "ISO XML Preview")
+
+#### Konformität zu den GDI-DE Metadatenkonventionen 1.1.0 hergestellt
+
+Die Konformität der Metadaten wurden nach den GDI-DE Metadatenkonventionen 1.1.0 analysiert und angepasst.
+
+#### Back Button
+
+Im Ingrid Editor wurden ein Back-Button eingeführt, der es dem Bearbeiter erlaubt zum jeweils zuletzt aufgerufenen Objekt bzw. Adresse zu springen.
+
+![Back Button](../images/ingrid_ige_back_button.png "Back Button")
+
+#### Wappen der Bundesländer in Trefferliste
+
+Optional können im Portal zu den Treffern die Wappen der jeweiligen Partner Bundesländer dargestellt werden.
+
+![Wappen in Trefferliste](../images/ingrid_portal_treffer_liste_wappen.png "Wappen in Trefferliste")
+
+#### CSW-T Schnittstelle
+
+Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standardisierte Schnittstelle.
+
+
+### Weitere Änderungen
+
+- [Feature] [IGE] Nacharbeiten: Konformität zu den GDI-DE Metadatenkonventionen 1.1.0 herstellen ([REDMINE-223](https://dev.informationgrid.eu/redmine/issues/223))
+- [Feature] [IGE] Umbenennung von Feld-Bezeichungen für Einschränkungen ([REDMINE-197](https://dev.informationgrid.eu/redmine/issues/197))
+- [Feature] [IGE] Beim Erstellen einer Operation soll das Feld "Unterstützte Plattformen" auf "Webservice" voreingestellt werden ([REDMINE-87](https://dev.informationgrid.eu/redmine/issues/87))
+- [Feature] [IGE] Aktualisierung CodeListe der Spezifikation der Konformität ([REDMINE-86](https://dev.informationgrid.eu/redmine/issues/86))
+- [Feature] [IGE] Eintragung von Capabilities URLs von ALLEN Diensten unter ISO: distributionInfo/../linkage ([REDMINE-85](https://dev.informationgrid.eu/redmine/issues/85))
+- [Feature] [IGE] Automatisches Hinzufügen einer Operation "Get Download Service Metadata" bei über ATOM Download Service bereitgestellten Daten ([REDMINE-84](https://dev.informationgrid.eu/redmine/issues/84))
+- [Feature] [IGE] Konfigurierbares Verhalten bei Validierung von Daten Dienste Kopplung ([REDMINE-153](https://dev.informationgrid.eu/redmine/issues/153))
+- [Feature] [IGE] Back Button Unterstützung ([REDMINE-36](https://dev.informationgrid.eu/redmine/issues/36))
+- [Feature] [IGE] Dashbord / Anzeige aller Objekte in Bearbeitung ([REDMINE-25](https://dev.informationgrid.eu/redmine/issues/25))
+- [Feature] [Portal] Frontend / Trefferliste / Länderkennzeichnung ([REDMINE-21](https://dev.informationgrid.eu/redmine/issues/21))
+- [Feature] [Portal] PORTAL Installer: Seite für SMTP Server hinzufügen, wenn Portal ohne IGE installiert wird. ([REDMINE-312](https://dev.informationgrid.eu/redmine/issues/312))
+- [Feature] [Portal] PORTAL: Kontaktformular wird mit angemeldetem Benutzer vorbelegt ([REDMINE-302](https://dev.informationgrid.eu/redmine/issues/302))
+- [Feature] [Portal] Toleranz beim Vergleich IGE Frontend (Portal IGE Editor) und Backend Version (IGE iPlug) ([REDMINE-245](https://dev.informationgrid.eu/redmine/issues/245))
+- [Feature] [Portal] Portal Datenbank aufräumen, nicht genutzte Tabellen entfernen ([REDMINE-137](https://dev.informationgrid.eu/redmine/issues/137))
+- [Feature] [MapClient] MAPCLIENT (WSV Profil): Anpassung Layout Druckvorlage Kartenclient ([REDMINE-311](https://dev.informationgrid.eu/redmine/issues/311))
+- [Feature] [INTERFACE-CSW] Konfigurierbarkeit und Erhöhung von Timeouts bei Dateioperationen ([REDMINE-297](https://dev.informationgrid.eu/redmine/issues/297))
+- [Feature] [INTERFACE-CSW] Implementierung einer CSW-T Schnittstelle ([REDMINE-113](https://dev.informationgrid.eu/redmine/issues/113))
+- [Feature] [iPlug SE] IPLUG-SE: Spring Überschreib-Mechanismus einführen (override Verzeichnis) ([REDMINE-309](https://dev.informationgrid.eu/redmine/issues/309))
+- [Feature] [iPlug WFS] Verbesserung der Log und Status-Ausgabe ([REDMINE-285](https://dev.informationgrid.eu/redmine/issues/285))
+- [Feature] [iPlug DSC] Entfernen des zweiten identificationInfo-Elements aus der ISO Abbildung ([REDMINE-83](https://dev.informationgrid.eu/redmine/issues/83))
+- [Feature] [System] HTTPS Umstellung der SNS-Schnittstelle ([REDMINE-303](https://dev.informationgrid.eu/redmine/issues/303))
+- [Feature] [System] Konzeption: Überarbeitung der Datenspeicherung in InGrid Katalogen ([REDMINE-183](https://dev.informationgrid.eu/redmine/issues/183))
+- [Feature] [System] Zusammenführung von IGE und IGC iPlugs (Objekt, Adressen) ([REDMINE-88](https://dev.informationgrid.eu/redmine/issues/88))
+- [Feature] [System] Statusbenachrichtigung bei indexierenden iPlugs ([REDMINE-34](https://dev.informationgrid.eu/redmine/issues/34))
+- [Bug] [IGE] Inhalt Erfassungsmaske nicht korrekt ([REDMINE-315](https://dev.informationgrid.eu/redmine/issues/315))
+- [Bug] [IGE] Baum inkonsisten bei Einfügen von neuen Knoten / Löschen Knoten ([REDMINE-314](https://dev.informationgrid.eu/redmine/issues/314))
+- [Bug] [IGE] Besseres Aktualisieren des Baums (Refresh Children) ([REDMINE-313](https://dev.informationgrid.eu/redmine/issues/313))
+- [Bug] [IGE] Mapping von leerem Datum nach IDF schlägt fehl. ([REDMINE-307](https://dev.informationgrid.eu/redmine/issues/307))
+- [Bug] [IGE]  Sysliste wird nicht sprachspezifisch aus Cache geholt. ([REDMINE-306](https://dev.informationgrid.eu/redmine/issues/306))
+- [Bug] [IGE] Speichern Datenbank Konfiguration im Admin-GUI funktioniert nicht. ([REDMINE-305](https://dev.informationgrid.eu/redmine/issues/305))
+- [Bug] [IGE] Löschen eines Darstellenden Dienstes funktioniert nicht ([REDMINE-291](https://dev.informationgrid.eu/redmine/issues/291))
+- [Bug] [Portal] Neuinstallation Portal zieht neue Portal Datenbank nicht auf akt. Stand ([REDMINE-300](https://dev.informationgrid.eu/redmine/issues/300))
+- [Bug] [Portal] Detaildarstellung mit vielen Verlinkungen sehr langsam ([REDMINE-295](https://dev.informationgrid.eu/redmine/issues/295))
+- [Bug] [Portal] Installation Portal bringt falsche Ausgabe im Installer ([REDMINE-280](https://dev.informationgrid.eu/redmine/issues/280))
+- [Bug] [Portal] Detailansicht zeigt Fehler ([REDMINE-275](https://dev.informationgrid.eu/redmine/issues/275))
+- [Bug] [Portal] Fehler in der Detaildarstellung bzgl. "Zeige Karte"-Link ([REDMINE-261](https://dev.informationgrid.eu/redmine/issues/261))
+- [Bug] [Portal] Zu wenig Einträge unter "Darstellender Dienst" in der Detaildarstellung ([REDMINE-258](https://dev.informationgrid.eu/redmine/issues/258))
+- [Bug] [Map Client] Fehler bei der Legenden-Darstellung (Firefox) ([REDMINE-282](https://dev.informationgrid.eu/redmine/issues/282))
+- [Bug] [Map Client]  Fehler bei der Verwendung des Messung-Tools ([REDMINE-278](https://dev.informationgrid.eu/redmine/issues/278))
+- [Bug] [iPlug SE] Handhabung fehlender Index / Index Mapping via default Konfiguration / Zentralisierung Funktionalität in base-webapp ([REDMINE-310](https://dev.informationgrid.eu/redmine/issues/310))
+- [Bug] [iPlug SE] REST API hat sich geändert / Handhabung fehlender Report ([REDMINE-308](https://dev.informationgrid.eu/redmine/issues/308))
+- [Bug] [iPlug IGE] Mapping von UUID in Index teilweise noch fehlerhaft ([REDMINE-299](https://dev.informationgrid.eu/redmine/issues/299))
+- [Bug] [iPlug CSW] Wenn GetCapabilities Request fehl schlägt, dann wird trotzdem aus dem Cache indexiert ? ([REDMINE-264](https://dev.informationgrid.eu/redmine/issues/264))
+- [Bug] [iPlug DSC] iPlug DSC/IGE: Entfernung ERROR Log Ausgaben, wenn beim IDF Mapping Syslisteneintrag nicht gefunden wird. ([REDMINE-250](https://dev.informationgrid.eu/redmine/issues/250))
+- [Bug] [iPlug DSC] CSW Harvesting führt zu Fehlern wenn iPlug indexiert ([REDMINE-219](https://dev.informationgrid.eu/redmine/issues/219))
+- [Bug] [iPlug Excel] Anbieter werden nicht korrekt entfernt ([REDMINE-212](https://dev.informationgrid.eu/redmine/issues/212))
+- [Bug] [System] Problem mit unterbrochenen Nachrichten in der Kommunikationsschicht ([REDMINE-286](https://dev.informationgrid.eu/redmine/issues/286))
+- [Bug] [System] 	Alle iPlugs: Basis URL redirect funktioniert nicht als eingeloggter user ([REDMINE-269](https://dev.informationgrid.eu/redmine/issues/269))
+- [Bug] [System] In den iPlugs werden die CACHE Einstellungen in der Admin GUI nicht persistiert. ([REDMINE-254](https://dev.informationgrid.eu/redmine/issues/254))
+
+
+### Komponenten
+
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/3.6.2/))
+- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/3.6.2/))
+- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.2/))
+- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.2/))
+- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.2/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.2/))
+- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.2/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.2/))
+- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.2/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.2/))
+- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.2/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.2/))
+- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.2/))
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2/))
+- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.2/))
+
+
+
 ## Version 3.6.1
 
 ### Komponenten
@@ -26,7 +147,6 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 - iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.1/))
 - iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.1/))
 - Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1/))
-- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
 - Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
  
 
