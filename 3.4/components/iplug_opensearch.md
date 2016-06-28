@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: iPlug Opensearch
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

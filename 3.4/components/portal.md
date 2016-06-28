@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Portal
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

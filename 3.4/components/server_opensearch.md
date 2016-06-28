@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Opensearch Server
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

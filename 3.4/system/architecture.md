@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Architektur
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

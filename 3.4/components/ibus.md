@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: iBus
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: iPlug SNS
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

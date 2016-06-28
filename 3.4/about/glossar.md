@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Glossar
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

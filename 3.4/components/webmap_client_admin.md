@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Webmap Client
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

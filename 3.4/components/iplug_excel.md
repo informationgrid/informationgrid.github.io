@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: iPlug Excel
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

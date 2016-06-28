@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Codelist Repository
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---

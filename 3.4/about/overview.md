@@ -1,5 +1,6 @@
 ---
 layout: default
+sitemap: false
 title: Überblick
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
