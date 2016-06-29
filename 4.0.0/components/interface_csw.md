@@ -119,6 +119,94 @@ Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
 Die CSW Schnittstelle lässt sich über eine Admin-GUI administrieren. Hier lassen sich Datenquellen hinzufügen und entfernen, das Scheduling für den Harvesting-Prozess definieren und eine Test-Suche ausführen.
 
+### CSW-T Schnittstelle
+
+Die CSW-T Schnittstelle ermöglicht das Ausführen von Operationen auf einem IGE-iPlug, um Datensätze zu erstellen, zu ändern oder auch zu löschen. Dadurch lassen sich die Datensätze auch ohne den InGrid-Editor verwalten. Jede abgesetzte Transaktion wird entweder komplett oder bei einem Fehler, gar nicht ausgeführt.
+
+#### Login für CSW-T Schnittstelle
+
+Die CSW-T Schnittstelle wird mittels einer "Basic Authentication" für den unbefugten Zugriff abgesichert. Bevor diese verwendet werden kann, müssen die Benutzer erstellt werden, die darauf Zugriff haben sollen. Da die CSW-Schnittstelle unabhängig vom IGE-iPlug läuft, wird hier ein separater Zugang benötigt.
+
+In der Datei "conf/csw-t.realm.properties", werden die Benutzer per Hand eingetragen. Hierfür gilt folgende Syntax:
+
+{% highlight text %}
+username: password[,rolename ...]
+{% endhighlight %}
+
+wobei der Rollenname auf "user" stehen muss, um den Zugriff zu erhalten. Das Passwort kann als Klartext oder als MD5-verschlüsseltes Passwort abgelegt werden. Wenn verschlüsselt, dann lautet die Syntax:
+
+{% highlight text %}
+username: MD5:password[,rolename ...]
+{% endhighlight %}
+
+Unter Unix lässt sich das Passwort wie folgt mittels MD5 verschlüsseln:
+
+{% highlight text %}
+echo -n "password" | md5sum
+{% endhighlight %}
+
+Nachdem diese Datei verändert wurde, muss die CSW-Schnittstelle neu gestartet werden.
+
+#### CSW-T Communication
+
+Hier wird die Kommunikation zum iBus definiert, an dem sich die anzusprechenden IGE-iPlugs befinden.
+
+| Feld                           | Beschreibung                                             |
+|--------------------------------|----------------------------------------------------------|
+| Client Proxy ID                | Eindeutige ID des iPlugs  |
+| iBus IP	                     | IP Adresse unter der der iBus erreichbar ist  |
+| iBus port                      | Port der vom iBus verwendet wird  |
+| iBus proxy id                  | Eindeutige ID des iBus  |
+
+Mit dem Klick auf "Save Communication" werden die Einstellungen gespeichert und die CSW-T-Schnittstelle kann verwendet werden, insofern ein Benutzerlogin hierfür erstellt wurde.
+
+#### Verwendung
+
+Um eine CSW-T Anfrage zu stellen, müssen folgende URL-Parameter verwendet werden:
+
+| Parameter     | WERT           | Kommentar                                             |
+|---------------|----------------|----------------------------------------------------------|
+| SERVICE       | CSW            | Dieser Wert ist unveränderbar.  |
+| REQUEST       | Transaction    | Dieser Wert ist unveränderbar.  |
+| catalog       | (ige-iplug-id) | Hier wird die ClientID des IGE-iPlugs angegeben, auf dem die Transaktion angewendet werden soll.  |
+
+Eine Beispielanfrage sieht demnach folgendermaßen aus:
+> http://(cswt-interface-address)?SERVICE=CSW&REQUEST=Transaction&catalog=/ingrid-group:ige-test
+
+Für den zu übertragenden Inhalt wird im Body der Datensatz im XML-Format hinterlegt. Innerhalb einer Transaktion werden eine beliebige Anzahl von Aktionen unterstützt, die vom Typ: **INSERT**, **UPDATE** und **DELETE** sein müssen.
+
+| Aktion                | Beschreibung                                             |
+|-----------------------|----------------------------------------------------------|
+| INSERT                | Fügt einen neuen Datensatz ein. Ist ein Datensatz bereits vorhanden, so wird ein Fehler zurückgegeben.  |
+| UPDATE	            | Aktualisiert einen bestehenden Datensatz. Falls ein Datensatz nicht existiert, so wird ein Fehler zurückgegeben.  |
+| DELETE                | Löscht einen vorhandenen Datensatz. Ist dieser Datensatz nicht vorhanden, so wird ein Fehler zurückgegeben. |
+
+Es können mehrere Aktionen innerhalb einer Transaktion ausgeführt werden. Bei einer erfolgreichen Transaktion wird eine Zusammenfassung der ausgeführten Operationen ausgegeben.
+
+Ein Auszug aus einer INSERT-Aktion sieht folgendermaßen aus:
+
+{% highlight xml %}
+<csw:Transaction service="CSW" version="2.0.2" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-publication.xsd">
+    <csw:Insert>
+        <gmd:MD_Metadata xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+            xmlns:gco="http://www.isotc211.org/2005/gco">
+            <gmd:fileIdentifier>
+                <gco:CharacterString>4915275a-733a-47cd-b1a6-1a3f1e976948</gco:CharacterString>
+            </gmd:fileIdentifier>
+            <gmd:language>
+                <gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#LanguageCode"
+                    codeListValue="ger">ger</gmd:LanguageCode>
+            </gmd:language>
+            <gmd:parentIdentifier>
+                <gco:CharacterString>A3E10CDE-45BF-4D95-BA60-0EDE6777XXXX</gco:CharacterString>
+            </gmd:parentIdentifier>
+            ...
+        </gmd:MD_Metadata>
+    </csw:Insert>
+</csw:Transaction>
+{% endhighlight %}
+
 ### Manage Harvester
 
 Unter diesem Punkt können die Datenquellen der CSW Schnittstelle verwaltet werden. Je nach Harvester-Typ ist die Oberfläche unterschiedlich:
