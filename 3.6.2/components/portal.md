@@ -51,7 +51,7 @@ Profile bestehen aus einer Sammlung von Dateien (Stylesheets, Templates, Bilder)
 - 768 MB RAM
 - 1 GB Harddrive
 
-- JAVA 1.6
+- JAVA 1.8
 - Cygwin (unter Windows)
 - MySQL oder ORACLE
 
@@ -62,7 +62,7 @@ Bei der Verwendung einer MySQL-Datenbank unter Unix wird normalerweise nach Gro�
 {% highlight text %}
 [mysqld]
 ...
-*lower_case_table_names=1*
+lower_case_table_names=1
 {% endhighlight %}
 
 
@@ -225,6 +225,8 @@ Für Suchergebnisse aus dem InGrid Metadatenbestand (z.B. aus dem IGE oder aus a
 #### 15.) Installation
 
 Der Installationsfortschritt kann während der Installation angezeigt werden. Die Anzeige enthält nützliche Informationen die auch weitere Anweisungen enthält, die nach der Installation zu beachten sind.
+Wird im Reiter "Ausgabe" nicht auf einen Fehler hingewiesen, so war die Installation erfolgreich.
+Im Reiter "Fehler" können durchaus SQL Statements angezeigt werden, die einen Fehler lieferten, aber im Installationsprozess korrekt ausgeführt wurden, z.B. um festzustellen, ob die Datenbank oder Tabellen vorhanden sind.
 
 ![Portal Installer - Ausführung](../images/portal_installer_progress.png "Portal Installer - Ausführung")
 
