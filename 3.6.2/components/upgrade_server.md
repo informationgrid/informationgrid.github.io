@@ -27,7 +27,7 @@ Anwendung findet der Upgrade Server z.B. im Portal integrierten [Upgrade Client]
 * 64 MB RAM
 * 20 MB Harddrive
 
-* JAVA 1.6
+* JAVA 1.8
 * Cygwin (unter Windows)
 
 

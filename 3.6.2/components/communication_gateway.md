@@ -37,7 +37,7 @@ Wird das Gateway Ausgangsseitig im SSL Modus betrieben so müssen die Pakete an 
 - 64 MB RAM
 - 20 MB Harddrive
 
-- JAVA 1.6
+- JAVA 1.8
 - Cygwin (unter Windows)
 
 
