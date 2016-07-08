@@ -4,6 +4,36 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.1
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2.1/))
+- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.2.1/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.1/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.2.1/))
+
+
+### Änderungen
+
+- [Feature] [INTERFACE-CSW] CSW-T: Passwortgeschützter Zugang ([REDMINE-337](https://dev.informationgrid.eu/redmine/issues/337))
+- [Update] [IGE] Vermeidung von neuen leeren Zeilen in Tabellen ([REDMINE-324](https://dev.informationgrid.eu/redmine/issues/324))
+- [Bug] [Portal] Feldnamen von Verfügbarkeit (constraints) in Detaildarstellung stimmen nicht mit IGE überein ([REDMINE-346](https://dev.informationgrid.eu/redmine/issues/346))
+- [Bug] [Portal] Detaildarstellung von constraints in Profilen an neue IDF Struktur anpassen ([REDMINE-189](https://dev.informationgrid.eu/redmine/issues/189))
+- [Bug] [Portal] IGE: Geothesaurus-Raumbezug wird fehlerhaft angezeigt ([REDMINE-341](https://dev.informationgrid.eu/redmine/issues/341))
+- [Bug] [Portal] IGE: Geothesaurus-Raumbezug wird fehlerhaft aus den Capabilities übertragen ([REDMINE-343](https://dev.informationgrid.eu/redmine/issues/343))
+- [Bug] [Portal] IGE: Änderungsdialog beim Öffnen von Objekten/Adressen ([REDMINE-332](https://dev.informationgrid.eu/redmine/issues/332))
+- [Bug] [Portal] IGE: Update überschreibt mdek.override.properties ([REDMINE-323](https://dev.informationgrid.eu/redmine/issues/323))
+- [Bug] [INTERFACE-CSW+iPlug IGE] CSW-T: Anfragen dürfen nicht den Cache benutzen ([REDMINE-366](https://dev.informationgrid.eu/redmine/issues/366))
+- [Bug] [INTEFACE-SEARCH] Die OpenSearch Schnittstelle liefert keine Titel bei IGE iPlug Ergebnissen ([REDMINE-329](https://dev.informationgrid.eu/redmine/issues/329))
+- [Bug] [iPlug IGE] Servicetyp (Art des Dienstes) im Index muss ISO Wert enthalten ([REDMINE-330](https://dev.informationgrid.eu/redmine/issues/330))
+- [Bug] [iPlug IGE] Adressen sollen in der Ergebnisliste nach Objekten erscheinen ([REDMINE-342](https://dev.informationgrid.eu/redmine/issues/342))
+- [Bug] [iPlug IGE] CSW-T: Objekt kann nur als Top-knoten angelegt werden ([REDMINE-336](https://dev.informationgrid.eu/redmine/issues/336))
+- [Bug] [iPlug IGE] CSW-T: Löschen mehrerer Objekte nicht möglich ([REDMINE-360](https://dev.informationgrid.eu/redmine/issues/360))
+- [Bug] [iPlug IGE] CSW-T: Zahlen in Zusammenfassung falsch ([REDMINE-361](https://dev.informationgrid.eu/redmine/issues/361))
+- [Bug] [iPlug SNS] Keine ähnlichen Begriffe bei Sonderzeichen ([REDMINE-319](https://dev.informationgrid.eu/redmine/issues/319))
+
 ## Version 3.6.2
 
 
