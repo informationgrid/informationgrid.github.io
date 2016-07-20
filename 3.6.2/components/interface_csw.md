@@ -115,9 +115,21 @@ start.sh [start|stop|restart|status]
 
 Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
+Der Zugang zur allgemeinen CSW-Schnittstelle ist über der folgenden URL erreichbar:
+
+{% highlight text %}
+http://<csw-admin-url>/csw
+{% endhighlight %}
+
+Für die CSW-T-Schnittstelle, die zusätzlich abgesichert ist (siehe weiter unten), wird hingegen folgende URL benötigt:
+
+{% highlight text %}
+http://<csw-admin-url>/csw-t
+{% endhighlight %}
+
 ## Konfiguration
 
-Die CSW Schnittstelle lässt sich über eine Admin-GUI administrieren. Hier lassen sich Datenquellen hinzufügen und entfernen, das Scheduling für den Harvesting-Prozess definieren und eine Test-Suche ausführen.
+Die CSW Schnittstelle lässt sich über eine Admin-GUI administrieren, die über den im Installer gesetzten Port erreichbar ist. Hier lassen sich Datenquellen hinzufügen und entfernen, das Scheduling für den Harvesting-Prozess definieren und eine Test-Suche ausführen.
 
 ### CSW-T Schnittstelle
 
