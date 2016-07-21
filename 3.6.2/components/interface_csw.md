@@ -159,6 +159,24 @@ echo -n "password" | md5sum
 
 Nachdem diese Datei verändert wurde, muss die CSW-Schnittstelle neu gestartet werden.
 
+Für den Zugriff auf die Schnittstelle gibt es 2 Möglichkeiten:
+
+##### Angabe von Username und Passwort in der URL
+
+> http://<username>:<passwort>@(cswt-interface-address)?SERVICE=CSW&REQUEST=Transaction&catalog=/ingrid-group:ige-test
+
+##### Angabe als Header im POST Request
+
+Dem POST Request muss ein Header Parameter `Authorization` mit dem Wert `Basic <verschlüsselterLogin>` hinzugefügt werden. Der Wert `<verschlüsselterLogin>` besteht aus dem BASE64 kodiertem Wert `<username>:<passwort>`.
+
+Der Wert kann mit Hilfe von Online Tools erzeugt werden, z.B. http://www.motobit.com/util/base64-decoder-encoder.asp.
+
+
+
+
+
+
+
 #### CSW-T Communication
 
 Hier wird die Kommunikation zum iBus definiert, an dem sich die anzusprechenden IGE-iPlugs befinden.
