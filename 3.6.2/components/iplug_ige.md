@@ -118,7 +118,7 @@ Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
 Im folgenden werden die Konfigurationsdateien des IGE-iPlug nochmals näher beschrieben. Diese sind bereits entsprechend der Eingabe im Installationsprozess konfiguriert.
 
-Durch die Integration des DSC-iPlugs, ist auch die Administration über den Webbrowser hinzugefügt worden. Über den im Installer angegebenen Port ist die Administrationsseite abrufbar. Siehe dazu auch die [DSC-iPlug-Dokumentation](iplug_dsc_scripted.md).
+Durch die Integration des DSC-iPlugs, ist auch die Administration über den Webbrowser hinzugefügt worden. Über den im Installer angegebenen Port ist die Administrationsseite abrufbar. Siehe dazu auch die [DSC-iPlug-Dokumentation](iplug_dsc_scripted.html).
 
 ### IGE-iBus
 
