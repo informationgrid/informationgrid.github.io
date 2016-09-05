@@ -2,6 +2,7 @@
 layout: default
 title: iPlug SE (Search Engine)
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

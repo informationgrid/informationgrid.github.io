@@ -2,6 +2,7 @@
 layout: default
 title: iPlug CSW
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

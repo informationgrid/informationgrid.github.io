@@ -2,6 +2,7 @@
 layout: default
 title: Anwendungen
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Einsatzmöglichkeiten von InGrid

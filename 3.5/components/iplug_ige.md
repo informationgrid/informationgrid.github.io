@@ -2,6 +2,7 @@
 layout: default
 title: iPlug IGE / InGrid Catalog
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

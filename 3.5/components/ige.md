@@ -2,6 +2,7 @@
 layout: default
 title: InGrid Editor
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

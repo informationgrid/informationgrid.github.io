@@ -2,6 +2,7 @@
 layout: default
 title: iPlug WFS
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

@@ -4,6 +4,119 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.0.0
+
+
+### Änderungen
+
+#### Neues responsives Layout für das InGrid Portal
+
+Das InGrid Portal erhält ein neues, responsives Layout und ist damit fit für die Verwendung auf Tablets und Smartphones.
+
+![Responsives Layout für InGrid Portal](../images/ingrid_portal_search_4_00.png "Responsives Layout für InGrid Portal")
+
+#### Neuer MapClient in responsivem Layout
+
+Der MapClient wurde durch eine auf geo.admin.ch basierende Komponente ersetzt. Die Umsetzung ist vollständig responsiv und damit fit für die Verwendung auf Tablets und Smartphones.
+
+ACHTUNG: Die MapClient Daten aus früheren Versionen müssen manuell migriert werden.
+
+![Responsiver MapClient](../images/ingrid_mapclient_4_00.jpg "Responsiver MapClient")
+
+#### MessdatenClient
+
+Das Portal enthält nun zum ersten mal eine Möglichkeit zur Anzeige von Messdaten. Verschiedene Messnetze werden beobachtet und indexiert und können über den MessdatenClient dargestellt werden. Die Anzeige der Messstellen kann nach Parameter, Zeitraum und Wertebereich gefiltert werden. Jede Änderung eines Filters liefert sofort ein Ergebnis, ähnlich einer LIVE Search.
+
+Für jede Messstation kann der Messdatenverlauf der letzten Tage und Wochen eingesehen werden. Verschiedene Messwerte oder Stationen können miteinander verglichen werden, um Zusammenhänge zu visualisieren. Die zugrundeliegenden Daten können heruntergeladen werden.
+
+Die Komponente ist voll responsiv und kann einfach in bestehende Applikationen integriert werden.
+
+Die Komponente ist aktuell noch nicht unter OpenSource Lizenz verfügbar, da noch entsprechende Anpassungen am SourceCode ausgeführt werden müssen. Wenn Sie an einem Einsatz interessiert sind, nehmen Sie bitte Kontakt mit uns auf: [mailto:ingrid@wemove.com](mailto:ingrid@wemove.com).
+
+![MessdatenClient Kartenansicht](../images/mvis_map.jpg "MessdatenClient Kartenansicht")
+
+![MessdatenClient Station](../images/mvis_station.png "MessdatenClient Station")
+
+
+#### Neues Feld "Servicezeiten" im InGrid Editor
+
+Im InGrid Editor wurde ein neues Feld "Servicezeiten" bei der Adress Eingabe eingefügt.
+
+![Neues Feld 'Servicezeiten'](../images/ingrid_new_field_service_hours.png "Neues Feld 'Servicezeiten'")
+
+
+
+### Weitere Änderungen
+
+- [Feature] [IGE] Verbesserung der Geschwindigkeit bei Berechtigungsanfragen ([REDMINE-124](https://dev.informationgrid.eu/redmine/issues/124))
+- [Feature] [iPlug SNS] IPLUG-SNS: Neue Admin GUI wie in allen anderen iPlugs ([REDMINE-412](https://dev.informationgrid.eu/redmine/issues/412))
+- [Bug] [IGE] Gruppe löschen funktioniert nicht ([REDMINE-398](https://dev.informationgrid.eu/redmine/issues/398))
+- [Bug] [IGE] Benutzeradministration zeigt Fehler beim Speichern ([REDMINE-407](https://dev.informationgrid.eu/redmine/issues/407))
+- [Bug] [iPlug IGE] IDF-Mapping: Kategorien auch ohne aktivierte Open Data Checkbox speichern (für LGV HH)  ([REDMINE-395](https://dev.informationgrid.eu/redmine/issues/395))
+- [Bug] [iPlug SE] iPlug-SE: Art der Datenquelle wird nicht gespeichert  ([REDMINE-394](https://dev.informationgrid.eu/redmine/issues/394))
+- [Bug] [System] IPLUG Admin-GUI: Fehler bei falsch gespeicherten Passwörtern abfangen ([REDMINE-411](https://dev.informationgrid.eu/redmine/issues/411))
+- [Bug] [System] Codelist: Umbenennung "letzte Änderung" ([REDMINE-408](https://dev.informationgrid.eu/redmine/issues/408))
+
+
+
+### Komponenten
+
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.0.0/))
+- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.0.0/))
+- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.0.0/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.0/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.0.0/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.0/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.0.0/))
+- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.0/))
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.0/))
+
+
+## Version 3.6.2.2
+
+### Änderungen
+
+- [Bug] [INTERFACE-CSW] CSW-Schnittstelle fährt nach Update/Installation nicht mehr hoch wenn communication.xml fehlt ([REDMINE-376](https://dev.informationgrid.eu/redmine/issues/376))
+- [Bug] [iPlug Opensearch] iPlug-Opensearch: Fehler bei Konfiguration wenn Neuinstallation durchgeführt wurde ([REDMINE-390](https://dev.informationgrid.eu/redmine/issues/390))
+
+### Komponenten
+
+- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.2/))
+- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.2.2/))
+
+
+## Version 3.6.2.1
+
+### Änderungen
+
+- [Bug] [IGE] IGE: Vermeidung von neuen leeren Zeilen in Tabellen ([REDMINE-324](https://dev.informationgrid.eu/redmine/issues/324))
+- [Bug] [IGE] IGE: Update überschreibt mdek.override.properties ([REDMINE-323](https://dev.informationgrid.eu/redmine/issues/323))
+- [Bug] [IGE] IGE: Änderungsdialog beim Öffnen von Objekten/Adressen ([REDMINE-332](https://dev.informationgrid.eu/redmine/issues/332))
+- [Bug] [IGE] IGE: Geothesaurus-Raumbezug wird fehlerhaft aus den Capabilities übertragen ([REDMINE-343](https://dev.informationgrid.eu/redmine/issues/343))
+- [Bug] [PORTAL] PORTAL: Feldnamen von Verfügbarkeit (constraints) in Detaildarstellung stimmen nicht mit IGE überein ([REDMINE-346](https://dev.informationgrid.eu/redmine/issues/346))
+- [Bug] [PORTAL] PORTAL: Detaildarstellung von constraints in Profilen an neue IDF Struktur anpassen ([REDMINE-189](https://dev.informationgrid.eu/redmine/issues/189))
+- [Bug] [INTERFACE-SEARCH] [INTERFACE-SEARCH] Die OpenSearch Schnittstelle liefert keine Titel bei IGE iPlug Ergebnissen ([REDMINE-329](https://dev.informationgrid.eu/redmine/issues/329))
+- [Bug] [INTERFACE-CSW] CSW-T: Passwortgeschützter Zugang ([REDMINE-337](https://dev.informationgrid.eu/redmine/issues/337))
+- [Bug] [INTERFACE-CSW, iPlug IGE] CSW-T: Anfragen dürfen nicht den Cache benutzen ([REDMINE-366](https://dev.informationgrid.eu/redmine/issues/336))
+- [Bug] [iPlug IGE] Servicetyp (Art des Dienstes) im Index muss ISO Wert enthalten ([REDMINE-330](https://dev.informationgrid.eu/redmine/issues/330))
+- [Bug] [iPlug IGE] CSW-T: Objekt kann nur als Top-knoten angelegt werden ([REDMINE-336](https://dev.informationgrid.eu/redmine/issues/336))
+- [Bug] [iPlug IGE] Adressen sollen eine kleinere Relevanz haben als Objekte ([REDMINE-342](https://dev.informationgrid.eu/redmine/issues/342))
+- [Bug] [iPlug IGE] CSW-T: Löschen mehrerer Objekte nicht möglich ([REDMINE-360](https://dev.informationgrid.eu/redmine/issues/360))
+- [Bug] [iPlug IGE] CSW-T: Zahlen in Zusammenfassung falsch ([REDMINE-361](https://dev.informationgrid.eu/redmine/issues/361))
+- [Bug] [iPlug SNS] Keine ähnlichen Begriffe bei Sonderzeichen ([REDMINE-319](https://dev.informationgrid.eu/redmine/issues/319))
+
+
+### Komponenten
+
+- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.2.1/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.1/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.2.1/))
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2.1/))
+
+
+
 ## Version 3.6.2
 
 

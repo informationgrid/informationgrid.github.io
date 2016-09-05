@@ -2,6 +2,7 @@
 layout: default
 title: iPlug DSC
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

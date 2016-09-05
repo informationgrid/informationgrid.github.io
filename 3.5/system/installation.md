@@ -2,6 +2,7 @@
 layout: default
 title: Installation
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeine Hinweise

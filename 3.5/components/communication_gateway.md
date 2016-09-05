@@ -2,6 +2,7 @@
 layout: default
 title: Communication Gateway
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

@@ -2,6 +2,7 @@
 layout: default
 title: Funktionen
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Funktionen von InGrid

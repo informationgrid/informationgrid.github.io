@@ -2,6 +2,7 @@
 layout: default
 title: iPlug Opensearch
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

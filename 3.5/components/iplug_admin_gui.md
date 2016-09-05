@@ -2,6 +2,7 @@
 layout: default
 title: iPlug Admin GUI
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

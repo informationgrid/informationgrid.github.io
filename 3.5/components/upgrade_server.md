@@ -2,6 +2,7 @@
 layout: default
 title: Upgrade Server
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

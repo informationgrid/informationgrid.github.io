@@ -2,6 +2,7 @@
 layout: default
 title: Glossar
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 | Abkürzung und Fachausdrücke | Bedeutung |

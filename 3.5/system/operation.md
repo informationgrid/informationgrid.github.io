@@ -2,6 +2,7 @@
 layout: default
 title: Betrieb
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeine Hinweise

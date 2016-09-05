@@ -2,6 +2,7 @@
 layout: default
 title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Neuigkeiten in Version 3.5.0

@@ -2,6 +2,7 @@
 layout: default
 title: Überblick
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## InGrid

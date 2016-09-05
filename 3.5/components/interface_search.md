@@ -2,6 +2,7 @@
 layout: default
 title: Such-Schnittstelle
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

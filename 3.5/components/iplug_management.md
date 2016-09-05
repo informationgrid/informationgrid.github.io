@@ -2,6 +2,7 @@
 layout: default
 title: iPlug Management
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Allgemeines

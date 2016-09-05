@@ -2,6 +2,7 @@
 layout: default
 title: Query Syntax
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Hintergrund

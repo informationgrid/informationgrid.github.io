@@ -2,6 +2,7 @@
 layout: default
 title: Lizensierung
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
+sitemap: false
 ---
 
 ## Lizenz
