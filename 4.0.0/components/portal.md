@@ -409,6 +409,23 @@ Unter `ingrid-portal-apps.properties` kann die Eigenschaft `portal.rss.news.numb
 
 Ist diese Eigenschaft nicht gesetzt, so wird die definierte Anzahl (Preference `noOfEntriesDisplayed`) in der `portlet.xml` verwendet.
 
+### Wie kann das Caching der Suchergebnisse beeinflusst werden?
+
+Unter `ingrid-portal-apps.properties` kann die Eigenschaft `portal.enable.caching` verwendet werden. Diese definiert, ob der Cache verwendet (true) werden soll oder nicht (false). Das Abschalten des Caches kann zu Performanceeinbußen führen und wird nicht empfohlen.
+
+Per default werden die Suchergebnisse für 5 min im Cache vorgehalten. Diese Zeit lässt sich durch die Änderung im File `ingrid-portal-apps\WEB-INF\classes\ehcache.xml` anpassen. So wird z.B. die Zeit für das Caching der Anfragen an den iBus auf 5 sec reduziert.
+
+{% highlight xml %}
+<cache name="ingrid-cache"
+        maxElementsInMemory="5000"
+        eternal="false"
+        timeToIdleSeconds="3"
+        timeToLiveSeconds="5"
+        overflowToDisk="true"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="300"
+/>
+{% endhighlight %}
 
 ### Wie oft werden RSS Feeds aktualisiert?
 
