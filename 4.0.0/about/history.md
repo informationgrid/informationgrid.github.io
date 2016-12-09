@@ -4,6 +4,32 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.5
+
+Release: 09.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] Adressen aus ISO Import/CSW-T Import sollen immer als "Freie Adressen" angelegt werden. ([REDMINE-494](https://dev.informationgrid.eu/redmine/issues/494))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.5/))
+
+## Version 3.6.2.4
+
+Release: 06.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] IGE: Probleme beim Connection Pooling der Datenbank ([REDMINE-475](https://dev.informationgrid.eu/redmine/issues/475))
+- [Bug] [iPlug IGE] IPLUG_IGE: Open Data Kategorien und Umweltthemen werden nicht korrekt importiert. ([REDMINE-502](https://dev.informationgrid.eu/redmine/issues/502))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.4/))
+
+
 ## Version 3.6.2.3
 
 Release: 17.10.2016
