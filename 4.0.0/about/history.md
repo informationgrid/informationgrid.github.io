@@ -4,8 +4,22 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.3
+
+Release: 17.10.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] IPLUG-SE: Fehler beim Löschen einer Instanz ([REDMINE-495](https://dev.informationgrid.eu/redmine/issues/495))
+- [Bug] [System] Cygwin: Verwendung von mounts führen zu doppelten Pfaden ([REDMINE-465](https://dev.informationgrid.eu/redmine/issues/465))
+- [Bug] [iPlug IGE] IGE: CSW-T Löschanfrage über OrigId entfernt nicht aus Index ([REDMINE-460](https://dev.informationgrid.eu/redmine/issues/460))
+- [Bug] [iPlug DSC] Datum wird über die CSW Schnittstelle falsch abgegeben und im Portal falsch angezeigt ([REDMINE-439](https://dev.informationgrid.eu/redmine/issues/439))
+- [Bug] [iPlug SE] iPlug-SE: Art der Datenquelle wird nicht gespeichert ([REDMINE-394](https://dev.informationgrid.eu/redmine/issues/394))
+
+
 ## Version 4.0.0
 
+Release: 29.08.2016
 
 ### Änderungen
 
@@ -73,7 +87,10 @@ Im InGrid Editor wurde ein neues Feld "Servicezeiten" bei der Adress Eingabe ein
 - Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.0/))
 
 
+
 ## Version 3.6.2.2
+
+Release: 08.07.2016
 
 ### Änderungen
 
