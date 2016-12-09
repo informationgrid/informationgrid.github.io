@@ -49,6 +49,19 @@ Release: 17.10.2016
 - iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.2.3/))
 
 
+## Version 4.0.0.1
+
+Release: 19.09.2016
+
+### Änderungen
+
+- [Bug] [iPlug CSW] CSW iPlug kann keine ISO Datensätze mit gmd:series Element verarbeiten ([REDMINE-440](https://dev.informationgrid.eu/redmine/issues/440))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.5/))
+
+
 ## Version 4.0.0
 
 Release: 29.08.2016
