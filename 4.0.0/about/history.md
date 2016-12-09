@@ -16,6 +16,12 @@ Release: 17.10.2016
 - [Bug] [iPlug DSC] Datum wird über die CSW Schnittstelle falsch abgegeben und im Portal falsch angezeigt ([REDMINE-439](https://dev.informationgrid.eu/redmine/issues/439))
 - [Bug] [iPlug SE] iPlug-SE: Art der Datenquelle wird nicht gespeichert ([REDMINE-394](https://dev.informationgrid.eu/redmine/issues/394))
 
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.3/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.2.3/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.2.3/))
+
 
 ## Version 4.0.0
 
