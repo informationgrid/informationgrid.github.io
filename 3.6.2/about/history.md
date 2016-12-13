@@ -4,6 +4,64 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.6
+
+Release: 13.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] iPlug IGE: Installer kann "update" nicht ausführen ([REDMINE-506](https://dev.informationgrid.eu/redmine/issues/506))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.6/))
+
+
+
+## Version 3.6.2.5
+
+Release: 09.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] Adressen aus ISO Import/CSW-T Import sollen immer als "Freie Adressen" angelegt werden. ([REDMINE-494](https://dev.informationgrid.eu/redmine/issues/494))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.5/))
+
+## Version 3.6.2.4
+
+Release: 06.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] IGE: Probleme beim Connection Pooling der Datenbank ([REDMINE-475](https://dev.informationgrid.eu/redmine/issues/475))
+- [Bug] [iPlug IGE] IPLUG_IGE: Open Data Kategorien und Umweltthemen werden nicht korrekt importiert. ([REDMINE-502](https://dev.informationgrid.eu/redmine/issues/502))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.4/))
+
+
+## Version 3.6.2.3
+
+Release: 17.10.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] IPLUG-SE: Fehler beim Löschen einer Instanz ([REDMINE-495](https://dev.informationgrid.eu/redmine/issues/495))
+- [Bug] [System] Cygwin: Verwendung von mounts führen zu doppelten Pfaden ([REDMINE-465](https://dev.informationgrid.eu/redmine/issues/465))
+- [Bug] [iPlug IGE] IGE: CSW-T Löschanfrage über OrigId entfernt nicht aus Index ([REDMINE-460](https://dev.informationgrid.eu/redmine/issues/460))
+- [Bug] [iPlug DSC] Datum wird über die CSW Schnittstelle falsch abgegeben und im Portal falsch angezeigt ([REDMINE-439](https://dev.informationgrid.eu/redmine/issues/439))
+- [Bug] [iPlug SE] iPlug-SE: Art der Datenquelle wird nicht gespeichert ([REDMINE-394](https://dev.informationgrid.eu/redmine/issues/394))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.3/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.2.3/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.2.3/))
+
 ## Version 3.6.2.1
 
 ### Komponenten
