@@ -4,6 +4,20 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.6
+
+Release: 13.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] iPlug IGE: Installer kann "update" nicht ausführen ([REDMINE-506](https://dev.informationgrid.eu/redmine/issues/506))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.6/))
+
+
+
 ## Version 3.6.2.5
 
 Release: 09.12.2016
