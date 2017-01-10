@@ -4,6 +4,20 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.7
+
+Release: 10.01.2017
+
+### Änderungen
+
+- [Bug] [Interface-CSW] Cygwin: Verwendung von mounts führen zu doppelten Pfaden ([REDMINE-516](https://dev.informationgrid.eu/redmine/issues/516))
+- [Bug] [Interface-CSW] Capabilities um CSW-T Transaction erweitert ([REDMINE-113](https://dev.informationgrid.eu/redmine/issues/113))
+
+### Komponenten
+
+- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.7/))
+
+
 ## Version 3.6.2.6
 
 Release: 13.12.2016
