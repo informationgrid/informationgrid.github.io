@@ -4,6 +4,19 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.8
+
+Release: 12.01.2017
+
+### Änderungen
+
+- [Bug] [Portal] Portal: Das Anzeigen von Freien Adressen in der Detailansicht schlägt fehl ([REDMINE-518](https://dev.informationgrid.eu/redmine/issues/518))
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2.8/))
+
 ## Version 3.6.2.7
 
 Release: 10.01.2017
