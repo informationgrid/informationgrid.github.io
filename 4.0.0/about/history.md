@@ -4,10 +4,24 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.0.1.1
+
+Release: 02.02.2017
+
+### Änderungen
+
+- [Bug] [iPlug IGE] IGE: Datum wird falsch nach ISO abgebildet ([REDMINE-534](https://dev.informationgrid.eu/redmine/issues/534))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.1.1/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.0.1.1/))
+
+
 
 ## Version 4.0.1
 
-Release: 01.02.2016
+Release: 01.02.2017
 
 ### Änderungen
 
