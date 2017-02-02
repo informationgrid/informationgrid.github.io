@@ -59,6 +59,19 @@ Release: 10.01.2017
 - Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.7/))
 
 
+## Version 4.0.0.2
+
+Release: 28.12.2016
+
+### Änderungen
+
+- [Bug] [iPlug IGE] iPlug IGE: Installer kann "update" nicht ausführen ([REDMINE-511](https://dev.informationgrid.eu/redmine/issues/511))
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.0.2/))
+
+
 ## Version 3.6.2.6
 
 Release: 13.12.2016
