@@ -11,9 +11,12 @@ Release: 01.02.2016
 
 ### Änderungen
 
+
+- [Feature] [IGE] IGE: Feld "Veröffentlichung" für Objekte und Adressen einheitlich in den Index abbilden, damit Einschränkung im iPlug möglich	([REDMINE-515](https://dev.informationgrid.eu/redmine/issues/515))
 - [Feature] [IGE] IGE: Make EMail Settings configurable via override.properties	([REDMINE-509](https://dev.informationgrid.eu/redmine/issues/509))
 - [Feature] [IGE] IGE: Neues Qualitätselement (DQ_GriddedDataPositionalAccuracy) Rasterpositionsgenauigkeit	([REDMINE-378](https://dev.informationgrid.eu/redmine/issues/378))
 - [Feature] [IGE] IGE: Graphische Darstellung/Dateibeschreibung 	([REDMINE-377](https://dev.informationgrid.eu/redmine/issues/377))
+- [Feature] [IGE] GetCapabilities-Assistent: von WFS keine räumliche Ausdehnung (BBox) übernommen	([REDMINE-371](https://dev.informationgrid.eu/redmine/issues/371))
 - [Feature] [IGE] IGE: serviceTypeVersion nach GDI-DE-Konvention befüllen	([REDMINE-335](https://dev.informationgrid.eu/redmine/issues/335))
 - [Feature] [IGE] GetCapabilities-Assistent soll weitere Raumbezugssysteme / Koordinatenreferenzsysteme (CRS) erkennen	([REDMINE-331](https://dev.informationgrid.eu/redmine/issues/331))
 - [Feature] [IGE] IGE: Dojo Aktualisierung auf 1.10.5 bzw. 1.12.1	([REDMINE-217](https://dev.informationgrid.eu/redmine/issues/217))
@@ -39,8 +42,11 @@ Release: 01.02.2016
 - [Bug] [IGE] IGE: Baum/Teilbaum neu laden funktioniert nur für direkte Unterknoten	([REDMINE-416](https://dev.informationgrid.eu/redmine/issues/416))
 - [Bug] [IGE] GetCapabilities-Assistent: von WFS kein Raumbezugssystem übernommen	([REDMINE-370](https://dev.informationgrid.eu/redmine/issues/370))
 - [Bug] [IGE] IGE: Neues Objekt anlegen mit getCapabilities Assistent versorgt nicht das Feld für die useConstraints	([REDMINE-273](https://dev.informationgrid.eu/redmine/issues/273))
+- [Bug] [IPlug IGE] CSW-T: Löschen eines Datensatzes schlägt fehl	([REDMINE-526](https://dev.informationgrid.eu/redmine/issues/526))
+- [Bug] [IPlug IGE] CSW-T Delete Request reagiert auf falsches Property	([REDMINE-524](https://dev.informationgrid.eu/redmine/issues/524))
 - [Bug] [IPlug IGE] Fehlende Option zum Zurücksetzen des Administrations-Passworts in iPlug IGE	([REDMINE-445](https://dev.informationgrid.eu/redmine/issues/445))
 - [Bug] [IPlug IGE] IGE iPlug zeigt falsche Version in iBus Admin GUI	([REDMINE-434](https://dev.informationgrid.eu/redmine/issues/434))
+- [Bug] [PORTAL] Portal: Das Anzeigen von Freien Adressen in der Detailansicht schlägt fehl	([REDMINE-518](https://dev.informationgrid.eu/redmine/issues/518))
 - [Bug] [PORTAL] Portal: Im Footer steht noch Niedersächsisches Ministerium ...	([REDMINE-517](https://dev.informationgrid.eu/redmine/issues/517))
 - [Bug] [PORTAL] Portal: Hauptmenü lässt sich nicht mehr schließen	([REDMINE-505](https://dev.informationgrid.eu/redmine/issues/505))
 - [Bug] [PORTAL] Portal: Parameter ?elementSetName=full? wird zweimal übergeben.	([REDMINE-504](https://dev.informationgrid.eu/redmine/issues/504))
