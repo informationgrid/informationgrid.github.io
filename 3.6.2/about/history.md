@@ -4,6 +4,20 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 3.6.2.10
+
+Release: 02.02.2017
+
+### Änderungen
+
+- [Bug] [iPlug IGE] CSW-T: Löschen eines Datensatzes schlägt u.U. fehl  ([REDMINE-526](https://dev.informationgrid.eu/redmine/issues/526))
+
+
+### Komponenten
+
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.10/))
+
+
 ## Version 3.6.2.9
 
 Release: 17.01.2017
