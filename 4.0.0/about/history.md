@@ -4,59 +4,85 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-## Version 3.6.2.10
 
-Release: 02.02.2017
+## Version 4.0.1
 
-### Änderungen
-
-- [Bug] [iPlug IGE] CSW-T: Löschen eines Datensatzes schlägt u.U. fehl  ([REDMINE-526](https://dev.informationgrid.eu/redmine/issues/526))
-
-
-### Komponenten
-
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.10/))
-
-
-## Version 3.6.2.9
-
-Release: 17.01.2017
+Release: 01.02.2016
 
 ### Änderungen
 
-- [Feature] [iPlug IGE] IGE: Feld "Veröffentlichung" für Objekte und Adressen einheitlich in den Index abbilden, damit Einschränkung im iPlug möglich ([REDMINE-515](https://dev.informationgrid.eu/redmine/issues/515))
-- [Bug] [iPlug IGE] CSW-T Delete Request reagiert auf falsches Property ([REDMINE-524](https://dev.informationgrid.eu/redmine/issues/524))
-
+- [Feature] [IGE] IGE: Make EMail Settings configurable via override.properties	([REDMINE-509](https://dev.informationgrid.eu/redmine/issues/509))
+- [Feature] [IGE] IGE: Neues Qualitätselement (DQ_GriddedDataPositionalAccuracy) Rasterpositionsgenauigkeit	([REDMINE-378](https://dev.informationgrid.eu/redmine/issues/378))
+- [Feature] [IGE] IGE: Graphische Darstellung/Dateibeschreibung 	([REDMINE-377](https://dev.informationgrid.eu/redmine/issues/377))
+- [Feature] [IGE] IGE: serviceTypeVersion nach GDI-DE-Konvention befüllen	([REDMINE-335](https://dev.informationgrid.eu/redmine/issues/335))
+- [Feature] [IGE] GetCapabilities-Assistent soll weitere Raumbezugssysteme / Koordinatenreferenzsysteme (CRS) erkennen	([REDMINE-331](https://dev.informationgrid.eu/redmine/issues/331))
+- [Feature] [IGE] IGE: Dojo Aktualisierung auf 1.10.5 bzw. 1.12.1	([REDMINE-217](https://dev.informationgrid.eu/redmine/issues/217))
+- [Feature] [IGE] IGE: Abbildung von Konformität/Spezifikationen auf ISO XML	([REDMINE-200](https://dev.informationgrid.eu/redmine/issues/200))
+- [Feature] [IGE] IGE: Feld "Kodierungsschema" muss "optional" werden	([REDMINE-196](https://dev.informationgrid.eu/redmine/issues/196))
+- [Feature] [IGE] IGE Die ORIG_UUID soll in der Erfassungsmaske angezeigt werden	([REDMINE-157](https://dev.informationgrid.eu/redmine/issues/157))
+- [Feature] [IGE] IGE: Optionale Funktion für die Benachrichtigung bzgl. Überarbeitung von Objekten und Adressen	([REDMINE-107](https://dev.informationgrid.eu/redmine/issues/107))
+- [Feature] [IGE] IGE: Unterstützung von Codelisten in zusätzlichen Feldern	([REDMINE-476](https://dev.informationgrid.eu/redmine/issues/476))
+- [Feature] [PORTAL] Portal: Katalogbrowser zeigt nichts an, wenn keine Objekte veröffentlicht sind (ignoriert Adressen)	([REDMINE-519](https://dev.informationgrid.eu/redmine/issues/519))
+- [Feature] [PORTAL] Erstellung Portal Profil 'PortalU Saarland'	([REDMINE-452](https://dev.informationgrid.eu/redmine/issues/452))
+- [Feature] [IPlug IGE] IPLUG_IGE: Katalogspezifische Korrektur des Ressourcenidentifier um vorangestelltes Anbieterkürzel	([REDMINE-508](https://dev.informationgrid.eu/redmine/issues/508))
+- [Feature] [INTERFACE-CSW] Erweiterung des ISO Import Prozesses im IGE iPlug bzgl. Abbildung von ISO Strukturen auf zusätzliche Felder	([REDMINE-456](https://dev.informationgrid.eu/redmine/issues/456))
+- [Bug] [IGE] IGE: Keine Fehlerausgabe, bei ungültiger Thesaurus URL	([REDMINE-532](https://dev.informationgrid.eu/redmine/issues/532))
+- [Bug] [IGE] IGE: Unterbaum kann nicht direkt unter Objektknoten verschoben werden	([REDMINE-530](https://dev.informationgrid.eu/redmine/issues/530))
+- [Bug] [IGE] iPlug IGE: CSW-T Import Änderungen verhindern Erzeugung von Top Objekten/Adressen via normalem InGrid/CSW Import im IGE	([REDMINE-529](https://dev.informationgrid.eu/redmine/issues/529))
+- [Bug] [IGE] Zusätzliche Felder bekommen kein "Bearbeitet"-Flag ([REDMINE-521](https://dev.informationgrid.eu/redmine/issues/521))
+- [Bug] [IGE] IGE: Kopieren/Einfügen von Objekten erfolgt unter falschem Knoten	([REDMINE-507](https://dev.informationgrid.eu/redmine/issues/507))
+- [Bug] [IGE] IGE: Das Einfügen von Adressen im Root Adressknoten funktioniert nicht mehr	([REDMINE-466](https://dev.informationgrid.eu/redmine/issues/466))
+- [Bug] [IGE] Fehlendes Feld "Vorschaugrafik" in Katalogmanagement -> Zusätzliche Felder	([REDMINE-459](https://dev.informationgrid.eu/redmine/issues/459))
+- [Bug] [IGE] IGE: Geothesaurus liefert keine Ergebnisse	([REDMINE-457](https://dev.informationgrid.eu/redmine/issues/457))
+- [Bug] [IGE] IGE: Javascript Fehler beim Validieren von Raumbezug-Höhe	([REDMINE-422](https://dev.informationgrid.eu/redmine/issues/422))
+- [Bug] [IGE] IGE: Paralleler Login in IGE via Portal-Admin führt zu Problemen.	([REDMINE-417](https://dev.informationgrid.eu/redmine/issues/417))
+- [Bug] [IGE] IGE: Baum/Teilbaum neu laden funktioniert nur für direkte Unterknoten	([REDMINE-416](https://dev.informationgrid.eu/redmine/issues/416))
+- [Bug] [IGE] GetCapabilities-Assistent: von WFS kein Raumbezugssystem übernommen	([REDMINE-370](https://dev.informationgrid.eu/redmine/issues/370))
+- [Bug] [IGE] IGE: Neues Objekt anlegen mit getCapabilities Assistent versorgt nicht das Feld für die useConstraints	([REDMINE-273](https://dev.informationgrid.eu/redmine/issues/273))
+- [Bug] [IPlug IGE] Fehlende Option zum Zurücksetzen des Administrations-Passworts in iPlug IGE	([REDMINE-445](https://dev.informationgrid.eu/redmine/issues/445))
+- [Bug] [IPlug IGE] IGE iPlug zeigt falsche Version in iBus Admin GUI	([REDMINE-434](https://dev.informationgrid.eu/redmine/issues/434))
+- [Bug] [PORTAL] Portal: Im Footer steht noch Niedersächsisches Ministerium ...	([REDMINE-517](https://dev.informationgrid.eu/redmine/issues/517))
+- [Bug] [PORTAL] Portal: Hauptmenü lässt sich nicht mehr schließen	([REDMINE-505](https://dev.informationgrid.eu/redmine/issues/505))
+- [Bug] [PORTAL] Portal: Parameter ?elementSetName=full? wird zweimal übergeben.	([REDMINE-504](https://dev.informationgrid.eu/redmine/issues/504))
+- [Bug] [PORTAL] Benutzer löschen im IE funktioniert nicht	([REDMINE-496](https://dev.informationgrid.eu/redmine/issues/496))
+- [Bug] [PORTAL] Adressen-Fehler in der Portal-Detaildarstellung	([REDMINE-479](https://dev.informationgrid.eu/redmine/issues/479))
+- [Bug] [PORTAL] Fehler bei der Darstellung von Zusatzfeldern in der Portal-Detaildarstellung	([REDMINE-447](https://dev.informationgrid.eu/redmine/issues/447))
+- [Bug] [PORTAL] Lange Ladezeiten einer Portal-Detaildarstellung	([REDMINE-446](https://dev.informationgrid.eu/redmine/issues/446))
+- [Bug] [PORTAL] "Ähnliche Begriffe" funktionieren nicht zuverlässig	([REDMINE-427](https://dev.informationgrid.eu/redmine/issues/427))
+- [Bug] [PORTAL] Chronik-Seite anpassen	([REDMINE-425](https://dev.informationgrid.eu/redmine/issues/425))
+- [Bug] [PORTAL] Portal: Fehler in Anmeldung, wenn in Feld nichts eingegeben wurde	([REDMINE-418](https://dev.informationgrid.eu/redmine/issues/418))
+- [Bug] [MAPCLIENT] CSV-Export für den BWaStrLocator funktioniert nicht unter IE	([REDMINE-477](https://dev.informationgrid.eu/redmine/issues/477))
+- [Bug] [MAPCLIENT] Dienst hinzufügen aus der Suche funktioniert nicht	([REDMINE-472](https://dev.informationgrid.eu/redmine/issues/472))
+- [Bug] [MAPCLIENT] Zoom auf Layer in der Suche funktioniert nicht	([REDMINE-471](https://dev.informationgrid.eu/redmine/issues/471))
+- [Bug] [MAPCLIENT] Prüfung auf Host 'wms-geo' entfernen	([REDMINE-450](https://dev.informationgrid.eu/redmine/issues/450))
+- [Bug] [MAPCLIENT] Tooltip werden unabhängig von der Konfiguration des Layers angezeigt	([REDMINE-449](https://dev.informationgrid.eu/redmine/issues/449))
+- [Bug] [MAPCLIENT] Druck-Funktion erzeugt GetMap-URL mit Parameter 'Exceptions'	([REDMINE-448](https://dev.informationgrid.eu/redmine/issues/448))
+- [Bug] [MAPCLIENT] Kartenviewer: "Schliessen" überdeckt den Menüpunkt "Mehr" im Zeichnen & Messen-Dialog	([REDMINE-428](https://dev.informationgrid.eu/redmine/issues/428))
+- [Bug] [INTERFACE-SEARCH] Opensearch: Falsche Generierung des Detaillinks	([REDMINE-468](https://dev.informationgrid.eu/redmine/issues/468))
+- [Bug] [IPlug CSW] CSW Service URL wird in Admin GUI nicht übernommen	([REDMINE-464](https://dev.informationgrid.eu/redmine/issues/464))
+- [Bug] [CODELIST] REPOSITORY	CODELIST-REPO: INSPIRE Thema falsch	([REDMINE-442](https://dev.informationgrid.eu/redmine/issues/442))
+- [Bug] [SYSTEM] Cygwin: Verwendung von mounts führen zu doppelten Pfaden	([REDMINE-465](https://dev.informationgrid.eu/redmine/issues/465))
 
 ### Komponenten
 
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.9/))
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/4.0.1/))
+- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/4.0.1/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.1/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.0.1/))
+- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.0.1/))
+- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/4.0.1/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.0.1/))
+- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.0.1/))
+- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.1/))
+- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/4.0.1/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.0.1/))
+- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.0.1/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.1/))
+- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.0.1/))
+- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/4.0.1/))
 
-## Version 3.6.2.8
-
-Release: 12.01.2017
-
-### Änderungen
-
-- [Bug] [Portal] Portal: Das Anzeigen von Freien Adressen in der Detailansicht schlägt fehl ([REDMINE-518](https://dev.informationgrid.eu/redmine/issues/518))
-
-
-### Komponenten
-
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2.8/))
-
-## Version 3.6.2.7
-
-Release: 10.01.2017
-
-### Änderungen
-
-- [Bug] [Interface-CSW] Cygwin: Verwendung von mounts führen zu doppelten Pfaden ([REDMINE-516](https://dev.informationgrid.eu/redmine/issues/516))
-- [Bug] [Interface-CSW] Capabilities um CSW-T Transaction erweitert ([REDMINE-113](https://dev.informationgrid.eu/redmine/issues/113))
-
-### Komponenten
-
-- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.7/))
 
 
 ## Version 4.0.0.2
@@ -70,65 +96,6 @@ Release: 28.12.2016
 ### Komponenten
 
 - iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.0.2/))
-
-
-## Version 3.6.2.6
-
-Release: 13.12.2016
-
-### Änderungen
-
-- [Bug] [iPlug IGE] iPlug IGE: Installer kann "update" nicht ausführen ([REDMINE-506](https://dev.informationgrid.eu/redmine/issues/506))
-
-### Komponenten
-
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.6/))
-
-
-
-## Version 3.6.2.5
-
-Release: 09.12.2016
-
-### Änderungen
-
-- [Bug] [iPlug IGE] Adressen aus ISO Import/CSW-T Import sollen immer als "Freie Adressen" angelegt werden. ([REDMINE-494](https://dev.informationgrid.eu/redmine/issues/494))
-
-### Komponenten
-
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.5/))
-
-## Version 3.6.2.4
-
-Release: 06.12.2016
-
-### Änderungen
-
-- [Bug] [iPlug IGE] IGE: Probleme beim Connection Pooling der Datenbank ([REDMINE-475](https://dev.informationgrid.eu/redmine/issues/475))
-- [Bug] [iPlug IGE] IPLUG_IGE: Open Data Kategorien und Umweltthemen werden nicht korrekt importiert. ([REDMINE-502](https://dev.informationgrid.eu/redmine/issues/502))
-
-### Komponenten
-
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.4/))
-
-
-## Version 3.6.2.3
-
-Release: 17.10.2016
-
-### Änderungen
-
-- [Bug] [iPlug IGE] IPLUG-SE: Fehler beim Löschen einer Instanz ([REDMINE-495](https://dev.informationgrid.eu/redmine/issues/495))
-- [Bug] [System] Cygwin: Verwendung von mounts führen zu doppelten Pfaden ([REDMINE-465](https://dev.informationgrid.eu/redmine/issues/465))
-- [Bug] [iPlug IGE] IGE: CSW-T Löschanfrage über OrigId entfernt nicht aus Index ([REDMINE-460](https://dev.informationgrid.eu/redmine/issues/460))
-- [Bug] [iPlug DSC] Datum wird über die CSW Schnittstelle falsch abgegeben und im Portal falsch angezeigt ([REDMINE-439](https://dev.informationgrid.eu/redmine/issues/439))
-- [Bug] [iPlug SE] iPlug-SE: Art der Datenquelle wird nicht gespeichert ([REDMINE-394](https://dev.informationgrid.eu/redmine/issues/394))
-
-### Komponenten
-
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.3/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.2.3/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.2.3/))
 
 
 ## Version 4.0.0.1
