@@ -28,8 +28,6 @@ vorgenommen wird. Eine Dokumentation finden Sie hier:
 
 [https://github.com/informationgrid/ingrid-webmap-client/tree/master/src/main/webapp/frontend/src](https://github.com/informationgrid/ingrid-webmap-client/tree/master/src/main/webapp/frontend/src)
 
-Wichtige Parameter sind z.B. defaultExtent, languages.
-
 Die Konfiguration der Layer und Karten erfolgt hier:
 
 [https://github.com/informationgrid/ingrid-webmap-client/tree/master/src/main/webapp/frontend/data](https://github.com/informationgrid/ingrid-webmap-client/tree/master/src/main/webapp/frontend/data)
