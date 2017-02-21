@@ -21,7 +21,8 @@ Der Name "InGrid" entstand aus dem englischen "information grid" und trägt dem 
 Die wichtigsten Komponenten von InGrid sind:
 
 - eine nutzerfreundliche, personalisierbare und flexibel konfigurierbare Portaloberfläche,
-- der ISO19115/19119-, INSPIRE- und GDI-DE-konforme, web-basierte Datenkatalog "InGridEditor",
+- der ISO19115/19119-, INSPIRE- (Richtlinie 2007/2/EG) und GDI-DE-konforme, web-basierte Datenkatalog "InGridEditor",
+- Ein Katalogsystem zur zentralen Dokumentation von Umweltverträglichkeitsprüfungen gemäß der Anforderungen der UVP-Änderungsrichtlinie 2014/52/EU vom 16.04.2014
 - eine auf [OpenLayers](http://openlayers.org/) basierende Visualisierungskomponente für OGC-konforme Kartendienste ([OGC WMS](http://www.opengeospatial.org/standards/wms)),
 - Diverse An- und Abfrageschnittstellen zur Recherche in angeschlossenen Systemen bzw. für den Transfer von Informationen, z.B. eine OGC-, INSPIRE- und GDI-DE-konforme Katalogschnittstelle ([OGC CSW](http://www.opengeospatial.org/standards/cat)) sowie eine [OpenSearch](http://www.opensearch.org/Home)-Schnittstelle. Die CSW-Schnittstellen erlaubt es zum Beispiel, Metadaten aus einem InGridCatalog an Portale wie das [Geoportal Deutschland](http://www.geoportal.de/DE/Geoportal), das [GovData-Datenportal für Deutschland](https://www.govdata.de/) oder das [INSPIRE-Geoportal](http://inspire-geoportal.ec.europa.eu/) abzugeben.
 
