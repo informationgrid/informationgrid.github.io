@@ -4,9 +4,9 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-## Version 4.0.1
+## Version 4.0.2
 
-Release: 01.02.2017
+Release: 11.04.2017
 
 ### Änderungen
 - [Feature] [IGE] IGE: Dynamischer Erstellungsdialog für Objekte ([REDMINE-543](https://dev.informationgrid.eu/redmine/issues/543))
