@@ -4,6 +4,54 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.0.1
+
+Release: 01.02.2017
+
+### Änderungen
+- [Feature] [IGE] IGE: Dynamischer Erstellungsdialog für Objekte ([REDMINE-543](https://dev.informationgrid.eu/redmine/issues/543))
+- [Feature] [Interface Search] Alternatives Aufrufen des ATOM Feed Clients über HTTP und HTTPS ([REDMINE-550](https://dev.informationgrid.eu/redmine/issues/550))
+- [Feature] [Mapclient] Mapclient: Druckfunktion mit Koordinatennetz ([REDMINE-587](https://dev.informationgrid.eu/redmine/issues/587))
+- [Feature] [Mapclient] Mapclient: Ausblenden des Rubriken-Bereiches im Menü ([REDMINE-599](https://dev.informationgrid.eu/redmine/issues/599))
+
+- [Bug] [IGE] IGE: Dubletten-Seite zeigt Adressen an ([REDMINE-548](https://dev.informationgrid.eu/redmine/issues/548))
+- [Bug] [IGE] IGE: Änderung des Namens eines freien Raumbezugs führt zu Fehler beim Speichern, da Koordinaten entfernt werden. ([REDMINE-555](https://dev.informationgrid.eu/redmine/issues/555))
+- [Bug] [IGE] IGE: Markierung beim Ausschneiden wird nicht zurückgesetzt ([REDMINE-570](https://dev.informationgrid.eu/redmine/issues/570))
+- [Bug] [IGE] IGE: Initiales Laden von Objekten schlägt manchmal fehl ([REDMINE-614](https://dev.informationgrid.eu/redmine/issues/614))
+- [Bug] [Portal] Anzeige von Datumsangaben, Zeit ausblenden ([REDMINE-567](https://dev.informationgrid.eu/redmine/issues/567))
+- [Bug] [Portal] XML Button wird nicht angezeigt ([REDMINE-572](https://dev.informationgrid.eu/redmine/issues/572))
+- [Bug] [Portal] Portal: In der Detaildarstellung soll Portal-Header angezeigt werden ([REDMINE-588](https://dev.informationgrid.eu/redmine/issues/588)) 
+- [Bug] [Portal] Portal: Löschen von Verzeichnisse/Dateien bei Portal-Aktualisierung ([REDMINE-589](https://dev.informationgrid.eu/redmine/issues/589))
+- [Bug] [Portal] Portal: Trennung von Impressum und Datenschutz ([REDMINE-628](https://dev.informationgrid.eu/redmine/issues/628))
+- [Bug] [Portal] Portal: Detailsuche liefert keine Liste eines Feldes ([REDMINE-616](https://dev.informationgrid.eu/redmine/issues/616))
+- [Bug] [Mapclient] Mapclient: Embed-Version funktioniert nicht ([REDMINE-585](https://dev.informationgrid.eu/redmine/issues/585))
+- [Bug] [Mapclient] Mapclient: Funktion "Einbetten" wird nicht immer angezeigt. ([REDMINE-586](https://dev.informationgrid.eu/redmine/issues/586))
+- [Bug] [Mapclient] MapClient: Fehler in der Suche mit Umlaute ([REDMINE-612](https://dev.informationgrid.eu/redmine/issues/612))
+- [Bug] [Mapclient] MapClient: Default EPSG kann nicht geändert werden ([REDMINE-613](https://dev.informationgrid.eu/redmine/issues/613))
+- [Bug] [Mapclient] MapClient: GetFeature-Abfrage entfernt die Karten ([REDMINE-619](https://dev.informationgrid.eu/redmine/issues/619))
+- [Bug] [iPlug SNS]SNS: Fehler wenn Event keiner Kategorie zugeordnet ist ([REDMINE-617](https://dev.informationgrid.eu/redmine/issues/617))
+- [Bug] [iPlug IGE] iPlug IGE: DateTime Angaben im ISO werden falsch angegeben ([REDMINE-574](https://dev.informationgrid.eu/redmine/issues/574))
+- [Bug] [iPlug SE] iPlug SE: Crawl Status kann nicht gelöscht werden, Crawl kann nicht manuell gestartet werden. ([REDMINE-569](https://dev.informationgrid.eu/redmine/issues/569))
+- [Bug] [Interface CSW] CSW-T: Import von Daten verhält sich nicht erwartungsgemäß, wenn UUIDs aus dem Import im Katalog als UUID aber nicht als ORIG_UUID vorhanden sind ([REDMINE-536](https://dev.informationgrid.eu/redmine/issues/536))
+- [Bug] [Interface CSW] CSW-T: Objekt mit Referenz auf einen IGE Benutzer kann nicht gespeichert werden ([REDMINE-535](https://dev.informationgrid.eu/redmine/issues/535))
+- [Bug] [Interface CSW] CSW-T Delete/Update Request reagiert auf falsches Property ([REDMINE-524](https://dev.informationgrid.eu/redmine/issues/524))
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.2/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/4.0.2/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.2/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.0.2/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.0.2/))
+- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.0.2/))
+- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.2/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.0.2/))
+- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.0.2/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.2/))
+- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.0.2/))
+
+
 ## Version 4.0.1.1
 
 Release: 02.02.2017
