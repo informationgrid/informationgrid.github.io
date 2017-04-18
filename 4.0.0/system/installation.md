@@ -32,7 +32,7 @@ Genauere Informationen zur Installation der einzelnen Komponenten können bei de
 
 ### Welche Datenbank wird verwendet?
 
-InGrid unterstützt MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2). Der Einsatz von MySQL ist dabei vorzuziehen, da insbesondere die Installation vom Portal mit einer MySQL Datenbank einfacher funktioniert.
+InGrid unterstützt MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2). Der Einsatz von MySQL oder PostgreSQL ist dabei vorzuziehen, da hier der Installer die Datenbank initial erzeugen und initialisieren kann (Portal und IGE iPlug).
 
 Genauere Informationen können bei der Dokumentation der einzelnen Komponenten eingesehen werden.
 
