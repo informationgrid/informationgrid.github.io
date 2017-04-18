@@ -51,7 +51,7 @@ Bei einem Update wird die bestehende Installation auf den neuesten Stand gebrach
 
 Sowohl bei Neuinstallation als auch beim Update eines iPlugs wird die zugehörige InGrid Katalog-Datenbank automatisch mit erzeugt (wenn noch nicht vorhanden) bzw. aktualisiert !
 
-> **ORACLE:** Nur für Oracle muss die Katalog-Datenbank existieren, also separat angelegt werden, falls ein neuer Katalog erzeugt werden soll. Es reicht aus, die Datenbank zu erzeugen und das initiale Schema zu importieren (ingrid-igc-schema_102.sql).
+> **ORACLE:** Nur für Oracle muss die Katalog-Datenbank existieren, also separat angelegt werden, falls ein neuer Katalog erzeugt werden soll. Es reicht aus, die Datenbank zu erzeugen und das initiale Schema zu importieren (ingrid-igc-schema_102_oracle.sql).
 
 Für MySQL und PostgreSQL (ab InGrid 4.0.2) wird die Katalog-Datenbank automatisch erzeugt, wenn diese noch nicht vorhanden ist oder noch kein Katalog-Schema angelegt wurde (initiale Tabellen).
 
