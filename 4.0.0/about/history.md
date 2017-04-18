@@ -9,6 +9,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Release: 11.04.2017
 
 ### Änderungen
+- [Feature] [Portal,IGE] Portal,IGE: Unterstützung der PostgreSQL Datenbank ([REDMINE-438](https://dev.informationgrid.eu/redmine/issues/438))
 - [Feature] [IGE] IGE: Dynamischer Erstellungsdialog für Objekte ([REDMINE-543](https://dev.informationgrid.eu/redmine/issues/543))
 - [Feature] [Interface Search] Alternatives Aufrufen des ATOM Feed Clients über HTTP und HTTPS ([REDMINE-550](https://dev.informationgrid.eu/redmine/issues/550))
 - [Feature] [Mapclient] Mapclient: Druckfunktion mit Koordinatennetz ([REDMINE-587](https://dev.informationgrid.eu/redmine/issues/587))
