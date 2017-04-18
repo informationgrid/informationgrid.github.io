@@ -53,9 +53,9 @@ Sowohl bei Neuinstallation als auch beim Update eines iPlugs wird die zugehörig
 
 > **ORACLE:** Nur für Oracle muss die Katalog-Datenbank existieren, also separat angelegt werden, falls ein neuer Katalog erzeugt werden soll. Es reicht aus, die Datenbank zu erzeugen und das initiale Schema zu importieren (ingrid-igc-schema_102.sql).
 
-Für MySQL wird die Katalog-Datenbank automatisch erzeugt, wenn diese noch nicht vorhanden ist. Vorgabe für den Installer ist hier also immer entweder gar keine existierende Katalog-Datenbank oder eine existierende Katalog-Datenbank, die dann aber schon das Katalog-Schema beinhalten muss (z.B. initiale Tabellen importiert aus ingrid-igc-schema_102.sql).
+Für MySQL und PostgreSQL (ab InGrid 4.0.2) wird die Katalog-Datenbank automatisch erzeugt, wenn diese noch nicht vorhanden ist oder noch kein Katalog-Schema angelegt wurde (initiale Tabellen).
 
-> ACHTUNG: Da der Installer automatisch einen bestehenden Katalog migriert, sollte vor Aufruf des Installers ein BACKUP des bestehenden Katalogs erfolgen !!!
+> ACHTUNG: Beim Start des iPlugs wird der angegebene Katalog automatisch auf die aktuelle Version migriert ! Vor Start des iPlugs sollte ein BACKUP des bestehenden Katalogs erfolgen (am Besten vor Aufruf des Installers) !!!
 
 > Außerdem sollte die Ausgabe des Installers bzgl. der Katalog-Migration beachtet werden! Alle Ausgaben der Katalog-Migration finden sich im Verzeichnis des iPlugs in der Datei importer_TIMESTAMP_log.log
 
@@ -185,11 +185,33 @@ Beispielhaft könnte dies für MySQL wie folgt aussehen. Wichtig ist, dass der M
 
 {% highlight properties %}
 iplug.database.driver=com.mysql.jdbc.Driver
-iplug.database.url=jdbc:mysql://localhost/igc_database
+iplug.database.url=jdbc\:mysql\://localhost/igc_database
 iplug.database.username=root
-iplug.database.password=3895073
+iplug.database.password=my_pwd
 iplug.database.schema=
 iplug.database.dialect=org.hibernate.dialect.MySQLInnoDBDialect
+{% endhighlight %}
+
+Beispielhafte Konfiguration für Oracle:
+
+{% highlight properties %}
+iplug.database.driver=oracle.jdbc.OracleDriver
+iplug.database.url=jdbc\:oracle\:thin\:@192.168.0.237\:1521\:XE
+iplug.database.username=IGC_DATABASE
+iplug.database.password=MY_PWD
+iplug.database.schema=
+iplug.database.dialect=org.hibernate.dialect.OracleDialect
+{% endhighlight %}
+
+Beispielhafte Konfiguration für PostgreSQL (ab InGrid 4.0.2):
+
+{% highlight properties %}
+iplug.database.driver=org.postgresql.Driver
+iplug.database.url=jdbc\:postgresql\://localhost\:5432/igc_database
+iplug.database.username=postgres
+iplug.database.password=my_pwd
+iplug.database.schema=
+iplug.database.dialect=org.hibernate.dialect.PostgreSQLDialect
 {% endhighlight %}
 
 

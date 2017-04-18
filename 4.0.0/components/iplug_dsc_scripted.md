@@ -6,7 +6,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DSC Scripted verhält sich hier generisch, das heißt, dass Datenbanken mit beliebiger Datenstruktur angeschlossen werden können. Als Datenbank-Typen werden alle Datenbanken unterstützt, die über JDBC angesprochen werden können. Mit der Installation wird nur der JDBC Treiber für  MYSQL mitgeliefert. Andere Treiber müssen heruntergeladen werden und ins lib-Verzeichnis kopiert werden.
+Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DSC Scripted verhält sich hier generisch, das heißt, dass Datenbanken mit beliebiger Datenstruktur angeschlossen werden können. Als Datenbank-Typen werden alle Datenbanken unterstützt, die über JDBC angesprochen werden können. Mit der Installation werden nur die JDBC Treiber für MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2) mitgeliefert. Andere Treiber müssen heruntergeladen werden und ins lib-Verzeichnis kopiert werden.
 
 ![InGrid Komponente iPlug DSC](../images/ingrid_iplug_dsc.png "InGrid Komponente iPlug DSC")
 

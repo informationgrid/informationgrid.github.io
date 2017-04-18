@@ -53,7 +53,7 @@ Profile bestehen aus einer Sammlung von Dateien (Stylesheets, Templates, Bilder)
 
 - JAVA 1.6
 - Cygwin (unter Windows)
-- MySQL oder ORACLE
+- MySQL, ORACLE oder PostgreSQL (ab InGrid 4.0.2)
 
 ### Anmerkungen zu MySQL-Datenbanken
 
@@ -137,7 +137,7 @@ Hier wird nur auf die komplette Portal Installation eingegangen.
 
 #### 8.) Auswahl Datenbank, IGE Installation
 
-Welche Datenbank soll verwendet werden? Soll der IGE mit installiert werden?
+Welche Datenbank soll verwendet werden (ab InGrid 4.0.2 auch PostgreSQL)? Soll der IGE mit installiert werden?
 
 ![Portal Installer - Datenbank](../images/portal_installer_database.png "Portal Installer - Datenbank")
 

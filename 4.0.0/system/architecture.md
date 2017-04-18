@@ -99,5 +99,5 @@ Bei der Umsetzung von InGrid wurden als Basis ausschließlich Open-Source-Techno
 | Suchmaschine  | [Nutch (Apache Lizenz, ASF) &  Lucene (Apache Lizenz, ASF)](https://nutch.apache.org/) |
 | Kartenviewer  | [OpenLayers (BSD 2-Clause License)](http://openlayers.org/)  |
 | Indexierung von Datenbanken  | [Lucene (Apache Lizenz, ASF)](https://lucene.apache.org/) |
-| Unterstützte Datenbanken  | [MySQL](https://www.mysql.com/), [Oracle](http://www.oracle.com/) |
+| Unterstützte Datenbanken  | [MySQL](https://www.mysql.com/), [Oracle](http://www.oracle.com/), [PostgreSQL (ab InGrid 4.0.2)](https://www.postgresql.org/) |
 
