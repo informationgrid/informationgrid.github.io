@@ -56,7 +56,7 @@ Bei allen drei Netzwerken wird hierbei ein Link der Karte geteilt.
 
 **Link**
 
-Natürlich können Sie auch Ihre Karte per Copy-Paste kopieren. Hierfür existiert ein Bereich 'Link Teilen' mit einem Textfeld in dem die URL der aktuellen Karte hinterlegt ist. 
+Natürlich können Sie auch Ihre Karte per Copy-Paste kopieren. Hierfür existiert ein Bereich **Link Teilen** mit einem Textfeld in dem die URL der aktuellen Karte hinterlegt ist. 
 
 **Einbetten**
 
@@ -76,7 +76,62 @@ Zusätzlich können Sie dem PDF neben dem Kartenausschnitt einen Titel, eine Bes
 
 ### Zeichnen & Messen
 
+Unter dem Menüpunkt **Zeichnen & Messen** können Sie Ihre Kreativität freien laufen lassen, Anmerkungen setzen oder auch Strecken zu Ihrer Karte messen. Ihre Zeichnung können Sie anschließend auch als KML-Datei herunterladen, per Funktion Teilen verbreiten oder auch ausdrucken.
+
 ![Webmap Client - Zeichnen & Messen](../images/mapclient/mapclient_draw.png "Webmap Client Zeichnen & Messen")
+
+**Symbol**
+
+Sie möchten (vordefinierte) Symbole auf die Karte legen, so wählen Sie die Funktion **Symbol** und markieren auf der Karte die Stelle, wo Ihr Symbol platziert werden soll. 
+
+Anschließend erscheint das folgende Pop-Up:
+
+![Webmap Client - Zeichnen & Messen - Symbol](../images/mapclient/mapclient_draw_sym.png "Webmap Client Zeichnen & Messen - Symbol")
+
+Hier können Sie die Größe des Symbols, sowie das Symbol selbst ändern und auch dem Symbol eine Beschreibung vergeben.
+
+**Text**
+
+Sie möchten Ihre Karte mit Texten belegen, so wählen Sie die Funktion **Text** und markieren auf der Karte die Stelle, wo Ihr Text platziert werden soll. 
+
+Anschließend erscheint das folgende Pop-Up:
+
+![Webmap Client - Zeichnen & Messen - Text](../images/mapclient/mapclient_draw_txt.png "Webmap Client Zeichnen & Messen - Text")
+
+Hier können Sie Ihren Text eingeben, aber auch die Textfarbe anpassen.
+
+**Linie**
+
+Sie möchten eine Linie oder eine Fläche auf Ihre Karte zeichnen, so wählen Sie die Funktion **Linie**. 
+
+- Um eine Linie zu zeichnen, klicken Sie auf der Karte per Einfach-Mausklick an den Stellen, wie Ihre Linie verlaufen soll und beenden Ihre Linie mit Doppel-Mausklick.
+- Um eine Fläche zu zeichnen, gehen Sie wie bei der Linie per Einfach-Mausklick vor und beenden Ihre Fläche, indem Sie Ihre Linien mit dem Startpunkt verbinden.
+
+Anschließend erscheint das folgende Pop-Up:
+
+![Webmap Client - Zeichnen & Messen - Linie](../images/mapclient/mapclient_draw_line.png "Webmap Client Zeichnen & Messen - Linie")
+
+Im Tab **Linie / Fläche** können Sie eine Beschreibung zu Ihrer Linie bzw. Fläche hinterlegen, aber auch die Farbe ändern. Im anderen Tab **Distanz / Fläche** sehen zu Informationen zu Ihrer gezeichneten Linie bzw. Fläche.
+
+**Messen**
+
+Sie möchten eine Strecke oder eine Fläche auf Ihre Karte messen, so wählen Sie die Funktion **Messen**. Sie können hier wie bei der Funktion Linie vorgehen um eine Strecke oder eine Fläche zu messen.
+
+Anschließend erscheint das folgende Pop-Up:
+
+![Webmap Client - Zeichnen & Messen - Messen](../images/mapclient/mapclient_draw_measure.png "Webmap Client Zeichnen & Messen - Messen")
+
+Hier werden Ihnen Informationen zu Ihrer gezeichneten Strecke oder Fläche dargestellt. 
+
+**Mehr**
+
+Unter **Mehr** gibt es nun weitere Funktionen zu Ihrer Zeichung: 
+
+- Download Ihrer Zeichnung als KML-Datei
+- Löschen eines ausgewählten Elementen
+- Löschen aller Elementen
+
+![Webmap Client - Zeichnen & Messen - Mehr](../images/mapclient/mapclient_draw_more.png "Webmap Client Zeichnen & Messen - Mehr")
 
 ### Erweiterte Werkzeuge
 
@@ -537,8 +592,7 @@ In der erstellten Datei wird die Struktur der Rubrik im JSON-Format hinterlegt. 
 }
 {% endhighlight %}
 
-Zu beachten ist:
-
+>Zu beachten ist:
 Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstellenden Layer-Knoten, ansonsten wird es als Struktur-Knoten dargestellt (ohne Checkbox).
 
 ## FAQ
