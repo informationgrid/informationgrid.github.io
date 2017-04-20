@@ -320,11 +320,13 @@ Fähren Sie mit der Maus über die Karte, so werden Ihnen im dargestellten Berei
 
 Falls Sie die Koordinaten in einer anderen Projektion angezeigt bekommen haben möchten, so wählen Sie aus der Drop-Downliste die gewünschte Projektion aus und Ihre Koordinaten werden nun in dieser Projektion angezeigt.
 
-#### Dialog
+**Dialog**
+
+Um Ihnen Koordinaten einer bestimmten Mausposition in allen Projektionen der Drop-Down-Liste (siehe oben) darstellen zu lassen, verwenden Sie die rechte Maustaste und Ihnen werden im Tab **Koordinaten** alle Koordinaten in verschiedenen Projektionen dargestellt.
+
+Im anderen Tab **BwaStr Locator** finden Sie ggfs. eine Station einer Bundeswasserstraße.
 
 ![Webmap Client - Koordinatenanzeige](../images/mapclient/mapclient_coordinates_mouse.png "Webmap Client Koordinatenanzeige")
-
-Um Ihnen Koordinaten einer bestimmten Mausposition in allen Projektionen der Drop-Down-Liste (siehe oben) darstellen zu lassen, verwenden Sie die rechte Maustaste und Ihnen werden alle Koordinaten in verschiedenen Projektionen dargestellt.
 
 Zusätzlich erhalten Sie einen QR-Code mit dem Sie den Webmap Client mit den ausgewählten Koordinaten auf mobilen Geräte laden können.
 
