@@ -601,7 +601,7 @@ Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstel
 
 #### Kann man die Projektion des Webmap Clients anpassen?
 
-Ja, dies wird durch das Überschreiben der Einstellung *settingEpsg* in der Datei *settings.profile.js* ermöglicht.
+Ja, dies wird durch das Überschreiben der Einstellung **settingEpsg** in der Datei **settings.profile.js** ermöglicht.
 
-> Hinweis: Möglicherweise funktioniert das Drucken den Hintergrund-Layers OSM (OpenStreetMap) nicht korrekt bzw. es wird eine Karte an falscher Position ausgedruckt. 
+> Hinweis: Möglicherweise funktioniert das Drucken des Hintergrund-Layers OSM (OpenStreetMap) nicht korrekt bzw. es wird eine Karte an falscher Position ausgedruckt, da der OSM-Layer die Projektion nicht korrekt unterstützt. 
 
