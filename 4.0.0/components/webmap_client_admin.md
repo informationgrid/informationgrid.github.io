@@ -10,8 +10,8 @@ Der Webmap Client dient zur Darstellung von Kartenmaterial (z.B. WMS, KML, etc.)
 
 Der Client wird über das Portal mit installiert und ist im Portal unter dem Menü-Eintrag "Karte" integriert. Der Webmap Client kann aber auch ohne das Portal aufgerufen werden:
 
-- http://<HOSTNAME>/ingrid-webmap-client/frontend/prd/ (komprimierte Version)
-- http://<HOSTNAME>/ingrid-webmap-client/frontend/src/ (unkomprimierte Version)
+- http://HOSTNAME/ingrid-webmap-client/frontend/prd/ (komprimierte Version)
+- http://HOSTNAME/ingrid-webmap-client/frontend/src/ (unkomprimierte Version)
 
 Im Webmap Client sind mehrere Frameworks/Technologien in einem vereint. So wird OpenLayers 3 verwendet um Interaktionen mit dem Kartenmaterial, wie z.B. diverse WMS oder KML Layer anzuzeigen, zu ermöglichen. Das User-Interface besteht aus den Java-Script Frameworks AngularJS und jQuery, aus den CSS-Tools Font-Awesome und Bootstrap und vieles mehr.
 
@@ -75,8 +75,6 @@ Zusätzlich können Sie dem PDF neben dem Kartenausschnitt einen Titel, eine Bes
 ![Webmap Client - Drucken](../images/mapclient/mapclient_print.png "Webmap Client Drucken")
 
 ### Zeichnen & Messen
-
-<TODO>
 
 ![Webmap Client - Zeichnen & Messen](../images/mapclient/mapclient_draw.png "Webmap Client Zeichnen & Messen")
 
@@ -381,33 +379,60 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 {% highlight text %}
 {
     ...
-    "webatlasde_light": {                                                                 // Eindeutige ID des Layers
-        "wmsUrl": "http://sg.geodatenzentrum.de/wms_webatlasde.light?",                   // URL des Layers
-        "wmsLayers": "webatlasde.light",                                                  // 'NAME' des Layers
-        "gutter": 0,                                                                      // Rand in Pixel um Tiles
-        "attribution": "geodatenzentrum",                                                 // Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist)
-        "attributionUrl": "http://www.bkg.bund.de/DE/Home/homepage__node.html__nnn=true", // URL für weitere Infos zum Layer
-        "background": true,                                                               // Layer ist ein Hintergrund-Layer 
-        "format": "png",                                                                  // GetMap Bild-Format
-        "serverLayerName": "webatlasde_light",                                            // Layer-Name für WMTS
-        "selectbyrectangle": true,                                                        // WIRD NICHT BEI INGRID VERWENDET
-        "timeBehaviour": "last",                                                          // WIRD NICHT BEI INGRID VERWENDET
-        "topics": "themen,anbieter",                                                      // Zugehörigen Rubriken
-        "label": "webatlasde.light",                                                      // Titel des Layers
-        "singleTile": false,                                                              // Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) 
-        "highlightable": true,                                                            // WIRD NICHT BEI INGRID VERWENDET
-        "chargeable": false,                                                              // WIRD NICHT BEI INGRID VERWENDET
-        "hasLegend": true,                                                                // WIRD NICHT BEI INGRID VERWENDET
-        "legendURL": "<LEGENDEN-URL>"                                                     // URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt)
-        "type": "wms",                                                                    // Typ des Layers
-        "timeEnabled": false,                                                             // WIRD NICHT BEI INGRID VERWENDET
-        "queryable": false,                                                               // GetFeature-Info-Abfrage ist möglich
-        "version": "1.1.1",                                                               // Version des Layers (Wert: 1.1.1 oder 1.3.0)
-        "tooltip": false,                                                                 // Tooltip ist vorhanden
-        "opacity": 1,                                                                     // Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1)
-        "searchable": true,                                                               // Layer kann in der Suche recherchiert werden (Wert: false oder true)
-        "crossOrigin": false,                                                             // GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: * || <HOST>'
-        "extent": [10.5, 51.7, 10.7, 51.8]                                                // Extent des Layers in WGS84
+    // Eindeutige ID des Layers
+    "webatlasde_light": { 
+        // URL des Layers
+        "wmsUrl": "http://sg.geodatenzentrum.de/wms_webatlasde.light?",
+        // 'NAME' des Layers
+        "wmsLayers": "webatlasde.light",
+        // Rand in Pixel um Tiles
+        "gutter": 0,
+        // Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist)
+        "attribution": "geodatenzentrum",
+        // URL für weitere Infos zum Layer
+        "attributionUrl": "http://www.bkg.bund.de/DE/Home/homepage__node.html__nnn=true", 
+        // Layer ist ein Hintergrund-Layer 
+        "background": true,
+        // GetMap Bild-Format
+        "format": "png",
+        // Layer-Name für WMTS
+        "serverLayerName": "webatlasde_light",
+        // WIRD NICHT BEI INGRID VERWENDET
+        "selectbyrectangle": true,
+        // WIRD NICHT BEI INGRID VERWENDET
+        "timeBehaviour": "last",
+        // Zugehörigen Rubriken
+        "topics": "themen,anbieter",
+        // Titel des Layers
+        "label": "webatlasde.light",
+        // Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false)
+        "singleTile": false,
+        // WIRD NICHT BEI INGRID VERWENDET
+        "highlightable": true,
+        // WIRD NICHT BEI INGRID VERWENDET
+        "chargeable": false,
+        // WIRD NICHT BEI INGRID VERWENDET
+        "hasLegend": true,
+        // URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt)
+        "legendURL": "LEGENDEN-URL"
+        // Typ des Layers
+        "type": "wms",
+        // WIRD NICHT BEI INGRID VERWENDET
+        "timeEnabled": false,
+        // GetFeature-Info-Abfrage ist möglich
+        "queryable": false,
+        // Version des Layers (Wert: 1.1.1 oder 1.3.0)
+        "version": "1.1.1",
+        // Tooltip ist vorhanden
+        "tooltip": false,
+        // Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1)
+        "opacity": 1,
+        // Layer kann in der Suche recherchiert werden (Wert: false oder true)
+        "searchable": true,
+        // GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: * || <HOST>'
+        "crossOrigin": false,
+        // Extent des Layers in WGS84
+        "extent": [10.5, 51.7, 10.7, 51.8]
     },
     ... 
 }
@@ -422,12 +447,18 @@ Rubriken, die im Webmap Client existiern sollen, werden in der Datei *catalogs.j
 {% highlight text %}
 {
     "topics": [{
-            "defaultBackground": "osmLayer",                      // Definition Hintergrund-Layer per default
-            "langs": "de,en",                                     // Vorhandene Sprachen der Rubrik 
-            "selectedLayers": [],                                 // Definition von per Default selektierten Layern
-            "activatedLayers": [],                                // Definition von per Default sichtbaren Layern
-            "backgroundLayers": ["osmLayer", "webatlasde_light"], // Definition von auswählbaren Hintergrund-Layern
-            "id": "themen"                                        // ID der Rubrik 
+        // Definition Hintergrund-Layer per default
+            "defaultBackground": "osmLayer",
+        // Vorhandene Sprachen der Rubrik 
+            "langs": "de,en",
+        // Definition von per Default selektierten Layern
+            "selectedLayers": [],
+        // Definition von per Default sichtbaren Layern
+            "activatedLayers": [],
+        // Definition von auswählbaren Hintergrund-Layern
+            "backgroundLayers": ["osmLayer", "webatlasde_light"],
+        // ID der Rubrik 
+            "id": "themen"
         },
         ...
     ]
@@ -448,28 +479,50 @@ In der erstellten Datei wird die Struktur der Rubrik im JSON-Format hinterlegt. 
 {
     "results": {
         "root": {
-            "category": "root",                                         // Root Rubrik ID (immer 'root')
-            "staging": "prod",                                          // WIRD NICHT BEI INGRID VERWENDET
-            "id": 1,                                                    // Eindeutige ID eines Knotens
-            "children": [{                                              // Definition von Unterknoten
-                "category": "cat70",                                    // WIRD NICHT BEI INGRID VERWENDET
-                "staging": "prod",                                      // WIRD NICHT BEI INGRID VERWENDET
-                "selectedOpen": false,                                  // Knoten-Status per Default
-                "label": "Geobasisdaten",                               // Titel des Knotens
-                "id": 2,                                                // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung des Knoten-Status)
-                "children": [{                                          // Definition von Unterknoten
-                    "category": "cat71",                                // WIRD NICHT BEI INGRID VERWENDET
-                    "staging": "prod",                                  // WIRD NICHT BEI INGRID VERWENDET
-                    "selectedOpen": false,                              // Knoten-Status per Default
-                    "label": "Bestandsübersicht Geodatendienste VKV",   // Titel des Knotens
-                    "id": 3,                                            // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung Knoten-Status)
-                    "children": [{                                      // Definition von Unterknoten
-                        "category": "layer",                            // WIRD NICHT BEI INGRID VERWENDET
-                        "staging": "prod",                              // WIRD NICHT BEI INGRID VERWENDET
-                        "label": "LGLN-Bestand",                        // Titel des Knotens
-                        "layerBodId": "-652009786_bestand",             // ID des Layers (definiert in layers.json)
-                        "id": 4,                                        // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung Knoten-Status)
-                        "children":[]                                   // Definition von Unterknoten
+        // Root Rubrik ID (immer 'root')
+            "category": "root",
+        // WIRD NICHT BEI INGRID VERWENDET
+            "staging": "prod",
+        // Eindeutige ID eines Knotens
+            "id": 1,
+        // Definition von Unterknoten
+            "children": [{
+            // WIRD NICHT BEI INGRID VERWENDET
+                "category": "cat70",
+            // WIRD NICHT BEI INGRID VERWENDET
+                "staging": "prod",
+            // Knoten-Status per Default
+                "selectedOpen": false,
+            // Titel des Knotens
+                "label": "Geobasisdaten",
+            // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung des Knoten-Status)
+                "id": 2, 
+            // Definition von Unterknoten
+                "children": [{
+                // WIRD NICHT BEI INGRID VERWENDET
+                    "category": "cat71",
+                // WIRD NICHT BEI INGRID VERWENDET
+                    "staging": "prod",
+                // Knoten-Status per Default
+                    "selectedOpen": false,
+                // Titel des Knotens
+                    "label": "Bestandsübersicht Geodatendienste VKV",
+                // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung Knoten-Status)
+                    "id": 3,
+                // Definition von Unterknoten
+                    "children": [{
+                    // WIRD NICHT BEI INGRID VERWENDET
+                        "category": "layer",
+                    // WIRD NICHT BEI INGRID VERWENDET
+                        "staging": "prod",
+                    // Titel des Knotens
+                        "label": "LGLN-Bestand",
+                    // ID des Layers (definiert in layers.json)
+                        "layerBodId": "-652009786_bestand",
+                    // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung Knoten-Status)
+                        "id": 4,
+                    // Definition von Unterknoten
+                        "children":[]
                     },
                     ...
                     ]
