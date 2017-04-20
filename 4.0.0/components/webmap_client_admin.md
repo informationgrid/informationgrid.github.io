@@ -35,16 +35,16 @@ Ihr Kartenzustand bedeutet hierbei auch die von Ihnen hinzugefügten Layern (z.B
 
 ![Webmap Client - Teilen](../images/mapclient/mapclient_share.png "Webmap Client Teilen")
 
-#### E-Mail
+**E-Mail**
 
 Um Ihren Kartenzustand per E-Mail zu teilen, können Sie den E-Mail-Button verwenden. 
 Bei Betätigung des Buttons öffnet sich Ihr E-Mail-Programm oder Sie werden nach Ihrem E-Mail-Programm gefragt. Es wird Ihnen eine E-Mail mit dem Link des Kartenzustandes im Nachrichtenbereich breit gestellt. Geben Sie Empfänger und Betreff an und schon kann die E-Mail versendet werden.
 
-#### QR-Code
+**QR-Code**
 
 In der heutigen Zeit ist auch der QR-Code gang und gäbe um Informationen zu verbreiten, vor allem durch die Zunahme von Smartphones und Tablets. Um z.B. Ihren Kartenzustand auf Ihr mobiles Gerät zu übertragen, erstellen Sie über den QR-Code-Button ein QR-Code und lesen Sie den QR-Code mit Ihrem Gerät/App aus.
 
-#### Soziale Netzwerke
+**Soziale Netzwerke**
 
 Gang und gäbe ist auch die Verbreitung von Informationen über das Soziale Netzwerk. Im Mapclient besteht die Möglichkeiten drei soziale Kanäle zu bedienen:
 
@@ -54,11 +54,11 @@ Gang und gäbe ist auch die Verbreitung von Informationen über das Soziale Netz
 
 Bei allen drei Netzwerken wird hierbei ein Link der Karte geteilt.
 
-#### Link
+**Link**
 
 Natürlich können Sie auch Ihre Karte per Copy-Paste kopieren. Hierfür existiert ein Bereich 'Link Teilen' mit einem Textfeld in dem die URL der aktuellen Karte hinterlegt ist. 
 
-#### iFrame-Template
+**Einbetten**
 
 Haben Sie eine eigene Webseite und möchten Sie Ihre Karte dort integrieren? So verwenden Sie den aufklappbaren Bereich 'Einbetten'. Auch hier wird Ihnen ein Textfeld angeboten mit einem iFrame-Template, welchen Sie kopieren können und in dem Source-Code Ihrer eigene Webseite hinzufügen können. Der Webmap Client bietet Ihnen auch an das generierte Template per Vorschau anzeigen zu lassen. Klicken Sie hierfür einfach den Button 'Vorschau' im Bereich 'Einbetten' und führen weitere Änderungen (z.B. Größe des iFrames) durch.
 
@@ -86,7 +86,7 @@ Hier können WMS- oder KML-Layer hinzugefügt werden oder auch der Karte hinzuge
 
 ![Webmap Client - Erweiterte Werkzeuge](../images/mapclient/mapclient_additional.png "Webmap Client Erweiterte Werkzeuge")
 
-#### WMS Import
+**WMS Import**
 
 Wird die Funktion 'WMS Import' aktiviert, so erscheint ein Dialog in dem Sie (vordefinierte) WMS-Dienste laden können. 
 
@@ -109,7 +109,7 @@ Wird der Dienst erfolgreich geladen, so erscheinen alle Layer des Dienstes in ei
 Um einen Layer der Karte hinzuzufügen wählen Sie einen Layer per Mausklick aus und verwenden den Button 'Layer hinzufügen'. Anschließend werden Sie informiert, ob der ausgewählte Layer hinzugefügt wurde, der Layer wird auf der Karte dargestellt und in der Liste unter dem Akkordeon 'Dargestellte Karten' wurde der Layer hinzugefügt.
 
 
-#### KML Import
+**KML Import**
 
 Wird die Funktion 'KML Import' betätigt, so erscheint auch hier ein Dialog. 
 
@@ -122,7 +122,7 @@ Im Dialog werden zwei Möglichkeiten angeboten ein KML-Layer der Karte hinzuzuf�
 
 Wird ein KML-Layer erfolgreich geladen, so wird dieser Layer unter dem Akkordeon 'Dargestellte Karten' aufgelistet.
 
-#### Vergleichen
+**Vergleichen**
 
 Eine weitere Funktion unter dem Menü 'Erweiterte Werkzeuge' ist die Funktion 'Vergleichen'. Durch die Funktion lassen sich Layer, die unter Akkordeon 'Dargestellte Karten' aufgelistet werden, grafisch vergleichen.
 
@@ -149,7 +149,7 @@ Folgende Funktionen sind auf darstellbare Layer vorzufinden:
 
 Wird ein Layer der Karte hinzugefügt, so wird der Layer in der Baumstruktur rot markiert und unter 'Dargestellte Karten' aufgelistet.
 
-Eine Anleitung zur Definition von Rubriken finden Sie unter <TODO>.
+Eine Anleitung zur Definition von Rubriken finden Sie unter [Daten für den WebMap Client](/webmap_client_admin.html#daten-für-den-webmap-client).
 
 ### Dargestellte Karten
 
@@ -184,13 +184,13 @@ Auch eine Suche steht Ihnen im Webmap Client zur Verfügung. Dies Suche dient hi
 
 Unter der Suche werden verschiedene Dienste angefragt:
 
-#### Gehe nach: 
+**Gehe nach**
 
 Hier wird eine Ortssuche auf dem Dienst 'Nominatim' durchgeführt und alle Orte in Abhängigkeit mit Ihrem Suchbegriff aufgelistet. 
 
 Per Mouse-Over über die Ergebnisliste werden Ihnen die Orte in der Karte markiert und bei Auswahl gelangen Sie zum Ort hin.
 
-#### Karte hinzufügen: 
+**Karte hinzufügen** 
 
 Im Webmap Client definierte Layer (z.B. für die Rubriken) werden hier gefunden. Auch hier in der Ergebnisliste stehen Ihnen die gleichen Funktionen wie bei allen Layer zur Verfügung:
 
@@ -200,13 +200,13 @@ Im Webmap Client definierte Layer (z.B. für die Rubriken) werden hier gefunden.
 
 Wählen Sie einen Layer aus, so wird dieser in der Karte dargestellt und unter 'Dargestellte Karten' aufgelistet.
 
-#### Dienste hinzufügen: 
+**Dienste hinzufügen** 
 
 Treffer aus dieser Kategorie kommen aus der Opensearch-Schnittstelle. Hier werden Ihnen WMS Dienste zum Suchbegriff angezeigt. 
 
 Wählen Sie hier einen Treffer aus, so werden alle Layer des Dienstes auf die Karte gelegt und können über 'Dargestellte Karten' angezeigt werden. 
 
-#### BWaStr Locator: 
+**BWaStr Locator** 
 
 Falls Sie nach Bundeswasserstraßen, wie z.B. Elbe, suchen, werden Sie hier fündig. Hier wird ein Dienst des ITZBund angefragt.
 
@@ -222,19 +222,19 @@ Natürlich finden Sie auch Funktionen mit dem man Interaktionen mit der Karte au
 
 ![Webmap Client - Karteninteraktionen](../images/mapclient/mapclient_mapinteraction.png "Webmap Client Karteninteraktionen")
 
-#### Standortbestimmung
+**Standortbestimmung**
 
 Wählen Sie die Button mit dem schwarzen Punkt und eine Abfrage Ihres Standortes wird durchgeführt. Falls Sie die Standortfreigabe bestätigen, wird Ihr Standort in der Karte angezeigt.
 
-#### Hineinzoomen 
+**Hineinzoomen**
 
 Nicht nur über das Zahnrad der Maus können Sie hineinzoomen, sondern auch über den Button '+' ist das Hineinzoomen möglich.
 
-#### Hinauszoomen
+**Hinauszoomen**
 
 Das gleich wie beim Hineinzoomen gilt auch für das Hinauszoomen.
 
-#### Zoom auf Ausgangsposition
+**Zoom auf Ausgangsposition**
 
 Falls Sie sich mal in der Karte verirrt haben, können Sie über den untersten Button (mit den gekreuzten Pfeilen) zur Ausgangsposition der Karte zurück wechseln und von vorne starten.
 
@@ -257,7 +257,7 @@ Folgende Hintergrundkarten stehen Ihnen zur Auswahl:
 
 Darstellung der Koordinaten zur Mausposition.
 
-#### Drop-Down-Liste
+**Drop-Down-Liste**
 
 ![Webmap Client - Koordinatenanzeige](../images/mapclient/mapclient_coordinates.png "Webmap Client Koordinatenanzeige")
 
@@ -277,13 +277,13 @@ Zusätzlich erhalten Sie einen QR-Code mit dem Sie den Webmap Client mit den aus
 
 ![Webmap Client - Kartenfunktionen](../images/mapclient/mapclient_service_option.png "Webmap Client Kartenfunktionen")
 
-#### Vollbild
+**Vollbild**
 
 Sie möchten den Webmap Client in Vollbild-Modus sehen, dann können Sie dies über die Funktion 'Vollbild' aktivieren. 
 
 Um den Vollbild-Modus zu beenden, betätigen Sie die 'ESC'-Taste auf der Tastatur.
 
-#### Problem melden
+**Problem melden**
 
 Sie haben Probleme mit dem Webmap Client. Informieren Sie uns über die Funktion 'Problem melden'. Wird diese Funktion betätigt, so erscheint ein Dialog, indem Sie folgendes Eintragen können:
 
@@ -293,15 +293,15 @@ Sie haben Probleme mit dem Webmap Client. Informieren Sie uns über die Funktion
 
 Falls Sie ein Problem senden, wird der Webmap Client-Verantwortlich per E-Mail informiert. 
 
-#### Hilfe
+**Hilfe**
 
 Detailierte Hilfe zum Webmap Client.
 
-#### Mobile Version (nicht im Portal vorhanden)
+**Mobile Version (nicht im Portal vorhanden)**
 
 Um den Webmap Client in der mobilen Version anzeigen zu lassen, verwenden Sie die Funktion 'Mobile Version'. Das Layout des Webmap Clients ändert sich anschließend zur mobilen Version und die Darstellung von z.b. Menü und Hintergrundkarte ändert sich zur Desktop Version. 
 
-#### Sprachumschalter (nicht im Portal vorhanden)
+**Sprachumschalter (nicht im Portal vorhanden)**
 
 Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie einfach den Sprachumschalter und die Sprache des Webmap Clients wird geändert.
 
@@ -360,7 +360,7 @@ settingDefaultTopicId = 'anbieter';
 ...
 {% endhighlight %}
 
-### Daten für den WebmapClient
+### Daten für den Webmap Client
 
 Neben den genannten Einstellungen zu dem Webmap Client, besteht auch die Möglichkeit diesen Client mit Daten bzw. Rubriken zu befüllen, d.h. eine Baumstruktur von (Struktur-) Layern zu erzeugen. 
 
@@ -372,7 +372,7 @@ Um solche Rubriken zu erstellen, bedarf es mehrere Anpassung von JSON-Dateien un
 /PORTAL-INSTALLATIONSPFAD/apache-tomcat/webapps/ingrid-webmap-client/frontend/data/
 {% endhighlight %}
 
-#### Definition von Layern (layers.json)
+**Definition von Layern (layers.json)**
 
 Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste in der Datei *layers.json* definiert werden.
 
@@ -440,9 +440,9 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 
 Die Liste ist auch in der Suche des Webmap Clients integriert, sodass eine Suche nach einzelnen definierten (WMS-) Layern recherchiert werden kann.  
 
-#### Definition von Rubriken (catalogs.json)
+**Definition von Rubriken (catalogs.json)**
 
-Rubriken, die im Webmap Client existiern sollen, werden in der Datei *catalogs.json* definiert. Die Definition einer Rubrik kann folgendermaßen aussehen:
+Rubriken, die im Webmap Client existiern sollen, werden in der Datei **catalogs.json** definiert. Die Definition einer Rubrik kann folgendermaßen aussehen:
 
 {% highlight text %}
 {
@@ -465,7 +465,7 @@ Rubriken, die im Webmap Client existiern sollen, werden in der Datei *catalogs.j
 }
 {% endhighlight %}
 
-#### Erstellung der Baumstruktur zu einer Rubrik (catalog-[TOPIC-ID].json)
+**Erstellung der Baumstruktur zu einer Rubrik (catalog-[TOPIC-ID].json)**
 
 Zu jeder definierten Rubrik unter 'catalogs.json' muss eine weitere JSON-Datei erstellt werden. Von der Benennung der Datei muss diese folgende Syntax vorweisen:
 
