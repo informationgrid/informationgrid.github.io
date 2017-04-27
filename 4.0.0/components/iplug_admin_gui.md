@@ -168,3 +168,13 @@ Für diesen Fall ist es möglich, das Passwort über die Kommandozeile zurückzu
 `sh start.sh resetPassword <newPassword>`
 
 wobei `<newPassword>` das neu zu vergebene Passwort sein soll. Dieses wird dann verschlüsselt in der Datei "config.override.properties" abgelegt und nach einem Neustart des iPlugs verwendet.
+
+### Kann das iPlug bei Neustart automatisch neu Indexieren?
+
+Ab Version 4.0.3:
+
+Ja, das ist möglich. Bitte in der Datei config.override.properties den Eintrag
+
+`indexOnStartup=true`
+
+hinzufügen oder das iPLug mit der Option -DindexOnStartup=true starten.   
