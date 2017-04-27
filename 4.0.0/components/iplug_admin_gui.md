@@ -169,7 +169,7 @@ Für diesen Fall ist es möglich, das Passwort über die Kommandozeile zurückzu
 
 wobei `<newPassword>` das neu zu vergebene Passwort sein soll. Dieses wird dann verschlüsselt in der Datei "config.override.properties" abgelegt und nach einem Neustart des iPlugs verwendet.
 
-### Kann das iPlug bei Neustart automatisch neu Indexieren?
+### Kann das iPlug bei Neustart automatisch neu indexieren?
 
 Ab Version 4.0.3:
 
