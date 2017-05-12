@@ -289,7 +289,8 @@ Nach Änderungen sollte der Tomcat neu gestartet werden.
 
 | Datei | Funktion |
 |-------|----------|
-| webapps/ingrid-portal-apps/WEB-INF/classes/ingrid-portal-apps.properties | Allgemeine Einstellungen für das Portal. |
+| webapps/ingrid-portal-apps/WEB-INF/classes/ingrid-portal-apps.properties | Allgemeine Standard Einstellungen für das Portal.<br>**ACHTUNG**: Diese Datei wird bei einem Update des Portals vom Installer überschrieben.|
+| webapps/ingrid-portal-apps/WEB-INF/classes/**ingrid-portal-apps.override.properties** | **Installationsspezifische** Einstellungen für das Portal, die bei einem Update NICHT überschrieben werden. Bitte Einstellungen aus *ingrid-portal-apps.properties* hierher übernehmen und anpassen. Sollten sich Namen oder Werte von Einstellungen mit einem Update ändern, so müssen diese hier manuell angepasst werden. |
 | webapps/ingrid-portal-apps/WEB-INF/classes/communication.xml | InGrid Communication Parameter zum iBus. |
 | webapps/ingrid-portal-apps/WEB-INF/classes/sns.properties | IGE-Einstellungen für Zugriff auf den SNS (Semantic Network Service, liefert Thesaurus, Gazeteer und Umweltchronik) |
 | conf/Catalina/localhost/ingrid-portal.xml | Portal Datenbank Einstellungen |
@@ -301,9 +302,7 @@ Nach Änderungen sollte der Tomcat neu gestartet werden.
 
 ### Spezielle Einstellungen
 
-**ACHTUNG**: Die Datei `ingrid-portal-apps.properties` enthält alle Default Einstellungen des Portals. Diese Datei wird bei einem Update des Portals vom Installer überschrieben.<br>
-Um Änderungen fest zu verankern müssen diese in die Datei `ingrid-portal-apps.override.properties` übernommen werden.<br>
-Sollten sich Namen oder Werte von Einstellungen mit einem Update ändern, so müssen diese manuell in `ingrid-portal-apps.override.properties` angepasst werden.
+**ACHTUNG**: Bei Änderungen müssen die Einstellungen in die Datei `ingrid-portal-apps.override.properties` übernommen werden, um bei einem Update nicht überschrieben zu werden, s.o.
 
 | Datei | Schlüssel |  Erläuterung
 |-------|----------|-----|
