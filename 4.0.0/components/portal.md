@@ -301,9 +301,14 @@ Nach Änderungen sollte der Tomcat neu gestartet werden.
 
 ### Spezielle Einstellungen
 
+**ACHTUNG**: Die Datei `ingrid-portal-apps.properties` enthält alle Default Einstellungen des Portals. Diese Datei wird bei einem Update des Portals vom Installer überschrieben.<br>
+Um Änderungen fest zu verankern müssen diese in die Datei `ingrid-portal-apps.override.properties` übernommen werden.<br>
+Sollten sich Namen oder Werte von Einstellungen mit einem Update ändern, so müssen diese manuell in `ingrid-portal-apps.override.properties` angepasst werden.
+
 | Datei | Schlüssel |  Erläuterung
 |-------|----------|-----|
 | ingrid-portal-apps.properties | portal.detail.view.limit.references | Reduzierung der Anzahl der Verweise in der Metadaten Detaildarstellung (default auf 100). Den Hinweistext kann man in der Resources-Datei "SearchDetailResources_de.properties" unter der Eigenschaft "info_limit_references" in HTML-Schreibweise (default `<p style="text-align: center;padding: 10px 0 0 0;"><b>Hinweis:</b> Es werden nur die ersten 100 Verweise angezeigt!</p>`)  definieren.|
+| ingrid-portal-apps.properties | portal.enable.default.grouping.domain | `true`=Die Trefferliste wird nach Datenquellen gruppiert<br>`false`=Die Ergebnisse werden ungruppiert dargestellt<br><br>Die Gruppierung kann auch in jeder Suchanfrage manuell gesetzt werden mit `grouped:grouped_off` oder `grouped:grouped_by_datasource`.<br>Weitere Gruppierungswerte zum Testen (nicht mehr supported): `grouped_by_partner`, `grouped_by_organisation`, `grouped_by_plugId`<br><br>Nähere Erläuterung zur Gruppierung s. auch [FAQ](#GroupingReihenfolge)|
 
 
 
@@ -348,6 +353,7 @@ Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin escaped werd
 
 Das Bezugsdatum bei der Sortierung nach Aktualität ist das Änderungsdatum der Seite (last-modified Info aus dem HTTP-Header). Ist dieses nicht vorhanden, wird das Datum des letzten Fetch der Seite angenommen.
 
+<a name="GroupingReihenfolge"></a>
 ### Wie ist die Reihenfolge der gruppierten Ergebnisse definiert ?
 
 Grundlage ist das Ranking. Sind die ersten 60 Ergebnisse der gerankten Suchanfrage von einem Partner/Anbieter werden diese gruppiert. Es kann also sein, dass auf einer gruppierten Seite der gleiche Partner/Anbieter mehrfach vorkommt.
