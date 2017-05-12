@@ -307,7 +307,7 @@ Nach Änderungen sollte der Tomcat neu gestartet werden.
 | Datei | Schlüssel |  Erläuterung
 |-------|----------|-----|
 | ingrid-portal-apps.properties | portal.detail.view.limit.references | Reduzierung der Anzahl der Verweise in der Metadaten Detaildarstellung (default auf 100). Den Hinweistext kann man in der Resources-Datei "SearchDetailResources_de.properties" unter der Eigenschaft "info_limit_references" in HTML-Schreibweise (default `<p style="text-align: center;padding: 10px 0 0 0;"><b>Hinweis:</b> Es werden nur die ersten 100 Verweise angezeigt!</p>`)  definieren.|
-| ingrid-portal-apps.properties | portal.enable.default.grouping.domain | `true`=Die Trefferliste wird nach Datenquellen gruppiert<br>`false`=Die Ergebnisse werden ungruppiert dargestellt<br><br>Die Gruppierung kann auch in jeder Suchanfrage manuell gesetzt werden mit `grouped:grouped_off` oder `grouped:grouped_by_datasource`.<br>Weitere Gruppierungswerte zum Testen (nicht mehr supported): `grouped_by_partner`, `grouped_by_organisation`, `grouped_by_plugId`<br><br>Nähere Erläuterung zur Gruppierung s. auch [FAQ](#GroupingReihenfolge)|
+| ingrid-portal-apps.properties | portal.enable.default.grouping.domain | `true`=Die Trefferliste wird nach Datenquellen gruppiert<br>`false`=Die Ergebnisse werden ungruppiert dargestellt<br><br>Die Gruppierung kann auch in jeder Suchanfrage manuell gesetzt werden mit `grouped:grouped_off` oder `grouped:grouped_by_datasource`.<br>Weitere Gruppierungswerte zum Testen (nicht mehr supported): *grouped_by_partner*, *grouped_by_organisation*, *grouped_by_plugId*<br><br>Nähere Erläuterung zur Gruppierung s. auch [FAQ](#GroupingReihenfolge)|
 
 
 
