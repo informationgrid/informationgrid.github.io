@@ -64,6 +64,8 @@ Haben Sie eine eigene Webseite und möchten Sie Ihre Karte dort integrieren? So 
 
 ![Webmap Client - Einbetten](../images/mapclient/mapclient_share_preview.png "Webmap Client Einbetten")
 
+Die URL Ihres Kartenzustandes wird dabei immer durch ein URL-Shortener verkürzt. Mehr Informationen finden Sie [hier](/webmap_client_admin.html#url-shortener).
+
 ### Drucken
 
 Sie wollen Ihre Karte auf Papier bringen? Öffnen Sie hierfür im Menü den Bereich 'Drucken'. Hier können Sie ein PDF generieren lassen, welches dann ausgedruckt werden kann.
@@ -73,6 +75,8 @@ Wird das Drucken aktiviert, so wird in der Karte ein Ausschnitt hervorgehoben, d
 Zusätzlich können Sie dem PDF neben dem Kartenausschnitt einen Titel, eine Beschreibung/Kommentar, die Legende der Layer oder auch ein Koordinatennetz hinzufügen und die Orientierung (Hoch-/Querformat) in den DIN A3 bzw. DIN A4 Größe ändern.
 
 ![Webmap Client - Drucken](../images/mapclient/mapclient_print.png "Webmap Client Drucken")
+
+In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Shortners](/webmap_client_admin.html#url-shortener) die URL Ihres Kartenzustandes sowie ein [QR-Code](/webmap_client_admin.html#qr-code) hinterlegt.
 
 ### Zeichnen & Messen
 
@@ -603,7 +607,7 @@ Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstel
 
 Da die Zustand der Karte in der URL abgebildet wird, kann diese URL sehr lang werden. Der URL-Shortener verkürzt hierfür die URL der Karte und wird bei den Funktionen [Teilen](/webmap_client_admin.html#teilen) und [Drucken](/webmap_client_admin.html#drucken) verwendet. 
 
-Per Default wird im Mapclient der öffentlich Dienst 'https://is.gd/' verwendet. Über diesen Dienst kann eine URL folgendermaßen verkürzt werden:
+Per Default wird im Mapclient der öffentlich Dienst [https://is.gd/](https://is.gd/) verwendet. Über diesen Dienst kann eine URL folgendermaßen verkürzt werden:
  
 {% highlight text %}
 https://is.gd/create.php?format=json&url=<URL>
@@ -625,7 +629,7 @@ Es gibt zwei Möglichkeiten YOURLS zu installieren.
 - **YOURLS-Installationspaket**: Hierbei laden Sie das YOURLS-Installationspaket herunter, entzippen es in Ihr gewünschtes Verzeichnis und folgenden den Anweisungen unter [https://yourls.org/#Install](https://yourls.org/#Install).
 - **YOURLS-GitHub-Repository**: Klonen Sie sich das YOURLS-Github-Repository unter https://yourls.org/#Install [https://github.com/YOURLS/YOURLS](https://github.com/YOURLS/YOURLS) in Ihr gewünschtes Verzeichnis. Dafür benötigen Sie natürlich die Git-Software auf Ihrer Systemumgebung.
 
-Passen Sie beiden Möglichkeiten die Datei 'config.php' im Verzeichnis /YOURLS/user an. Falls diese Datei **config.php** nicht existiert, so machen Sie eine Kopie der Datei **config-sample.php** und nenne Ihre Kopie in **config.php** um.
+Passen Sie beiden Möglichkeiten die Datei **config.php** im Verzeichnis **/YOURLS/user** an. Falls diese Datei **config.php** nicht existiert, so machen Sie eine Kopie der Datei **config-sample.php** und nenne Ihre Kopie in **config.php** um.
 
 Tragen Sie folgende Eigenschaften Werte ein:
 
