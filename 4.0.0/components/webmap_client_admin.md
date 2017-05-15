@@ -597,6 +597,74 @@ In der erstellten Datei wird die Struktur der Rubrik im JSON-Format hinterlegt. 
 >Zu beachten ist:
 Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstellenden Layer-Knoten, ansonsten wird es als Struktur-Knoten dargestellt (ohne Checkbox).
 
+## Schnittstellen
+
+### URL-Shortener
+
+Da die Zustand der Karte in der URL abgebildet wird, kann diese URL sehr lang werden. Der URL-Shortener verkürzt hierfür die URL der Karte und wird bei den Funktionen [Teilen](/webmap_client_admin.html#teilen) und [Drucken](/webmap_client_admin.html#drucken) verwendet. 
+
+Per Default wird im Mapclient der öffentlich Dienst 'https://is.gd/' verwendet. Über diesen Dienst kann eine URL folgendermaßen verkürzt werden:
+ 
+{% highlight text %}
+https://is.gd/create.php?format=json&url=<URL>
+{% endhighlight %}
+
+Als Antwort des Dienstes wird ein JSON-Objekt mit einem Schlüssel 'shorturl' geliefert, z.B.: 
+
+{% highlight text %}
+{ "shorturl": "https://is.gd/pvfPuU" }
+{% endhighlight %}
+
+Den per Default eingestellten URL-Shortner kann man im Webmap Client austauschen. (siehe [Konfiguration](/webmap_client_admin.html#einstellung-für-den-webmap-client))
+Hierbei ist es notwendig, dass der ausgetauschte URL-Shortner die gleiche JSON-Anwort, auch von der Struktur mit dem gleichen Schlüssel, liefert.
+
+Eine alternative hierbei ist [YOURLS](https://yourls.org/).
+
+Es gibt zwei Möglichkeiten YOURLS zu installieren.
+
+- **YOURLS-Installationspaket**: Hierbei laden Sie das YOURLS-Installationspaket herunter, entzippen es in Ihr gewünschtes Verzeichnis und folgenden den Anweisungen unter [https://yourls.org/#Install](https://yourls.org/#Install).
+- **YOURLS-GitHub-Repository**: Klonen Sie sich das YOURLS-Github-Repository unter https://yourls.org/#Install [https://github.com/YOURLS/YOURLS](https://github.com/YOURLS/YOURLS) in Ihr gewünschtes Verzeichnis. Dafür benötigen Sie natürlich die Git-Software auf Ihrer Systemumgebung.
+
+Passen Sie beiden Möglichkeiten die Datei 'config.php' im Verzeichnis /YOURLS/user an. Falls diese Datei **config.php** nicht existiert, so machen Sie eine Kopie der Datei **config-sample.php** und nenne Ihre Kopie in **config.php** um.
+
+Tragen Sie folgende Eigenschaften Werte ein:
+
+{% highlight text %}
+**Datenbank**
+- MySQL Datenbank Benutzer: define( 'YOURLS_DB_USER', 'DB_BENUTZERNAME' );
+- MySQL Datenbank Passwort: define( 'YOURLS_DB_PASS', 'DB_BENUTZERNAME-PASSWORT' );
+- MySQL Datenbank Name: define( 'YOURLS_DB_NAME', 'yourls' );
+- MySQL Host: define( 'YOURLS_DB_HOST', 'localhost' );
+- MySQL Tabellen Prefix: define( 'YOURLS_DB_PREFIX', 'yourls_' );
+
+**YOURLS URL**
+- YOURLS URL: define( 'YOURLS_SITE', 'YOURL-URL' );
+
+**BENUTZER**
+- YOURLS Benutzer-Login: $yourls_user_passwords = array('BENUTZERNAME' => 'BENUTZER-PASSWORT');
+{% endhighlight %}
+
+Weitere Einstellungsmöglichkeiten von YOURLS finden Sie [hier](https://yourls.org/#Config).
+
+Rufen Sie anschließend die YOURLS-Adminoberfläche mit **YOURL-URL/admin/** auf und loggen sich mit **BENUTZERNAME** und **BENUTZER-PASSWORT** ein.
+
+### QR-Code
+
+Für die Funktionen [Teilen](/webmap_client_admin.html#teilen), [Koordinatenanzeige](/webmap_client_admin.html#koordinatenanzeige) (Maus-Rechts-Klick auf der Karte) und [Drucken](/webmap_client_admin.html#drucken) wird ein QR-Code dargestellt. 
+Für die Generierung des QR-Codes bietet der Webmap Client eine eigene Rest-Schnittstelle:
+
+{% highlight text %}
+http://<HOSTNAME>/ingrid-webmap-client/rest/data/qrcodegenerator?url=<URL>
+{% endhighlight %}
+
+Über diese Schnittstelle wird für eine beliebige URL eine QR-Code generiert.
+
+Für die QR-Code Generierung wird die JAVA-Bibliothek com.google.zxing.core in der Version 3.2.1 verwendet.
+
+### Mapfish
+
+Für die Funktion [Drucken](/webmap_client_admin.html#drucken) wird im Webmap Client die JAVA-Bibliothek org.mapfish.print.print-lib in der Version 2.1.2 verwendet.
+
 ## FAQ
 
 #### Kann man die Projektion des Webmap Clients anpassen?
@@ -604,4 +672,3 @@ Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstel
 Ja, dies wird durch das Überschreiben der Einstellung **settingEpsg** in der Datei **settings.profile.js** ermöglicht.
 
 > Hinweis: Möglicherweise funktioniert das Drucken des Hintergrund-Layers OSM (OpenStreetMap) nicht korrekt bzw. es wird eine Karte an falscher Position ausgedruckt, da der OSM-Layer die Projektion nicht korrekt unterstützt. 
-
