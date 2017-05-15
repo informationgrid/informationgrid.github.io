@@ -76,7 +76,7 @@ Zusätzlich können Sie dem PDF neben dem Kartenausschnitt einen Titel, eine Bes
 
 ![Webmap Client - Drucken](../images/mapclient/mapclient_print.png "Webmap Client Drucken")
 
-In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Shortners](/webmap_client_admin.html#url-shortener) die URL Ihres Kartenzustandes sowie ein [QR-Code](/webmap_client_admin.html#qr-code) hinterlegt.
+In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Shorteners](/webmap_client_admin.html#url-shortener) die URL Ihres Kartenzustandes sowie ein [QR-Code](/webmap_client_admin.html#qr-code) hinterlegt.
 
 ### Zeichnen & Messen
 
@@ -605,7 +605,7 @@ Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstel
 
 ### URL-Shortener
 
-Da die Zustand der Karte in der URL abgebildet wird, kann diese URL sehr lang werden. Der URL-Shortener verkürzt hierfür die URL der Karte und wird bei den Funktionen [Teilen](/webmap_client_admin.html#teilen) und [Drucken](/webmap_client_admin.html#drucken) verwendet. 
+Da der Zustand der Karte in der URL abgebildet wird, kann die URL sehr lang werden. Der URL-Shortener verkürzt hierfür die URL der Karte und wird bei den Funktionen [Teilen](/webmap_client_admin.html#teilen) und [Drucken](/webmap_client_admin.html#drucken) verwendet. 
 
 Per Default wird im Mapclient der öffentlich Dienst [https://is.gd/](https://is.gd/) verwendet. Über diesen Dienst kann eine URL folgendermaßen verkürzt werden:
  
@@ -619,8 +619,8 @@ Als Antwort des Dienstes wird ein JSON-Objekt mit einem Schlüssel 'shorturl' ge
 { "shorturl": "https://is.gd/pvfPuU" }
 {% endhighlight %}
 
-Den per Default eingestellten URL-Shortner kann man im Webmap Client austauschen. (siehe [Konfiguration](/webmap_client_admin.html#einstellung-für-den-webmap-client))
-Hierbei ist es notwendig, dass der ausgetauschte URL-Shortner die gleiche JSON-Anwort, auch von der Struktur mit dem gleichen Schlüssel, liefert.
+Den per Default eingestellten URL-Shortener kann man im Webmap Client austauschen. (siehe [Konfiguration](/webmap_client_admin.html#einstellung-für-den-webmap-client)).
+Hierbei ist es notwendig, dass der ausgetauschte URL-Shortener die gleiche JSON-Anwort, auch von der Struktur mit dem gleichen Schlüssel, liefert.
 
 Eine alternative hierbei ist [YOURLS](https://yourls.org/).
 
@@ -629,9 +629,9 @@ Es gibt zwei Möglichkeiten YOURLS zu installieren.
 - **YOURLS-Installationspaket**: Hierbei laden Sie das YOURLS-Installationspaket herunter, entzippen es in Ihr gewünschtes Verzeichnis und folgenden den Anweisungen unter [https://yourls.org/#Install](https://yourls.org/#Install).
 - **YOURLS-GitHub-Repository**: Klonen Sie sich das YOURLS-Github-Repository unter https://yourls.org/#Install [https://github.com/YOURLS/YOURLS](https://github.com/YOURLS/YOURLS) in Ihr gewünschtes Verzeichnis. Dafür benötigen Sie natürlich die Git-Software auf Ihrer Systemumgebung.
 
-Passen Sie beiden Möglichkeiten die Datei **config.php** im Verzeichnis **/YOURLS/user** an. Falls diese Datei **config.php** nicht existiert, so machen Sie eine Kopie der Datei **config-sample.php** und nenne Ihre Kopie in **config.php** um.
+Passen Sie bei beiden Möglichkeiten die Datei **config.php** im Verzeichnis **/YOURLS/user** an. Falls diese Datei **config.php** nicht existiert, so machen Sie eine Kopie der Datei **config-sample.php** und nennen Ihre Kopie in **config.php** um.
 
-Tragen Sie folgende Eigenschaften Werte ein:
+Tragen Sie folgende Eigenschaften-Werte ein:
 
 {% highlight text %}
 **Datenbank**
