@@ -21,6 +21,7 @@ Zu den möglichen Interaktionen oder auch Funktionen des Webmap Clients können 
 
 Der Webmap Client hat zahlreiche Funktionen mit dem Umgang von Geodaten, von Darstellung von WMS Layern und KML bis zum Drucken und Zeichnen von Kartenmaterial. Die einzelnen Funktionen werden nun hier aufgelistet:
 
+<a name="teilen"></a>
 ### Teilen
 
 Über das Menü des WebMap Clients besteht die Möglichkeit Ihren Kartenzustand zu verbreiten:
@@ -64,8 +65,9 @@ Haben Sie eine eigene Webseite und möchten Sie Ihre Karte dort integrieren? So 
 
 ![Webmap Client - Einbetten](../images/mapclient/mapclient_share_preview.png "Webmap Client Einbetten")
 
-Die URL Ihres Kartenzustandes wird dabei immer durch ein URL-Shortener verkürzt. Mehr Informationen finden Sie [hier](/webmap_client_admin.html#url-shortener).
+Die URL Ihres Kartenzustandes wird dabei immer durch ein URL-Shortener verkürzt. Mehr Informationen finden Sie [hier](#url-shortener).
 
+<a name="drucken"></a>
 ### Drucken
 
 Sie wollen Ihre Karte auf Papier bringen? Öffnen Sie hierfür im Menü den Bereich 'Drucken'. Hier können Sie ein PDF generieren lassen, welches dann ausgedruckt werden kann.
@@ -76,7 +78,7 @@ Zusätzlich können Sie dem PDF neben dem Kartenausschnitt einen Titel, eine Bes
 
 ![Webmap Client - Drucken](../images/mapclient/mapclient_print.png "Webmap Client Drucken")
 
-In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Shorteners](/webmap_client_admin.html#url-shortener) die URL Ihres Kartenzustandes sowie ein [QR-Code](/webmap_client_admin.html#qr-code) hinterlegt.
+In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Shorteners](#url-shortener) die URL Ihres Kartenzustandes sowie ein [QR-Code](#qr-code) hinterlegt.
 
 ### Zeichnen & Messen
 
@@ -208,7 +210,7 @@ Folgende Funktionen sind auf darstellbare Layer vorzufinden:
 
 Wird ein Layer der Karte hinzugefügt, so wird der Layer in der Baumstruktur rot markiert und unter 'Dargestellte Karten' aufgelistet.
 
-Eine Anleitung zur Definition von Rubriken finden Sie unter [Daten für den WebMap Client](/webmap_client_admin.html#daten-für-den-webmap-client).
+Eine Anleitung zur Definition von Rubriken finden Sie unter [Daten für den WebMap Client](#daten-für-den-webmap-client).
 
 ### Dargestellte Karten
 
@@ -312,6 +314,7 @@ Folgende Hintergrundkarten stehen Ihnen zur Auswahl:
 
 Über diese Auswahlbox kann zwischen verschiedenen Hintergrundkarten gewechselt bzw. auch gar keine Hintergrundkarte angezeigt werden.
 
+<a name="koordinatenanzeige"></a>
 ### Koordinatenanzeige
 
 Darstellung der Koordinaten zur Mausposition.
@@ -366,6 +369,7 @@ Um den Webmap Client in der mobilen Version anzeigen zu lassen, verwenden Sie di
 
 Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie einfach den Sprachumschalter und die Sprache des Webmap Clients wird geändert.
 
+<a name="konfiguration"></a>
 ## Konfiguration
 
 ### Einstellung für den Webmap Client
@@ -421,6 +425,7 @@ settingDefaultTopicId = 'anbieter';
 ...
 {% endhighlight %}
 
+<a name="daten-für-den-webmap-client"></a>
 ### Daten für den Webmap Client
 
 Neben den genannten Einstellungen zu dem Webmap Client, besteht auch die Möglichkeit diesen Client mit Daten bzw. Rubriken zu befüllen, d.h. eine Baumstruktur von (Struktur-) Layern zu erzeugen. 
@@ -603,9 +608,10 @@ Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstel
 
 ## Schnittstellen
 
+<a name="url-shortener"></a>
 ### URL-Shortener
 
-Da der Zustand der Karte in der URL abgebildet wird, kann die URL sehr lang werden. Der URL-Shortener verkürzt hierfür die URL der Karte und wird bei den Funktionen [Teilen](/webmap_client_admin.html#teilen) und [Drucken](/webmap_client_admin.html#drucken) verwendet. 
+Da der Zustand der Karte in der URL abgebildet wird, kann die URL sehr lang werden. Der URL-Shortener verkürzt hierfür die URL der Karte und wird bei den Funktionen [Teilen](#teilen) und [Drucken](#drucken) verwendet. 
 
 Per Default wird im Mapclient der öffentlich Dienst [https://is.gd/](https://is.gd/) verwendet. Über diesen Dienst kann eine URL folgendermaßen verkürzt werden:
  
@@ -619,7 +625,7 @@ Als Antwort des Dienstes wird ein JSON-Objekt mit einem Schlüssel 'shorturl' ge
 { "shorturl": "https://is.gd/pvfPuU" }
 {% endhighlight %}
 
-Den per Default eingestellten URL-Shortener kann man im Webmap Client austauschen. (siehe [Konfiguration](/webmap_client_admin.html#einstellung-für-den-webmap-client)).
+Den per Default eingestellten URL-Shortener kann man im Webmap Client austauschen. (siehe [Konfiguration](#konfiguration)).
 Hierbei ist es notwendig, dass der ausgetauschte URL-Shortener die gleiche JSON-Anwort, auch von der Struktur mit dem gleichen Schlüssel, liefert.
 
 Eine alternative hierbei ist [YOURLS](https://yourls.org/).
@@ -652,9 +658,10 @@ Weitere Einstellungsmöglichkeiten von YOURLS finden Sie [hier](https://yourls.o
 
 Rufen Sie anschließend die YOURLS-Adminoberfläche mit **YOURL-URL/admin/** auf und loggen sich mit **BENUTZERNAME** und **BENUTZER-PASSWORT** ein.
 
+<a name="qr-code"></a>
 ### QR-Code
 
-Für die Funktionen [Teilen](/webmap_client_admin.html#teilen), [Koordinatenanzeige](/webmap_client_admin.html#koordinatenanzeige) (Maus-Rechts-Klick auf der Karte) und [Drucken](/webmap_client_admin.html#drucken) wird ein QR-Code dargestellt. 
+Für die Funktionen [Teilen](#teilen), [Koordinatenanzeige](#koordinatenanzeige) (Maus-Rechts-Klick auf der Karte) und [Drucken](#drucken) wird ein QR-Code dargestellt. 
 Für die Generierung des QR-Codes bietet der Webmap Client eine eigene Rest-Schnittstelle:
 
 {% highlight text %}
@@ -667,7 +674,7 @@ Für die QR-Code Generierung wird die JAVA-Bibliothek com.google.zxing.core in d
 
 ### Mapfish
 
-Für die Funktion [Drucken](/webmap_client_admin.html#drucken) wird im Webmap Client die JAVA-Bibliothek org.mapfish.print.print-lib in der Version 2.1.2 verwendet.
+Für die Funktion [Drucken](#drucken) wird im Webmap Client die JAVA-Bibliothek org.mapfish.print.print-lib in der Version 2.1.2 verwendet.
 
 ## FAQ
 
