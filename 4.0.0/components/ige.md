@@ -67,7 +67,7 @@ In der Datei `webapps/ingrid-portal-mdek-application/WEB-INF/external-services.x
 Als **Thesaurus** stehen im Moment *SNS (UMTHES)* oder *GEMET* zur Verfügung.<br>
 Als **Gazetteer** *SNS* oder ein *WFS vom geodatenzentrum*.
 
-Die Konfigurationsdateien der einzelnen Service Provider finden sich im Verzeichnis `webapps/ingrid-portal-mdek-application/WEB-INF/classes`.
+Die Konfigurationsdateien der einzelnen Service Provider finden sich im Verzeichnis `webapps/ingrid-portal-mdek-application/WEB-INF/classes`:
 
 `sns.properties` für den SNS als Service Provider.
 
