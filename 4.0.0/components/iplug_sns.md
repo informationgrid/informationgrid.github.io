@@ -156,17 +156,54 @@ Die einzelnen Parameter haben folgende Bedeutung:
 | message/@handleTimeout              | Timeout einer Message in sec (Wie lange wartet der iBus auf die Beantwortung einer Message.) |
 | message/@queueSize                  | Message Queue (Wie viele Nachrichten können in der Warteschlange des iBus enthalten sein.) |
 
-### WebService Daten
+### Service Provider
 
-In der Datei sns.properties können die Einstellung für den SNS vorgenommen werden.
+In der Datei `conf/spring/external-services.xml` können die verschiedenen Service Provider für **Thesaurus**, **Gazetteer**, **Chronik** und **Klassifizierung** eingestellt werden.
 
-| Eingabefeld                               | Inhalt                                             |
-|-------------------------------------------|----------------------------------------------------|
-| Thesaurus-URL (sns.serviceURL.thesaurus): | http://sns.uba.de/umthes  |
-| Chronik-URL (sns.serviceURL.chronicle):   | http://sns.uba.de/chronik  |
-| Gazetteer-URL (sns.serviceURL.gazetteer): | http://sns.uba.de/gazetteer  |
-| Sprache (sns.language):                   | de |
+Als **Thesaurus** stehen im Moment *SNS (UMTHES)* oder *GEMET* zur Verfügung.<br>
+Als **Gazetteer** *SNS* oder ein *WFS vom geodatenzentrum*.<br>
+Für die Ermittlung von zeitlichen Ereignissen (**Chronik**) und der **Klassifizierung** von Texten/Web-Seiten steht nur der *SNS* zur Verfügung.
 
+In der Datei müssen die entsprechenden Zeilen für die einzelnen Services aktiviert/kommentiert werden.
+
+{% highlight xml %}
+
+    <!-- Gazetteer from SNS -->
+	<!-- <bean id="gazetteerService" class="de.ingrid.external.sns.SNSService" /> -->
+    <!-- Gazetteer from WFS -->
+	<bean id="gazetteerService" class="de.ingrid.external.wfs.WFSService" />
+
+    <!-- UMTHES Thesaurus from SNS -->
+	<bean id="thesaurusService" class="de.ingrid.external.sns.SNSService" />
+	<!-- GEMET Thesaurus -->
+    <!-- <bean id="thesaurusService" class="de.ingrid.external.gemet.GEMETService" /> -->
+
+	<bean id="fullClassifyService" class="de.ingrid.external.sns.SNSService" />
+    <bean id="chronicleService" class="de.ingrid.external.sns.SNSService" />
+{% endhighlight %}
+
+#### Konfiguration SNS Service Provider
+
+In der Datei sns.properties können die Einstellung für den SNS vorgenommen werden, wenn dieser Service Provider ausgewählt wurde.
+
+| Eigenschaft                               | Standard Wert                                      | Kommentar |
+|-------------------------------------------|----------------------------------------------------| ------|
+| sns.serviceURL.thesaurus | http://sns.uba.de/umthes  | Thesaurus-URL |
+| sns.serviceURL.chronicle   | http://sns.uba.de/chronik  | Chronik-URL |
+| sns.serviceURL.gazetteer | http://sns.uba.de/gazetteer  | Gazetteer-URL |
+| sns.language                  | de | Sprache |
+| sns.timeout                   | 30000 | Timeout bei Anfragen in Millisekunden |
+
+#### Konfiguration GEMET Thesaurus Service Provider
+
+In der Datei gemet.properties können die Einstellung für den GEMET Service vorgenommen werden, wenn dieser Service Provider ausgewählt wurde.
+
+| Eigenschaft                               | Standard Wert                                             | Kommentar |
+|-------------------------------------------|----------------------------------------------------| ----------|
+| service.url | http://www.eionet.europa.eu/gemet  | URL des GEMET Service |
+| service.analyzeMaxWords | 100  | Wie viele Wörter sollen bei der Suche nach Deskriptoren analysiert werden ?<br> z.B. wenn aus der Beschreibung eines Metadatensatzes Deskriptoren extrahiert werden. |
+| service.ignorePassedMatchingType | true | Bei der Eingabe von Stichwörtern, wie sollen Deskriptoren gefunden werden ?<br> *true*=Es wird immer nach Deskriptoren gesucht, die die Stichwörter **enthalten**, d.h. ein maximales Ergebnis<br>*false*=Die Art der Suche wird vom Aufrufer bestimmt, also z.B. Stichwort **am Anfang** oder **Exakt** |
+| service.request.rdf                  | false | Manche Anfragen an den Service können auch mit RDF Antwort (*true*) ausgeführt werden, der Standard ist jedoch JSON (*false*) ? |
 
 ## FAQ
 
