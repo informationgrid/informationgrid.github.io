@@ -58,12 +58,28 @@ Existiert ein Katalog, der nicht angeschlossen ist, so wird dieser in der untere
 
 Klickt man auf die "delete"-Schaltfläche eines verbundenen Kataloges, erscheint ein Dialog mit einer zusätzlichen Abfrage, ob diese Verbindung wirklich gelöscht werden soll. Da es sich hier nur um eine zu löschende Verbindung handelt, kann diese, wie schon beschrieben, schnell wieder hergestellt werden.
 
+## Konfiguration
+
+### Service Provider
+
+In der Datei `webapps/ingrid-portal-mdek-application/WEB-INF/external-services.xml` können die verschiedenen Service Provider für **Thesaurus** und **Gazetteer** eingestellt werden.
+
+Als **Thesaurus** stehen im Moment *SNS (UMTHES)* oder *GEMET* zur Verfügung.<br>
+Als **Gazetteer** *SNS* oder ein *WFS vom geodatenzentrum*.
+
+Die Konfigurationsdateien der einzelnen Service Provider finden sich im Verzeichnis `webapps/ingrid-portal-mdek-application/WEB-INF/classes`.
+
+`sns.properties` für den SNS als Service Provider.
+
+`gemet.properties` für den GEMET als Thesaurus Service Provider.
+
+Die Aktivierung der unterschiedlichen Services und deren Einstellungen sind beschrieben unter [iPlug-SNS](iplug_sns.html#service-provider)
 
 ## FAQ
 
 ### Es kommen keine Ergebnisse vom SNS (SSL-Problem)
 
-Siehe hierzu die FAQ vom [iPlug-Management](iplug_sns.html#faq).
+Siehe hierzu die FAQ vom [iPlug-SNS](iplug_sns.html#faq).
 
 ### Was ist das Import Protokoll?
 
