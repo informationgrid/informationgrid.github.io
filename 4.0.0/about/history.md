@@ -4,6 +4,25 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.0.2.1
+
+Release: 01.06.2017
+
+### Änderungen
+
+- [Bug] [Portal] PORTAL: PostgreSQL Nacharbeiten: Quartz Jobs laufen nicht, Portalinhalte in initialer Portal Datenbank bereinigen ([REDMINE-662](https://dev.informationgrid.eu/redmine/issues/662))
+- [Bug] [Portal] Portal: Auf Startseite/Chronik werden keine Inhalte mehr angezeigt. ([REDMINE-655](https://dev.informationgrid.eu/redmine/issues/655))
+- [Bug] [IGE] Editor: Unterhalb von Datensätzen sollen keine Ordner angelegt werden dürfen ([REDMINE-634](https://dev.informationgrid.eu/redmine/issues/634))
+- [Bug] [IGE] IGE: Allgemeine Einstellungen "Session refresh aktivieren" funktioniert nicht ([REDMINE-547](https://dev.informationgrid.eu/redmine/issues/547))
+- [Bug] [MAPCLIENT] MAPCLIENT: Fehler bei Hinzufügen von Layern aus einem Dienst ([REDMINE-687](https://dev.informationgrid.eu/redmine/issues/687))
+- [Bug] [iPlug IGE] Editor: Veröffentlichte Datensätze (Verfahren/Adressen) können nicht unterhalb von Strukturordnern eingefügt werden ([REDMINE-635](https://dev.informationgrid.eu/redmine/issues/635))
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.2.1/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.2.1/))
+
+
 ## Version 4.0.2
 
 Release: 11.04.2017
