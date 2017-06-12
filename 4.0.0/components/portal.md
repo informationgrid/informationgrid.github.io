@@ -123,7 +123,7 @@ Art der Installation auswählen.
 
 ![Portal Installer - Welcome](../images/portal_installer_welcome.png "Portal Installer - Welcome")
 
-Bei der Auswahl "Update" bleiben konfigurierte Einstellungen Ihres aktuellen Portals bei, ggf. ist es notwendig neue Konfigurationsmöglichkeiten festzulegen/einzustellen. Die Installation ist dann beendet und wird mit dem Neustart des Portals abgeschlossen.
+Bei der Auswahl "Update" bleiben konfigurierte Einstellungen Ihres aktuellen Portals bei, ggf. ist es notwendig neue Konfigurationsmöglichkeiten festzulegen/einzustellen. Die Aktualisierung führen Sie auf Ihrer aktuellen Portal-Installation durch und wird mit einem Neustart des Portals abgeschlossen.
 
 Bei einer Neuinstallation müssen weitere Angaben gemacht werden.
 
