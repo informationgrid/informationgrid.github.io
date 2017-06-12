@@ -178,14 +178,17 @@ Diese Einstellungen werden für die Verbindung mit dem iBus der InGrid Installat
 
 Diese Einstellungen werden für den integrierten Karten Client benötigt.
 
-![Portal Installer - Karten Client Optionen](../images/portal_installer_mapclient.png "Portal Installer - Karten Client Optionen")
+![Portal Installer - Webmap Client Einstellungen Upgrade](../images/portal_installer_update_mapclient_settings.png "Portal Installer -  Webmap Client Einstellungen Upgrade")
+
 
 | Parameter | Beschreibung |
 |-----------|--------------|
-| OpenSearch URL | Der Karten Client enthält eine Suchfunktionalität mit der referenzierte Karten im InGrid Datenbestand recherchiert werden können. Die Recherche erfolgt über die OpenSearch InGrid Schnittstelle, deren Zugriuffs-URL hier angegeben werden muss.|
-| Karten-URL | Basis-URL den Karten Clients. Wird für das Laden von Karten-Konfigurationen über Short-URLs benötgt.|
-| Webmapdatenverzeichnis | Datenverzeichnis des Karten Clients. Das Verzeichnis sollte nicht im Installationsverzeichnis des Karten Clients liegen, damit die Konfigurationen nicht bei einem Update überschrieben werden. (z.B.: /home/ingrid/webmapdata) |
-| Konfiguration überschreiben | Soll die Konfiguration des Karten Clients überschrieben werden? |
+| WebmapClient-Datenverzeichnis | Datenverzeichnis des Karten Clients. Das Verzeichnis sollte nicht im Installationsverzeichnis des Karten Clients liegen, damit die Konfigurationen nicht bei einem Update überschrieben werden. (z.B.: /home/ingrid/webmapdata) |
+| SMTP-Server (Host) | Host des SMTP-Servers...Per default 'localhost'. |
+| SMTP-Port |  |
+| SMTP-Benutzer | Benutzername für den SMTP-Server. |
+| SMTP-Passwort | Benutzerpasswort des angegebenen Benutzername für den SMTP-Server. |
+| Sender E-Mail-Adresse | Absender der E-Mails. |
 
 #### 12.) Einstellungen für das Codelist Repository
 
@@ -252,9 +255,31 @@ Die Aktualisierung erfolgt über den Installer.
 java -jar ingrid-portal-NEW-VERSION-installer.jar
 {% endhighlight %}
 
-Während der Installation bitte "Upgrade" auswählen und das Installationsverzeichnis Verzeichnis angeben.
+Während der Installation bitte "Upgrade" auswählen.
 
-Portal starten.
+![Portal Installer - Upgrade](../images/portal_installer_update.png "Portal Installer - Upgrade")
+
+Liegt bei Ihrer aktuellen Portal-Installationen ein Version kleiner gleich 4.0.2 vor, so müssen Sie die Einstellungen des Webmap Client's aktualisieren bzw. erweitern. Durch diese Aktualisierung werden auch alte Konfigurationsdaten des alten Webmap Client bereinigt. 
+
+![Portal Installer - Webmap Client Upgrade](../images/portal_installer_update_mapclient.png "Portal Installer - Webmap Client Upgrade")
+
+Geben Sie anschließend die neuen Webmap Client Einstellungen ein. Für die Einstellung "WebmapClient-Datenverzeichnis" geben Sie den Eltern-Pfad Ihres "WebmapClientData"-Verzeichnis (per Default: "/opt/ingrid/") an.
+
+{% highlight text %}
+Beispiel: 
+Ihr "WebmapClientData"-Verzeichnispfad lautet "/opt/ingrid/WebmapClientData", so geben Sie "/opt/ingrid/" an. 
+{% endhighlight %}
+
+Die weiteren Einstellungsmöglichkeiten dienten dem Webmap Client für das Versenden von E-Mails.
+
+![Portal Installer - Webmap Client Einstellungen Upgrade](../images/portal_installer_update_mapclient_settings.png "Portal Installer -  Webmap Client Einstellungen Upgrade")
+
+Zu guter Letzt geben Sie das Installationsverzeichnis Ihres aktuellen Portal an.
+
+![Portal Installer - Upgrade Installation](../images/portal_installer_update_path.png "Portal Installer - Upgrade Installation")
+
+
+Wurde die Installation fehlerfrei durchlaufen, so starten Sie ihr aktualisiertes Portal neu.
 
 {% highlight text %}
 sh INSTALL_DIR/apache-tomcat-xx/bin/startup.sh
