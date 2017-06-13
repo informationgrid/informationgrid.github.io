@@ -259,7 +259,7 @@ Während der Installation bitte "Update" auswählen.
 
 ![Portal Installer - Update](../images/portal_installer_update.png "Portal Installer - Update")
 
-Liegt bei Ihrer aktuellen Portal-Installationen ein Version kleiner gleich 4.0.2 vor, so müssen Sie die Einstellungen des Webmap Client's aktualisieren bzw. erweitern. Durch diese Aktualisierung werden auch alte Konfigurationsdaten des alten Webmap Client bereinigt. 
+Liegt bei Ihrer aktuellen Portal-Installationen ein Version kleiner gleich 4.0.2 vor, so müssen Sie die Einstellungen des Webmap Client's aktualisieren bzw. erweitern. Durch diese Aktualisierung werden auch alte Konfigurationsdaten des alten Webmap Client's bereinigt. 
 
 ![Portal Installer - Webmap Client Update](../images/portal_installer_update_mapclient.png "Portal Installer - Webmap Client Update")
 
@@ -270,7 +270,7 @@ Beispiel:
 Ihr "WebmapClientData"-Verzeichnispfad lautet "/opt/ingrid/WebmapClientData", so geben Sie "/opt/ingrid/" an. 
 {% endhighlight %}
 
-Die weiteren Einstellungsmöglichkeiten dienten dem Webmap Client für das Versenden von E-Mails.
+Die weiteren Einstellungsmöglichkeiten dienen dem Webmap Client für das Versenden von E-Mails.
 
 | Parameter | Beschreibung |
 |-----------|--------------|
@@ -283,7 +283,7 @@ Die weiteren Einstellungsmöglichkeiten dienten dem Webmap Client für das Verse
 
 ![Portal Installer - Webmap Client Einstellungen Update](../images/portal_installer_update_mapclient_settings.png "Portal Installer -  Webmap Client Einstellungen Update")
 
-Zu guter Letzt geben Sie das Installationsverzeichnis Ihres aktuellen Portal an.
+Zu guter Letzt geben Sie das Installationsverzeichnis Ihres aktuellen Portals an.
 
 ![Portal Installer - Update Installation](../images/portal_installer_update_path.png "Portal Installer - Update Installation")
 
