@@ -565,9 +565,9 @@ Mit einem Klick auf die Schaltfläche _**Hinzufügen**_ werden die Angaben in da
 ### Der Verschlagwortungsassistent
 
 
-Zur fachlichen Verschlagwortung nutzt der InGridCatalog sowohl den deutschen Umweltthesaurus UMTHES als auch den europäischen Umweltthesaurus GEMET (siehe auch [Der Thesaurus-Navigator](#maintanance-of-objects-6) ).
+Zur fachlichen Verschlagwortung kann der InGridCatalog sowohl den deutschen Umweltthesaurus UMTHES als auch den europäischen Umweltthesaurus GEMET nutzen (siehe auch [Der Thesaurus-Navigator](#maintanance-of-objects-6) ).
 
-Über den [Semantic Network Service (SNS)](http://www.semantic-network.de/) des Umweltbundesamtes in Dessau-Rosslau wird aus den bereits ausgefüllten Textfeldern eine Vorschlagsliste für Thesaurusbegriffe zur Verschlagwortung erstellt.
+Aus den bereits ausgefüllten Textfeldern wird eine Vorschlagsliste für Thesaurusbegriffe zur Verschlagwortung erstellt.
 
 Sie können durch Anklicken einen oder mehrere (Strg-Mausklick) Begriffe auswählen und sie über die Schaltfläche „>“ zu der Liste _Übernehmen_ hinzufügen. Über die Schaltfläche „>>“ können alle Begriffe in die Liste übernommen werden. Die Schaltfläche „<“ entfernt die markierten Begriffe wieder aus der Liste und die Schaltfläche „<<“ entfernt alle Begriffe aus der Liste.
 
@@ -580,9 +580,11 @@ Durch einen Klick auf die Schaltfläche _Übernehmen_ werden alle Begriffe aus d
 
 Ein Thesaurus ist eine hierarchisch strukturierte begrenzte Liste von Bezeichnungen, die der natürlichen Sprache entnommen sind. Er soll es ermöglichen, die Inhalte (Begriffe, Vorgänge, Gegenstände) der umweltrelevanten Fachgebiete mit einheitlich benutzten Bezeichnungen wiederzugeben bzw. zu umschreiben. Eine einheitliche Beschreibung ermöglicht wiederum eine gezielte Suche mit weitgehend vollständigem Suchergebnis.
 
-Der InGridCatalog (IGC) verwendet den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt". Das Wortgut des europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) ist als Untermenge in den UMTHES integriert.
+Der InGridCatalog (IGC) kann folgende Thesauri verwenden:
 
+* den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt".
 Der UMTHES wird über den [Semantic Network Service (SNS)](http://www.semantic-network.de/) vom Umweltbundesamt zur Verfügung gestellt.
+* den europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) .
 
 **Hierarchiebaum**
 
@@ -730,9 +732,11 @@ Außerdem ist es über den Strukturbaum möglich, ausgehend von einer Adresse, d
 
 Ein Thesaurus ist eine hierarchisch strukturierte begrenzte Liste von Bezeichnungen, die der natürlichen Sprache entnommen sind. Er soll es ermöglichen, die Inhalte (Begriffe, Vorgänge, Gegenstände) der umweltrelevanten Fachgebiete mit einheitlich benutzten Bezeichnungen wiederzugeben bzw. zu umschreiben. Eine einheitliche Beschreibung ermöglicht wiederum eine gezielte Suche mit weitgehend vollständigem Suchergebnis.
 
-Der InGridCatalog (IGC) verwendet den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt". Das Wortgut des europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) ist als Untermenge in den UMTHES integriert.
+Der InGridCatalog (IGC) kann folgende Thesauri verwenden:
 
+* den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt".
 Der UMTHES wird über den [Semantic Network Service (SNS)](http://www.semantic-network.de/) vom Umweltbundesamt zur Verfügung gestellt.
+* den europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) .
 
 **Hierarchiebaum**
 
@@ -786,13 +790,13 @@ Die Schaltfläche _Keine auswählen_ entfernt alle Häkchen. Die Schaltfläche _
 
 **Thema: Fachwörterbuch**
 
-Sie können auch gezielt nach Begriffen aus dem Fachwörterbuch, also dem UMTHES, dem Umweltthesaurus des Umweltbundesamtes, suchen.
+Sie können auch gezielt nach Begriffen aus dem Fachwörterbuch, also dem UMTHES, dem Umweltthesaurus des Umweltbundesamtes, oder dem GEMET suchen.
 
-Hierzu geben sie unter _Thema / Fachwörterbuch_ einen Begriff ein. Über die Schaltfläche _In Thesaurus suchen_ erhalten Sie die zu diesem Begriff im UMTHES bereitgestellten Thesaurus-Begriffe. Sie werden unter _Ähnliche Begriffe_ angezeigt.
+Hierzu geben sie unter _Thema / Fachwörterbuch_ einen Begriff ein. Über die Schaltfläche _In Thesaurus suchen_ erhalten Sie die zu diesem Begriff im Thesaurus bereitgestellten Thesaurus-Begriffe. Sie werden unter _Ähnliche Begriffe_ angezeigt.
 
 Sie können einen oder mehrere Begriffe über die Kontrollkästchen anwählen und über die Schaltfläche _Übernehmen_ der Liste der _Suchbegriffe_ hinzufügen.
 
-Möchten Sie einen der Begriffe weiter eingrenzen oder aber allgemeiner fassen, so können Sie ihn anklicken und erhalten die im UMTHES vorhanden spezielleren _Unterbegriffe_ als auch die allgemeineren _Oberbegriffe_ . Die zu dem Begriff vorhandenen _Synonyme_ werden Ihnen ebenfalls angeboten. Auch diese Begriffe können wiederum ausgewählt und in die Liste der _Suchbegriffe_ übernommen werden.
+Möchten Sie einen der Begriffe weiter eingrenzen oder aber allgemeiner fassen, so können Sie ihn anklicken und erhalten die im Thesaurus vorhandenen spezielleren _Unterbegriffe_ als auch die allgemeineren _Oberbegriffe_ . Die zu dem Begriff vorhandenen _Synonyme_ werden Ihnen ebenfalls angeboten. Auch diese Begriffe können wiederum ausgewählt und in die Liste der _Suchbegriffe_ übernommen werden.
 
 Über _Gesuchtes Objekt enthält_ können Sie zusätzlich auswählen, ob alle gewählten Begriffe enthalten sein sollen (UND-Suche) oder nur einer der Begriffe enthalten sein muss (ODER-Suche).
 
@@ -850,9 +854,11 @@ Mithilfe dieser Funktion können sie nach einer speziellen _Straße_ , einer _PL
 
 Ein Thesaurus ist eine hierarchisch strukturierte begrenzte Liste von Bezeichnungen, die der natürlichen Sprache entnommen sind. Er soll es ermöglichen, die Inhalte (Begriffe, Vorgänge, Gegenstände) der umweltrelevanten Fachgebiete mit einheitlich benutzten Bezeichnungen wiederzugeben bzw. zu umschreiben. Eine einheitliche Beschreibung ermöglicht wiederum eine gezielte Suche mit weitgehend vollständigem Suchergebnis.
 
-Der InGridCatalog (IGC) verwendet den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt". Das Wortgut des europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) ist als Untermenge in den UMTHES integriert.
+Der InGridCatalog (IGC) kann folgende Thesauri verwenden:
 
+* den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt".
 Der UMTHES wird über den [Semantic Network Service (SNS)](http://www.semantic-network.de/) vom Umweltbundesamt zur Verfügung gestellt.
+* den europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) .
 
 **Hierarchiebaum**
 
@@ -1109,6 +1115,8 @@ Unter dem Untermenüpunkt _Katalogeinstellungen_ kann der Katalogadministrator d
 
 Weiterhin kann die Workflow-Kontrolle eingeschaltet sowie festgelegt werden, ob und nach wie vielen Tagen ein _Überarbeiten_ der Metadaten-Objekte (Verfallsdatum) gefordert wird (siehe auch [Konzept der Qualitätssicherung (Der Workflow)](#quality-assurance-0) ).
 
+Die Sortierung der Objekte/Adressen im Hierarchiebaum in der Erfassung kann ebenfalls so angepasst werden, dass anstelle des Titels, zuerst nach der Klasse sortiert wird. Dadurch werden die Objekte/Adressen derselben Klasse zusammenhängend dargestellt.
+
 Hinweis: Um ein Minimum an Aktualität eines Metadaten-Katalogs zu gewährleisten, wird empfohlen, das _Überarbeiten_ einzuschalten und einen Wiedervorlagezeitraum von höchstens einem Jahr (365 Tage) anzugeben.
 
 Die Einstellungen müssen über die Schaltfläche _Speichern_ abgeschlossen werden und sind dann sofort aktiv.
@@ -1146,7 +1154,7 @@ Die Einstellungen müssen über die Schaltfläche _Speichern_ abgeschlossen werd
 
 **Konzept der Nutzerverwaltung des InGridEditors**
 
-Der InGridEditor (IGE) ist eine Komponente der Portal-Software InGrid, die in erster Linie für das Umweltportal Deutschland PortalU konzipiert und weiterentwickelt wird. Durch die Verknüpfung der Nutzverwaltungen des Umweltportals und des IGEs ergibt sich der Vorteil, dass sich ein Nutzer nur einmal zentral im Portal (unter _Mein PortalU_ ) oder in einer anderen externen Benutzerverwaltung anmelden muss.
+Der InGridEditor (IGE) ist eine Komponente der Portal-Software InGrid, die in erster Linie für das Umweltportal Deutschland InGrid-Portal konzipiert und weiterentwickelt wird. Durch die Verknüpfung der Nutzverwaltungen des Umweltportals und des IGEs ergibt sich der Vorteil, dass sich ein Nutzer nur einmal zentral im Portal (unter _Mein InGrid-Portal_ ) oder in einer anderen externen Benutzerverwaltung anmelden muss.
 
 Die IGE-Nutzerrechte, die sowohl Schreibrechte als auch das Recht zur Qualitätssicherung umfassen können, werden in der [Gruppenadministration](#hierarchy-maintenance-3) der IGE-Nutzerverwaltung festgelegt. Zunächst werden Gruppen definiert, die spezifische Rechte für einen Teilbereich des Katalogs aufweisen und anschließend die Nutzer einer oder mehreren Gruppen zugeordnet.
 
@@ -1164,7 +1172,7 @@ Der Katalog-Administrator kann Metadaten-Autoren unter beliebigen Metadaten-Admi
 
 Vorbereitende Schritte:
 
-* Der Nutzer muss in der externen Benutzerverwaltung registriert worden sein (Portal-Nutzer). Wird als externe Nutzerverwaltung das Portal verwendet, kann sich der Nutzer selbst anmelden oder vom Administrator im Portal unter_Mein PortalU_angemeldet werden.
+* Der Nutzer muss in der externen Benutzerverwaltung registriert worden sein (Portal-Nutzer). Wird als externe Nutzerverwaltung das Portal verwendet, kann sich der Nutzer selbst anmelden oder vom Administrator im Portal unter_Mein InGrid-Portal_angemeldet werden.
 * Der Nutzer erhält eine Email zur Bestätigung seiner Anmeldung. Mit der Bestätigung des Links in der Email wird die Anmeldung aktiviert.
 * Um dem neuen Nutzer passende Rechte zuordnen zu können, muss in der [Gruppenadministration](#user-administration-2) der IGE-Nutzerverwaltung geprüft werden, ob bereits eine oder mehrere Gruppen existieren, die mit entsprechenden Rechten ausgestattet sind. Ist dies nicht der Fall, müssen eine oder mehrere neue Gruppen angelegt werden.
 
@@ -1627,15 +1635,17 @@ Nach dem Klicken auf den Button _Ersetzen & Löschen_ und anschließendem Bestä
 ### Suchbegriffe
 
 
-Der InGridCatalog (IGC) verwendet den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt". Das Wortgut des europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) ist als Untermenge in den UMTHES integriert.
+Der InGridCatalog (IGC) verwendet, je nach Konfiguration, folgende Thesauri:
 
+* den Umweltthesaurus (UMTHES) des Umweltbundesamtes in Dessau-Rosslau. Er enthält mehr als 30.000 Fachbegriffe aus dem Themengebiet "Umwelt".
 Der UMTHES wird über den [Semantic Network Service (SNS)](http://www.semantic-network.de/) vom Umweltbundesamt zur Verfügung gestellt.
+* den europäischen Umweltthesaurus [GEMET (GEneral Multilingual Environmental Thesaurus)](http://www.eionet.europa.eu/gemet) .
 
-Die Thesaurus-Deskriptoren werden im IGC sowohl als SNS-IDs als auch als Begriff gespeichert. Sowohl der UMTHES als auch der GEMET werden gepflegt und entwickeln sich weiter. Daher erfährt auch der SNS eine regelmäßige Aktualisierung.
+Die Thesaurus-Deskriptoren werden im IGC sowohl als IDs als auch als Begriff gespeichert. Sowohl der UMTHES als auch der GEMET werden gepflegt und entwickeln sich weiter. Daher erfährt der Thesaurus eine regelmäßige Aktualisierung.
 
-Nach jeder Aktualisierung des SNS muss der Datenbestand des IGC auf seine Konsistenz mit der neusten Version des SNS überprüft und ggf. angepasst werden. Dies kann der Katalogadministrator automatisch über die Funktion _Suchbegriffe_ im Menüpunkt _Gesamtkatalogmanagement_ durchführen.
+Nach jeder Aktualisierung des Thesaurus muss der Datenbestand des IGC auf seine Konsistenz mit der neusten Version des Thesaurus überprüft und ggf. angepasst werden. Dies kann der Katalogadministrator automatisch über die Funktion _Suchbegriffe_ im Menüpunkt _Gesamtkatalogmanagement_ durchführen.
 
-Der Aktualisierungsvorgang wird **online** durchgeführt, indem Sie den Button _Aktualisierung starten_ anklicken. In diesem Fall wird SNS online über das Netz abgefragt.
+Der Aktualisierungsvorgang wird **online** durchgeführt, indem Sie den Button _Aktualisierung starten_ anklicken. In diesem Fall wird der Thesaurus online über das Netz abgefragt.
 
 Nach der Aktualisierung werden einige Informationen zum letzten Prozess in dem Informationskasten angezeigt.
 
@@ -1644,25 +1654,22 @@ Detaillierte Informationen zu jeder Veränderung werden in der darunter stehende
 * **_UMTHES Term_**:
 Begriff aus dem UMTHES-Thesaurus
 * **_GEMET Term_**:
-Begriff aus dem GEMET-Thesaurus
+Begriff aus dem GEMET-Thesaurus. Der Begriff wird auch noch in englisch mit dem Zusatz "(alternativ)" angezeigt, wenn der Thesaurus so konfiguriert ist.
 * **_Freier Term_**:
 Freier Suchbegriff (kein Thesaurus Deskriptor)
 
 Zu jedem geänderten Begriff wird die _Ergriffene Maßnahme_ angezeigt. Es gibt folgende Möglichkeiten:
 
 * **_Deskriptor in freien Suchbegriff überführt_**:
-Ein Thesaurusbegriff ist nicht mehr im SNS als Deskriptor enthalten. Er wird von einem Thesaurus-Suchbegriff in einen freien Suchbegriff überführt.
-* **_Freien Suchbegriff ersetzt durch Deskriptor "_Suchbegriff_" (UMTHES Term)_**:
-Ein freier Suchbegriff wird als Thesaurus-Deskriptor identifiziert und von einem freien Suchbegriff in einen Thesaurus(UMTHES)-Suchbegriff überführt.
-* **_Freien Suchbegriff ergänzt mit Deskriptor "_Suchbegriff_" (UMTHES Term)_**:
+Ein Thesaurusbegriff ist nicht mehr im Thesaurus als Deskriptor enthalten. Er wird von einem Thesaurus-Suchbegriff in einen freien Suchbegriff überführt.
+* **_Freien Suchbegriff ersetzt durch Deskriptor "_Suchbegriff_" (UMTHES/GEMET Term)_**:
+Ein freier Suchbegriff wird als Thesaurus-Deskriptor identifiziert und von einem freien Suchbegriff in einen Thesaurus-Suchbegriff überführt.
+* **_Freien Suchbegriff ergänzt mit Deskriptor "_Suchbegriff_" (UMTHES/GEMET Term)_**:
 Ein freier Suchbegriff wird als Synonym zu einem Thesaurus-Deskriptor identifiziert. Es wird der zugehörige Thesaurus-Deskriptor als Thesaurus-Suchbegriff ergänzt. Der freie Suchbegriff bleibt erhalten.
-* **_Deskriptor aktualisiert, ist jetzt "_GEMET-Suchbegriff_" (GEMET Term), "_UMTHES-Suchbegriff_" (UMTHES)_**:
-Ein UMTHES-Suchbegriff wird als GEMET-Deskriptor mit gleicher SNS-ID aber anderem Namen identifiziert. Der GEMET-Name wird hinzugefügt.
-* **_Deskriptor ERSETZT durch Deskriptor "_GEMET-Suchbegriff_" (GEMET Term), "_UMTHES-Suchbegriff_" (UMTHES)_**:
-Der Name eines Thesaurus-Suchbegriffs wird als GEMET-Deskriptor mit einer anderen SNS-ID identifiziert. Die SNS-ID wird ersetzt. Der Name des GEMET-Deskriptors als auch der des zugehörigen UMTHES-Deskriptors werden hinzugefügt.
-* **_Deskriptor in freien Suchbegriff überführt
-Deskriptor ERSETZT durch Deskriptor "_GEMET-Suchbegriff_" (GEMET Term), "_UMTHES-Suchbegriff_" (UMTHES)_**:
-Ein Thesaurus-Term wurde im UMTHES von einem Deskriptor in den Status eines Synonyms überführt. Das UMTHES-Synonym ist aber ein GEMET-Deskriptor. Der Thesaurusbegriff wird in die freien Suchbegriffe überführt. Die zugehörige GEMET- und UMTHES-Deskriptoren werden als Thesaurus-Suchbegriffe ergänzt.
+* **_Deskriptor aktualisiert, ist jetzt "_Suchbegriff_" (UMTHES/GEMET Term)_**:
+Ein Thesaurus-Deskriptor hat seinen Namen geändert, der Name wird aktualisiert.
+* **_Deskriptor ERSETZT durch Deskriptor "_Suchbegriff_" (UMTHES/GEMET Term)_**:
+Ein Thesaurus-Deskriptor hat seine ID geändert, die ID wird aktualisiert.
 
 Abschließend wird die Anzahl der Objekte und Adressen angezeigt, in denen der veränderte Suchbegriff verwendet wurde.
 
@@ -1681,7 +1688,7 @@ Nach jeder Aktualisierung des SNS muss der Datenbestand des IGC auf seine Konsis
 
 Die Aktualisierung der Suchbegriffe im IGC kann **offline** über eine vom SNS gelieferte Datei durchgeführt werden. Hierzu laden Sie die Datei über den Button _Durchsuchen_ und starten den Vorgang über den Button _Aktualisierung starten_ .
 
-Alternativ können Sie den Aktualisierungsvorgang auch _online_ durchführen, indem Sie Button _Aktualisierung starten_ anklicken, ohne vorher eine Datei geladen zu haben. In diesem Fall wird SNS online über das Netz abgefragt. Diese Methode hat den Vorteil, dass vorher keine Datei vom Umweltbundesamt oder der KST PortalU zur Verfügung gestellt werden müssen, dauert aber je nach Netzauslastung evtl. etwas länger.
+Alternativ können Sie den Aktualisierungsvorgang auch _online_ durchführen, indem Sie Button _Aktualisierung starten_ anklicken, ohne vorher eine Datei geladen zu haben. In diesem Fall wird SNS online über das Netz abgefragt. Diese Methode hat den Vorteil, dass vorher keine Datei vom Umweltbundesamt oder der KST InGrid-Portal zur Verfügung gestellt werden müssen, dauert aber je nach Netzauslastung evtl. etwas länger.
 
 Nach der Aktualisierung werden einige Informationen zum letzten Prozess in dem Informationskasten angezeigt.
 
@@ -1792,4 +1799,3 @@ Der Import wird asynchron ausgeführt. Je nach Menge der zu importierenden Objek
 Im Fenster _Informationen zum letzten Prozess_ werden Informationen zum letzten angestoßenen Importvorgang angezeigt. Ist der Vorgang beendet, wird unter _Informationen zum letzten Importprozess_ ein _link_ angezeigt.
 
 Klicken Sie auf den _link_ und laden Sie damit die Datei log.txt vom Server. In ihr sind die Informationen zum Importvorgang (Verlaufsmeldungen, Warnungen und Fehlermeldungen) enthalten. Sie können sie mit einem üblichen Editor, wie z.B. WordPad, ansehen.
-
