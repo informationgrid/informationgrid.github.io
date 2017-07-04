@@ -4,6 +4,79 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.0.3
+
+Release: 14.06.2017
+
+### Änderungen
+
+#### Neues Profil "UVP"
+
+Für Portal und IGE liegt nun ein neues Profil "UVP" (Umweltverträglichkeitsprüfungen) vor. Damit ist es möglich, die europäische UVP-Änderungsrichtlinie 2014/52/EU umzusetzen. Umweltverträglichkeitsprüfungen, vorgelagerte Verfahren und ausländische Verfahren können über die InGrid Editor Oberfläche komfortabel erfasst und verwaltet werden. Im Portal werden die Daten responsibel aufbereitet und dargestellt.
+
+Das InGrid Portal erhält ein neues, responsives Layout und ist damit fit für die Verwendung auf Tablets und Smartphones.
+
+![UVP Profil für IGE und Portal](../images/uvp_profil.png "UVP Profil für IGE und Portal")
+
+#### DOCKER ready
+
+Verschiedene Komponenten wurden für den Einsatz mit docker container vorbereitet. Die UVP Installationen werden über docker-compose orchestriert. Dies erleichtert die Testbarkeit und die Aktualisierung der Systeme.
+
+#### Verbesserung der Konfigurierbarkeit des InGrid Editors
+
+Die Konfigurationsmöglichkeiten des InGrid Editors wurden im Zuge der UVP-Profil Erstellung wesentlich verbessert. Neben der Anpassung von vorhandenen Feldelementen und Validierungsregeln ist es auch möglich komplett neue Feldelemente über ein profil zu integrieren. Einzelne Verhaltensweisen können über die Katalogadministration parametrisiert werden.
+
+#### Einsatz des GEMET als Thesaurus
+
+Neben dem UMTHES Thesaurus des UBA ist nun auch der GEMET Thesarus im INSPIRE-kompatiblen Metadateneditor möglich.
+
+#### Unterstützung des AdV-Metadaten-Profiles, Verbesserung der INSPIRE-Kompatibilität
+
+Der InGrid Metadateneditor unterstützt nun auch das AdV Metadatenprofil. Die Kompatiblität mit der INSPIRE TG wurde weiter erhöht.
+
+
+### Weitere Änderungen
+
+- [Feature] [System] Ersatz des UMTHES-Wortguts durch GEMET ([REDMINE-18] (https://dev.informationgrid.eu/redmine/issues/18))
+- [Feature] [IGE] Verbesserung der Konfigurierbarkeit des IGE ([REDMINE-155] (https://dev.informationgrid.eu/redmine/issues/155))
+- [Feature] [IGE] IGE: Schema location und verwendete CodeListen in Codespace Elementen sollen mit INSPIRE TG abgeglichen und ggf. angepasst werden. ([REDMINE-201] (https://dev.informationgrid.eu/redmine/issues/201))
+- [Feature] [IGE] IGE: Eintrag in "lineage/source/.../description" wird nicht nach Datengrundlage übernommen ([REDMINE-204] (https://dev.informationgrid.eu/redmine/issues/204))
+- [Feature] [IGE] IGE: Überprüfung Funktionalität Checkbox "INSPIRE-relevanter Datensatz" ([REDMINE-368] (https://dev.informationgrid.eu/redmine/issues/368))
+- [Feature] [IGE] Neue Checkbox "AdV kompatibel" ([REDMINE-369] (https://dev.informationgrid.eu/redmine/issues/369))
+- [Feature] [IGE] IGE: Neues Feld "administrativeArea" ([REDMINE-375] (https://dev.informationgrid.eu/redmine/issues/375))
+- [Feature] [IGE] IGE: Objektartenkatalog (language) ([REDMINE-379] (https://dev.informationgrid.eu/redmine/issues/379))
+- [Feature] [IGE] bei Import der Felder useConstraints und useLimitation: Ausblenden der Textteile "Nutzungsbedingungen: " und "Nutzungseinschränkungen: " ([REDMINE-384] (https://dev.informationgrid.eu/redmine/issues/384))
+- [Feature] [IGE] IGE: Neues Feld "AdV-Produktgruppe" ([REDMINE-388] (https://dev.informationgrid.eu/redmine/issues/388))
+- [Feature] [Portal] PORTAL: Anbindung MapClient bereinigen und Altlasten entfernen ([REDMINE-392] (https://dev.informationgrid.eu/redmine/issues/392))
+- [Feature] [IGE] IPLUG IGE: IGE iPlug nur zur Suche installieren, Deaktivierung von Erfassungsfunktionalität ([REDMINE-410] (https://dev.informationgrid.eu/redmine/issues/410))
+- [Feature] [IGE] Codeliste für ServiceTypeVersion erweitern ([REDMINE-533] (https://dev.informationgrid.eu/redmine/issues/533))
+- [Feature] [Portal] Portal: Ausblenden des Schlagwortes "opendata" ([REDMINE-542] (https://dev.informationgrid.eu/redmine/issues/542))
+- [Feature] [Portal] PORTAL: Erweiterung des Suchbegriffs per Default ([REDMINE-677] (https://dev.informationgrid.eu/redmine/issues/677))
+- [Feature] [System] System: Neue Eigenschaft "indexOnStartup" in iPlugs ([REDMINE-728] (https://dev.informationgrid.eu/redmine/issues/728))
+
+- [Bug] [Doku] Dokumentation für neuen MapClient wurde auf ingrid-oss.eu noch nicht angepasst. ([REDMINE-453] (https://dev.informationgrid.eu/redmine/issues/453))
+- [Bug] [IGE] IGE: ISO Import veröffentlicht unvollständige Adressen ([REDMINE-647] (https://dev.informationgrid.eu/redmine/issues/647))
+- [Bug] [Portal] Portal: Link zur Freischaltung eines Portal-Benutzer falsch ([REDMINE-648] (https://dev.informationgrid.eu/redmine/issues/648))
+- [Bug] [IGE] IGE: Zusätzliche Felder können nicht mehr geleert werden ([REDMINE-659] (https://dev.informationgrid.eu/redmine/issues/659))
+- [Bug] [IGE] IGE: Editor lädt nicht, wenn Profil gewechselt wurde ([REDMINE-698] (https://dev.informationgrid.eu/redmine/issues/698))
+- [Bug] [IGE] IGE: ISO-Import von useConstraints und useLimitations an Struktur GDI-DE anpassen ([REDMINE-704] (https://dev.informationgrid.eu/redmine/issues/704))
+- [Bug] [iPlug Management] iPlug-Management: Abfragen der Codelisten dauert lang ([REDMINE-705] (https://dev.informationgrid.eu/redmine/issues/705))
+- [Bug] [IGE] IGE: In der Nutzerverwaltung -> Gruppenadministration -> Gruppenliste wird der letzte Eintrag verdeckt ([REDMINE-721] (https://dev.informationgrid.eu/redmine/issues/721))
+- [Bug] [Mapclient] Mapclient: "Link kopieren" - Funktionalität geht nicht ([REDMINE-723] (https://dev.informationgrid.eu/redmine/issues/723))
+- [Bug] [Portal] PORTAL: Facettierung der Suche auf Adressen zeigt XML Button wenn alle Ergebnisse angezeigt werden ([REDMINE-727] (https://dev.informationgrid.eu/redmine/issues/727))
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.3/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.3/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.0.3/))
+- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/4.0.3/))
+- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.3/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.3/))
+
+
 ## Version 4.0.2.1
 
 Release: 01.06.2017
