@@ -105,6 +105,28 @@ iPlug starten:
 sh start.sh start
 {% endhighlight %}
 
+### Migration nach PostgreSQL
+
+Die Migration des Katalogs nach PostgreSQL wurde für das IGE iPlug in der Version 4.0.2 final getestet und beschrieben.
+Der vorgeschlagene Weg zur Migration ist also:
+* das IGE iPlug auf die Version 4.0.2 oder 4.0.2.1 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle)
+* danach die Migration der Datenbank nach PostgreSQL vornehmen, dies ist detailliert beschrieben im installierten IGE iPlug unter
+{% highlight text %}
+conf\sql\migration2postgres
+{% endhighlight %}
+* die Migration wird mit dem Tool EDB Postgres Migration Toolkit per Kommandozeile ausgeführt. Dieses Tool kann von einer normalen Postgres Installation via "StackBuilder" nachinstalliert werden und funktioniert auf Windows und Linux.
+https://www.enterprisedb.com/products-services-training/products-overview/postgres-plus-solution-pack/migration-toolkit
+
+Nach der Migration kann das IGE iPlug unter PostgreSQL auf die aktuellste Version aktualisiert werden.
+
+Liegt das IGE iPlug schon in einer höheren Version als 4.0.2 vor, so kann die Migration des Katalogs ebenfalls gemäß obiger Beschreibung ausgeführt werden, allerdings müssen dann eventuell noch Nacharbeiten ausgeführt werden, um z.B. Indexe zu migrieren.
+
+Hintergrund:
+Die Skripte zur Migration beziehen sich auf den Zustand des Katalogs zum Zeitpunkt des IGE iPlugs in der Version 4.0.2.x.
+Alle nachfolgenden Versionen des IGE iPlugs aktualisieren dann den Katalog direkt unter PostgreSQL beim Start des IGE iPlugs.
+D.h. bei der Migration eines Katalogs in einer höheren Version sind eventuell zu tätigende Fixes in den Skripten nicht enthalten, so werden z.B. die Indexe nicht migriert und müssen per SQL auf dem Postgres Katalog manuell angelegt werden.
+
+
 ## Betrieb
 
 {% highlight text %}
