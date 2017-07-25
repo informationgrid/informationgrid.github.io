@@ -126,6 +126,8 @@ Die Skripte zur Migration beziehen sich auf den Zustand des Katalogs zum Zeitpun
 Alle nachfolgenden Versionen des IGE iPlugs aktualisieren dann den PostgreSQL Katalog direkt beim Start des IGE iPlugs.
 D.h. bei der initialen Migration eines Katalogs in einer höheren Version als 4.0.2.x sind eventuell zu tätigende Fixes in den Migrations Skripten nicht enthalten, so werden z.B. die Indexe nicht migriert und müssen per SQL auf dem Postgres Katalog manuell nachgetragen werden.
 
+Die Einstellungen der Datenbankverbindung für PostgreSQL ist auch beschrieben unter [Datenbank](#datenbank)
+
 
 ## Betrieb
 
@@ -235,6 +237,8 @@ iplug.database.password=my_pwd
 iplug.database.schema=
 iplug.database.dialect=org.hibernate.dialect.PostgreSQLDialect
 {% endhighlight %}
+
+Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](##migration-nach-postgresql)
 
 
 ## FAQ
