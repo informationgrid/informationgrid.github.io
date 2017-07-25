@@ -430,7 +430,7 @@ PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek/WEB-INF/classes/
 		
 {% highlight text %}
 PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes/
-{% highlight text %}
+{% endhighlight %}
 
 * default-datasource.properties:
 {% highlight text %}
@@ -439,7 +439,7 @@ PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes
 		hibernate.password=...
 		hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 		hibernate.jdbcUrl=jdbc:postgresql://localhost:5432/mdek
-{% highlight text %}
+{% endhighlight %}
 
 Die Dateien werden bei einer Neuinstallation des Portals automatisch mit den eingegebenen PostgreSQL Einstellungen versorgt.
 Soll ein bestehendes Portal auf Postgres umgeschaltet werden (auf migrierte Datenbanken), so müssen die Dateien manuell angepasst werden.
