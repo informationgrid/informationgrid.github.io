@@ -107,9 +107,9 @@ sh start.sh start
 
 ### Migration nach PostgreSQL
 
-Die Migration des Katalogs nach PostgreSQL wurde für das IGE iPlug in der Version 4.0.2.x final getestet und beschrieben.
+Die Migration des Katalogs nach PostgreSQL wurde für das IGE iPlug in der Version 4.0.2 final getestet und beschrieben.
 Der vorgeschlagene Weg zur Migration ist also:
-* das IGE iPlug auf die Version 4.0.2 oder 4.0.2.1 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle)
+* das IGE iPlug auf die Version 4.0.2 oder 4.0.2.1 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle) Der Katalogzustand ist in diesen beiden Versionen identisch.
 * danach die Migration der Datenbank nach PostgreSQL vornehmen, dies ist detailliert beschrieben im installierten IGE iPlug unter
 {% highlight text %}
 conf\sql\migration2postgres
@@ -119,12 +119,12 @@ conf\sql\migration2postgres
 
 Nach der Migration kann das IGE iPlug, das dann auf dem PostgreSQL Katalog läuft, auf die aktuellste Version aktualisiert werden.
 
-Liegt das IGE iPlug schon in einer höheren Version als 4.0.2.x vor, so kann die Migration des Katalogs ebenfalls gemäß obiger Beschreibung ausgeführt werden, allerdings müssen dann eventuell noch Nacharbeiten ausgeführt werden, um z.B. Indexe zu migrieren.
+Liegt das IGE iPlug schon in einer höheren Version als 4.0.2.1 vor, so kann die Migration des Katalogs ebenfalls gemäß obiger Beschreibung ausgeführt werden, allerdings müssen dann eventuell noch Nacharbeiten ausgeführt werden, um z.B. Indexe zu migrieren.
 
 **Hintergrund:**
-Die Skripte zur Migration beziehen sich auf den Zustand des Katalogs zum Zeitpunkt des IGE iPlugs in der Version 4.0.2.x.
+Die Skripte zur Migration beziehen sich auf den Zustand des Katalogs zum Zeitpunkt des IGE iPlugs in der Version 4.0.2 bzw. 4.0.2.1. Der Katalogzustand ist in diesen beiden Versionen identisch.
 Alle nachfolgenden Versionen des IGE iPlugs aktualisieren dann den PostgreSQL Katalog direkt beim Start des IGE iPlugs.
-D.h. bei der initialen Migration eines Katalogs in einer höheren Version als 4.0.2.x sind eventuell zu tätigende Fixes in den Migrations Skripten nicht enthalten, so werden z.B. die Indexe nicht migriert und müssen per SQL auf dem Postgres Katalog manuell nachgetragen werden.
+D.h. bei der initialen Migration eines Katalogs in einer höheren Version als 4.0.2.1 sind eventuell zu tätigende Fixes in den Migrations Skripten nicht enthalten, so werden z.B. die Indexe nicht migriert und müssen per SQL auf dem Postgres Katalog manuell nachgetragen werden.
 
 Die Einstellungen der Datenbankverbindung für PostgreSQL ist auch beschrieben unter [Datenbank](#datenbank)
 
