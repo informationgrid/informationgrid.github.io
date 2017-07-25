@@ -284,16 +284,24 @@ https://dev.informationgrid.eu/csw?REQUEST=GetCapabilities&SERVICE=CSW
 
 **GetCapabilities, SOAP**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort.
+Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <GetCapabilities xmlns="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" outputSchema="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" />
 {% endhighlight %}
 
+**GetRecods, GET**
+
+Der Endpoint für den GET Request ergibt sich aus der Capabilities Antwort.
+
+{% highlight xml %}
+https://dev.informationgrid.eu/csw?REQUEST=GetRecords&SERVICE=CSW&elementSet=full&startPosition=1&maxRecords=10&resultType=results
+{% endhighlight %}
+
 **GetRecords, SOAP**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort.
+Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -321,7 +329,7 @@ https://dev.informationgrid.eu/csw?SERVICE=CSW&REQUEST=GetRecordById&VERSION=2.0
 
 **GetRecordById, SOAP**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort.
+Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
 
 {% highlight xml %}
 <GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -343,7 +351,7 @@ https://dev.informationgrid.eu/csw?SERVICE=CSW&REQUEST=DescribeRecord&VERSION=2.
 
 **DescribeRecord, SOAP**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort.
+Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
