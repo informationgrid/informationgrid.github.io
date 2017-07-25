@@ -266,6 +266,13 @@ Folgende Fehlerquellen können vorliegen:
 
 Bitte überprüfen Sie zunächst das log file.
 
+### Wie können alle Dokumente angefragt werden?
+
+Der Ablauf, um alle Dokumente aus der Schnittstelle zu erhalten, ist wie folgt. Mittels einer GetRecords-Anfrage (GET/POST), werden die ersten Dokumente (ungefiltert) angefragt. Danach verschiebt man mit Hilfe des **startPosition** Parameters den Cursor, um so die nachfolgenden Dokumente zu erhalten. Mit dem Parameter **maxRecords** gibt man an wieviele Dokumente mit einer Anfrage zurückgegeben werden sollen.
+
+In der Antwort erhält man außerdem über den Parameter **numberOfRecordsMatched** die maximale Trefferanzahl, welche für das Ende einer Schleife verwendet werden kann. Dazu eignet sich aber auch der Parameter **numberOfRecordsReturned**, der ebenfalls in der Antwort enthalten ist. Ist dieser Wert kleiner als **maxRecords**, so wurden alle Dokumente geholt.
+
+
 ### Wie kann eine CSW Schnittstelle getestet werden?
 
 Zum Testen eignen sich Tools wie SoapUI oder das Firefox-Plugin Poster:
@@ -291,12 +298,12 @@ Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als
 <GetCapabilities xmlns="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" outputSchema="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" />
 {% endhighlight %}
 
-**GetRecods, GET**
+**GetRecords, GET**
 
 Der Endpoint für den GET Request ergibt sich aus der Capabilities Antwort.
 
 {% highlight text %}
-https://dev.informationgrid.eu/csw?REQUEST=GetRecords&SERVICE=CSW&elementSet=full&startPosition=1&maxRecords=10&resultType=results
+https://dev.informationgrid.eu/csw?REQUEST=GetRecords&SERVICE=CSW&elementSetName=full&startPosition=1&maxRecords=10&resultType=results
 {% endhighlight %}
 
 **GetRecords, SOAP**
