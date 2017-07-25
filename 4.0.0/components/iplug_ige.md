@@ -238,7 +238,7 @@ iplug.database.schema=
 iplug.database.dialect=org.hibernate.dialect.PostgreSQLDialect
 {% endhighlight %}
 
-Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](##migration-nach-postgresql)
+Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](#migration-nach-postgresql)
 
 
 ## FAQ
