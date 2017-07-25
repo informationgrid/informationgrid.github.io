@@ -296,7 +296,7 @@ sh INSTALL_DIR/apache-tomcat-xx/bin/startup.sh
 
 ### Migration nach PostgreSQL
 
-Die Migration der Portal- bzw Mdek-Datenbank nach PostgreSQL wurde für das Portal in der Version 4.0.1 final getestet und beschrieben.
+Die Migration der Portal- bzw. Mdek-Datenbank nach PostgreSQL wurde für das Portal in der Version 4.0.1 final getestet und beschrieben.
 Der vorgeschlagene Weg zur Migration ist also:
 * das Portal auf die Version 4.0.1 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle)
 * danach die Migration der Datenbanken nach PostgreSQL vornehmen, dies ist detailliert beschrieben im installierten Portal unter
@@ -385,60 +385,50 @@ upgrade.server.url=http://INGRID_PORTAL_DOMAIN/update
 
 Die Einstellungen für die Postgres Datenbank erfolgen im Portal in folgenden Dateien:
 
+Verzeichnis *PORTAL_HOME/apache-tomcat/conf/Catalina/localhost*
+
+* *ingrid-portal-apps.xml*, *ROOT.xml*:
 {% highlight text %}
-PORTAL_HOME/apache-tomcat/conf/Catalina/localhost
+     url="jdbc:postgresql://localhost:5432/ingrid_portal"
+     driverClassName="org.postgresql.Driver"
+     username="postgres" password="..."
+     validationQuery="SELECT 1"
 {% endhighlight %}
 
-* ingrid-portal-apps.xml, ROOT.xml:
+* *ingrid-portal-mdek.xml*:
 {% highlight text %}
-		url="jdbc:postgresql://localhost:5432/ingrid_portal"
-		driverClassName="org.postgresql.Driver"
-		username="postgres" password="..."
-		validationQuery="SELECT 1"
+     url="jdbc:postgresql://localhost:5432/mdek"
+     ... (s.o.)
 {% endhighlight %}
 
-* ROOT.xml: s.o. ingrid-portal-apps.xml
-		
-* ingrid-portal-mdek.xml:
-{% highlight text %}
-		url="jdbc:postgresql://localhost:5432/mdek"
-		... (s.o.)
-{% endhighlight %}
+Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes*
 
+* *hibernate.cfg.xml*:
 {% highlight text %}
-PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes/
-{% endhighlight %}
-
-* hibernate.cfg.xml:
-{% highlight text %}
-		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+     <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 {% endhighlight %}
         
-* quartz.properties:
+* *quartz.properties*:
 {% highlight text %}
-        org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+     org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
 {% endhighlight %}
 
-{% highlight text %}
-PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek/WEB-INF/classes/
-{% endhighlight %}
+Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek/WEB-INF/classes*
 
-* hibernate.cfg.xml:
+* *hibernate.cfg.xml*:
 {% highlight text %}
-		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+     <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 {% endhighlight %}
 		
-{% highlight text %}
-PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes/
-{% endhighlight %}
+Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes*
 
-* default-datasource.properties:
+* *default-datasource.properties*:
 {% highlight text %}
-		hibernate.driverClass=org.postgresql.Driver
-		hibernate.user=postgres
-		hibernate.password=...
-		hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-		hibernate.jdbcUrl=jdbc:postgresql://localhost:5432/mdek
+     hibernate.driverClass=org.postgresql.Driver
+     hibernate.user=postgres
+     hibernate.password=...
+     hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+     hibernate.jdbcUrl=jdbc:postgresql://localhost:5432/mdek
 {% endhighlight %}
 
 Die Dateien werden bei einer Neuinstallation des Portals automatisch mit den eingegebenen PostgreSQL Einstellungen versorgt.
