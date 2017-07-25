@@ -385,9 +385,9 @@ upgrade.server.url=http://INGRID_PORTAL_DOMAIN/update
 
 Die Einstellungen für die Postgres Datenbank erfolgen im Portal in folgenden Dateien:
 
-Verzeichnis *PORTAL_HOME/apache-tomcat/conf/Catalina/localhost*
+* Verzeichnis *PORTAL_HOME/apache-tomcat/conf/Catalina/localhost*
 
-* *ingrid-portal-apps.xml*, *ROOT.xml*:
+  * *ingrid-portal-apps.xml*, *ROOT.xml*:
 {% highlight text %}
      url="jdbc:postgresql://localhost:5432/ingrid_portal"
      driverClassName="org.postgresql.Driver"
@@ -395,34 +395,34 @@ Verzeichnis *PORTAL_HOME/apache-tomcat/conf/Catalina/localhost*
      validationQuery="SELECT 1"
 {% endhighlight %}
 
-* *ingrid-portal-mdek.xml*:
+  * *ingrid-portal-mdek.xml*:
 {% highlight text %}
      url="jdbc:postgresql://localhost:5432/mdek"
      ... (s.o.)
 {% endhighlight %}
 
-Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes*
+* Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes*
 
-* *hibernate.cfg.xml*:
+  * *hibernate.cfg.xml*:
 {% highlight text %}
      <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 {% endhighlight %}
         
-* *quartz.properties*:
+  * *quartz.properties*:
 {% highlight text %}
      org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
 {% endhighlight %}
 
-Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek/WEB-INF/classes*
+* Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek/WEB-INF/classes*
 
-* *hibernate.cfg.xml*:
+  * *hibernate.cfg.xml*:
 {% highlight text %}
      <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 {% endhighlight %}
 		
-Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes*
+* Verzeichnis *PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes*
 
-* *default-datasource.properties*:
+  * *default-datasource.properties*:
 {% highlight text %}
      hibernate.driverClass=org.postgresql.Driver
      hibernate.user=postgres
