@@ -293,6 +293,30 @@ Wurde die Aktualisierung fehlerfrei durchlaufen, so starten Sie Ihr aktualisiert
 sh INSTALL_DIR/apache-tomcat-xx/bin/startup.sh
 {% endhighlight %}
 
+
+### Migration nach PostgreSQL
+
+Die Migration der Portal- bzw Mdek-Datenbank nach PostgreSQL wurde für das Portal in der Version 4.0.1 final getestet und beschrieben.
+Der vorgeschlagene Weg zur Migration ist also:
+* das Portal auf die Version 4.0.1 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle)
+* danach die Migration der Datenbanken nach PostgreSQL vornehmen, dies ist detailliert beschrieben im installierten Portal unter
+{% highlight text %}
+sql/migration2postgres
+{% endhighlight %}
+* die Migration wird mit dem Tool EDB Postgres Migration Toolkit per Kommandozeile ausgeführt. Dieses Tool kann von einer normalen Postgres Installation via "StackBuilder" nachinstalliert werden und funktioniert auf Windows und Linux.
+[https://www.enterprisedb.com/products-services-training/products-overview/postgres-plus-solution-pack/migration-toolkit](https://www.enterprisedb.com/products-services-training/products-overview/postgres-plus-solution-pack/migration-toolkit)
+
+Nach der Migration kann das Portal, das dann auf PostgreSQL läuft, auf die aktuellste Version aktualisiert werden.
+
+Liegt das Portal schon in einer höheren Version als 4.0.1 vor, so kann die Migration ebenfalls gemäß obiger Beschreibung ausgeführt werden, allerdings müssen dann eventuell noch Nacharbeiten ausgeführt werden, um z.B. Indexe zu migrieren.
+
+**Hintergrund:**
+Die Skripte zur Migration beziehen sich auf den Zustand des Portals in der Version 4.0.1.
+Alle nachfolgenden Versionen des Portals aktualisieren dann die PostgreSQL Datenbank direkt beim Update des Portals (über den Installer).
+D.h. bei der initialen Migration des Portals in einer höheren Version als 4.0.1 sind eventuell zu tätigende Fixes in den Migrations Skripten nicht enthalten, so werden z.B. die Indexe nicht migriert und müssen per SQL auf der Postgres Datenbank manuell nachgetragen werden.
+
+Alle Einstellungen im Portal für PostgreSQL sind auch beschrieben unter [PostgreSQL Datenbank](#postgresql-datenbank).
+
 ## Betrieb
 
 Start:
@@ -356,6 +380,71 @@ Die Adresse des Upgrade Servers kann in der Datei `ingrid-portal-apps.properties
 upgrade.server.url=http://INGRID_PORTAL_DOMAIN/update
 {% endhighlight %}
 
+
+### PostgreSQL Datenbank
+
+Die Einstellungen für die Postgres Datenbank erfolgen im Portal in folgenden Dateien:
+
+{% highlight text %}
+PORTAL_HOME/apache-tomcat/conf/Catalina/localhost
+{% endhighlight %}
+
+* ingrid-portal-apps.xml, ROOT.xml:
+{% highlight text %}
+		url="jdbc:postgresql://localhost:5432/ingrid_portal"
+		driverClassName="org.postgresql.Driver"
+		username="postgres" password="..."
+		validationQuery="SELECT 1"
+{% endhighlight %}
+
+* ROOT.xml: s.o. ingrid-portal-apps.xml
+		
+* ingrid-portal-mdek.xml:
+{% highlight text %}
+		url="jdbc:postgresql://localhost:5432/mdek"
+		... (s.o.)
+{% endhighlight %}
+
+{% highlight text %}
+PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes/
+{% endhighlight %}
+
+* hibernate.cfg.xml:
+{% highlight text %}
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+{% endhighlight %}
+        
+* quartz.properties:
+{% highlight text %}
+        org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+{% endhighlight %}
+
+{% highlight text %}
+PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek/WEB-INF/classes/
+{% endhighlight %}
+
+* hibernate.cfg.xml:
+{% highlight text %}
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+{% endhighlight %}
+		
+{% highlight text %}
+PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes/
+{% highlight text %}
+
+* default-datasource.properties:
+{% highlight text %}
+		hibernate.driverClass=org.postgresql.Driver
+		hibernate.user=postgres
+		hibernate.password=...
+		hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+		hibernate.jdbcUrl=jdbc:postgresql://localhost:5432/mdek
+{% highlight text %}
+
+Die Dateien werden bei einer Neuinstallation des Portals automatisch mit den eingegebenen PostgreSQL Einstellungen versorgt.
+Soll ein bestehendes Portal auf Postgres umgeschaltet werden (auf migrierte Datenbanken), so müssen die Dateien manuell angepasst werden.
+
+Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](#migration-nach-postgresql).
 
 
 ## FAQ
