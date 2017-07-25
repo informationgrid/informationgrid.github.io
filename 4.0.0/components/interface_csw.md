@@ -295,7 +295,7 @@ Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als
 
 Der Endpoint für den GET Request ergibt sich aus der Capabilities Antwort.
 
-{% highlight xml %}
+{% highlight text %}
 https://dev.informationgrid.eu/csw?REQUEST=GetRecords&SERVICE=CSW&elementSet=full&startPosition=1&maxRecords=10&resultType=results
 {% endhighlight %}
 
