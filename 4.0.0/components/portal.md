@@ -314,7 +314,7 @@ Liegt das Portal schon in einer höheren Version als 4.0.2 vor, so kann die Migr
 Die Skripte zur Migration beziehen sich auf den Zustand des Portals in der Version 4.0.2.
 Alle nachfolgenden Versionen des Portals aktualisieren dann die PostgreSQL Datenbank direkt beim Update des Portals (über den Installer).
 So werden z.B. beim Update auf 4.0.2.1 unter Postgres noch Fixes auf der Datenbank ausgeführt.
-Diese Fixes sind bei der initialen Migration der Datenbank in einer höheren Version als 4.0.2 in den Migrations-Skripten nicht vorhanden und müssen dann per SQL manuell nachgetragen werden.
+Diese Fixes sind in den Migrations-Skripten nicht vorhanden und müssen nach der Migration dann per SQL manuell auf der migrierten Datenbank ausgeführt werden (nur wenn migrierte Datenbank > 4.0.2 ist).
 
 Alle Einstellungen im Portal für PostgreSQL sind auch beschrieben unter [PostgreSQL Datenbank](#postgresql-datenbank).
 
