@@ -296,9 +296,9 @@ sh INSTALL_DIR/apache-tomcat-xx/bin/startup.sh
 
 ### Migration nach PostgreSQL
 
-Die Migration der Portal- bzw. Mdek-Datenbank nach PostgreSQL wurde für das Portal in der Version 4.0.1 final getestet und beschrieben.
+Die Migration der Portal- bzw. Mdek-Datenbank nach PostgreSQL wurde für das Portal in der Version 4.0.2 final getestet und beschrieben.
 Der vorgeschlagene Weg zur Migration ist also:
-* das Portal auf die Version 4.0.1 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle)
+* das Portal auf die Version 4.0.2 aktualisieren (auf der Quelldatenbank, also MySQL oder Oracle)
 * danach die Migration der Datenbanken nach PostgreSQL vornehmen, dies ist detailliert beschrieben im installierten Portal unter
 {% highlight text %}
 sql/migration2postgres
@@ -308,12 +308,13 @@ sql/migration2postgres
 
 Nach der Migration kann das Portal, das dann auf PostgreSQL läuft, auf die aktuellste Version aktualisiert werden.
 
-Liegt das Portal schon in einer höheren Version als 4.0.1 vor, so kann die Migration ebenfalls gemäß obiger Beschreibung ausgeführt werden, allerdings müssen dann eventuell noch Nacharbeiten ausgeführt werden, um z.B. Indexe zu migrieren.
+Liegt das Portal schon in einer höheren Version als 4.0.2 vor, so kann die Migration ebenfalls gemäß obiger Beschreibung ausgeführt werden, allerdings müssen dann eventuell noch Nacharbeiten ausgeführt werden, um z.B. Indexe zu migrieren.
 
 **Hintergrund:**
-Die Skripte zur Migration beziehen sich auf den Zustand des Portals in der Version 4.0.1.
+Die Skripte zur Migration beziehen sich auf den Zustand des Portals in der Version 4.0.2.
 Alle nachfolgenden Versionen des Portals aktualisieren dann die PostgreSQL Datenbank direkt beim Update des Portals (über den Installer).
-D.h. bei der initialen Migration des Portals in einer höheren Version als 4.0.1 sind eventuell zu tätigende Fixes in den Migrations Skripten nicht enthalten, so werden z.B. die Indexe nicht migriert und müssen per SQL auf der Postgres Datenbank manuell nachgetragen werden.
+So werden z.B. beim Update auf 4.0.2.1 unter Postgres noch Fixes auf der Datenbank ausgeführt.
+Diese Fixes sind bei der initialen Migration der Datenbank in einer höheren Version als 4.0.2 in den Migrations-Skripten nicht vorhanden und müssen dann per SQL manuell nachgetragen werden.
 
 Alle Einstellungen im Portal für PostgreSQL sind auch beschrieben unter [PostgreSQL Datenbank](#postgresql-datenbank).
 
