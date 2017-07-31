@@ -108,10 +108,15 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 
 ### Datenbank-Konfiguration
 
-Die Parameter der Portal-Datenbank werden bereits im Installer eingegeben und können über die Administrationsoberfläche angepasst werden (Datenbankeinstellungen). Unterstützt werden die Datenbanken MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2).
-Die Datenbankparameter werden in der Datei `conf/repository_database.xml` abgelegt.
+Unterstützt werden die Datenbanken MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2). Die Integration von PostgreSQL in den Installer erfolgt ab Version > 4.0.3.
 
-Im folgenden ist die Konfiguration einer MySQL-Datenbank wiedergegeben:
+Die Parameter der Portal-Datenbank werden bereits im Installer eingegeben. Dabei werden die Datenbank URL, Benutzername und -passwort in der Datei `conf/config.override.properties` abgelegt. Diese Einstellungen können über die Administrationsoberfläche angepasst werden (Datenbankeinstellungen).
+
+Die Datei `conf/repository_database.xml` enthält die finale Datenbank-Konfiguration, hier werden nach Start des iPlugs die benutzerspezifischen Parameter aus `conf/config.override.properties` ergänzt.
+
+Im folgenden beispielhafte Konfigurationen für
+
+* MySQL
 
 {% highlight xml %}
 <jdbc-connection-descriptor
@@ -129,7 +134,7 @@ Im folgenden ist die Konfiguration einer MySQL-Datenbank wiedergegeben:
 >
  {% endhighlight %}
 
-Für Oracle hier eine beispielhafte Konfiguration:
+* Oracle
 
 {% highlight xml %}
 <jdbc-connection-descriptor
@@ -147,7 +152,7 @@ Für Oracle hier eine beispielhafte Konfiguration:
 >
  {% endhighlight %}
 
-Beispielhafte Konfiguration für PostgreSQL (ab InGrid 4.0.2): 
+* PostgreSQL (ab InGrid 4.0.2, Integration in den Installer ab Version > 4.0.3)
 
 {% highlight xml %}
 <jdbc-connection-descriptor
