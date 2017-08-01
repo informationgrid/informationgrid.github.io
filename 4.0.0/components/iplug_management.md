@@ -170,6 +170,8 @@ Im folgenden beispielhafte Konfigurationen für
 >
  {% endhighlight %}
 
+Ein Überblick bzgl. PostgreSQL Unterstützung findet sich im InGrid Wiki unter [Unterstützung der PostgreSQL Datenbank](https://dev.informationgrid.eu/redmine/projects/ingrid/wiki/Unterstuetzung_der_PostgreSQL_Datenbank).
+
 ### InGrid Communication
 
 Die Datei `conf/communication.xml` enthält die Konfiguration der InGrid Kommunikationsschicht. Diese wird aus den benutzerspezifischen Inhalten der Datei `conf/config.override.properties` generiert (s.o.).

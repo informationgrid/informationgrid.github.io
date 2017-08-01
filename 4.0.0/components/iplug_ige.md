@@ -114,8 +114,8 @@ Der vorgeschlagene Weg zur Migration ist also:
 {% highlight text %}
 conf\sql\migration2postgres
 {% endhighlight %}
-* die Migration wird mit dem Tool EDB Postgres Migration Toolkit per Kommandozeile ausgeführt. Dieses Tool kann von einer normalen Postgres Installation via "StackBuilder" nachinstalliert werden und funktioniert auf Windows und Linux:
-[https://www.enterprisedb.com/products-services-training/products-overview/postgres-plus-solution-pack/migration-toolkit](https://www.enterprisedb.com/products-services-training/products-overview/postgres-plus-solution-pack/migration-toolkit)
+* die Migration wird mit dem Tool EDB Postgres Migration Toolkit per Kommandozeile ausgeführt. Dieses Tool kann von einer normalen Postgres Installation via "StackBuilder" nachinstalliert werden und funktioniert auf Windows und Linux, s. auch [EDB Postgres Migration Toolkit](https://www.enterprisedb.com/products-services-training/products-overview/postgres-plus-solution-pack/migration-toolkit) bzw. [Using Stack Builder to Install Migration Toolkit](https://www.enterprisedb.com/docs/en/9.5/migrate/EDB_Postgres_Migration_Guide.1.12.html).
+Eine Überblick inkl. Installer für PostgreSQL 9.5 findet sich im InGrid Wiki unter [Unterstützung der PostgreSQL Datenbank](https://dev.informationgrid.eu/redmine/projects/ingrid/wiki/Unterstuetzung_der_PostgreSQL_Datenbank).
 
 Nach der Migration kann das IGE iPlug, das dann auf dem PostgreSQL Katalog läuft, auf die aktuellste Version aktualisiert werden.
 
