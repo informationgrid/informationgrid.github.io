@@ -392,6 +392,21 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Es kann sein, dass die URL zu der weitergeleitet wird, nicht mehr Teil des definierten URL Raumes ist. Bitte die URL im Browser aufrufen und den URL Raum auf Basis der Weiterleitungs-URL neu erstellen.
 
+### Umstellung einer URL von http nach https wird nicht übernommen
+
+Eine Umstellung des Protokolls von http auf https wird nicht übernommen, wenn sich die Domain einer URL selbst nicht ändert.
+
+Die Filteralgorithmen im SE iPlug berücksichtigen nicht das Protokoll, sondern nur die Domain einer URL. Zu der problematik existiert ein Ticket: https://dev.informationgrid.eu/redmine/issues/780
+
+Workaround:
+
+* Änderung der URLs (Umstellung des Protokolls)
+* Kopie der Instanz
+* Anpassung des Schedulings
+* Manuelles Indexieren der Kopie der Instanz
+* Deaktivieren der alten Instanz, Aktivieren der neuen
+
+
 ### Wie wird der Score der Suchergebnisse ermittelt?
 
 Die Ermittlung des Scores hängt von vielen Faktoren ab. ElasticSearch bietet die Möglichkeit, die [Scorebildung zu erläutern](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-explain.html).
