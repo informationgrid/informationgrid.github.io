@@ -441,13 +441,42 @@ Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](
 
 ### Administration
 
-Der Portal Administrator kann nach Login via Menü *Administration* u.a. folgendes ändern:
+Der Portal Administrator kann nach Login im Menü *Administration* u.a. folgendes ändern:
 
 #### Startseite
 
 Hier kann die Startseite des Portals **für den anonymen Benutzer** konfiguriert werden. Einfach die zur Verfügung stehenden Portlets in gewünschter Reihenfolge angeben.
 Nach "Speichern" stellt sich die Startseite des Portals entsprechend dar.
+
 Der eingeloggte Administrator hat eine eigene Startseite, die nicht verändert werden kann.
+
+#### RSS
+
+Hier können die RSS Feeds eingepflegt werden, von denen dann regelmäßig Nachrichten eingelesen werden, zur Anzeige unter *Aktuelles* auf der Startseite.
+
+Probleme mit Feeds werden in der Spalte *Letztes Update* bzw *Fehler* angezeigt.
+
+#### Partner
+
+Hier werden die übergeordneten *Partner* eingepflegt, denen dann wieder *Anbieter* (s.u.) zugeordnet werden können.
+
+Partner/Anbieter werden z.B. im Admin GUI eines iPlugs ausgewählt, um das iPlug zuordnen zu können.
+
+Das *Kürzel* des Partners/Anbieters dient als eindeutige ID und wird u.a. im iPlug gespeichert.
+Nachträglich sollten also die Kürzel nicht mehr geändert werden, da dann im iPlug der Partner/Anbieter nicht mehr gefunden wird und neu ausgewählt werden muss.
+
+Auch der *Sortkey* des Partners sollte nicht geändert werden, da dieser auch zur Identifikation heran gezogen werden kann (Anbieter).
+
+Der *Name* kann jederzeit geändert werden.
+
+#### Anbieter
+
+Hier werden die den Partnern zugeordneten *Anbieter* eingepflegt, s.o. *Partner*.
+
+Das *Kürzel* des Anbieters dient als eindeutige ID und wird u.a. im iPlug gespeichert.
+Nachträglich sollten also die Kürzel nicht mehr geändert werden, da dann im iPlug der Anbieter nicht mehr gefunden wird und neu ausgewählt werden muss.
+
+*Name* und *Link* können jederzeit aktualisiert werden.
 
 #### Jobs
 
