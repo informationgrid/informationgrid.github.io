@@ -439,6 +439,40 @@ Soll ein bestehendes Portal auf Postgres umgeschaltet werden (auf migrierte Date
 Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](#migration-nach-postgresql).
 
 
+### Administration
+
+Der Portal Administrator kann nach Login via Menü *Administration* u.a. folgendes ändern:
+
+#### Startseite
+
+Hier kann die Startseite des Portals **für den anonymen Benutzer** konfiguriert werden. Einfach die zur Verfügung stehenden Portlets in gewünschter Reihenfolge angeben.
+Nach "Speichern" stellt sich die Startseite des Portals entsprechend dar.
+Der eingeloggte Administrator hat eine eigene Startseite, die nicht verändert werden kann.
+
+#### Jobs
+
+Im Bereich Jobs können Überwachungsjobs für die angeschlossenen InGrid Komponenten eingerichtet werden.
+
+Mit *Import aller angeschlossenen iPlugs* können diese Jobs mit einer E-Mail Adresse eingerichtet werden, an die dann E-Mails bei Problemen verschickt werden.
+
+Per Default sind folgende Jobs eingerichtet:
+
+* **RSSFetcherJob**
+Holt sich die Nachrichten über die eingepflegten RSS Feeds und legt diese in der Portal-Datenbank ab. Die Nachrichten werden auf der Startseite unter *Aktuelles* angezeigt.
+Meldet einen Fehler, wenn es Probleme mit einem Feed gab. Die Nachrichten der funktionierenden Feeds werden allerdings korrekt eingelesen.
+
+* **UpdateCodelistsJob**
+Nimmt Kontakt mit dem Codelist Repository auf, um die Codelisten in regelmäßigen Abständen zu aktualisieren.
+Meldet einen Fehler, wenn das Repository nicht installiert ist.
+
+* **UpgradeClientJob**
+Überwacht, ob es neue Versionen der angeschlossenen InGrid Komponenten gibt.
+Meldet einen Fehler, wenn keine Verbindung zum Upgrade Server aufgenommen werden kann.
+
+* **AnniversaryFetcherJob**
+Holt sich vom SNS über das SNS iPlug historische Umweltereignisse, die in der Datenbank abgelegt werden und in der Chronik angezeigt und gesucht werden können.
+
+
 ## FAQ
 
 ### Wie kann ich ein Überschreiben der Datei `TOMCAT/bin/env.sh` bei einer Aktualisierung verhindern.
