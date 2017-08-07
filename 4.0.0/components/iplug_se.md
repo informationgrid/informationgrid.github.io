@@ -411,6 +411,33 @@ Workaround:
 
 Die Ermittlung des Scores hängt von vielen Faktoren ab. ElasticSearch bietet die Möglichkeit, die [Scorebildung zu erläutern](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-explain.html).
 
+### Duplikate erkennen
+
+Bei manchen Websites kann der Inhalt einer Seite durch mehrere URLs erreicht werden. Die Suchmaschine versucht schon Zeitstempel und andere dynamische Angaben aus den URLs zu entfernen, kann aber nicht alle Eventualitäten berücksichtigen. Es kann somit vorkommen, dass URL-Duplikate zu einem Inhalt existieren.
+
+Anhand der Suchergebnisse können z.T. Duplikate erkannt werden und durch Anpassung der Exclude-URLs gefiltert werden. Die Filterung erfolgt immer während eines Crawls, dabei reicht es nur eine URL zu crawlen.
+
+Die Suchmaschien berechnet zu jeder Seite einen Hash, anhand dem Duplikate erkannt werden können. Über diese Befehle auf der Kommandozeile können die Duplikate ermittelt werden:
+
+```
+mkdir analyse_<DATE>
+cd analyse_<DATE>
+# export aller URLs aus der CrawlDB
+bash ../apache-nutch-runtime/runtime/local/bin/nutch readdb ../instances/websites/crawldb -dump dump -format csv
+# alle gefetchten URLs filtern
+grep db_fetched dump/part-00000 > fetched_urls.txt
+# alle URLs nach der Signatur sortieren
+sort -t\; -k10 fetched_urls.txt > fetched_urls_sorted.txt
+# alle Zeilen mit gleicher Signatur ausgeben (inkl.  der ersten)
+cat fetched_urls_sorted.txt | awk '{if (x[$10]) { x_count[$10]++; print $0; if (x_count[$10] == 1) { print x[$10] } } x[$10] = $0}' FS=";" > result.txt
+```
+
+Durch eine Analyse und Anpassung der Exclude-URLs, können Duplikate reduziert/verhindert werden.
+
+Der URL Export kann auch verwendet werden um andere Analysen durchzuführen.
+
+
+
 ### Die Reports sollen ohne Authentifizierung erreichbar sein.
 
 Um die Reports in das Admin GUI von der Authentifizierung auszuschließen muss die Datei
