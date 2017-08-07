@@ -419,7 +419,7 @@ Anhand der Suchergebnisse können z.T. Duplikate erkannt werden und durch Anpass
 
 Die Suchmaschien berechnet zu jeder Seite einen Hash, anhand dem Duplikate erkannt werden können. Über diese Befehle auf der Kommandozeile können die Duplikate ermittelt werden:
 
-```
+{% highlight shell %}
 mkdir analyse_<DATE>
 cd analyse_<DATE>
 # export aller URLs aus der CrawlDB
@@ -430,7 +430,7 @@ grep db_fetched dump/part-00000 > fetched_urls.txt
 sort -t\; -k10 fetched_urls.txt > fetched_urls_sorted.txt
 # alle Zeilen mit gleicher Signatur ausgeben (inkl.  der ersten)
 cat fetched_urls_sorted.txt | awk '{if (x[$10]) { x_count[$10]++; print $0; if (x_count[$10] == 1) { print x[$10] } } x[$10] = $0}' FS=";" > result.txt
-```
+{% endhighlight %}
 
 Durch eine Analyse und Anpassung der Exclude-URLs, können Duplikate reduziert/verhindert werden.
 
