@@ -57,13 +57,18 @@ Profile bestehen aus einer Sammlung von Dateien (Stylesheets, Templates, Bilder)
 
 ### Anmerkungen zu MySQL-Datenbanken
 
-Bei der Verwendung einer MySQL-Datenbank unter Unix wird normalerweise nach Groß/Klein-Schreibung unterschieden (casesensitiv). Da die Portal-Applikation Groß- und Klein-Schreibung nicht berücksichtigt, muss dies in der MySQL DB ausgeschaltet werden. Im /etc/my.cnf muss dafür folgender Eintrag in der mysqld -Sektion existieren:
+Bei der Verwendung einer MySQL-Datenbank unter Unix wird normalerweise nach Groß/Klein-Schreibung unterschieden (casesensitiv). Da die Portal-Applikation Groß- und Klein-Schreibung nicht berücksichtigt, muss dies in der MySQL DB ausgeschaltet werden.
+
+Dazu bitte die Datei /etc/mysql/conf.d/ingrid.cnf
+
+mit dem Inhalt
 
 {% highlight text %}
 [mysqld]
-...
-*lower_case_table_names=1*
+lower_case_table_names=1
 {% endhighlight %}
+
+anlegen und den mysql service neu starten.
 
 
 ## Installation
