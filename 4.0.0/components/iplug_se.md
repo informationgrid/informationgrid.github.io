@@ -19,6 +19,9 @@ Es können mehrere Instanzen mit jeweils unterschiedlicher Konfiguration und unt
 
 Ein Indexierungsdurchlauf besteht aus mehreren Phasen:
 
+
+| Phase        | Beschreibung |
+|-------------|---------------|
 | Inject URLs | Start-, Limit- und Exclude URLs werden exportiert und in Nutch-Datenbanken importiert. |
 | Filter CrawlDB | Die vorhandene Nutch CrawlDB wird gegen die Limit- und Exclude URLs gefiltert. |
 | Generate URLs | Aus der Nutch CrawlDB werden URLs für den Crawl ausgewählt. |
