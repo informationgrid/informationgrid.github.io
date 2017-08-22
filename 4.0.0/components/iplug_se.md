@@ -79,15 +79,6 @@ http://localhost:PORT
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
 
 
-Nach der ersten Installation wird die Administrations-GUI unter
-
-{% highlight text %}
-http://localhost:8082
-{% endhighlight %}
-
-aufgerufen und die Konfiguration vervollständigt.
-
-
 ## Aktualisierung
 
 Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/) herunterladen.
