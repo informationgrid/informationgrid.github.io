@@ -50,18 +50,19 @@ Der Installer ist sowohl per graphischer Oberfläche als auch Kommandozeileneing
 Sie können nun das iPlug mit
 
 {% highlight text %}
-sh admin.sh
+sh start.sh start
 {% endhighlight %}
 
 starten.
 
-Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können.
+Das iPlug besitzt eine Administrationsoberfläche über die die Eigenschaften des iPlugs eingesehen und verwaltet werden können. Geben Sie als `PORT` den bei der Installation angegebenen Port für die Administration an.
 
 {% highlight text %}
-http://localhost:PORT/step1/
+http://localhost:PORT
 {% endhighlight %}
 
 Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
+
 
 
 Nach der ersten Installation wird die Administrations-GUI unter
