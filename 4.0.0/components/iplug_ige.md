@@ -59,13 +59,6 @@ Für MySQL und PostgreSQL (ab InGrid 4.0.2) wird die Katalog-Datenbank automatis
 
 > Außerdem sollte die Ausgabe des Installers bzgl. der Katalog-Migration beachtet werden! Alle Ausgaben der Katalog-Migration finden sich im Verzeichnis des iPlugs in der Datei importer_TIMESTAMP_log.log
 
-Nach der Installation/Migration kann das iPlug mit
-
-  sh start.sh start
-
-gestartet werden.
-
-
 Sie können nun das iPlug mit
 
 {% highlight text %}
