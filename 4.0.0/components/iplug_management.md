@@ -47,7 +47,7 @@ sh start.sh start
 
 starten.
 
-Das iPlug besitzt eine Administrationsoberfläche über die die angeschlossenen iPlugs eingesehen und verwaltet werden können. Geben Sie als `PORT` den bei der Installation angegebenen Port für die Administration an.
+Das iPlug besitzt eine Administrationsoberfläche über die die Eigenschaften des iPlugs eingesehen und verwaltet werden können. Geben Sie als `PORT` den bei der Installation angegebenen Port für die Administration an.
 
 {% highlight text %}
 http://localhost:PORT
