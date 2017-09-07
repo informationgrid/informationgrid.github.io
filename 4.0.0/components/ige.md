@@ -107,12 +107,15 @@ WHERE
 user.addr_uuid = addr.adr_uuid
 {% endhighlight %}
 
-Die Änderung des übergeordneten Benutzers erfolgt dann mit:
-
+Die Änderung des übergeordneten Benutzers erfolgt dann wie folgt:
+* für alle MD-Autoren eines MD-Administrators:
 {% highlight text %}
 UPDATE idc_user SET parent_id = ??? where parent_id = ???
 {% endhighlight %}
-
+* für einen einzelnen MD-Autor:
+{% highlight text %}
+UPDATE idc_user SET parent_id = ??? where id = ???
+{% endhighlight %}
 
 ### Was ist das Import Protokoll?
 
