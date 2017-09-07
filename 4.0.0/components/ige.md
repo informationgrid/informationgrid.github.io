@@ -38,9 +38,9 @@ Siehe Portal Aktualisierung.
 
 ## Administration
 
-### Benutzerverwaltung
+### Benutzerverwaltung (Portal)
 
-Die Benutzerverwaltung besteht aus einer Tabelle mit den gesamten bisher angelegten Benutzern und einer Schaltfläche, die es erlaubt einen neuen Benutzer anzulegen. Zu jedem Benutzer gibt es zudem eine Bearbeiten- und Entfernen-Schaltfläche.
+Die Benutzerverwaltung IM PORTAL besteht aus einer Tabelle mit den gesamten bisher angelegten Benutzern und einer Schaltfläche, die es erlaubt einen neuen Benutzer anzulegen. Zu jedem Benutzer gibt es zudem eine Bearbeiten- und Entfernen-Schaltfläche.
 
 Klickt man auf "Add User" öffnet sich ein Dialog, in dem die Benutzerdaten eingegeben werden können. Alle Felder müssen hierbei ausgefüllt werden, wobei der "Login" eindeutig und das Passwort korrekt in der Wiederholung eingegeben sein muss. Andernfalls wird man auf eine Fehleingabe hingewiesen. Mit einem letzten Klick auf die Dialogschaltfläche "Add User" wird der Benutzer letztendlich in die Datenbank hinzugefügt.
 
@@ -50,9 +50,9 @@ Ein Klick auf die Schaltfläche "delete" neben einem Benutzer erzeugt einen Dial
 
 > In den InGrid-Editor können sich nur IGE-Benutzer einloggen. Dabei wird zwischen dem Katalogadministrator und anderen Nutzern unterschieden. Ersterer wird auf der Administrationsseite in der Katalogverwaltung erstellt. Alle anderen Nutzer werden im IGE in der Nutzerverwaltung hinzugefügt.
 
-### Katalogverwaltung
+### Katalogverwaltung (Portal)
 
-In der Katalogverwaltung gibt es zwei Tabellen, die die verbundenen Kataloge mit dem dazugehörigen Katalogadministrator zeigen und (in der anderen Tabelle) alle verfügbaren, jedoch noch nicht angschlossenen Kataloge.
+In der Katalogverwaltung IM PORTAL gibt es zwei Tabellen, die die verbundenen Kataloge mit dem dazugehörigen Katalogadministrator zeigen und (in der anderen Tabelle) alle verfügbaren, jedoch noch nicht angschlossenen Kataloge.
 
 Existiert ein Katalog, der nicht angeschlossen ist, so wird dieser in der unteren Tabelle (verfügbarer Kataloge) angezeigt. Klickt man auf die "add"-Schaltfläche, erscheint ein Dialog, wo ein Benutzer ausgewählt werden kann, der mit diesem Katalog verbunden werden soll. Dabei werden nur die Benutzer aufgelistet, die noch keine IGE-Benutzer sind. Gibt es keinen freien Benutzer so wird mit einem Dialog darauf hingewiesen. Nach einem Klick auf "Connect Catalogue", ist die Verbindung hergestellt und der Katalog sollte in der oberen Tabelle erscheinen.
 
@@ -80,6 +80,39 @@ Die Aktivierung der unterschiedlichen Services und deren Einstellungen sind besc
 ### Es kommen keine Ergebnisse vom SNS (SSL-Problem)
 
 Siehe hierzu die FAQ vom [iPlug-SNS](iplug_sns.html#faq).
+
+### Wie können in der IGE Nutzerverwaltung Benutzer verschoben werden ?
+
+In der Nutzerverwaltung wird ein 3 stufiger Baum wie folgt aufgebaut, dabei werden MD-Autoren unter MD-Administratoren angelegt:
+
+*Katalog-Administrator
+-> Metadaten-Administrator
+-> Metadaten-Autor*
+
+MD-Autoren können nicht über die Oberfläche zu einem anderen MD-Administrator verschoben werden.
+Dies ist nur über die Datenbank möglich, wo die ID des übergeordnetetn Benutzers geändert werden muss.
+
+Nutzer IDs können wie folgt in der Datenbank abgefragt werden:
+
+{% highlight text %}
+SELECT
+user.id,
+addr.firstname,
+addr.lastname,
+addr.institution
+FROM 
+idc_user user,
+t02_address addr
+WHERE
+user.addr_uuid = addr.adr_uuid
+{% endhighlight %}
+
+Die Änderung des übergeordneten Benutzers erfolgt dann mit:
+
+{% highlight text %}
+UPDATE idc_user SET parent_id = ??? where parent_id = ???
+{% endhighlight %}
+
 
 ### Was ist das Import Protokoll?
 
