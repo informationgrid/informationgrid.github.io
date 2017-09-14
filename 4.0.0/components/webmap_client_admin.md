@@ -379,7 +379,7 @@ Die Konfiguration des Karten Clients erfolgt über JS-Dateien.
 Diese Dateien finden Sie in Ihrer Portal-Installation unter
 
 {% highlight text %}
-/PORTAL-INSTALLATIONSPFAD/apache-tomcat/webapps/ingrid-webmap-client/frontend/config/
+/WEBMAPCLIENT-KONFIGURATIONS-PFAD/WebmapClientData/config/
 {% endhighlight %}
 
 und enthält die Dateien "setting.js" und "settings.profile.js".
@@ -435,7 +435,7 @@ Bei einem Blick auf das Menü des Clients finden Sie das Akkordeon 'Themen'. Hie
 Um solche Rubriken zu erstellen, bedarf es mehrere Anpassung von JSON-Dateien unter dem Verzeichnis:
 
 {% highlight text %}
-/PORTAL-INSTALLATIONSPFAD/apache-tomcat/webapps/ingrid-webmap-client/frontend/data/
+/WEBMAPCLIENT-KONFIGURATIONS-PFAD/WebmapClientData/data/
 {% endhighlight %}
 
 **Definition von Layern (layers.json)**
