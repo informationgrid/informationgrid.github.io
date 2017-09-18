@@ -606,6 +606,16 @@ In der erstellten Datei wird die Struktur der Rubrik im JSON-Format hinterlegt. 
 >Zu beachten ist:
 Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstellenden Layer-Knoten, ansonsten wird es als Struktur-Knoten dargestellt (ohne Checkbox).
 
+### Daten für den Webmap Client
+
+Die im Webmap Client verwendete Hilfe finden Sie unter:
+
+{% highlight text %}
+/<PORTAL-INSTALLATION>/apache-tomcat/webapps/ingrid-webmap-client/frontend/help/
+{% endhighlight %}
+
+Dort existieren für jede mögliche Sprache (INGRID: de, en) eine Hilfe-Datei im JSON-Format. In dieser JSON-Datei werden über eine Schlüssel eine Hilfe-Titel und -Text zu einer Funktion im Webmap Client referenziert.
+
 ## Schnittstellen
 
 <a name="url-shortener"></a>
