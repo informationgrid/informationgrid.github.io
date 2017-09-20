@@ -442,63 +442,89 @@ Um solche Rubriken zu erstellen, bedarf es mehrere Anpassung von JSON-Dateien un
 
 Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste in der Datei *layers.json* definiert werden.
 
+| Einstellung | Beschreibung | Wert-Typ |
+|-------------|--------------|----------|
+| type | Definition des Layer-Types: "wmts" oder "wms" | String |
+| wmsUrl | URL des Layers | String |
+| wmsLayers | 'NAME' der dazustellenden Layers. Mehrere Layers werden kommagetrennte aufgelistet. | String |
+| gutter | Rand in Pixel um Tiles | Integer |
+| attribution | Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist) | String |
+| attributionUrl | URL für weitere Infos zum Layer | String |
+| background | Layer ist ein Hintergrund-Layer | Boolean |
+| format | Layer-Bildformat | String |
+| label | Titel des Layers | String |
+| singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
+| highlightable | WIRD NICHT BEI INGRID VERWENDET | String |
+| hasLegend | Layer hat eine Legende | Boolean |
+| legendUrl | URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt) | String |
+| timeEnabled | WIRD NICHT BEI INGRID VERWENDET | String |
+| queryable | GetFeature-Info-Abfrage ist möglich | String |
+| tooltip | Tooltip ist vorhanden | String |
+| version | Version des Layers | String |
+| opacity | Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1) | Float |
+| searchable | Layer kann in der Suche recherchiert werden (Wert: false oder true) | Boolean |
+| crossOrigin | GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: * || <HOST>' | Boolean |
+| extent | Extent des Layers in WGS84 | String |
+| template | WMTS-ResourceURL | String |
+| serverLayerName | Layer-Name für WMTS | String |
+| matrixSet | TileMatrixSet Identifier des Layers | Array |
+| origin | TileMatrixSet TopLeftCorner des Layers | Array |
+| matrixIds | TileMatrixSet TileMatrix-Identifier des Layers | Array |
+| resolutions | TileMatrixSet TileMatrix-ScaleDenominator des Layers | Array |
+| requestEncoding | "REST" oder "KVP" | String |
+
+Beispiele:
 {% highlight text %}
 {
     ...
-    // Eindeutige ID des Layers
-    "webatlasde_light": { 
-        // URL des Layers
+    // WMS
+    "webatlasde_light": {
         "wmsUrl": "http://sg.geodatenzentrum.de/wms_webatlasde.light?",
-        // 'NAME' des Layers
         "wmsLayers": "webatlasde.light",
-        // Rand in Pixel um Tiles
         "gutter": 0,
-        // Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist)
-        "attribution": "geodatenzentrum",
-        // URL für weitere Infos zum Layer
-        "attributionUrl": "http://www.bkg.bund.de/DE/Home/homepage__node.html__nnn=true", 
-        // Layer ist ein Hintergrund-Layer 
+        "attribution": "GeoBasis-DE / BKG 2016",
+        "attributionUrl": "http://www.bkg.bund.de",
         "background": true,
-        // GetMap Bild-Format
         "format": "png",
-        // Layer-Name für WMTS
-        "serverLayerName": "webatlasde_light",
-        // WIRD NICHT BEI INGRID VERWENDET
-        "selectbyrectangle": true,
-        // WIRD NICHT BEI INGRID VERWENDET
         "timeBehaviour": "last",
-        // Zugehörigen Rubriken
-        "topics": "themen,anbieter",
-        // Titel des Layers
         "label": "webatlasde.light",
-        // Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false)
         "singleTile": false,
-        // WIRD NICHT BEI INGRID VERWENDET
-        "highlightable": true,
-        // WIRD NICHT BEI INGRID VERWENDET
-        "chargeable": false,
-        // WIRD NICHT BEI INGRID VERWENDET
+        "highlightable": false,
         "hasLegend": true,
-        // URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt)
-        "legendURL": "LEGENDEN-URL"
-        // Typ des Layers
+        "legendUrl": "http://sg.geodatenzentrum.de/wms_webatlasde.light?styles=&layer=webatlasde.light&service=WMS&format=image%2Fpng&sld_version=1.1.0&request=GetLegendGraphic&version=1.1.1",
         "type": "wms",
-        // WIRD NICHT BEI INGRID VERWENDET
-        "timeEnabled": false,
-        // GetFeature-Info-Abfrage ist möglich
         "queryable": false,
-        // Version des Layers (Wert: 1.1.1 oder 1.3.0)
+        "tooltip": true,
         "version": "1.1.1",
-        // Tooltip ist vorhanden
-        "tooltip": false,
-        // Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1)
         "opacity": 1,
-        // Layer kann in der Suche recherchiert werden (Wert: false oder true)
         "searchable": true,
-        // GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: * || <HOST>'
+        "crossOrigin": false
+    },
+    ...
+    // WMTS
+    "wmts_bwastr" : {
+        "attribution": "DLZ-IT BMVBS",
+        "attributionUrl": "www.dlz-it.de",
+        "type": "wmts",
+        "template": "http://atlas.wsv.bund.de/bwastr/wmts/1.0.0/WmsBWaStr/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png",
+        "matrixSet": "osm_grid",
+        "version": "1.0.0",
+        "format": "png",
+        "timestamps": [],
+        "requestEncoding" : "REST",
+        "style": "default",
+        "origin": [-20037508.342787, 20037508.342787],
+        "resolutions": [156543.03392804097, 78271.51696402048, 39135.75848201024, 19567.87924100512, 9783.93962050256, 4891.96981025128, 2445.98490512564, 1222.99245256282, 611.49622628141, 305.748113140705, 152.8740565703525, 76.43702828517625, 38.21851414258813, 19.109257071294063, 9.554628535647032, 4.777314267823516, 2.388657133911758, 1.194328566955879, 0.5971642834779395],
+        "matrixIds": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"],
+        "hasLegend": false,
+        "label":  "Bundeswasserstrassen WMTS (REST)",
+        "queryable": false,
+        "opacity": 1,
+        "timeBehaviour": "last",
+        "singleTile": false,
+        "highlightable": false,
         "crossOrigin": false,
-        // Extent des Layers in WGS84
-        "extent": [10.5, 51.7, 10.7, 51.8]
+        "extent": [5.8, 47, 15, 55]
     },
     ... 
 }
