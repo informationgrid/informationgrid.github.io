@@ -614,9 +614,9 @@ Die im Webmap Client verwendete Hilfe für einzelne Funktionen finden Sie unter:
 /<PORTAL-INSTALLATION>/apache-tomcat/webapps/ingrid-webmap-client/frontend/help/
 {% endhighlight %}
 
-Dort existieren für jede mögliche Sprache (INGRID: de, en) eine Hilfe-Datei im JSON-Format. In dieser JSON-Datei werden über eine Schlüssel eine Hilfe-Titel, -Text und -Image zu einer Funktion im Webmap Client referenziert.
+Dort existieren für jede mögliche Sprache (INGRID: de, en) eine Hilfe-Datei im JSON-Format. In dieser JSON-Datei werden über eine Schlüssel eine Hilfe-Titel, -Text und -Image (z.Zt. nicht in Verwendung) zu einer Funktion im Webmap Client referenziert.
 
-Die aktuelle Hilfe des Schweizer Mapclient erhalten Sie unter:
+Die aktuelle Hilfe des Schweizer Mapclients erhalten Sie unter:
 
 https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'de'+order+by+id&callback=angular.callbacks._2 (deutsch)
 
