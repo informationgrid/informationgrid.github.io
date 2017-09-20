@@ -465,7 +465,7 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | version | Version des Layers | String |
 | opacity | Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1) | Float |
 | searchable | Layer kann in der Suche recherchiert werden (Wert: false oder true) | Boolean |
-| crossOrigin | GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: * || <HOST>' | Boolean |
+| crossOrigin | GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: *' oder 'Access-Control-Allow-Origin: <HOST>' | Boolean |
 | extent | Extent des Layers in WGS84 | String |
 | template | WMTS-ResourceURL | String |
 | serverLayerName | Layer-Name für WMTS | String |
