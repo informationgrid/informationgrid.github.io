@@ -457,7 +457,8 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | highlightable | WIRD NICHT BEI INGRID VERWENDET | String |
 | hasLegend | Layer hat eine Legende | Boolean |
 | legendUrl | URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt) | String |
-| timeEnabled | WIRD NICHT BEI INGRID VERWENDET | String |
+| timeEnabled | Layer hat einen Zeitstempel | Boolean |
+| timeBehaviour | Zeitstempel des Layers | String oder Array |
 | queryable | GetFeature-Info-Abfrage ist möglich | String |
 | tooltip | Tooltip ist vorhanden | String |
 | version | Version des Layers | String |
