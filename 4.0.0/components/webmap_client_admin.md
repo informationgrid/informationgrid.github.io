@@ -458,7 +458,8 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | hasLegend | Layer hat eine Legende | Boolean |
 | legendUrl | URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt) | String |
 | timeEnabled | Layer hat einen Zeitstempel | Boolean |
-| timeBehaviour | Zeitstempel des Layers | String oder Array |
+| timestamps | Zeitstempeln des Layers | Array |
+| timeBehaviour | Layer Zeit Verhalten | String |
 | queryable | GetFeature-Info-Abfrage ist möglich | String |
 | tooltip | Tooltip ist vorhanden | String |
 | version | Version des Layers | String |
