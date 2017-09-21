@@ -445,28 +445,28 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | Einstellung | Beschreibung | Wert-Typ |
 |-------------|--------------|----------|
 | type | Definition des Layer-Types: "wmts" oder "wms" | String |
-| wmsUrl | URL des Layers | String |
-| wmsLayers | 'NAME' der dazustellenden Layers. Mehrere Layers werden kommagetrennte aufgelistet. | String |
-| gutter | Rand in Pixel um Tiles | Integer |
-| attribution | Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist) | String |
-| attributionUrl | URL für weitere Infos zum Layer | String |
+| label | Titel des Layers | String |
 | background | Layer ist ein Hintergrund-Layer | Boolean |
 | format | Layer-Bildformat | String |
-| label | Titel des Layers | String |
-| singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
+| attribution | Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist) | String |
+| attributionUrl | URL für weitere Infos zum Layer | String |
 | highlightable | WIRD NICHT BEI INGRID VERWENDET | String |
 | hasLegend | Layer hat eine Legende | Boolean |
 | legendUrl | URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt) | String |
-| timeEnabled | Layer hat einen Zeitstempel | Boolean |
-| timestamps | Zeitstempeln des Layers | Array |
-| timeBehaviour | Layer Zeit Verhalten | String |
-| queryable | GetFeature-Info-Abfrage ist möglich | String |
+| searchable | Layer kann in der Suche recherchiert werden (Wert: false oder true) | Boolean |
 | tooltip | Tooltip ist vorhanden | String |
 | version | Version des Layers | String |
 | opacity | Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1) | Float |
-| searchable | Layer kann in der Suche recherchiert werden (Wert: false oder true) | Boolean |
 | crossOrigin | GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: *' oder 'Access-Control-Allow-Origin: <HOST>' | Boolean |
 | extent | Extent des Layers in WGS84 | String |
+|WMS|
+| wmsUrl | URL des Layers | String |
+| wmsLayers | 'NAME' der dazustellenden Layers. Mehrere Layers werden kommagetrennte aufgelistet. | String |
+| singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
+| gutter | Rand in Pixel um Tiles | Integer |
+| queryable | GetFeature-Info-Abfrage ist möglich | String |
+|WMTS|
+| serviceUrl | WMTS-ServiceMetadataURL | String |
 | template | WMTS-ResourceURL | String |
 | serverLayerName | Layer-Name für WMTS | String |
 | matrixSet | TileMatrixSet Identifier des Layers | Array |
@@ -474,6 +474,9 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | matrixIds | TileMatrixSet TileMatrix-Identifier des Layers | Array |
 | resolutions | TileMatrixSet TileMatrix-ScaleDenominator des Layers | Array |
 | requestEncoding | "REST" oder "KVP" | String |
+| timeEnabled | Layer hat einen Zeitstempel | Boolean |
+| timestamps | Zeitstempeln des Layers | Array |
+| timeBehaviour | Layer Zeit Verhalten | String |
 
 Beispiele:
 {% highlight text %}
