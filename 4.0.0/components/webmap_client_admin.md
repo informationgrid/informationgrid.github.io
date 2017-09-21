@@ -459,13 +459,13 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | opacity | Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1) | Float |
 | crossOrigin | GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: *' oder 'Access-Control-Allow-Origin: <HOST>' | Boolean |
 | extent | Extent des Layers in WGS84 | String |
-| **WMS** |
+| WMS |
 | wmsUrl | URL des Layers | String |
 | wmsLayers | 'NAME' der dazustellenden Layers. Mehrere Layers werden kommagetrennte aufgelistet. | String |
 | singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
 | gutter | Rand in Pixel um Tiles | Integer |
 | queryable | GetFeature-Info-Abfrage ist möglich | String |
-| **WMTS** |
+| WMTS |
 | serviceUrl | WMTS-ServiceMetadataURL | String |
 | template | WMTS-ResourceURL | String |
 | serverLayerName | Layer-Name für WMTS | String |
