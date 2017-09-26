@@ -392,8 +392,10 @@ In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Cli
 | settingExtent                     | Initialer Kartenausschnitt (in WGS 84)                                    | String         | [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
 | settingEpsgExtent                 | Kartenausbreitung der Projektion (in WGS 84)                              | String         | [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
 | settingEpsg                       | Kartenprojektion                                                          | String         | EPSG:3857|
+| settingLanguages                  | Unterstütze Sparachen                                                     | Array         | ["de", "en"]|
 | settingShortURLService            | URL-Shortener Dienst                                                      | String         | https://is.gd/create.php?format=json|
 | settingSearchServiceUrl           | Dienst zur Suche von WMS Dienste                                          | String         | http://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score%26ingrid=1%26h=100| 
+| settingGazetterZoom               | Default Zoomstufe bei Ergebnissen der Nominatim-Suche                     | Integer         | 10|
 | settingSearchNominatimUrl         | Dienst zur Suche von Orten                                                | String         | http://nominatim.openstreetmap.org/search?format=json%26countrycodes=de|
 | settingSearchBwaLocatorUrl        | Dienst zur Suche von Bundeswasserstraßen                                  | String         | https://atlas.wsv.bund.de/bwastr-locator/rest/bwastrinfo/query?limit=200%26searchfield=all|
 | settingSearchBwaLocatorGeoUrl     | Dienst für Daten zu Bundeswasserstraßen                                   | String         | https://atlas.wsv.bund.de/bwastr-locator/rest/geokodierung/query|
@@ -401,6 +403,7 @@ In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Cli
 | settingCopyrightURL               | Link zum Copyright                                                        | String         | /impressum|
 | settingSitemapURL                 | Link zur Sitemap                                                          | String         | /inhaltsverzeichnis |
 | settingUseGeodesic                | Geodesic-Aktivierung zum Messen                                           | Boolean        | true|
+| settingDefaultMouseProjections    | Reihenfolge von bekannten Projektionssystemen für die Funktionen "Mauszeiger-Position-Auswahl" und "Koordinaten-Position-Rechtsklick"                                                                 | Array         | ['EPSG:3857', 'EPSG:4326', 'EPSG:31466', 'EPSG:31467', 'EPSG:31468', 'EPSG:31469', 'EPSG:25832', 'EPSG:25833']|
 | settingDefaultMousePositionIndex  | Default Projektion für die Darstellung von Koordinaten per Mauszeiger     | Integer        | 0|
 | settingDefaultWMSList             | Vordefinierte Liste von WMS Diensten für den Import von WMS               | Array          | []|
 | settingShareFacebook              | Kartenzustand teilen per Facebook                                         | Boolean        | true| 
@@ -414,6 +417,9 @@ In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Cli
 | settingPrintGraticuleLayer        | URL und Layer für das Koordinatennetz beim Druck                          | String         | {"url":"http://atlas.wsv.bund.de/netze/wms?", "layers":["GN","GNB"]}|
 | settingKMLName                    | Prefix für die Datei beim KML-Download                                    | String         | INGRID|
 | settingHideCatalog                | Verstecken des Menüs Rubrik                                               | Boolean        | false|
+| settingEnableW3W                  | Darstellung von What3Words im Context-Popup 'Positionen                   | Boolean        | false|
+| w3wUrl                            | URL zu What3Words Api                                                     | String        | https://api.what3words.com |
+| w3wApiKey                         | What3Word Api Schlüssel                                                   | String        | OM48J50Y |
 
 > Hinweis: Diese Datei sollte nicht verändert werden. Soll ein Wert einer Einstellung/Variable aus der Datei "setting.js" geändert werden, so soll diese Variable in die Datei "setting.profile.js"-Datei übertragen werden und dort angepasst werden. Die Datei "setting.profile.js" ist per Default leer.
 
