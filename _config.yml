@@ -8,12 +8,9 @@ baseurl:
 
 # versions of the software (current is first)
 versions:
+  - 4.1.0
   - 4.0.0
   - 3.6.2
-  - 3.6.1
-  - 3.6.0
-  - 3.5
-  - 3.4
 
 # licence of the software
 license: EUPL V1.1

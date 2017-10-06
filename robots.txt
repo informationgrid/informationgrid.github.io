@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: /3.4/about/
+Disallow: /3.4/
+Disallow: /3.5/
+Disallow: /3.5.2/
+Disallow: /3.6.0/
+Disallow: /3.6.1/
+Disallow: /3.6.2/
