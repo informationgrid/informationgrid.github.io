@@ -4,6 +4,32 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.1.1
+
+Release: 23.10.2017
+
+### Änderungen
+
+- [Bug] [IGE] IGE: Berechtigungsbaum wird nicht mehr dargestellt,  wenn beim Anlegen einer Gruppe nach Hierarchie/Erfassung gesprungen wird ([REDMINE-885](https://dev.informationgrid.eu/redmine/issues/885))
+- [Bug] [IGE] IGE: Kein Hinweis wenn Dokument bearbeitet ([REDMINE-884](https://dev.informationgrid.eu/redmine/issues/884))
+- [Bug] [IGE] IGE: Ein Adress-Ordner darf sich nicht als Adressreferenz in einem Datensatz hinzufügen lassen ([REDMINE-812](https://dev.informationgrid.eu/redmine/issues/812))
+- [Bug] [IGE] IGE: Metadatenautoren können den Datensatztyp (Geodatendienst) nach Erstellung ändern ([REDMINE-810](https://dev.informationgrid.eu/redmine/issues/810))
+- [Bug] [IGE] IGE: Metadatenautoren können bei Unterdatensatz-Berechtigung keine Ordner über die Toolbox anlegen ([REDMINE-809](https://dev.informationgrid.eu/redmine/issues/809))
+
+Profil UVP
+
+- [Feature] [IGE] Integration UVP Nummern Baden-Württemberg ([REDMINE-870](https://dev.informationgrid.eu/redmine/issues/870))
+- [Bug] [IGE] Editor: Fehlerhafter Tooltip über Auf/Zuklapp ICON von Verfahrensschritten ([REDMINE-882](https://dev.informationgrid.eu/redmine/issues/882))
+
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.1/))
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.1/))
+
+
+
 ## Version 4.1.0
 
 Release: 05.10.2017
