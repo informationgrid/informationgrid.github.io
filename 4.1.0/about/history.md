@@ -4,6 +4,28 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.1.2
+
+Release: 16.11.2017
+
+### Änderungen
+
+Profil UVP
+
+- [Feature] [IGE] Überarbeitung von UVP Hilfetexten nach UVPG Gesetzänderung ([REDMINE-918](https://dev.informationgrid.eu/redmine/issues/918))
+
+Profil BKG
+
+- [Feature] [Portal] Aktivierung Portalprofil BKG in Portal Administration ([REDMINE-892](https://dev.informationgrid.eu/redmine/issues/892))
+
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.2/))
+
+
+
 ## Version 4.1.1
 
 Release: 23.10.2017
