@@ -10,7 +10,7 @@ Release: 16.11.2017
 
 ### Änderungen
 
-Profil UVP
+Profil UVP, UVP-NI
 
 - [Feature] [IGE] Überarbeitung von UVP Hilfetexten nach UVPG Gesetzänderung ([REDMINE-918](https://dev.informationgrid.eu/redmine/issues/918))
 
