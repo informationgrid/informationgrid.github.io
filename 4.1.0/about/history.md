@@ -4,6 +4,28 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.1.3
+
+Release: 21.11.2017
+
+### Änderungen
+
+Profil UVP-NI
+
+- [Feature] [Portal] Überarbeitung UVP-NI Header ([REDMINE-898](https://dev.informationgrid.eu/redmine/issues/898))
+
+Profil BKG
+
+- [Feature] [Portal] Überarbeitung UVP-NI Suchkarte ([REDMINE-897](https://dev.informationgrid.eu/redmine/issues/897))
+
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.3/))
+
+
+
 ## Version 4.1.2
 
 Release: 16.11.2017
