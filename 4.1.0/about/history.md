@@ -4,6 +4,31 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.1.4
+
+Release: 24.11.2017
+
+### Änderungen
+
+- [Bug] [IGE] UVP: Einträge in Dokumententabellen, deren "gültig-bis" Datum schon abgelaufen war, werden immer noch angezeigt. Für das docker setup wurde eine automatische Indexierung vorgesehen.  ([REDMINE-920](https://dev.informationgrid.eu/redmine/issues/920))
+- [Bug] [IGE] Portal: Anpassung von Facettierung und Entfernen von Altlasten  ([REDMINE-926](https://dev.informationgrid.eu/redmine/issues/926))
+
+Profil RLP
+
+- [Feature] [Portal] Upgrade PortalU.rlp auf aktuellste InGrid Version ([REDMINE-568](https://dev.informationgrid.eu/redmine/issues/568))
+
+Profil UVP-NI, NUMIS
+
+- [Feature] [Portal] Namensänderung MU in den Footern von UVP- und NUMIS-Portal ([REDMINE-926](https://dev.informationgrid.eu/redmine/issues/926))
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.4/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.1.4/))
+
+
+
 ## Version 4.1.3
 
 Release: 21.11.2017
