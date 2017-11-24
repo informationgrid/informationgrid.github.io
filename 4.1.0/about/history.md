@@ -38,9 +38,6 @@ Release: 21.11.2017
 Profil UVP-NI
 
 - [Feature] [Portal] Überarbeitung UVP-NI Header ([REDMINE-898](https://dev.informationgrid.eu/redmine/issues/898))
-
-Profil BKG
-
 - [Feature] [Portal] Überarbeitung UVP-NI Suchkarte ([REDMINE-897](https://dev.informationgrid.eu/redmine/issues/897))
 
 
