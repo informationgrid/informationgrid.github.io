@@ -10,11 +10,14 @@ Release: 28.11.2017
 
 ### Änderungen
 
-- [Bug] [IGE] UVP: Einträge in Dokumententabellen, deren "gültig-bis" Datum schon abgelaufen war, werden immer noch angezeigt. Für das docker setup wurde eine automatische Indexierung vorgesehen.  ([REDMINE-920](https://dev.informationgrid.eu/redmine/issues/920))
 - [Bug] [IGE] Portal: Anpassung von Facettierung und Entfernen von Altlasten  ([REDMINE-926](https://dev.informationgrid.eu/redmine/issues/926))
 - [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928)) 
 - [Bug] [Portal] Funktion 'Passwort vergessen' von mehreren Benutzern mit gleicher E-Mail Adresse angepasst. ([REDMINE-927](https://dev.informationgrid.eu/redmine/issues/927)) 
 - [Bug] [Portal] Webmap-Client fährt nicht hoch nach Portal-Installation unter Windows. ([REDMINE-929](https://dev.informationgrid.eu/redmine/issues/929)) 
+
+Profil UVP, UVP-NI
+
+- [Bug] [IGE] UVP: Einträge in Dokumententabellen, deren "gültig-bis" Datum schon abgelaufen war, werden immer noch angezeigt. Für das docker setup wurde eine automatische Indexierung vorgesehen.  ([REDMINE-920](https://dev.informationgrid.eu/redmine/issues/920))
 
 Profil RLP
 
