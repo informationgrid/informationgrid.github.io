@@ -420,7 +420,9 @@ In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Cli
 | settingEnableW3W                  | Darstellung von What3Words im Context-Popup 'Positionen                   | Boolean        | false|
 | w3wUrl                            | URL zu What3Words Api                                                     | String        | https://api.what3words.com |
 | w3wApiKey                         | What3Word Api Schlüssel                                                   | String        | OM48J50Y |
-| settingShowLayerServiceName       | Darstellung von Service-Name eines Layers (und WMS Layerbaum in der Infobox) | Boolean        | false |
+| settingShowLayerServiceName       | Darstellung von Service-Name eines Layers in der Infobox                  | Boolean        | false |
+| settingShowISOXML                 | Darstellung von CSW-URL in Dienst-Infobox                                 | Boolean        | true |
+| settingSearchCoordsXY             | Koordinaten-Tausch bei der Suche für Default-Projektion                   | Boolean        | false |
 
 > Hinweis: Diese Datei sollte nicht verändert werden. Soll ein Wert einer Einstellung/Variable aus der Datei "setting.js" geändert werden, so soll diese Variable in die Datei "setting.profile.js"-Datei übertragen werden und dort angepasst werden. Die Datei "setting.profile.js" ist per Default leer.
 
