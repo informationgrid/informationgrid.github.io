@@ -477,12 +477,13 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | serviceUrl | WMTS-ServiceMetadataURL | String |
 | template | WMTS-ResourceURL | String |
 | serverLayerName | Layer-Name für WMTS | String |
+| style | Layer-Style für WMTS | String (default: "default") |
 | matrixSet | TileMatrixSet Identifier des Layers | Array |
 | origin | TileMatrixSet TopLeftCorner des Layers | Array |
 | tileSize | TileMatrixSet TileMatrix-TileWidth bzw. -TileHeight des Layers | Array (default: 256)|
 | scales | TileMatrixSet TileMatrix-ScaleDenominator des Layers | Array |
 | matrixIds | TileMatrixSet TileMatrix-Identifier des Layers | Array (default: Berechnung durch "scales")|
-| requestEncoding | "REST" oder "KVP" | String |
+| requestEncoding | "REST" oder "KVP" | String (default: "KVP") |
 | timeEnabled | Layer hat einen Zeitstempel | Boolean |
 | timestamps | Zeitstempeln des Layers | Array |
 | timeBehaviour | Layer Zeit Verhalten | String |
