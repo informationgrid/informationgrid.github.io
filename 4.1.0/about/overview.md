@@ -33,7 +33,7 @@ Der Sourcecode wird über [GITHUB](https://github.com/informationgrid) verwaltet
 
 ## Das Projekt
 
-Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege und Weiterentwicklung der InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen" (VKoopUIS-Projekt Nr. 50) unter dem Dach "Verwaltungskooperation Umweltinformationssysteme" (VKoopUIS) weiter entwickelt.
+Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege und Weiterentwicklung der InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen" (VKoopUIS-Projekt Nr. 50) unter dem Dach "Vereinbarung über die Kooperation bei Konzeptionen und Entwicklungen von Software für Umweltinformationssysteme" (VKoopUIS) weiter entwickelt.
 
 Aus der öffentlichen Verwaltung sind folgende Partner beteiligt:
 
