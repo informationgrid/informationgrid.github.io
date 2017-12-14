@@ -4,6 +4,38 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.1.5
+
+Release: 14.12.2017
+
+### Änderungen
+
+- [Bug] [Portal] Räumliche Suche nach AGS/RS funktioniert nicht  ([REDMINE-934](https://dev.informationgrid.eu/redmine/issues/934))
+- [Bug] [IGE] Kindadressen werden nicht auf Veröffentlichungsbreite geprüft und auch geliefert, wenn "amtsinten" (Detaildarstellung) ([REDMINE-933](https://dev.informationgrid.eu/redmine/issues/933))
+- [Bug] [Portal] Anzeige von Datensätzen Probleme im Portal  ([REDMINE-931](https://dev.informationgrid.eu/redmine/issues/931))
+- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928)) 
+
+
+Profil UVP
+
+- [Feature] [Portal] UVP: Anpassung Vorschaltseite Schleswig-Holstein ([REDMINE-932](https://dev.informationgrid.eu/redmine/issues/932))
+- [Feature] [Codelist-Repo] UVP: Integration UVP Nummern für NRW ([REDMINE-925](https://dev.informationgrid.eu/redmine/issues/925))
+
+
+Profil RLP
+
+- [Feature] [Portal] Upgrade PortalU.rlp auf aktuellste InGrid Version ([REDMINE-568](https://dev.informationgrid.eu/redmine/issues/568))
+
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.5/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.1.5/))
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.5/))
+
+
+
 ## Version 4.1.4
 
 Release: 28.11.2017
