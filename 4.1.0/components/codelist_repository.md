@@ -136,13 +136,29 @@ Während der Installation des Codelist-Repositories wird der Administrator mit N
 Beispiel: ein Benutzer `admin`, der auf alles Rechte hat und ein Benutzer `user` (Passwort: `user`), der nur auf die REST-Schnittstelle Zugriff hat, über welche die Codelisten angefragt werden können
 
 {% highlight text %}
-# the administrator with full access (role: admin)
+### the administrator with full access (role: admin)
 admin: MD5:21232f297a57a5a743894a0e4a801fc3,admin
 
-# the user with access to receive codelists only (role: user)
+### the user with access to receive codelists only (role: user)
 user: user,user
 {% endhighlight %}
 
+
+## REST-API
+
+Es folgt eine Auflistung mit den möglichen REST-Anfragen für das Codelist-Repository.
+
+| Typ | Anfrage | Parameter | Beschreibung |
+| --- | ------- | ---------- | ------------ |
+| GET | /rest/getCodelists | \<Long>lastModifiedDate<br>\<String>name | Gib alle Codelisten zurück. Wenn der Parameter *lastModifiedDate* angegeben wurde, dann werden alle Codlisten zurückgegeben, die seit diesem Zeitstempel verändert worden sind. Mit dem Parameter *name* kann eine spezielle Codeliste anhand ihren Namens zurückgegeben werden.
+| GET | /rest/getCodelists/{id} | | Gib eine Codeliste mit der ID *id* zurück. |
+| PUT | /rest/getCodelists/{id} | | Füge eine neue Codeliste hinzu oder aktualisiere eine bestehende Codeliste. |
+| DELETE | /rest/getCodelists/{id} | | Lösche die Codeliste mit der ID *id*
+| GET | /rest/getCodelists/short | \<Long>lastModifiedDate<br>\<String>name | Zeige die Kurzversion der Codelisten an, bestehend aus *ID* und *Namen*. Die Parameter verhalten sich genauso wie bei der *rest/getCodelists*-Anfrage.
+| GET | /rest/getCodelists/short/{id} | | Das derzeitige Verhalten entspricht demselben wie */rest/getCodelists/{id}*
+| GET | /rest/findEntry/{name} | | Suche in allen Einträge von allen Codelisten nach Einträgen, die *name* enthalten. Dies wird von der Suche im Codelist-Repository verwendet.
+| GET | /rest/checkChanges | | Prüfe, ob das Repository Codelisten gelöscht hat, die im initialen Zustand noch vorhanden sind.
+| PUT | /rest/addInitialCodelist/{id} | | Ersetze die Codeliste mit der ID *id* mit der initialen Version.
 
 ## FAQ
 
