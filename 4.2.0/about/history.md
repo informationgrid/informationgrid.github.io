@@ -4,6 +4,58 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.0
+
+Release: 05.01.2018
+
+### Änderungen
+
+- [Feature] [IGE] Anpassung bzgl. Struktur der räuml. Daten (spatialRepresentationInfo) ([REDMINE-381](https://redmine.informationgrid.eu/issues/381))
+- [Feature] [IGE] Begrenzung der Eingabe im Titel (Objektname) auf 255 Zeichen ([REDMINE-941](https://redmine.informationgrid.eu/issues/941))
+- [Feature] [Portal] Update auf neueste Jetspeed Version 2.3.1 ([REDMINE-301](https://redmine.informationgrid.eu/issues/301))
+- [Feature] [Portal] Unterstützung von PostGres bei Portal Profilumschaltung ([REDMINE-891](https://redmine.informationgrid.eu/issues/891))
+- [Bug] [IGE] Metadatenautoren können bei Unterdatensatz-Berechtigung keine Ordner über die Toolbox anlegen ([REDMINE-809](https://redmine.informationgrid.eu/issues/809))
+- [Bug] [IGE] Metadatenautoren können den Datensatztyp (Geodatendienst) nach Erstellung ändern ([REDMINE-810](https://redmine.informationgrid.eu/issues/810))
+- [Bug] [IGE] Ein Adress-Ordner darf sich nicht als Adressreferenz in einem Datensatz hinzufügen lassen ([REDMINE-812](https://redmine.informationgrid.eu/issues/812))
+- [Bug] [IGE] Beim Import von ISO Daten muss ein Ordner als Import-Knoten auswählbar sein ([REDMINE-814](https://redmine.informationgrid.eu/issues/814))
+- [Bug] [IGE] GetCapabilities Assistent liest Layerdaten nicht korrekt ein ([REDMINE-872](https://redmine.informationgrid.eu/issues/872))
+- [Bug] [IGE] Kein Hinweis wenn Dokument bearbeitet ([REDMINE-884](https://redmine.informationgrid.eu/issues/884))
+- [Bug] [IGE] Berechtigungsbaum wird nicht mehr dargestellt, wenn beim Anlegen einer Gruppe nach Hierarchie/Erfassung gesprungen wird ([REDMINE-885](https://redmine.informationgrid.eu/issues/885))
+- [Bug] [IGE] Die Templates "session_expired.jsp" und "not_supported_browser.jsp" sind nicht an das neue Layout angepasst ([REDMINE-887](https://redmine.informationgrid.eu/issues/887))
+- [Bug] [Portal] MapClient stellt Karte nach Verweis von Suchergebnis nicht korrekt dar ([REDMINE-886](https://redmine.informationgrid.eu/issues/886))
+- [Bug] [Portal] Nicht hinzugefügte Kataloge führen zu falschen Katalog-Benutzern beim SuperAdmin-Login ([REDMINE-937](https://redmine.informationgrid.eu/issues/937))
+
+Profil UVP
+
+- [Feature] [IGE] Editor: Die Eingabe eines zurückliegenden Datums bei "gültig bis" in den Dokumententabellen soll verhindert werden ([REDMINE-620](https://redmine.informationgrid.eu/issues/620))
+- [Feature] [IGE] Editor: Enfernen von Checkbox "Detailansicht" aus Vorschau und Druckansicht für Verfahren ([REDMINE-681](https://redmine.informationgrid.eu/issues/681))
+- [Feature] [IGE] Die gültig-bis Daten einer Dokumententabelle sollen zusammen gesetzt werden können ([REDMINE-895](https://redmine.informationgrid.eu/issues/895))
+- [Feature] [IGE, Portal] Sortierfunktion der einzustellenden Dokumente ([REDMINE-900](https://redmine.informationgrid.eu/issues/900))
+- [Feature] [Codelist-Repo] Integration UVP Nummern Baden-Württemberg ([REDMINE-870](https://redmine.informationgrid.eu/issues/870))
+- [Bug] [IGE] Editor: Adresse anlegen: Auswahlmöglichkeit (Institution, Einheit, Person) fehlt ab und zu ([REDMINE-839](https://redmine.informationgrid.eu/issues/839))
+- [Bug] [IGE] Editor: Bestätigungsfelder für das Löschen und Ändern (Popups). In manchen Situationen fehlen die Schaltflächen ([REDMINE-840](https://redmine.informationgrid.eu/issues/840))
+- [Bug] [IGE] Editor: UVP Nummern Kürzel sind oft nicht sortierbar ([REDMINE-930](https://redmine.informationgrid.eu/issues/930))
+- [Bug] [IGE, Portal] Datumsformat in der Portal-Detailansicht und in der Druckvorschau im Katalog ([REDMINE-936](https://redmine.informationgrid.eu/issues/936))
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.2.0/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.2.0/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.2.0/))
+- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/4.2.0/))
+- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/4.2.0/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/4.2.0/))
+- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.2.0/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.2.0/))
+- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.2.0/))
+- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.2.0/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.2.0/))
+- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.2.0/))
+- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.2.0/))
+- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/4.2.0/))
+
+
 ## Version 4.1.5
 
 Release: 14.12.2017
