@@ -14,6 +14,7 @@ Release: 05.01.2018
 - [Feature] [IGE] Begrenzung der Eingabe im Titel (Objektname) auf 255 Zeichen ([REDMINE-941](https://redmine.informationgrid.eu/issues/941))
 - [Feature] [Portal] Update auf neueste Jetspeed Version 2.3.1 ([REDMINE-301](https://redmine.informationgrid.eu/issues/301))
 - [Feature] [Portal] Unterstützung von PostGres bei Portal Profilumschaltung ([REDMINE-891](https://redmine.informationgrid.eu/issues/891))
+- [Feature] [Codelist-Repo] Aktualisierung des Codelist-Repository für Docker ([REDMINE-707](https://redmine.informationgrid.eu/issues/707))
 - [Bug] [IGE] Metadatenautoren können bei Unterdatensatz-Berechtigung keine Ordner über die Toolbox anlegen ([REDMINE-809](https://redmine.informationgrid.eu/issues/809))
 - [Bug] [IGE] Metadatenautoren können den Datensatztyp (Geodatendienst) nach Erstellung ändern ([REDMINE-810](https://redmine.informationgrid.eu/issues/810))
 - [Bug] [IGE] Ein Adress-Ordner darf sich nicht als Adressreferenz in einem Datensatz hinzufügen lassen ([REDMINE-812](https://redmine.informationgrid.eu/issues/812))
