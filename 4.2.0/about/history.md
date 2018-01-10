@@ -54,6 +54,7 @@ Profil UVP
 - iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.2.0/))
 - iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.2.0/))
 - iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/4.2.0/))
+- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/4.2.0/))
 
 
 ## Version 4.1.5
