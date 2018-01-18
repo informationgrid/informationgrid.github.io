@@ -306,6 +306,13 @@ Der Endpoint für den GET Request ergibt sich aus der Capabilities Antwort.
 https://dev.informationgrid.eu/csw?REQUEST=GetRecords&SERVICE=CSW&elementSetName=full&startPosition=1&maxRecords=10&resultType=results
 {% endhighlight %}
 
+Mit Contraints:
+
+{% highlight text %}
+http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&outputSchema=http://www.isotc211.org/2005/gmd&startPosition=1&maxRecords=1&typeNames=csw:Record&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=%3Cogc:Filter+xmlns%3Aogc%3D%22http%3A%2F%2Fwww.opengis.net%2Fogc%22%3E%3Cogc:PropertyIsEqualTo%3E%3Cogc:PropertyName%3Eapiso:ResourceIdentifier%3C/ogc:PropertyName%3E%3Cogc:Literal%3E7988c147-7523-45bb-8f18-7f39d0d20541%3C/ogc:Literal%3E%3C/ogc:PropertyIsEqualTo%3E%3C/ogc:Filter%3E
+{% endhighlight %}
+
+
 **GetRecords, SOAP**
 
 Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
