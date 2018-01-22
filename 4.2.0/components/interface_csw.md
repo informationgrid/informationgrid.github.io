@@ -284,7 +284,7 @@ Weblinks:
 - Poster: [https://addons.mozilla.org/en-US/firefox/addon/2691/](https://addons.mozilla.org/en-US/firefox/addon/2691/)
 
 Requests sind per **GET** und **POST** möglich.
-Bei POST kann als **XML** und **SOAP** angefragt werden. Bei SOAP muss zum XML noch der "SOAP Envelope" hinzugefügt werden.
+Bei POST kann als **XML**/**SOAP** angefragt werden. Bei SOAP muss zum XML noch der "SOAP Envelope" hinzugefügt werden.
 Im folgenden Beispiele für die verschiedenen Varianten:
 
 **GetCapabilities, GET**
