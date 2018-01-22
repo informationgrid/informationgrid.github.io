@@ -275,13 +275,17 @@ In der Antwort erhält man außerdem über den Parameter **numberOfRecordsMatche
 
 ### Wie kann eine CSW Schnittstelle getestet werden?
 
-Zum Testen eignen sich Tools wie SoapUI oder das Firefox-Plugin Poster:
+Zum Testen eignen sich Tools wie SoapUI oder Postman oder das Firefox-Plugin Poster:
 
 Weblinks:
 
 - SoapUI: [http://www.soapui.org/](http://www.soapui.org/)
+- Postman: [https://www.getpostman.com/](https://www.getpostman.com/)
 - Poster: [https://addons.mozilla.org/en-US/firefox/addon/2691/](https://addons.mozilla.org/en-US/firefox/addon/2691/)
 
+Requests sind per **GET** und **POST** möglich.
+Bei POST kann als **XML** und **SOAP** angefragt werden. Bei SOAP muss zum XML noch der "SOAP Envelope" hinzugefügt werden.
+Im folgenden Beispiele für die verschiedenen Varianten:
 
 **GetCapabilities, GET**
 
@@ -289,13 +293,26 @@ Weblinks:
 https://dev.informationgrid.eu/csw?REQUEST=GetCapabilities&SERVICE=CSW
 {% endhighlight %}
 
-**GetCapabilities, SOAP**
+**GetCapabilities, POST XML**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
+Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss *application/xml* angegeben werden.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <GetCapabilities xmlns="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" outputSchema="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" />
+{% endhighlight %}
+
+**GetCapabilities, POST SOAP**
+
+Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss *application/soap+xml* angegeben werden.
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <GetCapabilities xmlns="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" outputSchema="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" />
+  </soapenv:Body>
+</soapenv:Envelope>
 {% endhighlight %}
 
 **GetRecords, GET**
@@ -306,16 +323,16 @@ Der Endpoint für den GET Request ergibt sich aus der Capabilities Antwort.
 https://dev.informationgrid.eu/csw?REQUEST=GetRecords&SERVICE=CSW&elementSetName=full&startPosition=1&maxRecords=10&resultType=results
 {% endhighlight %}
 
-Mit Contraints:
+Mit Constraints:
 
 {% highlight text %}
 http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&outputSchema=http://www.isotc211.org/2005/gmd&startPosition=1&maxRecords=1&typeNames=csw:Record&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=%3Cogc:Filter+xmlns%3Aogc%3D%22http%3A%2F%2Fwww.opengis.net%2Fogc%22%3E%3Cogc:PropertyIsEqualTo%3E%3Cogc:PropertyName%3Eapiso:ResourceIdentifier%3C/ogc:PropertyName%3E%3Cogc:Literal%3E7988c147-7523-45bb-8f18-7f39d0d20541%3C/ogc:Literal%3E%3C/ogc:PropertyIsEqualTo%3E%3C/ogc:Filter%3E
 {% endhighlight %}
 
 
-**GetRecords, SOAP**
+**GetRecords, POST XML**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
+Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss *application/xml* angegeben werden.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -341,9 +358,9 @@ Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als
 https://dev.informationgrid.eu/csw?SERVICE=CSW&REQUEST=GetRecordById&VERSION=2.0.2&ID=98E56BC3-20EC-43A7-8270-1352F0A53AD4
 {% endhighlight %}
 
-**GetRecordById, SOAP**
+**GetRecordById, POST XML**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
+Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss *application/xml* angegeben werden.
 
 {% highlight xml %}
 <GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2"
@@ -363,9 +380,9 @@ https://dev.informationgrid.eu/csw?SERVICE=CSW&REQUEST=DescribeRecord&VERSION=2.
 {% endhighlight %}
 
 
-**DescribeRecord, SOAP**
+**DescribeRecord, POST XML**
 
-Der Endpoint für den SOAP Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss application/soap+xml angegeben werden.
+Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als Content Type des Requests muss *application/xml* angegeben werden.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -442,3 +459,29 @@ RewriteRule ^/csw/provider/(.*)$ http://127.0.0.1:8083/csw?provider\=$1 [P]
 {% endhighlight %}
 
 Die Einschränkungen können auch direkt in der CSW Anfrage formuliert werden. Intern ist es tatsächlich so, dass die Einschränkungen in der URL in eine Einschränkung innerhalb der Filter-Query der CSW Anfrage umgesetzt werden.
+
+Beispiel einer *GetRecords* Anfrage mit Filterung nach *iplug* per POST XML. Als Content Type des Requests muss *application/xml* angegeben werden.
+Auf die gleiche Art und Weise kann auch per *partner* oder *provider* gefiltert werden.
+
+{% highlight xml %}
+<csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
+    xmlns="http://www.opengis.net/cat/csw/2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ogc="http://www.opengis.net/ogc" xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:ows="http://www.opengis.net/ows" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="CSW" version="2.0.2"
+    maxRecords="10" startPosition="1" resultType="results" outputFormat="application/xml"
+    outputSchema="http://www.isotc211.org/2005/gmd"
+    xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd">
+    <csw:Query typeNames="csw:Record">
+        <csw:ElementSetName typeNames="csw:Record">full</csw:ElementSetName>
+        <Constraint version="1.1.0">
+            <ogc:Filter>
+                <ogc:PropertyIsEqualTo>
+                    <ogc:PropertyName>iplug</ogc:PropertyName>
+                    <ogc:Literal>/ingrid-group:ige-iplug-HH</ogc:Literal>
+                </ogc:PropertyIsEqualTo>
+            </ogc:Filter>
+        </Constraint>
+    </csw:Query>
+</csw:GetRecords>
+{% endhighlight %}
