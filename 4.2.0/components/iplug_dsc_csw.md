@@ -153,8 +153,9 @@ Die allgemeine Konfiguration wird in der Datei webapp/WEB-INF/spring.xml gehalte
 </bean>
 {% endhighlight %}
 
-Diese Konfiguration kann überschrieben werden. Damit dies bei einem Update der Installation erhalten bleibt, sollte die Änderung im Unterverzeichnis *override* geschehen.
+Diese Konfiguration kann überschrieben werden. Damit dies bei einem Update der Installation erhalten bleibt, sollte die Änderung im Unterverzeichnis **_override_** geschehen.
 Hier können beliebige .xml Dateien angelegt werden, die das default Verhalten "überschreiben".
+
 Zum Hinzufügen eines Filters zu allen POST Anfragen kann z.B. eine Datei "spring_filter.xml" im Verzeichnis *webapp/WEB-INF/override* angelegt werden.
 Mit folgendem Inhalt werden dann z.B. nur Sätze eines spezifischen iPlugs aus der angebundenen CSW Schnittstelle gelesen:
 
@@ -163,13 +164,6 @@ Mit folgendem Inhalt werden dann z.B. nur Sätze eines spezifischen iPlugs aus d
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-    <!--
-        Define the CSW filter queries to query the CSW data source. Duplicates resulting from
-        the queries will be detected based on the Identifier and be removed.
-        
-        To produce one CSW Query without a Constraint element, please remove any <value> elements.
-        Many systems support this to get all results from the CSW data source.
-     -->
     <bean id="cswHarvestFilter" class="org.springframework.beans.factory.config.SetFactoryBean">
         <property name="sourceSet">
             <set>
@@ -185,6 +179,24 @@ Mit folgendem Inhalt werden dann z.B. nur Sätze eines spezifischen iPlugs aus d
         </property>
     </bean>
 </beans>
+{% endhighlight %}
+
+Unter *webapp/WEB-INF/spring.xml* wird auch definiert, wie die Requests ausgeführt werden, also GET (*kvpGetRequest*), POST XML (*xmlPostRequest*) oder POST SOAP (*soapRequest*).
+Hier z.B. eine Konfiguration, die die GetCapabilities per GET holt und den Rest per POST SOAP.
+Auch diese Einstellungen können im Verzeichnis **_override_** überschrieben werden, s.o.
+
+{% highlight xml %}
+    <bean id="cswRequestImpl" class="org.springframework.beans.factory.config.MapFactoryBean">
+      <property name="sourceMap">
+          <map>
+            <entry key="GetCapabilities" value-ref="kvpGetRequest"/>
+            <entry key="DescribeRecord" value-ref="soapRequest"/>
+            <entry key="GetDomain" value-ref="soapRequest"/>
+            <entry key="GetRecords" value-ref="soapRequest"/>
+            <entry key="GetRecordById" value-ref="soapRequest"/>
+          </map>
+      </property>
+    </bean>
 {% endhighlight %}
 
 ### SOAP Header festlegen
