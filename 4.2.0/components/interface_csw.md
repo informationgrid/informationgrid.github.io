@@ -485,3 +485,25 @@ Auf die gleiche Art und Weise kann auch per *partner* oder *provider* gefiltert 
     </csw:Query>
 </csw:GetRecords>
 {% endhighlight %}
+
+Eine Filterung mehrerer iPlugs ist dann wie folgt möglich:
+
+{% highlight xml %}
+    <csw:Query typeNames="csw:Record">
+        <csw:ElementSetName typeNames="csw:Record">full</csw:ElementSetName>
+        <Constraint version="1.1.0">
+            <ogc:Filter>
+            	<ogc:Or>
+	                <ogc:PropertyIsEqualTo>
+	                    <ogc:PropertyName>iplug</ogc:PropertyName>
+	                    <ogc:Literal>/ingrid-group:ige-iplug-HH</ogc:Literal>
+                	</ogc:PropertyIsEqualTo>
+	                <ogc:PropertyIsEqualTo>
+	                    <ogc:PropertyName>iplug</ogc:PropertyName>
+	                    <ogc:Literal>/ingrid-group:ige-iplug-HB</ogc:Literal>
+                	</ogc:PropertyIsEqualTo>
+            	</ogc:Or>
+            </ogc:Filter>
+        </Constraint>
+    </csw:Query>
+{% endhighlight %}
