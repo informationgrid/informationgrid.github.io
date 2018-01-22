@@ -125,7 +125,7 @@ Es handelt sich per Default hierbei um die URL zum SOAP Interface der Schnittste
 
 Im iPlug kann die Art der Abfragen definiert werden, die verwendet werden, um alle Daten der CSW Schnittstelle zu laden. Per Default wird keine spezifische Abfrage verwendet, so dass die CSW Schnittstelle ohne Constraint in der CSW Anfrage angefragt wird. Es ist aber möglich beliebige Filter für die Anfrage zu definieren, so dass hier der Umfang der CSW Daten gesteuert werden kann oder die Belastung der CSW Schnittstelle eingeschränkt werden kann.
 
-Die Konfiguration wird in der Datei webapp/WEB-INF/spring.xml gehalten. Der folgende Ausschnitt zeigt, wie die Konfiguration festgelegt wird:
+Die allgemeine Konfiguration wird in der Datei webapp/WEB-INF/spring.xml gehalten. Der folgende Ausschnitt zeigt, wie die Konfiguration festgelegt wird:
 
 {% highlight xml %}
 <!--
@@ -153,6 +153,39 @@ Die Konfiguration wird in der Datei webapp/WEB-INF/spring.xml gehalten. Der folg
 </bean>
 {% endhighlight %}
 
+Diese Konfiguration kann überschrieben werden. Damit dies bei einem Update der Installation erhalten bleibt, sollte die Änderung im Unterverzeichnis *override* geschehen.
+Hier können beliebige .xml Dateien angelegt werden, die das default Verhalten "überschreiben".
+Zum Hinzufügen eines Filters zu allen POST Anfragen kann z.B. eine Datei "spring_filter.xml" im Verzeichnis *webapp/WEB-INF/override* angelegt werden.
+Mit folgendem Inhalt werden dann z.B. nur Sätze eines spezifischen iPlugs aus der angebundenen CSW Schnittstelle gelesen:
+
+{% highlight xml %}
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!--
+        Define the CSW filter queries to query the CSW data source. Duplicates resulting from
+        the queries will be detected based on the Identifier and be removed.
+        
+        To produce one CSW Query without a Constraint element, please remove any <value> elements.
+        Many systems support this to get all results from the CSW data source.
+     -->
+    <bean id="cswHarvestFilter" class="org.springframework.beans.factory.config.SetFactoryBean">
+        <property name="sourceSet">
+            <set>
+                <value>
+                    <![CDATA[<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+                    <ogc:PropertyIsEqualTo>
+                    <ogc:PropertyName>iplug</ogc:PropertyName>
+                    <ogc:Literal>/ingrid-group:iplug-csw-dsc-ID</ogc:Literal>
+                    </ogc:PropertyIsEqualTo>
+                    </ogc:Filter>]]>
+                </value>
+            </set>
+        </property>
+    </bean>
+</beans>
+{% endhighlight %}
 
 ### SOAP Header festlegen
 
