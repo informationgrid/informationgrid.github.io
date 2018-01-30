@@ -411,6 +411,7 @@ In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Cli
 | settingShareGoogle                | Kartenzustand teilen per Google+                                          | Boolean        | true|
 | settingShareTwitter               | Kartenzustand teilen per Twitter                                          | Boolean        | true|
 | settingShareIFrame                | Kartenzustand teilen per iFrame                                           | Boolean        | true| 
+| settingShareQR                    | Kartenzustand teilen per QR-Code                                          | Boolean        | true| 
 | settingShareLink                  | Kartenzustand teilen per Link                                             | Boolean        | true| 
 | settingPrintLogo                  | URL zum Logo beim Druck                                                   | String         | location.protocol + '//' + location.host + '/ingrid-webmap-client/frontend/prd/img/print_logo.png'|
 | settingPrintNorthArrow            | URL zum Nordzeiger beim Druck                                             | String         | location.protocol + '//' + location.host + '/ingrid-webmap-client/frontend/prd/img/north_arrow.png'|
@@ -474,6 +475,7 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
 | gutter | Rand in Pixel um Tiles | Integer |
 | tooltip | GetFeature-Info-Abfrage ist möglich | Boolean |
+| style | "styles"-Parameter bei GetMap-Abfrage setzen | '' |
 | **WMTS** |||
 | serviceUrl | WMTS-ServiceMetadataURL | String |
 | template | WMTS-ResourceURL | String |
