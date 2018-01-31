@@ -352,8 +352,9 @@ Nach Änderungen sollte der Tomcat neu gestartet werden.
 
 | Datei | Funktion |
 |-------|----------|
-| webapps/ingrid-portal-apps/WEB-INF/classes/ingrid-portal-apps.properties | Allgemeine Standard Einstellungen für das Portal.<br>**ACHTUNG**: Diese Datei wird bei einem Update des Portals vom Installer überschrieben.|
-| webapps/ingrid-portal-apps/WEB-INF/classes/**ingrid-portal-apps.override.properties** | **Installationsspezifische** Einstellungen für das Portal, die bei einem Update NICHT überschrieben werden. Bitte Einstellungen aus *ingrid-portal-apps.properties* hierher übernehmen und anpassen. Sollten sich Namen oder Werte von Einstellungen mit einem Update ändern, so müssen diese hier manuell angepasst werden. |
+| webapps/ingrid-portal-apps/WEB-INF/classes/<br>ingrid-portal-apps.properties | Allgemeine Standard Einstellungen für das Portal.<br>**ACHTUNG**: Diese Datei wird bei einem Update des Portals vom Installer überschrieben und sollte nicht editiert werden.|
+| webapps/ingrid-portal-apps/WEB-INF/classes/<br>**ingrid-portal-apps.profile.properties** | **Profilspezifische** Einstellungen für das Portal (z.B. NUMIS Portal). Diese Einstellungen überschreiben die Standard-Einstellungen aus _ingrid-portal-apps.properties_ <br>**ACHTUNG**: Diese Datei wird bei einem Update des Portals vom Installer überschrieben, Änderungen in dieser Datei bitte wemove mitteilen, damit diese ins Profil übernommen werden können.|
+| webapps/ingrid-portal-apps/WEB-INF/classes/<br>**ingrid-portal-apps.override.properties** | **Installationsspezifische** Einstellungen für das Portal, die bei einem Update NICHT überschrieben werden. Bitte Einstellungen aus *ingrid-portal-apps.properties* hierher übernehmen und anpassen. Sollten sich Namen oder Werte von Einstellungen mit einem Update ändern, so müssen diese hier manuell angepasst werden.<br>Einstellungen in dieser Datei haben die **höchste Priorität** und überschreiben die Standard- bzw Profilspezifischen-Einstellungen.|
 | webapps/ingrid-portal-apps/WEB-INF/classes/communication.xml | InGrid Communication Parameter zum iBus. |
 | webapps/ingrid-portal-apps/WEB-INF/classes/sns.properties | IGE-Einstellungen für Zugriff auf den SNS (Semantic Network Service, liefert Thesaurus, Gazeteer und Umweltchronik) |
 | conf/Catalina/localhost/ingrid-portal.xml | Portal Datenbank Einstellungen |
