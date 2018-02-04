@@ -11,11 +11,17 @@ Release 04.02.2018
 ### Änderungen
 
 - [Bug] [Portal] IGE: Formular unvollständig im IE  ([REDMINE-949](https://redmine.informationgrid.eu/issues/949))
+- [Bug] [Portal] IGE: Probleme bei GetCapabilities Assistent  ([REDMINE-781](https://redmine.informationgrid.eu/issues/781))
+- [Bug] [Portal] IGE: Anpassung an den neuen WFS Service  ([REDMINE-946](https://redmine.informationgrid.eu/issues/946))
 
 Profil UVP
 
 - [Bug] [Portal] UVP: Datasätze können nicht veröffentlicht werden ([REDMINE-962](https://redmine.informationgrid.eu/issues/962))
 - [Bug] [Portal] UVP: Manche UVP Nummern mit Sonderzeichen im Namen werden im Editor nicht korrekt dargestellt.  ([REDMINE-963](https://redmine.informationgrid.eu/issues/963))
+
+Profil RLP
+
+- [Bug] [Portal] Anpassung Hilfe bzgl. AGS/RS Suche ([REDMINE-934](https://redmine.informationgrid.eu/issues/934))
 
 
 ### Komponenten
