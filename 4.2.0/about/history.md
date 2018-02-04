@@ -58,6 +58,28 @@ Profil UVP
 - Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/4.2.0/))
 
 
+## Version 4.1.6
+
+Release 20.12.2017
+
+### Änderungen
+
+- [Bug] [Portal] Anzeige von Datensätzen Probleme im Portal  ([REDMINE-931](https://redmine.informationgrid.eu/issues/931))
+- [Bug] [Portal] PORTAL: Unter "Metadate"n fehlen die checkboxen der hinzugefügten Kataloge ([REDMINE-938](https://redmine.informationgrid.eu/issues/938))
+
+Profil UVP
+
+- [Feature] [Codelist-Repo] Integration UVP Nummern Nordrhein-Westfalen ([REDMINE-925](https://redmine.informationgrid.eu/issues/925))
+- [Feature] [Portal] UVP: Anpassung Vorschaltseite Berlin ([REDMINE-939](https://redmine.informationgrid.eu/issues/939))
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.6/))
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.6/))
+
+
+
 ## Version 4.1.5
 
 Release: 14.12.2017
