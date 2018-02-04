@@ -4,6 +4,26 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.1.7
+
+Release 04.02.2018
+
+### Änderungen
+
+- [Bug] [Portal] IGE: Formular unvollständig im IE  ([REDMINE-949](https://redmine.informationgrid.eu/issues/949))
+
+Profil UVP
+
+- [Bug] [Portal] UVP: Datasätze können nicht veröffentlicht werden ([REDMINE-962](https://redmine.informationgrid.eu/issues/962))
+- [Bug] [Portal] UVP: Manche UVP Nummern mit Sonderzeichen im Namen werden im Editor nicht korrekt dargestellt.  ([REDMINE-963](https://redmine.informationgrid.eu/issues/963))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.7/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.1.7/))
+
+
 ## Version 4.2.0
 
 Release: 05.01.2018
