@@ -210,7 +210,7 @@ Folgende Funktionen sind auf darstellbare Layer vorzufinden:
 
 Wird ein Layer der Karte hinzugefügt, so wird der Layer in der Baumstruktur rot markiert und unter 'Dargestellte Karten' aufgelistet.
 
-Eine Anleitung zur Definition von Rubriken finden Sie unter [Daten für den WebMap Client](#daten-für-den-webmap-client).
+Eine Anleitung zur Definition von Rubriken finden Sie unter [Definition von Rubriken](#definition-von-rubriken).
 
 ### Dargestellte Karten
 
@@ -376,7 +376,7 @@ Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie ein
 
 Die Konfiguration des Karten Clients erfolgt über JS-Dateien.
 
-Diese Dateien finden Sie in Ihrer Portal-Installation unter
+Diese Dateien finden Sie in einem eigenen Verzeichnis, außerhalb der Portal-Installation unter
 
 {% highlight text %}
 /WEBMAPCLIENT-KONFIGURATIONS-PFAD/WebmapClientData/config/
@@ -384,7 +384,8 @@ Diese Dateien finden Sie in Ihrer Portal-Installation unter
 
 und enthält die Dateien "setting.js" und "settings.profile.js".
 
-In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Client enthalten.
+In der Datei "setting.js" sind alle Einstellungen für den Webmap Client enthalten.
+> Hinweis: Diese Datei sollte nicht verändert werden. Soll ein Wert einer Einstellung/Variable aus der Datei "setting.js" geändert werden, so soll diese Variable in die Datei "setting.profile.js"-Datei übertragen werden und dort angepasst werden. Die Datei "setting.profile.js" ist per Default leer.
 
 | Einstellung                       | Beschreibung                                                              | Wert-Typ       | Defaul-Wert                          |
 |-----------------------------------|---------------------------------------------------------------------------|----------------|--------------------------------------|
@@ -426,9 +427,8 @@ In der Datei "setting.js" sind alle möglichen Einstellungen für den Webmap Cli
 | settingSearchCoordsXY             | Koordinaten-Tausch bei der Suche für Default-Projektion                   | Boolean        | false |
 | settingSearchCoordsZoom           | Zoomstufe für die Koordinaten-Suche                                       | Integer        | 16 |
 
-> Hinweis: Diese Datei sollte nicht verändert werden. Soll ein Wert einer Einstellung/Variable aus der Datei "setting.js" geändert werden, so soll diese Variable in die Datei "setting.profile.js"-Datei übertragen werden und dort angepasst werden. Die Datei "setting.profile.js" ist per Default leer.
-
-Beispiel an Hand der Einstellung 'settingDefaultTopicId': 
+Beispiel:
+Mit Hinzufügen der nachfolgenden Einstellung in die Datei "settings.profile.js" wird das vorausgewählte Thema auf "Anbieter" gesetzt.
 
 {% highlight text %}
 ...
@@ -550,6 +550,7 @@ Beispiele:
 
 Die Liste ist auch in der Suche des Webmap Clients integriert, sodass eine Suche nach einzelnen definierten (WMS-) Layern recherchiert werden kann.  
 
+<a name="definition-von-rubriken"></a>
 **Definition von Rubriken (catalogs.json)**
 
 Rubriken, die im Webmap Client existiern sollen, werden in der Datei **catalogs.json** definiert. Die Definition einer Rubrik kann folgendermaßen aussehen:
@@ -660,11 +661,7 @@ Die im Webmap Client verwendete Hilfe für einzelne Funktionen finden Sie unter:
 
 Dort existieren für jede mögliche Sprache (INGRID: de, en) eine Hilfe-Datei im JSON-Format. In dieser JSON-Datei werden über eine Schlüssel eine Hilfe-Titel, -Text und -Image (z.Zt. nicht in Verwendung) zu einer Funktion im Webmap Client referenziert.
 
-Die aktuelle Hilfe des Schweizer Mapclients erhalten Sie unter:
-
-https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'de'+order+by+id&callback=angular.callbacks._2 (deutsch)
-
-https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'en'+order+by+id&callback=angular.callbacks._2 (englisch)
+Die aktuelle Hilfe des Schweizer Mapclients als JSON erhalten Sie z.B. hier als [Hilfe deutsch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'de'+order+by+id&callback=angular.callbacks._2) oder [Hilfe englisch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'en'+order+by+id&callback=angular.callbacks._2).
 
 ## Schnittstellen
 
@@ -743,6 +740,23 @@ Für die Funktion [Drucken](#drucken) wird im Webmap Client die JAVA-Bibliothek 
 Ja, dies wird durch das Überschreiben der Einstellung **settingEpsg** in der Datei **settings.profile.js** ermöglicht.
 
 > Hinweis: Möglicherweise funktioniert das Drucken des Hintergrund-Layers OSM (OpenStreetMap) nicht korrekt bzw. es wird eine Karte an falscher Position ausgedruckt, da der OSM-Layer die Projektion nicht korrekt unterstützt. 
+
+#### Kann man die Themen-Bilder unter "Thema wechseln" anpassen?
+
+Ja, die Bilder sind als CSS definiert und liegen als PNG Dateien in den Maßen 140 x 60 vor.
+Im folgenden wird beschrieben, wie ein neues Thema mit Bild hinzugefügt wird.
+> ACHTUNG: Diese Änderungen sollten wemove mitgeteilt werden, damit diese ins Profil übernommen werden können. Damit bleiben bei einem Update oder bei einer Neuinstallation und Umschalten auf das Profil die Änderungen erhalten.
+
+Bsp. zum Hinzufügen eines neuen Themas "inspire":
+* unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend/src/img* die Bilddatei hinzufügen als *theme_inspire.png*
+* unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend/src/style* in der Datei *app.override.css* folgendes hinzufügen
+{% highlight text %}
+[ga-topic] .ga-topics-sprite-inspire {
+  background: url("../img/theme_inspire.png");
+  width: 140px;
+}
+{% endhighlight %}
+* das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird (*catalogs.json* + neue *catalog-inspire.json*) s.o. [Definition von Rubriken](#definition-von-rubriken).
 
 #### URL-Shortener funktioniert nicht korrekt?
 
