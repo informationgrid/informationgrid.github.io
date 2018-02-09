@@ -4,6 +4,39 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+
+## Version 4.2.1
+
+### Änderungen
+
+Release 08.02.2018
+
+- [Bug] [PORTAL] PORTAL, IGE, SNS-IPLUG: Anpassung an den neuen WFS Service ([REDMINE-946](https://redmine.informationgrid.eu/issues/946))
+- [Bug] [PORTAL] Portal: In der Detaildarstellung werden die Lizenzen nicht korrekt lokalisiert ([REDMINE-862](https://redmine.informationgrid.eu/issues/862))
+- [Bug] [PORTAL] Leerzeichen vor und hinter dem Benutzernamen abschneiden ([REDMINE-733](https://redmine.informationgrid.eu/issues/733))
+- [Bug] [IGE] Probleme bei GetCapabilities Assistent ([REDMINE-781](https://redmine.informationgrid.eu/issues/781))
+- [Bug] [IPLUG-SE] IPLUG-SE: Nutch loggt unbegrenzte Anzahl von Dateien, was zu Platzproblemen führt ([REDMINE-942](https://redmine.informationgrid.eu/issues/942))
+- [Bug] [CODELIST REPOSITORY] Aktualisierung des Codelisterepositories schägt fehl, auf Grund von nicht existierenden UVP Nummern Codelisten ([REDMINE-955](https://redmine.informationgrid.eu/issues/955))
+- [Feature] [PORTAL] Benutzerprüfung bei der Registrierung im Portal ([REDMINE-60](https://redmine.informationgrid.eu/issues/60))
+- [Feature] [IGE] IGE/PORTAL: GeoThesaurus funktioniert nicht mit Java 8 162 ([REDMINE-965](https://redmine.informationgrid.eu/issues/965))
+- [Feature] [MAPCLIENT] MapClient: Update auf aktuelle Version vom mf-geoadmin3 ([REDMINE-961](https://redmine.informationgrid.eu/issues/961))
+
+
+UVP
+
+- [Feature] [IGE] UVP: Ordnerhierarchie und Zip-Upload für Planunterlagen ([REDMINE-890](https://redmine.informationgrid.eu/issues/890))
+- [Feature] [Prtal] Detailtemplate nds. UVP-Portal ([REDMINE-954](https://redmine.informationgrid.eu/issues/954))
+- [Bug] [IGE] IGE: Formular unvollständig im IE ([REDMINE-949](https://redmine.informationgrid.eu/issues/949))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.1/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.2.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.2.1/))
+
+
 ## Version 4.1.7
 
 Release 04.02.2018
