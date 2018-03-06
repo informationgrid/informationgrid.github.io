@@ -475,6 +475,7 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
 | gutter | Rand in Pixel um Tiles | Integer |
 | tooltip | GetFeature-Info-Abfrage ist möglich | Boolean |
+| queryLayers | Layers für GetFeatureInfo-Abfrage setzen, falls 'tooltip' auf 'true'. | String: Wenn nicht definiert, dann wird 'wmsLayers' verwendet. |
 | style | "styles"-Parameter bei GetMap-Abfrage setzen | '' |
 | **WMTS** |||
 | serviceUrl | WMTS-ServiceMetadataURL | String |
