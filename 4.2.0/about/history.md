@@ -76,13 +76,22 @@ Release: 05.01.2018
 
 Bei Auswahl von "Raster, Gitter" in dem Element "Digitale Repräsentation" könnn nun Angaben zu der Struktur der räumlichen Daten gemacht werden.
 
-![Mehrfachangabe von Sprache der Ressource](../images/ingrid_raster_position_accuracy.png "Mehrfachangabe von Sprache der Ressource")
+![Neue Eingabeelemente für die Struktur der räumlichen Daten](../images/ingrid_raster_position_accuracy.png "Neue Eingabeelemente für die Struktur der räumlichen Daten")
 
 #### UVP: Die "gültig-bis" Daten von mehrern Zeilen einer Dokumententabelle können zusammen gesetzt werden.
 
-![Mehrfachangabe von Sprache der Ressource](../images/ingrid_uvp_set_multipe_dates.png "Mehrfachangabe von Sprache der Ressource")
+![Die "gültig-bis" Daten von mehrern Zeilen einer Dokumententabelle können zusammen gesetzt werden](../images/ingrid_uvp_set_multipe_dates.png "Die 'gültig-bis' Daten von mehrern Zeilen einer Dokumententabelle können zusammen gesetzt werden")
 
-### Weitere Änderungen
+#### UVP: Sortierfunktion für Zeilen in Dokumententabellen
+
+Über Drag&Drop kann die Reihenfolge von Zeilen in den Dokumententabellen verändert werden.
+
+![Sortierfunktion für Zeilen in Dokumententabellen](../images/ingrid_uvp_sort_table_rows.png "Sortierfunktion für Zeilen in Dokumententabellen")
+
+Die Reihenfolge wirkt sich auch auf die Darstellung im Portal aus.
+
+
+### Liste der Änderungen
 
 - [Feature] [IGE] Anpassung bzgl. Struktur der räuml. Daten (spatialRepresentationInfo) ([REDMINE-381](https://redmine.informationgrid.eu/issues/381))
 - [Feature] [IGE] Begrenzung der Eingabe im Titel (Objektname) auf 255 Zeichen ([REDMINE-941](https://redmine.informationgrid.eu/issues/941))
