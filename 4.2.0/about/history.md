@@ -29,7 +29,19 @@ Für das Portal der Wasser- und Schifffahrtsverwaltung wurden umfangreiche Anpas
 
 ![Aktualisierung des Kartenclients](../images/ingrid_mapclient_wmts.png "Aktualisierung des Kartenclients")
 
+#### UVP: Automatisches Entpacken von ZIP Archiven
 
+Hochgeladene ZIP Archive können automatisch entpackt werden.
+
+![Automatisches Entpacken von ZIP Archiven](../images/ingrid_uvp_unzip_archives.png "Automatisches Entpacken von ZIP Archiven")
+
+Die Ordnerstrukturen bleiben erhalten und werden nach Ordnern und Dateien alphabetisch sortiert übernommen. Der Name der ZIP Datei bleibt erhalten.
+
+![Automatisches Entpacken von ZIP Archiven 2](../images/ingrid_uvp_unzip_archives2.png "Automatisches Entpacken von ZIP Archiven 2")
+
+Im Portal erfolgt die Darstellung hierarchisch. Die Struktur innerhalb des ZIP Archives bleibt erhalten.
+
+![Automatisches Entpacken von ZIP Archiven - Darstellung im Portal](../images/ingrid_uvp_unzip_archives_portal.png "Automatisches Entpacken von ZIP Archiven - Darstellung im Portal")
 
 ### Liste der Änderungen
 
@@ -48,7 +60,7 @@ Für das Portal der Wasser- und Schifffahrtsverwaltung wurden umfangreiche Anpas
 UVP
 
 - [Feature] [IGE] UVP: Ordnerhierarchie und Zip-Upload für Planunterlagen ([REDMINE-890](https://redmine.informationgrid.eu/issues/890))
-- [Feature] [Prtal] Detailtemplate nds. UVP-Portal ([REDMINE-954](https://redmine.informationgrid.eu/issues/954))
+- [Feature] [Portal] Detailtemplate nds. UVP-Portal ([REDMINE-954](https://redmine.informationgrid.eu/issues/954))
 - [Bug] [IGE] IGE: Formular unvollständig im IE ([REDMINE-949](https://redmine.informationgrid.eu/issues/949))
 
 
