@@ -7,22 +7,38 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Version 4.2.1
 
-### Änderungen
-
-
-
-
 Release 08.02.2018
 
+### Änderungen
+
+#### Einführung einer Passwort Policy bei der Registrierung im Portal
+
+Bei der Registrierung im Portal wird eine Passwort Policy eingesetzt, um zu einfache Passwörter zu vermeiden. Die eingesetzte Policy ist unter https://github.com/dropbox/zxcvbn dokumentiert.
+
+Um einen neuen Benutzer anlegen zu können muss das Passwort mind. die Stärke 3 (Gut) haben. Die erlaubte Passwortstärke kann unter der folgender Portal-Einstellung geändert werden:
+
+<pre>
+# Check password strength
+portal.form.strength.check.password = 3
+</pre>
+
+![Einführung einer Passwort Policy bei der Registrierung im Portal](../images/ingrid_portal_passwort_policy.png "Einführung einer Passwort Policy bei der Registrierung im Portal")
+
+Außerdem wurden die möglichen Zeichen für den Benutzernamen auf folgende Zeichen beschränkt: Buchstaben (keine Umlaute), Zahlen, ., -, @, # und _
+
+
+### Liste der Änderungen
+
+- [Feature] [PORTAL] Benutzerprüfung bei der Registrierung im Portal ([REDMINE-60](https://redmine.informationgrid.eu/issues/60))
+- [Feature] [PORTAL] Einführen einer Passwort Policy für das Anlegen von Passwörtern im Portal ([REDMINE-829](https://redmine.informationgrid.eu/issues/829))
+- [Feature] [IGE] IGE/PORTAL: GeoThesaurus funktioniert nicht mit Java 8 162 ([REDMINE-965](https://redmine.informationgrid.eu/issues/965))
+- [Feature] [MAPCLIENT] MapClient: Update auf aktuelle Version vom mf-geoadmin3 ([REDMINE-961](https://redmine.informationgrid.eu/issues/961))
 - [Bug] [PORTAL] PORTAL, IGE, SNS-IPLUG: Anpassung an den neuen WFS Service ([REDMINE-946](https://redmine.informationgrid.eu/issues/946))
 - [Bug] [PORTAL] Portal: In der Detaildarstellung werden die Lizenzen nicht korrekt lokalisiert ([REDMINE-862](https://redmine.informationgrid.eu/issues/862))
 - [Bug] [PORTAL] Leerzeichen vor und hinter dem Benutzernamen abschneiden ([REDMINE-733](https://redmine.informationgrid.eu/issues/733))
 - [Bug] [IGE] Probleme bei GetCapabilities Assistent ([REDMINE-781](https://redmine.informationgrid.eu/issues/781))
 - [Bug] [IPLUG-SE] IPLUG-SE: Nutch loggt unbegrenzte Anzahl von Dateien, was zu Platzproblemen führt ([REDMINE-942](https://redmine.informationgrid.eu/issues/942))
 - [Bug] [CODELIST REPOSITORY] Aktualisierung des Codelisterepositories schägt fehl, auf Grund von nicht existierenden UVP Nummern Codelisten ([REDMINE-955](https://redmine.informationgrid.eu/issues/955))
-- [Feature] [PORTAL] Benutzerprüfung bei der Registrierung im Portal ([REDMINE-60](https://redmine.informationgrid.eu/issues/60))
-- [Feature] [IGE] IGE/PORTAL: GeoThesaurus funktioniert nicht mit Java 8 162 ([REDMINE-965](https://redmine.informationgrid.eu/issues/965))
-- [Feature] [MAPCLIENT] MapClient: Update auf aktuelle Version vom mf-geoadmin3 ([REDMINE-961](https://redmine.informationgrid.eu/issues/961))
 
 
 UVP
@@ -44,7 +60,7 @@ UVP
 
 Release 04.02.2018
 
-### Änderungen
+### Liste der Änderungen
 
 - [Bug] [Portal] IGE: Formular unvollständig im IE  ([REDMINE-949](https://redmine.informationgrid.eu/issues/949))
 - [Bug] [Portal] IGE: Probleme bei GetCapabilities Assistent  ([REDMINE-781](https://redmine.informationgrid.eu/issues/781))
