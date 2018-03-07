@@ -21,6 +21,15 @@ Um einen neuen Benutzer anlegen zu können muss das Passwort mind. die Stärke 3
 
 Außerdem wurden die möglichen Zeichen für den Benutzernamen auf folgende Zeichen beschränkt: Buchstaben (keine Umlaute), Zahlen, ., -, @, # und _
 
+#### Aktualisierung des Kartenclients
+
+Der Kartenclient und die dort verwendeten Bibliotheken, wie z.B. OpenLayers wurden aktualisiert. Wichtige neue Funktionalität ist die Unterstützung von WMTS Diensten.
+
+Für das Portal der Wasser- und Schifffahrtsverwaltung wurden umfangreiche Anpassungen, z.B. bzgl. dem Anzeigen von Layer-Dienst Zugehörigkeiten vorgenommen.
+
+![Aktualisierung des Kartenclients](../images/ingrid_mapclient_wmts.png "Aktualisierung des Kartenclients")
+
+
 
 ### Liste der Änderungen
 
