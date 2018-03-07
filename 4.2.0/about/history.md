@@ -9,6 +9,9 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Änderungen
 
+
+
+
 Release 08.02.2018
 
 - [Bug] [PORTAL] PORTAL, IGE, SNS-IPLUG: Anpassung an den neuen WFS Service ([REDMINE-946](https://redmine.informationgrid.eu/issues/946))
@@ -68,6 +71,18 @@ Profil RLP
 Release: 05.01.2018
 
 ### Änderungen
+
+#### Neue Eingabeelemente für die Struktur der räumlichen Daten
+
+Bei Auswahl von "Raster, Gitter" in dem Element "Digitale Repräsentation" könnn nun Angaben zu der Struktur der räumlichen Daten gemacht werden.
+
+![Mehrfachangabe von Sprache der Ressource](../images/ingrid_raster_position_accuracy.png "Mehrfachangabe von Sprache der Ressource")
+
+#### UVP: Die "gültig-bis" Daten von mehrern Zeilen einer Dokumententabelle können zusammen gesetzt werden.
+
+![Mehrfachangabe von Sprache der Ressource](../images/ingrid_uvp_set_multipe_dates.png "Mehrfachangabe von Sprache der Ressource")
+
+### Weitere Änderungen
 
 - [Feature] [IGE] Anpassung bzgl. Struktur der räuml. Daten (spatialRepresentationInfo) ([REDMINE-381](https://redmine.informationgrid.eu/issues/381))
 - [Feature] [IGE] Begrenzung der Eingabe im Titel (Objektname) auf 255 Zeichen ([REDMINE-941](https://redmine.informationgrid.eu/issues/941))
