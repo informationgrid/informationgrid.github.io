@@ -15,12 +15,7 @@ Release 08.02.2018
 
 Bei der Registrierung im Portal wird eine Passwort Policy eingesetzt, um zu einfache Passwörter zu vermeiden. Die eingesetzte Policy ist unter https://github.com/dropbox/zxcvbn dokumentiert.
 
-Um einen neuen Benutzer anlegen zu können muss das Passwort mind. die Stärke 3 (Gut) haben. Die erlaubte Passwortstärke kann unter der folgender Portal-Einstellung geändert werden:
-
-<pre>
-# Check password strength
-portal.form.strength.check.password = 3
-</pre>
+Um einen neuen Benutzer anlegen zu können muss das Passwort mind. die Stärke 3 (Gut) haben. Die erlaubte Passwortstärke kann in der Portal-Konfiguration geändert werden
 
 ![Einführung einer Passwort Policy bei der Registrierung im Portal](../images/ingrid_portal_passwort_policy.png "Einführung einer Passwort Policy bei der Registrierung im Portal")
 
