@@ -577,6 +577,10 @@ Rubriken, die im Webmap Client existiern sollen, werden in der Datei **catalogs.
 }
 {% endhighlight %}
 
+D.h. es kann z.B. je Rubrik definiert werden, welche Hintergrundkarten verwendet werden sollen ("backgroundLayers").
+> ACHTUNG: Die Hintergrundkarten werden mit Ihrer ID referenziert und sind normal in **layers.json** definiert.
+Diese IDs, z.B. "webatlasde_light" im Bsp. oben, dürfen **nicht verändert** werden, damit das Layout bei der Auswahl der Hintergrundkarten funktioniert (die IDs sind mit styles belegt).
+
 **Erstellung der Baumstruktur zu einer Rubrik (catalog-[TOPIC-ID].json)**
 
 Zu jeder definierten Rubrik unter 'catalogs.json' muss eine weitere JSON-Datei erstellt werden. Von der Benennung der Datei muss diese folgende Syntax vorweisen:
