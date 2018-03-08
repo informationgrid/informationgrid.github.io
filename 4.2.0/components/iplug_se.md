@@ -430,8 +430,6 @@ Durch eine Analyse und Anpassung der Exclude-URLs, können Duplikate reduziert/v
 
 Der URL Export kann auch verwendet werden um andere Analysen durchzuführen.
 
-
-
 ### Die Reports sollen ohne Authentifizierung erreichbar sein.
 
 Um die Reports in das Admin GUI von der Authentifizierung auszuschließen muss die Datei
@@ -469,3 +467,13 @@ Bitte analysieren Sie das log file des iPlugs.
 Löschen Sie gegebenenfalls den Cache Ihres Browsers und starten sowohl das Portal als auch das iPlug neu.
 
 Sie müssen nach einer Änderung der Konfiguration das iPlug immer neu starten
+
+
+### Wie kann ein Robots Denied Fehler verhindert werden?
+
+In der robots.txt muss der InGrid Crawler freigschaltet werden. Der nachstehende Eintrag bedeutet, dass der InGrid Crawler alle 3 Sekunden eine Seite analysieren darf.
+
+<pre>
+User-agent: ingrid
+Crawl-delay: 3
+</pre>
