@@ -231,13 +231,10 @@ Die Antwort der Schnittstelle erfolgt im RSS2.0 kompatiblen XML-Format. Die Schn
 ### Request vom MapClient
 
 Die Suche nach Diensten im MapClient erfolgt über die OpenSearch Schnittstelle.
-Die Suche nach "Wasser" im MapClient setzt z.B. folgenden Request ab:
+Die Suche nach "Wasser" im MapClient setzt z.B. folgenden 
+[REST-Request](https://dev.informationgrid.eu/ingrid-webmap-client/rest/search/query?q=Wasser&lang=de&type=services&searchUrl=https://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100) ab.
 
-[https://dev.informationgrid.eu/ingrid-webmap-client/rest/search/query?q=Wasser&lang=de&type=services&searchUrl=https://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100](https://dev.informationgrid.eu/ingrid-webmap-client/rest/search/query?q=Wasser&lang=de&type=services&searchUrl=https://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100)
-
-der folgende Open Search Query auslöst:
-
-[https://dev.informationgrid.eu/opensearch/query?q=Wasser+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100](https://dev.informationgrid.eu/opensearch/query?q=Wasser+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100)
+der folgende [Open Search Query](https://dev.informationgrid.eu/opensearch/query?q=Wasser+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100) auslöst.
 
 Das Ergebnis liefert Kartendienste mit "Wasser", die im MapClient hinzugefügt werden können.
 
