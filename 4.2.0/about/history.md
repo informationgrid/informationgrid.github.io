@@ -4,6 +4,30 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.2
+
+Release 09.03.2018
+
+### Liste der Änderungen
+
+InGrid
+- [Bug] [IPLUG-SE] IPLUG SE: Metadaten werden nicht gespeichert ([REDMINE-972](https://redmine.informationgrid.eu/issues/972))
+
+NUMIS
+- [Bug] [PORTAL] Regression: NI BLP Daten werden in UVP-NI Profil in Version 4.2.1 nicht dargestellt. ([REDMINE-969](https://redmine.informationgrid.eu/issues/969))
+
+UVP
+- [Feature] [PORTAL] UVP: Austausch Logo auf HE Vorschaltseite ([REDMINE-984](https://redmine.informationgrid.eu/issues/984))
+- [Bug] [IGE] Dokumentname bei externem Dateiupload ist falsch. ([REDMINE-978](https://redmine.informationgrid.eu/issues/978))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.2/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.2.2/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.2/))
+
 
 ## Version 4.2.1
 
