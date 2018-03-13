@@ -548,7 +548,7 @@ Die Reihenfolge der Ergebnisse innerhalb einer Gruppe entspricht dem Ranking.
 
 Dies kann durch das Einrichten der Apache Erweiterung mod-proxy-ajp und mod-rewrite erfolgen. In der Apache Konfiguration muss dann folgendes eingetragen werden (Bsp:):
 
-```ApacheConf
+```apacheconf
 ProxyPass /ingrid-portal ajp://127.0.0.1:8010
 ProxyPass /ingrid-portal/(.*) ajp://127.0.0.1:8010/$1
 ProxyPass /ingrid-portal-apps ajp://127.0.0.1:8010/ingrid-portal-apps

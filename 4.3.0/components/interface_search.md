@@ -352,7 +352,7 @@ Um die Schnittstelle über Port 80 erreichen zu können, bietet sich die Verwend
 
 In der Apache Konfiguration muss folgendes eingetragen werden:
 
-```ApacheConfig
+```apacheconfig
 #
 # ProxyEngine
 #

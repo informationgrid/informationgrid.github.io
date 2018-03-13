@@ -895,25 +895,25 @@ Spezialisten sollten für die Datenbank-Suche folgende Punkt berücksichtigen:
 
 * **Arbeitsversion Objekte:**
 
-```SQL
+```sql
 JOIN oNode.t01ObjectWork obj
 ```
 
 * **Arbeitsversion Adressen:**
 
-```SQL
+```sql
 JOIN aNode.t02AddressWork addr
 ```
 
 * **Veröffentlichten Version Objekte:**
 
-```SQL
+```sql
 JOIN oNode.t01ObjectPublished obj
 ```
 
 * **Veröffentlichten Version Adressen:**
 
-```SQL
+```sql
 JOIN aNode.t02AddressPublished addr
 ```
 
@@ -921,12 +921,12 @@ JOIN aNode.t02AddressPublished addr
 * Für das einzugebende HQL müssen keine Spalten per '_select ..._' eingegeben werden, wenn die Ergebnisse nur angezeigt werden sollen (kein CSV-Export). In diesem Fall reicht es, mit dem '_FROM ..._' zu beginnen. Von den gefundenen Objekten/Adressen werden immer die Klasse und der Name angezeigt.
 
 * **alle Objekte:**
-```SQL
+```sql
 FROM ObjectNode
 ```
 
 * **alle Adressen:**
-```SQL
+```sql
 FROM AddressNode
 ```
 
@@ -935,22 +935,22 @@ FROM AddressNode
 
 * **in der akt. Bearbeitungs-Version:**
 
-```SQL
+```sql
 select distinct obj.objName FROM ObjectNode oNode JOIN oNode.t01ObjectWork obj order by obj.objName
 ```
 
 * **in der veröffentlichten Version:**
 
-```SQL
+```sql
 select distinct obj.objName FROM ObjectNode oNode JOIN oNode.t01ObjectPublished obj order by obj.objName
 ```
 
 *  **Achtung:** In der Anzeige spielt die **
-```SQL
+```sql
 'selectSpalten'
 ```
 ** Angabe keine Rolle, diese bestimmt nur, **was nach** CSV exportiert wird. Bei obiger Recherche werden in der Anzeige also **immer alle** gefundenen Objekte angezeigt und zwar jeweils Klasse + Name. Taucht der gleiche Name in unterschiedlichen Objekten auf, so wird der Name doppelt angezeigt (z.B. mit unterschiedlicher Objekt-Klasse). Beim Export nach CSV wird der Name dann **nur einmal** exportiert, da im **
-```SQL
+```sql
 'select DISTINCT'
 ```
 ** angegeben ist. Die CSV-Datei enthält also weniger Einträge als Objekte vorhanden sind (da nur unterschiedliche Objektnamen exportiert werden).
@@ -959,7 +959,7 @@ select distinct obj.objName FROM ObjectNode oNode JOIN oNode.t01ObjectPublished 
 
 **SQL auf IGC-Schema:**
 
-```SQL
+```sql
 
 SELECT DISTINCT obj.id, obj.obj_uuid, obj.obj_name, obj.obj_class FROM T01_object obj
 LEFT OUTER JOIN T08_attr T08_1 ON (obj.id = T08_1.obj_id)
@@ -978,7 +978,7 @@ AND obj.mark_deleted != 'Y'
 
 **Umsetzung in HQL:**
 
-```SQL
+```sql
 
 SELECT DISTINCT OBJNODE.objUuid, OBJ.objUuid, OBJ.objName, OBJ.objClass, T08T_1.name, T08_1.data , T08T_2.name, T08_2.data
 FROM
@@ -1490,7 +1490,7 @@ Einer neuen Rubrik weist man zuerst eine eindeutig identfizierbare ID zu. Darüb
 Die folgenden Beispiele sollen die Möglichkeiten zeigen, wie man ein zusätzliches Feld mit Ereignissen verknüpft und/oder das Verhalten beeinflusst. In diesen Beispielen wird von einem neuen Feld ausgegangen, welches mit der ID "neuesElement" angelegt wurde. Die ersten Beispiele beziehen sich auf die Validierung von Feldern, welche während eines normalen Speichervorganges ausgeführt werden. Bei einem Fehler wird das Objekt dann nicht gespeichert.
 
 
-```JavaScript
+```javascript
 // Textelement erlaubt nur Email-Adressen
 dijit.byId("neuesElement").regExpGen = dojox.validate.regexp.emailAddress;
 
@@ -1501,7 +1501,7 @@ dijit.byId("neuesElement").validator= function(value) {if (value == "NO") return
 
 Mit Javascript und dem DOJO-Framework lässt sich jedes mögliche Verhalten nachbilden, wodurch komplexe Strukturen entstehen können. Deshalb wurden ab der IGE Version 3.0.1 diverse unterstützende Funktionen eingeführt, die den Umgang erleichtern sollen. Folgende Funktionen stehen zur Verfügung:
 
-```JavaScript
+```javascript
 Validation.addEmailCheck(/*String*/elementId, /*boolean*/onPublish);
 Validation.addUrlCheck(/*String*/elementId, /*boolean*/onPublish);
 Validation.addValueCheck(/*String*/elementId, /*String*/value, /*boolean*/invert, /*String*/message, /*boolean*/onPublish);
@@ -1510,7 +1510,7 @@ Validation.addTableCellCheck(/*String*/tableId, /*Array*/columnIds, /*function*/
 ```
 
 
-```JavaScript
+```javascript
 
 // Textelement erlaubt nur Email-Adressen beim Speichern
 Validation.addEmailCheck("neuesElement");
@@ -1535,7 +1535,7 @@ Validation.addNumberCheck("neuesElement", 1, 10, "Zahl muss zwischen 1 und 10 se
 Möchte man die Validierung nur durchführen, wenn ein Objekt veröffentlich werden soll, so muss ein anderer Ansatz gewählt werden! Laut des Publisher/Subscriber Prinzips, meldet man sich bei einem Ereignis an. Tritt dieses Ereignis auf, wird die eigene geschriebene Funktion ebenfalls zu diesem Zeitpunkt ausgeführt. Dafür gibt es das spezielle Ereignis " **/onBeforeObjectPublish** ". Während bei einer Validierung, die vor jedem Speichern geschieht, die Funktion 'true' oder 'false' zurückliefern muss, gilt es hier, sich die ID des Elements zu merken. Dies geschieht in dem einzigen Parameter, der der Funktion übergeben wird. Hier ein kleines Beispiel:
 
 
-```JavaScript
+```javascript
 // vor dem Publizieren muss das Element mehr als 5 Zeichen haben
 dojo.subscribe("/onBeforeObjectPublish", function(invalidIDs) {if (dijit.byId("neuesElement").get("value").length < 5) { invalidIDs.push("neuesElement"); }});
 ```
@@ -1546,7 +1546,7 @@ Sobald also mindestens ein Wert in 'invalidIDs' steht, wird auch das Veröffentl
 
 Das folgende Beispiel zeigt die Validierung einer Tabelle, welches etwas komplizierter ist und durch eine abstrahierte Methode vereinfacht wurde. Dazu dient die Methode _Validation.addTableCellCheck_ , welche 4 Parameter haben kann. Der erste Parameter beschreibt die ID der Tabelle, der zweite, die zu überprüfenden Spalten mit ihren IDs, der dritte stellt die Validierungsfunktion zur Verfügung und der letzte Parameter entscheidet, ob die Validierung während der Eingabe und des Abspeicherns erfolgt oder nur beim Veröffentlichen. Die Validierungsfunktion hat wiederum 3 Parameter. Der erste ist der Wert der zu überprüfenden Zelle, der zweite ist die ID der Spalte die gerade überprüft wird (es können nur die IDs sein, die als 2. Parameter an addTableCellCheck übergeben worden sind) und der gesamte Datensatz, welcher für Vergleiche genutzt werden kann.
 
-```JavaScript
+```javascript
 // die Spalten mit den IDs 'name' und 'birth' der Tabelle 'neuesElement' dürfen
 // nicht leer sein wenn eine dieser Spalten bereits beschrieben wurde
 var f = function(value, colId, rowData) {// get the other column for comparison var otherCol = (colId === "name") ? "birth" : "name"; if ((!value &#124;&#124; value === "") && rowData[otherCol] && rowData[otherCol].length > 0) { return false; } return true;};
@@ -1560,7 +1560,7 @@ In der Variablen _invalidIDs_ werden die gesamten IDs von den Elementen gesammel
 
 Ein weiteres verfügbares Ereignis ist"/onObjectClassChange", welches immer auftritt, wenn die Objektklasse manuell oder automatisch (durch das Laden eines anderen Objektes) sich ändert. Hierbei wird die neue Klasse als Parameter an den Subscriber übergeben!
 
-```JavaScript
+```javascript
 // toggle visibility of field depending on the selected class
 dojo.subscribe("/onObjectClassChange", function(c) {if (c.objClass === "Class3") dojo.addClass("uiElementAddneuesElement", "hide"); else dojo.removeClass("uiElementAddneuesElement", "hide")})
 // output: "class has changed to: Class3"
@@ -1570,7 +1570,7 @@ Um nicht nur auf das zusätzliche Feld, sondern auf den gesamten Container inklu
 
 Weiterhin gibt es noch das Ereignis"/onInspireTopicChange", welches bei einer Änderung an der INSPIRE-Themen Liste auftritt. Der Parameter _topics_ ist ein Array mit den IDs der eingetragenen INSPIRE-Themen in der Tabelle. Hier ein Beispiel:
 
-```JavaScript
+```javascript
 // print all inspire topics when table has changeddojo.subscribe("/onInspireTopicChange", function(o) {console.debug("inspire changed: " + o.topics);})
 ```
 
@@ -1581,7 +1581,7 @@ Für ein besseres Verständis dieser Prinzipien empfiehlt es sich die Dokumentat
 
 #### Beispiele: IDF-Mapping
 
-```JavaScript
+```javascript
 importPackage(Packages.de.ingrid.iplug.dsc.om);
 // add Namespaces to Utility for convenient handling of NS !
 DOM.addNS("gmd", "http://www.isotc211.org/2005/gmd");

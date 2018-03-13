@@ -449,7 +449,7 @@ http://dev.informationgrid.eu/csw/partner/bund
 
 Konfigurationsbeispiel Apache Konfiguration:
 
-```ApacheConf
+```apacheconf
 RewriteEngine on
 # Die folgende Regel schreibt die Anfragen an csw um und leitet sie wie
 # einen Proxy-Request an 8083:csw weiter:

@@ -493,7 +493,7 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 | timeBehaviour | Layer Zeit Verhalten | String |
 
 Beispiele:
-```JSON
+```json
 {
     ...
     // WMS
@@ -556,7 +556,7 @@ Die Liste ist auch in der Suche des Webmap Clients integriert, sodass eine Suche
 
 Rubriken, die im Webmap Client existiern sollen, werden in der Datei **catalogs.json** definiert. Die Definition einer Rubrik kann folgendermaßen aussehen:
 
-```JSON
+```json
 {
     "topics": [{
         // Definition Hintergrund-Layer per default
@@ -591,7 +591,7 @@ catalog-[TOPIC-ID].json
 
 In der erstellten Datei wird die Struktur der Rubrik im JSON-Format hinterlegt. Wie der Inhalt des JSON-Formats aussehen kann, zeigt folgendes Beispiel:
 
-```JSON
+```json
 {
     "results": {
         "root": {
@@ -683,7 +683,7 @@ https://is.gd/create.php?format=json&url=<URL>
 
 Als Antwort des Dienstes wird ein JSON-Objekt mit einem Schlüssel 'shorturl' geliefert, z.B.: 
 
-```JSON
+```json
 { "shorturl": "https://is.gd/pvfPuU" }
 ```
 

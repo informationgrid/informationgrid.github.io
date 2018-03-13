@@ -94,7 +94,7 @@ Dies ist nur über die Datenbank möglich, wo die ID des übergeordnetetn Benutz
 
 Nutzer IDs können wie folgt in der Datenbank abgefragt werden:
 
-```SQL
+```sql
 SELECT
 user.id,
 addr.firstname,
@@ -109,11 +109,11 @@ user.addr_uuid = addr.adr_uuid
 
 Die Änderung des übergeordneten Benutzers erfolgt dann wie folgt:
 * für alle MD-Autoren eines MD-Administrators:
-```SQL
+```sql
 UPDATE idc_user SET parent_id = ??? where parent_id = ???
 ```
 * für einen einzelnen MD-Autor:
-```SQL
+```sql
 UPDATE idc_user SET parent_id = ??? where id = ???
 ```
 

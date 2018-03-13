@@ -261,7 +261,7 @@ management_request_type | "1" | Identifiziert die Schnittstellenmethode (getPart
 Die Liste der Partner und deren Anbieter können über folgende Struktur (unter Eigenschaft `partner` im Suchergebnis) ermittelt werden:
 
 
-```JSON
+```json
 { partner: [
 	{ partnerid="bund",
 	name="Bund",
@@ -301,7 +301,7 @@ Die Liste der Anbieterkann über folgende Struktur (unter Eigenschaft `provider`
 
 Die Liste der Anbieter wird über die folgende Abfrage erstellt:
 
-```JSON
+```json
 { provider: [
 		{ providerid="bu_bfn", name="Name des Providers", url="URL des providers"} ,
 		{providerid="bu_bfn", name="Name des Providers", url="URL des providers"}

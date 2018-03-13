@@ -144,7 +144,7 @@ Um den "Zeige Punktkoordinaten"-Link im Portal für einen Treffer in der Ergebni
 
 Im Index-Mapping des iPlugs muss diese Eigenschaft hinzugefügt werden:
 
-```JavaScript
+```javascript
 //KML
 IDX.addNumeric("spatial_ref_value.x1", row.get("x1"));
 IDX.addNumeric("spatial_ref_value.y1", row.get("y1"));
@@ -162,7 +162,7 @@ Die Darstellung der Punkt Koordinaten im Kartenkomponente des Portals erfolgt im
 
 Um das IDF-Mapping mit KML zu erweitern muss das Mapping-Script `igc-x.x.x_to_idf.js` des DSC-Scripted erweitert werden:
 
-```JavaScript
+```javascript
 DOM.addNS("xlink", "http://www.w3.org/1999/xlink");
 DOM.addNS("kml", "http://www.opengis.net/kml/2.2");
 
