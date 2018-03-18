@@ -4,6 +4,29 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.3
+
+Release 16.03.2018
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [IPLUG-SE] Automatische Aktualisierung BLP-URLs im SE-iPlug ([REDMINE-856](https://redmine.informationgrid.eu/issues/856))
+- [Bug] [IPLUG-SE] Verbesserung des UVP BLP Datenimports. ([REDMINE-994](https://redmine.informationgrid.eu/issues/994))
+
+UVP
+- [Feature] [PORTAL] Integration der niedersächsischen UVP/BLP-Informationen in das UVP-Gemeinschaftsportal uvp-verbund.de ([REDMINE-915](https://redmine.informationgrid.eu/issues/915))
+- [Bug] [PORTAL] Das Icon zum ausklappen der UVP Phasen ist bei der jeweils letzen (defaultmäßig bereits ausgklappten) Phase falsch. ([REDMINE-981](https://redmine.informationgrid.eu/issues/981))
+- [Bug] [PORTAL] In der mobilen Ansicht ist die Darstellung der Kategorien nicht korrekt. ([REDMINE-992](https://redmine.informationgrid.eu/issues/992))
+- [Bug] [PORTAL] UVP: Korrektur von Menü-Tooltips ([REDMINE-995](https://redmine.informationgrid.eu/issues/995))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.3/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.3/))
+
+
 ## Version 4.2.2
 
 Release 09.03.2018
