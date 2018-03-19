@@ -89,6 +89,11 @@ menu:
         href: components/interface_csw.html
       - title: Opensearch Server
         href: components/server_opensearch.html
+  - title: Downloads
+    href: "downloads"
+    menu: 
+      - title: UVP Erfassungsanleitung
+        href: components/uvp.html
 published: true
 ---
 
