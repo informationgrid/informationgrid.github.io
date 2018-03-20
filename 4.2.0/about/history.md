@@ -4,6 +4,21 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.4
+
+Release 20.03.2018
+
+### Liste der Änderungen
+
+UVP
+- [Bug] [PORTAL] UVP: Upload funktioniert nicht mit IE 11. ([REDMINE-1001](https://redmine.informationgrid.eu/issues/1001))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.4/))
+
+
 ## Version 4.2.3
 
 Release 16.03.2018
