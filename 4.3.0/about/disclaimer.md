@@ -10,7 +10,7 @@ Verwaltungskooperation Umweltinformationssysteme (VKoopUIS) Projekt Nr. 50: InGr
 InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen<br>
 E-Mail: vkoopuis@informationgrid.eu
 
-Projektpartner Öffentliche Verwaltung:
+### Projektpartner Öffentliche Verwaltung:
 
 - Niedersachsen: Ministerium für Umwelt, Energie, Bauen und Klimaschutz (Federführung)
 - Bund: Informationstechnikzentrum Bund/WSV
@@ -31,7 +31,7 @@ Projektpartner Öffentliche Verwaltung:
 - Thüringen: Ministerium für Umwelt, Energie und Naturschutz
 - Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
 
-Projektpartner Wirtschaft:
+### Projektpartner Wirtschaft:
 
 wemove digital solutions GmbH<br>
 Eschersheimer Landstr. 5-7<br>
