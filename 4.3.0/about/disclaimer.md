@@ -10,19 +10,28 @@ Verwaltungskooperation Umweltinformationssysteme (VKoopUIS) Projekt Nr. 50: InGr
 InGrid-Softwarekomponenten zum Betrieb von Internetportalen und Metadatenkatalogen<br>
 E-Mail: vkoopuis@informationgrid.eu
 
-Projektpartner Öffentliche Verwaltung:
+### Projektpartner Öffentliche Verwaltung:
 
-- Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz
-- Informationstechnikzentrum Bund (ITZBund) im Auftrag der Wasser- und Schifffahrtsverwaltung des Bundes (WSV) im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur (BMVI)
-- Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft Brandenburg
-- GeoInformation Bremen
-- Behörde für Umwelt und Energie Hamburg
-- Landesamt für Umwelt, Naturschutz und Geologie Mecklenburg-Vorpommern
-- Landesamt für Vermessung, Geoinformation und Landentwicklung Saarland
-- Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie
-- Ministerium für Landwirtschaft und Umwelt des Landes Sachsen-Anhalt
+- Niedersachsen: Ministerium für Umwelt, Energie, Bauen und Klimaschutz (Federführung)
+- Bund: Informationstechnikzentrum Bund/WSV
+- Baden-Württemberg: Ministerium für Umwelt, Klima und Energiewirtschaft
+- Bayern: Staatsministerium für Umwelt und Verbraucherschutz
+- Berlin: Senatsverwaltung für Umwelt, Verkehr und Klimaschutz
+- Brandenburg: Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft
+- Bremen: GeoInformation Bremen
+- Hamburg: Behörde für Umwelt und Energie
+- Hessen: Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz
+- Mecklenburg-Vorpommern: Landesamt für Umwelt, Naturschutz und Geologie
+- Nordrhein-Westfalen: Ministerium für Umwelt, Landwirtschaft, Natur- und Verbraucherschutz
+- Rheinland-Pfalz: Ministerium für Umwelt, Energie, Ernährung und Forsten
+- Saarland: Landesamt für Vermessung, Geoinformation und Landentwicklung
+- Sachsen: Landesamt für Umwelt, Landwirtschaft und Geologie
+- Sachsen-Anhalt: Ministerium für Umwelt, Landwirtschaft und Energie des Landes
+- Schleswig-Holstein: Ministerium für Energiewende, Landwirtschaft, Umwelt und ländliche Räume
+- Thüringen: Ministerium für Umwelt, Energie und Naturschutz
+- Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
 
-Projektpartner Wirtschaft:
+### Projektpartner Wirtschaft:
 
 wemove digital solutions GmbH<br>
 Eschersheimer Landstr. 5-7<br>
