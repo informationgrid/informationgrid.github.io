@@ -4,6 +4,87 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.3.0
+
+Release 03.04.2018
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] [PORTAL] Portal: Überarbeitung der Anzeige von Lizenzen in der Detailansicht ([REDMINE-541](https://redmine.informationgrid.eu/issues/541))
+- [Feature] [PORTAL] Benutzerprüfung bei der Registrierung im Portal ([REDMINE-60](https://redmine.informationgrid.eu/issues/60))
+- [Feature] [PORTAL] Einführen einer Passwort Policy für das Anlegen von Passwörtern im Portal ([REDMINE-829](https://redmine.informationgrid.eu/issues/829))
+- [Feature] [IGE] IGE: von INSPIRE entkoppeln: neues zusätzliches Feld "Spezifikation der Konformität" - freie Eingabe ermöglichen ([REDMINE-859](https://redmine.informationgrid.eu/issues/859))
+- [Feature] [IGE] IGE: neues zusätzliches Feld "Spezifikation der Konformität" ([REDMINE-827](https://redmine.informationgrid.eu/issues/827))
+- [Feature] [IGE] Feld "Konformität der Spezifikation" um freie Eingabe erweitern ([REDMINE-822](https://redmine.informationgrid.eu/issues/822))
+- [Feature] [IGE] IGE: von INSPIRE entkoppeln: Feld "INSPIRE-Themen" ändern in konditionales Pflichtfeld ([REDMINE-816](https://redmine.informationgrid.eu/issues/816))
+- [Feature] [MAPCLIENT] MapClient: Update auf aktuelle Version vom mf-geoadmin3 ([REDMINE-961](https://redmine.informationgrid.eu/issues/961))
+- [Feature] [CODELIST REPOSITORY] IGE: Auswahlliste Datenformat erweitern - Codeliste 1320 ([REDMINE-858](https://redmine.informationgrid.eu/issues/858))
+- [Bug] [PORTAL] Leerzeichen vor und hinter dem Benutzernamen abschneiden ([REDMINE-733](https://redmine.informationgrid.eu/issues/733))
+- [Bug] [PORTAL] Portal: In der Detaildarstellung werden die Lizenzen nicht korrekt lokalisiert ([REDMINE-862](https://redmine.informationgrid.eu/issues/862))
+- [Bug] [MAPCLIENT] MAPCLIENT: Offline-Modus Meldung ([REDMINE-987](https://redmine.informationgrid.eu/issues/987))
+- [Bug] [IGE] IGE: Feld "Optionale Schlagworte" immer sichtbar ([REDMINE-953](https://redmine.informationgrid.eu/issues/953))
+- [Bug] [IGE] IGE: Fehlende Felder in der PlugDescription ([REDMINE-945](https://redmine.informationgrid.eu/issues/945))
+- [Bug] [IGE] IGE: URL Validierung erkennt OGC Dienste inkorrekt als fehlerhaft ([REDMINE-974](https://redmine.informationgrid.eu/issues/974))
+- [Bug] [IGE] IGE: Datensätze werden nicht nach Kopiervorgang indexiert ([REDMINE-888](https://redmine.informationgrid.eu/issues/888))
+- [Bug] [IGE] Probleme bei GetCapabilities Assistent ([REDMINE-781](https://redmine.informationgrid.eu/issues/781))
+- [Bug] [IPLUG_IGE] IGE: Großbuchstaben in den Index-Feldern werden beim Indexieren nicht in Kleinbuchstaben umgewandelt ([REDMINE-944](https://redmine.informationgrid.eu/issues/944))
+- [Bug] [CODELIST REPOSITORY] UVP: Manche UVP Nummern mit Sonderzeichen im Namen werden im Editor nicht korrekt dargestellt.  ([REDMINE-963](https://redmine.informationgrid.eu/issues/963))
+- [Bug] [CODELIST REPOSITORY] UVP: Datasätze können nicht veröffentlicht werden ([REDMINE-962](https://redmine.informationgrid.eu/issues/962))
+- [Bug] [IPLUG-SNS] WFS-GN (Geothesaurus) wird nicht richtig ausgewertet ([REDMINE-993](https://redmine.informationgrid.eu/issues/993))
+
+NUMIS
+
+- [Bug] [PORTAL] Regression: NI BLP Daten werden in UVP-NI Profil in Version 4.2.1 nicht dargestellt. ([REDMINE-969](https://redmine.informationgrid.eu/issues/969))
+
+UVP
+
+- [Feature] [PORTAL] Detailtemplate nds. UVP-Portal ([REDMINE-954](https://redmine.informationgrid.eu/issues/954))
+- [Feature] [PORTAL] UVP: Austausch Logo auf HE Vorschaltseite ([REDMINE-984](https://redmine.informationgrid.eu/issues/984))
+- [Feature] [IGE] Die gültig-bis Daten einer Dokumententabelle sollen zusammen gesetzt werden können ([REDMINE-895](https://redmine.informationgrid.eu/issues/895))
+- [Feature] [IGE] UVP: Ordnerhierarchie und Zip-Upload für Planunterlagen ([REDMINE-890](https://redmine.informationgrid.eu/issues/890))
+- [Feature] [SYSTEM] Automatische Aktualisierung BLP-URLs im SE-iPlug des Nds. UVP-Portals ([REDMINE-856](https://redmine.informationgrid.eu/issues/856))
+- [Feature] [SYSTEM] Integration der niedersächsischen UVP/BLP-Informationen in das UVP-Gemeinschaftsportal uvp-verbund.de ([REDMINE-915](https://redmine.informationgrid.eu/issues/915))
+- [Bug] [PORTAL] Expandicon in UVP Detailansicht ist falsch. ([REDMINE-981](https://redmine.informationgrid.eu/issues/981))
+- [Bug] [PORTAL] UVP: Kategorien in mobiler Ansicht ([REDMINE-992](https://redmine.informationgrid.eu/issues/992))
+- [Bug] [IGE] Dokumentname bei externem Dateiupload ist falsch. ([REDMINE-978](https://redmine.informationgrid.eu/issues/978))
+- [Bug] [IGE] UVP: Anpassung von Menü-Tooltips ([REDMINE-995](https://redmine.informationgrid.eu/issues/995))
+- [Bug] [IGE] UVP: Upload funktioniert nicht mit IE 11 ([REDMINE-1001](https://redmine.informationgrid.eu/issues/1001))
+
+
+### Komponenten
+
+- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.3.0/))
+- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.3.0/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.3.0/))
+- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.3.0/))
+- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.3.0/))
+- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.3.0/))
+- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/4.3.0/))
+- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.3.0/))
+- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.3.0/))
+- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.3.0/))
+- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.3.0/))
+
+
+## Version 4.2.4
+
+Release 20.03.2018
+
+### Liste der Änderungen
+
+UVP
+- [Bug] [PORTAL] UVP: Upload funktioniert nicht mit IE 11. ([REDMINE-1001](https://redmine.informationgrid.eu/issues/1001))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.4/))
+
+
+
 ## Version 4.2.3
 
 Release 16.03.2018
