@@ -10,8 +10,9 @@ Release 03.04.2018
 
 ### Änderungen
 
-#### Freie Eingabe für "Spezifikation der Konformität"
+#### IGE: Freie Eingabe für "Spezifikation der Konformität"
 
+Der InGrid Editor wurde bezüglich der Erfassung von INSPIRE kompatiblen Metadaten erweitert.
 Im Feld "Spezifikation der Konformität" ist neben der Angabe einer INSPIRE kompatiblen Spezifikationsangabe auch eine freie Angabe möglich. Für die Angabe eines freien Eintrages, kann eine lokalen Codeliste als Basis angelegt werden.
 
 ![Freie Eingabe für "Spezifikation der Konformität"](../images/859_ige_conformity.png "Freie Eingabe für 'Spezifikation der Konformität'")
