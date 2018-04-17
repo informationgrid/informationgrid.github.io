@@ -51,11 +51,11 @@ Technisch gesehen unterscheidet sich der Einsatz von InGrid auf europäischer Eb
         
 ### Forschungsportale
 
-* [Forschungsprojekt “Design eines Informationsportals als Forschungsinfrastruktur für Großschutzgebiete - Beispiel: UNESCO MaB Biosphärenreservat Bliesgau”, Umwelt-Campus Birkenfeld (Fachhochschule Trier)](http://forschungsserver.issgeo.org/)
+* [Forschungsprojekt “Design eines Informationsportals als Forschungsinfrastruktur für Großschutzgebiete - Beispiel: UNESCO MaB Biosphärenreservat Bliesgau”, Umwelt-Campus Birkenfeld (Fachhochschule Trier)](http://cqcounter.com/www/issgeo.org.html)
         
 ### Andere Ressorts
 
-* Geoportal der Wasser- und Schifffahrtsverwaltung des Bundes im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur, betrieben durch die [Bundesanstalt für IT-Dienstleistungen](http://www.dlz-it.de/)
+* Geoportal der Wasser- und Schifffahrtsverwaltung des Bundes im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur, betrieben durch das [Informationstechnikzentrum Bund (ITZBund)](https://www.itzbund.de/)
 
 		
 ## InGrid auf EU-Ebene:
