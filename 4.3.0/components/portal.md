@@ -394,8 +394,8 @@ Die Einstellungen für die Postgres Datenbank erfolgen im Portal in folgenden Da
 
 **Verzeichnis _PORTAL_HOME/apache-tomcat/conf/Catalina/localhost_**
 
-* *ingrid-portal-apps.xml*,
-*ROOT.xml*:
+* *ingrid-portal-apps.xml*
+* *ROOT.xml*:
 {% highlight text %}
      url="jdbc:postgresql://localhost:5432/ingrid_portal"
      driverClassName="org.postgresql.Driver"
