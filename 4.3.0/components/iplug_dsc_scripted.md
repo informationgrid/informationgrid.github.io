@@ -24,7 +24,7 @@ Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DS
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-scripted/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-scripted/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -62,7 +62,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-scripted/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-scripted/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/) herunterladen.
 
 iPlug stoppen.
 

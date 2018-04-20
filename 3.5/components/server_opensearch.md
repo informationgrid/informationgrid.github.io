@@ -39,7 +39,7 @@ Nach dem Start des Servers stehen folgende Dienste zur Verfügung:
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/)
+Download: [https://distributions.informationgrid.eu/ingrid-server-opensearch/](https://distributions.informationgrid.eu/ingrid-server-opensearch/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -77,7 +77,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-server-opensearch/](https://distributions.informationgrid.eu/ingrid-server-opensearch/) herunterladen.
 
 Komponente stoppen.
 

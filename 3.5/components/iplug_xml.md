@@ -26,7 +26,7 @@ Das iPlug dient dem Indexieren von XML Daten. Die XML Daten müssen in Form von 
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-xml/](https://distributions.informationgrid.eu/ingrid-iplug-xml/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -64,7 +64,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-xml/](https://distributions.informationgrid.eu/ingrid-iplug-xml/) herunterladen.
 
 iPlug stoppen.
 

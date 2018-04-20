@@ -29,7 +29,7 @@ Das iPlug fragt die WFS Schnittstelle regelmäßig (z.B. einmal täglich) ab. Di
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-wfs/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-wfs/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-dsc-wfs/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-wfs/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -67,7 +67,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-wfs/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-wfs/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-dsc-wfs/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-wfs/) herunterladen.
 
 iPlug stoppen.
 

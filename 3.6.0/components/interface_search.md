@@ -29,7 +29,7 @@ Unterstützte Schnittstellen:
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/)
+Download: [https://distributions.informationgrid.eu/ingrid-interface-search/](https://distributions.informationgrid.eu/ingrid-interface-search/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -50,7 +50,7 @@ starten.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-interface-search/](https://distributions.informationgrid.eu/ingrid-interface-search/) herunterladen.
 
 Komponente stoppen.
 

@@ -107,7 +107,7 @@ Hintergrund : Das Standard Profil in dem das Portal ausgeliefert wird ist "Porta
 
 #### 4.) Download
 
-[https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/)
+[https://distributions.informationgrid.eu/ingrid-portal/](https://distributions.informationgrid.eu/ingrid-portal/)
 
 #### 5.) Installation starten
 
@@ -239,7 +239,7 @@ Der Installationsfortschritt kann während der Installation angezeigt werden. Di
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-portal/](https://distributions.informationgrid.eu/ingrid-portal/) herunterladen.
 
 Portal stoppen.
 

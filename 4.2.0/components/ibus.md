@@ -25,7 +25,7 @@ Der iBus (information bus) bildet in einem InGrid-System das zentrale Element. E
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/)
+Download: [https://distributions.informationgrid.eu/ingrid-ibus/](https://distributions.informationgrid.eu/ingrid-ibus/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -53,7 +53,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-ibus/](https://distributions.informationgrid.eu/ingrid-ibus/) herunterladen.
 
 iBus stoppen.
 

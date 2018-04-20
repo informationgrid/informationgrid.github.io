@@ -32,7 +32,7 @@ Eine Kopie der Codelistdaten wird gewöhnlich in einer XML-Datei "data/codelists
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/)
+Download: [https://distributions.informationgrid.eu/ingrid-codelist-repository/](https://distributions.informationgrid.eu/ingrid-codelist-repository/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -61,7 +61,7 @@ gestartet. Anstelle von localhost können Sie auch die IP-Adresse des Computers 
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-codelist-repository/](https://distributions.informationgrid.eu/ingrid-codelist-repository/) herunterladen.
 
 Komponente stoppen.
 

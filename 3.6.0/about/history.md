@@ -8,18 +8,18 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.0.3/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.0.3/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.3/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.0.3/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.0.3/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.0.3/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/3.6.0.3/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.3/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/3.6.0.3/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.0.3/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.0.3/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.0.3/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.0.3/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.0.3/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.0.3/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.0.3/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/3.6.0.3/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/3.6.0.3/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.0.3/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.0.3/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.0.3/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.0.3/))
 
 ### Änderungen
 
@@ -42,9 +42,9 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.0.2/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.2/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.0.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.0.2/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.0.2/))
 
 ### Änderungen
 
@@ -63,7 +63,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Komponenten
 
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.0.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.0.1/))
 
 ### Änderungen
 

@@ -33,7 +33,7 @@ Anwendung findet der Upgrade Server z.B. im Portal integrierten [Upgrade Client]
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-upgrade/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-upgrade/)
+Download: [https://distributions.informationgrid.eu/ingrid-server-upgrade/](https://distributions.informationgrid.eu/ingrid-server-upgrade/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -66,7 +66,7 @@ Jegliche Informationen die dabei gefunden werden, können über den Web-Service 
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-upgrade/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-upgrade/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-server-upgrade/](https://distributions.informationgrid.eu/ingrid-server-upgrade/) herunterladen.
 
 Komponente stoppen.
 

@@ -23,7 +23,7 @@ Das iPLug Opensearch dient der Einbindung von openSearch Schnittstellen in die I
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-opensearch/](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -61,7 +61,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-opensearch/](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/) herunterladen.
 
 iPlug stoppen.
 

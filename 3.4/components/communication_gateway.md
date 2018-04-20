@@ -41,7 +41,7 @@ Wird das Gateway Ausgangsseitig im SSL Modus betrieben so müssen die Pakete an 
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-communication-gateway/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-communication-gateway/)
+Download: [https://distributions.informationgrid.eu/ingrid-communication-gateway/](https://distributions.informationgrid.eu/ingrid-communication-gateway/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -61,7 +61,7 @@ starten.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-communication-gateway/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-communication-gateway/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-communication-gateway/](https://distributions.informationgrid.eu/ingrid-communication-gateway/) herunterladen.
 
 Komponente stoppen.
 

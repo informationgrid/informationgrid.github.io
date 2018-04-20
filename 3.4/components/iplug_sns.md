@@ -36,7 +36,7 @@ Die Dienste werden an verschiedenen Stellen in der InGrid Software verwendet:
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-sns/](https://distributions.informationgrid.eu/ingrid-iplug-sns/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -80,7 +80,7 @@ starten.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-sns/](https://distributions.informationgrid.eu/ingrid-iplug-sns/) herunterladen.
 
 iPlug stoppen.
 

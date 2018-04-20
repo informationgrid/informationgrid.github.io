@@ -30,9 +30,9 @@ Profil RLP
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.5/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.1.5/))
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.5/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.5/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.1.5/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.1.5/))
 
 
 
@@ -62,9 +62,9 @@ Profil UVP-NI, NUMIS
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.4/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.1.4/))
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.4/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.4/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.1.4/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.1.4/))
 
 
 
@@ -83,7 +83,7 @@ Profil UVP-NI
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.3/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.3/))
 
 
 
@@ -105,7 +105,7 @@ Profil BKG
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.2/))
 
 
 
@@ -130,8 +130,8 @@ Profil UVP
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.1/))
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.1/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.1.1/))
 
 
 
@@ -243,16 +243,16 @@ Profil UVP
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.1.0/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.1.0/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.1.0/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.1.0/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.1.0/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/4.1.0/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.1.0/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.1.0/))
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.1.0/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.1.0/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.1.0/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.1.0/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/4.1.0/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/4.1.0/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/4.1.0/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.1.0/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.1.0/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/4.1.0/))
 
 
 
@@ -320,13 +320,13 @@ Der InGrid Metadateneditor unterstützt nun auch das AdV Metadatenprofil. Die Ko
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.3/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.3/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.0.3/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.3/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.0.3/))
-- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/4.0.3/))
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.3/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.3/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.0.3/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/4.0.3/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.0.3/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.0.3/))
 
 
 ## Version 4.0.2.1
@@ -344,8 +344,8 @@ Release: 01.06.2017
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.2.1/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.2.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.0.2.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.2.1/))
 
 
 ## Version 4.0.2
@@ -383,18 +383,18 @@ Release: 11.04.2017
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.2/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/4.0.2/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.0.2/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/4.0.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.2/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.0.2/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.0.2/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.0.2/))
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.2/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.0.2/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.0.2/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.2/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.0.2/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/4.0.2/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/4.0.2/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/4.0.2/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.0.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.0.2/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/4.0.2/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.0.2/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/4.0.2/))
 
 
 ## Version 4.0.1.1
@@ -407,8 +407,8 @@ Release: 02.02.2017
 
 ### Komponenten
 
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.1.1/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.0.1.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.1.1/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/4.0.1.1/))
 
 
 
@@ -478,23 +478,23 @@ Release: 01.02.2017
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.1/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/4.0.1/))
-- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/4.0.1/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.0.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/4.0.1/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/4.0.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.1/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.0.1/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.0.1/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/4.0.1/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/4.0.1/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.0.1/))
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.1/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/4.0.1/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.0.1/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/4.0.1/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.1/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.0.1/))
-- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/4.0.1/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.0.1/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/4.0.1/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/4.0.1/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/4.0.1/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/4.0.1/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.0.1/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/4.0.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.0.1/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/4.0.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.0.1/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/4.0.1/))
+- Server OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-server-opensearch/4.0.1/))
 
 
 
@@ -508,7 +508,7 @@ Release: 28.12.2016
 
 ### Komponenten
 
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.0.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.0.2/))
 
 
 ## Version 4.0.0.1
@@ -521,7 +521,7 @@ Release: 19.09.2016
 
 ### Komponenten
 
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.5/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.2.5/))
 
 
 ## Version 4.0.0
@@ -582,16 +582,16 @@ Im InGrid Editor wurde ein neues Feld "Servicezeiten" bei der Adress Eingabe ein
 
 ### Komponenten
 
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/4.0.0/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/4.0.0/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/4.0.0/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/4.0.0/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/4.0.0/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/4.0.0/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.0.0/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/4.0.0/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/4.0.0/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.0.0/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.0.0/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.0.0/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/4.0.0/))
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/4.0.0/))
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/4.0.0/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/4.0.0/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.0.0/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.0.0/))
 
 
 
@@ -606,8 +606,8 @@ Release: 08.07.2016
 
 ### Komponenten
 
-- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.2/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.2.2/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/3.6.2.2/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.2.2/))
 
 
 ## Version 3.6.2.1
@@ -633,11 +633,11 @@ Release: 08.07.2016
 
 ### Komponenten
 
-- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2.1/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.2.1/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2.1/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.2.1/))
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2.1/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/3.6.2.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/3.6.2.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.2.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.2.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.2.1/))
 
 
 
@@ -741,24 +741,24 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 
 ### Komponenten
 
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/3.6.2/))
-- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/3.6.2/))
-- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.2/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.2/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.2/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.2/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.2/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.2/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.2/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/3.6.2/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/3.6.2/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/3.6.2/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/3.6.2/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/3.6.2/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/3.6.2/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.2/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/3.6.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.2/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.2/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.2/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.2/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.2/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.2/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.2/))
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.2/))
-- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.2/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/3.6.2/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.2/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.2/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.2/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.2/))
+- Server OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-server-opensearch/3.6.2/))
 
 
 
@@ -767,24 +767,24 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 ### Komponenten
 
 
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/3.6.1/))
-- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/3.6.1/))
-- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.1/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.1/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.1/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.1/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.1/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.1/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.1/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/3.6.1/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/3.6.1/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/3.6.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/3.6.1/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/3.6.1/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/3.6.1/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.1/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/3.6.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.1/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.1/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.1/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.1/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.1/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.1/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.1/))
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1/))
-- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/3.6.1/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.1/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.1/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.1/))
+- Server OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-server-opensearch/3.6.1/))
  
 
 ### Änderungen
@@ -843,18 +843,18 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.0.3/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.0.3/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.3/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.0.3/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.0.3/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.0.3/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/3.6.0.3/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.3/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/3.6.0.3/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.0.3/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.0.3/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.0.3/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.0.3/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.0.3/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.0.3/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.0.3/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/3.6.0.3/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/3.6.0.3/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.0.3/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.0.3/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.0.3/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.0.3/))
 
 ### Änderungen
 
@@ -877,9 +877,9 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.0.2/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.2/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.0.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.0.2/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.0.2/))
 
 ### Änderungen
 
@@ -898,7 +898,7 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 
 ### Komponenten
 
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.0.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.0.1/))
 
 ### Änderungen
 

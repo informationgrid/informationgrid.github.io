@@ -10,10 +10,10 @@ Release: 22.01.2016
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1.2/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.1.2/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.1.2/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.1.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.1.2/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/3.6.1.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.1.2/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.1.2/))
 
 
 ### Änderungen
@@ -44,10 +44,10 @@ Release: 03.12.2015
 
 ### Komponenten
 
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.1.1/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.1.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.1.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.1.1/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.1.1/))
 
 
 ### Änderungen
@@ -62,24 +62,24 @@ Es wurden verschiedene Fehler am InGrid Editor, dem MapClient und der Suchmaschi
 ### Komponenten
 
 
-- Codelist Repository ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-codelist-repository/3.6.1/))
-- iBus ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-ibus/3.6.1/))
-- Interface CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/3.6.1/))
-- Interface Search (OpenSearch, ATOM DLS) ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-search/3.6.1/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.1/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.1/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.1/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.1/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.1/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/3.6.1/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/3.6.1/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/3.6.1/))
+- Interface Search (OpenSearch, ATOM DLS) ([download](https://distributions.informationgrid.eu/ingrid-interface-search/3.6.1/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/3.6.1/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/3.6.1/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.1/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/3.6.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.1/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.1/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.1/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.1/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.1/))
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.1/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.1/))
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.1/))
-- Server OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-server-opensearch/3.6.1/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/3.6.1/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.1/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.1/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.1/))
+- Server OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-server-opensearch/3.6.1/))
 
 
 ### Änderungen
@@ -140,8 +140,8 @@ Release: 28.09.2015
 
 ### Komponenten
 
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.4/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.0.4/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.4/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.0.4/))
 
 ### Änderungen
 
@@ -157,18 +157,18 @@ Es wurden Probleme bei der Konfiguration von WFS und DSC iPlug behoben.
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.0.3/))
-- iPlug CSW ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-csw-dsc/3.6.0.3/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.3/))
-- iPlug Excel ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-excel/3.6.0.3/))
-- iPlug IGE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/3.6.0.3/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.0.3/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/3.6.0.3/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.3/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/3.6.0.3/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/3.6.0.3/))
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
-- iPlug Management ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/3.6.0.3/))
-- iPlug MapClient ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/3.6.0.3/))
-- iPlug OpenSearch ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-opensearch/3.6.0.3/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.0.3/))
-- iPlug WFS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-wfs-dsc/3.6.0.3/))
-- iPlug XML ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-xml/3.6.0.3/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/3.6.0.3/))
+- iPlug MapClient ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/3.6.0.3/))
+- iPlug OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/3.6.0.3/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.0.3/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/3.6.0.3/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.0.3/))
 
 ### Änderungen
 
@@ -191,9 +191,9 @@ Es wurden Probleme bei der Konfiguration von WFS und DSC iPlug behoben.
 
 ### Komponenten
 
-- Portal ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-portal/3.6.0.2/))
-- iPlug DSC ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc/3.6.0.2/))
-- iPlug SE ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-se/3.6.0.2/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.0.2/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/3.6.0.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/3.6.0.2/))
 
 ### Änderungen
 
@@ -212,7 +212,7 @@ Es wurden Probleme bei der Konfiguration von WFS und DSC iPlug behoben.
 
 ### Komponenten
 
-- iPlug SNS ([download](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-sns/3.6.0.1/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/3.6.0.1/))
 
 ### Änderungen
 

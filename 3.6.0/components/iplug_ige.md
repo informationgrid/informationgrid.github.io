@@ -31,7 +31,7 @@ Der erstellte IGC wird dann mit dem IGE iPlug an die Erfassung (InGridEditor) im
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-ige/](https://distributions.informationgrid.eu/ingrid-iplug-ige/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -73,7 +73,7 @@ starten.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-ige/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-ige/](https://distributions.informationgrid.eu/ingrid-iplug-ige/) herunterladen.
 
 iPlug stoppen.
 

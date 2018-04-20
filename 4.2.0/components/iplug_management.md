@@ -29,7 +29,7 @@ Das Management-iPlug dient als Schnittstelle zwischen den Komponenten des System
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-management/](https://distributions.informationgrid.eu/ingrid-iplug-management/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -58,7 +58,7 @@ Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-management/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-management/](https://distributions.informationgrid.eu/ingrid-iplug-management/) herunterladen.
 
 iPlug stoppen.
 

@@ -29,7 +29,7 @@ Die indexierten Daten werden auch für die im MapClient integrierte Suche verwen
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -67,7 +67,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-iplug-dsc-mapclient/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-mapclient/) herunterladen.
 
 iPlug stoppen.
 

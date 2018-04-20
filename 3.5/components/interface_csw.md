@@ -42,7 +42,7 @@ Die Schnittstelle bildet Daten aus dem InGrid Catalog Datenraum wie folgt ab:
 
 ## Installation
 
-Download: [https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/)
+Download: [https://distributions.informationgrid.eu/ingrid-interface-csw/](https://distributions.informationgrid.eu/ingrid-interface-csw/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -79,7 +79,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/](https://dev.informationgrid.eu/ingrid-distributions/ingrid-interface-csw/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-interface-csw/](https://distributions.informationgrid.eu/ingrid-interface-csw/) herunterladen.
 
 Komponente stoppen.
 
