@@ -457,7 +457,7 @@ Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste
 |-------------|--------------|----------|
 | type | Definition des Layer-Types: "wmts" oder "wms" | String |
 | label | Titel des Layers | String |
-| background | Layer ist ein Hintergrund-Layer | Boolean |
+| background | Layer ist ein Hintergrund-Layer, d.h. wird als Hintergrundkarte im MapClient eingesetzt | Boolean |
 | format | Layer-Bildformat | String |
 | attribution | Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist) | String |
 | attributionUrl | URL für weitere Infos zum Layer | String |
