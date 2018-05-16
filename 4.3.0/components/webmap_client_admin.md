@@ -753,7 +753,7 @@ Im folgenden wird beschrieben, wie ein neues Thema mit Bild hinzugefügt wird.
 > ACHTUNG: Diese Änderungen sollten wemove mitgeteilt werden, damit diese ins Profil übernommen werden können. Damit bleiben bei einem Update oder bei einer Neuinstallation und Umschalten auf das Profil die Änderungen erhalten.
 
 Bsp. zum Hinzufügen eines neuen Themas "inspire":
-* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend ausführen. Unterverzeichnisse sind im folgenden angegeben.
+* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend* ausführen. Unterverzeichnisse sind im folgenden angegeben.
 * Bild: im Verzeichnis *src/img* die Bilddatei hinzufügen als *theme_inspire.png*
 * Style: im Verzeichnis *src/style* in der Datei *app.override.css* folgendes hinzufügen
 {% highlight text %}
