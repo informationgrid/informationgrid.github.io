@@ -753,21 +753,22 @@ Im folgenden wird beschrieben, wie ein neues Thema mit Bild hinzugefügt wird.
 > ACHTUNG: Diese Änderungen sollten wemove mitgeteilt werden, damit diese ins Profil übernommen werden können. Damit bleiben bei einem Update oder bei einer Neuinstallation und Umschalten auf das Profil die Änderungen erhalten.
 
 Bsp. zum Hinzufügen eines neuen Themas "inspire":
-* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend/* in den Verzeichnissen *src* und *prd* ausführen !
-* Bild: im Verzeichnis *img* die Bilddatei hinzufügen als *theme_inspire.png*
-* Style: im Verzeichnis *style* in der Datei *app.override.css* folgendes hinzufügen
+* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend ausführen. Unterverzeichnisse sind im folgenden angegeben.
+* Bild: im Verzeichnis *src/img* die Bilddatei hinzufügen als *theme_inspire.png*
+* Style: im Verzeichnis *src/style* in der Datei *app.override.css* folgendes hinzufügen
 {% highlight text %}
 [ga-topic] .ga-topics-sprite-inspire {
   background: url("../img/theme_inspire.png");
   width: 140px;
 }
 {% endhighlight %}
-* Lokalisierung: im Verzeichnis *locales* in der Datei *de.json* folgendes hinzufügen
+* Lokalisierung: im Verzeichnis *prd/locales* in der Datei *de.json* folgendes hinzufügen
 {% highlight text %}
 "inspire": "INSPIRE",
 "topic_inspire_tooltip": "GeoPortal.WSV INSPIRE",
 {% endhighlight %}
-* das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird (*catalogs.json* + neue *catalog-inspire.json*) s.o. [Definition von Rubriken](#definition-von-rubriken).
+* das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird.
+D.h. in der Datei *catalogs.json* muss die neue Kategorie definiert werden und in der neuen Datei *catalog-inspire.json* die Inhalte festgelegt werden, s.o. [Definition von Rubriken](#definition-von-rubriken).
 
 #### URL-Shortener funktioniert nicht korrekt?
 
