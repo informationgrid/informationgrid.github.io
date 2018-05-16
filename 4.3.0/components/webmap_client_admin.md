@@ -752,7 +752,7 @@ Ja, die Bilder sind als CSS definiert und liegen als PNG Dateien in den Maßen 1
 Im folgenden wird beschrieben, wie ein neues Thema mit Bild hinzugefügt wird.
 > ACHTUNG: Diese Änderungen sollten wemove mitgeteilt werden, damit diese ins Profil übernommen werden können. Damit bleiben bei einem Update oder bei einer Neuinstallation und Umschalten auf das Profil die Änderungen erhalten.
 
-Bsp. zum Hinzufügen eines neuen Themas "inspire":
+Bsp. zum Hinzufügen eines neuen Themas mit der ID *"inspire"*:
 * alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend* ausführen. Unterverzeichnisse sind im folgenden angegeben.
 * Bild: im Verzeichnis *src/img* die Bilddatei hinzufügen als *theme_inspire.png*
 * Style: im Verzeichnis *src/style* in der Datei *app.override.css* folgendes hinzufügen
@@ -768,7 +768,7 @@ Bsp. zum Hinzufügen eines neuen Themas "inspire":
 "topic_inspire_tooltip": "GeoPortal.WSV INSPIRE",
 {% endhighlight %}
 * das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird.
-D.h. in der Datei *catalogs.json* muss die neue Kategorie definiert werden und in der neuen Datei *catalog-inspire.json* die Inhalte festgelegt werden, s.o. [Definition von Rubriken](#definition-von-rubriken).
+D.h. in der Datei *catalogs.json* muss die neue Kategorie mit *"id": "inspire"* definiert werden und in der neuen Datei *catalog-inspire.json* die Inhalte festgelegt werden, s.o. [Definition von Rubriken](#definition-von-rubriken).
 
 #### URL-Shortener funktioniert nicht korrekt?
 
