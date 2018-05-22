@@ -375,7 +375,7 @@ Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie ein
 ### Einstellung für den Webmap Client
 
 Der Großteil der Konfiguration geschieht direkt im [Frontend](#konfiguration-frontend) mittels Konfigurationen in JavaScript.
-Ein paar wenige wenige zentrale Einstellungen werden im [Backend](#konfiguration-backend) gehandhabt.
+Ein paar wenige zentrale Einstellungen werden im [Backend](#konfiguration-backend) ausgeführt.
 
 <a name="konfiguration-frontend"></a>
 #### Einstellungen im Frontend
