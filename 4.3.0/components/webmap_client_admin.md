@@ -476,8 +476,8 @@ Damit bleiben die veränderten Einstellungen auch nach einem Update des Portals 
 | feedback.ssl                      | E-Mail verschlüsselt ?                                                    | Boolean        | false |
 | **KML Settings (Redlining etc.):** | | |
 | kml.directory                     | Verzeichnis in dem die KML Daten abgelegt werden                          | String         | *./webapps/ingrid-webmap-client/frontend/kml/* |
-| kml.days_of_exist                 | Wie lange sollen KML Dateien aufgehoben werden (in Tagen) ?               | Integer        | 365 |
-| kml.max_directory_files           | Wie viele KML Dateien sollen maximal vorgehalten werden ?                 | Integer        | 1000 |
+| kml.days_of_exist                 | Wie lange sollen KML Dateien vorgehalten werden (in Tagen), wenn die Maximalanzahl der Dateien im Verzeichnis überschritten ist ?               | Integer        | 365 |
+| kml.max_directory_files           | Maximalanzahl der Dateien im Verzeichnis. Wenn diese Anzahl überschritten ist, dann wird geprüft, ob Dateien gelöscht werden können.<br><br>Bsp. mit den Default Werten:<br>Sind im KML Verzeichnis mehr als 1000 Dateien, so werden alle Dateien gelöscht, deren letzte Änderung mehr als 365 Tage zurück liegt. Es können also mehr als 1000 Dateien vorhanden sein. | Integer        | 1000 |
 | **Update Job Settings (Job zur Aktualisierung der Layer Daten aus den GetCapabilities):** | | |
 | scheduler.layer.update            | Wann soll der Job ausgeführt werden ?                                     | String | "0 3 * * *" (jede Nacht 3 Uhr) |
 | scheduler.layer.update.mail       | Soll bei der Aktualisierung eine Mail verschickt werden ?                 | Boolean        | false |
