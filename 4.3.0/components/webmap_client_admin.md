@@ -454,12 +454,12 @@ Einige wenige zentrale Einstellungen werden innerhalb der Portal Installation se
 
 in den Dateien
 
-* *application.properties*
+* *application.properties*:
 Alle vorhandenen Einstellungen mit Ihren default Werten.
 **Achtung: Diese Datei nicht verändern.**
-* *application.override.properties*
+* *application.override.properties*:
 Alle geänderten Einstellungen !
-Alle Änderungen in dieser Datei vornehmen, default aus *application.properties* übernehmen und hier ändern.
+Alle Änderungen in dieser Datei vornehmen, default aus application.properties übernehmen und hier ändern.
 Damit bleiben die veränderten Einstellungen auch nach einem Update des Portals erhalten !
 
 | Einstellung                       | Beschreibung                                                              | Wert-Typ       | Defaul-Wert                          |
@@ -483,11 +483,12 @@ Damit bleiben die veränderten Einstellungen auch nach einem Update des Portals 
 | scheduler.layer.update.mail       | Soll bei der Aktualisierung eine Mail verschickt werden ?                 | Boolean        | false |
 
 Beispiel:
-Mit Hinzufügen der nachfolgenden Einstellung in die Datei *application.override.properties* werden die JS Konfigurationsdateien für's Frontend aus dem zentralen *WebmapClientData* Verzeichnis geladen (s.o.).
+Mit Hinzufügen der nachfolgenden Einstellungen in die Datei *application.override.properties* werden die JS Konfigurationsdateien für's Frontend und die KML Dateien für's Zeichnen aus dem zentralen *WebmapClientData* Verzeichnis geladen/abgelegt.
 
 {% highlight text %}
 ...
 config.dir=/opt/ingrid/WebmapClientData/
+kml.directory=/opt/ingrid/WebmapClientData/kml
 ...
 {% endhighlight %}
 
