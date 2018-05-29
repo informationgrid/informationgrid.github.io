@@ -4,6 +4,27 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.3.1
+
+Release 29.05.2018
+
+### Liste der Änderungen
+
+InGrid
+- [Bug] [IGE] Seite Sessionablauf Layout nicht korrekt für Profile ([REDMINE-1069](https://redmine.informationgrid.eu/issues/1069))
+- [Bug] [IGE] Adressen laden nicht ([REDMINE-1092](https://redmine.informationgrid.eu/issues/1092))
+- [Bug] [PORTAL] Fehlerhafte Bibliotheken im Portal ([REDMINE-1080](https://redmine.informationgrid.eu/issues/1080))
+- [Bug] [PORTAL] Aus initialem Portal MySQL Dump alle nicht nötigen Daten löschen ([REDMINE-1096](https://redmine.informationgrid.eu/issues/1096))
+
+UVP
+- [Bug] [PORTAL] UVP: Anzahl der Treffer über die Facettierung stimmt nicht mit Ergebnis überein ([REDMINE-1075](https://redmine.informationgrid.eu/issues/1075))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.1/))
+
+
 ## Version 4.3.0
 
 Release 03.04.2018
