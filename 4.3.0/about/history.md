@@ -4,6 +4,28 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.3.2
+
+Release 07.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [PORTAL] UVP: Anpassung der Startseite des Landes BB ([REDMINE-1103](https://redmine.informationgrid.eu/issues/1103))
+
+UVP-NI
+
+- [Feature] [Portal] NUMIS: Aktualisierung PIWIK, Hinzufügen von PIWIK zu UVP-NI Profil ([REDMINE-1106](https://redmine.informationgrid.eu/issues/1106))
+
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.2/))
+
+
+
+
 ## Version 4.3.1
 
 Release 29.05.2018
