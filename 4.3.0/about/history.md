@@ -35,7 +35,7 @@ UVP
 
 ### Komponenten
 
-- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.5/))
 
 
 
