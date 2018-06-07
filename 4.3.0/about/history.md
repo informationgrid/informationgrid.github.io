@@ -23,6 +23,19 @@ UVP-NI
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.2/))
 
+## Version 4.2.5
+
+Release 07.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [iPlug-SE] iPlugSE: Neue Eigenschaft, um die Instanzdaten vor einem Crawl zu löschen ([REDMINE-1093](https://redmine.informationgrid.eu/issues/1093))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.2/))
 
 
 
