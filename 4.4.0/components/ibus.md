@@ -8,6 +8,8 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Der iBus (information bus) bildet in einem InGrid-System das zentrale Element. Er fungiert als Verteilungsstation zwischen Datenquellen und Suchanfragen. So nimmt der iBus eine Suchanfrage von der Portaloberfläche oder einer anderen übergeordneten Schnittstelle entgegen, bereitet die Anfrage auf und gibt an die angeschlossenen iPlugs weiter. Die Anfrageergebnisse der einzelnen iPlugs (Datenquellen) werden vom iBus eingesammelt und als Ergebnislisten an das anfragende System zurückgegeben.
 
+Seit Version 4.4.0 wird zudem ein zentraler Index unterstützt. Hierbei sollen die iPlugs ihre Daten in einem Index hinterlegen, der vom iBus aus zugegriffen werden kann. Dies bringt viele Vorteile mit sich. So werden die Ergebnisse schneller zum Portal geschickt, die Suchergebnisse sind besser sortiert und Features wie Autocomplete sind damit möglich.
+
 
 ![InGrid Komponente iBus](../images/ingrid_ibus.png "InGrid Komponente iBus")
 
@@ -17,9 +19,9 @@ Der iBus (information bus) bildet in einem InGrid-System das zentrale Element. E
 ## Systemvoraussetzungen
 
 * 128 MB RAM
-* 20 MB Harddrive
+* 80 MB Harddrive
 
-* JAVA 1.6
+* JAVA 1.8
 * Cygwin (unter Windows)
 
 
@@ -33,7 +35,7 @@ Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installations
 java -jar ingrid-ibus-VERSION-installer.jar
 ```
 
-Der Installer ist sowohl per graphischer Oberfläche als auch Kommandozeileneingabe ausführbar. Bitte folgen Sie den Anweisungen des Installationsprogrammes. Das Installationsprogramm installiert den iBus im gewünschten Verzeichnis (default: `/opt/ingrid/ingrid-ibus`) und passt die Konfigurationsdatei `conf/communication.xml` an.
+Der Installer ist sowohl per graphischer Oberfläche als auch Kommandozeileneingabe ausführbar. Bitte folgen Sie den Anweisungen des Installationsprogrammes. Das Installationsprogramm installiert den iBus im gewünschten Verzeichnis (default: `/opt/ingrid/ingrid-ibus`) und passt die Konfigurationsdatei `conf/application-default.properties` an.
 
 Sie können nun den iBus mit
 
@@ -49,9 +51,11 @@ Der iBus besitzt eine Administrationsoberfläche über die die angeschlossenen i
 http://localhost:PORT
 {% endhighlight %}
 
-Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Authentifizieren Sie sich als 'admin' mit dem von Ihnen vergebenen Passwort.
+Anstelle von `localhost` können Sie auch die IP-Adresse des Computers eingeben. Nach einer neuen Installation wird man automatisch auf die Konfigurationsseite geleitet, wo man das Administrationspasswort eingeben muss. Nachdem dieses eingegeben worden ist, muss man sich erneut einloggen, um die volle Funktionalität zu nutzen.
 
 ## Aktualisierung
+
+Hinweis: Auf die Version 4.4.0 kann nicht aktualisiert werden, da die Änderungen zu groß sind. Alle weiteren Versionen sind wiederum aktualisierbar.
 
 Neues Release von [https://distributions.informationgrid.eu/ingrid-ibus/](https://distributions.informationgrid.eu/ingrid-ibus/) herunterladen.
 
@@ -93,42 +97,25 @@ Die LOG Ausgaben finden sich in der Datei `log.log`.
 
 ## Konfiguration
 
-### Konfigurationsparameter
+Die Systemkonfiguration befindet sich in der application.properties Datei im conf-Verzeichnis. Änderungen an der Konfiguration müssen in der Datei application-default.properties geschrieben werden. Die wichtigsten Einstellungen können über die Admin-Gui getätigt werden.
 
-Der iBus bekommt per Kommandozeile folgende Parameter mitgeteilt. Diese Parameter werden während der Installation in der Datei `start.sh` gesetzt und können nur manuell verändert werden.
+Die Parameter haben folgende Bedeutung:
 
-| Parameter                           | Beschreibung                                             |
-|-------------------------------------|----------------------------------------------------------|
-| --descriptor conf/communication.xml | Konfigurationsdatei für die Kommunikationseinstellungen  |
-| --adminpassword admin               | Passwort für den Zugang zur Administrations GUI |
-| --adminport 9900                    | Port unter dem die Administrations GUI zu erreichen ist |
-| --busurl /ingrid-group:ibus-test    | Eindeutige ID des InGrid iBus |
-
-
-Die Datei `conf/communication.xml` enthält die Konfigurationen der InGrid Kommunikationsschicht.
-
-```xml
-<communication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="communication.xsd">
-        <server name="/ingrid-group:ibus-test ">
-                <socket port="9900" timeout="10" />
-                <messages maximumSize="1048576" threadCount="100" />
-        </server>
-        <messages handleTimeout="60" queueSize="2000" />
-</communication>
-```
-
-Die einzelnen Parameter haben folgende Bedeutung:
-
-| Parameter                           | Beschreibung                                             |
-|-------------------------------------|----------------------------------------------------------|
-| server/@name                        | Eindeutige ID des InGrid iBus  |
-| socket/@port                        | Port unter dem der iBus zu erreichen ist (Verbindungsaufnahme) |
-| socket/@timeout               	  | Timeout der Socketverbindungen in sec |
-| message/@maximumSize                | max. zulässige Größe einer Message in Bytes, die über den iBus versendet werden kann |
-| message/@threadCount                | Anzahl der Verbindungen (Threads), die der iBus gleichzeitig aufrecht erhalten kann |
-| message/@handleTimeout              | Timeout einer Message in sec (Wie lange wartet der iBus auf die Beantwortung einer Message.) |
-| message/@queueSize                  | Message Queue (Wie viele Nachrichten können in der Warteschlange des iBus enthalten sein.) |
+| Parameter                           | Beschreibung |
+|--------------------------------|---------------------------------------------------------|
+| server.port                    | Der Port für die Adminoberfläche  |
+| ibus.url                       | Eindeutige ID des InGrid iBus  |
+| ibus.port                      | Port unter dem der iBus zu erreichen ist (Verbindungsaufnahme) |
+| ibus.timeout                   | Timeout der Socketverbindungen in sec |
+| ibus.maximumSize               | max. zulässige Größe einer Message in Bytes, die über den iBus versendet werden kann |
+| ibus.threadCount               | Anzahl der Verbindungen (Threads), die der iBus gleichzeitig aufrecht erhalten kann |
+| ibus.handleTimeout             | Timeout einer Message in sec (Wie lange wartet der iBus auf die Beantwortung einer Message.) |
+| ibus.queueSize                 | Message Queue (Wie viele Nachrichten können in der Warteschlange des iBus enthalten sein.) |
+| codelistrepo.url               | Die URL zum Codelist-Repository |
+| codelistrepo.username          | Der Benutzername für das Codelist-Repository |
+| codelistrepo.password          | Das Passwort für das Codelist-Repository |
+| spring.security.user.name      | Der Login für die Administrationsoberfläche |
+| spring.security.user.password  | Das Passwort für die Administrationsoberfläche |
 
 
 ### Query Modifikation
