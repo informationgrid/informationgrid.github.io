@@ -15,6 +15,10 @@ UVP
 
 
 
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.3/))
+
 ## Version 4.3.2
 
 Release 07.06.2018
