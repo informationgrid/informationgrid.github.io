@@ -4,6 +4,17 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.3.3
+
+Release 14.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Bug] [PORTAL] UVP: Rechtschreibfehler auf der Startseite des Landes BB ([REDMINE-1109](https://redmine.informationgrid.eu/issues/1109))
+
+
+
 ## Version 4.3.2
 
 Release 07.06.2018
