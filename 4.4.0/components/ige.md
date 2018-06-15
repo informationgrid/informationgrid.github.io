@@ -73,6 +73,8 @@ Die Konfigurationsdateien der einzelnen Service Provider finden sich im Verzeich
 
 `gemet.properties` für den GEMET als Thesaurus Service Provider.
 
+`wfs.properties` für den WFS als Gazetteer Service Provider. Diese Datei ist normalerweise in einer Library integriert (https://github.com/informationgrid/ingrid-external-service-wfs/blob/master/src/main/resources/wfs.properties). Zum Überschreiben von der Konfiguration muss diese Datei an der oben genannten Stelle erzeugt werden.
+
 Die Aktivierung der unterschiedlichen Services und deren Einstellungen sind beschrieben unter [iPlug-SNS](iplug_sns.html#service-provider)
 
 ## FAQ
