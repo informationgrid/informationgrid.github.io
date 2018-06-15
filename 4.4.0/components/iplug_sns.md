@@ -207,6 +207,45 @@ In der Datei gemet.properties können die Einstellung für den GEMET Service vor
 | service.request.rdf                  | false | Manche Anfragen an den Service können auch mit RDF Antwort (*true*) ausgeführt werden, der Standard ist jedoch JSON (*false*) ?<br><br>Sollte auf **false** gesetzt werden, nur zu Testzwecken zu ändern ! |
 | service.alternateLanguage                  | | Wird vom Service ein **einzelner(!)** Deskriptor angefragt (getTerm), so kann der Deskriptor-Name in einer zweiten Sprache geliefert werden. Wird hier z.B. "en" eingetragen, so wird der Deskriptor zusätzlich auch in Englisch geliefert und kann im Katalog abgelegt werden. Beim Mapping nach ISO XML wird das Schlagwort dann auch zusätzlich in Englisch lokalisiert.<br>Wird hier nichts eingetragen, so wird der Deskriptor nur in der Basissprache geholt und ohne zusätzliche Lokalisierung nach ISO abgebildet (Default).<br><br>Kann im IGE Frontend auf "**en**" (damit englische Lokalisierung des Deskriptors nach ISO abgebildet werden kann) und im SNS-iPlug auf "" gesetzt werden (keine englische Lokalisierung nötig für "Ähnliche Begriffe"). |
 
+
+#### Konfiguration WFS Gazetteer Service Provider
+
+Die Konfiguration liegt per Default in der Library ingrid-external-service-wfs (siehe https://github.com/informationgrid/ingrid-external-service-wfs/blob/master/src/main/resources/wfs.properties). Die Konfigurationsdatei kann aber im ./conf Verzeichnis erzeugt werden und überschreibt dann die interne Konfiguration.
+
+Beispiel:
+
+wfs.properties
+
+```text
+url=http://sg.geodatenzentrum.de/wfs_gnde
+properties=gn:nnid,gn:beschreibung,gn:ags,gn:box,gn:hatEndonym/gn:Endonym/gn:name,gn:hatEndonym/gn:Endonym/gn:hatSprache/gn:Sprache/gn:sprache,gn:hatObjektart/gn:Objektart/gn:schluessel,gn:hatObjektart/gn:Objektart/gn:objektart
+objectTypes=AX_Gemeinde,AX_Bundesland,AX_Regierungsbezirk,AX_KreisRegion,AX_Nationalstaat,AX_Landschaft,AX_StehendesGewaesser,AX_Meer,AX_Insel,AX_SchutzgebietNachNaturUmweltOderBodenschutzrecht
+
+# every objectType must be defined here for correct translation
+gazetteer.de.44006=Stehendes Gewässer
+gazetteer.de.44007=Meer
+gazetteer.de.71007=Schutzgebiet
+gazetteer.de.73001=Nationalstaat
+gazetteer.de.73002=Bundesland
+gazetteer.de.73004=Kreis
+gazetteer.de.73005=Gemeinde
+gazetteer.de.74001=Landschaft
+gazetteer.de.74004=Insel
+
+# keys to map id to localization in portal and IGE
+map.id.key.44006=lakeType
+map.id.key.44007=seaType
+map.id.key.71007=protectedAreaType
+map.id.key.73001=nationType
+map.id.key.73002=use2Type
+map.id.key.73004=use4Type
+map.id.key.73005=use6Type
+map.id.key.74001=landscapeType
+map.id.key.74004=islandType
+```
+
+
+
 ## FAQ
 
 ### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
