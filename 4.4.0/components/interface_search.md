@@ -368,6 +368,13 @@ Der angegebene Port muss mit dem Port der Schnittstelle übereinstimmen.
 
 Nun ist die Schnittstelle auch über http://SERVER_DOMAIN/search/... erreichbar. 
 
+Die Schnittstelle kann sowohl per HTTPS als auch per HTTP benutzt werden. Wichtig ist bei der oben beschriebenen Proxy Weiterleitung, dass Anfragen, die per HTTPS an den Proxy gestellt werden, auch so an die Schnittstelle weitergeleitet werden, dass diese den HTTPS Aufruf erkennt. Die kann durch folgende Ergänzung im der Apache Konfiguration erfolgen:
+
+```apacheconfig
+RequestHeader set X-Forwarded-Proto "https"
+RequestHeader set X-Forwarded-Port "443"
+```
+
 
 ### InGrid Communication
 

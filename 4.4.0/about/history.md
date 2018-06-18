@@ -4,6 +4,77 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.3.3
+
+Release 14.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Bug] [PORTAL] UVP: Rechtschreibfehler auf der Startseite des Landes BB ([REDMINE-1109](https://redmine.informationgrid.eu/issues/1109))
+
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.3/))
+
+## Version 4.3.2
+
+Release 07.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [PORTAL] UVP: Anpassung der Startseite des Landes BB ([REDMINE-1103](https://redmine.informationgrid.eu/issues/1103))
+
+UVP-NI
+
+- [Feature] [Portal] NUMIS: Aktualisierung PIWIK, Hinzufügen von PIWIK zu UVP-NI Profil ([REDMINE-1106](https://redmine.informationgrid.eu/issues/1106))
+
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.2/))
+
+## Version 4.2.5
+
+Release 07.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [iPlug-SE] iPlugSE: Neue Eigenschaft, um die Instanzdaten vor einem Crawl zu löschen ([REDMINE-1093](https://redmine.informationgrid.eu/issues/1093))
+
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.5/))
+
+
+
+## Version 4.3.1
+
+Release 29.05.2018
+
+### Liste der Änderungen
+
+InGrid
+- [Bug] [IGE] Seite Sessionablauf Layout nicht korrekt für Profile ([REDMINE-1069](https://redmine.informationgrid.eu/issues/1069))
+- [Bug] [IGE] Adressen laden nicht ([REDMINE-1092](https://redmine.informationgrid.eu/issues/1092))
+- [Bug] [PORTAL] Fehlerhafte Bibliotheken im Portal ([REDMINE-1080](https://redmine.informationgrid.eu/issues/1080))
+- [Bug] [PORTAL] Aus initialem Portal MySQL Dump alle nicht nötigen Daten löschen ([REDMINE-1096](https://redmine.informationgrid.eu/issues/1096))
+
+UVP
+- [Bug] [PORTAL] UVP: Anzahl der Treffer über die Facettierung stimmt nicht mit Ergebnis überein ([REDMINE-1075](https://redmine.informationgrid.eu/issues/1075))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.3.1/))
+
+
 ## Version 4.3.0
 
 Release 03.04.2018

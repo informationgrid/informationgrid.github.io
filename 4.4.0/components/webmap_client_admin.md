@@ -374,6 +374,12 @@ Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie ein
 
 ### Einstellung für den Webmap Client
 
+Der Großteil der Konfiguration geschieht direkt im [Frontend](#konfiguration-frontend) mittels Konfigurationen in JavaScript.
+Ein paar wenige zentrale Einstellungen werden im [Backend](#konfiguration-backend) ausgeführt.
+
+<a name="konfiguration-frontend"></a>
+#### Einstellungen im Frontend
+
 Die Konfiguration des Karten Clients erfolgt über JS-Dateien.
 
 Diese Dateien finden Sie in einem eigenen Verzeichnis, außerhalb der Portal-Installation unter
@@ -386,6 +392,7 @@ und enthält die Dateien "setting.js" und "settings.profile.js".
 
 In der Datei "setting.js" sind alle Einstellungen für den Webmap Client enthalten.
 > Hinweis: Diese Datei sollte nicht verändert werden. Soll ein Wert einer Einstellung/Variable aus der Datei "setting.js" geändert werden, so soll diese Variable in die Datei "setting.profile.js"-Datei übertragen werden und dort angepasst werden. Die Datei "setting.profile.js" ist per Default leer.
+Findet sich im Verzeichnis keine Datei "setting.js", so kann die Original Datei unter */PORTAL-INSTALLATIONS-PFAD/apache-tomcat/webapps/ingrid-webmap-client/frontend/config* als Vorlage dienen.
 
 | Einstellung                       | Beschreibung                                                              | Wert-Typ       | Defaul-Wert                          |
 |-----------------------------------|---------------------------------------------------------------------------|----------------|--------------------------------------|
@@ -433,6 +440,55 @@ Mit Hinzufügen der nachfolgenden Einstellung in die Datei "settings.profile.js"
 {% highlight text %}
 ...
 settingDefaultTopicId = 'anbieter';
+...
+{% endhighlight %}
+
+<a name="konfiguration-backend"></a>
+#### Einstellungen im Backend
+
+Einige wenige zentrale Einstellungen werden innerhalb der Portal Installation selbst definiert, im Verzeichnis
+
+{% highlight text %}
+/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/webapps/ingrid-webmap-client/WEB-INF/classes
+{% endhighlight %}
+
+in den Dateien
+
+* *application.properties*:
+Alle vorhandenen Einstellungen mit Ihren default Werten.
+**Achtung: Diese Datei nicht verändern.**
+* *application.override.properties*:
+Alle geänderten Einstellungen !
+Alle Änderungen in dieser Datei vornehmen, default aus application.properties übernehmen und hier ändern.
+Damit bleiben die veränderten Einstellungen auch nach einem Update des Portals erhalten !
+
+| Einstellung                       | Beschreibung                                                              | Wert-Typ       | Defaul-Wert                          |
+|-----------------------------------|---------------------------------------------------------------------------|----------------|--------------------------------------|
+| config.dir                        | Verzeichnis zum Laden der JS Konfiguration für's [Frontend](#konfiguration-frontend) | String         | *./webapps/ingrid-webmap-client/frontend/* |
+| **Feedback aus dem Map Client (mail server settings):** | | |
+| feedback.from                     | Absender E-Mail                                                           | String         |  |
+| feedback.to                       | Empfänger E-Mail                                                          | String         |  |
+| feedback.host                     | Mailserver Host                                                           | String         | |
+| feedback.port                     | Mailserver Port                                                           | Integer         | |
+| feedback.user                     | Mailserver User                                                           | String         | |
+| feedback.password                 | Mailserver Passwort                                                       | String         | |
+| feedback.protocol                 | Mailserver Protokoll                                                      | String         | |
+| feedback.ssl                      | E-Mail verschlüsselt ?                                                    | Boolean        | false |
+| **KML Settings (Redlining etc.):** | | |
+| kml.directory                     | Verzeichnis in dem die KML Daten abgelegt werden                          | String         | *./webapps/ingrid-webmap-client/frontend/kml/* |
+| kml.days_of_exist                 | Wie lange sollen KML Dateien vorgehalten werden (in Tagen), wenn die Maximalanzahl der Dateien im Verzeichnis überschritten ist ?               | Integer        | 365 |
+| kml.max_directory_files           | Maximalanzahl der Dateien im Verzeichnis. Wenn diese Anzahl überschritten ist, dann wird geprüft, ob Dateien gelöscht werden können.<br><br>Bsp. mit den Default Werten:<br>Sind im KML Verzeichnis mehr als 1000 Dateien, so werden alle Dateien gelöscht, deren letzte Änderung mehr als 365 Tage zurück liegt. Es können also mehr als 1000 Dateien vorhanden sein. | Integer        | 1000 |
+| **Update Job Settings (Job zur Aktualisierung der Layer Daten aus den GetCapabilities):** | | |
+| scheduler.layer.update            | Wann soll der Job ausgeführt werden ?                                     | String | "0 3 * * *" (jede Nacht 3 Uhr) |
+| scheduler.layer.update.mail       | Soll bei der Aktualisierung eine Mail verschickt werden ?                 | Boolean        | false |
+
+Beispiel:
+Mit Hinzufügen der nachfolgenden Einstellungen in die Datei *application.override.properties* werden die JS Konfigurationsdateien für's Frontend und die KML Dateien für's Zeichnen aus dem zentralen *WebmapClientData* Verzeichnis geladen/abgelegt.
+
+{% highlight text %}
+...
+config.dir=/opt/ingrid/WebmapClientData/
+kml.directory=/opt/ingrid/WebmapClientData/kml
 ...
 {% endhighlight %}
 
@@ -752,22 +808,23 @@ Ja, die Bilder sind als CSS definiert und liegen als PNG Dateien in den Maßen 1
 Im folgenden wird beschrieben, wie ein neues Thema mit Bild hinzugefügt wird.
 > ACHTUNG: Diese Änderungen sollten wemove mitgeteilt werden, damit diese ins Profil übernommen werden können. Damit bleiben bei einem Update oder bei einer Neuinstallation und Umschalten auf das Profil die Änderungen erhalten.
 
-Bsp. zum Hinzufügen eines neuen Themas "inspire":
-* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend/* in den Verzeichnissen *src* und *prd* ausführen !
-* Bild: im Verzeichnis *img* die Bilddatei hinzufügen als *theme_inspire.png*
-* Style: im Verzeichnis *style* in der Datei *app.override.css* folgendes hinzufügen
+Bsp. zum Hinzufügen eines neuen Themas mit der ID *"inspire"*:
+* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend* ausführen. Unterverzeichnisse sind im folgenden angegeben.
+* Bild: im Verzeichnis *src/img* die Bilddatei hinzufügen als *theme_inspire.png*
+* Style: im Verzeichnis *src/style* in der Datei *app.override.css* folgendes hinzufügen
 {% highlight text %}
 [ga-topic] .ga-topics-sprite-inspire {
   background: url("../img/theme_inspire.png");
   width: 140px;
 }
 {% endhighlight %}
-* Lokalisierung: im Verzeichnis *locales* in der Datei *de.json* folgendes hinzufügen
+* Lokalisierung: im Verzeichnis *prd/locales* in der Datei *de.json* folgendes hinzufügen
 {% highlight text %}
 "inspire": "INSPIRE",
 "topic_inspire_tooltip": "GeoPortal.WSV INSPIRE",
 {% endhighlight %}
-* das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird (*catalogs.json* + neue *catalog-inspire.json*) s.o. [Definition von Rubriken](#definition-von-rubriken).
+* das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird.
+D.h. in der Datei *catalogs.json* muss die neue Kategorie mit *"id": "inspire"* definiert werden und in der neuen Datei *catalog-inspire.json* die Inhalte festgelegt werden, s.o. [Definition von Rubriken](#definition-von-rubriken).
 
 #### URL-Shortener funktioniert nicht korrekt?
 
