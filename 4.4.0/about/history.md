@@ -8,6 +8,11 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Release 21.06.2018
 
+### Änderungen
+
+Hier noch WICHTIGES beschreiben, z.B. Integration IPLUG-MANAGEMENT in iBus ...
+Achtung: IPLUG-MANAGEMENT taucht unten bei "Liste der Änderungen" auf, obwohl's das ja "gar nicht mehr gibt".
+
 ### Liste der Änderungen
 
 InGrid
@@ -17,9 +22,9 @@ InGrid
 - [Bug] [MAPCLIENT] MAPCLIENT: Fehler beim Löschen von alten KML Dateien ([REDMINE-1107](https://redmine.informationgrid.eu/issues/1107))
 - [Bug] [MAPCLIENT] MapClient: Link in Embed Version öffnet nicht Karte im Portal ([REDMINE-1090](https://redmine.informationgrid.eu/issues/1090))
 - [Bug] [MAPCLIENT] MAPCLIENT: Einbetten in externem iFrame funktioniert nicht ([REDMINE-1089](https://redmine.informationgrid.eu/issues/1089))
-- [Bug] PORTAL PORTAL: Kontaktformular sendet Attachement ([REDMINE-1074](https://redmine.informationgrid.eu/issues/1074))
-- [Bug] IPLUG-MANAGEMENT MANAGEMENT: DB Passwort wird nicht als UTF8 gespeichert ([REDMINE-1073](https://redmine.informationgrid.eu/issues/1073))
-- [Bug] INTERFACE-CSW INTERFACE-CSW: Filterung nach partner, provider, iplug funktioniert nicht per GET Anfrage ([REDMINE-960](https://redmine.informationgrid.eu/issues/960))
+- [Bug] [PORTAL] PORTAL: Kontaktformular sendet Attachement ([REDMINE-1074](https://redmine.informationgrid.eu/issues/1074))
+- [Bug] [IPLUG-MANAGEMENT] MANAGEMENT: DB Passwort wird nicht als UTF8 gespeichert ([REDMINE-1073](https://redmine.informationgrid.eu/issues/1073))
+- [Info] [INTERFACE-CSW] INTERFACE-CSW: Filterung nach partner, provider, iplug funktioniert nicht per GET Anfrage ([REDMINE-960](https://redmine.informationgrid.eu/issues/960))
 
 UVP
 
@@ -35,13 +40,13 @@ UVP
 - [Feature] Erfassung Vorprüfungen mit negativem Bescheid ([REDMINE-478](https://redmine.informationgrid.eu/issues/478))
 - [Bug] UVP-NI: Fehler beim Kopieren/Einfügen von Datensätzen ([REDMINE-1067](https://redmine.informationgrid.eu/issues/1067))
 
-BKG
-
-- [Bug] Encoding der Character falsch ([REDMINE-1088](https://redmine.informationgrid.eu/issues/1088))
-
 NUMIS
 
 - [Bug] Detailanzeige MD-Katalog - Datenformat ([REDMINE-855](https://redmine.informationgrid.eu/issues/855))
+
+BKG
+
+- [Bug] Encoding der Character falsch ([REDMINE-1088](https://redmine.informationgrid.eu/issues/1088))
 
 
 ### Komponenten
