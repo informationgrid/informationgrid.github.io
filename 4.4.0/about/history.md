@@ -4,6 +4,57 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.0
+
+Release 21.06.2018
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] SYSTEM Konsolidierung von InGrid Komponenten ([REDMINE-4](https://redmine.informationgrid.eu/issues/4))
+- [Feature] [IPLUG-WFS] IPLUG-WFS: Mapping Wadaba WFS angepasst (GeoPortal.WSV) ([REDMINE-1114](https://redmine.informationgrid.eu/issues/1114))
+- [Bug] [MAPCLIENT] MAPCLIENT: Fehler beim Löschen von alten KML Dateien ([REDMINE-1107](https://redmine.informationgrid.eu/issues/1107))
+- [Bug] [MAPCLIENT] MapClient: Link in Embed Version öffnet nicht Karte im Portal ([REDMINE-1090](https://redmine.informationgrid.eu/issues/1090))
+- [Bug] [MAPCLIENT] MAPCLIENT: Einbetten in externem iFrame funktioniert nicht ([REDMINE-1089](https://redmine.informationgrid.eu/issues/1089))
+- [Bug] PORTAL PORTAL: Kontaktformular sendet Attachement ([REDMINE-1074](https://redmine.informationgrid.eu/issues/1074))
+- [Bug] IPLUG-MANAGEMENT MANAGEMENT: DB Passwort wird nicht als UTF8 gespeichert ([REDMINE-1073](https://redmine.informationgrid.eu/issues/1073))
+- [Bug] INTERFACE-CSW INTERFACE-CSW: Filterung nach partner, provider, iplug funktioniert nicht per GET Anfrage ([REDMINE-960](https://redmine.informationgrid.eu/issues/960))
+
+UVP
+
+- [Feature] Optimierung der Kartendarstellung im Portal ([REDMINE-1108](https://redmine.informationgrid.eu/issues/1108))
+- [Feature] Integration UVP Nummern Bayern ([REDMINE-1097](https://redmine.informationgrid.eu/issues/1097))
+- [Feature] Integration von BLP Daten in das uvp-verbund.de - Brandenburg ([REDMINE-1062](https://redmine.informationgrid.eu/issues/1062))
+- [Feature] Integration von BLP Daten in das uvp-verbund.de - Saarland ([REDMINE-1008](https://redmine.informationgrid.eu/issues/1008))
+- [Feature] UVP: Interimslösung für die Integration von BLP Daten in das uvp-verbund.de, initiiert durch die Partner SL und BB ([REDMINE-980](https://redmine.informationgrid.eu/issues/980))
+- [Feature] Statistikfunktionalität für die Erfüllung der EU Berichtspflichten ([REDMINE-905](https://redmine.informationgrid.eu/issues/905))
+- [Feature] Darstellung von Vorprüfungen mit negativem Bescheid im Portal ([REDMINE-903](https://redmine.informationgrid.eu/issues/903))
+- [Feature] Editor: Umgang mit Vorprüfungspflichtigen Verfahren, Neue Checkbox "Vorprüfung durchgeführt" ([REDMINE-881](https://redmine.informationgrid.eu/issues/881))
+- [Feature] Editor: Zeitgesteuerte Veröffentlichungsoption ([REDMINE-601](https://redmine.informationgrid.eu/issues/601))
+- [Feature] Erfassung Vorprüfungen mit negativem Bescheid ([REDMINE-478](https://redmine.informationgrid.eu/issues/478))
+- [Bug] UVP-NI: Fehler beim Kopieren/Einfügen von Datensätzen ([REDMINE-1067](https://redmine.informationgrid.eu/issues/1067))
+
+BKG
+
+- [Bug] Encoding der Character falsch ([REDMINE-1088](https://redmine.informationgrid.eu/issues/1088))
+
+NUMIS
+
+- [Bug] Detailanzeige MD-Katalog - Datenformat ([REDMINE-855](https://redmine.informationgrid.eu/issues/855))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.0/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.4.0/))
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.4.0/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/4.4.0/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/4.4.0/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/4.4.0/))
+
+
 ## Version 4.3.3
 
 Release 14.06.2018

@@ -8,6 +8,7 @@ baseurl:
 
 # versions of the software (current is first)
 versions:
+  - 4.4.0
   - 4.3.0
   - 4.2.0
   - 4.1.0
