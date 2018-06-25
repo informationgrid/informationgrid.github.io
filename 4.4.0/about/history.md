@@ -8,10 +8,63 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Release 21.06.2018
 
-### Änderungen
+### Wichtige Änderungen
 
-Hier noch WICHTIGES beschreiben, z.B. Integration IPLUG-MANAGEMENT in iBus ...
-Achtung: IPLUG-MANAGEMENT taucht unten bei "Liste der Änderungen" auf, obwohl's das ja "gar nicht mehr gibt".
+#### Konsolidierung von Komponenten
+
+Ab Version 4.4.0 ist die Verwaltung von Partnern und Anbietern nicht mehr im Portal angesiedelt. Die Verwaltung erfolgt über das CodeList Repository. Dazu wurden neue Codelisten "Partner" und "Anbieter" angelegt.
+
+**ACHTUNG: Sollten eigene Partner oder Anbieter angelegt oder Einträge geändert worden sein, müssen diese per Hand im Codelist Repository nachgeführt werden.**
+
+Das Management iPlug wurde entfernt.
+
+Das Codelist Repository wurde direkt an den iBus angeschlossen.
+
+#### Neue iBus Oberfläche
+
+Im Zuge der Konsolidierung der Komponenten und als Vorgriff auf die Zentralisierung der Indexierung wurde die iBus Admin GUI komplett überarbeitet.
+
+Die Oberfläche ist selbsterklärend und mit einer kontext-sensitiven Hilfe versehen. Neu sind Funktionalitäten für die Verwaltung des zentralen Index.
+
+Weitere Informationen zum iBus erhalten Sie hier: https://www.ingrid-oss.eu/4.4.0/components/ibus.html
+
+![Neue iBus Oberfläche](../images/ingrid_ibus_version_4_4_0.png "Neue iBus Oberfläche")
+
+
+#### UVP: Optimierung der Kartendarstellung im Portal
+
+Die Darstellung der Marker in der Karte der Facettierung erfolgt nun asynchron, so dass Suchergebnisse sehr viel schneller angezeigt werden.
+
+#### UVP: Darstellug von Bauleitplanungsdaten im UVP Portal
+
+Im UVP Portal wurden Bauleitplanungsdaten integriert. Die Daten werden über ein Excel-File erfasst und in das Suchmaschinen iPlug übernommen. Im UVP Portal werden die BLP Daten sowohl in der Kartendarstellung, als auch in der Volltextsuche integriert.
+
+![Bauleitplaungsdaten in der Kartendarstellung im UVP Portal](../images/ingrid_uvp_blp_daten.png "Bauleitplaungsdaten in der Kartendarstellung im UVP Portal")
+
+#### Integration von Vorprüfungen mit negativem Bescheid
+
+Als neuer Datensatztyp können nun "Vorprüfungen mit negativem Bescheid", kurz negative Vorprüfungen im Editor erfasst werden. Die Erfassung erfolgt ähnlich wie alle anderen Datensatztypen.
+
+In den Katalogeinstellungen kann festgelegt werden, ob die erfassten negativen Vorprüfungen im Portal verfügbar sind oder nicht. 
+
+![Katalogeinstellung neagtive Vorprüfung veröffentlichen](../images/ingrid_ige_neg_vorpruefungen_einstellung.png "Katalogeinstellung neagtive Vorprüfung veröffentlichen")
+
+**Diese Entscheidung sollte vorab getroffen werden, weil das Erfassungsformular sich je nach Einstellung anpasst.**
+
+Das Erfassungsformular ohne Veröffentlichung im Portal:
+
+![Erfassungsformular neagtive Vorprüfung, ohne Veröffentlichung](../images/ingrid_ige_neg_vorpruefungen_nicht_veroeffentlicht.png "Erfassungsformular neagtive Vorprüfung, ohne Veröffentlichung")
+
+Das Erfassungsformular mit Veröffentlichung im Portal:
+
+![Erfassungsformular neagtive Vorprüfung, mit Veröffentlichung](../images/ingrid_ige_neg_vorpruefungen_veroeffentlicht.png "Erfassungsformular neagtive Vorprüfung, mit Veröffentlichung")
+
+#### Integration UVP Statistik für EU Berichtspflicht
+
+Im UVP Editor kann der Katalogadministrator eine Statistik über verschiedene Aspekte der erfassten Verfahren generieren. Diese Auswertung bildet die Basis für die EU-Berichtpflicht. 
+
+![Statistische Euswertung für EU Berichtspflicht](../images/ingrid_ige_neg_vorpruefungen_statistik.png "Statistische Euswertung für EU Berichtspflicht")
+
 
 ### Liste der Änderungen
 
