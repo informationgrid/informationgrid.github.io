@@ -79,7 +79,6 @@ InGrid
 - [Bug] [MAPCLIENT] MapClient: Link in Embed Version öffnet nicht Karte im Portal ([REDMINE-1090](https://redmine.informationgrid.eu/issues/1090))
 - [Bug] [MAPCLIENT] MAPCLIENT: Einbetten in externem iFrame funktioniert nicht ([REDMINE-1089](https://redmine.informationgrid.eu/issues/1089))
 - [Bug] [PORTAL] PORTAL: Kontaktformular sendet Attachement ([REDMINE-1074](https://redmine.informationgrid.eu/issues/1074))
-- [Bug] [IPLUG-MANAGEMENT] MANAGEMENT: DB Passwort wird nicht als UTF8 gespeichert ([REDMINE-1073](https://redmine.informationgrid.eu/issues/1073))
 - [Info] [INTERFACE-CSW] INTERFACE-CSW: Filterung nach partner, provider, iplug funktioniert nicht per GET Anfrage ([REDMINE-960](https://redmine.informationgrid.eu/issues/960))
 
 UVP
