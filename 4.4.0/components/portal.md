@@ -462,27 +462,9 @@ Hier können die RSS Feeds eingepflegt werden, von denen dann regelmäßig Nachr
 
 Probleme mit Feeds werden in der Spalte *Letztes Update* bzw *Fehler* angezeigt.
 
-#### Partner
+#### Partner / Anbieter
 
-Hier werden die übergeordneten *Partner* eingepflegt, denen dann wieder *Anbieter* (s.u.) zugeordnet werden können.
-
-Partner/Anbieter werden z.B. im Admin GUI eines iPlugs ausgewählt, um das iPlug zuordnen zu können.
-
-Das *Kürzel* des Partners/Anbieters dient als eindeutige ID und wird u.a. im iPlug gespeichert.
-Nachträglich sollten also die Kürzel nicht mehr geändert werden, da dann im iPlug der Partner/Anbieter nicht mehr gefunden wird und neu ausgewählt werden muss.
-
-Auch der *Sortkey* des Partners sollte nicht geändert werden, da dieser auch zur Identifikation heran gezogen werden kann (Anbieter).
-
-Der *Name* kann jederzeit geändert werden.
-
-#### Anbieter
-
-Hier werden die den Partnern zugeordneten *Anbieter* eingepflegt, s.o. *Partner*.
-
-Das *Kürzel* des Anbieters dient als eindeutige ID und wird u.a. im iPlug gespeichert.
-Nachträglich sollten also die Kürzel nicht mehr geändert werden, da dann im iPlug der Anbieter nicht mehr gefunden wird und neu ausgewählt werden muss.
-
-*Name* und *Link* können jederzeit aktualisiert werden.
+ACHTUNG: Ab der Version 4.4.0 werden die Partner und Anbieter im  [Codelist Repository](codelist_repository.html) gepflegt und wurden aus der Administration des Portals entfernt.
 
 #### Jobs
 

@@ -16,7 +16,8 @@ Ab Version 4.4.0 ist die Verwaltung von Partnern und Anbietern nicht mehr im Por
 
 **ACHTUNG: Sollten eigene Partner oder Anbieter angelegt oder Einträge geändert worden sein, müssen diese per Hand im Codelist Repository nachgeführt werden.**
 
-**Es existiert aktuell KEINE Migrationsstrategie für Partner und Anbieter. Es ist jedoch für Version 4.4.1 geplant, eine Unterstützung für die Migration aus der Portal-Datenbank in das Codelist Repository anzubieten.**
+**Es existiert aktuell KEINE Migrationsstrategie für Partner und Anbieter. Es ist jedoch für Version 4.4.1 geplant, eine Unterstützung für die Migration aus der Portal-Datenbank in das Codelist Repository anzubieten.
+In Version 4.4.0 sollte vor dem Update die Portal-Datenbank, speziell die Tabellen ingrid_partner und ingrid_provider, gesichert werden !**
 
 Das Management iPlug wurde entfernt. Nach einem Upgrade kann das aktuell installierte Management iPlug entfernt werden. Eine Komponente weniger!
 
@@ -28,7 +29,7 @@ Im Zuge der Konsolidierung der Komponenten und als Vorgriff auf die Zentralisier
 
 Die Oberfläche ist selbsterklärend und mit einer kontext-sensitiven Hilfe versehen. Neu sind Funktionalitäten für die Verwaltung des zentralen Index.
 
-Weitere Informationen zum iBus erhalten Sie hier: https://www.ingrid-oss.eu/4.4.0/components/ibus.html
+Weitere Informationen zum iBus erhalten Sie hier: [iBus](../components/ibus.html)
 
 ![Neue iBus Oberfläche](../images/ingrid_ibus_version_4_4_0.png "Neue iBus Oberfläche")
 
