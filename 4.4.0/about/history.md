@@ -4,6 +4,43 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.1
+
+Release 26.06.2018
+
+### Wichtige Änderungen
+
+#### Migration von Partnern und Anbietern ins Codelist Repository
+
+Mit der Version 4.4.0 wurden die Partner/Anbieter ins Codelist Repository verlegt, wobei jedoch keine Migration aus dem Portal statt fand.
+Stattdessen wurden default Partner/Anbieter Listen aus dem Codelist Repository ins Portal eingespielt, was individuell geänderte Partner/Anbieter überschreiben konnte.
+
+Mit 4.4.1 findet im Portal jetzt ein Backup der Partner/Anbieter statt, mit der Möglichkeit diese ins Codelist Repository zu übernehmen und die Default Listen zu überschreiben.
+
+> **Vorgehen**:
+> Nach dem ersten Start des Portals in der Version 4.4.1 werden folgende Patches im Ordner *ingrid-portal/apache-tomcat* erstellt:
+> * 441_partner_backup_codelist_patch.xml
+> * 441_provider_backup_codelist_patch.xml
+>
+> Diese müssen in das *data/patches* Verzeichnis im Codelist Repository kopiert werden.
+> Nach einem Neustart des Repos werden die Partner und Anbieter eingelesen und überschrieben.
+>
+> Um die Default Partner/Anbieter-Listen des Repositories zu retten, können diese vorher aus dem Verzeichnis *ingrid-codelist-repository/data/codelists* kopiert werden:
+> * codelist_110.xml (Partner)
+> * codelist_111.xml (Anbieter)
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature ] [PORTAL] PORTAL: Partner/Provider aus Portal Datenbank sichern/migrieren bei Update auf 4.4.x ([REDMINE-1120](https://redmine.informationgrid.eu/issues/1120))
+- [Bug] [IGE] IGE IPLUG: Aktuellste Codelisten einbinden ([REDMINE-1121](https://redmine.informationgrid.eu/issues/1121))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.4.1/))
+
 ## Version 4.4.0
 
 Release 21.06.2018
