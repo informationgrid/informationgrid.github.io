@@ -17,7 +17,7 @@ Stattdessen wurden default Partner/Anbieter Listen aus dem Codelist Repository i
 
 Mit 4.4.1 findet im Portal jetzt ein Backup der Partner/Anbieter statt, mit der Möglichkeit diese ins Codelist Repository zu übernehmen und die Default Listen zu überschreiben.
 
-> **Vorgehen**:
+> **Vorgehen**:<br>
 > Nach dem ersten Start des Portals in der Version 4.4.1 werden folgende Patches im Ordner *ingrid-portal/apache-tomcat* erstellt:
 > * 441_partner_backup_codelist_patch.xml
 > * 441_provider_backup_codelist_patch.xml
