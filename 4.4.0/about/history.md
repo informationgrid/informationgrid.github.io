@@ -51,8 +51,7 @@ Release 21.06.2018
 
 Ab Version 4.4.0 ist die Verwaltung von Partnern und Anbietern nicht mehr im Portal angesiedelt. Die Verwaltung erfolgt über das CodeList Repository. Dazu wurden neue Codelisten "Partner" und "Anbieter" angelegt. Damit kann die InGrid Infrastruktur nun komplett ohne das Portal betrieben werden.
 
-> **ACHTUNG: Sollten eigene Partner oder Anbieter angelegt oder Einträge geändert worden sein, müssen diese per Hand im Codelist Repository nachgeführt werden.<br>
-Es existiert aktuell KEINE Migrationsstrategie für Partner und Anbieter. Es ist jedoch für Version 4.4.1 geplant, eine Unterstützung für die Migration aus der Portal-Datenbank in das Codelist Repository anzubieten.<br>
+> **ACHTUNG: In Version 4.0.0 erfolgt kein Backup der im Portal eingepflegten Partner/Anbieter, bitte verwenden Sie für's Portal Version 4.4.1, s.o.
 In Version 4.4.0 sollte vor dem Update die Portal-Datenbank, speziell die Tabellen ingrid_partner und ingrid_provider, gesichert werden !**
 
 Das Management iPlug wurde entfernt. Nach einem Upgrade kann das aktuell installierte Management iPlug entfernt werden. Eine Komponente weniger!
@@ -144,9 +143,8 @@ BKG
 
 ### Komponenten
 
-- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.0/))<br>
-  **Achtung: Partner/Anbieter werden aus dem Codelist-Repo übernommen und sollten vor dem Update gesichert werden (s.o.) !**
-- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.4.0/))<br>
+- Portal 4.4.1 ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.1/))<br>
+- iPlug IGE 4.4.1 ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.4.1/))<br>
   **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
 - Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.4.0/))
 - iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/4.4.0/))<br>
