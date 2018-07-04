@@ -17,7 +17,7 @@ Im Webmap Client sind mehrere Frameworks/Technologien in einem vereint. So wird 
 
 Zu den möglichen Interaktionen oder auch Funktionen des Webmap Clients können Sie in den nächsten Abschnitten mehr erfahren.  
 
-## Funktionen
+## Frontend
 
 Der Webmap Client hat zahlreiche Funktionen mit dem Umgang von Geodaten, von Darstellung von WMS Layern und KML bis zum Drucken und Zeichnen von Kartenmaterial. Die einzelnen Funktionen werden nun hier aufgelistet:
 
@@ -34,7 +34,7 @@ Der Webmap Client hat zahlreiche Funktionen mit dem Umgang von Geodaten, von Dar
 
 Ihr Kartenzustand bedeutet hierbei auch die von Ihnen hinzugefügten Layern (z.B. WMS, KML) oder auch Ihre Zeichnungen auf der Karte.
 
-![Webmap Client - Teilen](../images/mapclient/mapclient_share.png "Webmap Client Teilen")
+![Webmap Client - Teilen](../images/mapclient/frontend/mapclient_share.png "Webmap Client Teilen")
 
 **E-Mail**
 
@@ -63,7 +63,7 @@ Natürlich können Sie auch Ihre Karte per Copy-Paste kopieren. Hierfür existie
 
 Haben Sie eine eigene Webseite und möchten Sie Ihre Karte dort integrieren? So verwenden Sie den aufklappbaren Bereich 'Einbetten'. Auch hier wird Ihnen ein Textfeld angeboten mit einem iFrame-Template, welchen Sie kopieren können und in dem Source-Code Ihrer eigene Webseite hinzufügen können. Der Webmap Client bietet Ihnen auch an das generierte Template per Vorschau anzeigen zu lassen. Klicken Sie hierfür einfach den Button 'Vorschau' im Bereich 'Einbetten' und führen weitere Änderungen (z.B. Größe des iFrames) durch.
 
-![Webmap Client - Einbetten](../images/mapclient/mapclient_share_preview.png "Webmap Client Einbetten")
+![Webmap Client - Einbetten](../images/mapclient/frontend/mapclient_share_preview.png "Webmap Client Einbetten")
 
 Die URL Ihres Kartenzustandes wird dabei immer durch ein URL-Shortener verkürzt. Mehr Informationen finden Sie [hier](#url-shortener).
 
@@ -76,7 +76,7 @@ Wird das Drucken aktiviert, so wird in der Karte ein Ausschnitt hervorgehoben, d
 
 Zusätzlich können Sie dem PDF neben dem Kartenausschnitt einen Titel, eine Beschreibung/Kommentar, die Legende der Layer oder auch ein Koordinatennetz hinzufügen und die Orientierung (Hoch-/Querformat) in den DIN A3 bzw. DIN A4 Größe ändern.
 
-![Webmap Client - Drucken](../images/mapclient/mapclient_print.png "Webmap Client Drucken")
+![Webmap Client - Drucken](../images/mapclient/frontend/mapclient_print.png "Webmap Client Drucken")
 
 In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Shorteners](#url-shortener) die URL Ihres Kartenzustandes sowie ein [QR-Code](#qr-code) hinterlegt.
 
@@ -84,7 +84,7 @@ In dem generierten PDF wird neben Ihrem Kartenausschnitt anhand eines [URL-Short
 
 Unter dem Menüpunkt **Zeichnen & Messen** können Sie Ihre Kreativität freien laufen lassen, Anmerkungen setzen oder auch Strecken zu Ihrer Karte messen. Ihre Zeichnung können Sie anschließend auch als KML-Datei herunterladen, per Funktion Teilen verbreiten oder auch ausdrucken.
 
-![Webmap Client - Zeichnen & Messen](../images/mapclient/mapclient_draw.png "Webmap Client Zeichnen & Messen")
+![Webmap Client - Zeichnen & Messen](../images/mapclient/frontend/mapclient_draw.png "Webmap Client Zeichnen & Messen")
 
 **Symbol**
 
@@ -92,7 +92,7 @@ Sie möchten (vordefinierte) Symbole auf die Karte legen, so wählen Sie die Fun
 
 Anschließend erscheint das folgende Pop-Up:
 
-![Webmap Client - Zeichnen & Messen - Symbol](../images/mapclient/mapclient_draw_sym.png "Webmap Client Zeichnen & Messen - Symbol")
+![Webmap Client - Zeichnen & Messen - Symbol](../images/mapclient/frontend/mapclient_draw_sym.png "Webmap Client Zeichnen & Messen - Symbol")
 
 Hier können Sie die Größe des Symbols, sowie das Symbol selbst ändern und auch dem Symbol eine Beschreibung vergeben.
 
@@ -102,7 +102,7 @@ Sie möchten Ihre Karte mit Texten belegen, so wählen Sie die Funktion **Text**
 
 Anschließend erscheint das folgende Pop-Up:
 
-![Webmap Client - Zeichnen & Messen - Text](../images/mapclient/mapclient_draw_txt.png "Webmap Client Zeichnen & Messen - Text")
+![Webmap Client - Zeichnen & Messen - Text](../images/mapclient/frontend/mapclient_draw_txt.png "Webmap Client Zeichnen & Messen - Text")
 
 Hier können Sie Ihren Text eingeben, aber auch die Textfarbe anpassen.
 
@@ -115,7 +115,7 @@ Sie möchten eine Linie oder eine Fläche auf Ihre Karte zeichnen, so wählen Si
 
 Anschließend erscheint das folgende Pop-Up:
 
-![Webmap Client - Zeichnen & Messen - Linie](../images/mapclient/mapclient_draw_line.png "Webmap Client Zeichnen & Messen - Linie")
+![Webmap Client - Zeichnen & Messen - Linie](../images/mapclient/frontend/mapclient_draw_line.png "Webmap Client Zeichnen & Messen - Linie")
 
 Im Tab **Linie / Fläche** können Sie eine Beschreibung zu Ihrer Linie bzw. Fläche hinterlegen, aber auch die Farbe ändern. Im anderen Tab **Distanz / Fläche** sehen zu Informationen zu Ihrer gezeichneten Linie bzw. Fläche.
 
@@ -125,7 +125,7 @@ Sie möchten eine Strecke oder eine Fläche auf Ihre Karte messen, so wählen Si
 
 Anschließend erscheint das folgende Pop-Up:
 
-![Webmap Client - Zeichnen & Messen - Messen](../images/mapclient/mapclient_draw_measure.png "Webmap Client Zeichnen & Messen - Messen")
+![Webmap Client - Zeichnen & Messen - Messen](../images/mapclient/frontend/mapclient_draw_measure.png "Webmap Client Zeichnen & Messen - Messen")
 
 Hier werden Ihnen Informationen zu Ihrer gezeichneten Strecke oder Fläche dargestellt. 
 
@@ -137,7 +137,7 @@ Unter **Mehr** gibt es nun weitere Funktionen zu Ihrer Zeichung:
 - Löschen eines ausgewählten Elementen
 - Löschen aller Elementen
 
-![Webmap Client - Zeichnen & Messen - Mehr](../images/mapclient/mapclient_draw_more.png "Webmap Client Zeichnen & Messen - Mehr")
+![Webmap Client - Zeichnen & Messen - Mehr](../images/mapclient/frontend/mapclient_draw_more.png "Webmap Client Zeichnen & Messen - Mehr")
 
 ### Erweiterte Werkzeuge
 
@@ -145,13 +145,13 @@ Das Menü 'Erweitere Werkzeuge' beinhaltet Funktionen mit (externen) Layern.
 
 Hier können WMS- oder KML-Layer hinzugefügt werden oder auch der Karte hinzugefügten Layer verglichen werden. 
 
-![Webmap Client - Erweiterte Werkzeuge](../images/mapclient/mapclient_additional.png "Webmap Client Erweiterte Werkzeuge")
+![Webmap Client - Erweiterte Werkzeuge](../images/mapclient/frontend/mapclient_additional.png "Webmap Client Erweiterte Werkzeuge")
 
 **WMS Import**
 
 Wird die Funktion 'WMS Import' aktiviert, so erscheint ein Dialog in dem Sie (vordefinierte) WMS-Dienste laden können. 
 
-![Webmap Client - Erweiterte Werkzeuge "WMS Import"](../images/mapclient/mapclient_additional_wms.png "Webmap Client Erweiterte Werkzeuge - WMS Import")
+![Webmap Client - Erweiterte Werkzeuge "WMS Import"](../images/mapclient/frontend/mapclient_additional_wms.png "Webmap Client Erweiterte Werkzeuge - WMS Import")
 
 Tragen Sie unter 'URL' eine URL zum WMS-Dienst ein (z.B. [http://atlas.wsv.bund.de/bwastr/wms](http://atlas.wsv.bund.de/bwastr/wms) ) ein oder wählen Sie einen vordefinierten Dienst über die Drop-Down-Liste aus und bestätitgen Ihren Eintrag bzw. Auswahl mit dem Button 'Verbinden'.
 
@@ -174,7 +174,7 @@ Um einen Layer der Karte hinzuzufügen wählen Sie einen Layer per Mausklick aus
 
 Wird die Funktion 'KML Import' betätigt, so erscheint auch hier ein Dialog. 
 
-![Webmap Client - Erweiterte Werkzeuge "KML Import"](../images/mapclient/mapclient_additional_kml.png "Webmap Client Erweiterte Werkzeuge - KML Import")
+![Webmap Client - Erweiterte Werkzeuge "KML Import"](../images/mapclient/frontend/mapclient_additional_kml.png "Webmap Client Erweiterte Werkzeuge - KML Import")
 
 Im Dialog werden zwei Möglichkeiten angeboten ein KML-Layer der Karte hinzuzufügen:
 
@@ -189,7 +189,7 @@ Eine weitere Funktion unter dem Menü 'Erweiterte Werkzeuge' ist die Funktion 'V
 
 Wird unter 'Dargestellte Karten' ein Layer aufgelistet und diese Funktion aktiviert, so erscheint auf der Karte eine rote Linie. 
 
-![Webmap Client - Erweiterte Werkzeuge "Vergleichen"](../images/mapclient/mapclient_additional_compare.png "Webmap Client Erweiterte Werkzeuge - Vergleichen")
+![Webmap Client - Erweiterte Werkzeuge "Vergleichen"](../images/mapclient/frontend/mapclient_additional_compare.png "Webmap Client Erweiterte Werkzeuge - Vergleichen")
 
 Dabei wird der erste aktive Layer unter 'Dargestellte Karten' im linken Bereich angezeigt und im rechten Bereich ab der roten Linie "abgeschnitten". Dieses Verhalten bleibt auch bei, wenn Sie die Karte verschieben oder die rote Linie per gedrückt gehaltenem Mausklick verschieben.
 
@@ -199,7 +199,7 @@ Um die Funktion wieder zu deaktivieren, drücken Sie wieder auf die Funktion 'Ve
 
 In diesem Bereich werden Ihnen vordefinierte Rubriken in einer Baumstruktur angezeigt. Alle Einträge mit einer Checkbox sind hierbei Layer, die auf der Karte dargestellt werden können. 
 
-![Webmap Client - Rubriken](../images/mapclient/mapclient_catalog.png "Webmap Client Rubriken")
+![Webmap Client - Rubriken](../images/mapclient/frontend/mapclient_catalog.png "Webmap Client Rubriken")
 
 Folgende Funktionen sind auf darstellbare Layer vorzufinden:
 
@@ -216,7 +216,7 @@ Eine Anleitung zur Definition von Rubriken finden Sie unter [Definition von Rubr
 
 Alle Layer, die Sie der Karte hinzugefügt haben, werden unter 'Dargestellte Karten' aufgelistet.
 
-![Webmap Client - Dargestellte Karten](../images/mapclient/mapclient_selection.png "Webmap Client Dargestellte Karten")
+![Webmap Client - Dargestellte Karten](../images/mapclient/frontend/mapclient_selection.png "Webmap Client Dargestellte Karten")
 
 Auch hier hat jeder Layer mehrere Funktionen die ausgeführt werden können:
 
@@ -235,13 +235,13 @@ Sind mehrere Layer in der Liste der 'Dargestellten Karten' so ist der oberste La
 
 Sie haben einen Layer aus den 'Dargestellten Karten' aktiviert und dieser wird in der Karte anzeigt. Nun möchten Sie die Objekt-Informationen angezeigt bekommen. So verwenden Sie die linke Maustaste um eine GetFeatureInfo-Abfrage auszulösen und bei erfolgreicher Anfrage wird Ihnen ein Dialog mit der Antwort der Abfrage angezeigt.
 
-![Webmap Client - GetFeatureInfo](../images/mapclient/mapclient_getfeatureinfo.png "Webmap Client GetFeatureInfo")
+![Webmap Client - GetFeatureInfo](../images/mapclient/frontend/mapclient_getfeatureinfo.png "Webmap Client GetFeatureInfo")
 
 ### Suchen
 
 Auch eine Suche steht Ihnen im Webmap Client zur Verfügung. Dies Suche dient hilft Ihnen dabei Orte, Layer, Dienste und Bundeswasserstraßen zu finden und auf der Karte darzustellen. 
 
-![Webmap Client - Suchen](../images/mapclient/mapclient_search.png "Webmap Client Suchen")
+![Webmap Client - Suchen](../images/mapclient/frontend/mapclient_search.png "Webmap Client Suchen")
 
 Unter der Suche werden verschiedene Dienste angefragt:
 
@@ -275,13 +275,13 @@ Wählen aus dieser Liste eine Bundeswasserstraße aus, so wird die gesamte Strec
 
 Klicken Sie mit der Maus auf die markierte Strecke, so werden Ihnen weitere Informationen zu Bundeswasserstraße per Dialog angezeigt. Neben den Informationen besteht für Sie auch die Möglichkeit die angeklickte Strecke als CSV zu exportieren. 
 
-![Webmap Client - Suchen](../images/mapclient/mapclient_search_list.png "Webmap Client Suchen")
+![Webmap Client - Suchen](../images/mapclient/frontend/mapclient_search_list.png "Webmap Client Suchen")
 
 ### Karteninteraktionen
 
 Natürlich finden Sie auch Funktionen mit dem man Interaktionen mit der Karte ausführen kann:
 
-![Webmap Client - Karteninteraktionen](../images/mapclient/mapclient_mapinteraction.png "Webmap Client Karteninteraktionen")
+![Webmap Client - Karteninteraktionen](../images/mapclient/frontend/mapclient_mapinteraction.png "Webmap Client Karteninteraktionen")
 
 **Standortbestimmung**
 
@@ -303,7 +303,7 @@ Falls Sie sich mal in der Karte verirrt haben, können Sie über den untersten B
 
 Der Webmap Client stellt verschiedene Hintergrundkarten zur Verfügung.
 
-![Webmap Client - Hintergrundkarten](../images/mapclient/mapclient_background.png "Webmap Client Hintergrundkarten")
+![Webmap Client - Hintergrundkarten](../images/mapclient/frontend/mapclient_background.png "Webmap Client Hintergrundkarten")
 
 Folgende Hintergrundkarten stehen Ihnen zur Auswahl:
 
@@ -321,7 +321,7 @@ Darstellung der Koordinaten zur Mausposition.
 
 **Drop-Down-Liste**
 
-![Webmap Client - Koordinatenanzeige](../images/mapclient/mapclient_coordinates.png "Webmap Client Koordinatenanzeige")
+![Webmap Client - Koordinatenanzeige](../images/mapclient/frontend/mapclient_coordinates.png "Webmap Client Koordinatenanzeige")
 
 Fähren Sie mit der Maus über die Karte, so werden Ihnen im dargestellten Bereich, neben der Drop-Down-Liste der Projektionen, die zur Mausposition gehörenden Koordinaten in der Projektion Mercator angezeigt. 
 
@@ -333,13 +333,13 @@ Um Ihnen Koordinaten einer bestimmten Mausposition in allen Projektionen der Dro
 
 Im anderen Tab **BwaStr Locator** finden Sie ggfs. eine Station einer Bundeswasserstraße.
 
-![Webmap Client - Koordinatenanzeige](../images/mapclient/mapclient_coordinates_mouse.png "Webmap Client Koordinatenanzeige")
+![Webmap Client - Koordinatenanzeige](../images/mapclient/frontend/mapclient_coordinates_mouse.png "Webmap Client Koordinatenanzeige")
 
 Zusätzlich erhalten Sie einen QR-Code mit dem Sie den Webmap Client mit den ausgewählten Koordinaten auf mobilen Geräte laden können.
 
 ### Weitere Funktion
 
-![Webmap Client - Kartenfunktionen](../images/mapclient/mapclient_service_option.png "Webmap Client Kartenfunktionen")
+![Webmap Client - Kartenfunktionen](../images/mapclient/frontend/mapclient_service_option.png "Webmap Client Kartenfunktionen")
 
 **Vollbild**
 
@@ -368,6 +368,42 @@ Um den Webmap Client in der mobilen Version anzeigen zu lassen, verwenden Sie di
 **Sprachumschalter (nicht im Portal vorhanden)**
 
 Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie einfach den Sprachumschalter und die Sprache des Webmap Clients wird geändert.
+
+<a name="admin"></a>
+## Admin
+
+### Karten
+
+Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
+
+### Kategorien
+
+Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
+
+### Einstellungen
+
+![Webmap Client Admin - Einstellungen](../images/mapclient/admin/mapclient_admin_einstellungen.gif "Webmap Client Admin Einstellungen")
+
+
+Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
+
+### Hilfe
+
+![Webmap Client Admin - Hilfe](../images/mapclient/admin/mapclient_admin_hilfe.gif "Webmap Client Admin Hilfe")
+
+Passen Sie Ihre Hilfe in den unterstützten Sprachen des MapClient-Frontends an. Achten Sie darauf, das der Inhalt des Textfeldes der JSON-Syntax entspricht, denn der komplette Textfeldinhalt wird in einer Datei gespeichert.
+
+Möchten Sie Ihre Hilfe für weitere Sprachen hinzufügen/erweitern, so fügen Sie zunächst unter dem Akkordeon "Einstellungen" weitere Sprachen hinzu. Nach dem erfolgreichem Hinzufügen der Sprache wird Ihnen im Akkordeon "Hilfe" die neue Sprache in einem neuem Tab angezeigt.
+
+Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
+
+### Style
+
+![Webmap Client Admin - Styles](../images/mapclient/admin/mapclient_admin_styles.gif "Webmap Client Admin Styles")
+
+Ändern Sie den Frontend-Look Ihres Mapclients indem Sie CSS-Klassen hinzufügen, bearbeiten oder entfernen. Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entspricht, denn der komplette Textfeldinhalt wird in einer Datei gespeichert.
+
+Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
 
 <a name="konfiguration"></a>
 ## Konfiguration
