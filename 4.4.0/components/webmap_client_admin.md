@@ -382,16 +382,270 @@ Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Ver
 
 ### Einstellungen
 
+Unter Einstellungen können Sie Ihren Kartenclient individuell nach Ihren Anforderungen anpassen.
+
+Zu jeder einzelnen Einstellung existiert ein Button "i" um detailierte Informationen zu einer Hilfe vorzuweisen.
+
+Folgende Einstellungen sind möglich:
+
+- Default Kategorie: 
+
+  Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Kartenclients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Kartenclients ausgewählt und angezeigt wird.
+
+  Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.
+
+- EPSG / Projektion:
+
+  Legen Sie hier die Projektion der Kartendarstellung im Kartenclient fest.
+
+  Nicht alle Projektion werden unterstützt, da der Kartenclient nicht alle Projektionen supported und ggf. erweitert werden muss. Unterstützte Projektionen sind:
+  
+  - EPSG:3857
+  - EPSG:4326
+  - EPSG:31466
+  - EPSG:31467
+  - EPSG:31468
+  - EPSG:31469
+  - EPSG:25832
+  - EPSG:25833
+
+  Hinweis: Achten Sie darauf, das Ihre verwendeten WMS- und WMTS-Dienste die Projektion unterstützten.
+
+- Extent:
+
+  Legen Sie den Kartenausschnitt fest, welchen Bereich der Karte per Default (sofern in der URL des Kartenclients mit dem Parameter "E", "N" und "zoom" nichts anderes festgelegt wurde) im Kartenclient dargestellen werden soll.
+
+  Die Koordinaten des Bereiches müssen in der Projektion EPSG:4326/WGS-84 festgelegt werden.
+
+  Hinweis: Die Koordinaten des definierten Bereiches werden im Kartenclient auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.
+
+- EPSG Extent:
+
+  Der Kartenclient unterstützt nicht alle Projektionen und zu manchen Projektion kennt der Kartenclient auch nicht das Extent einer Projektion, z.B. bei "EPSG:25832".
+
+  Kennt der Kartenclient nicht das Extent der Default-Projektion  (siehe oben), so kann man mit dieser Einstellung den Extent in EPSG:4326/WGS-84 festlegen bzw. redefinieren. So ist es auch möglich die Darstellung der Karte im Kartenclient auf einen bestimmten Bereich einzugrenzen.
+
+- Sprache:
+
+  Legen Sie hier die unterstützten Sprachen des Kartenclients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.
+
+  Existierte eine Sprache die der Kartenclient noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.
+
+  Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.
+
+- Dienst für den URL-Shortener:
+
+  Legen Sie den Dienst um die URL Ihres Kartenclients zu verkürzen. Die URL des Kartenclients spiegelt den aktuellen Zustand Ihres Kartenclients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Kartenclient verwendet. 
+
+  Ihr Dienst muss ein JSON zurückliefern.
+
+  Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Kartenclients angezeigt.
+
+- Dienstsuche (Opensearch):
+
+  Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Kartenclient zu visualisieren.
+
+  Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+
+- Zoomstufe für Locationsuche:
+
+  Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Kartenclient zu diesem Ort mit der definierten Zoomstufe.
+
+  Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.
+
+- Dienst-URL Nominatim:
+
+  Tragen Sie hier die URL für die Ortsuche ein.
+
+  Ihr Dienst muss ein JSON zurückliefern.
+
+  Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+
+- Dienst-URL BWaStr-Locator:
+
+  Möchten Sie den BWaStr-Locator in der Suche, um nach Bundeswasserstraßen zu suchen, verwenden, so tragen Sie hier die zugehörige Dienst-URL ein.
+
+  Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+
+- Dienst-URL BwaStr-Locator (Geo):
+
+  Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Geokodierung von Bundeswasserstraßen eintragen.
+
+  Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
+
+- Dienst-URL BwaStr-Locator (Station):
+
+  Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Stationierung von Bundeswasserstraßen eintragen.
+
+  Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
+
+- Copyright URL:
+
+  Tragen Sie hier die URL zu Ihrer Copyright-Seite ein. Im Kartenclient wird der Link unter rechts dargestellt.
+
+- Sitemap URL:
+
+  Tragen Sie hier die URL zu Ihrer Sitemap-Seite ein. Im Kartenclient wird der Link unter rechts dargestellt.
+
+- Verwendung von Geodesic:
+
+  (De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Kartenclient ein.
+
+- Default Mauszeiger-Projektion:
+
+  Passen Sie die Liste der Projektionen an, die im Kartenclient zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
+
+  Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Kartenclient Anpassungen durchgeführt werden.
+
+- Default Dienstauswahlliste beim Import:
+
+  Passen Sie die Liste der Dienste an, die im Kartenclient zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
+
+- Teile per Facebook:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Facebook. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+
+- Teile per E-Mail:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per E-Mail. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+
+- Teile per Google+:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Google+. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+
+- Teile per Twitter:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Twitter. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+
+- Teile per iFrame:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Twitter. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird ein HTML-iFrame Schnipsel mit dem aktuellen Zustand des Kartenclient erzeugt, welches kopiert und in HTML-Seiten integriert werden kann.
+
+- Teile per Link:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Link. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+
+- Teile per QR-Code:
+
+  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per QR-Code. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+
+  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+
+- URL zum Print-Logo:
+
+  Tragen Sie hier die URL zu Ihrem Logo ein, welches beim Druck verwendet werden soll.
+
+- URL zum Nordzeiger-Logo:
+
+  Tragen Sie hier die URL zu Ihrem Nordzeiger-Logo ein, welches beim Druck verwendet werden soll.
+
+- Koordinatennetz-Layer(s):
+
+  Legen Sie hier die URL und deren Layer für das Koordinatennetz beim Druck fest. Hierbei ist ein JSON-Format mit 'url' (URL zum Dienst) und 'layers' (Liste von Layer-Name) notwendig.
+
+  Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren.
+
+- Dateiname des Drucks:
+
+  Tragen Sie hier den Dateiname für den Druck ein.
+
+- Druck abhängig von Mauszeiger-Projektion:
+
+  Hier können Sie den Druck der Karte abhängig von der ausgewählten Mauszeiger-Projektion aktivieren. Die dargestellten Karten müssen aber die Projektion unterstützen.
+
+  Hinweis: Diese Funktion ist experimentell.
+
+- KML-Dateiname bei Export:
+
+  Definieren Sie den Prefix für die Datei beim KML-Download.
+
+- Kataloge Akkordeon verstecken:
+
+  Verstecken Sie im Menü des Kartenclients das Kategorien-Akkordeon.
+
+- W3W-Dienst:
+
+  (De-)aktvieren Sie im Popup 'Positionen' die Darstellung von What3Words.
+
+- W3W Dienst-URL:
+
+  Tragen Sie hier die Dienst-URL für W3W ein.
+
+- W3W Api-Schlüssel:
+
+  Tragen Sie hier den Api-Schlüssel für W3W ein.
+
+- Darstellung vom Service-Baum:
+
+  Stellen Sie in der Infobox einer Karte ('i'-Button) die Zugehörigkeit einer Karte zu seinem Dienst in einem weiterem Tab dar.
+
+- Darstellung von Layer-Bezeichnung:
+
+  Listen Sie in der Infobox einer Karte ('i'-Button), zusätzlich zu dem Titel und der Zusammenfassung, die Layer-Bezeichnung(en) auf.
+
+- Karten-Scale prüfen:
+
+  Definieren Sie hier, ob die Karten im Menü nach Ihrer Sichtbarkeit/Scale geprüft werden soll.
+
+  Hierbei werden die Karten in den Akkordeon ausgegraut dargestellt, sobald eine Karte nicht im Sichbarkeitsbereich des aktuellen Kartenausschnitts ist.
+
+  Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein.
+
+- Darstellung ISO-XML-Link
+
+  Hier können Sie die Darstellung des CSW-Links in Infobox bei der Dienstsuche aktivieren.
+
+- Koordinaten-Achsen XY:
+
+  Definieren Sie den Koordinaten-Tausch bei der Suche für Ihre Default-Projektion.
+
+- Koordinatensuche-Zoomstufe:
+
+  Legen Sie, analog zur Ortsuche, die Zoomstufe für die Koordinaten-Suche fest.
+ 
+- 3D-Funktion:
+
+  Hier können Sie die 3D-Funktion für die Karte aktivieren.
+
+  Hinweis: Diese Funktion ist experimentell.
+
+- Terrain-URL (3D):
+
+  Definieren Sie einen Terrain (URL) für die 3D Funktion.
+
+  Hinweis: Diese Funktion ist experimentell.
+
+Habe Sie Änderungen an den Einstellungen vorgenommen, so schließen Sie Ihre Anpassungen mit dem Button "Speichern" ab.
+
 ![Webmap Client Admin - Einstellungen](../images/mapclient/admin/mapclient_admin_settings.gif "Webmap Client Admin Einstellungen")
 
+Um Ihre Einstellungen auf Werkseinstellung wieder zurückzusetzen, verwenden Sie hierfür den Button "Zurücksetzen".
 
 Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
 
 ### Hilfe
 
-![Webmap Client Admin - Hilfe](../images/mapclient/admin/mapclient_admin_help.gif "Webmap Client Admin Hilfe")
+Passen Sie Ihre Hilfe in den unterstützten Sprachen (kann unter Konfiguration festgelegt werden) des MapClient-Frontends an.
 
-Passen Sie Ihre Hilfe in den unterstützten Sprachen des MapClient-Frontends an. Achten Sie darauf, das der Inhalt des Textfeldes der JSON-Syntax entspricht, denn der komplette Textfeldinhalt wird in einer Datei gespeichert.
+Für jede Sprache existiert ein Tab in dem die einzelnen Hilfen in Akkordions aufgelistet und nach der Hilfe-ID sortiert werden. Um einen besseren Überblick zu haben, werden neben der ID auch der Titel einer bestimmten Hilfe angezeigt.
+
+Öffnen Sie nun eine Hilfe, so öffnet sich zu einer Hilfe-ID ein Formular. Hier besteht die Möglichkeit zu einer ID den Titel, den Text und/oder die Image-URL anzupassen. 
+
+Mit dem "Speichern"-Button werden Ihre Änderungen übernommen. Um eine Hilfe-ID wieder auf Ihren Default zu setzen, verwenden Sie den Button "Zurücksetzen".
+
+![Webmap Client Admin - Hilfe](../images/mapclient/admin/mapclient_admin_help.gif "Webmap Client Admin Hilfe")
 
 Möchten Sie Ihre Hilfe für weitere Sprachen hinzufügen/erweitern, so fügen Sie zunächst unter dem Akkordeon "Einstellungen" weitere Sprachen hinzu. Nach dem erfolgreichem Hinzufügen der Sprache wird Ihnen im Akkordeon "Hilfe" die neue Sprache in einem neuem Tab angezeigt.
 
@@ -399,9 +653,11 @@ Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Ver
 
 ### Style
 
-![Webmap Client Admin - Styles](../images/mapclient/admin/mapclient_admin_styles.gif "Webmap Client Admin Styles")
+Ändern Sie den Frontend-Look Ihres Mapclients indem Sie CSS-Klassen hinzufügen, bearbeiten oder entfernen.
 
-Ändern Sie den Frontend-Look Ihres Mapclients indem Sie CSS-Klassen hinzufügen, bearbeiten oder entfernen. Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entspricht, denn der komplette Textfeldinhalt wird in einer Datei gespeichert.
+Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss, denn der komplette Textfeldinhalt wird in eine CSS-Datei gespeichert.
+
+![Webmap Client Admin - Styles](../images/mapclient/admin/mapclient_admin_styles.gif "Webmap Client Admin Styles")
 
 Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
 
