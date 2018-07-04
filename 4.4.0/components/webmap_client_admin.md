@@ -374,15 +374,47 @@ Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie ein
 
 ### Karten
 
-Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
+Unter dem Akkordeon "Karten" werden alle eingepflegten und darzustellenden Karten (WMS, WMTS) aufgelistet.
+
+Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefügt, zu Kategorien zugeordnet, aus verschiedenen Karten eines WMS-Dienstes eine kombinierte Karte erstellt und einzelne Karten zu Ihren Bedürfnisse angepasst werden.
+
+- **Karten hinzufügen**
+
+Verwenden Sie für neue Karten hinzufügen den Button "Dienst laden". Nach Verwendung des Buttons erscheint ein Pop-Up. 
+
+In diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand eines GetCapabilities-Request laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
+
+Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt.
+
+Möchten Sie die neuen Karten schon Kategorien (falls vorhanden) zuorden, so wählen Sie aus der Auswahliste "Kategorie auswählen" eine Kategorie aus und öffnen Sie die Kategorie mit dem "+"-Button. Es erscheint nun die Kategorie in einer Baumstruktur. Da hier keine Unterkategorien angelegt werden können, müssen diese Unterkategorien schon vorher angelegt sein. Sind Unterkategorien vorhanden, so wählen diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. Fügen Sie nun die Karten hinzu (Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen") so werden die Karten auch automatisch den ausgewählten (Unter-)Kategorien zugeordnet.
+
+![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_add.gif "Webmap Client Admin - Karten hinzufügen")
+
+- **Karten löschen**
+
+![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove.gif "Webmap Client Admin - Karten löschen einzeln")
+
+![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
+
+![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_all.gif "Webmap Client Admin - Karten löschen alle")
+
+- **Karten suchen**
+
+![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
+
+-  **Karten bearbeiten**
+
+![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
+
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
 
 ### Kategorien
 
-Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
 
 ### Einstellungen
 
-Unter Einstellungen können Sie Ihren Kartenclient individuell nach Ihren Anforderungen anpassen.
+Unter Einstellungen können Sie Ihren Webmap Client individuell nach Ihren Anforderungen anpassen.
 
 Zu jeder einzelnen Einstellung existiert ein Button "i" um detailierte Informationen zu einer Hilfe vorzuweisen.
 
@@ -390,15 +422,15 @@ Folgende Einstellungen sind möglich:
 
 - **Default Kategorie**: 
 
-  Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Kartenclients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Kartenclients ausgewählt und angezeigt wird.
+  Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Webmap Clients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Webmap Clients ausgewählt und angezeigt wird.
 
   Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.
 
 - **EPSG / Projektion**:
 
-  Legen Sie hier die Projektion der Kartendarstellung im Kartenclient fest.
+  Legen Sie hier die Projektion der Kartendarstellung im Webmap Client fest.
 
-  Nicht alle Projektion werden unterstützt, da der Kartenclient nicht alle Projektionen supported und ggf. erweitert werden muss. Unterstützte Projektionen sind:
+  Nicht alle Projektion werden unterstützt, da der Webmap Client nicht alle Projektionen supported und ggf. erweitert werden muss. Unterstützte Projektionen sind:
   
   - EPSG:3857
   - EPSG:4326
@@ -413,43 +445,43 @@ Folgende Einstellungen sind möglich:
 
 - **Extent**:
 
-  Legen Sie den Kartenausschnitt fest, welchen Bereich der Karte per Default (sofern in der URL des Kartenclients mit dem Parameter "E", "N" und "zoom" nichts anderes festgelegt wurde) im Kartenclient dargestellen werden soll.
+  Legen Sie den Kartenausschnitt fest, welchen Bereich der Karte per Default (sofern in der URL des Webmap Clients mit dem Parameter "E", "N" und "zoom" nichts anderes festgelegt wurde) im Webmap Client dargestellen werden soll.
 
   Die Koordinaten des Bereiches müssen in der Projektion EPSG:4326/WGS-84 festgelegt werden.
 
-  Hinweis: Die Koordinaten des definierten Bereiches werden im Kartenclient auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.
+  Hinweis: Die Koordinaten des definierten Bereiches werden im Webmap Client auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.
 
 - **EPSG Extent**:
 
-  Der Kartenclient unterstützt nicht alle Projektionen und zu manchen Projektion kennt der Kartenclient auch nicht das Extent einer Projektion, z.B. bei "EPSG:25832".
+  Der Webmap Client unterstützt nicht alle Projektionen und zu manchen Projektion kennt der Webmap Client auch nicht das Extent einer Projektion, z.B. bei "EPSG:25832".
 
-  Kennt der Kartenclient nicht das Extent der Default-Projektion  (siehe oben), so kann man mit dieser Einstellung den Extent in EPSG:4326/WGS-84 festlegen bzw. redefinieren. So ist es auch möglich die Darstellung der Karte im Kartenclient auf einen bestimmten Bereich einzugrenzen.
+  Kennt der Webmap Client nicht das Extent der Default-Projektion  (siehe oben), so kann man mit dieser Einstellung den Extent in EPSG:4326/WGS-84 festlegen bzw. redefinieren. So ist es auch möglich die Darstellung der Karte im Webmap Client auf einen bestimmten Bereich einzugrenzen.
 
 - **Sprache**:
 
-  Legen Sie hier die unterstützten Sprachen des Kartenclients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.
+  Legen Sie hier die unterstützten Sprachen des Webmap Clients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.
 
-  Existierte eine Sprache die der Kartenclient noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.
+  Existierte eine Sprache die der Webmap Client noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.
 
   Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.
 
 - **Dienst für den URL-Shortener**:
 
-  Legen Sie den Dienst um die URL Ihres Kartenclients zu verkürzen. Die URL des Kartenclients spiegelt den aktuellen Zustand Ihres Kartenclients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Kartenclient verwendet. 
+  Legen Sie den Dienst um die URL Ihres Webmap Clients zu verkürzen. Die URL des Webmap Clients spiegelt den aktuellen Zustand Ihres Webmap Clients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Webmap Client verwendet. 
 
   Ihr Dienst muss ein JSON zurückliefern.
 
-  Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Kartenclients angezeigt.
+  Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.
 
 - **Dienstsuche (Opensearch)**:
 
-  Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Kartenclient zu visualisieren.
+  Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Webmap Client zu visualisieren.
 
   Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
 
 - **Zoomstufe für Locationsuche**:
 
-  Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Kartenclient zu diesem Ort mit der definierten Zoomstufe.
+  Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Webmap Client zu diesem Ort mit der definierten Zoomstufe.
 
   Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.
 
@@ -481,67 +513,67 @@ Folgende Einstellungen sind möglich:
 
 - **Copyright URL**:
 
-  Tragen Sie hier die URL zu Ihrer Copyright-Seite ein. Im Kartenclient wird der Link unter rechts dargestellt.
+  Tragen Sie hier die URL zu Ihrer Copyright-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.
 
 - **Sitemap URL**:
 
-  Tragen Sie hier die URL zu Ihrer Sitemap-Seite ein. Im Kartenclient wird der Link unter rechts dargestellt.
+  Tragen Sie hier die URL zu Ihrer Sitemap-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.
 
 - **Verwendung von Geodesic**:
 
-  (De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Kartenclient ein.
+  (De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Webmap Client ein.
 
 - **Default Mauszeiger-Projektion**:
 
-  Passen Sie die Liste der Projektionen an, die im Kartenclient zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
+  Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
 
-  Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Kartenclient Anpassungen durchgeführt werden.
+  Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.
 
 - **Default Dienstauswahlliste beim Import**:
 
-  Passen Sie die Liste der Dienste an, die im Kartenclient zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
+  Passen Sie die Liste der Dienste an, die im Webmap Client zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
 
 - **Teile per Facebook**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Facebook. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Facebook. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
 
 - **Teile per E-Mail**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per E-Mail. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per E-Mail. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
 
 - **Teile per Google+**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Google+. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Google+. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
 
 - **Teile per Twitter**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Twitter. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Twitter. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
 
 - **Teile per iFrame**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Twitter. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Twitter. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird ein HTML-iFrame Schnipsel mit dem aktuellen Zustand des Kartenclient erzeugt, welches kopiert und in HTML-Seiten integriert werden kann.
+  Hierbei wird ein HTML-iFrame Schnipsel mit dem aktuellen Zustand des Webmap Client erzeugt, welches kopiert und in HTML-Seiten integriert werden kann.
 
 - **Teile per Link**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per Link. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Link. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
 
 - **Teile per QR-Code**:
 
-  (De-)aktivieren Sie das Teilen Ihres Kartenclient-Zustand per QR-Code. Die Funktion steht im Kartenclient-Menü unter dem Akkordeon "Teilen" zur Verfügung.
+  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per QR-Code. Die Funktion steht im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
 
-  Hierbei wird die URL des Kartenclient versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
+  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
 
 - **URL zum Print-Logo**:
 
@@ -573,7 +605,7 @@ Folgende Einstellungen sind möglich:
 
 - **Kataloge Akkordeon verstecken**:
 
-  Verstecken Sie im Menü des Kartenclients das Kategorien-Akkordeon.
+  Verstecken Sie im Menü des Webmap Clients das Kategorien-Akkordeon.
 
 - **W3W-Dienst**:
 
@@ -633,7 +665,7 @@ Habe Sie Änderungen an den Einstellungen vorgenommen, so schließen Sie Ihre An
 
 Um Ihre Einstellungen auf Werkseinstellung wieder zurückzusetzen, verwenden Sie hierfür den Button "Zurücksetzen".
 
-Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
 
 ### Hilfe
 
@@ -649,17 +681,17 @@ Mit dem "Speichern"-Button werden Ihre Änderungen übernommen. Um eine Hilfe-ID
 
 Möchten Sie Ihre Hilfe für weitere Sprachen hinzufügen/erweitern, so fügen Sie zunächst unter dem Akkordeon "Einstellungen" weitere Sprachen hinzu. Nach dem erfolgreichem Hinzufügen der Sprache wird Ihnen im Akkordeon "Hilfe" die neue Sprache in einem neuem Tab angezeigt.
 
-Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
 
 ### Style
 
-Ändern Sie den Frontend-Look Ihres Mapclients indem Sie CSS-Klassen hinzufügen, bearbeiten oder entfernen.
+Ändern Sie den Frontend-Look Ihres Webmap Clients indem Sie CSS-Klassen hinzufügen, bearbeiten oder entfernen.
 
 Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss, denn der komplette Textfeldinhalt wird in eine CSS-Datei gespeichert.
 
 ![Webmap Client Admin - Styles](../images/mapclient/admin/mapclient_admin_styles.gif "Webmap Client Admin Styles")
 
-Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
 
 <a name="konfiguration"></a>
 ## Konfiguration
@@ -1014,7 +1046,7 @@ Die im Webmap Client verwendete Hilfe für einzelne Funktionen finden Sie unter:
 
 Dort existieren für jede mögliche Sprache (INGRID: de, en) eine Hilfe-Datei im JSON-Format. In dieser JSON-Datei werden über eine Schlüssel eine Hilfe-Titel, -Text und -Image (z.Zt. nicht in Verwendung) zu einer Funktion im Webmap Client referenziert.
 
-Die aktuelle Hilfe des Schweizer Mapclients als JSON erhalten Sie z.B. hier als [Hilfe deutsch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'de'+order+by+id&callback=angular.callbacks._2) oder [Hilfe englisch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'en'+order+by+id&callback=angular.callbacks._2).
+Die aktuelle Hilfe des Schweizer Webmap Clients als JSON erhalten Sie z.B. hier als [Hilfe deutsch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'de'+order+by+id&callback=angular.callbacks._2) oder [Hilfe englisch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'en'+order+by+id&callback=angular.callbacks._2).
 
 ## Schnittstellen
 
