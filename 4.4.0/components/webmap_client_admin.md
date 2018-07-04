@@ -382,14 +382,14 @@ Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Ver
 
 ### Einstellungen
 
-![Webmap Client Admin - Einstellungen](../images/mapclient/admin/mapclient_admin_einstellungen.gif "Webmap Client Admin Einstellungen")
+![Webmap Client Admin - Einstellungen](../images/mapclient/admin/mapclient_admin_settings.gif "Webmap Client Admin Einstellungen")
 
 
 Falls Sie das Konfigurationsverzeichnis des MapClients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
 
 ### Hilfe
 
-![Webmap Client Admin - Hilfe](../images/mapclient/admin/mapclient_admin_hilfe.gif "Webmap Client Admin Hilfe")
+![Webmap Client Admin - Hilfe](../images/mapclient/admin/mapclient_admin_help.gif "Webmap Client Admin Hilfe")
 
 Passen Sie Ihre Hilfe in den unterstützten Sprachen des MapClient-Frontends an. Achten Sie darauf, das der Inhalt des Textfeldes der JSON-Syntax entspricht, denn der komplette Textfeldinhalt wird in einer Datei gespeichert.
 
