@@ -394,7 +394,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   Für das Löschen von eingepflegten Karten gibt es drei Möglichkeiten: 
 
-  - Karte einzeln löschen
+  - **Karte einzeln löschen**
 
     Klicken Sie auf das Akkordeon einer Karte. Nach dem Öffnen des Akkordeons erscheint nun ein Button "Löschen". Mit diesem Button wird eine einzelne Karte entfernt. Mit Bestätigung des Löschvorgangs wird die Karte entfernt.
 
@@ -402,7 +402,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove.gif "Webmap Client Admin - Karten löschen einzeln")
 
-  - Ausgewählte Karten löschen
+  - **Ausgewählte Karten löschen**
 
     Wählen Sie eingepflegte Karten über die Checkbox aus den Listen aus und betätigen Sie den Button "Auswahl löschen". Mit Bestätigung des Löschvorgangs werden die Karten entfernt.
 
@@ -410,7 +410,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
 
-  - Alle Karten löschen
+  - **Alle Karten löschen**
 
     Mit Hilfe des Buttons "Alles löschen" wird die Liste aller eingepflegte Karten geleert. Mit Bestätigung des Löschvorgangs werden alle Karten somit entfernt.    
 
@@ -426,7 +426,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
 
--  **Karten bearbeiten**
+- **Karten bearbeiten**
 
   Eingepflegte Karten können auch bearbeitet werden und dabei die Default-Werte aus der GetCapabilities des zugehörigen Dienstes manipulieren.
 
@@ -750,13 +750,14 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-    ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
+  ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
+
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
 
 ### Kategorien
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
 
 ### Einstellungen
 
@@ -1011,7 +1012,7 @@ Habe Sie Änderungen an den Einstellungen vorgenommen, so schließen Sie Ihre An
 
 Um Ihre Einstellungen auf Werkseinstellung wieder zurückzusetzen, verwenden Sie hierfür den Button "Zurücksetzen".
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
 
 ### Hilfe
 
@@ -1027,7 +1028,7 @@ Mit dem "Speichern"-Button werden Ihre Änderungen übernommen. Um eine Hilfe-ID
 
 Möchten Sie Ihre Hilfe für weitere Sprachen hinzufügen/erweitern, so fügen Sie zunächst unter dem Akkordeon "Einstellungen" weitere Sprachen hinzu. Nach dem erfolgreichem Hinzufügen der Sprache wird Ihnen im Akkordeon "Hilfe" die neue Sprache in einem neuem Tab angezeigt.
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
 
 ### Style
 
@@ -1037,7 +1038,7 @@ Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss
 
 ![Webmap Client Admin - Styles](../images/mapclient/admin/mapclient_admin_styles.gif "Webmap Client Admin Styles")
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
+Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
 
 <a name="konfiguration"></a>
 ## Konfiguration
