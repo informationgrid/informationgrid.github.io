@@ -396,7 +396,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   - Karte einzeln löschen
 
-    Klicken Sie auf das Akkordeon einer Karte. Nach dem Öffnen des Akkordeons erscheint nun ein Button "Löschen". Mit diesem Button wird eine einzelne Karte entfernt.
+    Klicken Sie auf das Akkordeon einer Karte. Nach dem Öffnen des Akkordeons erscheint nun ein Button "Löschen". Mit diesem Button wird eine einzelne Karte entfernt. Mit Bestätigung des Löschvorgangs wird die Karte entfernt.
 
     Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
 
@@ -404,13 +404,15 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   - Ausgewählte Karten löschen
 
+    Wählen Sie eingepflegte Karten über die Checkbox aus den Listen aus und betätigen Sie den Button "Auswahl löschen". Mit Bestätigung des Löschvorgangs werden die Karten entfernt.
+
     Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
 
   - Alle Karten löschen
 
-    
+    Mit Hilfe des Buttons "Alles löschen" wird die Liste aller eingepflegte Karten geleert. Mit Bestätigung des Löschvorgangs werden alle Karten somit entfernt.    
 
     Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
 
@@ -418,11 +420,337 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
 - **Karten suchen**
 
-![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
+  Die Liste der eingepflegten Karten kann auf Dauer sehr lang und unübersichtlich werden.
+
+  Eine Abbilfe kann hier das Suchfeld schaffen. Nach Eingabe eines Suchbegriffs sollte die Liste aller eingepflegten Karten nach Titel einer Karte gefiltert werden und bei Übereinstimmung in der Liste angezeigt werden. 
+
+  ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
 
 -  **Karten bearbeiten**
 
-![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
+  Eingepflegte Karten können auch bearbeitet werden und dabei die Default-Werte aus der GetCapabilities des zugehörigen Dienstes manipulieren.
+
+  In der Bearbeitungsansicht der Karten existiert zu jeder Eigenschaft eine kurze Info über den "i"-Button.
+
+  Es gibt zwei Typen von Karten die bearbeitet werden können:
+
+  - **WMS**
+
+    - **Typ**:
+
+      Hier wird Ihnen der Typ Ihrer Karte angezeigt. Dieser Wert ist nicht veränderbar.
+
+    - **ID**:
+
+      Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert. Hier haben Sie die Möglichkeit die ID der Karte individuell anzupassen. 
+
+      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe nächstes Kapitel) zuzuweisen.
+
+    - **Version**:
+
+      Bestimmen Sie hier die Version Ihrer Karte. Eine Auswahl der Werte "1.1.1" und "1.3.0" steht zu Auswahl.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Label**:
+
+      Bearbeiten Sie hier den Titel Ihrer Karte.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+      Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
+
+    - **Extent**:
+
+      Passen Sie hier das Extent Ihrer Karte an. 
+      
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+      Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
+
+    - **WMS-URL**:
+
+      Ändern Sie hier die URL für die GetMap-Anfrage ein.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **WMS-Layers**:
+
+      Tragen Sie hier den 'NAME' der dazustellenden Karte ein. Mehrere Karten werden kommagetrennte aufgelistet. 
+      
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+      Hinweis: Zusammengesetzte Karten per kommagetrennt können im Webmap Client nur zusammen dargestellt werden.
+
+    - **Gutter**:
+
+      Definieren Sie den Rand in Pixel um den Karten-Tiles. 
+      
+      Default: 150
+
+    - **Single Tile**:
+
+      (De-)aktivieren Sie hier den Aufruf Ihrer Karte in Kacheln. 
+
+      Default: false
+
+    - **Min-Scale**:
+      
+      Definieren Sie einen Min-Scale der Karte.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Max-Scale**:
+
+      Definieren Sie einen Max-Scale der Karte.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Hintergrundkarte**:
+
+      Bestimmen Sie hier, ob Ihre Karte als Hintergrundkarte verwendet werden kann. 
+
+      Default: false
+
+      Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
+
+    - **Format**:
+
+      Definieren Sie das Bild-Format der GetMap-Anfrage. (png, jpeg, etc.)
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Suchbarkeit**:
+
+      Lassen Sie die Karte über die Suche im Webmap Client auffinderbar machen. 
+
+      Default: true
+
+    - **Cross Origin**:
+
+      Liefert Ihre Karte bei einer GetMap-Anfrage im Response-Header "Access-Control-Allow-Origin: *" oder "Access-Control-Allow-Origin: <IHRE-DOMÄIN>", so können Sie hier den Wert auf "true" setzten und im Webmap Client werden vorhandenen GetFeatureInfos beim überfahren der Maus auf Ihrer Karte als Handsymbol angezeigt.
+
+      Default: false
+
+    - **Highlightable**:
+
+      Aktivieren Sie die Eigenschaft 'highlightable'.
+
+      Default: false
+
+    - **Zeitstempeln**:
+
+      Tragen Sie die Zeitstempeln der Karte ein, falls vorhanden.
+
+    - **Zeitstempel aktivieren**:
+
+      Aktivieren Sie die zeitabhängige Darstellung der Karte.
+
+      Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
+
+    - **Time behaviour**:
+
+      Legen Sie das Verhalten für die zeitabhängige Kartendarstellung fest.
+
+      Default: last
+
+    - **Legende aktivieren**:
+
+      Aktivieren Sie die Einstellung, wenn die Karte eine Legende hat oder eine Legende per GetLegend-Anfrage aufgerufen werden soll.
+
+      Default: true
+
+    - **Legenden-URL**:
+
+      Definieren Sie die URL der Karten-Legende, ansonsten wird ein GetLegenden-Request ausgeführt.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Attribution**:
+
+      Tragen Sie den Titel für die URL unter 'attributionUrl'.
+      
+      Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
+
+    - **Attribution-URL**:
+
+      Tragen Sie hier die URL für weitere Infos zur Karte ein.
+
+      Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
+
+    - **Tooltip**:
+
+      Aktivieren Sie die GetFeature-Info-Abfrage, falls es die Karte erlaubt.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Transparenz**:
+     
+      Definieren Sie die per default dargestellte Transparenz der Karte.
+
+      Default: 1
+      
+    - **Style**:
+
+      Legen Sie ein 'styles'-Parameter für die GetMap-Abfrage fest, falls notwendig.
+
+  - **WMTS**
+
+    - **Typ**:
+
+      Hier wird Ihnen der Typ Ihrer Karte angezeigt. Dieser Wert ist nicht veränderbar.
+
+    - **ID**:
+
+      Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert. Hier haben Sie die Möglichkeit die ID der Karte individuell anzupassen. 
+
+      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe nächstes Kapitel) zuzuweisen.
+
+    - **Version**:
+
+      Bestimmen Sie hier die Version Ihrer Karte.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Label**:
+
+      Bearbeiten Sie hier den Titel Ihrer Karte.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+      Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
+
+    - **Extent**:
+
+      Passen Sie hier das Extent Ihrer Karte an. 
+      
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+      Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
+
+    - **Service-URL**:
+
+      Tragen Sie die WMTS-ServiceMetadataURL ein.
+
+    - **Template**:
+
+      Tragen Sie die WMTS-ResourceURL ein.
+
+    - **MatrixSet**:
+
+      Definieren Sie den TileMatrixSet Identifier der Karte.
+
+    - **Layername**:
+
+      Tragen Sie hier den Layer-Name für WMTS ein.
+
+    - **RequestEncoding**:
+
+      Tragen Sie den Request-Encoding der Karte für GetTile fest, z.B. 'REST' oder 'KVP'.
+
+    - **Hintergrundkarte**:
+
+      Bestimmen Sie hier, ob Ihre Karte als Hintergrundkarte verwendet werden kann. 
+
+      Default: false
+
+      Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
+
+    - **Format**:
+
+      Definieren Sie das Bild-Format der GetMap-Anfrage. (png, jpeg, etc.)
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Suchbarkeit**:
+
+      Lassen Sie die Karte über die Suche im Webmap Client auffinderbar machen. 
+
+      Default: true
+
+    - **Cross Origin**:
+
+      Liefert Ihre Karte bei einer GetMap-Anfrage im Response-Header "Access-Control-Allow-Origin: *" oder "Access-Control-Allow-Origin: <IHRE-DOMÄIN>", so können Sie hier den Wert auf "true" setzten und im Webmap Client werden vorhandenen GetFeatureInfos beim überfahren der Maus auf Ihrer Karte als Handsymbol angezeigt.
+
+      Default: false
+
+    - **Highlightable**:
+
+      Aktivieren Sie die Eigenschaft 'highlightable'.
+
+      Default: false
+
+    - **Zeitstempeln**:
+
+      Tragen Sie die Zeitstempeln der Karte ein, falls vorhanden.
+
+    - **Zeitstempel aktivieren**:
+
+      Aktivieren Sie die zeitabhängige Darstellung der Karte.
+
+      Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
+
+    - **Time behaviour**:
+
+      Legen Sie das Verhalten für die zeitabhängige Kartendarstellung fest.
+
+      Default: last
+
+    - **Legende aktivieren**:
+
+      Aktivieren Sie die Einstellung, wenn die Karte eine Legende hat oder eine Legende per GetLegend-Anfrage aufgerufen werden soll.
+
+      Default: true
+
+    - **Legenden-URL**:
+
+      Definieren Sie die URL der Karten-Legende, ansonsten wird ein GetLegenden-Request ausgeführt.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Attribution**:
+
+      Tragen Sie den Titel für die URL unter 'attributionUrl'.
+      
+      Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
+
+    - **Attribution-URL**:
+
+      Tragen Sie hier die URL für weitere Infos zur Karte ein.
+
+      Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
+
+    - **Tooltip**:
+
+      Aktivieren Sie die GetFeature-Info-Abfrage, falls es die Karte erlaubt.
+
+      Default: false.
+
+    - **Transparenz**:
+     
+      Definieren Sie die per default dargestellte Transparenz der Karte.
+
+      Default: 1
+      
+    - **Style**:
+
+      Legen Sie ein 'style'-Parameter für die GetMap-Abfrage fest, falls notwendig.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Origin**:
+
+      Tragen Sie aus dem TileMatrixSet den TopLeftCorner der Karte ein.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    - **Scales**:
+
+      Tragen Sie aus dem TileMatrixSet den TileMatrix-ScaleDenominator der Karte ein.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+    ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
 
 Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnis, also nicht als ein Unterordner des Portal-Verzeichnis, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
 
