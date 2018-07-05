@@ -380,23 +380,41 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
 - **Karten hinzufügen**
 
-Verwenden Sie für neue Karten hinzufügen den Button "Dienst laden". Nach Verwendung des Buttons erscheint ein Pop-Up. 
+  Verwenden Sie für neue Karten hinzufügen den Button "Dienst laden". Nach Verwendung des Buttons erscheint ein Pop-Up. 
 
-In diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand eines GetCapabilities-Request laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
+  In diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand eines GetCapabilities-Request laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
 
-Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt.
+  Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt.
 
-Möchten Sie die neuen Karten schon Kategorien (falls vorhanden) zuorden, so wählen Sie aus der Auswahliste "Kategorie auswählen" eine Kategorie aus und öffnen Sie die Kategorie mit dem "+"-Button. Es erscheint nun die Kategorie in einer Baumstruktur. Da hier keine Unterkategorien angelegt werden können, müssen diese Unterkategorien schon vorher angelegt sein. Sind Unterkategorien vorhanden, so wählen diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. Fügen Sie nun die Karten hinzu (Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen") so werden die Karten auch automatisch den ausgewählten (Unter-)Kategorien zugeordnet.
+  Möchten Sie die neuen Karten schon Kategorien (falls vorhanden) zuorden, so wählen Sie aus der Auswahliste "Kategorie auswählen" eine Kategorie aus und öffnen Sie die Kategorie mit dem "+"-Button. Es erscheint nun die Kategorie in einer Baumstruktur. Da hier keine Unterkategorien angelegt werden können, müssen diese Unterkategorien schon vorher angelegt sein. Sind Unterkategorien vorhanden, so wählen diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. Fügen Sie nun die Karten hinzu (Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen") so werden die Karten auch automatisch den ausgewählten (Unter-)Kategorien zugeordnet.
 
-![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_add.gif "Webmap Client Admin - Karten hinzufügen")
+  ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_add.gif "Webmap Client Admin - Karten hinzufügen")
 
 - **Karten löschen**
 
-![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove.gif "Webmap Client Admin - Karten löschen einzeln")
+  Für das Löschen von eingepflegten Karten gibt es drei Möglichkeiten: 
 
-![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
+  - Karte einzeln löschen
 
-![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_all.gif "Webmap Client Admin - Karten löschen alle")
+    Klicken Sie auf das Akkordeon einer Karte. Nach dem Öffnen des Akkordeons erscheint nun ein Button "Löschen". Mit diesem Button wird eine einzelne Karte entfernt.
+
+    Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+
+    ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove.gif "Webmap Client Admin - Karten löschen einzeln")
+
+  - Ausgewählte Karten löschen
+
+    Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+
+    ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
+
+  - Alle Karten löschen
+
+    
+
+    Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+
+    ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_all.gif "Webmap Client Admin - Karten löschen alle")
 
 - **Karten suchen**
 
