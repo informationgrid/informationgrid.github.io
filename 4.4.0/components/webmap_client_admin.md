@@ -777,11 +777,75 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
+> Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
 
 ### Kategorien
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
+- **Kategorien hinzufügen**
+
+  - Verwenden Sie für neue Karten hinzufügen den Button "Neue Kategorie". 
+
+  - Nach Verwendung des Buttons erscheint ein Pop-Up und in diesem Pop-Up können Sie nun eine neue Kategorie anlegen.
+  
+    - ID: Eindeutige ID der Kategorie
+  
+    - Label: Titel der Kategorie
+  
+    - Tooltip: Tooltip der Kategorie im Webmap Client
+
+  - Mit dem "Speichern"-Button wird die Kategorie hinzugefügt. 
+
+- **Kategorien löschen**
+
+  Analog zu den "Karten" können die Kategorien gelöscht werden:
+
+    - Einzeln löschen bei Öffnen einer Kategorie.
+
+    - Ausgewählte Kategorien über die Checkbox löschen
+
+    - Alle Kategorien löschen
+
+- **Kategorien suchen**
+
+  Mit dem Suchfeld in der Navigationsleiste des Akkordeon "Kategorien" können Sie nach Kategorien per ID suchen.
+
+- **Kategorien bearbeiten**
+
+  Haben Sie eine Kategorie in der Liste ausgewählt, so können Sie über den Button-"Bearbeiten" diese Kategorie bearbeiten:
+
+  - Die "ID" kann nicht angepasst.
+
+  - Ändern Sie Ihren Titel über den Eintrag "Label".
+
+  - Ändern Sie Ihren Tooltip über den Eintrag "Tooltip".
+
+  - Passen Sie die Auswahl an Hintergrundkarten an, indem Sie über die Liste Karten hinzufügen, entfernen oder sortieren. 
+
+    > Hinweise:
+    > - In der Liste der Karte, werden nur Karten mit der Eigenschaft "Hintergrundkarte" aufgelistet.
+    > - "osmLayer" ist ein OpenLayers-Layer und funktioniert nur in der Projektion "EPSG:3857" einwandfrei.
+
+  - Setzen Sie hier aus der Liste "Hintergrundkarte" Ihre Default-Hintergrundkarte fest.
+
+  - Unter "Selektierte Karten" können Sie Karten hinzufügen die im Webmap Client per Default im Akkordeon "Dargestellte Karten" hinzugefügt sind. 
+
+  - Unter "Aktivierte Karten" können Sie Karten hinzufügen die im Webmap Client per Default im Akkordeon "Dargestellte Karten" hinzugefügt, ausgewählt und in der Karte dargestellt werden. 
+
+  Zudem können Sie nun der Kategorien Unterkategorien hinzufügen:
+
+  -  Über den "+"-Button werden erscheint ein Pop-Up. 
+
+  - Hier können Sie nun einen Titel für die Unterkategorie festlegen. 
+
+  - Optional: Können Sie der Unterkategorie eine Karte zuweisen. 
+
+  - Bei Auswahl der neu erstellten Unterkategorie bearbeitet, gelöscht oder weitere Unterkategorien/-Karten hinzugefügt werden.
+
+  (Unter-)kategorien verschieben:
+
+  Verwenden Sie die Drag & Drop-Funktion um (Unter-)kategorien zu verschieben. Hierzu wählen Sie eine (Unter-)kategorien aus, halten gedrückt die linke Maustaste, Verschieben die Maus zur gewünschten (Unter-)kategorien und lassen die Maustaste wieder los.
+
+> Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
 
 ### Einstellungen
 
@@ -1036,23 +1100,23 @@ Habe Sie Änderungen an den Einstellungen vorgenommen, so schließen Sie Ihre An
 
 Um Ihre Einstellungen auf Werkseinstellung wieder zurückzusetzen, verwenden Sie hierfür den Button "Zurücksetzen".
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
+> Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleib die definierten Einstellungen auch für zukünftige Portal-Updates erhalten.
 
 ### Hilfe
 
 Passen Sie Ihre Hilfe in den unterstützten Sprachen (kann unter Konfiguration festgelegt werden) des MapClient-Frontends an.
 
-Für jede Sprache existiert ein Tab in dem die einzelnen Hilfen in Akkordions aufgelistet und nach der Hilfe-ID sortiert werden. Um einen besseren Überblick zu haben, werden neben der ID auch der Titel einer bestimmten Hilfe angezeigt.
+* Für jede Sprache existiert ein Tab in dem die einzelnen Hilfen in Akkordions aufgelistet und nach der Hilfe-ID sortiert werden. Um einen besseren Überblick zu haben, werden neben der ID auch der Titel einer bestimmten Hilfe angezeigt.
 
-Öffnen Sie nun eine Hilfe, so öffnet sich zu einer Hilfe-ID ein Formular. Hier besteht die Möglichkeit zu einer ID den Titel, den Text und/oder die Image-URL anzupassen. 
+* Öffnen Sie nun eine Hilfe, so wird zu einer Hilfe-ID ein Formular sichtbar. Hier besteht die Möglichkeit zu einer ID den Hilfe-Titel, den Hilfe-Text und/oder die Bild-URL zu der zugehörigen Hilfe anzupassen. 
 
-Mit dem "Speichern"-Button werden Ihre Änderungen übernommen. Um eine Hilfe-ID wieder auf Ihren Default zu setzen, verwenden Sie den Button "Zurücksetzen".
+* Mit dem "Speichern"-Button werden Ihre Änderungen übernommen. Um eine Hilfe-ID wieder auf Ihren Default zu setzen, verwenden Sie den Button "Zurücksetzen".
 
 ![Webmap Client Admin - Hilfe](../images/mapclient/admin/mapclient_admin_help.gif "Webmap Client Admin Hilfe")
 
-Möchten Sie Ihre Hilfe für weitere Sprachen hinzufügen/erweitern, so fügen Sie zunächst unter dem Akkordeon "Einstellungen" weitere Sprachen hinzu. Nach dem erfolgreichem Hinzufügen der Sprache wird Ihnen im Akkordeon "Hilfe" die neue Sprache in einem neuem Tab angezeigt.
+* Möchten Sie Ihre Hilfe für weitere Sprachen erweitern, so fügen Sie zunächst unter dem Akkordeon "Einstellungen" weitere Sprachen hinzu. Nach dem erfolgreichem Speichern der neuen Sprache wird Ihnen im Akkordeon "Hilfe" die neue Sprache in einem neuem Tab in deutscher Sprache angezeigt. Dieses Hilfe können Sie dann editieren/übersetzen und wird Ihnen beim Aufruf des Webmap Clients mit der neuen Sprache angezeigt.
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
+> Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die geänderten Hilfe-Texte auch für zukünftige Portal-Updates erhalten.
 
 ### Style
 
@@ -1062,7 +1126,7 @@ Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss
 
 ![Webmap Client Admin - Styles](../images/mapclient/admin/mapclient_admin_styles.gif "Webmap Client Admin Styles")
 
-Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
+> Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
 
 <a name="konfiguration"></a>
 ## Konfiguration
