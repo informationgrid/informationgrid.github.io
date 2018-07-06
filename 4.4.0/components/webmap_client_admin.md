@@ -380,13 +380,27 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
 - **Karten hinzufügen**
 
-  Verwenden Sie für neue Karten hinzufügen den Button "Dienst laden". Nach Verwendung des Buttons erscheint ein Pop-Up. 
+  - Verwenden Sie für neue Karten hinzufügen den Button "Dienst laden". 
 
-  In diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand eines GetCapabilities-Request laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
+  - Nach Verwendung des Buttons erscheint ein Pop-Up und in diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand seiner GetCapabilities-URL laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
 
-  Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt.
+    > Hinweis: Bei WMS werden automisch die URL-Parameter "SERVICE=WMS", "VERSION=1.3.0" und/oder "REQUEST=GetCapabilities" der Dienst-URL hinzugefügt, falls diese Parameter nicht vorhanden sind. 
 
-  Möchten Sie die neuen Karten schon Kategorien (falls vorhanden) zuorden, so wählen Sie aus der Auswahliste "Kategorie auswählen" eine Kategorie aus und öffnen Sie die Kategorie mit dem "+"-Button. Es erscheint nun die Kategorie in einer Baumstruktur. Da hier keine Unterkategorien angelegt werden können, müssen diese Unterkategorien schon vorher angelegt sein. Sind Unterkategorien vorhanden, so wählen diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. Fügen Sie nun die Karten hinzu (Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen") so werden die Karten auch automatisch den ausgewählten (Unter-)Kategorien zugeordnet.
+  - Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt, sind aber keine Kategorie zugeordnet.
+
+  - Möchten Sie Ihre Karten schon vorhandenen Kategorien zuorden, so wählen Sie aus der Auswahliste "Kategorie auswählen" eine Kategorie aus.
+
+    - Öffnen Sie die Kategorie mit dem "+"-Button.
+
+    -  Es erscheint nun die Kategorie in einer Baumstruktur. 
+    
+        > Hinweis: Da hier keine Unterkategorien angelegt werden können, müssen diese Unterkategorien schon vorher angelegt sein. 
+       
+    - Sind Unterkategorien vorhanden, so wählen diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. 
+    
+    - Fügen Sie nun die Karten hinzu (Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen") so werden die Karten auch automatisch den ausgewählten (Unter-)Kategorien zugeordnet.
+
+  > Hinweis: Werden Karten hinzugefügt, erhalten die Karten eine eindeutige ID, d.h. möchte man die Karten mit der gleichen ID zu verschiedenen Kategorien hinzufügen, dann müssen die Kategorien alle auf einmal ausgewählt haben und die Karten hinzufügen, ansonsten muss man die Karten manuell über das Akkordeon "Kategorien" zuordnen.  
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_add.gif "Webmap Client Admin - Karten hinzufügen")
 
@@ -398,7 +412,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     Klicken Sie auf das Akkordeon einer Karte. Nach dem Öffnen des Akkordeons erscheint nun ein Button "Löschen". Mit diesem Button wird eine einzelne Karte entfernt. Mit Bestätigung des Löschvorgangs wird die Karte entfernt.
 
-    Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+    > Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove.gif "Webmap Client Admin - Karten löschen einzeln")
 
@@ -406,7 +420,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     Wählen Sie eingepflegte Karten über die Checkbox aus den Listen aus und betätigen Sie den Button "Auswahl löschen". Mit Bestätigung des Löschvorgangs werden die Karten entfernt.
 
-    Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+    > Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
 
@@ -414,7 +428,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     Mit Hilfe des Buttons "Alles löschen" wird die Liste aller eingepflegte Karten geleert. Mit Bestätigung des Löschvorgangs werden alle Karten somit entfernt.    
 
-    Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+    > Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_all.gif "Webmap Client Admin - Karten löschen alle")
 
@@ -458,7 +472,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-      Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
+      > Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
 
     - **Extent**:
 
@@ -466,7 +480,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
       
       Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-      Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
+      > Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
 
     - **WMS-URL**:
 
@@ -480,7 +494,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
       
       Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-      Hinweis: Zusammengesetzte Karten per kommagetrennt können im Webmap Client nur zusammen dargestellt werden.
+      > Hinweis: Zusammengesetzte Karten per kommagetrennt können im Webmap Client nur zusammen dargestellt werden.
 
     - **Gutter**:
 
@@ -512,7 +526,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: false
 
-      Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
+      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
 
     - **Format**:
 
@@ -546,7 +560,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Aktivieren Sie die zeitabhängige Darstellung der Karte.
 
-      Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
+      > Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
 
     - **Time behaviour**:
 
@@ -570,13 +584,13 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Tragen Sie den Titel für die URL unter 'attributionUrl'.
       
-      Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
+      > Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
 
     - **Attribution-URL**:
 
       Tragen Sie hier die URL für weitere Infos zur Karte ein.
 
-      Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
+      > Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
 
     - **Tooltip**:
 
@@ -618,7 +632,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-      Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
+      > Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
 
     - **Extent**:
 
@@ -626,27 +640,37 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
       
       Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-      Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
+      > Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
 
     - **Service-URL**:
 
       Tragen Sie die WMTS-ServiceMetadataURL ein.
 
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
     - **Template**:
 
       Tragen Sie die WMTS-ResourceURL ein.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
     - **MatrixSet**:
 
       Definieren Sie den TileMatrixSet Identifier der Karte.
 
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
     - **Layername**:
 
       Tragen Sie hier den Layer-Name für WMTS ein.
 
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
+
     - **RequestEncoding**:
 
       Tragen Sie den Request-Encoding der Karte für GetTile fest, z.B. 'REST' oder 'KVP'.
+
+      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
 
     - **Hintergrundkarte**:
 
@@ -654,7 +678,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: false
 
-      Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
+      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
 
     - **Format**:
 
@@ -688,7 +712,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Aktivieren Sie die zeitabhängige Darstellung der Karte.
 
-      Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
+      > Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
 
     - **Time behaviour**:
 
@@ -712,13 +736,13 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Tragen Sie den Titel für die URL unter 'attributionUrl'.
       
-      Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
+      > Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
 
     - **Attribution-URL**:
 
       Tragen Sie hier die URL für weitere Infos zur Karte ein.
 
-      Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
+      > Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
 
     - **Tooltip**:
 
@@ -771,7 +795,7 @@ Folgende Einstellungen sind möglich:
 
   Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Webmap Clients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Webmap Clients ausgewählt und angezeigt wird.
 
-  Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.
+  > Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.
 
 - **EPSG / Projektion**:
 
@@ -788,7 +812,7 @@ Folgende Einstellungen sind möglich:
   - EPSG:25832
   - EPSG:25833
 
-  Hinweis: Achten Sie darauf, das Ihre verwendeten WMS- und WMTS-Dienste die Projektion unterstützten.
+  > Hinweis: Achten Sie darauf, das Ihre verwendeten WMS- und WMTS-Dienste die Projektion unterstützten.
 
 - **Extent**:
 
@@ -796,7 +820,7 @@ Folgende Einstellungen sind möglich:
 
   Die Koordinaten des Bereiches müssen in der Projektion EPSG:4326/WGS-84 festgelegt werden.
 
-  Hinweis: Die Koordinaten des definierten Bereiches werden im Webmap Client auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.
+  > Hinweis: Die Koordinaten des definierten Bereiches werden im Webmap Client auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.
 
 - **EPSG Extent**:
 
@@ -810,7 +834,7 @@ Folgende Einstellungen sind möglich:
 
   Existierte eine Sprache die der Webmap Client noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.
 
-  Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.
+  > Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.
 
 - **Dienst für den URL-Shortener**:
 
@@ -818,19 +842,19 @@ Folgende Einstellungen sind möglich:
 
   Ihr Dienst muss ein JSON zurückliefern.
 
-  Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.
+  > Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.
 
 - **Dienstsuche (Opensearch)**:
 
   Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Webmap Client zu visualisieren.
 
-  Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+  > Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
 
 - **Zoomstufe für Locationsuche**:
 
   Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Webmap Client zu diesem Ort mit der definierten Zoomstufe.
 
-  Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.
+  > Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.
 
 - **Dienst-URL Nominatim**:
 
@@ -838,25 +862,25 @@ Folgende Einstellungen sind möglich:
 
   Ihr Dienst muss ein JSON zurückliefern.
 
-  Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+  > Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
 
 - **Dienst-URL BWaStr-Locator**:
 
   Möchten Sie den BWaStr-Locator in der Suche, um nach Bundeswasserstraßen zu suchen, verwenden, so tragen Sie hier die zugehörige Dienst-URL ein.
 
-  Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+  > Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
 
 - **Dienst-URL BwaStr-Locator (Geo)**:
 
   Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Geokodierung von Bundeswasserstraßen eintragen.
 
-  Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
+  > Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
 
 - **Dienst-URL BwaStr-Locator (Station)**:
 
   Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Stationierung von Bundeswasserstraßen eintragen.
 
-  Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
+  > Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
 
 - **Copyright URL**:
 
@@ -874,7 +898,7 @@ Folgende Einstellungen sind möglich:
 
   Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
 
-  Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.
+  > Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.
 
 - **Default Dienstauswahlliste beim Import**:
 
@@ -934,7 +958,7 @@ Folgende Einstellungen sind möglich:
 
   Legen Sie hier die URL und deren Layer für das Koordinatennetz beim Druck fest. Hierbei ist ein JSON-Format mit 'url' (URL zum Dienst) und 'layers' (Liste von Layer-Name) notwendig.
 
-  Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren.
+  > Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren.
 
 - **Dateiname des Drucks**:
 
@@ -944,7 +968,7 @@ Folgende Einstellungen sind möglich:
 
   Hier können Sie den Druck der Karte abhängig von der ausgewählten Mauszeiger-Projektion aktivieren. Die dargestellten Karten müssen aber die Projektion unterstützen.
 
-  Hinweis: Diese Funktion ist experimentell.
+  > Hinweis: Diese Funktion ist experimentell.
 
 - **KML-Dateiname bei Export**:
 
@@ -980,7 +1004,7 @@ Folgende Einstellungen sind möglich:
 
   Hierbei werden die Karten in den Akkordeon ausgegraut dargestellt, sobald eine Karte nicht im Sichbarkeitsbereich des aktuellen Kartenausschnitts ist.
 
-  Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein.
+  > Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein.
 
 - **Darstellung ISO-XML-Link**:
 
@@ -998,13 +1022,13 @@ Folgende Einstellungen sind möglich:
 
   Hier können Sie die 3D-Funktion für die Karte aktivieren.
 
-  Hinweis: Diese Funktion ist experimentell.
+  > Hinweis: Diese Funktion ist experimentell.
 
 - **Terrain-URL (3D)**:
 
   Definieren Sie einen Terrain (URL) für die 3D Funktion.
 
-  Hinweis: Diese Funktion ist experimentell.
+  > Hinweis: Diese Funktion ist experimentell.
 
 ![Webmap Client Admin - Einstellungen](../images/mapclient/admin/mapclient_admin_settings.gif "Webmap Client Admin Einstellungen")
 
