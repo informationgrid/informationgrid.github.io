@@ -834,7 +834,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
     > - In der Liste der Karte, werden nur Karten mit der Eigenschaft "Hintergrundkarte" aufgelistet.
     > - "osmLayer" ist ein OpenLayers-Layer und funktioniert nur in der Projektion "EPSG:3857" einwandfrei.
     > - "kein Hintergrund" wird immer im Webmap Client als Hintergrund-Auswahl hinzugefügt
-    > - Im Akkordion [Style](#style) müssen ggf. weitere Anpassungen durchgeführt werden, wenn man der Hintergrundkarte eine [Reihenfolge](#) oder ein anderes [Bild](#) vergeben möchte.
+    > - Im Akkordion [Style](#style) müssen ggf. weitere Anpassungen durchgeführt werden, wenn man der Hintergrundkarte eine [Reihenfolge](#kann-man-die-reihenfolge-der-hintergrundkarten-auswahl-anpassen) oder ein anderes [Bild](#kann-man-die-bilder-für-die-hintergrundkarten-auswahl-anpassen) vergeben möchte.
 
   - Setzen Sie hier aus der Liste "Hintergrundkarte" Ihre Default-Hintergrundkarte fest.
 
