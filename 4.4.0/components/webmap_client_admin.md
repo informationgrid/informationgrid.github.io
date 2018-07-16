@@ -370,7 +370,9 @@ Um den Webmap Client in der mobilen Version anzeigen zu lassen, verwenden Sie di
 Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie einfach den Sprachumschalter und die Sprache des Webmap Clients wird geändert.
 
 <a name="admin"></a>
-## Admin
+## Admin-GUI
+
+Die Admin-GUI verwaltet die Karten, Kategorien, Einstellungen, Hilfe und den Style des Webmap Clients.
 
 ### Karten
 
@@ -458,7 +460,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert. Hier haben Sie die Möglichkeit die ID der Karte individuell anzupassen. 
 
-      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe nächstes Kapitel) zuzuweisen.
+      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe [Kategorien]("#kategorien")) zuzuweisen.
 
     - **Version**:
 
@@ -526,7 +528,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: false
 
-      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
+      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe [Kategorien]("#kategorien"))
 
     - **Format**:
 
@@ -618,7 +620,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert. Hier haben Sie die Möglichkeit die ID der Karte individuell anzupassen. 
 
-      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe nächstes Kapitel) zuzuweisen.
+      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe [Kategorien]("#kategorien")) zuzuweisen.
 
     - **Version**:
 
@@ -678,7 +680,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: false
 
-      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe "Kategorien")
+      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe [Kategorien]("#kategorien"))
 
     - **Format**:
 
@@ -815,15 +817,24 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   - Die "ID" kann nicht angepasst.
 
+    > Hinweis:
+    > Im Akkordion [Style](#style) müssen ggf. weitere Anpassungen durchgeführt
+    > - wenn man der Kategorie im Webmap Client in der Auswahl "Thema wechseln" ein anderes Bild vergeben möchte. [siehe auch](#kann-man-die-themen-bilder-unter-thema-wechseln-anpassen)
+
   - Ändern Sie Ihren Titel über den Eintrag "Label".
 
   - Ändern Sie Ihren Tooltip über den Eintrag "Tooltip".
 
-  - Passen Sie die Auswahl an Hintergrundkarten an, indem Sie über die Liste Karten hinzufügen, entfernen oder sortieren. 
+    > Hinweis:
+    > Dieser Tooltip wird im Webmap Client in der Auswahl "Thema wechseln" benötigt und dargestellt. (Mouse-Over über eine Kategorie)
+
+  - Passen Sie die Auswahl an Hintergrundkarten an, indem Sie über die Liste Karten hinzufügen, entfernen oder sortieren. Die Reihenfolge in der Liste entspricht im Webmap Client die Reihenfolge der Auswahlmöglichkeiten von Rechts nach Links.
 
     > Hinweise:
     > - In der Liste der Karte, werden nur Karten mit der Eigenschaft "Hintergrundkarte" aufgelistet.
     > - "osmLayer" ist ein OpenLayers-Layer und funktioniert nur in der Projektion "EPSG:3857" einwandfrei.
+    > - "kein Hintergrund" wird immer im Webmap Client als Hintergrund-Auswahl hinzugefügt
+    > - Im Akkordion [Style](#style) müssen ggf. weitere Anpassungen durchgeführt werden, wenn man der Hintergrundkarte eine [Reihenfolge](#) oder ein anderes [Bild](#) vergeben möchte.
 
   - Setzen Sie hier aus der Liste "Hintergrundkarte" Ihre Default-Hintergrundkarte fest.
 
@@ -1564,26 +1575,85 @@ Ja, dies wird durch das Überschreiben der Einstellung **settingEpsg** in der Da
 #### Kann man die Themen-Bilder unter "Thema wechseln" anpassen?
 
 Ja, die Bilder sind als CSS definiert und liegen als PNG Dateien in den Maßen 140 x 60 vor.
-Im folgenden wird beschrieben, wie ein neues Thema mit Bild hinzugefügt wird.
-> ACHTUNG: Diese Änderungen sollten wemove mitgeteilt werden, damit diese ins Profil übernommen werden können. Damit bleiben bei einem Update oder bei einer Neuinstallation und Umschalten auf das Profil die Änderungen erhalten.
 
-Bsp. zum Hinzufügen eines neuen Themas mit der ID *"inspire"*:
-* alle folgenden Änderungen unter *ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/frontend* ausführen. Unterverzeichnisse sind im folgenden angegeben.
-* Bild: im Verzeichnis *src/img* die Bilddatei hinzufügen als *theme_inspire.png*
-* Style: im Verzeichnis *src/style* in der Datei *app.override.css* folgendes hinzufügen
+Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) ein CSS-Eintrag mit folgender Syntax:
+
 {% highlight text %}
-[ga-topic] .ga-topics-sprite-inspire {
-  background: url("../img/theme_inspire.png");
+[ga-topic] .ga-topics-sprite-<KATEGORIE-ID> {
+  background: url("<URL-KATEGORIE-IMAGE>");
   width: 140px;
 }
 {% endhighlight %}
-* Lokalisierung: im Verzeichnis *prd/locales* in der Datei *de.json* folgendes hinzufügen
+
+> Hinweis:
+> Per Default ist in der Admin-GUI unter Akkordeon [Style](#style) ein Beispiel mit der Kategorie "Themen" vorhanden.
+
+#### Kann man die Reihenfolge der Hintergrundkarten-Auswahl anpassen?
+
+Ja, die Reihenfolge der Hintergrundkarte kann man auch per CSS beeinflussen. 
+
+> Hinweis:
+> - Per Default wird die Reihenfolge von der Kategorie vorgegeben, d.h. die festgelegte Reihenfolge in der Kategorie wird im Webmap Client von Rechts nach Links bzw. in der mobilen Ansicht von Unten nach Oben dargestellt.
+> - Die ersten sechs Hintergrundkarten werden in der Auswahlbox vom Webmap Client in der Reihenfolge korrkt dargestellt. Bei jedem weiterem muss unter Akkordeon [Style](#style) jeweils CSS-Einträge (Desktop/Mobil) hinzufügen. 
+
+Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) CSS-Eintäge mit folgender Syntax:
+
 {% highlight text %}
-"inspire": "INSPIRE",
-"topic_inspire_tooltip": "GeoPortal.WSV INSPIRE",
+...
+@media (max-width: 768px) {
+...
+  [ga-background-selector].ga-open .ga-<KARTEN-ID> {
+    -webkit-transform: translate3d(0, <KARTEN-POSITION>, 0);
+            transform: translate3d(0, <KARTEN-POSITION>, 0);
+    -ms-transform: translateY(<KARTEN-POSITION>);
+  }
+}
+...
+@media (min-width: 769px) {
+...
+  [ga-background-selector].ga-open .ga-<KARTEN-ID> {
+    -webkit-transform: translate3d(<KARTEN-POSITION>, 0, 0);
+            transform: translate3d(<KARTEN-POSITION>, 0, 0);
+    -ms-transform: translateX(<KARTEN-POSITION>);
+  }
+}
+...
 {% endhighlight %}
-* das neue Thema erscheint, sobald das Thema unter *WebmapClientData/data* als JSON hinzugefügt wird.
-D.h. in der Datei *catalogs.json* muss die neue Kategorie mit *"id": "inspire"* definiert werden und in der neuen Datei *catalog-inspire.json* die Inhalte festgelegt werden, s.o. [Definition von Rubriken](#definition-von-rubriken).
+
+> Hinweis:
+> Per Default ist in der Admin-GUI unter Akkordeon [Style](#style) ein Beispiel mit der Kategorie "Themen" vorhanden.
+
+#### Kann man die Bilder für die Hintergrundkarten-Auswahl anpassen?
+
+Ja, die Bilder für die Hintergrundkarten werden per CSS definiert. 
+
+Die Bilder sollten folgende Formate haben:
+- Mobile in 38px x 38px
+- Desktop in 90px x 58px 
+
+Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) CSS-Eintäge mit folgender Syntax:
+
+{% highlight text %}
+...
+@media (max-width: 768px) {
+  ...
+  [ga-background-selector] .ga-<KARTEN-ID> {
+    background-image: url("<URL-KARTEN-IMAGE>");
+    background-size: 38px 38px;
+  }
+  ...
+}
+...
+@media (min-width: 769px) {
+  ...
+  [ga-background-selector] .ga-<KARTEN-ID> {
+    background-image: url("<URL-KARTEN-IMAGE>");
+    background-size: 90px 58px;
+  }
+  ...
+}
+...
+{% endhighlight %}
 
 #### URL-Shortener funktioniert nicht korrekt?
 
