@@ -386,13 +386,13 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   - Nach Verwendung des Buttons erscheint ein Pop-Up und in diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand seiner GetCapabilities-URL laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
 
-    > Hinweis: Bei WMS werden automisch die URL-Parameter "SERVICE=WMS", "VERSION=1.3.0" und/oder "REQUEST=GetCapabilities" der Dienst-URL hinzugefügt, falls diese Parameter nicht vorhanden sind. 
+    > Hinweis: Bei WMS werden automatisch die URL-Parameter "SERVICE=WMS", "VERSION=1.3.0" und/oder "REQUEST=GetCapabilities" der Dienst-URL hinzugefügt, falls diese Parameter nicht vorhanden sind. 
 
-  - Handelt es sich bei Ihrem geladenen Dienst um einen passwortgeschützten Dienst, so wählen Sie die Checkbox "Login verwenden" aus und tragen hier Benutzername und Passwort ein. Ihre Logindaten werden dann  
+  - Handelt es sich bei Ihrem geladenen Dienst um einen passwortgeschützten Dienst, so wählen Sie die Checkbox "Login verwenden" aus und tragen hier Benutzername und Passwort ein.
 
     - Mit der Checkbox "Login ersetzen" können Sie bereits eingetragene Login-Daten für einen Dienst ersetzen.
 
-    > Hinweis: Benutzername und Passwort werden in einer seperaten JSON-Datei für jeden Dienst abgespeichert. Dies ist notwendig, damit in der Karte eine GetMap- bzw. GetFeatureInfo-Anfrage über den eigene Server mit Authentifizierung durchgeführt werden kann. 
+    > Hinweis: Benutzername und Passwort werden für jeden Dienst in einer seperaten JSON-Datei auf den Server abgespeichert. Dies ist notwendig, damit im Webmap Client eine GetCapabilities-, GetMap-, GetLegend,- oder GetFeatureInfo-Anfrage über den eigene Server mit Authentifizierung durchgeführt werden kann. 
 
   - Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt, sind aber keine Kategorie zugeordnet.
 
@@ -800,6 +800,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Haben Sie die Karte über einen passwortgeschützten Dienst geladen, so wird unter Login der Benutzername des Dienstes angezeigt. 
       Anhand dem Login und der Dienst-URL wird das gespeicherte Passwort ermittelt und die Karte wird über den eigenen Server mit Authentifizierung geladen.
+      Eine Authentifizierung können Sie auch mit dem Button am Textfeld hinzufügen oder ändern. Dieses Login gilt aber dann für alle Karten mit der selben Dienst-URL.
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
 
