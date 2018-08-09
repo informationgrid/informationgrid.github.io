@@ -47,39 +47,15 @@ Release 21.06.2018
 
 ### Wichtige Änderungen
 
-#### Konsolidierung von Komponenten
+#### Zeitgesteuerte Veröffentlichung von Datensätzen
 
-Ab Version 4.4.0 ist die Verwaltung von Partnern und Anbietern nicht mehr im Portal angesiedelt. Die Verwaltung erfolgt über das CodeList Repository. Dazu wurden neue Codelisten "Partner" und "Anbieter" angelegt. Damit kann die InGrid Infrastruktur nun komplett ohne das Portal betrieben werden.
+Datensätze können zu einem zukünftigen Zeitpunkt veröffentlicht werden. Bei der Veröffentlichung wird nach der Validierung ein Dialog geöffnet, in dem ein zuküntiges Veröffentlichungsdatum ausgewählt werden kann.
 
-> **ACHTUNG: In Version 4.0.0 erfolgt kein Backup der im Portal eingepflegten Partner/Anbieter, bitte verwenden Sie für's Portal Version 4.4.1, s.o.
-In Version 4.4.0 sollte vor dem Update die Portal-Datenbank, speziell die Tabellen ingrid_partner und ingrid_provider, gesichert werden !**
+![Zeitgesteuerte Veröffentlichung von Datensätzen](../images/ige_delayed_publish.png "Zeitgesteuerte Veröffentlichung von Datensätzen")
 
-Das Management iPlug wurde entfernt. Nach einem Upgrade kann das aktuell installierte Management iPlug entfernt werden. Eine Komponente weniger!
+Das Veröffentlichungsdatum wird danach im Kopfbereich des Datensatzes angezeigt.
 
-Das Codelist Repository wird nun direkt an den iBus angeschlossen.
-
-> **ACHTUNG: Der iBus wurde umfassend überarbeitet und muss in Version 4.4.x NEU installiert werden ! Ein Update auf einen bestehenden iBus ist nicht möglich !**
-
-#### Neue iBus Oberfläche
-
-Im Zuge der Konsolidierung der Komponenten und als Vorgriff auf die Zentralisierung der Indexierung wurde die iBus Admin GUI komplett überarbeitet.
-
-Die Oberfläche ist selbsterklärend und mit einer kontext-sensitiven Hilfe versehen. Neu sind Funktionalitäten für die Verwaltung des zentralen Index.
-
-Weitere Informationen zum iBus erhalten Sie hier: [iBus](../components/ibus.html)
-
-![Neue iBus Oberfläche](../images/ingrid_ibus_version_4_4_0.png "Neue iBus Oberfläche")
-
-
-#### UVP: Optimierung der Kartendarstellung im Portal
-
-Die Darstellung der Marker in der Karte der Facettierung erfolgt nun asynchron, so dass Suchergebnisse sehr viel schneller angezeigt werden.
-
-#### UVP: Darstellug von Bauleitplanungsdaten im UVP Portal
-
-Im UVP Portal wurden Bauleitplanungsdaten integriert. Die Daten werden über ein Excel-File erfasst und in das Suchmaschinen iPlug übernommen. Im UVP Portal werden die BLP Daten sowohl in der Kartendarstellung, als auch in der Volltextsuche integriert.
-
-![Bauleitplaungsdaten in der Kartendarstellung im UVP Portal](../images/ingrid_uvp_blp_daten.png "Bauleitplaungsdaten in der Kartendarstellung im UVP Portal")
+![Zeitgesteuerte Veröffentlichung von Datensätzen, Anzeige im Kopfbereich](../images/ige_delayed_publish_1.png "Zeitgesteuerte Veröffentlichung von Datensätzen, Anzeige im Kopfbereich")
 
 #### Integration von Vorprüfungen mit negativem Bescheid
 
@@ -105,6 +81,39 @@ Im UVP Editor kann der Katalogadministrator eine Statistik über verschiedene As
 
 ![Statistische Euswertung für EU Berichtspflicht](../images/ingrid_ige_neg_vorpruefungen_statistik.png "Statistische Euswertung für EU Berichtspflicht")
 
+#### UVP: Darstellug von Bauleitplanungsdaten im UVP Portal
+
+Im UVP Portal wurden Bauleitplanungsdaten integriert. Die Daten werden über ein Excel-File erfasst und in das Suchmaschinen iPlug übernommen. Im UVP Portal werden die BLP Daten sowohl in der Kartendarstellung, als auch in der Volltextsuche integriert.
+
+![Bauleitplaungsdaten in der Kartendarstellung im UVP Portal](../images/ingrid_uvp_blp_daten.png "Bauleitplaungsdaten in der Kartendarstellung im UVP Portal")
+
+#### UVP: Optimierung der Kartendarstellung im Portal
+
+Die Darstellung der Marker in der Karte der Facettierung erfolgt nun asynchron, so dass Suchergebnisse sehr viel schneller angezeigt werden.
+
+
+#### Konsolidierung von Komponenten
+
+Ab Version 4.4.0 ist die Verwaltung von Partnern und Anbietern nicht mehr im Portal angesiedelt. Die Verwaltung erfolgt über das CodeList Repository. Dazu wurden neue Codelisten "Partner" und "Anbieter" angelegt. Damit kann die InGrid Infrastruktur nun komplett ohne das Portal betrieben werden.
+
+> **ACHTUNG: In Version 4.0.0 erfolgt kein Backup der im Portal eingepflegten Partner/Anbieter, bitte verwenden Sie für's Portal Version 4.4.1, s.o.
+In Version 4.4.0 sollte vor dem Update die Portal-Datenbank, speziell die Tabellen ingrid_partner und ingrid_provider, gesichert werden !**
+
+Das Management iPlug wurde entfernt. Nach einem Upgrade kann das aktuell installierte Management iPlug entfernt werden. Eine Komponente weniger!
+
+Das Codelist Repository wird nun direkt an den iBus angeschlossen.
+
+> **ACHTUNG: Der iBus wurde umfassend überarbeitet und muss in Version 4.4.x NEU installiert werden ! Ein Update auf einen bestehenden iBus ist nicht möglich !**
+
+#### Neue iBus Oberfläche
+
+Im Zuge der Konsolidierung der Komponenten und als Vorgriff auf die Zentralisierung der Indexierung wurde die iBus Admin GUI komplett überarbeitet.
+
+Die Oberfläche ist selbsterklärend und mit einer kontext-sensitiven Hilfe versehen. Neu sind Funktionalitäten für die Verwaltung des zentralen Index.
+
+Weitere Informationen zum iBus erhalten Sie hier: [iBus](../components/ibus.html)
+
+![Neue iBus Oberfläche](../images/ingrid_ibus_version_4_4_0.png "Neue iBus Oberfläche")
 
 ### Liste der Änderungen
 
