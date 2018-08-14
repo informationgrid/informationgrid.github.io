@@ -52,6 +52,7 @@ Gang und gäbe ist auch die Verbreitung von Informationen über das Soziale Netz
 - Facebook
 - Twitter
 - Google+
+- WhatsApp (nur unter Android und iOS)
 
 Bei allen drei Netzwerken wird hierbei ein Link der Karte geteilt.
 
@@ -228,8 +229,9 @@ Auch hier hat jeder Layer mehrere Funktionen die ausgeführt werden können:
     - Zoom auf den Layer-Bereich (Extent)
     - Darstellung von Informationen (z.B. Legende) über den Info-Button.
     - Anordungen des Layers in der Kartenhierachie.
-
-Sind mehrere Layer in der Liste der 'Dargestellten Karten' so ist der oberste Layer in der Liste auch der oberste Layer auf der Karte.
+- Optional: Zeitabhängige Darstellung der Karte
+- Optional: Karte kopieren bei zeitabhängige Karten
+Sind mehrere Layer in der Liste der 'Dargestellten Karten', so ist der oberste Layer in der Liste auch der oberste Layer auf der Karte.
 
 ### Objekt-Informationen
 
@@ -281,8 +283,6 @@ Klicken Sie mit der Maus auf die markierte Strecke, so werden Ihnen weitere Info
 
 Natürlich finden Sie auch Funktionen mit dem man Interaktionen mit der Karte ausführen kann:
 
-![Webmap Client - Karteninteraktionen](../images/mapclient/frontend/mapclient_mapinteraction.png "Webmap Client Karteninteraktionen")
-
 **Standortbestimmung**
 
 Wählen Sie die Button mit dem schwarzen Punkt und eine Abfrage Ihres Standortes wird durchgeführt. Falls Sie die Standortfreigabe bestätigen, wird Ihr Standort in der Karte angezeigt.
@@ -298,6 +298,14 @@ Das gleich wie beim Hineinzoomen gilt auch für das Hinauszoomen.
 **Zoom auf Ausgangsposition**
 
 Falls Sie sich mal in der Karte verirrt haben, können Sie über den untersten Button (mit den gekreuzten Pfeilen) zur Ausgangsposition der Karte zurück wechseln und von vorne starten.
+
+**Zeitregler**
+
+Mit diesem Button kann der Zeitregler aktiviert werden. Dieser Button erscheint nur, wenn eine Karte unter "Dargestellte Karten" dies ermöglicht.
+
+Mit dem Zeitregler können die Zeitstemplen der zeitabhängigen Karten verändert oder über einen "Play"-Button durchlaufen werden.
+
+![Webmap Client - Karteninteraktionen](../images/mapclient/frontend/mapclient_frontend_map_controls.gif "Webmap Client Karteninteraktionen")
 
 ### Hintergrundkarten
 
@@ -515,15 +523,21 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     - **Gutter**:
 
-      Definieren Sie den Rand in Pixel um den Karten-Tiles. 
+      Definieren Sie den ignorierten Rand (in Pixel) um die Karten-Tiles. 
       
-      Default: 150
+      Default: 0
 
     - **Single Tile**:
 
       (De-)aktivieren Sie hier den Aufruf Ihrer Karte in Kacheln. 
 
       Default: false
+
+    - **Kachel-Größe**:
+
+      Geben Sie hier die gewünschte Kachel-Größe Ihrer Karten ein. 
+
+      Default: 256
 
     - **Min-Scale**:
       
@@ -569,19 +583,21 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: false
 
-    - **Zeitstempeln**:
+    - **Zeitabhängige Darstellung aktivieren**:
 
-      Tragen Sie die Zeitstempeln der Karte ein, falls vorhanden.
-
-    - **Zeitstempel aktivieren**:
-
-      Aktivieren Sie die zeitabhängige Darstellung der Karte.
+      Aktivieren Sie die zeitabhängige Darstellung der Karte. Umd diese Funktion verwenden zu können, muss in der GetCapabilities des Dienstes die Karte einen Eintrag 'dimension name="time"' ennthalten.
 
       > Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
 
-    - **Time behaviour**:
+    - **Zeitstempeln definieren**:
 
-      Legen Sie das Verhalten für die zeitabhängige Kartendarstellung fest.
+      Tragen Sie die Zeitstempeln der Karte ein. Zurzeit können nur jährliche Zeitreihenfolgen angegeben werden.
+
+      > Hinweis: Achten Sie auf das Format des Zeitstempels.
+
+    - **Default Zeitstempel**:
+
+      Legen Sie den Zeitstempel fest, welcher per Default angezeigt wird. Neben den Zeitstempel kann auch "last" für die Darstellung des ersten Eintrages der Zeitstempelliste und "all" für alle Einträge der Zeitstempelliste.
 
       Default: last
 
@@ -726,19 +742,21 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
       Default: false
 
-    - **Zeitstempeln**:
+    - **Zeitabhängige Darstellung aktivieren**:
 
-      Tragen Sie die Zeitstempeln der Karte ein, falls vorhanden.
-
-    - **Zeitstempel aktivieren**:
-
-      Aktivieren Sie die zeitabhängige Darstellung der Karte.
+      Aktivieren Sie die zeitabhängige Darstellung der Karte. Umd diese Funktion verwenden zu können, muss in der GetCapabilities des Dienstes die Karte einen Eintrag 'dimension name="time"' ennthalten.
 
       > Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
 
-    - **Time behaviour**:
+    - **Zeitstempeln definieren**:
 
-      Legen Sie das Verhalten für die zeitabhängige Kartendarstellung fest.
+      Tragen Sie die Zeitstempeln der Karte ein. Zurzeit können nur jährliche Zeitreihenfolgen angegeben werden.
+
+      > Hinweis: Achten Sie auf das Format des Zeitstempels.
+
+    - **Default Zeitstempel**:
+
+      Legen Sie den Zeitstempel fest, welcher per Default angezeigt wird. Neben den Zeitstempel kann auch "last" für die Darstellung des ersten Eintrages der Zeitstempelliste und "all" für alle Einträge der Zeitstempelliste.
 
       Default: last
 
