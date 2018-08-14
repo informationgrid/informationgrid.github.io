@@ -4,6 +4,21 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.2
+
+Release 14.08.2018
+
+### Liste der Änderungen
+
+InGrid
+
+- [Bug] [PORTAL] Fehler beim Download von Statistikdaten im Internet Explorer 11 ([REDMINE-1142](https://redmine.informationgrid.eu/issues/1142))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.2/))
+
+
 ## Version 4.4.1
 
 Release 26.06.2018
