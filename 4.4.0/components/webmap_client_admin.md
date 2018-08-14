@@ -130,16 +130,6 @@ Anschließend erscheint das folgende Pop-Up:
 
 Hier werden Ihnen Informationen zu Ihrer gezeichneten Strecke oder Fläche dargestellt. 
 
-**Mehr**
-
-Unter **Mehr** gibt es nun weitere Funktionen zu Ihrer Zeichung: 
-
-- Download Ihrer Zeichnung als KML-Datei
-- Löschen eines ausgewählten Elementen
-- Löschen aller Elementen
-
-![Webmap Client - Zeichnen & Messen - Mehr](../images/mapclient/frontend/mapclient_draw_more.png "Webmap Client Zeichnen & Messen - Mehr")
-
 ### Erweiterte Werkzeuge
 
 Das Menü 'Erweitere Werkzeuge' beinhaltet Funktionen mit (externen) Layern. 
@@ -148,11 +138,11 @@ Hier können WMS- oder KML-Layer hinzugefügt werden oder auch der Karte hinzuge
 
 ![Webmap Client - Erweiterte Werkzeuge](../images/mapclient/frontend/mapclient_additional.png "Webmap Client Erweiterte Werkzeuge")
 
-**WMS Import**
+**Importieren**
 
-Wird die Funktion 'WMS Import' aktiviert, so erscheint ein Dialog in dem Sie (vordefinierte) WMS-Dienste laden können. 
+Wird die Funktion 'Importieren' aktiviert, so erscheint ein Dialog in dem Sie (vordefinierte) Dienste (WMS/WMTS), KML, URL oder auch lokale Dateien laden können. 
 
-![Webmap Client - Erweiterte Werkzeuge "WMS Import"](../images/mapclient/frontend/mapclient_additional_wms.png "Webmap Client Erweiterte Werkzeuge - WMS Import")
+![Webmap Client - Erweiterte Werkzeuge "Importieren"](../images/mapclient/frontend/mapclient_additional_wms.png "Webmap Client Erweiterte Werkzeuge - Importieren")
 
 Tragen Sie unter 'URL' eine URL zum WMS-Dienst ein (z.B. [http://atlas.wsv.bund.de/bwastr/wms](http://atlas.wsv.bund.de/bwastr/wms) ) ein oder wählen Sie einen vordefinierten Dienst über die Drop-Down-Liste aus und bestätitgen Ihren Eintrag bzw. Auswahl mit dem Button 'Verbinden'.
 
@@ -168,21 +158,7 @@ Wird der Dienst erfolgreich geladen, so erscheinen alle Layer des Dienstes in ei
 - Fährt man mit der Maus (Mouse-Over) über ein Layer aus der Liste, so wird der Layer geladen und auf der Karte dargestellt und verschwindet wieder, wenn der Mauszeiger nicht mehr über dem Layer liegt.
 - Verwenden Sie die Lupe vor dem Layer-Titel um zum Layer-Bereich (Extent) zu springen.
 
-Um einen Layer der Karte hinzuzufügen wählen Sie einen Layer per Mausklick aus und verwenden den Button 'Layer hinzufügen'. Anschließend werden Sie informiert, ob der ausgewählte Layer hinzugefügt wurde, der Layer wird auf der Karte dargestellt und in der Liste unter dem Akkordeon 'Dargestellte Karten' wurde der Layer hinzugefügt.
-
-
-**KML Import**
-
-Wird die Funktion 'KML Import' betätigt, so erscheint auch hier ein Dialog. 
-
-![Webmap Client - Erweiterte Werkzeuge "KML Import"](../images/mapclient/frontend/mapclient_additional_kml.png "Webmap Client Erweiterte Werkzeuge - KML Import")
-
-Im Dialog werden zwei Möglichkeiten angeboten ein KML-Layer der Karte hinzuzufügen:
-
-- KML-Layer lokal aus Ihrem Dateisystem
-- oder per URL ein KML-Layer zu laden.
-
-Wird ein KML-Layer erfolgreich geladen, so wird dieser Layer unter dem Akkordeon 'Dargestellte Karten' aufgelistet.
+Um einen Layer der Karte hinzuzufügen wählen Sie einen Layer per Mausklick aus und verwenden den Button 'Layer hinzufügen'. Anschließend werden Sie informiert, ob der ausgewählte Layer hinzugefügt wurde, in der Karte dargestellt und auch im Menü in der Liste unter dem Akkordeon 'Dargestellte Karten' hinzugefügt.
 
 **Vergleichen**
 
@@ -305,7 +281,7 @@ Mit diesem Button kann der Zeitregler aktiviert werden. Dieser Button erscheint 
 
 Mit dem Zeitregler können die Zeitstemplen der zeitabhängigen Karten verändert oder über einen "Play"-Button durchlaufen werden.
 
-![Webmap Client - Karteninteraktionen](../images/mapclient/frontend/mapclient_frontend_map_controls.gif "Webmap Client Karteninteraktionen")
+![Webmap Client - Karteninteraktionen](../images/mapclient/frontend/mapclient_mapinteraction.png "Webmap Client Karteninteraktionen")
 
 ### Hintergrundkarten
 
