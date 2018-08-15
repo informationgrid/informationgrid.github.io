@@ -356,19 +356,25 @@ Sie wollen den Webmap Client z.B. in Englischer-Version sehen. Verwenden Sie ein
 <a name="admin"></a>
 ## Admin-GUI
 
-Die Admin-GUI verwaltet die Karten, Kategorien, Einstellungen, Hilfe und den Style des Webmap Clients.
+Die Admin-GUI verwaltet die Karten, Kategorien, Einstellungen, Hilfe und den Styles des Webmap Clients.
+
+Aufgerufen wird die Admin-GUI mit der URL:
+
+http://HOSTNAME/ingrid-webmap-client/admin/
 
 ### Karten
 
 Unter dem Akkordeon "Karten" werden alle eingepflegten und darzustellenden Karten (WMS, WMTS) aufgelistet.
 
-Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefügt, zu Kategorien zugeordnet, aus verschiedenen Karten eines WMS-Dienstes eine kombinierte Karte erstellt und einzelne Karten zu Ihren Bedürfnisse angepasst werden. Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.B. Dienst oder Karte nicht mehr erreichbar).
+Aus WMS- oder WMTS-Diensten können Karten dem Webmap Client hinzugefügt, zu Kategorien zugeordnet, aus verschiedenen Karten eines WMS-Dienstes eine kombinierte Karte erstellt und einzelne Karten zu Ihren Bedürfnisse angepasst werden. 
+
+Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.B. Dienst oder Karte nicht mehr erreichbar). So wird Ihnen in der Liste der Karten eine "i"-Symbol angezeigt, wenn ein Dienst oder eine Karte nicht mehr erreichbar ist.
 
 - **Karten hinzufügen**
 
-  - Verwenden Sie für neue Karten hinzufügen den Button "Dienst laden". 
+  - Verwenden Sie um neue Karten hinzuzufügen den Button "Dienst laden". 
 
-  - Nach Verwendung des Buttons erscheint ein Pop-Up und in diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand seiner GetCapabilities-URL laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in Baumstruktur (WMS) oder als List (WMTS) dargestellt.
+  - Nach Verwendung des Buttons erscheint ein Pop-Up und in diesem Pop-Up können Sie nun einen WMS- oder WMTS-Dienst anhand seiner GetCapabilities-URL laden. Bei erfolgreichem Laden werden nun die einzelnen Karten eines Dienstes in einer  Baumstruktur (WMS) oder als Liste (WMTS) dargestellt.
 
     > Hinweis: Bei WMS werden automatisch die URL-Parameter "SERVICE=WMS", "VERSION=1.3.0" und/oder "REQUEST=GetCapabilities" der Dienst-URL hinzugefügt, falls diese Parameter nicht vorhanden sind. 
 
@@ -376,7 +382,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     - Mit der Checkbox "Login ersetzen" können Sie bereits eingetragene Login-Daten für einen Dienst ersetzen.
 
-    > Hinweis: Benutzername und Passwort werden für jeden Dienst in einer seperaten JSON-Datei auf den Server abgespeichert. Dies ist notwendig, damit im Webmap Client eine GetCapabilities-, GetMap-, GetLegend,- oder GetFeatureInfo-Anfrage über den eigene Server mit Authentifizierung durchgeführt werden kann. 
+    > Hinweis: Benutzername und Passwort werden für jeden Dienst in einer seperaten JSON-Datei auf den Server abgespeichert. Dies ist notwendig, damit im Webmap Client eine GetCapabilities-, GetMap-, GetLegend,- oder GetFeatureInfo-Anfrage über den eigene Server mit einer Authentifizierung durchgeführt werden kann. 
 
   - Nun können Sie einzelne Karten über die Checkbox auswählen und hinzufügen (Button "Hinzufügen") oder als kombinierte Karte (Button "Kombinieren und Hinzufügen") dem Webmap Client zur Verfügung stellen. Nach Betätigung eines dieser Button werden die neuen Karten am Anfang der Kartenliste hinzugefügt, sind aber keine Kategorie zugeordnet.
 
@@ -388,11 +394,11 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
     
         > Hinweis: Da hier keine Unterkategorien angelegt werden können, müssen diese Unterkategorien schon vorher angelegt sein. 
        
-    - Sind Unterkategorien vorhanden, so wählen diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. 
-    
+    - Sind Unterkategorien vorhanden, so wählen Sie diese Unterkategorie aus und bestätigen Ihre Auswahl mit dem Button "Hinzufügen". Es können weitere Unterkategorien ausgewählt werden. 
+
     - Fügen Sie nun die Karten hinzu (Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen") so werden die Karten auch automatisch den ausgewählten (Unter-)Kategorien zugeordnet.
 
-  > Hinweis: Werden Karten hinzugefügt, erhalten die Karten eine eindeutige ID, d.h. möchte man die Karten mit der gleichen ID zu verschiedenen Kategorien hinzufügen, dann müssen die Kategorien alle auf einmal ausgewählt haben und die Karten hinzufügen, ansonsten muss man die Karten manuell über das Akkordeon "Kategorien" zuordnen.  
+  > Hinweis: Werden Karten hinzugefügt, erhalten die Karten eine eindeutige ID, d.h. möchte man die Karten mit der gleichen ID zu verschiedenen Kategorien hinzufügen, dann müssen die Kategorien alle in einen Schub ausgewählt werden und anschließend den Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen" betätigen. Ansonsten besteht die Möglichkeit die Karten manuell über das Akkordeon "Kategorien" den jeweiligen (Unter-) Kategorien zuzuordnen.
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_add.gif "Webmap Client Admin - Karten hinzufügen")
 
@@ -404,42 +410,41 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
     Klicken Sie auf das Akkordeon einer Karte. Nach dem Öffnen des Akkordeons erscheint nun ein Button "Löschen". Mit diesem Button wird eine einzelne Karte entfernt. Mit Bestätigung des Löschvorgangs wird die Karte entfernt.
 
-    > Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+    > Hinweis: Werden Karten entfernt, so wird geprüft, ob die Karte einer Kategorie zugeordnet wurde und auch dort entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove.gif "Webmap Client Admin - Karten löschen einzeln")
 
   - **Ausgewählte Karten löschen**
 
-    Wählen Sie eingepflegte Karten über die Checkbox aus den Listen aus und betätigen Sie den Button "Auswahl löschen". Mit Bestätigung des Löschvorgangs werden die Karten entfernt.
+    Wählen Sie Karten aus den Listen über die Checkbox aus und betätigen Sie den Button "Auswahl löschen". Mit Bestätigung des Löschvorgangs werden die Karten entfernt.
 
-    > Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+    > Hinweis: Werden Karten entfernt, so wird geprüft, ob die Karte einer Kategorie zugeordnet wurde und auch dort entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_select.gif "Webmap Client Admin - Karten löschen ausgewählt")
 
   - **Alle Karten löschen**
 
-    Mit Hilfe des Buttons "Alles löschen" wird die Liste aller eingepflegte Karten geleert. Mit Bestätigung des Löschvorgangs werden alle Karten somit entfernt.    
+    Mit Hilfe des Buttons "Alles löschen" werden alle Karten entfernt.
 
-    > Hinweis: Werden Karten entfernt, so werden in den Kategorien (falls vorhanden) alle durchsucht und auch dort wird die Karte entfernt.
+    > Hinweis: Werden Karten entfernt, so wird geprüft, ob die Karte einer Kategorie zugeordnet wurde und auch dort entfernt.
 
     ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_remove_all.gif "Webmap Client Admin - Karten löschen alle")
 
 - **Karten suchen**
 
-  Die Liste der eingepflegten Karten kann auf Dauer sehr lang und unübersichtlich werden.
+  Die Liste der Karten kann auf Dauer sehr lang und unübersichtlich werden.
 
-  Eine Abbilfe kann hier das Suchfeld schaffen. Nach Eingabe eines Suchbegriffs sollte die Liste aller eingepflegten Karten nach Titel einer Karte gefiltert werden und bei Übereinstimmung in der Liste angezeigt werden. 
+  Eine Abbilfe kann hier das Suchfeld schaffen. Nach Eingabe eines Suchbegriffs sollte die Liste nach Titel/Label einer Karte gefiltert werden. 
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
 
 - **Fehlerhafte Karten**
 
-  Die Liste der eingepflegten Karten stellte Ihnen fehlerhafte Karten dar.
+  Die Liste der Karten stellte Ihnen fehlerhafte Karten dar.
 
   Ist eine Karte fehlerhaft, weil die Karte nicht mehr erreichbar ist, so wird dies in der Liste der eingepflegten Karte anhand eines "i"-Symbol angemerkt. 
 
   Sie können auch die Gesamtliste auf fehlerhafte Karten einschränken. Aktivieren Sie hierfür die Checkbox "Nur fehlerhafte Karten" unterhalb der Suche. 
-
 
 - **Karten bearbeiten**
 
@@ -449,353 +454,52 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
   Es gibt zwei Typen von Karten die bearbeitet werden können:
 
-  - **WMS**
-
-    - **Typ**:
-
-      Hier wird Ihnen der Typ Ihrer Karte angezeigt. Dieser Wert ist nicht veränderbar.
-
-    - **ID**:
-
-      Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert. Hier haben Sie die Möglichkeit die ID der Karte individuell anzupassen. 
-
-      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe [Kategorien]("#kategorien")) zuzuweisen.
-
-    - **Version**:
-
-      Bestimmen Sie hier die Version Ihrer Karte. Eine Auswahl der Werte "1.1.1" und "1.3.0" steht zu Auswahl.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Label**:
-
-      Bearbeiten Sie hier den Titel Ihrer Karte.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-      > Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
-
-    - **Extent**:
-
-      Passen Sie hier das Extent Ihrer Karte an. 
-      
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-      > Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
-
-    - **WMS-URL**:
-
-      Ändern Sie hier die URL für die GetMap-Anfrage ein.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **WMS-Layers**:
-
-      Tragen Sie hier den 'NAME' der dazustellenden Karte ein. Mehrere Karten werden kommagetrennte aufgelistet. 
-      
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-      > Hinweis: Zusammengesetzte Karten per kommagetrennt können im Webmap Client nur zusammen dargestellt werden.
-
-    - **Gutter**:
-
-      Definieren Sie den ignorierten Rand (in Pixel) um die Karten-Tiles. 
-      
-      Default: 0
-
-    - **Single Tile**:
-
-      (De-)aktivieren Sie hier den Aufruf Ihrer Karte in Kacheln. 
-
-      Default: false
-
-    - **Kachel-Größe**:
-
-      Geben Sie hier die gewünschte Kachel-Größe Ihrer Karten ein. 
-
-      Default: 256
-
-    - **Min-Scale**:
-      
-      Definieren Sie einen Min-Scale der Karte.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Max-Scale**:
-
-      Definieren Sie einen Max-Scale der Karte.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Hintergrundkarte**:
-
-      Bestimmen Sie hier, ob Ihre Karte als Hintergrundkarte verwendet werden kann. 
-
-      Default: false
-
-      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe [Kategorien]("#kategorien"))
-
-    - **Format**:
-
-      Definieren Sie das Bild-Format der GetMap-Anfrage. (png, jpeg, etc.)
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Suchbarkeit**:
-
-      Lassen Sie die Karte über die Suche im Webmap Client auffinderbar machen. 
-
-      Default: true
-
-    - **Cross Origin**:
-
-      Liefert Ihre Karte bei einer GetMap-Anfrage im Response-Header "Access-Control-Allow-Origin: *" oder "Access-Control-Allow-Origin: <IHRE-DOMÄIN>", so können Sie hier den Wert auf "true" setzten und im Webmap Client werden vorhandenen GetFeatureInfos beim überfahren der Maus auf Ihrer Karte als Handsymbol angezeigt.
-
-      Default: false
-
-    - **Highlightable**:
-
-      Aktivieren Sie die Eigenschaft 'highlightable'.
-
-      Default: false
-
-    - **Zeitabhängige Darstellung aktivieren**:
-
-      Aktivieren Sie die zeitabhängige Darstellung der Karte. Umd diese Funktion verwenden zu können, muss in der GetCapabilities des Dienstes die Karte einen Eintrag 'dimension name="time"' ennthalten.
-
-      > Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
-
-    - **Zeitstempeln definieren**:
-
-      Tragen Sie die Zeitstempeln der Karte ein. Zurzeit können nur jährliche Zeitreihenfolgen angegeben werden.
-
-      > Hinweis: Achten Sie auf das Format des Zeitstempels.
-
-    - **Default Zeitstempel**:
-
-      Legen Sie den Zeitstempel fest, welcher per Default angezeigt wird. Neben den Zeitstempel kann auch "last" für die Darstellung des ersten Eintrages der Zeitstempelliste und "all" für alle Einträge der Zeitstempelliste.
-
-      Default: last
-
-    - **Legende aktivieren**:
-
-      Aktivieren Sie die Einstellung, wenn die Karte eine Legende hat oder eine Legende per GetLegend-Anfrage aufgerufen werden soll.
-
-      Default: true
-
-    - **Legenden-URL**:
-
-      Definieren Sie die URL der Karten-Legende, ansonsten wird ein GetLegenden-Request ausgeführt.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Attribution**:
-
-      Tragen Sie den Titel für die URL unter 'attributionUrl'.
-      
-      > Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
-
-    - **Attribution-URL**:
-
-      Tragen Sie hier die URL für weitere Infos zur Karte ein.
-
-      > Hinweis: Wird im Webmap Client unten  rechts angezeigt, wenn die Karte aktiv ist.
-
-    - **Tooltip**:
-
-      Aktivieren Sie die GetFeature-Info-Abfrage, falls es die Karte erlaubt.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Transparenz**:
-     
-      Definieren Sie die per default dargestellte Transparenz der Karte.
-
-      Default: 1
-      
-    - **Style**:
-
-      Legen Sie ein 'styles'-Parameter für die GetMap-Abfrage fest, falls notwendig.
-
-    - **Login**:
-
-      Haben Sie die Karte über einen passwortgeschützten Dienst geladen, so wird unter Login der Benutzername des Dienstes angezeigt. 
-      Anhand dem Login und der Dienst-URL wird das gespeicherte Passwort ermittelt und die Karte wird über den eigenen Server mit Authentifizierung geladen.
-
-  - **WMTS**
-
-    - **Typ**:
-
-      Hier wird Ihnen der Typ Ihrer Karte angezeigt. Dieser Wert ist nicht veränderbar.
-
-    - **ID**:
-
-      Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert. Hier haben Sie die Möglichkeit die ID der Karte individuell anzupassen. 
-
-      Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe [Kategorien]("#kategorien")) zuzuweisen.
-
-    - **Version**:
-
-      Bestimmen Sie hier die Version Ihrer Karte.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Label**:
-
-      Bearbeiten Sie hier den Titel Ihrer Karte.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-      > Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.
-
-    - **Extent**:
-
-      Passen Sie hier das Extent Ihrer Karte an. 
-      
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-      > Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. 
-
-    - **Service-URL**:
-
-      Tragen Sie die WMTS-ServiceMetadataURL ein.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Template**:
-
-      Tragen Sie die WMTS-ResourceURL ein.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **MatrixSet**:
-
-      Definieren Sie den TileMatrixSet Identifier der Karte.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Layername**:
-
-      Tragen Sie hier den Layer-Name für WMTS ein.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **RequestEncoding**:
-
-      Tragen Sie den Request-Encoding der Karte für GetTile fest, z.B. 'REST' oder 'KVP'.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Hintergrundkarte**:
-
-      Bestimmen Sie hier, ob Ihre Karte als Hintergrundkarte verwendet werden kann. 
-
-      Default: false
-
-      > Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe [Kategorien]("#kategorien"))
-
-    - **Format**:
-
-      Definieren Sie das Bild-Format der GetMap-Anfrage. (png, jpeg, etc.)
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Suchbarkeit**:
-
-      Lassen Sie die Karte über die Suche im Webmap Client auffinderbar machen. 
-
-      Default: true
-
-    - **Cross Origin**:
-
-      Liefert Ihre Karte bei einer GetMap-Anfrage im Response-Header "Access-Control-Allow-Origin: *" oder "Access-Control-Allow-Origin: <IHRE-DOMÄIN>", so können Sie hier den Wert auf "true" setzten und im Webmap Client werden vorhandenen GetFeatureInfos beim überfahren der Maus auf Ihrer Karte als Handsymbol angezeigt.
-
-      Default: false
-
-    - **Highlightable**:
-
-      Aktivieren Sie die Eigenschaft 'highlightable'.
-
-      Default: false
-
-    - **Zeitabhängige Darstellung aktivieren**:
-
-      Aktivieren Sie die zeitabhängige Darstellung der Karte. Umd diese Funktion verwenden zu können, muss in der GetCapabilities des Dienstes die Karte einen Eintrag 'dimension name="time"' ennthalten.
-
-      > Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.
-
-    - **Zeitstempeln definieren**:
-
-      Tragen Sie die Zeitstempeln der Karte ein. Zurzeit können nur jährliche Zeitreihenfolgen angegeben werden.
-
-      > Hinweis: Achten Sie auf das Format des Zeitstempels.
-
-    - **Default Zeitstempel**:
-
-      Legen Sie den Zeitstempel fest, welcher per Default angezeigt wird. Neben den Zeitstempel kann auch "last" für die Darstellung des ersten Eintrages der Zeitstempelliste und "all" für alle Einträge der Zeitstempelliste.
-
-      Default: last
-
-    - **Legende aktivieren**:
-
-      Aktivieren Sie die Einstellung, wenn die Karte eine Legende hat oder eine Legende per GetLegend-Anfrage aufgerufen werden soll.
-
-      Default: true
-
-    - **Legenden-URL**:
-
-      Definieren Sie die URL der Karten-Legende, ansonsten wird ein GetLegenden-Request ausgeführt.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Attribution**:
-
-      Tragen Sie den Titel für die URL unter 'attributionUrl'.
-      
-      > Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
-
-    - **Attribution-URL**:
-
-      Tragen Sie hier die URL für weitere Infos zur Karte ein.
-
-      > Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.
-
-    - **Tooltip**:
-
-      Aktivieren Sie die GetFeature-Info-Abfrage, falls es die Karte erlaubt.
-
-      Default: false.
-
-    - **Transparenz**:
-     
-      Definieren Sie die per default dargestellte Transparenz der Karte.
-
-      Default: 1
-      
-    - **Style**:
-
-      Legen Sie ein 'style'-Parameter für die GetMap-Abfrage fest, falls notwendig.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Origin**:
-
-      Tragen Sie aus dem TileMatrixSet den TopLeftCorner der Karte ein.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Scales**:
-
-      Tragen Sie aus dem TileMatrixSet den TileMatrix-ScaleDenominator der Karte ein.
-
-      Default: Wert aus der GetCapabilities des zugehörigen Dienstes.
-
-    - **Login**:
-
-      Haben Sie die Karte über einen passwortgeschützten Dienst geladen, so wird unter Login der Benutzername des Dienstes angezeigt. 
-      Anhand dem Login und der Dienst-URL wird das gespeicherte Passwort ermittelt und die Karte wird über den eigenen Server mit Authentifizierung geladen.
-      Eine Authentifizierung können Sie auch mit dem Button am Textfeld hinzufügen oder ändern. Dieses Login gilt aber dann für alle Karten mit der selben Dienst-URL.
-
+  * WMS
+  * WMTS
+
+  | Typ | Eigenschaft | Info | Default |
+  |-------------|--------------|----------|----------|
+  | Gemeinsam |
+  || Typ | Hier wird Ihnen der Typ Ihrer Karte angezeigt. Dieser Wert ist nicht veränderbar.| Wert aus der GetCapabilities des zugehörigen Dienstes.|
+  || ID | Hier haben Sie die Möglichkeit die eindeutige ID der Karte individuell anzupassen. <br><br> Diese ID wird beim Aufruf der Karte im Webmap Client im Parameter "layers" referenziert und wird auch benötigt um eine Karte zu einer Kategorie (siehe [Kategorien]("#kategorien")) zuzuweisen. | Die eindeutige ID zu einer Karte wird beim Importieren einer Karte aus seinem Dienst automatisch genieriert.
+  || Version | Bestimmen Sie hier die Version Ihrer Karte. Eine Auswahl der Werte "1.1.1" und "1.3.0" steht zu Auswahl. | Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Label|Bearbeiten Sie hier den Titel Ihrer Karte. <br><br> Hinweis: Der Titel wird z.B. in der Ergebnisliste bei Suche im Webmap Client angezeigt.| Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Extent|Passen Sie hier das Extent Ihrer Karte an.  <br><br>  Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. | Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Kachel-Größe| Geben Sie hier die gewünschte Kachel-Größe Ihrer Karten ein. | 256
+  ||Hintergrundkarte| Bestimmen Sie hier, ob Ihre Karte als Hintergrundkarte verwendet werden kann. <br><br> Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe [Kategorien]("#kategorien"))| false
+  ||Format| Definieren Sie das Bild-Format der GetMap-Anfrage. (png, jpeg, etc.) | Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Suchbarkeit| Lassen Sie die Karte über die Suche im Webmap Client auffinderbar machen. | true
+  ||Cross Origin | Liefert Ihre Karte bei einer GetMap-Anfrage im Response-Header "Access-Control-Allow-Origin: *" oder "Access-Control-Allow-Origin: <IHRE-DOMÄIN>", so können Sie hier den Wert auf "true" setzten und im Webmap Client werden vorhandenen GetFeatureInfos beim überfahren der Maus auf Ihrer Karte als Handsymbol angezeigt und sind auf der Karte somit einfacher auffindbar.| false
+  ||Highlightable|Aktivieren Sie die Eigenschaft 'highlightable'.| false
+  ||Zeitabhängige Darstellung aktivieren|Aktivieren Sie die zeitabhängige Darstellung der Karte. Umd diese Funktion verwenden zu können, muss in der GetCapabilities des Dienstes die Karte einen Eintrag 'dimension name="time"' enthalten. <br><br>Hinweis: Im Webmap Client wird ihnen dann rechts in der Karte eine neues Control für die Darstellung von Zeitständen angezeigt.| 
+  ||Zeitstempeln definieren|Tragen Sie die Zeitstempeln der Karte ein. Zurzeit können nur jährliche Zeitreihenfolgen angegeben werden. <br><br> Hinweis: Achten Sie auf das Format des Zeitstempels.|
+  ||Default Zeitstempel| Legen Sie den Zeitstempel fest, welcher per Default angezeigt wird. Neben den Zeitstempel kann auch "last" für die Darstellung des ersten Eintrages der Zeitstempelliste und "all" für alle Einträge der Zeitstempelliste.| last
+  ||Legende aktivieren|Aktivieren Sie die Einstellung, wenn die Karte eine Legende hat oder eine Legende per GetLegend-Anfrage aufgerufen werden soll.|true
+  ||Legenden-URL|Definieren Sie die URL der Karten-Legende, ansonsten wird ein GetLegenden-Request ausgeführt.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Attribution|Tragen Sie den Titel für die URL unter 'attributionUrl'ein. Wird diese Karte im Webmap Client aktiviert, so wird in der Karte unten rechts ein Link dargstellt.<br><br>Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.|
+  ||Attribution-URL|Tragen Sie hier die URL für weitere Infos zur aktivierten Karte ein. <br><br>Hinweis: Wird im Webmap Client unten rechts angezeigt, wenn die Karte aktiv ist.|
+  ||Tooltip| Aktivieren Sie die GetFeature-Info-Abfrage, falls es die Karte erlaubt. | Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Transparenz|Definieren Sie die per default dargestellte Transparenz der Karte.| 1
+  ||Login|Haben Sie die Karte über einen passwortgeschützten Dienst geladen, so wird unter Login der Benutzername des Dienstes angezeigt. <br><br> Anhand dem Login und der Dienst-URL wird das gespeicherte Passwort ermittelt und die Karte wird über den eigenen Server mit Authentifizierung geladen.|
+  | WMS |
+  ||WMS-URL|Tragen Sie hier die Dienst-URL Ihrer Karte ein. Anhand dieser URL werden diverse Anfrage, wie z.B. GetCapabilities, GetMap, GetFeatureInfo, etc. durchgeführt.| Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||WMS-Layers| Tragen Sie hier den 'NAME' der dazustellenden Karte ein. Mehrere Karten werden kommagetrennte aufgelistet. <br><br>Hinweis: Zusammengesetzte Karten per kommagetrennt können im Webmap Client nur zusammen dargestellt werden.| Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Gutter|Definieren Sie den ignorierten Rand (in Pixel) um die Karten-Tiles. | 0
+  ||Single Tile| (De-)aktivieren Sie hier den Aufruf Ihrer Karte in Kacheln. | false
+  ||Min-Scale|Definieren Sie einen Min-Scale der Karte.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Max-Scale|Definieren Sie einen Max-Scale der Karte.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Style|Legen Sie ein 'styles'-Parameter für die GetMap-Abfrage fest, falls notwendig.|
+  | WMTS |
+  ||Service-URL| Tragen Sie hier die WMTS-ServiceMetadataURL ein.| Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Template|Tragen Sie hier die WMTS-ResourceURL ein.| Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||MatrixSet|Definieren Sie den TileMatrixSet Identifier der Karte.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Layername|Tragen Sie hier den Layer-Name für Ihre Karte ein.| Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||RequestEncoding|Tragen Sie den Request-Encoding der Karte für GetTile fest, z.B. 'REST' oder 'KVP'.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Style|Legen Sie ein 'style'-Parameter für die GetMap-Abfrage fest, falls notwendig.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Origin|Tragen Sie aus dem TileMatrixSet den TopLeftCorner der Karte ein.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||Scales|Tragen Sie aus dem TileMatrixSet den TileMatrix-ScaleDenominator der Karte ein.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+
+  
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
 
 > Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
@@ -804,7 +508,7 @@ Aus WMS- oder WMTS-Diensten können weitere Karten dem Webmap Client hinzugefüg
 
 - **Kategorien hinzufügen**
 
-  - Verwenden Sie für neue Karten hinzufügen den Button "Neue Kategorie". 
+  - Verwenden Sie um eine neue Kategorie hinzufügen den Button "Neue Kategorie". 
 
   - Nach Verwendung des Buttons erscheint ein Pop-Up und in diesem Pop-Up können Sie nun eine neue Kategorie anlegen.
   
@@ -885,250 +589,54 @@ Zu jeder einzelnen Einstellung existiert ein Button "i" um detailierte Informati
 
 Folgende Einstellungen sind möglich:
 
-- **Default Kategorie**: 
-
-  Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Webmap Clients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Webmap Clients ausgewählt und angezeigt wird.
-
-  > Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.
-
-- **EPSG / Projektion**:
-
-  Legen Sie hier die Projektion der Kartendarstellung im Webmap Client fest.
-
-  Nicht alle Projektion werden unterstützt, da der Webmap Client nicht alle Projektionen supported und ggf. erweitert werden muss. Unterstützte Projektionen sind:
-  
-  - EPSG:3857
-  - EPSG:4326
-  - EPSG:31466
-  - EPSG:31467
-  - EPSG:31468
-  - EPSG:31469
-  - EPSG:25832
-  - EPSG:25833
-
-  > Hinweis: Achten Sie darauf, das Ihre verwendeten WMS- und WMTS-Dienste die Projektion unterstützten.
-
-- **Extent**:
-
-  Legen Sie den Kartenausschnitt fest, welchen Bereich der Karte per Default (sofern in der URL des Webmap Clients mit dem Parameter "E", "N" und "zoom" nichts anderes festgelegt wurde) im Webmap Client dargestellen werden soll.
-
-  Die Koordinaten des Bereiches müssen in der Projektion EPSG:4326/WGS-84 festgelegt werden.
-
-  > Hinweis: Die Koordinaten des definierten Bereiches werden im Webmap Client auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.
-
-- **EPSG Extent**:
-
-  Der Webmap Client unterstützt nicht alle Projektionen und zu manchen Projektion kennt der Webmap Client auch nicht das Extent einer Projektion, z.B. bei "EPSG:25832".
-
-  Kennt der Webmap Client nicht das Extent der Default-Projektion  (siehe oben), so kann man mit dieser Einstellung den Extent in EPSG:4326/WGS-84 festlegen bzw. redefinieren. So ist es auch möglich die Darstellung der Karte im Webmap Client auf einen bestimmten Bereich einzugrenzen.
-
-- **Sprache**:
-
-  Legen Sie hier die unterstützten Sprachen des Webmap Clients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.
-
-  Existierte eine Sprache die der Webmap Client noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.
-
-  > Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.
-
-- **Dienst für den URL-Shortener**:
-
-  Legen Sie den Dienst um die URL Ihres Webmap Clients zu verkürzen. Die URL des Webmap Clients spiegelt den aktuellen Zustand Ihres Webmap Clients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Webmap Client verwendet. 
-
-  Ihr Dienst muss ein JSON zurückliefern.
-
-  > Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.
-
-- **Dienstsuche (Opensearch)**:
-
-  Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Webmap Client zu visualisieren.
-
-  > Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
-
-- **Zoomstufe für Locationsuche**:
-
-  Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Webmap Client zu diesem Ort mit der definierten Zoomstufe.
-
-  > Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.
-
-- **Dienst-URL Nominatim**:
-
-  Tragen Sie hier die URL für die Ortsuche ein.
-
-  Ihr Dienst muss ein JSON zurückliefern.
-
-  > Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
-
-- **Dienst-URL BWaStr-Locator**:
-
-  Möchten Sie den BWaStr-Locator in der Suche, um nach Bundeswasserstraßen zu suchen, verwenden, so tragen Sie hier die zugehörige Dienst-URL ein.
-
-  > Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
-
-- **Dienst-URL BwaStr-Locator (Geo)**:
-
-  Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Geokodierung von Bundeswasserstraßen eintragen.
-
-  > Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
-
-- **Dienst-URL BwaStr-Locator (Station)**:
-
-  Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Stationierung von Bundeswasserstraßen eintragen.
-
-  > Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
-
-- **Copyright URL**:
-
-  Tragen Sie hier die URL zu Ihrer Copyright-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.
-
-- **Sitemap URL**:
-
-  Tragen Sie hier die URL zu Ihrer Sitemap-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.
-
-- **Verwendung von Geodesic**:
-
-  (De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Webmap Client ein.
-
-- **Default Mauszeiger-Projektion**:
-
-  Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
-
-  > Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.
-
-- **Default Dienstauswahlliste beim Import**:
-
-  Passen Sie die Liste der Dienste an, die im Webmap Client zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.
-
-- **Teile per Facebook**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Facebook. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **Teile per E-Mail**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per E-Mail. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **Teile per Google+**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Google+. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **Teile per Twitter**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Twitter. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **Teile per iFrame**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Twitter. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird ein HTML-iFrame Schnipsel mit dem aktuellen Zustand des Webmap Client erzeugt, welches kopiert und in HTML-Seiten integriert werden kann.
-
-- **Teile per Link**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Link. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **Teile per QR-Code**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per QR-Code. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **Teile per Whatsapp**:
-
-  (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Whatsapp. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" nur für die Betriebssysteme Android oder iOS zur Verfügung.
-
-  Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.
-
-- **URL zum Print-Logo**:
-
-  Tragen Sie hier die URL zu Ihrem Logo ein, welches beim Druck verwendet werden soll.
-
-- **URL zum Nordzeiger-Logo**:
-
-  Tragen Sie hier die URL zu Ihrem Nordzeiger-Logo ein, welches beim Druck verwendet werden soll.
-
-- **Koordinatennetz-Layer(s)**:
-
-  Legen Sie hier die URL und deren Layer für das Koordinatennetz beim Druck fest. Hierbei ist ein JSON-Format mit 'url' (URL zum Dienst) und 'layers' (Liste von Layer-Name) notwendig.
-
-  > Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren.
-
-- **Dateiname des Drucks**:
-
-  Tragen Sie hier den Dateiname für den Druck ein.
-
-- **Druck abhängig von Mauszeiger-Projektion**:
-
-  Hier können Sie den Druck der Karte abhängig von der ausgewählten Mauszeiger-Projektion aktivieren. Die dargestellten Karten müssen aber die Projektion unterstützen.
-
-  > Hinweis: Diese Funktion ist experimentell.
-
-- **KML-Dateiname bei Export**:
-
-  Definieren Sie den Prefix für die Datei beim KML-Download.
-
-- **Kataloge Akkordeon verstecken**:
-
-  Verstecken Sie im Menü des Webmap Clients das Kategorien-Akkordeon.
-
-- **W3W-Dienst**:
-
-  (De-)aktvieren Sie im Popup 'Positionen' die Darstellung von What3Words.
-
-- **W3W Dienst-URL**:
-
-  Tragen Sie hier die Dienst-URL für W3W ein.
-
-- **W3W Api-Schlüssel**:
-
-  Tragen Sie hier den Api-Schlüssel für W3W ein.
-
-- **Darstellung vom Service-Baum**:
-
-  Stellen Sie in der Infobox einer Karte ('i'-Button) die Zugehörigkeit einer Karte zu seinem Dienst in einem weiterem Tab dar.
-
-- **Darstellung von Layer-Bezeichnung**:
-
-  Listen Sie in der Infobox einer Karte ('i'-Button), zusätzlich zu dem Titel und der Zusammenfassung, die Layer-Bezeichnung(en) auf.
-
-- **Karten-Scale prüfen**:
-
-  Definieren Sie hier, ob die Karten im Menü nach Ihrer Sichtbarkeit/Scale geprüft werden soll.
-
-  Hierbei werden die Karten in den Akkordeon ausgegraut dargestellt, sobald eine Karte nicht im Sichbarkeitsbereich des aktuellen Kartenausschnitts ist.
-
-  > Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein.
-
-- **Darstellung ISO-XML-Link**:
-
-  Hier können Sie die Darstellung des CSW-Links in Infobox bei der Dienstsuche aktivieren.
-
-- **Koordinaten-Achsen XY**:
-
-  Definieren Sie den Koordinaten-Tausch bei der Suche für Ihre Default-Projektion.
-
-- **Koordinatensuche-Zoomstufe**:
-
-  Legen Sie, analog zur Ortsuche, die Zoomstufe für die Koordinaten-Suche fest.
- 
-- **3D-Funktion**:
-
-  Hier können Sie die 3D-Funktion für die Karte aktivieren.
-
-  > Hinweis: Diese Funktion ist experimentell.
-
-- **Terrain-URL (3D)**:
-
-  Definieren Sie einen Terrain (URL) für die 3D Funktion.
-
-  > Hinweis: Diese Funktion ist experimentell.
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
+|Default Kategorie|Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Webmap Clients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Webmap Clients ausgewählt und angezeigt wird.<br><br>Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.| themen |
+|EPSG / Projektion| Legen Sie hier die Projektion der Kartendarstellung im Webmap Client fest. <br><br> Nicht alle Projektion werden unterstützt, da der Webmap Client nicht alle Projektionen supported und ggf. erweitert werden muss. Unterstützte Projektionen sind: <br> <ul><li>EPSG:3857</li> <li>EPSG:4326</li> <li>EPSG:31466</li> <li>EPSG:31467</li> <li>EPSG:31468</li> <li>EPSG:31469</li> <li>EPSG:25832</li> <li>EPSG:25833</li></ul> Hinweis: Achten Sie darauf, das Ihre verwendeten WMS- und WMTS-Dienste die Projektion unterstützten.| EPSG:3857
+|Extent|Legen Sie den Kartenausschnitt fest, welchen Bereich der Karte per Default (sofern in der URL des Webmap Clients mit dem Parameter "E", "N" und "zoom" nichts anderes festgelegt wurde) im Webmap Client dargestellen werden soll. <br><br>Die Koordinaten des Bereiches müssen in der Projektion EPSG:4326/WGS-84 festgelegt werden. <br><br>Hinweis: Die Koordinaten des definierten Bereiches werden im Webmap Client auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.| [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
+|EPSG Extent| Der Webmap Client unterstützt nicht alle Projektionen und zu manchen Projektion kennt der Webmap Client auch nicht das Extent einer Projektion, z.B. bei "EPSG:25832".<br><br>Kennt der Webmap Client nicht das Extent der Default-Projektion  (siehe oben), so kann man mit dieser Einstellung den Extent in EPSG:4326/WGS-84 festlegen bzw. redefinieren. So ist es auch möglich die Darstellung der Karte im Webmap Client auf einen bestimmten Bereich einzugrenzen.| [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
+|Sprache| Legen Sie hier die unterstützten Sprachen des Webmap Clients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.<br><br>Existierte eine Sprache die der Webmap Client noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.<br><br>Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.| [“de”, “en”]|
+|Dienst für den URL-Shortener|Legen Sie den Dienst um die URL Ihres Webmap Clients zu verkürzen. Die URL des Webmap Clients spiegelt den aktuellen Zustand Ihres Webmap Clients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Webmap Client verwendet. <br><br>Ihr Dienst muss ein JSON zurückliefern.<br><br> Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.| https://is.gd/create.php?format=json|
+|Dienstsuche (Opensearch)|Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Webmap Client zu visualisieren.<br><br>Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.| http://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score%26ingrid=1%26h=100|
+|Zoomstufe für Locationsuche|Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Webmap Client zu diesem Ort mit der definierten Zoomstufe.<br><br> Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.| 10
+|Dienst-URL Nominatim|Tragen Sie hier die URL für die Ortsuche ein. <br><br>Ihr Dienst muss ein JSON zurückliefern. <br><br> Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.| http://nominatim.openstreetmap.org/search?format=json%26countrycodes=de|
+|Dienst-URL BWaStr-Locator|Möchten Sie den BWaStr-Locator in der Suche, um nach Bundeswasserstraßen zu suchen, verwenden, so tragen Sie hier die zugehörige Dienst-URL ein. <br><br> Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.
+| https://atlas.wsv.bund.de/bwastr-locator/rest/bwastrinfo/query?limit=200%26searchfield=all|
+|Dienst-URL BwaStr-Locator (Geo)|Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Geokodierung von Bundeswasserstraßen eintragen.<br><br>Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
+| https://atlas.wsv.bund.de/bwastr-locator/rest/geokodierung/query|
+|Dienst-URL BwaStr-Locator (Station)|Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Stationierung von Bundeswasserstraßen eintragen.<br><br>Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.
+| https://atlas.wsv.bund.de/bwastr-locator/rest/stationierung/query|
+|Copyright URL|Tragen Sie hier die URL zu Ihrer Copyright-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.| /impressum|
+|Sitemap URL|Tragen Sie hier die URL zu Ihrer Sitemap-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.|/inhaltsverzeichnis|
+|Verwendung von Geodesic|(De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Webmap Client ein.| true|
+|Default Mauszeiger-Projektion| Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen. <br><br> Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.|['EPSG:3857', 'EPSG:4326', 'EPSG:31466', 'EPSG:31467', 'EPSG:31468', 'EPSG:31469', 'EPSG:25832', 'EPSG:25833']|
+|Default Dienstauswahlliste beim Import|Passen Sie die Liste der Dienste an, die im Webmap Client zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.| []|
+|Teile per Facebook| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Facebook. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
+|Teile per E-Mail| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per E-Mail. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
+|Teile per Google+| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Google+. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
+|Teile per Twitter| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Twitter. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.| true|
+|Teile per iFrame| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Twitter. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird ein HTML-iFrame Schnipsel mit dem aktuellen Zustand des Webmap Client erzeugt, welches kopiert und in HTML-Seiten integriert werden kann.| true|
+|Teile per Link| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Link. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
+|Teile per QR-Code| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per QR-Code. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.| true|
+|Teile per Whatsapp| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Whatsapp. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" nur für die Betriebssysteme Android oder iOS zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.| true|
+|URL zum Print-Logo| Tragen Sie hier die URL zu Ihrem Logo ein, welches beim Druck verwendet werden soll.| {location.protocol}//{location.host}/ingrid-webmap-client/frontend/prd/img/print_logo.png|
+|URL zum Nordzeiger-Logo| Tragen Sie hier die URL zu Ihrem Nordzeiger-Logo ein, welches beim Druck verwendet werden soll.| {location.protocol}//{location.host}/ingrid-webmap-client/frontend/prd/img/north_arrow.png|
+|Koordinatennetz-Layer(s)| Legen Sie hier die URL und deren Layer für das Koordinatennetz beim Druck fest. Hierbei ist ein JSON-Format mit 'url' (URL zum Dienst) und 'layers' (Liste von Layer-Name) notwendig. <br><br> Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren. | { "url": "http://atlas.wsv.bund.de/netze/wms?", "layers": ["GN","GNB"] }|
+|Dateiname des Drucks| Tragen Sie hier den Dateiname für den Druck ein.| Print.InGrid|
+|Druck abhängig von Mauszeiger-Projektion| Hier können Sie den Druck der Karte abhängig von der ausgewählten Mauszeiger-Projektion aktivieren. Die dargestellten Karten müssen aber die Projektion unterstützen.<br><br> Hinweis: Diese Funktion ist experimentell.|false|
+|KML-Dateiname bei Export| Definieren Sie den Prefix für die Datei beim KML-Download.|INGRID|
+|Kataloge Akkordeon verstecken| Verstecken Sie im Menü des Webmap Clients das Kategorien-Akkordeon.|false|
+|W3W-Dienst| (De-)aktvieren Sie im Popup 'Positionen' die Darstellung von What3Words.|true|
+|W3W Dienst-URL| Tragen Sie hier die Dienst-URL für W3W ein.| https://api.what3words.com|
+|W3W Api-Schlüssel| Tragen Sie hier den Api-Schlüssel für W3W ein.|OM48J50Y|
+|Darstellung vom Service-Baum| Stellen Sie in der Infobox einer Karte ('i'-Button) die Zugehörigkeit einer Karte zu seinem Dienst in einem weiterem Tab dar.| true|
+|Darstellung von Layer-Bezeichnung| Listen Sie in der Infobox einer Karte ('i'-Button), zusätzlich zu dem Titel und der Zusammenfassung, die Layer-Bezeichnung(en) auf.| true|
+|Karten-Scale prüfen| Definieren Sie hier, ob die Karten im Menü nach Ihrer Sichtbarkeit/Scale geprüft werden soll. Hierbei werden die Karten in den Akkordeon ausgegraut dargestellt, sobald eine Karte nicht im Sichbarkeitsbereich des aktuellen Kartenausschnitts ist. <br><br> Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein. | true|
+|Darstellung ISO-XML-Link| Hier können Sie die Darstellung des CSW-Links in Infobox bei der Dienstsuche aktivieren.| true|
+|Koordinaten-Achsen XY| Definieren Sie den Koordinaten-Tausch bei der Suche für Ihre Default-Projektion.| false|
+|Koordinatensuche-Zoomstufe| Legen Sie, analog zur Ortsuche, die Zoomstufe für die Koordinaten-Suche fest.| 16|
+|3D-Funktion| Hier können Sie die 3D-Funktion für die Karte aktivieren. <br><br>Hinweis: Diese Funktion ist experimentell. | false|
+|Terrain-URL (3D)| Definieren Sie einen Terrain (URL) für die 3D Funktion. <br><br> Hinweis: Diese Funktion ist experimentell.| //assets.agi.com/stk-terrain/world|
 
 ![Webmap Client Admin - Einstellungen](../images/mapclient/admin/mapclient_admin_settings.gif "Webmap Client Admin Einstellungen")
 
@@ -1169,74 +677,7 @@ Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss
 
 ### Einstellung für den Webmap Client
 
-Der Großteil der Konfiguration geschieht direkt im [Frontend](#konfiguration-frontend) mittels Konfigurationen in JavaScript.
 Ein paar wenige zentrale Einstellungen werden im [Backend](#konfiguration-backend) ausgeführt.
-
-<a name="konfiguration-frontend"></a>
-#### Einstellungen im Frontend
-
-Die Konfiguration des Karten Clients erfolgt über JS-Dateien.
-
-Diese Dateien finden Sie in einem eigenen Verzeichnis, außerhalb der Portal-Installation unter
-
-{% highlight text %}
-/WEBMAPCLIENT-KONFIGURATIONS-PFAD/WebmapClientData/config/
-{% endhighlight %}
-
-und enthält die Dateien "setting.js" und "settings.profile.js".
-
-In der Datei "setting.js" sind alle Einstellungen für den Webmap Client enthalten.
-> Hinweis: Diese Datei sollte nicht verändert werden. Soll ein Wert einer Einstellung/Variable aus der Datei "setting.js" geändert werden, so soll diese Variable in die Datei "setting.profile.js"-Datei übertragen werden und dort angepasst werden. Die Datei "setting.profile.js" ist per Default leer.
-Findet sich im Verzeichnis keine Datei "setting.js", so kann die Original Datei unter */PORTAL-INSTALLATIONS-PFAD/apache-tomcat/webapps/ingrid-webmap-client/frontend/config* als Vorlage dienen.
-
-| Einstellung                       | Beschreibung                                                              | Wert-Typ       | Defaul-Wert                          |
-|-----------------------------------|---------------------------------------------------------------------------|----------------|--------------------------------------|
-| settingDefaultTopicId             | Ausgewählte Rubrik im Karten-Menü                                         | String         | themen|
-| settingExtent                     | Initialer Kartenausschnitt (in WGS 84)                                    | String         | [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
-| settingEpsgExtent                 | Kartenausbreitung der Projektion (in WGS 84)                              | String         | [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
-| settingEpsg                       | Kartenprojektion                                                          | String         | EPSG:3857|
-| settingLanguages                  | Unterstütze Sparachen                                                     | Array         | ["de", "en"]|
-| settingShortURLService            | URL-Shortener Dienst                                                      | String         | https://is.gd/create.php?format=json|
-| settingSearchServiceUrl           | Dienst zur Suche von WMS Dienste                                          | String         | http://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score%26ingrid=1%26h=100| 
-| settingGazetterZoom               | Default Zoomstufe bei Ergebnissen der Nominatim-Suche                     | Integer         | 10|
-| settingSearchNominatimUrl         | Dienst zur Suche von Orten                                                | String         | http://nominatim.openstreetmap.org/search?format=json%26countrycodes=de|
-| settingSearchBwaLocatorUrl        | Dienst zur Suche von Bundeswasserstraßen                                  | String         | https://atlas.wsv.bund.de/bwastr-locator/rest/bwastrinfo/query?limit=200%26searchfield=all|
-| settingSearchBwaLocatorGeoUrl     | Dienst für Daten zu Bundeswasserstraßen                                   | String         | https://atlas.wsv.bund.de/bwastr-locator/rest/geokodierung/query|
-| settingSearchBwaLocatorStationUrl | Dienst für Stationdaten zu Bundeswasserstraßen                            | String         | https://atlas.wsv.bund.de/bwastr-locator/rest/stationierung/query|
-| settingCopyrightURL               | Link zum Copyright                                                        | String         | /impressum|
-| settingSitemapURL                 | Link zur Sitemap                                                          | String         | /inhaltsverzeichnis |
-| settingUseGeodesic                | Geodesic-Aktivierung zum Messen                                           | Boolean        | true|
-| settingDefaultMouseProjections    | Reihenfolge von bekannten Projektionssystemen für die Funktionen "Mauszeiger-Position-Auswahl" und "Koordinaten-Position-Rechtsklick"                                                                 | Array         | ['EPSG:3857', 'EPSG:4326', 'EPSG:31466', 'EPSG:31467', 'EPSG:31468', 'EPSG:31469', 'EPSG:25832', 'EPSG:25833']|
-| settingDefaultMousePositionIndex  | Default Projektion für die Darstellung von Koordinaten per Mauszeiger     | Integer        | 0|
-| settingDefaultWMSList             | Vordefinierte Liste von WMS Diensten für den Import von WMS               | Array          | []|
-| settingShareFacebook              | Kartenzustand teilen per Facebook                                         | Boolean        | true| 
-| settingShareMail                  | Kartenzustand teilen per E-Mail                                           | Boolean        | true|
-| settingShareGoogle                | Kartenzustand teilen per Google+                                          | Boolean        | true|
-| settingShareTwitter               | Kartenzustand teilen per Twitter                                          | Boolean        | true|
-| settingShareIFrame                | Kartenzustand teilen per iFrame                                           | Boolean        | true| 
-| settingShareQR                    | Kartenzustand teilen per QR-Code                                          | Boolean        | true| 
-| settingShareLink                  | Kartenzustand teilen per Link                                             | Boolean        | true| 
-| settingPrintLogo                  | URL zum Logo beim Druck                                                   | String         | location.protocol + '//' + location.host + '/ingrid-webmap-client/frontend/prd/img/print_logo.png'|
-| settingPrintNorthArrow            | URL zum Nordzeiger beim Druck                                             | String         | location.protocol + '//' + location.host + '/ingrid-webmap-client/frontend/prd/img/north_arrow.png'|
-| settingPrintGraticuleLayer        | URL und Layer für das Koordinatennetz beim Druck                          | String         | {"url":"http://atlas.wsv.bund.de/netze/wms?", "layers":["GN","GNB"]}|
-| settingKMLName                    | Prefix für die Datei beim KML-Download                                    | String         | INGRID|
-| settingHideCatalog                | Verstecken des Menüs Rubrik                                               | Boolean        | false|
-| settingEnableW3W                  | Darstellung von What3Words im Context-Popup 'Positionen                   | Boolean        | false|
-| w3wUrl                            | URL zu What3Words Api                                                     | String        | https://api.what3words.com |
-| w3wApiKey                         | What3Word Api Schlüssel                                                   | String        | OM48J50Y |
-| settingShowLayerServiceName       | Darstellung von Service-Name eines Layers in der Infobox                  | Boolean        | false |
-| settingShowISOXML                 | Darstellung von CSW-URL in Dienst-Infobox                                 | Boolean        | true |
-| settingSearchCoordsXY             | Koordinaten-Tausch bei der Suche für Default-Projektion                   | Boolean        | false |
-| settingSearchCoordsZoom           | Zoomstufe für die Koordinaten-Suche                                       | Integer        | 16 |
-
-Beispiel:
-Mit Hinzufügen der nachfolgenden Einstellung in die Datei "settings.profile.js" wird das vorausgewählte Thema auf "Anbieter" gesetzt.
-
-{% highlight text %}
-...
-settingDefaultTopicId = 'anbieter';
-...
-{% endhighlight %}
 
 <a name="konfiguration-backend"></a>
 #### Einstellungen im Backend
@@ -1286,238 +727,6 @@ config.dir=/opt/ingrid/WebmapClientData/
 kml.directory=/opt/ingrid/WebmapClientData/kml
 ...
 {% endhighlight %}
-
-<a name="daten-für-den-webmap-client"></a>
-### Daten für den Webmap Client
-
-Neben den genannten Einstellungen zu dem Webmap Client, besteht auch die Möglichkeit diesen Client mit Daten bzw. Rubriken zu befüllen, d.h. eine Baumstruktur von (Struktur-) Layern zu erzeugen. 
-
-Bei einem Blick auf das Menü des Clients finden Sie das Akkordeon 'Themen'. Hier enthalten ist eine Baumstruktur aus (WMS-) Layern, die zu einzelnen Kategorien zugeordnet sind.
-
-Um solche Rubriken zu erstellen, bedarf es mehrere Anpassung von JSON-Dateien unter dem Verzeichnis:
-
-{% highlight text %}
-/WEBMAPCLIENT-KONFIGURATIONS-PFAD/WebmapClientData/data/
-{% endhighlight %}
-
-**Definition von Layern (layers.json)**
-
-Alle (WMS-) Layer, die in einer Rubrik auftauchen sollen, müssen in einer Liste in der Datei *layers.json* definiert werden.
-
-| Einstellung | Beschreibung | Wert-Typ |
-|-------------|--------------|----------|
-| type | Definition des Layer-Types: "wmts" oder "wms" | String |
-| label | Titel des Layers | String |
-| background | Layer ist ein Hintergrund-Layer, d.h. wird als Hintergrundkarte im MapClient eingesetzt | Boolean |
-| format | Layer-Bildformat | String |
-| attribution | Titel für die URL unter 'attributionUrl' (wird in der Karte (unten rechts) angezeigt, wenn der Layer aktiv ist) | String |
-| attributionUrl | URL für weitere Infos zum Layer | String |
-| highlightable | WIRD NICHT BEI INGRID VERWENDET | String |
-| hasLegend | Layer hat eine Legende | Boolean |
-| legendUrl | URL der Legende (falls vorhanden, ansonsten wird GetLegenden-Request ausgeführt) | String |
-| searchable | Layer kann in der Suche recherchiert werden (Wert: false oder true) | Boolean |
-| version | Version des Layers | String |
-| opacity | Per default Sichtbarkeit/Transparenz des Layers setzen (Wert: 0 - 1) | Float |
-| crossOrigin | GetMap-Anfrage auf Layer liefert im Response-Header 'Access-Control-Allow-Origin: *' oder 'Access-Control-Allow-Origin: <HOST>' | Boolean |
-| extent | Extent des Layers in WGS84 | String |
-| **WMS** |||
-| wmsUrl | URL des Layers | String |
-| wmsLayers | 'NAME' der dazustellenden Layers. Mehrere Layers werden kommagetrennte aufgelistet. | String |
-| singleTile | Layer wird per SingleTile (Wert: true) geladen oder in Kacheln (Wert: false) | String |
-| gutter | Rand in Pixel um Tiles | Integer |
-| tooltip | GetFeature-Info-Abfrage ist möglich | Boolean |
-| queryLayers | Layers für GetFeatureInfo-Abfrage setzen, falls 'tooltip' auf 'true'. | String: Wenn nicht definiert, dann wird 'wmsLayers' verwendet. |
-| style | "styles"-Parameter bei GetMap-Abfrage setzen | '' |
-| **WMTS** |||
-| serviceUrl | WMTS-ServiceMetadataURL | String |
-| template | WMTS-ResourceURL | String |
-| serverLayerName | Layer-Name für WMTS | String |
-| style | Layer-Style für WMTS | String (default: "default") |
-| matrixSet | TileMatrixSet Identifier des Layers | Array |
-| origin | TileMatrixSet TopLeftCorner des Layers | Array |
-| tileSize | TileMatrixSet TileMatrix-TileWidth bzw. -TileHeight des Layers | Array (default: 256)|
-| scales | TileMatrixSet TileMatrix-ScaleDenominator des Layers | Array |
-| matrixIds | TileMatrixSet TileMatrix-Identifier des Layers | Array (default: Berechnung durch "scales")|
-| requestEncoding | "REST" oder "KVP" | String (default: "KVP") |
-| timeEnabled | Layer hat einen Zeitstempel | Boolean |
-| timestamps | Zeitstempeln des Layers | Array |
-| timeBehaviour | Layer Zeit Verhalten | String |
-
-Beispiele:
-```json
-{
-    ...
-    // WMS
-    "webatlasde_light": {
-        "wmsUrl": "http://sg.geodatenzentrum.de/wms_webatlasde.light?",
-        "wmsLayers": "webatlasde.light",
-        "gutter": 0,
-        "attribution": "GeoBasis-DE / BKG 2016",
-        "attributionUrl": "http://www.bkg.bund.de",
-        "background": true,
-        "format": "png",
-        "timeBehaviour": "last",
-        "label": "webatlasde.light",
-        "singleTile": false,
-        "highlightable": false,
-        "hasLegend": true,
-        "legendUrl": "http://sg.geodatenzentrum.de/wms_webatlasde.light?styles=&layer=webatlasde.light&service=WMS&format=image%2Fpng&sld_version=1.1.0&request=GetLegendGraphic&version=1.1.1",
-        "type": "wms",
-        "queryable": false,
-        "tooltip": true,
-        "version": "1.1.1",
-        "opacity": 1,
-        "searchable": true,
-        "crossOrigin": false
-    },
-    ...
-    // WMTS
-    "wmts_bwastr" : {
-        "attribution": "DLZ-IT BMVBS",
-        "attributionUrl": "www.dlz-it.de",
-        "type": "wmts",
-        "template": "http://atlas.wsv.bund.de/bwastr/wmts/1.0.0/WmsBWaStr/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png",
-        "matrixSet": "osm_grid",
-        "version": "1.0.0",
-        "format": "png",
-        "timestamps": [],
-        "requestEncoding" : "REST",
-        "style": "default",
-        "origin": [-20037508.342787, 20037508.342787],
-        "resolutions": [156543.03392804097, 78271.51696402048, 39135.75848201024, 19567.87924100512, 9783.93962050256, 4891.96981025128, 2445.98490512564, 1222.99245256282, 611.49622628141, 305.748113140705, 152.8740565703525, 76.43702828517625, 38.21851414258813, 19.109257071294063, 9.554628535647032, 4.777314267823516, 2.388657133911758, 1.194328566955879, 0.5971642834779395],
-        "matrixIds": ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"],
-        "hasLegend": false,
-        "label":  "Bundeswasserstrassen WMTS (REST)",
-        "queryable": false,
-        "opacity": 1,
-        "timeBehaviour": "last",
-        "singleTile": false,
-        "highlightable": false,
-        "crossOrigin": false,
-        "extent": [5.8, 47, 15, 55]
-    },
-    ... 
-}
-```
-
-Die Liste ist auch in der Suche des Webmap Clients integriert, sodass eine Suche nach einzelnen definierten (WMS-) Layern recherchiert werden kann.  
-
-<a name="definition-von-rubriken"></a>
-**Definition von Rubriken (catalogs.json)**
-
-Rubriken, die im Webmap Client existiern sollen, werden in der Datei **catalogs.json** definiert. Die Definition einer Rubrik kann folgendermaßen aussehen:
-
-```json
-{
-    "topics": [{
-        // Definition Hintergrund-Layer per default
-            "defaultBackground": "osmLayer",
-        // Vorhandene Sprachen der Rubrik 
-            "langs": "de,en",
-        // Definition von per Default selektierten Layern
-            "selectedLayers": [],
-        // Definition von per Default sichtbaren Layern
-            "activatedLayers": [],
-        // Definition von auswählbaren Hintergrund-Layern
-            "backgroundLayers": ["osmLayer", "webatlasde_light"],
-        // ID der Rubrik 
-            "id": "themen"
-        },
-        ...
-    ]
-}
-```
-
-D.h. es kann z.B. je Rubrik definiert werden, welche Hintergrundkarten verwendet werden sollen ("backgroundLayers").
-> ACHTUNG: Die Hintergrundkarten werden mit Ihrer ID referenziert und sind normal in **layers.json** definiert.
-Diese IDs, z.B. "webatlasde_light" im Bsp. oben, dürfen **nicht verändert** werden, damit das Layout bei der Auswahl der Hintergrundkarten funktioniert (die IDs sind mit styles belegt).
-
-**Erstellung der Baumstruktur zu einer Rubrik (catalog-[TOPIC-ID].json)**
-
-Zu jeder definierten Rubrik unter 'catalogs.json' muss eine weitere JSON-Datei erstellt werden. Von der Benennung der Datei muss diese folgende Syntax vorweisen:
-
-{% highlight text %}
-catalog-[TOPIC-ID].json
-{% endhighlight %}
-
-In der erstellten Datei wird die Struktur der Rubrik im JSON-Format hinterlegt. Wie der Inhalt des JSON-Formats aussehen kann, zeigt folgendes Beispiel:
-
-```json
-{
-    "results": {
-        "root": {
-        // Root Rubrik ID (immer 'root')
-            "category": "root",
-        // WIRD NICHT BEI INGRID VERWENDET
-            "staging": "prod",
-        // Eindeutige ID eines Knotens
-            "id": 1,
-        // Definition von Unterknoten
-            "children": [{
-            // WIRD NICHT BEI INGRID VERWENDET
-                "category": "cat70",
-            // WIRD NICHT BEI INGRID VERWENDET
-                "staging": "prod",
-            // Knoten-Status per Default
-                "selectedOpen": false,
-            // Titel des Knotens
-                "label": "Geobasisdaten",
-            // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung des Knoten-Status)
-                "id": 2, 
-            // Definition von Unterknoten
-                "children": [{
-                // WIRD NICHT BEI INGRID VERWENDET
-                    "category": "cat71",
-                // WIRD NICHT BEI INGRID VERWENDET
-                    "staging": "prod",
-                // Knoten-Status per Default
-                    "selectedOpen": false,
-                // Titel des Knotens
-                    "label": "Bestandsübersicht Geodatendienste VKV",
-                // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung Knoten-Status)
-                    "id": 3,
-                // Definition von Unterknoten
-                    "children": [{
-                    // WIRD NICHT BEI INGRID VERWENDET
-                        "category": "layer",
-                    // WIRD NICHT BEI INGRID VERWENDET
-                        "staging": "prod",
-                    // Titel des Knotens
-                        "label": "LGLN-Bestand",
-                    // ID des Layers (definiert in layers.json)
-                        "layerBodId": "-652009786_bestand",
-                    // Eindeutige und einmalige Rubrik-Knoten ID, erweitert URL-Parameter 'catalogNodes' (Wiederherstellung Knoten-Status)
-                        "id": 4,
-                    // Definition von Unterknoten
-                        "children":[]
-                    },
-                    ...
-                    ]
-                },
-                ...
-                ]
-            },
-            ...
-            ]
-        }
-    }
-}
-```
-
->Zu beachten ist:
-Hat ein Knoten die Eigenschaft "layerBodId", so handelt es sich um einen darstellenden Layer-Knoten, ansonsten wird es als Struktur-Knoten dargestellt (ohne Checkbox).
-
-### Hilfetexte für den Webmap Client
-
-Die im Webmap Client verwendete Hilfe für einzelne Funktionen finden Sie unter:
-
-{% highlight text %}
-/<PORTAL-INSTALLATION>/apache-tomcat/webapps/ingrid-webmap-client/frontend/help/
-{% endhighlight %}
-
-Dort existieren für jede mögliche Sprache (INGRID: de, en) eine Hilfe-Datei im JSON-Format. In dieser JSON-Datei werden über eine Schlüssel eine Hilfe-Titel, -Text und -Image (z.Zt. nicht in Verwendung) zu einer Funktion im Webmap Client referenziert.
-
-Die aktuelle Hilfe des Schweizer Webmap Clients als JSON erhalten Sie z.B. hier als [Hilfe deutsch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'de'+order+by+id&callback=angular.callbacks._2) oder [Hilfe englisch](https://www.googleapis.com/fusiontables/v1/query?key=AIzaSyDT7wmEx97gAG5OnPwKyz2PnCx3yT4j7C0&sql=select+*+from+1Tx2VSM1WHZfDXzf8rweRLG1kd23AA4aw8xnZ_3c+where+col5%3D'en'+order+by+id&callback=angular.callbacks._2).
 
 ## Schnittstellen
 
@@ -1593,7 +802,7 @@ Für die Funktion [Drucken](#drucken) wird im Webmap Client die JAVA-Bibliothek 
 
 #### Kann man die Projektion des Webmap Clients anpassen?
 
-Ja, dies wird durch das Überschreiben der Einstellung **settingEpsg** in der Datei **settings.profile.js** ermöglicht.
+Die Projektion und weitere Einstellungen können über die Admin-GUI unter Akkordeon [Einstellungen](#einstellungen) auf Ihre Bedürfnisse angepasst werden. 
 
 > Hinweis: Möglicherweise funktioniert das Drucken des Hintergrund-Layers OSM (OpenStreetMap) nicht korrekt bzw. es wird eine Karte an falscher Position ausgedruckt, da der OSM-Layer die Projektion nicht korrekt unterstützt. 
 
@@ -1619,7 +828,7 @@ Ja, die Reihenfolge der Hintergrundkarte kann man auch per CSS beeinflussen.
 
 > Hinweis:
 > - Per Default wird die Reihenfolge von der Kategorie vorgegeben, d.h. die festgelegte Reihenfolge in der Kategorie wird im Webmap Client von Rechts nach Links bzw. in der mobilen Ansicht von Unten nach Oben dargestellt.
-> - Die ersten sechs Hintergrundkarten werden in der Auswahlbox vom Webmap Client in der Reihenfolge korrkt dargestellt. Bei jedem weiterem muss unter Akkordeon [Style](#style) jeweils CSS-Einträge (Desktop/Mobil) hinzufügen. 
+> - Die ersten sechs Hintergrundkarten werden in der Auswahlbox vom Webmap Client in der Reihenfolge korrekt dargestellt. Bei jedem weiterem muss unter Akkordeon [Style](#style) jeweils CSS-Einträge ( für Desktop und Mobil) hinzugefügen werden. 
 
 Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) CSS-Eintäge mit folgender Syntax:
 
