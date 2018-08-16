@@ -891,3 +891,15 @@ Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) CSS-Eintäge 
 Der per Default eingestellte URL-Shortner (https://is.gd/create.php?format=json) verkürzt nur URL's mit einer Domain und keine mit einer IP-Adresse. Hier liefert der URL-Shortener einen Fehler und vom Webmap Client wird die ungekürzte URL zurückgeliefert. 
 
 > Hinweis: Der URL-Shortener **YOURLS** verkürzt auch URL's mit IP-Adressen. Mehr Informationen zu YOURLS finden Sie unter [URL-Shortener](#url-shortener).
+
+#### Können passwortgeschützte Karten/Dienste verwenden werden?
+
+Über die Admin-GUI können auch Karten von passwortgeschützten Diensten eingepflegt werden. 
+
+Laden Sie hierbei über den Reiter "Karten" und den Button "Dienst laden" die Dienst-URL indem Sie zusätzlich über die Checkbox "Login verwenden" den Benutzername und das Passwort angeben. 
+
+Wurde der Dienst erfolgreich geladen, so wird Ihnen der passwortgeschützte Dienst wie gewohnt in einer Baumstruktur dargestellt. Sobald Sie nun eine odere mehrere Karten/Layern zu Ihrem MapClient hinzufügen, wird das Login (Benutzername, Passwort) zu dem Hostname Ihres Dienstes zugeordnet und intern in einer JSON-Datei gespeichert.
+
+Warum das Login gespeichert werden muss? Für die Kartendarstellung werden die Kacheln/Tiles (GetMap-Anfrage) Ihrer passwortgeschützten Karten nun nicht mehr direkt aufgerufen, sondern über den Server, wo der Webmap Client installiert ist, mit Authentifizierung (anhand der internen JSON-Datei) geladen.
+
+Neben der GetMap-Anfrage wird die interne JSON-Datei auch für den Druck, GetCapabilities- und GetFeatureInfo-Abfrage verwendet. 
