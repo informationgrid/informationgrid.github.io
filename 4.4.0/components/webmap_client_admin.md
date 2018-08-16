@@ -378,7 +378,7 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
     > Hinweis: Bei WMS werden automatisch die URL-Parameter "SERVICE=WMS", "VERSION=1.3.0" und/oder "REQUEST=GetCapabilities" der Dienst-URL hinzugefügt, falls diese Parameter nicht vorhanden sind. 
 
-  - Handelt es sich bei Ihrem geladenen Dienst um einen passwortgeschützten Dienst, so wählen Sie die Checkbox "Login verwenden" aus und tragen hier Benutzername und Passwort ein.
+  - Handelt es sich bei Ihrem geladenen Dienst um einen passwortgeschützten Dienst, so wählen Sie die Checkbox "Login verwenden" aus und tragen hier Benutzername und Passwort ein. (siehe [Passwortgeschützte Karten](#können-passwortgeschützte-kartendienste-verwenden-werden))
 
     - Mit der Checkbox "Login ersetzen" können Sie bereits eingetragene Login-Daten für einen Dienst ersetzen.
 
@@ -903,3 +903,5 @@ Wurde der Dienst erfolgreich geladen, so wird Ihnen der passwortgeschützte Dien
 Warum das Login gespeichert werden muss? Für die Kartendarstellung werden die Kacheln/Tiles (GetMap-Anfrage) Ihrer passwortgeschützten Karten nun nicht mehr direkt aufgerufen, sondern über den Server, wo der Webmap Client installiert ist, mit Authentifizierung (anhand der internen JSON-Datei) geladen.
 
 Neben der GetMap-Anfrage wird die interne JSON-Datei auch für den Druck, GetCapabilities- und GetFeatureInfo-Abfrage verwendet. 
+
+Passwortgeschützte Dienste/Karten können nur über die Pflege per Admin-GUI verwendet werden. Ein Laden/Importieren direkt über den Webmap Client ist nicht möglich.
