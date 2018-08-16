@@ -446,6 +446,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
   Sie können auch die Gesamtliste auf fehlerhafte Karten einschränken. Aktivieren Sie hierfür die Checkbox "Nur fehlerhafte Karten" unterhalb der Suche. 
 
+  (siehe [Fehlerhafte Karten]("#fehlerhafte-karten") )
+
 - **Karten bearbeiten**
 
   Eingepflegte Karten können auch bearbeitet werden und dabei die Default-Werte aus der GetCapabilities des zugehörigen Dienstes manipulieren.
