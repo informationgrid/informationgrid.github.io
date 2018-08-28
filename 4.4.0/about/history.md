@@ -10,7 +10,7 @@ Release 28.08.2018
 
 ### Liste der Änderungen
 
-InGrid
+UVP
 - [Feature] [PORTAL] Kartenausdehnung per Portal-Eigenschaft ([REDMINE-1151](https://redmine.informationgrid.eu/issues/1151))
 - [Feature] [PORTAL] Übertragen von Passwort-Policy Funktionalität in Portal Profile ([REDMINE-1143](https://redmine.informationgrid.eu/issues/1143))
 - [Feature] [PORTAL] Hinzufügen von "negative Vorprüfungen" in den Kategorien/Verfahrenstypen (Startseite) ([REDMINE-1146](https://redmine.informationgrid.eu/issues/1146))
