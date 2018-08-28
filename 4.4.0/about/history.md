@@ -4,6 +4,23 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.3
+
+Release 28.08.2018
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [PORTAL] Kartenausdehnung per Portal-Eigenschaft ([REDMINE-1151](https://redmine.informationgrid.eu/issues/1151))
+- [Feature] [PORTAL] Übertragen von Passwort-Policy Funktionalität in Portal Profile ([REDMINE-1143](https://redmine.informationgrid.eu/issues/1143))
+- [Feature] [PORTAL] Hinzufügen von "negative Vorprüfungen" in den Kategorien/Verfahrenstypen (Startseite) ([REDMINE-1146](https://redmine.informationgrid.eu/issues/1146))
+- [Feature] [PORTAL] Per Default dargestellte Verfahrenstypen auf der Karte soll verringert werden ([REDMINE-1147](https://redmine.informationgrid.eu/issues/1147))
+- [Bug] [IGE] UVP: Vorschau zeigt keine Daten ([REDMINE-1145](https://redmine.informationgrid.eu/issues/1145))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.3/))
+
 ## Version 4.4.2
 
 Release 14.08.2018
