@@ -912,8 +912,10 @@ Passwortgeschützte Dienste/Karten können nur über die Pflege per Admin-GUI ve
 
 Je nach Einstellung läuft (per Default: täglich um 3:00 Uhr) ein Job, welches diverse Einstellungen (Extent, Legend-URL, Scales, etc.) zur Ihren eingepflegten Karten (nicht bei kombinierten Karten) automatisch aktualisiert.
 
-Hierbei wird auch geprüft, ob der Dienst noch erreichbar ist und die Karte in der GetCapabilities des Dienstes noch vorhanden ist. Ist der Dienst nicht mehr erreichbar, z.B. durch https-Umstellung, wird der eingepflegten Karten ein Status "Dienst existiert nicht mehr" und bei nicht vorhandsein der Karte in der GetCapabilities der Status "Karte existiert nicht mehr" hinzugefügt.
+Hierbei wird auch geprüft, ob der Dienst noch erreichbar und die Karte in der GetCapabilities des Dienstes noch vorhanden ist. Ist der Dienst nicht mehr erreichbar, z.B. durch https-Umstellung, wird der eingepflegten Karten ein Status "Dienst existiert nicht mehr" und bei nicht vorhandsein der Karte in der GetCapabilities der Status "Karte existiert nicht mehr" hinzugefügt.
 
 In der Liste der eingepflegten Karten unter dem Akkordeon "Karten" der Admin-GUI kann über die Checkbox "Nur fehlerhafte Karten" nach allen fehlerhaften Karten gefiltert werden. 
 
 Um den Fehler bei den fehlerhaften Karten zu beheben, muss manuell in der Admin-GUI, je nach dem was der Status ist, entweder die Dienst-URL oder der Layer-Name geändert werden.
+
+Möchten Sie eine E-Mail-Benachrichtigung, falls eingepflegte Karten eine Fehler aufweisen, so setzen Sie die Einstellung "scheduler.layer.update.mail" auf true. Gehen Sie hier wie unter [Einstellungen im Backend](#einstellungen-im-backend) beschrieben vor. Bei Änderung muss das Portal neugestartet werden.
