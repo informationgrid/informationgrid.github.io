@@ -920,3 +920,17 @@ Um den Fehler bei den fehlerhaften Karten zu beheben, muss manuell in der Admin-
 
 Möchten Sie eine E-Mail-Benachrichtigung, falls eingepflegte Karten nicht mehr erreichbar sind und einen Fehler aufweisen, so setzen Sie die Einstellung "scheduler.layer.update.mail" auf true. Gehen Sie hier wie unter [Einstellungen im Backend](#einstellungen-im-backend) beschrieben vor. Bei Änderung muss das Portal neugestartet werden.
 Ein SMTP-Server (Einstellung "feedback.host") muss eingestellt sein und die E-Mail geht an die Adresse unter Einstellung "feedback.to".
+
+
+#### Welche Art von Dimension-Time-Karten können eingepflegt werden?
+
+Der MapClient ist für Dimension-Time-Karten mit einer jährlichen Zeitperiode abgestimmt, d.h Karten mit einer Zeitperiode von z.b. 2010, 2011, 2013, etc..
+
+Theoretisch können auch andere Zeitperioden eingepflegt werden, aber die Funktionen im Mapclient werden nicht korrekt dargestellt oder funktionieren nicht richtig, z.B. bei einer monatlichen Zeitperiode eines Jahres:
+
+* [Zeitregler](#karteninteraktionen): Der Regler bleibt immer auf dem Jahr und lässt sich nicht verschieben. Ein Abspielen der Zeitperioden ist nicht möglich.
+* [Zeitabhängige Darstellung der Karte](#dargestellte-karten): Bei Klick auf die Jahreszahl würden alle Zeitperioden nur mit dem Jahr angezeigt werden. Hier kann man zwar die einzelnen Zeitstempeln auswählen und die Karte ändert sich auch, aber man weiß nicht wirklich, welcher Zeitstempel z.Zt. aktiv ist.
+
+> Hinweis: Die Zeitstempeln der eingepflegten Karten werden nicht automatisch aktualisiert.
+
+
