@@ -4,6 +4,34 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.4
+
+Release 04.09.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [PORTAL] UVP-NI: Trennung von MATOMO Konfiguration für NUMIS und UVP-NI ([REDMINE-1152](https://redmine.informationgrid.eu/issues/1152))
+- [Feature] [PORTAL] UVP: Darstellung der Verfahrenstypen in der Kartenlegende abhängig von der Anzahl an Treffern ([REDMINE-1155](https://redmine.informationgrid.eu/issues/1155))
+- [Bug] [PORTAL] UVP: Darstellung von Detailinformationen von "negativen Vorprüfungen" ([REDMINE-1156](https://redmine.informationgrid.eu/issues/1156))
+- [Bug] [IGE] UVP: Mapping von Daten aus "negative Vorprüfungen" in das IDF ([REDMINE-1156](https://redmine.informationgrid.eu/issues/1156))
+
+InGrid
+- [Feature] [MAPCLIENT] MAPCLIENT: Entwicklung einer Admin-GUI für den geoadmin3-Mapclient ([REDMINE-815](https://redmine.informationgrid.eu/issues/815))
+- [Feature] [MAPCLIENT] MAPCLIENT: Darstellung des Name-Attributes eines Layers ([REDMINE-1112](https://redmine.informationgrid.eu/issues/1112))
+- [Feature] [MAPCLIENT] MAPCLIENT: Aktualsierung auf den aktuellsten mf-geoadmin3 ([REDMINE-1130](https://redmine.informationgrid.eu/issues/1130))
+- [Feature] [MAPCLIENT] MAPCLIENT: Einbinden von passwort-geschützten Diensten ([REDMINE-1138](https://redmine.informationgrid.eu/issues/1138))
+- [Feature] [MAPCLIENT] MAPCLIENT: Darstellung von fehlerhaften Karten in der Admin-GUI ([REDMINE-1139](https://redmine.informationgrid.eu/issues/1139))
+- [Feature] [MAPCLIENT] MAPCLIENT: Darstellung Karten mit Dimension 'TIME' ([REDMINE-1141](https://redmine.informationgrid.eu/issues/1141))
+- [Feature] [MAPCLIENT] MAPCLIENT: Aktualisierung Admin-GUI Bibliotheken ([REDMINE-1144](https://redmine.informationgrid.eu/issues/1144))
+- [Bug] [MAPCLIENT] MAPCLIENT: Parameter-Aktualisierung im IE funktioniert nicht ([REDMINE-1148](https://redmine.informationgrid.eu/issues/1148))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.4/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.4.4/))
+
+
 ## Version 4.4.3
 
 Release 28.08.2018
