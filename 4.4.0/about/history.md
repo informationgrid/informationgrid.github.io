@@ -4,6 +4,21 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.5
+
+Release 07.09.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [PORTAL] UVP: Icons in Karten-Legende werden unter Ubuntu-LTS nicht korrekt angezeigt ([REDMINE-1157](https://redmine.informationgrid.eu/issues/1157))
+- [Feature] [PORTAL/IGE] Detailtemplate neg. Vorprüfungen, nds. UVP-Portal ([REDMINE-1158](https://redmine.informationgrid.eu/issues/1158))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.5/))
+
+
 ## Version 4.4.4
 
 Release 04.09.2018
