@@ -209,3 +209,14 @@ Bei jeder Installation wird der Zeitstempel von allen Codelisten auf das Install
 6300 | Version und Spezifikation in Hochkommata getrennt von einem Komma<br><br>z.B.: "Version 1.1","Spez. 4" | Die zusätzlichen Angaben für einen Eintrag aus dem INSPIRE-Datenformat werden im DSC-scripted verwendet, um das IDF-Dokument zu generieren. Sind Version und Spezifikation mit angegeben, so werden diese unter MD_Format mit ausgegeben.
 1100 | Leerzeichen separierte Liste von Koordinaten<br><br>z.B.: "9,605 52,304 9,918 52,454" | Diese Liste wird nicht im Codelist-Repository sondern im IGE selbst gepflegt. Zu jedem freien Raumbezug können die BoundingBox-Koordinaten mit angegeben werden, die bei der Auswahl des Eintrags in der Objektbearbeitung, automatisch in die dazugehörigen Feldern eingetragen werden.
 2000 | Kommata separierte Liste von Objektklassen<br><br>z.B.: "1,3,6" | Im Verweisdialog eines Objekts kann ein Verweistyp ausgewählt werden. Diese werden über die Codeliste 2000 definiert. Durch die Angabe der Objektklassen im Data-Feld, wird bestimmt, in welcher Klasse des Objekts dieser Typ angezeigt werden soll. Ist das Data-Feld leer, so wird der Verweistyp niemals in diesem Dialog angezeigt. Jedoch kann dieser für die interne Verarbeitung genutzt werden, wie es bspw. mit dem Eintrag "Gekoppelte Daten" (3600) geschieht.
+
+### Wie können Codelisten erweitert werden?
+
+* Die existierenden Codelisteneinträge sollten nicht angepasst werden, da diese zentral gepflegt werden und bei einer Aktualisierung überschrieben werden könnten. Offensichtliche Fehler sollten natürlich behoben werden.
+
+* Bestehende Codelisteneinträge können entfernt werden.
+
+* Neue Einträge in bestehende Codelisten können aufgenommen werden. Dazu bitte einen eigenen Nummernkreis mit ausreichend Abstand zu den existierenden Default-Einträgen erzeugen und diesen am besten in der InGrid Community abstimmen.
+
+* Neue Codelisten können erstellt werden. Die Codelist IDs bitte außerhalb der ISO Nummeriung (5xx) wählen.
+
