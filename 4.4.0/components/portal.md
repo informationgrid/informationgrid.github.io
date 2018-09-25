@@ -502,7 +502,7 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 Bitte in der Datei TOMCAT/bin/env.user.sh folgende Eigenschaften eintragen:
 
 {% highlight text %}
-echo 'export INGRID_OPTS="$INGRID_OPTS -Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword -Dhttp.nonProxyHosts=localhost\\|127.*\\|[::1]"'
+echo 'export INGRID_OPTS="$INGRID_OPTS -Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=proxyPortNumber -Dhttp.proxyUser=someUserName -Dhttp.proxyPassword=somePassword -Dhttps.proxyHost=yourProxyURL -Dhttps.proxyPort=proxyPortNumber -Dhttps.proxyUser=someUserName -Dhttps.proxyPassword=somePassword -Dhttp.nonProxyHosts=localhost\|127.*\|[::1]"'
 {% endhighlight %}
 
 User und Passwort müssen nicht unbedingt angegeben werden.
