@@ -6,9 +6,10 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Bedienungsanleitung UVP Editor (uvp-verbund.de)
 
-[UVP Editor Manual - Erfassung UVP Verfahren, Version 04.10.2018](https://github.com/informationgrid/informationgrid.github.io/raw/master/4.0.0/images/Erfassungsanleitung_UVP-Portal_Teil-2_Erfassung_UVP-Verfahren_Stand-2018-10-04.pdf)
+[UVP Editor Manual - Erfassung UVP Verfahren, Version 04.10.2018](https://github.com/informationgrid/informationgrid.github.io/raw/master/4.4.0/images/Erfassungsanleitung_UVP-Portal_Teil-2_Erfassung_UVP-Verfahren_Stand-2018-10-04.pdf)
 
-[UVP Editor Manual - Nutzerverwaltung, Version 04.10.2018](https://github.com/informationgrid/informationgrid.github.io/raw/master/4.0.0/images/Erfassungsanleitung_UVP-Portal_Teil-1_UVP-Editor+Nutzerverwaltung_Stand-2018-10-04.pdf)
+
+[UVP Editor Manual - Nutzerverwaltung, Version 04.10.2018](https://github.com/informationgrid/informationgrid.github.io/raw/master/4.4.0/images/Erfassungsanleitung_UVP-Portal_Teil-1_UVP-Editor%2BNutzerverwaltung_Stand-2018-10-04.pdf)
 
 
 #### Alte Versionen
