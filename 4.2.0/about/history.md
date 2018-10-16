@@ -4,6 +4,35 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.6
+
+Release 16.10.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [IPLUG-SE] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.6/))
+
+
+## Version 4.2.5
+
+Release 07.06.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [iPlug-SE] iPlugSE: Neue Eigenschaft, um die Instanzdaten vor einem Crawl zu löschen ([REDMINE-1093](https://redmine.informationgrid.eu/issues/1093))
+
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.5/))
+
+
 ## Version 4.2.4
 
 Release 20.03.2018

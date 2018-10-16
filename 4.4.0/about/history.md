@@ -4,6 +4,36 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.6
+
+Release 16.10.2018
+
+### Liste der Änderungen
+
+- [Bug] [PORTAL] Portal: Passwortstärke wird im IE11 nicht farblich angezeigt ([REDMINE-1176](https://redmine.informationgrid.eu/issues/1176))
+
+UVP
+- [Feature] [PORTAL] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.5/))
+
+
+## Version 4.2.6
+
+Release 16.10.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [IPLUG-SE] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.6/))
+
+
 ## Version 4.4.5
 
 Release 07.09.2018
@@ -201,6 +231,7 @@ InGrid
 - [Bug] [MAPCLIENT] MAPCLIENT: Einbetten in externem iFrame funktioniert nicht ([REDMINE-1089](https://redmine.informationgrid.eu/issues/1089))
 - [Bug] [PORTAL] PORTAL: Kontaktformular sendet Attachement ([REDMINE-1074](https://redmine.informationgrid.eu/issues/1074))
 - [Info] [INTERFACE-CSW] INTERFACE-CSW: Filterung nach partner, provider, iplug funktioniert nicht per GET Anfrage ([REDMINE-960](https://redmine.informationgrid.eu/issues/960))
+- [Feature] [PORTAL] IGE: Vergrößerung der Anzahl der zulässigen Zeichen bei der URL der Vorschaugrafik ([REDMINE-1104](https://redmine.informationgrid.eu/issues/1104))
 
 UVP
 

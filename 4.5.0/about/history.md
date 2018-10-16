@@ -4,6 +4,35 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.6
+
+Release 16.10.2018
+
+### Liste der Änderungen
+
+- [Bug] [PORTAL] Portal: Passwortstärke wird im IE11 nicht farblich angezeigt ([REDMINE-1176](https://redmine.informationgrid.eu/issues/1176))
+
+UVP
+- [Feature] [PORTAL] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.5/))
+
+## Version 4.2.6
+
+Release 16.10.2018
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [IPLUG-SE] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.6/))
+
+
 ## Version 4.5.0
 
 Release 15.10.2018
@@ -26,6 +55,7 @@ InGrid
 - [Feature] [MAPCLIENT] MAPCLIENT: Aktualisierung Admin-GUI Bibliotheken ([REDMINE-1144](https://redmine.informationgrid.eu/issues/1144))
 - [Feature] [IPLUG-CSW] IPLUG-CSW: Filterung von download links ([REDMINE-1149](https://redmine.informationgrid.eu/issues/1149))
 - [Feature] [CODELIST-REPO] CODELIST-REPO: Beim Update von bestehendem Repo aktuelle Codelisten sichern ([REDMINE-1187](https://redmine.informationgrid.eu/issues/1187))
+- [Feature] [PORTAL] IGE: Vergrößerung der Anzahl der zulässigen Zeichen bei der URL der Vorschaugrafik ([REDMINE-1104](https://redmine.informationgrid.eu/issues/1104))
 - [Bug] [IGE] IGE: "Datenformat" Pflichtfelder und Hilfetext korrigieren ([REDMINE-1124](https://redmine.informationgrid.eu/issues/1124))
 - [Bug] [IGE] IPLUG_IGE: ISO Abbildung von "Raster/Gridformat" Sektion fehlerhaft ([REDMINE-1129](https://redmine.informationgrid.eu/issues/1129))
 - [Bug] [IGE] IGE: ISO-XML Ansicht zeigt fälschlicherweise keine veröffentlichte Version an ([REDMINE-1177](https://redmine.informationgrid.eu/issues/1177))
