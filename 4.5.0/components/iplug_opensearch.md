@@ -28,17 +28,17 @@ Download: [https://distributions.informationgrid.eu/ingrid-iplug-opensearch/](ht
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
-```sh
+```bash
 java -jar ingrid-iplug-opensearch-VERSION-installer.jar
-```xml
+```
 
 Der Installer ist sowohl per graphischer Oberfläche als auch Kommandozeileneingabe ausführbar. Bitte folgen Sie den Anweisungen des Installationsprogrammes. Das Installationsprogramm installiert die Komponente im gewünschten Verzeichnis und passt die Konfigurationsdateien an.
 
 Sie können nun das iPlug mit
 
-```sh
+```bash
 sh start.sh start
-```xml
+```
 
 starten.
 
@@ -66,36 +66,36 @@ Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-opensea
 
 iPlug stoppen.
 
-```sh
+```bash
 sh start.sh stop
-```xml
+```
 
 Aktuelles Installationsverzeichnis sichern:
 
-```sh
+```bash
 cp -r /opt/ingrid/ingrid-iplug-opensearch BACKUP_DIRECTORY
-```xml
+```
 
 
 Die Aktualisierung erfolgt über den Installer.
 
-```sh
+```bash
 java -jar ingrid-iplug-opensearch-NEW-VERSION-installer.jar
-```xml
+```
 
 Während der Installation bitte "Upgrade" auswählen und das Installationsverzeichnis Verzeichnis angeben.
 
 iPlug starten.
 
-```sh
+```bash
 sh start.sh start
-```xml
+```
 
 ## Betrieb
 
-```sh
+```bash
 start.sh [start|stop|restart|status]
-```xml
+```
 
 Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
@@ -146,7 +146,7 @@ geändert werden.
 <!--
 <ref bean="rankingModifierLinear" />
 -->
-```xml
+```
 
 Folgende Änderung deaktiviert die Manipulation via Multiplikation und Addition und aktiviert stattdessen eine lineare Modifikation:
 
@@ -161,7 +161,7 @@ Folgende Änderung deaktiviert die Manipulation via Multiplikation und Addition 
 <!-- RANKING MODIFIER for linear modification of ranking score. Configuration see "rankingModifierLinear" below. -->
 <!-- SWITCH ON IF NEEDED (BW), NOTICE: OLD MODIFICATION STILL ACTIVATED, SWITCH OFF rankingModifierPD ? -->
 <ref bean="rankingModifierLinear" />
-```xml
+```
 
 Der rankingModifierLinear wird am Ende der Datei definiert und konfiguriert:
 
@@ -195,7 +195,7 @@ Der rankingModifierLinear wird am Ende der Datei definiert und konfiguriert:
     </map>
   </property>
 </bean>
-```xml
+```
 
 Alle Ergebnisse mit dem selben eingehenden Score bekommen einen linear-verteilten InGrid-Score. Diese Verteilung bewegt sich zwischen dem Minimum und dem Median des jeweiligen Scores.
 
@@ -277,7 +277,7 @@ Hier kann im folgenden Bereich die Facette konfiguriert werden.
       </list>
    </property>
 </bean>
-```xml
+```
 
 Die Änderungen werden nach Neustart der Komponente übernommen.
 
@@ -300,7 +300,7 @@ Die Datei `conf/communication.xml` enthält die Konfigurationen der InGrid Kommu
     </client>
     <messages queueSize="2000" handleTimeout="10"/>
 </communication>
-```xml
+```
 
 Die einzelnen Parameter haben folgende Bedeutung:
 
