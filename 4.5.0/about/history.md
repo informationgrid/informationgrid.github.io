@@ -10,12 +10,21 @@ Release 18.10.2018
 
 ### Liste der Änderungen
 
+UVP
+- [Feature] [PORTAL] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+- [Feature] [IPLUG-SE] UVP: Integration von BLP Daten in uvp-verbund.de für NRW ([REDMINE-1189](https://redmine.informationgrid.eu/issues/1189))
+
+
 BKG
 - [Bug] [IGE] IGE: Fix Import von useConstraints ([REDMINE-1199](https://redmine.informationgrid.eu/issues/1199))
 
+
 ### Komponenten
 
-- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.5.1/))<br>
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.5.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.5.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.5.1/))
+
 
 ## Version 4.4.6
 
