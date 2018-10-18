@@ -4,6 +4,19 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.5.1
+
+Release 18.10.2018
+
+### Liste der Änderungen
+
+BKG
+- [Bug] [IGE] IGE: Fix Import von useConstraints ([REDMINE-1199](https://redmine.informationgrid.eu/issues/1199))
+
+### Komponenten
+
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.5.1/))<br>
+
 ## Version 4.4.6
 
 Release 16.10.2018
