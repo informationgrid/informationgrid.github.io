@@ -5,7 +5,7 @@
   {% comment %} Get version from path e.g. /1.0/index.html -> 1.0 {% endcomment %}
   {% assign path = page.path | split: '/' %}
   {% assign thisVersion = path[0] %}
-  {% assign latestVersion = site.versions | first %}
+  {% assign latestVersion = site.versions | first | split: '/' | first %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
