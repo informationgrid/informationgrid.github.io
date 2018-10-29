@@ -149,11 +149,11 @@
         <div class="bs-docs-sidebar hidden-print">
           <select class="form-control input-sm" onchange="document.location.href='{{site.baseurl}}/'+this.value+'/'">
           {% for v in site.versions %}
-            {% capture vStr %}{{v}}{% endcapture %}
+            {% assign vStr = v | split: ' ' | first %}
             {% if vStr == thisVersion %}
-            <option selected value="{{v | split ' ' | first}}">Version {{v}}</option>
+            <option selected value="{{vStr}}">Version {{v}}</option>
             {% else %}
-            <option value="{{v | split ' ' | first}}">Version {{v}}</option>
+            <option value="{{vStr}}">Version {{v}}</option>
             {% endif %}
           {% endfor %}
           </select>
@@ -216,7 +216,7 @@
         $("img").each(function() {
           // wrap images in a tag, for fancybox's sake
           var parent = $(this).parent();
-	  if (parent.text().trim() == "") {
+	        if (parent.text().trim() == "") {
             var clone = $(this).clone();
             var newParent = clone.wrap('<a class="fancy" href="'+ this.src +'">').parent().clone();
             newParent.fancybox({
