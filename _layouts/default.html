@@ -151,9 +151,9 @@
           {% for v in site.versions %}
             {% capture vStr %}{{v}}{% endcapture %}
             {% if vStr == thisVersion %}
-            <option selected value="{{v}}">Version {{v}}</option>
+            <option selected value="{{v | split ' ' | first}}">Version {{v}}</option>
             {% else %}
-            <option value="{{v}}">Version {{v}}</option>
+            <option value="{{v | split ' ' | first}}">Version {{v}}</option>
             {% endif %}
           {% endfor %}
           </select>
