@@ -4,6 +4,20 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.5.2
+
+Release 30.10.2018
+
+### Liste der Änderungen
+
+InGrid
+- [Bug] [CODELIST-REPO] Codeliste 1320: alte statt neuer Codeliste eingebunden ([REDMINE-1193](https://redmine.informationgrid.eu/issues/1193))
+
+### Komponenten
+
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.5.2/))
+
+
 ## Version 4.5.1
 
 Release 18.10.2018
