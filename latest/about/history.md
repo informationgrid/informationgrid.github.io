@@ -11,6 +11,7 @@ Release 30.10.2018
 ### Liste der Änderungen
 
 InGrid
+- [Feature] [CODELIST-REPO] Codeliste 111 erweitern um "BKG" ([REDMINE-1207](https://redmine.informationgrid.eu/issues/1207))
 - [Bug] [CODELIST-REPO] Codeliste 1320: alte statt neuer Codeliste eingebunden ([REDMINE-1193](https://redmine.informationgrid.eu/issues/1193))
 
 ### Komponenten
