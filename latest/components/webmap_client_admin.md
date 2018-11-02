@@ -500,8 +500,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
   ||Style|Legen Sie ein 'style'-Parameter für die GetMap-Abfrage fest, falls notwendig.|Wert aus der GetCapabilities des zugehörigen Dienstes.
   ||Origin|Tragen Sie aus dem TileMatrixSet den TopLeftCorner der Karte ein.|Wert aus der GetCapabilities des zugehörigen Dienstes.
   ||Scales|Tragen Sie aus dem TileMatrixSet den TileMatrix-ScaleDenominator der Karte ein.|Wert aus der GetCapabilities des zugehörigen Dienstes.
+  ||FeatureInfoTpl|Tragen Sie hier das Template für die GetFeatureInfo ein. | Wert aus der GetCapabilities des zugehörigen Dienstes.
 
-  
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_edit.gif "Webmap Client Admin - Karten bearbeiten")
 
 > Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Karten auch für zukünftige Portal-Updates erhalten.
