@@ -932,6 +932,8 @@ In der Liste der eingepflegten Karten unter dem Akkordeon "Karten" der Admin-GUI
 
 Um den Fehler bei den fehlerhaften Karten zu beheben, muss manuell in der Admin-GUI, je nach dem was der Status ist, entweder die Dienst-URL oder der Layer-Name geändert werden.
 
+Ist bei einer fehlerhaften Karte der Dienst noch erreichbar, aber die Karte (Layer-Name) existiert nicht mehr, so werden unterhalb des existierenden Layer-Name einer Karte eine Liste (in rot markiert) zur Verfügung gestellt, welches alle Layer-Namen eines Dienstes auflistet. Meistens ändert sich nur der Layer-Name für eine Karte und somit kann einfach der Layer-Name aktualisiert werden. Wählen Sie den passend Layer-Name aus der Liste aus und bestätigen Sie Ihre Änderung mit dem "Speichern"-Button.
+
 Möchten Sie eine E-Mail-Benachrichtigung, falls eingepflegte Karten nicht mehr erreichbar sind und einen Fehler aufweisen, so setzen Sie die Einstellung "scheduler.layer.update.mail" auf true. Gehen Sie hier wie unter [Einstellungen im Backend](#einstellungen-im-backend) beschrieben vor. Bei Änderung muss das Portal neugestartet werden.
 Ein SMTP-Server (Einstellung "feedback.host") muss eingestellt sein und die E-Mail geht an die Adresse unter Einstellung "feedback.to".
 
