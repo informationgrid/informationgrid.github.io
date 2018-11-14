@@ -685,6 +685,12 @@ Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss
 
 > Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleibt die angepassten CSS-Anpassungen auch für zukünftige Portal-Updates erhalten.
 
+### Lokalisierung
+
+Unter diesem Akkordeon werden Ihnen für die verwendeten Sprachen eine Liste aller lokalisierten Texte mit ihrem Schlüssel. 
+
+Änderen Sie einfach den Inhalt in dem Textfeld und Ihre Anpassung wird automatisch gespeichert. 
+
 <a name="konfiguration"></a>
 ## Konfiguration
 
