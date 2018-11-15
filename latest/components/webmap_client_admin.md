@@ -687,7 +687,7 @@ Achten Sie darauf, das der Inhalt des Textfeldes der CSS-Syntax entsprechen muss
 
 ### Lokalisierung
 
-Unter diesem Akkordeon werden Ihnen für die verwendeten Sprachen eine Liste aller lokalisierten Texte mit ihrem Schlüssel. 
+Unter diesem Akkordeon werden Ihnen für die verwendeten Sprachen eine Liste aller lokalisierten Texte mit ihrem Schlüssel aufgelistet. 
 
 Änderen Sie einfach den Inhalt in dem Textfeld und Ihre Anpassung wird automatisch gespeichert. 
 
