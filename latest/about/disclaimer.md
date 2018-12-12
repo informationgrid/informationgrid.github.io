@@ -1,5 +1,5 @@
 ---
-layout: disclaimer_Matomo
+layout: disclaimer_piwik
 title: Impressum
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
