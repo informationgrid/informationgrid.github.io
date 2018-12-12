@@ -132,7 +132,7 @@
       <div class="col-md-9" role="main">
         {{content}}
         
-        <iframe style="border: 0; height: 200px; width: 100%;" src="https://piwik.wemove.com/index.php?module=CustomOptOut&action=optOut&idSite=5&language=de"></iframe>
+        <iframe style="border: 0; height: 200px; width: 100%;" src="https://piwik.wemove.com/index.php?module=CoreAdminHome&action=optOut&idsite=5&language=de"></iframe>
       </div>
 
       <!-- Page navigation
@@ -217,6 +217,7 @@
 <script type="text/javascript">
   var _paq = _paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setCookieDomain", "*.ingrid-oss.eu"]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
