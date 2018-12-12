@@ -89,6 +89,8 @@ menu:
         href: components/interface_csw.html
       - title: Opensearch Server
         href: components/server_opensearch.html
+  - title: Downloads
+    href: "about/downloads.html"
 published: true
 ---
 

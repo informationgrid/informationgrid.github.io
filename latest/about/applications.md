@@ -26,6 +26,10 @@ Mit dem InGridCatalog verfügt die InGrid-Architektur über eine web-basierte le
 
 InGrid lässt sich als Intranet Portal verwenden. Mit unterschiedlichen Datenquellenadaptern lassen sich heterogene Datenquellen über eine einheitliche Suche erschließen.
 
+### Einsatz als UVP Portal (Umweltverträglichkeitsprüfungen)
+
+InGrid unterstützt die Erfassung und Publikation von Umweltverträglichkeitsprüfungen inkl. Abbildung von Verfahrensschritten, Upload von Dokumenten und Publikation von Informationen zur Bauleitplanung.
+
  
 ### Einsatz als allgemeines Verwaltungsportal
 
@@ -49,15 +53,16 @@ Technisch gesehen unterscheidet sich der Einsatz von InGrid auf europäischer Eb
 * [Sachsen PortalU - behördliche Umweltinformationen aus Sachsen](http://portalu.smul.sachsen.de/)
 * [PortalU Rheinland Pfalz - behördliche Umweltinformationen aus Rheinland Pfalz](http://www.portalu.rlp.de/)
         
-### Forschungsportale
-
-* [Forschungsprojekt “Design eines Informationsportals als Forschungsinfrastruktur für Großschutzgebiete - Beispiel: UNESCO MaB Biosphärenreservat Bliesgau”, Umwelt-Campus Birkenfeld (Fachhochschule Trier)](http://cqcounter.com/www/issgeo.org.html)
         
-### Andere Ressorts
+### Weitere Anwendungen
 
 * Geoportal der Wasser- und Schifffahrtsverwaltung des Bundes im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur, betrieben durch das [Informationstechnikzentrum Bund (ITZBund)](https://www.itzbund.de/)
 
 		
 ## InGrid auf EU-Ebene:
 
-* GS Soil Portal: Das europäisches Bodenportal wurde im Rahmen des EU-Projekt GS Soil eingesetzt. (Installation ist nicht mehr online. [Infos können hier eingesehen werden.](http://ec.europa.eu/information_society/apps/projects/factsheet/index.cfm?project_ref=ECP-2008-GEO-318004))
+* GS Soil Portal: Das europäisches Bodenportal wurde im Rahmen des EU-Projekt GS Soil eingesetzt. (Installation ist nicht mehr online.) Weitere Informationen:
+
+  * https://www.bgr.bund.de/DE/Themen/Boden/Projekte/Informationsgrundlagen-abgeschlossen/GSSoil/GSSoil.html
+  * https://inspire.ec.europa.eu/SDICS/gs-soil
+  * http://www.eurogeosurveys.org/projects/gssoil/

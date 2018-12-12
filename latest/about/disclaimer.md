@@ -34,8 +34,8 @@ E-Mail: vkoopuis@informationgrid.eu
 ### Projektpartner Wirtschaft:
 
 wemove digital solutions GmbH<br>
-Eschersheimer Landstr. 5-7<br>
-D-60322 Frankfurt am Main<br>
+Hanauer Landstraße 52<br>
+D-60314 Frankfurt am Main<br>
 Tel.: +49 69 759 003 - 0<br>
 E-Mail: ingrid@wemove.com
 
