@@ -90,7 +90,7 @@ menu:
       - title: Opensearch Server
         href: components/server_opensearch.html
   - title: Downloads
-    href: "about/downloads.html"
+    href: "downloads.html"
 published: true
 ---
 
