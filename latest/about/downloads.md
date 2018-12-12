@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lizensierung
+title: Downloads
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
