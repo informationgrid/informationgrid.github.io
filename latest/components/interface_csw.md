@@ -454,8 +454,8 @@ RewriteEngine on
 # Die folgende Regel schreibt die Anfragen an csw um und leitet sie wie
 # einen Proxy-Request an 8083:csw weiter:
 
-RewriteRule ^/csw/partner/(.*)$ http://127.0.0.1:8083/csw?partner\=$1 [P]
-RewriteRule ^/csw/provider/(.*)$ http://127.0.0.1:8083/csw?provider\=$1 [P]
+RewriteRule ^/csw/partner/(.*) http://127.0.0.1:8083/csw?%{QUERY_STRING}&partner=$1 [P]
+RewriteRule ^/csw/provider/(.*) http://127.0.0.1:8083/csw?%{QUERY_STRING}&provider=$1 [P]
 ```
 
 Die Einschränkungen können auch direkt in der CSW Anfrage formuliert werden. Intern ist es tatsächlich so, dass die Einschränkungen in der URL in eine Einschränkung innerhalb der Filter-Query der CSW Anfrage umgesetzt werden.
