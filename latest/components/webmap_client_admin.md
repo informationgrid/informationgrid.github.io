@@ -729,13 +729,18 @@ Damit bleiben die veränderten Einstellungen auch nach einem Update des Portals 
 | feedback.password                 | Mailserver Passwort                                                       | String         | |
 | feedback.protocol                 | Mailserver Protokoll                                                      | String         | |
 | feedback.ssl                      | E-Mail verschlüsselt ?                                                    | Boolean        | false |
-| **KML Settings (Redlining etc.):** | | |
+| **KML-Dateien (Redlining etc.):** | | |
 | kml.directory                     | Verzeichnis in dem die KML Daten abgelegt werden                          | String         | *./webapps/ingrid-webmap-client/frontend/kml/* |
-| kml.days_of_exist                 | Wie lange sollen KML Dateien vorgehalten werden (in Tagen), wenn die Maximalanzahl der Dateien im Verzeichnis überschritten ist ?               | Integer        | 365 |
+| kml.days_of_exist                 | Wie lange sollen KML Dateien vorgehalten werden (in Tagen), wenn die Maximalanzahl der Dateien im Verzeichnis überschritten ist ?                 | Integer        | 365 |
 | kml.max_directory_files           | Maximalanzahl der Dateien im Verzeichnis. Wenn diese Anzahl überschritten ist, dann wird geprüft, ob Dateien gelöscht werden können.<br><br>Bsp. mit den Default Werten:<br>Sind im KML Verzeichnis mehr als 1000 Dateien, so werden alle Dateien gelöscht, deren letzte Änderung mehr als 365 Tage zurück liegt. Es können also mehr als 1000 Dateien vorhanden sein. | Integer        | 1000 |
+| **Dateien von komprimierten Parameter (z.B. layers) :** | | |
+| shorten.days_of_exist             | Wie lange sollen Dateien vorgehalten werden (in Tagen), wenn die Maximalanzahl der Dateien im Verzeichnis überschritten ist ?                 | Integer        | 365 |
+| shorten.max_directory_files       | Maximalanzahl der Dateien im Verzeichnis. Wenn diese Anzahl überschritten ist, dann wird geprüft, ob Dateien gelöscht werden können.<br><br>Bsp. mit den Default Werten:<br>Sind im KML Verzeichnis mehr als 1000 Dateien, so werden alle Dateien gelöscht, deren letzte Änderung mehr als 365 Tage zurück liegt. Es können also mehr als 1000 Dateien vorhanden sein. | Integer        | 1000 |
 | **Update Job Settings (Job zur Aktualisierung der Layer Daten aus den GetCapabilities):** | | |
 | scheduler.layer.update            | Wann soll der Job ausgeführt werden ?                                     | String | "0 3 * * *" (jede Nacht 3 Uhr) |
 | scheduler.layer.update.mail       | Soll bei der Aktualisierung eine Mail verschickt werden ?                 | Boolean        | false |
+| **Cleanup Job Settings (Job zur Löschung von veralteten Dateien im Konfigurationsverzeichnis):** | | |
+| scheduler.cleanup.data            | Wann soll der Job ausgeführt werden ?                                     | String         | 0 4 * * * |
 
 Beispiel:
 Mit Hinzufügen der nachfolgenden Einstellungen in die Datei *application.override.properties* werden die JS Konfigurationsdateien für's Frontend und die KML Dateien für's Zeichnen aus dem zentralen *WebmapClientData* Verzeichnis geladen/abgelegt.
@@ -955,4 +960,8 @@ Theoretisch können auch andere Zeitperioden eingepflegt werden, aber die Funkti
 
 > Hinweis: Die Zeitstempeln der eingepflegten Karten werden nicht automatisch aktualisiert.
 
+#### Warum ist der Wert des "layers"-Parameter in der URL so kryptisch?
 
+Im Mapclient wird der "layers"-Parameter in der URL komprimiert dargestellt. Hierbei werden die hinzugefügten Layern in der Karte nicht mehr per Komma getrennt in der URL aufgelistet, sondern die Liste der Layern werden in eine Datei geschrieben und im "layers"-Parameter wird der Dateiname referenziert.
+
+Dadurch wird vermieden, dass die URL des Mapclients zu lange wird und im Browser Probleme verursacht. 
