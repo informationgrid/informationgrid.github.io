@@ -960,7 +960,7 @@ Theoretisch können auch andere Zeitperioden eingepflegt werden, aber die Funkti
 
 > Hinweis: Die Zeitstempeln der eingepflegten Karten werden nicht automatisch aktualisiert.
 
-#### Warum ist der Wert des "layers"-Parameter in der URL so kryptisch?
+#### Warum ist der Wert des "layers"-Parameters in der URL so kryptisch?
 
 Im Mapclient wird der "layers"-Parameter in der URL komprimiert dargestellt. Hierbei werden die hinzugefügten Layern in der Karte nicht mehr per Komma getrennt in der URL aufgelistet, sondern die Liste der Layern werden in eine Datei geschrieben und im "layers"-Parameter wird der Dateiname referenziert.
 
