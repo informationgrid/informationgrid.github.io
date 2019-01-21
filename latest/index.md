@@ -39,8 +39,6 @@ menu:
         type: header
       - title: iBus
         href: components/ibus.html
-      - title: iPlug Management
-        href: components/iplug_management.html
       - title: iPlug SNS
         href: components/iplug_sns.html
       - title: Communication Gateway
@@ -118,7 +116,6 @@ published: true
 ### Infrastruktur 
 
 - [iBus](components/ibus.html) - Zentrale Komponente der InGrid Kommunikationsschicht
-- [iPlug Management](components/iplug_management.html) - Interne Managementkomponente
 - [iPlug SNS](components/iplug_sns.html) - Schnittstelle zu Thesaurus und Gazetteer
 - [Communication Gateway](components/communication_gateway.html) - Leitet InGrid Kommunikation über HTTP um.
 - [Codelist Repository](components/codelist_repository.html) - Zentrale Verwaltung von Code-Listen
