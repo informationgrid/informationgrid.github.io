@@ -4,6 +4,64 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.0
+
+Release 21.01.2019
+
+### Änderungen
+
+Quartalsrelease, u.a.:
+- Betrieb mit Oracle 12
+- aktualisierter Kartenviewer u.a. mit Darstellung von Karten mit Zeit-Dimension
+- separates Login auf Kartenviewer Administrations-Oberfläche
+- verbesserte Eingabe in Kartenviewer Administrations-Oberfläche
+- Anzeige von automatisch hinzugefügten Schlüsselwörtern im Portal
+- Entfernung von ISO Themenkategorien für Geodatendienste
+- Fix UVP Statistik
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [IGE] IGE/Portal für Dienste werden ISO Themenkategorien angezeigt ([REDMINE-1099](https://redmine.informationgrid.eu/issues/1099))
+- [Feature] [IGE] IGE: Zusätzliche Indexierung von Schlagwörten die beim ISO 19139 Mapping automatisch hinzugefügt werden ([REDMINE-1105](https://redmine.informationgrid.eu/issues/1105))
+- [Feature] [IGE/PORTAL] Aktualisierung JDBC Treiber für Oracle 12 ([REDMINE-1212](https://redmine.informationgrid.eu/issues/1212))
+- [Feature] [PORTAL] PORTAL: Entfernen von SSO im Portal-Tomcat ([REDMINE-1159](https://redmine.informationgrid.eu/issues/1159))
+- [Feature] [PORTAL] PORTAL: Hinzufügen von local host zum Betreff der Job Alert Emails ([REDMINE-1260](https://redmine.informationgrid.eu/issues/1260))
+- [Feature] [MAPCLIENT] MAPCLIENT: Einführung eines Logout-Buttons für die Admin-GUI ([REDMINE-1229](https://redmine.informationgrid.eu/issues/1229))
+- [Feature] [MAPCLIENT] MAPCLIENT/PORTAL: URL zum Admin GUI des Mapclients im Portal Admin Menü hinzufügen ([REDMINE-1231](https://redmine.informationgrid.eu/issues/1231))
+- [Feature] [MAPCLIENT] MAPCLIENT: Admin-GUI: Hilfe-Link einbauen ([REDMINE-1254](https://redmine.informationgrid.eu/issues/1254))
+- [Feature] [MAPCLIENT] MAPCLIENT: Darstellung Karten mit Dimension 'TIME' ([REDMINE-1141](https://redmine.informationgrid.eu/issues/1141))
+- [Feature] [MAPCLIENT] MAPCLIENT: Darstellung von Kategorie-Hierachie bei fehlerhaften Karten ([REDMINE-1162](https://redmine.informationgrid.eu/issues/1162))
+- [Feature] [MAPCLIENT] MAPCLIENT: Auswahl von existierenden Layernamen bei fehlerhaften Karten ([REDMINE-1163](https://redmine.informationgrid.eu/issues/1163))
+- [Feature] [MAPCLIENT] MAPCLIENT: Kopieren von Kategorien in der Admin-GUI ([REDMINE-1165](https://redmine.informationgrid.eu/issues/1165))
+- [Feature] [MAPCLIENT] MAPCLIENT: Anpassung der Lokalisierung über die Admin-GUI ([REDMINE-1209](https://redmine.informationgrid.eu/issues/1209))
+- [Feature] [MAPCLIENT] MAPCLIENT: Menü soll auch im Vollbildmodus angezeigt werden ([REDMINE-1225](https://redmine.informationgrid.eu/issues/1225))
+- [Bug] [CODELIST-REPO] CODELIST-REPO: Sortierung der Entries nach ID funktioniert nicht ([REDMINE-1206](https://redmine.informationgrid.eu/issues/1206))
+- [Bug] [CODELIST-REPO] CODELIST-REPO: Patches werden nicht eingespielt, wenn per Docker installiert ([REDMINE-1208](https://redmine.informationgrid.eu/issues/1208))
+- [Bug] [IGE] IGE: Indizierung erfolgt zusätzlich in anderen Indizes ([REDMINE-1270](https://redmine.informationgrid.eu/issues/1270))
+- [Bug] [MAPCLIENT] MAPCLIENT: Funktion Akkordeonmenü fehlerhaft mit Safari 12.0.1 unter macOS Mojave und unter Android-8.0.0 mit Firefox V61.0 ([REDMINE-1224](https://redmine.informationgrid.eu/issues/1224))
+
+UVP
+- [Feature] [IGE] Entfernen des Hilfetextes von Auswahl "Vorprüfung durchgeführt" ([REDMINE-1213](https://redmine.informationgrid.eu/issues/1213))
+- [Feature] [IGE]  Editor: Erweiterung Löschhinweis bzgl. Berichtspflichten ([REDMINE-1217](https://redmine.informationgrid.eu/issues/1217))
+- [Bug] [IGE] UVP: Anpassung der Hilfe beim Upload ([REDMINE-880](https://redmine.informationgrid.eu/issues/880))
+- [Bug] [IGE] Fehler bei Umsetzung EU Berichtspflicht ([REDMINE-1248](https://redmine.informationgrid.eu/issues/1248))
+
+BAW
+- [Feature] [PORTAL/CSW] Erweiterungen BAW DMQS 2017 ([REDMINE-752](https://redmine.informationgrid.eu/issues/752))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.0/))<br>
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.6.0/))<br>
+  **Achtung Schnittstellenänderung! Portal und iPlug IGE müssen zusammen aktualisiert werden.**
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/4.6.0/))<br>
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/4.6.0/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.6.0/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.6.0/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/4.6.0/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.6.0/))
+
 ## Version 4.5.2
 
 Release 30.10.2018
