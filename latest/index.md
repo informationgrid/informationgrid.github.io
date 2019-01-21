@@ -77,8 +77,6 @@ menu:
         href: components/iplug_excel.html
       - title: iPlug XML
         href: components/iplug_xml.html
-      - title: iPlug MapClient
-        href: components/iplug_dsc_mapclient.html
       - title: Schnittstellenkomponenten
         type: header
       - title: Such-Schnittstelle
@@ -141,7 +139,6 @@ published: true
 - [iPlug WFS](components/iplug_dsc_wfs.html) - Indexierung von WFS-Diensten (Web Feature Service)
 - [iPlug Excel](components/iplug_excel.html) - Indexierung von Excel Dateien
 - [iPlug XML](components/iplug_xml.html) - Indexierung vom XML Daten
-- [iPlug MapClient](components/iplug_dsc_mapclient.html) - Indexieren von WMS Capabilities (Web Map Service)
 
 ### Schnittstellenkomponenten
 
