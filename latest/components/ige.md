@@ -212,3 +212,14 @@ JOIN obj.objectConformitys oc
 WHERE oc.publicationDate IS NULL
 ```
 
+### Im Capabilities Assistent werden beim Import von WMS Diensten keine gekoppelten Daten importiert.
+
+Um über den Capabilities Assistent gekoppelte Daten zu importieren müssen die betreffenden Layer in der Capabilities Antwort das Element Identifier enthalten. Bsp: aus http://www.geodaten-mv.de/dienste/adv_dop
+
+```xml
+<Identifier authority="GeoPortal.MV">http://www.geodaten-mv.de/geomis/id/bcfae1e9-1e22-47dd-92ea-1901308b9b74</Identifier>
+```
+Anhand dieses Identifiers kann dann der Datensatz dem WMS Layer zugeordnet werden. Die Kopplung ermöglicht eine Kartendarstellung des Datensatzes.
+
+
+
