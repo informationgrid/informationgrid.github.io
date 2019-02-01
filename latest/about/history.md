@@ -62,6 +62,20 @@ BAW
 - iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/4.6.0/))
 - iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/4.6.0/))
 
+
+## Version 4.2.7
+
+Release 13.11.2018
+
+### Liste der Änderungen
+
+- UVP: Improve BLP import robustness
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.7/))
+
+
 ## Version 4.5.2
 
 Release 30.10.2018
