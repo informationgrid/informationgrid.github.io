@@ -20,6 +20,17 @@ Release 01.02.2019
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.2.8/))
 - iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.2.8/))
 
+## Version 4.6.1
+
+### Liste der Änderungen
+
+NUMIS
+- [Feature] [Portal] NUMIS: Header Logo Darstellung im Portal unter IE11 fehlerhaft ([REDMINE-1280](https://redmine.informationgrid.eu/issues/1280))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.1/))
+
 
 ## Version 4.6.0
 
