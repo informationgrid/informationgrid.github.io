@@ -4,6 +4,22 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.8
+
+Release 01.02.2019
+
+### Liste der Änderungen
+
+- [Feature] [IGE] IGE: Vergrößerung der Anzahl der zulässigen Zeichen bei der URL der Vorschaugrafik ([REDMINE-1104](https://redmine.informationgrid.eu/issues/1104))
+- [Bug] [IGE] IGE: ISO-Element hoursOfService falsch im ISO-XML plaziert ([REDMINE-1284](https://redmine.informationgrid.eu/issues/1284))
+- [Bug] [SYSTEM] Abfrage des Codelistrepositories in IGE und iBus (früher Management iPlug) berücksichtigt Proxy Einstellungen nicht. ([REDMINE-1285](https://redmine.informationgrid.eu/issues/1285))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.8/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.2.8/))
+- iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.2.8/))
+
 ## Version 4.2.6
 
 Release 16.10.2018
