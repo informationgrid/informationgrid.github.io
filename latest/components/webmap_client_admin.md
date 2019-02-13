@@ -438,25 +438,15 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
 
-- **Filtern nach ...**
+- **Fehlerhafte Karten**
 
-  Weitere Filtermöglichkeiten der Liste finden Sie beim betätigen des Button rechts neben dem Suchfeld. Hierbei öffnen sich ein weiterer Bereich mit verschiedenen Auswahlmöglichkeiten, die die Liste der eingepflegten Karten begrenzt.
+  Die Liste der Karten stellte Ihnen fehlerhafte Karten dar.
 
-  * Filtern nach Kategorien
-  
-    Hier werden Ihr die Karten angezeigt die auch in der ausgewählten Kategorie eingebunden sind.
+  Ist eine Karte fehlerhaft, weil die Karte nicht mehr erreichbar ist, so wird dies in der Liste der eingepflegten Karte anhand eines "i"-Symbol angemerkt. 
 
-  * Filtern nach Karten-Typ
+  Sie können auch die Gesamtliste auf fehlerhafte Karten einschränken. Aktivieren Sie hierfür die Checkbox "Nur fehlerhafte Karten" unterhalb der Suche. 
 
-    Begrenzen können Sie auch die Liste nach dem Karten-Typ, also WMS oder WMTS.
-
-  * Filtern nach fehlerhaften Karten
-
-    Die Liste wird nach fehlerhaften Karten gefiltert, also Karten deren Dienst nicht mehr erreichbar sind oder in der GetCapabilities des Dienstes nicht mehr als Layer aufgelistet werden. 
-    
-    Ist eine Karte fehlerhaft so wird dies in der Liste der eingepflegten Karte anhand eines "i"-Symbol angemerkt. 
-    
-    (siehe [Fehlerhafte Karten]("#fehlerhafte-karten") )
+  (siehe [Fehlerhafte Karten]("#fehlerhafte-karten") )
 
 - **Karten bearbeiten**
 
