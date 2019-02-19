@@ -24,7 +24,7 @@ Anwendung findet der Upgrade Server z.B. im Portal integrierten [Upgrade Client]
 
 ## Systemvoraussetzungen
 
-* 64 MB RAM
+* 256 MB RAM
 * 500 MB Harddrive
 
 * JAVA 8

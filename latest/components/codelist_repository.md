@@ -23,7 +23,7 @@ Eine Kopie der Codelistdaten wird gewöhnlich in einer XML-Datei "data/codelists
 
 ## Systemvoraussetzungen
 
-* 64 MB RAM
+* 256 MB RAM
 * 500 MB Harddrive
 
 * JAVA 8

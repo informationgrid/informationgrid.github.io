@@ -32,10 +32,10 @@ Die Schnittstelle bildet Daten aus dem InGrid Catalog Datenraum wie folgt ab:
 
 ## Systemvoraussetzungen
 
-* 64 MB RAM
-* 50 MB Harddrive
+* 256 MB RAM
+* 500 MB Harddrive
 
-* JAVA 1.7
+* JAVA 8
 * Cygwin (unter Windows)
 
 

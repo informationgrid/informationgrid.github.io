@@ -34,7 +34,7 @@ Wird das Gateway Ausgangsseitig im SSL Modus betrieben so müssen die Pakete an 
 
 ## Systemvoraussetzungen
 
-- 64 MB RAM
+- 256 MB RAM
 - 500 MB Harddrive
 
 - JAVA 8

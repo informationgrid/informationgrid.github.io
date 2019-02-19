@@ -16,10 +16,10 @@ Das iPlug dient dem Indexieren von Excel Daten. Excel Dateien können komfortabe
 
 ## Systemvoraussetzungen
 
-* 64 MB RAM
-* 50 MB Harddrive
+* 256 MB RAM
+* 500 MB Harddrive
 
-* JAVA 1.7
+* JAVA 8
 * Cygwin (unter Windows)
 
 

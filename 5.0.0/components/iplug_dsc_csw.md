@@ -19,10 +19,10 @@ Das iPlug fragt die CSW Schnittstelle regelmäßig (z.B. einmal täglich) ab. Di
 
 ## Systemvoraussetzungen
 
-* 64 MB RAM
-* 50 MB Harddrive
+* 256 MB RAM
+* 500 MB Harddrive
 
-* JAVA 1.7
+* JAVA 8
 * Cygwin (unter Windows)
 
 
