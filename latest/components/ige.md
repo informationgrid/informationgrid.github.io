@@ -16,9 +16,9 @@ Die Komponente ist normalerweise Bestandteil des Portals und wird mit diesem ins
 ## Systemvoraussetzungen
 
 * 512 MB RAM
-* 20 MB Harddrive
+* 500 MB Harddrive
 
-* JAVA 1.6
+* JAVA 8
 * Cygwin (unter Windows)
 
 
