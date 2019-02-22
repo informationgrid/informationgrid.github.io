@@ -372,6 +372,18 @@ Die URLs können sowohl über ein URL Teilstring oder über einen Fehlercode gef
 
 <figcaption class="figcaption">SE iPlug Instanzen - Report - URL Fehler</figcaption>
 
+#### Instanzen - Administratoren
+Hier können Instanzadministratoren erstellt und verwaltet werden. Die erstellten Benutzer können sich auf dem iPlug anmelden und erhalten Zugriff auf die zugewiesene Instanz. Auf andere Instanzen und die Konfiguration des iPlugs können diese Benutzer nicht zugreifen.
+
+![SE iPlug Instanzen - Administratoren](../images/iplug_se_administratoren.png "SE iPlug Instanzen - Administratoren")
+<figcaption class="figcaption">SE iPlug Instanzen - Administratoren</figcaption>
+
+#### Instanzen - BLP Import
+Der BLP Import Tab ist optional. Zur Aktivierung muss in der config.override.properties Datei die Option `enable.blpImport=true` hinzugefügt werden.
+Nach der Auswahl einer passenden Excel Datei werden die Zeilen ausgewertet und die URLs in dir Instanz aufgenommen. Nach dem Import kann dann wie gewohnt ein Crawl im Management Tab ausgeführt werden.
+![SE iPlug Instanzen - BLP Import](../images/iplug_se_blp_import.png "SE iPlug Instanzen - BLP Import")
+<figcaption class="figcaption">SE iPlug Instanzen - BLP Import</figcaption>
+
 
 
 
