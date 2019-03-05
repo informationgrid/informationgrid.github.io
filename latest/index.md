@@ -3,10 +3,10 @@ layout: default
 title: InGrid
 description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 isHome: true
-menu: 
+menu:
   - title: "Über InGrid"
     href: "about"
-    menu: 
+    menu:
       - title: Überblick
         href: about/overview.html
       - title: Was ist neu?
@@ -23,7 +23,7 @@ menu:
         href: about/disclaimer.html
   - title: System
     href: "system"
-    menu: 
+    menu:
       - title: Architektur
         href: system/architecture.html
       - title: Installation
@@ -34,7 +34,7 @@ menu:
         href: system/querysyntax.html
   - title: Komponenten
     href: "components"
-    menu: 
+    menu:
       - title: Infrastruktur
         type: header
       - title: iBus
@@ -61,6 +61,8 @@ menu:
         href: components/ige.html
       - title: iPlug IGE / InGrid Catalog
         href: components/iplug_ige.html
+      - title: UVP-Portal
+        href: components/uvp.html
       - title: Datenanbindung
         type: header
       - title: iPlug DSC
@@ -111,7 +113,7 @@ published: true
 
 ## Komponenten
 
-### Infrastruktur 
+### Infrastruktur
 
 - [iBus](components/ibus.html) - Zentrale Komponente der InGrid Kommunikationsschicht
 - [iPlug SNS](components/iplug_sns.html) - Schnittstelle zu Thesaurus und Gazetteer
@@ -129,6 +131,7 @@ published: true
 
 - [InGrid Editor](components/ige.html) - Metadaten Editor
 - [iPlug IGE / InGrid Catalog](components/iplug_ige.html) - Anbindung InGrid Catalog
+- [UVP Portal](components/uvp.html) - Erfassung und Darstellung von Umweltverträglichkeitsprüfungen, sowie Bauleitplanungsdaten
 
 ### Datenanbindung
 
@@ -146,5 +149,5 @@ published: true
 - [ATOM Download Service](components/interface_search.html#atom-download-service-feed-schnittstelle) - Download von Basisdaten von Geodatendiensten
 - [CSW Schnittstelle](components/interface_csw.html) - Recherchieren über eine CSW Schnittstelle (Catalog Service Web)
 - [Opensearch Server](components/server_opensearch.html) - Anbindung von Datenbanken über eine OpenSearch Schnittstelle
-  
+
 
