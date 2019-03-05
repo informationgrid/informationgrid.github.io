@@ -8,7 +8,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Was ist das Portal?
 
-Das Portal bietet den Benutzern ein komfortables Interface zur InGrid-Suche und zu weiteren Diensten, wie dem Browsen in Datenkatalogen, dem Karten Client oder dem gezielten Zugriff auf Service-Informationen, Messwerte, Umweltthemen oder Umweltereignisse.
+Das Portal bietet den Benutzern ein komfortables Interface zur Suche über den InGrid Datenraum und zu weiteren Diensten, wie dem Browsen in Datenkatalogen, dem Karten Client oder dem gezielten Zugriff auf Service-Informationen, Messwerte, Umweltthemen oder Umweltereignisse.
 
 Mittels Anmeldung (Authentifizierung) können Benutzer Ihre Suche dauerhaft personalisieren oder die Ansicht der Startseite verändern.
 
@@ -17,23 +17,21 @@ Das Portal enthält den InGrid-Editor (IGE), eine Oberfläche zum Erfassen und P
 Funktionsumfang
 
 - Freie Suche in allen angeschlossenen Datenquellen
-- Suche in vorgeordneten Informationen (Service, Messwerte, Umweltthemen, Umweltchronik)
+- Facettierung der Suche, Einschränkung der Suchergebnisse über Kategorien
 
-- Query-Builder zum Erstellen von Such-Queries
 - News-Feed-Concentrator (Zusammenfassen verschiedener News-Feeds) für den Umweltbereich
 
-- Personalisierung der Startseite
-- Personalisierung von Sucheinstellungen
-- personalisierte Administrationsfunktionalitäten
+- Administrationsfunktionalitäten
 
-- Erfassung/Pflege von Metadaten in Datenkatalogen (IGC - InGrid Catalog) mittels IGE für ausgewählte Benutzer
+- Erfassung/Pflege von Metadaten in Datenkatalogen (IGC - InGrid Catalog) mittels InGrid Editor (IGE) für ausgewählte Benutzer
 
 Die Inhalte der Startseite können angepasst werden. Es existiert die Möglichkeit, verschiedene Default-Einstellungen für die Suche festzulegen:
 
 - Auswahl von einem oder mehreren Informationsanbietern (Bund/Länder, Anbieter)
 - Auswahl einer oder mehrerer Datenquellen (Metadaten, Webseiten, Fachdatenbank)
-- Festlegung der Sortierung von Suchergebnissen (Relevanz, Datum)
-- Festlegung der Gruppierung von Suchergebnissen (Partner, Anbieter)
+
+Das Portal kann über einen Profil-Mechanismus an verschiedene Anforderungen angepasst werden. So kann das Layout kann je nach Anforderung beliebig angepasst werden. Auch die Funktionalität lässt sich weitgehend erweitern und anpassen, so dass flexibel auf kundespezifische Anforderungen eingegangen werden kann.
+Beispielsweise wurde für das UVP Portal https://uvp-verbund.de/ Sowohl das Layout verändert und die Funktionaltät angepasst (z.B. Kartendarstellung, Detaildarstellung, Startseite, Suche, etc.)
 
 Das Portal basiert auf dem Jetspeed Portal Framework [https://portals.apache.org/jetspeed-2/](https://portals.apache.org/jetspeed-2/)
 
@@ -264,15 +262,15 @@ Während der Installation bitte "Update" auswählen.
 
 ![Portal Installer - Update](../images/portal_installer_update.png "Portal Installer - Update")
 
-Liegt bei Ihrer aktuellen Portal-Installationen ein Version kleiner gleich 4.0.2 vor, so müssen Sie die Einstellungen des Webmap Client's aktualisieren bzw. erweitern. Durch diese Aktualisierung werden auch alte Konfigurationsdaten des alten Webmap Client's bereinigt. 
+Liegt bei Ihrer aktuellen Portal-Installationen ein Version kleiner gleich 4.0.2 vor, so müssen Sie die Einstellungen des Webmap Client's aktualisieren bzw. erweitern. Durch diese Aktualisierung werden auch alte Konfigurationsdaten des alten Webmap Client's bereinigt.
 
 ![Portal Installer - Webmap Client Update](../images/portal_installer_update_mapclient.png "Portal Installer - Webmap Client Update")
 
 Geben Sie anschließend die neuen Webmap Client Einstellungen ein. Für die Einstellung "WebmapClient-Datenverzeichnis" geben Sie den Eltern-Pfad Ihres "WebmapClientData"-Verzeichnis (per Default: "/opt/ingrid/") an.
 
 {% highlight text %}
-Beispiel: 
-Ihr "WebmapClientData"-Verzeichnispfad lautet "/opt/ingrid/WebmapClientData", so geben Sie "/opt/ingrid/" an. 
+Beispiel:
+Ihr "WebmapClientData"-Verzeichnispfad lautet "/opt/ingrid/WebmapClientData", so geben Sie "/opt/ingrid/" an.
 {% endhighlight %}
 
 Die weiteren Einstellungsmöglichkeiten dienen dem Webmap Client für das Versenden von E-Mails.
@@ -415,7 +413,7 @@ Die Einstellungen für die Postgres Datenbank erfolgen im Portal in folgenden Da
 {% highlight text %}
      <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 {% endhighlight %}
-        
+
 * *quartz.properties*:
 {% highlight text %}
      org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
@@ -427,7 +425,7 @@ Die Einstellungen für die Postgres Datenbank erfolgen im Portal in folgenden Da
 {% highlight text %}
      <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 {% endhighlight %}
-		
+
 **Verzeichnis _PORTAL_HOME/apache-tomcat/webapps/ingrid-portal-mdek-application/WEB-INF/classes_**
 
 * *default-datasource.properties*:
@@ -507,7 +505,7 @@ echo 'export INGRID_OPTS="$INGRID_OPTS -Dhttp.proxyHost=yourProxyURL -Dhttp.prox
 
 User und Passwort müssen nicht unbedingt angegeben werden.
 
-Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin anders escaped werden: 
+Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin anders escaped werden:
 
 {% highlight text %}-Dhttp.nonProxyHosts=localhost^|127.*^|[::1]{% endhighlight %}
 
