@@ -4,6 +4,18 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.2
+
+### Liste der Änderungen
+
+- [Feature] [IGE] IGE: ISO-Element hoursOfService falsch im ISO-XML plaziert ([REDMINE-1284](https://redmine.informationgrid.eu/issues/1284))
+- [Feature] [Portal] Portalseiten im Browser als "unsichere Verbindung" ([REDMINE-1304](https://redmine.informationgrid.eu/issues/1304))
+- [Feature] [Portal] Messwerte-Client laden von OSM in HTTPS  ([REDMINE-1305](https://redmine.informationgrid.eu/issues/1305))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.2/))
+
 ## Version 4.2.8
 
 Release 01.02.2019
