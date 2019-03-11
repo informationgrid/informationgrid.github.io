@@ -15,6 +15,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.6.2/))
 
 ## Version 4.2.8
 
