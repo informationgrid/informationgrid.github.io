@@ -4,6 +4,21 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.2.1
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [IGE] Schließen der Datei nach dem Upload im InGrid Editor
+
+UVP
+- [Feature] [Portal] Fehlermeldung bzgl. dem Laden des Favicons bereinigt
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.2.1/))
+
+
 ## Version 4.6.2
 
 ### Liste der Änderungen
