@@ -4,6 +4,17 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.4.9
+
+### Liste der Änderungen
+
+UVP
+- [Bug] [Portal] Fehler beim Erstellen des Arrays für die Kartenmarker ([REDMINE-1334](https://redmine.informationgrid.eu/issues/1334))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.9/))
+
 ## Version 4.6.2.1
 
 ### Liste der Änderungen
