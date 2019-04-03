@@ -8,10 +8,12 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ### Liste der Änderungen
 
+InGrid
+- [Feature] [IGE] Schließen der Datei nach dem Upload im InGrid Editor
+
 UVP
+- [Feature] [Portal] Fehlermeldung bzgl. dem Laden des Favicons bereinigt
 - [Bug] [Portal] Fehler beim Erstellen des Arrays für die Kartenmarker ([REDMINE-1334](https://redmine.informationgrid.eu/issues/1334))
-- [Bug] [Portal] Fehler beim Laden des Favicons.
-- [Bug] [IGE] Fehlendes schließen der Upload-Datei behoben. 
 
 ### Komponenten
 
