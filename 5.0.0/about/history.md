@@ -4,6 +4,100 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 5.0.0
+
+Release 16.04.2019
+
+### Wichtige Änderungen
+
+#### Verwendung eines zentralen Index
+
+Mit der Version 5.0.0 wird ein zentraler Index eingeführt, in dem alle iPlugs ihre Daten indizieren. Dieser zentrale Index wird vom iBus verwaltet, um diejenigen Indizes zu definieren, die durchsucht werden sollen. Dies entspricht am An- und Ausschalten der iPlugs in der vorherigen Version.
+
+Durch die Umstellung entfällt die Konfiguration der "Verfügbarkeit der Ergebnisse" in den iPlugs. Da die Suche nicht mehr in den iPlugs erfolgt, können diese auch keinen Einfluss mehr auf die Ausgabe der Ergebnisse nehmen. Wird diese Funktion benötigt, da man bspw. einen Teil seiner Daten weitergeben möchte, so gibt es folgenden Lösungsansatz:
+
+* Installation eines zusätzlichen iPlugs
+* Anschluss an den iBus, an dem die Daten abgegeben werden sollen (in dessen zentral Index)
+* Anpassung der Indizierung, um nur die gewünschten Daten auszuliefern
+  * zum Beispiel in `spring-mapper-object.xml` im Bean `recordSetProducer` die Eigenschaft `recordSql` anpassen
+
+Da für die Verwendung des zentralen Index zwingend eine Elasticsearch-Cluster Installation benötigt wird, sind folgende Schritte vor einer Aktualisierung auszuführen:
+
+* Installation eines Elasticsearch-Clusters in der Version 6.4.2
+* Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Suche von Teilworten benötigt wird
+  * das Plugin kann hier bezogen werden: [Link](https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip)
+  * und wie folgt installiert werden: `sudo bin/elasticsearch-plugin install elasticsearch-analysis-decompound-6.4.2.0.zip`
+* Alternativ kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
+
+Im iBus muss der Elasticsearch Cluster noch konfiguriert werden. Dazu gehen Sie auf die Einstellungen ("Zahnrad" rechts oben) und geben die IP-Adresse und TCP-Port ein, zum Beispiel: `localhost:9300`. Danach sollte nach ein paar Sekunden das Statussymbol grün sein
+
+![Konfiguration von Elasticsearch im iBus](../images/iBus_elasticsearch_Konfiguration.png "Konfiguration von Elasticsearch im iBus")
+
+Danach werden in der "Index-Verwaltung" alle Indizes aufgelistet, die von den iPlugs generiert wurden. Diese können über den Schalter ![Index Schalter](../images/iBus_index_schalter.png "Index Schalter") an- bzw ausgeschaltet werden. Weitere Information sind [hier](../components/ibus) zu finden.
+
+![Verwaltung der Indizes im iBus](../images/iBus_index_Verwaltung.png "Verwaltung der Indizes im iBus")
+
+### Lister der Änderungen
+
+InGrid
+- [Feature] Umstellung auf die zentrale Indexierung
+
+### Komponenten
+
+## Version 4.6.3
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [IGE] Schließen der Datei nach dem Upload im InGrid Editor
+
+UVP
+- [Feature] [Portal] Fehlermeldung bzgl. dem Laden des Favicons bereinigt
+- [Bug] [Portal] Fehler beim Erstellen des Arrays für die Kartenmarker ([REDMINE-1334](https://redmine.informationgrid.eu/issues/1334))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.3/))
+
+## Version 4.4.9
+
+### Liste der Änderungen
+
+UVP
+- [Bug] [Portal] Fehler beim Erstellen des Arrays für die Kartenmarker ([REDMINE-1334](https://redmine.informationgrid.eu/issues/1334))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.4.9/))
+
+## Version 4.6.2.1
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [IGE] Schließen der Datei nach dem Upload im InGrid Editor
+
+UVP
+- [Feature] [Portal] Fehlermeldung bzgl. dem Laden des Favicons bereinigt
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.2.1/))
+
+
+## Version 4.6.2
+
+### Liste der Änderungen
+
+- [Feature] [IGE] IGE: ISO-Element hoursOfService falsch im ISO-XML plaziert ([REDMINE-1284](https://redmine.informationgrid.eu/issues/1284))
+- [Feature] [Portal] Portalseiten im Browser als "unsichere Verbindung" ([REDMINE-1304](https://redmine.informationgrid.eu/issues/1304))
+- [Feature] [Portal] Messwerte-Client laden von OSM in HTTPS  ([REDMINE-1305](https://redmine.informationgrid.eu/issues/1305))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.6.2/))
+
 ## Version 4.2.8
 
 Release 01.02.2019
@@ -19,7 +113,6 @@ Release 01.02.2019
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.2.8/))
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.2.8/))
 - iPlug Management ([download](https://distributions.informationgrid.eu/ingrid-iplug-management/4.2.8/))
-
 
 ## Version 4.6.1
 

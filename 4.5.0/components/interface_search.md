@@ -121,19 +121,19 @@ Folgende Parameter sind zulässig:
 Bsp:
 
 {% highlight text %}
-http://dev.informationgrid.eu/opensearch/descriptor
+https://dev.informationgrid.eu/interface-search/opensearch/descriptor
 {% endhighlight %}
 
 ... liefert den OpenSearch Descriptor, der die Schnittstelle beschreibt.
 
 {% highlight text %}
-http://dev.informationgrid.eu/opensearch/query?q=wasser+boden+datatype:default+ranking:score&p=1&h=20
+https://dev.informationgrid.eu/interface-search/opensearch/query?q=wasser+boden+datatype:default+ranking:score&p=1&h=20
 {% endhighlight %}
 
 ... fordert 20 Ergebnisse aus den 'default' Datenquellen (z.B. iPlug-SE, iPlug-UDK-DB) der ersten Seite für die query "wasser boden" an, sortiert nach Relevanz . Der Link zum Detail von Metadaten verweist auf die Portal-Darstellung (Parameter xml=0 oder nicht angegeben).
 
 {% highlight text %}
-http://dev.informationgrid.eu/opensearch/query?q=boden+datatype:metadata+ranking:score&p=1&h=20&ingrid=1&xml=1
+https://dev.informationgrid.eu/interface-search/opensearch/query?q=boden+datatype:metadata+ranking:score&p=1&h=20&ingrid=1&xml=1
 {% endhighlight %}
 
 ... fordert 20 Ergebnisse aus den 'metadata' Datenquellen (z.B. iPlug-UDK-DB) der ersten Seite für die query "boden" an, sortiert nach Relevanz . Zusätzliche InGrid Informationen werden je Ergebnis mit ausgegeben (Parameter ingrid=1 ). Der Link zum Detail von Metadaten verweist auf die OpenSearch-Darstellung (Parameter xml=1 ).
