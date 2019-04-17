@@ -40,9 +40,46 @@ Danach werden in der "Index-Verwaltung" alle Indizes aufgelistet, die von den iP
 ### Lister der Änderungen
 
 InGrid
-- [Feature] Umstellung auf die zentrale Indexierung
+- [Feature] [SYSTEM] Umstellung auf die zentrale Indexierung ([REDMINE-835](https://redmine.informationgrid.eu/issues/835))
+- [Feature] [SYSTEM] Aktualisierung von Libraries ([REDMINE-1196](https://redmine.informationgrid.eu/issues/1196))
+- [Feature] [PORTAL] Aktualisierung auf aktuelle TOMCAT 7 Version ([REDMINE-1271](https://redmine.informationgrid.eu/issues/1271))
+- [Feature] [Codelist-Repo] AdV-Produktgruppe erweitern ([REDMINE-1087](https://redmine.informationgrid.eu/issues/1087))
+- [Feature] [iPLug SE] Einführen von Instanz-Administratoren ([REDMINE-979](https://redmine.informationgrid.eu/issues/979))
+- [Feature] [IGE] Codeliste 6020 aus Katalog löschen ([REDMINE-564](https://redmine.informationgrid.eu/issues/564))
+- [Feature] [IGE] WMTS mit GetCapabilities-Assistent erfassen ([REDMINE-513](https://redmine.informationgrid.eu/issues/513))
+- [Feature] [MAPCLIENT] Komprimierung von URL Parametern beim Aufruf von WMS Karten mit vielen Layern ([REDMINE-415](https://redmine.informationgrid.eu/issues/415))
+- [BUG] [CODELIST/Portal]: Codelist-Service CannotResolveClassException ([REDMINE-1303](https://redmine.informationgrid.eu/issues/1303))
+- [BUG] [iPLug SE] Bestimmte Seiten heißen noch "Portal U Administration" ([REDMINE-1289](https://redmine.informationgrid.eu/issues/1289))
+- [BUG] [IGE/IBUS] Abfrage des Codelistrepositories in IGE und iBus (früher Management iPlug) berücksichtigt Proxy Einstellungen nicht ([REDMINE-1285](https://redmine.informationgrid.eu/issues/1285))
+- [BUG] [IGE] ISO-Element hoursOfService falsch im ISO-XML plaziert ([REDMINE-1284](https://redmine.informationgrid.eu/issues/1284))
+- [BUG] [IGE] Beim Einfügen oder Löschen im Strukturbaum muss Baum neu dargestellt werden (Refresh) ([REDMINE-1261](https://redmine.informationgrid.eu/issues/1261))
+- [BUG] [IGE] Eingabe-Regeln werden beim initialen Aufruf eines Metadatensatzes nicht korrekt angewandt ([REDMINE-1123](https://redmine.informationgrid.eu/issues/1123))
+
+NUMIS
+- [BUG] Header Logo Darstellung im Portal unter IE11 fehlerhaft ([REDMINE-1280](https://redmine.informationgrid.eu/issues/1280))
+- [BUG] Requests werden im https://matomo.niedersachsen.de nicht geloggt ([REDMINE-1264](https://redmine.informationgrid.eu/issues/1264))
+
+UVP
+- [Feature] Neues Eingabefeld wegen EU-Berichtspflicht zur Verfahrensdauer ([REDMINE-1110](https://redmine.informationgrid.eu/issues/1110))
+- [Feature] Integration von BLP-Referenzen der MetaVer-Partner in das UVP-Gemeinschaftsportal uvp-verbund.de auf Basis der nds. Lösung (Excel-Datei) ([REDMINE-914](https://redmine.informationgrid.eu/issues/914))
+
 
 ### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.0.0/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.0.0/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.0.0/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.0.0/))
+- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.0.0/))
+- iPlug CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.0.1/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.0.1/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.0.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.0.0/))
+- iPlug Opensearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/5.0.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.0.0/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.0.0/))
+- iPlug WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.0.1/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/5.0.1/))
 
 ## Version 4.6.3
 
