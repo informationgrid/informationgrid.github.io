@@ -83,12 +83,6 @@ Hier können weitere Anbieter ausgewählt werden.
 
 ![Hinzufügen von weiteren Anbietern](../images/iplug_admin_gui_provider.png "Hinzufügen von weiteren Anbietern")
 
-### Verfügbarkeit der Ergebnisse
-
-Für jeden angeschlossenen iBus kann hier eine Modifikation der Query konfiguriert werden. Dadurch ist es möglich, die zurückgegebene Ergebnismenge pro angeschlossenem iBus zu steuern.
-
-![Verfügbarkeit der Ergebnisse](../images/iplug_admin_gui_result_availabilitiy.png "Verfügbarkeit der Ergebnisse")
-
 ### Weitere Einstellungen
 
 Diese Option betrifft die Darstellung der Suchergebnisse in den verschiedenen Ergbnis-Spalten im Portal.

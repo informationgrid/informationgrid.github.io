@@ -65,8 +65,6 @@ menu:
         href: components/uvp.html
       - title: Datenanbindung
         type: header
-      - title: Allgemeine iPlug-Konfiguration
-        href: components/iplug_admin_gui.html
       - title: iPlug DSC
         href: components/iplug_dsc_scripted.html
       - title: iPlug SE (Search Engine)

@@ -114,9 +114,54 @@ Die Parameter haben folgende Bedeutung:
 | codelistrepo.url               | Die URL zum Codelist-Repository |
 | codelistrepo.username          | Der Benutzername für das Codelist-Repository |
 | codelistrepo.password          | Das Passwort für das Codelist-Repository |
+| elastic.remoteHosts            | Die TCP-Adresse des Elasticsearch-Clusters (`localhost:9300`) |
 | spring.security.user.name      | Der Login für die Administrationsoberfläche |
 | spring.security.user.password  | Das Passwort für die Administrationsoberfläche |
 
+### Angeschlossene iPlugs
+
+Diese Seite listet alle mit diesem iBus verbundene iPlugs auf. Diese werden zusätzlich unterteilt in iPlugs, die den zentralen Index verwenden und solche, die keinen oder noch ihren eigenen Index verwaltet. Letzteres gilt für iPlugs < v5.0.0.
+
+![iPlugs](../images/iBus_iplugs.png "iPlugs")
+
+Die iPlugs SNS und Opensearch verwenden keinen Index und werden hier mit einem An-/Aus-Schalter angezeigt. Alle anderen iPlugs werden hier nur aufgelistet und es kann über das ![Bookmark](../images/iBus_bookmark.png "Bookmark") Symbol direkt zur Administrations-GUI gesprungen werden.
+
+### Index-Verwaltung
+
+Hier werden die Indizes angezeigt, die von den iPlugs angelegt wurden. Jeder Index kann hier über ![Index Schalter](../images/iBus_index_schalter.png "Index Schalter") an- und abgeschaltet werden. 
+
+![Indizes](../images/iBus_indices.png "Indizes")
+
+Über das ![Link](../images/iBus_link.png "Verbindung zum iPlug") Symbol kann man anhand der Farbe erkennen, ob das zum Index dazugehörige iPlug gerade angeschlossen ist. Ist ein iPlug verbunden, so lässt sich die Indexierung hier über das Menü anstoßen oder auch den Index zu löschen.
+
+Weitere Informationen über einen Index erhält man indem man auf den Indextyp im unteren Bereich klickt. Dort kann man unter anderem sehen, wieviele Dokumente der Index beinhaltet, wann zuletzt aktualisiert wurde und wie das Mapping aussieht.
+
+Unter der Sektion "Andere Indizes" kann man sich weitere Indizes auflisten lassen, die ebenfalls auf dem Elasticsearch Cluster angelegt worden sind. Der Index "ingrid_meta" ist hierbei ein besonderer Index, der für die Verwaltung der iPlug-Indizes verwendet wird.
+
+### Such-Analyse
+
+Hier werden alle aktivierten Indizes angefragt und deren Ergebnisse aufgelistet.
+
+![Suche](../images/iBus_search.png "Suche")
+
+Klickt man auf einen Treffer, werden die wichtigsten Felder, wie auch das IDF, angezeigt. Außerdem wird das vollständig indexierte Dokument, wie es im Index abgelegt wurde angezeigt. Dies hilft bei der Fehlersuche.
+
+Klickt man auf die `debug`-Checkbox, wird eine Zusammenfassung der Suche angezeigt. Diese beinhaltet, welche iPlugs direkt angefragt wurden, wieviele Ergebnisse gefunden wurden und wieviel Zeit dafür benötigt wurde.
+
+### Einstellungen
+
+In den Einstellungen können folgende Parameter konfiguriert werden:
+
+* URL zum Codelist-Repository
+  * ebenfalls der Benutzername und Passwort
+* die URL zum Elasticsearch Cluster
+* ID des iBusses
+* Port des iBusses, auf dem sich die iPlugs verbinden können
+* das Passwort für die Admin-GUI
+
+![Einstellungen](../images/iBus_settings.png "Einstellungen")
+
+Die Einstellungen für das Codelist-Repository und Elasticsearch haben außerdem eine Signalisierung, die anzeigt, ob eine Verbindung zu der externen Komponente besteht. Falls die Anzeige "Rot" ist, ist die Komponente entweder nicht gestartet oder der iBus hat eine falsche Konfiguration.
 
 ### Query Modifikation
 
@@ -137,7 +182,9 @@ Das Property File wird alle 5 Sekunden auf Änderungen überprüft und ggf. neu 
 
 ### Boosting pro iPlug
 
-Am iBus können über Einträge in der Datei `globalRanking.properties` spezielle Boost-Werte für einzelne iPlugs definiert werden. Diese werden auf **alle** Ergebnisse eines iPlugs angewendet. Damit ist es möglich, die Ergebnisse einzelner iPLugs zu betonen (Werte &gt; 1.0) oder zu dämpfen (Werte &lt; 1.0).
+**Achtung**: Mit der Verwendung des zentralen Index hat diese Einstellung keinen Einfluss mehr.
+
+Am iBus können über Einträge in der Datei `globalRanking.properties` spezielle Boost-Werte für einzelne iPlugs definiert werden. Diese werden auf **alle** Ergebnisse eines iPlugs angewendet. Damit ist es möglich, die Ergebnisse einzelner iPlugs zu betonen (Werte &gt; 1.0) oder zu dämpfen (Werte &lt; 1.0).
 
 Bsp. `globalRanking.properties`:
 

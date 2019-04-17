@@ -434,29 +434,19 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
   Die Liste der Karten kann auf Dauer sehr lang und unübersichtlich werden.
 
-  Eine Abhilfe kann hier das Suchfeld schaffen. Nach Eingabe eines Suchbegriffs wird die Liste nach Titel/Label einer Karte gefiltert.
+  Eine Abbilfe kann hier das Suchfeld schaffen. Nach Eingabe eines Suchbegriffs sollte die Liste nach Titel/Label einer Karte gefiltert werden. 
 
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_search.gif "Webmap Client Admin - Karten suchen")
 
-- **Filtern nach ...**
+- **Fehlerhafte Karten**
 
-  Weitere Filtermöglichkeiten der Liste finden Sie beim betätigen des Button rechts neben dem Suchfeld. Hierbei öffnet sich ein weiterer Bereich mit verschiedenen Auswahlmöglichkeiten, die die Liste der eingepflegten Karten begrenzt.
+  Die Liste der Karten stellte Ihnen fehlerhafte Karten dar.
 
-  * Filtern nach Kategorien
-  
-    Hier werden die Karten angezeigt die auch in der ausgewählten Kategorie eingebunden sind.
+  Ist eine Karte fehlerhaft, weil die Karte nicht mehr erreichbar ist, so wird dies in der Liste der eingepflegten Karte anhand eines "i"-Symbol angemerkt. 
 
-  * Filtern nach Karten-Typ
+  Sie können auch die Gesamtliste auf fehlerhafte Karten einschränken. Aktivieren Sie hierfür die Checkbox "Nur fehlerhafte Karten" unterhalb der Suche. 
 
-    Begrenzen können Sie auch die Liste nach dem Karten-Typ, also WMS oder WMTS.
-
-  * Filtern nach fehlerhaften Karten
-
-    Die Liste wird nach fehlerhaften Karten gefiltert, also Karten deren Dienst nicht mehr erreichbar ist oder in der GetCapabilities des Dienstes nicht mehr als Layer aufgelistet werden. 
-    
-    Ist eine Karte fehlerhaft so wird dies in der Liste der eingepflegten Karte anhand eines "i"-Symbol angemerkt. 
-    
-    (siehe [Fehlerhafte Karten](#fehlerhafte-karten) )
+  (siehe [Fehlerhafte Karten]("#fehlerhafte-karten") )
 
 - **Karten bearbeiten**
 
@@ -943,7 +933,6 @@ Neben der GetMap-Anfrage wird die interne JSON-Datei auch für den Druck, GetCap
 
 Passwortgeschützte Dienste/Karten können nur über die Pflege per Admin-GUI verwendet werden. Ein Laden/Importieren direkt über den Webmap Client ist nicht möglich.
 
-<a name="fehlerhafte-karten"></a>
 #### Fehlerhafte Karten
 
 Je nach Einstellung läuft (per Default: täglich um 3:00 Uhr) ein Job, welches diverse Einstellungen (Extent, Legend-URL, Scales, etc.) zur Ihren eingepflegten Karten (nicht bei kombinierten Karten) automatisch aktualisiert.
