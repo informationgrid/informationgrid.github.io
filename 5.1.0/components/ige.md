@@ -266,9 +266,9 @@ context_help
 |  |- markdownfile2_en.md
 |- _profile // profiles
 |  |- myprofile // profile directory
-|  |  |- markdownfile.md
-|  |  |- en // localization directory
-|  |     |- markdownfile_en.md
+      |- markdownfile_myprofile.md
+      |- en // localization directory
+         |- markdownfile_myprofile_en.md
  ```
 
 #### Beispiel
