@@ -265,7 +265,7 @@ context_help
 |  |- markdownfile_en.md
 |  |- markdownfile2_en.md
 |- _profile // profiles
-|  |- myprofile // profile directory
+   |- myprofile // profile directory
       |- markdownfile_myprofile.md
       |- en // localization directory
          |- markdownfile_myprofile_en.md
