@@ -12,32 +12,56 @@ Release 16.04.2019
 
 #### Verwendung eines zentralen Index
 
-Mit der Version 5.0.0 wird ein zentraler Index eingeführt, in dem alle iPlugs ihre Daten indizieren. Dieser zentrale Index wird vom iBus verwaltet, um diejenigen Indizes zu definieren, die durchsucht werden sollen. Dies entspricht am An- und Ausschalten der iPlugs in der vorherigen Version.
+Mit der Version 5.0.0 wird ein zentraler Index eingeführt, in dem alle iPlugs ihre Daten indizieren. Die iPLugs werden bei einer Suchanfrage dann nicht mehr angesprochen. Dies erhöht die Performance der Suche signifikant und macht den Weg frei für weitere Entwicklungen, wie z.B. "Live Search" oder "Meinten Sie ...?".
 
-Durch die Umstellung entfällt die Konfiguration der "Verfügbarkeit der Ergebnisse" in den iPlugs. Da die Suche nicht mehr in den iPlugs erfolgt, können diese auch keinen Einfluss mehr auf die Ausgabe der Ergebnisse nehmen. Wird diese Funktion benötigt, da man bspw. einen Teil seiner Daten weitergeben möchte, so gibt es folgenden Lösungsansatz:
+Die Admin GUI des iBus wurde um eine Funktion erweitert, die die Verwaltung des zentralen Index erlaubt. Hier können die Indexe der verschiedenen iPlugs administriert werden, so dass es nach wie vor möglich ist, Datenquellen zu- oder abzuschalten.
+
+Bei der Umstellung sind folgende Punkte zu beachten:
+
+**1.) Installation einer Elastic Search Instanz oder eine Clusters**
+
+Für die Verwendung des zentralen Index wird zwingend eine Elasticsearch-Cluster Installation benötigt wird. Folgende Schritte müssen daher vor der Aktualisierung der InGrid Komponenten ausgeführt werden:
+
+* Installation eines Elasticsearch-Knotens/-Clusters in der Version 6.4.2
+  * Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Verarbeitung von zusammengesetzten Worteb benötigt wird
+    * das Plugin kann hier bezogen werden: [Link](https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip)
+    * und wie folgt installiert werden: `sudo bin/elasticsearch-plugin install elasticsearch-analysis-decompound-6.4.2.0.zip`
+* Alternativ manuellen installation kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
+
+**2.) Aktualisierung/Konfiguration des iBus**
+
+Der iBus sollte als erste Komponente aktualisiert werden. Durch die Rückwärtskompatibilität ist eine separate Aktualisierung problemlos möglich.
+
+Nach der Aktualisierung muss in der Admin-GUI des iBus der Elasticsearch Cluster konfiguriert werden. Dazu gehen Sie auf die Einstellungen ("Zahnrad" rechts oben) und geben die IP-Adresse und TCP-Port des Elasticsearche eines Knotens ein, zum Beispiel: `localhost:9300`. Danach sollte nach ein paar Sekunden das Statussymbol grün sein
+
+![Konfiguration von Elasticsearch im iBus](../images/iBus_elasticsearch_Konfiguration.png "Konfiguration von Elasticsearch im iBus")
+
+Nach der Aktualisierung der iPlugs werden in der "Index-Verwaltung" alle Indizes des ElasticSearch Knotens aufgelistet, die von den iPlugs generiert wurden. Diese können über den Schalter ![Index Schalter](../images/iBus_index_schalter.png "Index Schalter") an- bzw ausgeschaltet werden. Weitere Information sind [hier](../components/ibus) zu finden.
+
+![Verwaltung der Indizes im iBus](../images/iBus_index_Verwaltung.png "Verwaltung der Indizes im iBus")
+
+**3.) Aktualisierung aller weiterer Komponenten**
+
+Die weiteren InGrid Komponenten können nun aktualisiert werden.
+
+Die Komponenten nutzen danach automatisch den zentralen Index.
+
+
+**Hinweis zu der Funktion "Verfügbarkeit der Ergebnisse"**
+
+Durch die Umstellung entfällt die Funktion der "Verfügbarkeit der Ergebnisse" in den iPlugs. Weil die Suche nicht mehr in den iPlugs erfolgt, können diese auch keinen Einfluss mehr auf die Ausgabe der Ergebnisse nehmen.
+
+Wird diese Funktion benötigt, weil bspw. nur einen Teil der Daten weitergegeben werden soll, gibt es folgenden Lösungsansatz:
 
 * Installation eines zusätzlichen iPlugs
 * Anschluss an den iBus, an dem die Daten abgegeben werden sollen (in dessen zentral Index)
 * Anpassung der Indizierung, um nur die gewünschten Daten auszuliefern
-  * zum Beispiel in `spring-mapper-object.xml` im Bean `recordSetProducer` die Eigenschaft `recordSql` anpassen
+  * zum Beispiel in Datei `spring-mapper-object.xml` im Bean `recordSetProducer` die Eigenschaft `recordSql` anpassen
 
-Da für die Verwendung des zentralen Index zwingend eine Elasticsearch-Cluster Installation benötigt wird, sind folgende Schritte vor einer Aktualisierung auszuführen:
 
-* Installation eines Elasticsearch-Clusters in der Version 6.4.2
-* Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Suche von Teilworten benötigt wird
-  * das Plugin kann hier bezogen werden: [Link](https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip)
-  * und wie folgt installiert werden: `sudo bin/elasticsearch-plugin install elasticsearch-analysis-decompound-6.4.2.0.zip`
-* Alternativ kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
 
-Im iBus muss der Elasticsearch Cluster noch konfiguriert werden. Dazu gehen Sie auf die Einstellungen ("Zahnrad" rechts oben) und geben die IP-Adresse und TCP-Port ein, zum Beispiel: `localhost:9300`. Danach sollte nach ein paar Sekunden das Statussymbol grün sein
 
-![Konfiguration von Elasticsearch im iBus](../images/iBus_elasticsearch_Konfiguration.png "Konfiguration von Elasticsearch im iBus")
-
-Danach werden in der "Index-Verwaltung" alle Indizes aufgelistet, die von den iPlugs generiert wurden. Diese können über den Schalter ![Index Schalter](../images/iBus_index_schalter.png "Index Schalter") an- bzw ausgeschaltet werden. Weitere Information sind [hier](../components/ibus) zu finden.
-
-![Verwaltung der Indizes im iBus](../images/iBus_index_Verwaltung.png "Verwaltung der Indizes im iBus")
-
-### Lister der Änderungen
+### Liste der Änderungen
 
 InGrid
 - [Feature] [SYSTEM] Umstellung auf die zentrale Indexierung ([REDMINE-835](https://redmine.informationgrid.eu/issues/835))
@@ -490,7 +514,7 @@ Das Veröffentlichungsdatum wird danach im Kopfbereich des Datensatzes angezeigt
 
 Als neuer Datensatztyp können nun "Vorprüfungen mit negativem Bescheid", kurz negative Vorprüfungen im Editor erfasst werden. Die Erfassung erfolgt ähnlich wie alle anderen Datensatztypen.
 
-In den Katalogeinstellungen kann festgelegt werden, ob die erfassten negativen Vorprüfungen im Portal verfügbar sind oder nicht. 
+In den Katalogeinstellungen kann festgelegt werden, ob die erfassten negativen Vorprüfungen im Portal verfügbar sind oder nicht.
 
 ![Katalogeinstellung neagtive Vorprüfung veröffentlichen](../images/ingrid_ige_neg_vorpruefungen_einstellung.png "Katalogeinstellung neagtive Vorprüfung veröffentlichen")
 
@@ -506,7 +530,7 @@ Das Erfassungsformular mit Veröffentlichung im Portal:
 
 #### Integration UVP Statistik für EU Berichtspflicht
 
-Im UVP Editor kann der Katalogadministrator eine Statistik über verschiedene Aspekte der erfassten Verfahren generieren. Diese Auswertung bildet die Basis für die EU-Berichtpflicht. 
+Im UVP Editor kann der Katalogadministrator eine Statistik über verschiedene Aspekte der erfassten Verfahren generieren. Diese Auswertung bildet die Basis für die EU-Berichtpflicht.
 
 ![Statistische Euswertung für EU Berichtspflicht](../images/ingrid_ige_neg_vorpruefungen_statistik.png "Statistische Euswertung für EU Berichtspflicht")
 
@@ -991,7 +1015,7 @@ Release: 14.12.2017
 - [Bug] [Portal] Räumliche Suche nach AGS/RS funktioniert nicht  ([REDMINE-934](https://dev.informationgrid.eu/redmine/issues/934))
 - [Bug] [IGE] Kindadressen werden nicht auf Veröffentlichungsbreite geprüft und auch geliefert, wenn "amtsinten" (Detaildarstellung) ([REDMINE-933](https://dev.informationgrid.eu/redmine/issues/933))
 - [Bug] [Portal] Anzeige von Datensätzen Probleme im Portal  ([REDMINE-931](https://dev.informationgrid.eu/redmine/issues/931))
-- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928)) 
+- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928))
 
 
 Profil UVP
@@ -1021,9 +1045,9 @@ Release: 28.11.2017
 ### Änderungen
 
 - [Bug] [IGE] Portal: Anpassung von Facettierung und Entfernen von Altlasten  ([REDMINE-926](https://dev.informationgrid.eu/redmine/issues/926))
-- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928)) 
-- [Bug] [Portal] Funktion 'Passwort vergessen' von mehreren Benutzern mit gleicher E-Mail Adresse angepasst. ([REDMINE-927](https://dev.informationgrid.eu/redmine/issues/927)) 
-- [Bug] [Portal] Webmap-Client fährt nicht hoch nach Portal-Installation unter Windows. ([REDMINE-929](https://dev.informationgrid.eu/redmine/issues/929)) 
+- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928))
+- [Bug] [Portal] Funktion 'Passwort vergessen' von mehreren Benutzern mit gleicher E-Mail Adresse angepasst. ([REDMINE-927](https://dev.informationgrid.eu/redmine/issues/927))
+- [Bug] [Portal] Webmap-Client fährt nicht hoch nach Portal-Installation unter Windows. ([REDMINE-929](https://dev.informationgrid.eu/redmine/issues/929))
 
 Profil UVP, UVP-NI
 
@@ -1343,7 +1367,7 @@ Release: 11.04.2017
 - [Bug] [IGE] IGE: Initiales Laden von Objekten schlägt manchmal fehl ([REDMINE-614](https://dev.informationgrid.eu/redmine/issues/614))
 - [Bug] [Portal] Anzeige von Datumsangaben, Zeit ausblenden ([REDMINE-567](https://dev.informationgrid.eu/redmine/issues/567))
 - [Bug] [Portal] XML Button wird nicht angezeigt ([REDMINE-572](https://dev.informationgrid.eu/redmine/issues/572))
-- [Bug] [Portal] Portal: In der Detaildarstellung soll Portal-Header angezeigt werden ([REDMINE-588](https://dev.informationgrid.eu/redmine/issues/588)) 
+- [Bug] [Portal] Portal: In der Detaildarstellung soll Portal-Header angezeigt werden ([REDMINE-588](https://dev.informationgrid.eu/redmine/issues/588))
 - [Bug] [Portal] Portal: Löschen von Verzeichnisse/Dateien bei Portal-Aktualisierung ([REDMINE-589](https://dev.informationgrid.eu/redmine/issues/589))
 - [Bug] [Portal] Portal: Trennung von Impressum und Datenschutz ([REDMINE-628](https://dev.informationgrid.eu/redmine/issues/628))
 - [Bug] [Portal] Portal: Detailsuche liefert keine Liste eines Feldes ([REDMINE-616](https://dev.informationgrid.eu/redmine/issues/616))
@@ -1763,7 +1787,7 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 - iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.1/))
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.1/))
 - Server OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-server-opensearch/3.6.1/))
- 
+
 
 ### Änderungen
 

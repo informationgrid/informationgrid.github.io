@@ -131,7 +131,7 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 Hier sind verschiedene Parameter hinterlegt:
 
 | Parameter | Beschreibung |
-| === | === |
+| --- | --- |
 | Datenbankpfad | Dies ist der Pfad, wo die dateibasierte [H2 Datenbank](http://www.h2database.com) abgelegt werden soll, in der sich die gepflegten URLs befinden. |
 | Instanzenpfad | Dieser Pfad gibt an, wo die Einstellungen und Indexe der gesammelten Webseiten abgelegt werden sollen. |
 | ElasticSearch Port | Dieser Port wird für die Kommunikation mit dem Index verwendet. **Achtung: Das integrierte Elastic Search benötigt für Clusterfunctionalität auch den Port 9300.** |
@@ -186,7 +186,7 @@ Auf der Übersichtsseite wird die Liste aller URL Räume angezeigt. Diese kann �
 Für jeden URL Raum wird ein Status angegeben, der sich aufg die Start URL bezieht. Hier kann eingesehen werden, wann die URL zuletzt überprüft wurde und welchen Status diese hat. Folgende Status existieren:
 
 | Status | Erläuterung |
-| === | === |
+| --- | --- |
 | db_fetched | URL wurde erfolgreich geladen. |
 | db_redir_temp | Es wurde ein temporärer Redirect erkannt.|
 | db_redir_perm | Es wurde ein permanenter Redirect erkannt. |
@@ -246,12 +246,12 @@ Die Anzahl der einstellbaren Parameter ist sehr groß. Daher werden hier nur aus
 Diese allgemeinen Parameter gelten für alle Szenarien und sollten bei der Einrichtung von der Webseiten Indexierung beachtet werden.
 
 | Eigenschaft | Wert | Erläuterung |
-| === | === | === |
+| ----- | ----- | ----- |
 | http.agent.url | +http://www.portalu.de | URL mit der sich der Crawler bei den Webseiten präsentiert. |
 | http.agent.email | crawler@portalu.de | Email mit der sich der Crawler bei den Webseiten präsentiert. |
 | http.proxy.host | | Der Proxy Server, falls der Zugriff auf die Webseiten über einen Proxy Server erfolgt. Wenn leer, wird kein Proxy verwendet. |
 | fetcher.server.delay | 2.0 | Pause zwischen Requests auf den gleichen Server. Dieser Wert kann durch die robots.txt des Servers überschrieben werden. |
-| fetcher.max.crawl.delay | -1 | Max. Pause zwischen Requests auf den gleichen Server. Wenn der Wert in der robots.txt ist größer als dieser Wert ist, wird der Server ignoriert. <b><b>**Achtung:** Ein hoher Wert in der robots.txt kann bedeuten, dass das Laden der URLs von dem Server sehr lange dauert. Bitte über *URL Testen* in der Url Pflege testen. |
+| fetcher.max.crawl.delay | -1 | Max. Pause zwischen Requests auf den gleichen Server. Wenn der Wert in der robots.txt ist größer als dieser Wert ist, wird der Server ignoriert. **Achtung:** Ein hoher Wert in der robots.txt kann bedeuten, dass das Laden der URLs von dem Server sehr lange dauert. Bitte über *URL Testen* in der Url Pflege testen. |
 
 
 **Adaptiver Indexierungsablauf (Default)**
@@ -259,7 +259,7 @@ Diese allgemeinen Parameter gelten für alle Szenarien und sollten bei der Einri
 Für jede geänderte Seite wird der Zeitpunkt der erneuten Überprüfung adaptiv berechnet. Seiten, die sich oft ändern werden dadurch automatisch öfter überprüft, Seiten, die sich wenig ändern werden weniger oft überprüft.
 
 | Eigenschaft | Wert | Erläuterung |
-| === | === | === |
+| ----- | ----- | ----- |
 | db.fetch.schedule.class | org.apache.nutch.crawl.AdaptiveFetchSchedule | Berechnet das Fetch Intervall in Abhängigkeit von der Änderungsrate |
 | db.fetch.interval.default | 86400 | Default Fetch Intervall in sec. Dies entspricht 24h und wird für alle neuen URLs verwendet. Dies gilt auch für URLS mit dem Status `db_gone`.|
 | db.fetch.interval.max | 7776000 | Max. Fetch Intervall in sec. Dies entspricht 9 Tage, d.h. alle Seiten werden mind. alle 9 Tage zur Überprüfung ausgewählt. |
@@ -272,7 +272,7 @@ Für jede geänderte Seite wird der Zeitpunkt der erneuten Überprüfung adaptiv
 Alle URLs bekommen das gleiche Fetch Intervall zugewiesen. Diese Konfiguration kann angewendet werden, wenn immer alle URLs, unabhängig von deren Änderungsrate, überprüft werden sollen.
 
 | Eigenschaft | Wert | Erläuterung |
-| === | === | === |
+| --- | --- | --- |
 | db.fetch.schedule.class | org.apache.nutch.crawl.DefaultFetchSchedule | Das Fetchintervall für URLs entspricht immer dem Wert `db.fetch.interval.default`. |
 | db.fetch.interval.default | 86400 | Default Fetch Intervall in sec. Dies entspricht 24h und wird für alle URLs verwendet. |
 | db.fetch.interval.max | 7776000 | Max. Fetch Intervall in sec. Dies entspricht 9 Tage. Dies gilt hier nur für URLS mit dem Status `db_gone`.|
@@ -283,7 +283,7 @@ Alle URLs bekommen das gleiche Fetch Intervall zugewiesen. Diese Konfiguration k
 Es werden nur die Start-URls indexiert.
 
 | Eigenschaft | Wert | Erläuterung |
-| === | === | === |
+| --- | --- | --- |
 | db.fetch.schedule.class | org.apache.nutch.crawl.DefaultFetchSchedule | Das Fetchintervall für URLs entspricht immer dem Wert `db.fetch.interval.default`. |
 | db.fetch.interval.default | 3600 | Default Fetch Intervall in sec. Dies entspricht 1h und wird für alle URLs verwendet. |
 | db.fetch.interval.max | 7776000 | Max. Fetch Intervall in sec. Dies entspricht 9 Tage. Dies gilt hier nur für URLS mit dem Status `db_gone`. Alternativ kann hier auch 3600 eingegeben werden, wenn alle URLs immer überprüft werden sollen.  |
@@ -304,7 +304,7 @@ Dieser Bereich erlaubt die Konfiguration der Metadaten innerhalb einer Instanz. 
 Jedes Metadatum ist durch folgende Eigenschafte definiert.
 
 | Eigenschaft | Erläuterung |
-| === | === |
+| --- | --- |
 | id | Die ID des Metadatums. Dieser Wert wird auch als Name des Indexfeldes bei der Indexierung verwendet. |
 | label | Beschriftung des Metadatums in der Oberfläche. |
 | type | Element-Typ des Metadatums in der Oberfläche <br><br>`select` - Selectbox (default)<br>`grouped` - Selectbox mit Gruppierung  |
@@ -314,7 +314,7 @@ Jedes Metadatum ist durch folgende Eigenschafte definiert.
 Jeder Wert kann über folgende Eigenschaften beschrieben werden:
 
 | Eigenschaft | Erläuterung |
-| === | === |
+| --- | --- |
 | id | Der Wert des Metadatum Wertes. Dieser Wert wird bei der Indexierung verwendet. Wird bei Gruppenüberschriften (`type=grouped`) nicht angegeben. |
 | label | Beschriftung des Wertes in der Oberfläche. Bei `type=grouped` wird der Wert als Gruppenüberschrift verwendet. |
 | children | Nur bei `type=grouped`. Enthält den Wertebereich einer Gruppe mit den Eigenschaften `id` und `label`. |
@@ -373,18 +373,20 @@ Die URLs können sowohl über ein URL Teilstring oder über einen Fehlercode gef
 <figcaption class="figcaption">SE iPlug Instanzen - Report - URL Fehler</figcaption>
 
 #### Instanzen - Administratoren
+
 Hier können Instanzadministratoren erstellt und verwaltet werden. Die erstellten Benutzer können sich auf dem iPlug anmelden und erhalten Zugriff auf die zugewiesene Instanz. Auf andere Instanzen und die Konfiguration des iPlugs können diese Benutzer nicht zugreifen.
 
 ![SE iPlug Instanzen - Administratoren](../images/iplug_se_administratoren.png "SE iPlug Instanzen - Administratoren")
 <figcaption class="figcaption">SE iPlug Instanzen - Administratoren</figcaption>
 
 #### Instanzen - BLP Import
-Der BLP Import Tab ist optional. Zur Aktivierung muss in der config.override.properties Datei die Option `enable.blpImport=true` hinzugefügt werden.
-Nach der Auswahl einer passenden Excel Datei werden die Zeilen ausgewertet und die URLs in dir Instanz aufgenommen. Nach dem Import kann dann wie gewohnt ein Crawl im Management Tab ausgeführt werden.
+
+Der BLP Import Tab ist optional. Zur Aktivierung muss in der Datei `config.override.properties` die Option `enable.blpImport=true` hinzugefügt werden.
+
+Nach der Auswahl einer [passenden Excel Datei](../images/blp_daten_template_20190418.xlsx) werden die Zeilen ausgewertet und die URLs in die Instanz aufgenommen. Nach dem Import kann dann wie gewohnt ein Crawl im Management Tab ausgeführt werden. Unter `Hinweise` können genauere Anweisungen eingeblendet werden.
+
 ![SE iPlug Instanzen - BLP Import](../images/iplug_se_blp_import.png "SE iPlug Instanzen - BLP Import")
 <figcaption class="figcaption">SE iPlug Instanzen - BLP Import</figcaption>
-
-
 
 
 ## FAQ
