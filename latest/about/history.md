@@ -58,6 +58,31 @@ Wird diese Funktion benötigt, weil bspw. nur einen Teil der Daten weitergegeben
 * Anpassung der Indizierung, um nur die gewünschten Daten auszuliefern
   * zum Beispiel in Datei `spring-mapper-object.xml` im Bean `recordSetProducer` die Eigenschaft `recordSql` anpassen
 
+#### Einführen von Instanz-Administratoren
+
+In der Admin-GUI des iPlug SE können Instanz-Administratoren definiert werden. Der Zugriff innerhalb der Admin GUI wird für diese Administratoren auf eine Instanz beschränkt. Zusätzlich können bestimmte Funktionen nicht verwendet werden.
+
+![SE iPlug Instanzen - Administratoren](../images/iplug_se_administratoren.png "SE iPlug Instanzen - Administratoren")
+<figcaption class="figcaption">SE iPlug Instanzen - Administratoren</figcaption>
+
+#### WMTS mit GetCapabilities-Assistent erfassen
+
+Im InGrid Editor lassen sich mir der GetCapabilities Funktion auch WMTS Dienste erfassen.
+
+#### Komprimierung von URL Parametern beim Aufruf von WMS Karten mit vielen Layern
+
+Der Status des Kartenviewers wird komplett über die URL abgebildet. Jede Änderung, z.B. An/Abschalten von Layern, Verschieben/Zoomen der Karte, Redlining innerhalb der Karte führt zu einer Anpassung der URL.  Dadurch kann ein bestimmter Zustand sehr einfach über ein Bookmark gesichert werden.
+
+Bei umfangreichen Kartenkonfigurationen konnte es vorkommen, dass die Länge der URL, die Anzahl der zulässigen Zeichen in bestimmten Browsern überschritt. Ein Bookmarking war dann nicht mehr möglich.
+
+Die Funktionalität wurde nun so angepasst, dass lange URLs automatisch zu einem Kürzel zusammengefasst werden. Unter diesem Kürzel wird die Kartenkonfiguration abgespeichert. So ist es nun möglich beliebig umfangreiche Konfigurationen zu erzeugen und weiterzugeben.
+
+#### UVP: Neues Eingabefeld wegen EU-Berichtspflicht zur Verfahrensdauer
+
+Ein neues Feld `Eingang des Antrags` wurde dem UVP Eingabeformular hinzugefügt. Die Verfahrensdauer spielt eine Rolle bei der Erstellung von EU Berichtspflichten.
+
+![UVP Formular - Neus Feld Eingang des Antrages](../images/uvp_eingang_des_antrages.png "UVP Formular - Neus Feld Eingang des Antrages")
+<figcaption class="figcaption">UVP Formular - Neus Feld Eingang des Antrages</figcaption>
 
 
 
