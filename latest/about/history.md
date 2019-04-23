@@ -20,19 +20,19 @@ Bei der Umstellung sind folgende Punkte zu beachten:
 
 **1.) Installation einer Elastic Search Instanz oder eine Clusters**
 
-Für die Verwendung des zentralen Index wird zwingend eine Elasticsearch-Cluster Installation benötigt wird. Folgende Schritte müssen daher vor der Aktualisierung der InGrid Komponenten ausgeführt werden:
+Für die Verwendung des zentralen Index wird zwingend eine Elasticsearch-Cluster Installation benötigt. Folgende Schritte müssen daher vor der Aktualisierung der InGrid Komponenten ausgeführt werden:
 
 * Installation eines Elasticsearch-Knotens/-Clusters in der Version 6.4.2
-  * Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Verarbeitung von zusammengesetzten Worteb benötigt wird
+  * Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Verarbeitung von zusammengesetzten Worten benötigt wird
     * das Plugin kann hier bezogen werden: [Link](https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip)
     * und wie folgt installiert werden: `sudo bin/elasticsearch-plugin install elasticsearch-analysis-decompound-6.4.2.0.zip`
-* Alternativ manuellen installation kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
+* Alternativ zur manuellen installation kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
 
 **2.) Aktualisierung/Konfiguration des iBus**
 
 Der iBus sollte als erste Komponente aktualisiert werden. Durch die Rückwärtskompatibilität ist eine separate Aktualisierung problemlos möglich.
 
-Nach der Aktualisierung muss in der Admin-GUI des iBus der Elasticsearch Cluster konfiguriert werden. Dazu gehen Sie auf die Einstellungen ("Zahnrad" rechts oben) und geben die IP-Adresse und TCP-Port des Elasticsearche eines Knotens ein, zum Beispiel: `localhost:9300`. Danach sollte nach ein paar Sekunden das Statussymbol grün sein
+Nach der Aktualisierung muss in der Admin-GUI des iBus der Elasticsearch Cluster konfiguriert werden. Dazu gehen Sie auf die Einstellungen ("Zahnrad" rechts oben) und geben die IP-Adresse und TCP-Port des Elasticsearche Knotens ein, zum Beispiel: `localhost:9300`. Danach sollte nach ein paar Sekunden das Statussymbol grün sein
 
 ![Konfiguration von Elasticsearch im iBus](../images/iBus_elasticsearch_Konfiguration.png "Konfiguration von Elasticsearch im iBus")
 
