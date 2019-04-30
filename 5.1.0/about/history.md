@@ -24,8 +24,9 @@ Für die Verwendung des zentralen Index wird zwingend eine Elasticsearch-Cluster
 
 * Installation eines Elasticsearch-Knotens/-Clusters in der Version 6.4.2
   * Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Verarbeitung von zusammengesetzten Worten benötigt wird
-    * das Plugin kann hier bezogen werden: [Link](https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip)
-    * und wie folgt installiert werden: `sudo bin/elasticsearch-plugin install elasticsearch-analysis-decompound-6.4.2.0.zip`
+    * gehen Sie in das Verzeichnis von Elasticsearch
+    * und führen Sie folgenden Befehl aus:<br>
+    `sudo bin/elasticsearch-plugin install https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip`
 * Alternativ zur manuellen installation kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
 
 **2.) Aktualisierung/Konfiguration des iBus**
