@@ -4,6 +4,18 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.4
+
+### Liste der Änderungen
+
+UVP
+- [Feature] [Portal] Aktualisierung Brandenburg Vorschaltseite ([REDMINE-1373](https://redmine.informationgrid.eu/issues/1373))
+- [Bug] [Portal] Fehler in der Detaildarstellung bzgl. Erörterungstermin  ([REDMINE-1387](https://redmine.informationgrid.eu/issues/1387))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.4/))
+
 ## Version 4.6.3
 
 ### Liste der Änderungen
