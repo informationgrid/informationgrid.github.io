@@ -479,6 +479,7 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
   ||Extent|Passen Sie hier das Extent Ihrer Karte an.  <br><br>  Hinweis: Die eingetragenen Koordinaten müssen in der Projektion "EPSG:4326/WGS-84" eingetragen werden. | Wert aus der GetCapabilities des zugehörigen Dienstes.
   ||Kachel-Größe| Geben Sie hier die gewünschte Kachel-Größe Ihrer Karten ein. | 256
   ||Hintergrundkarte| Bestimmen Sie hier, ob Ihre Karte als Hintergrundkarte verwendet werden kann. <br><br> Hinweis: In den Kategorien werden die Hintergrundkarten zugewiesen. (siehe [Kategorien]("#kategorien"))| false
+  ||Hintergrundkartenbild| Wählen Sie ein Hintergrundbild für Ihre Hintergrundkarte aus, welches beim Hintergrundkarten-Umschalter im Frontend angezeigt werden soll und laden Sie dieses Bild hoch. Die optimale Größe des Bildes ist 90 x 58 Pixel. Nach dem Speichern werden automatisch die CSS-Styles für das Frontend angepasst. Beim Aktualisieren des Hintergrundbildes einer Karte wird das alte Bild ersetzt. | 
   ||Format| Definieren Sie das Bild-Format der GetMap-Anfrage. (png, jpeg, etc.) | Wert aus der GetCapabilities des zugehörigen Dienstes.
   ||Suchbarkeit| Lassen Sie die Karte über die Suche im Webmap Client auffinderbar machen. | true
   ||Cross Origin | Liefert Ihre Karte bei einer GetMap-Anfrage im Response-Header "Access-Control-Allow-Origin: *" oder "Access-Control-Allow-Origin: <IHRE-DOMÄIN>", so können Sie hier den Wert auf "true" setzten und im Webmap Client werden vorhandenen GetFeatureInfos beim überfahren der Maus auf Ihrer Karte als Handsymbol angezeigt und sind auf der Karte somit einfacher auffindbar.| false
@@ -529,6 +530,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
     - Label: Titel der Kategorie
   
     - Tooltip: Tooltip der Kategorie im Webmap Client
+
+    - Kategorienbild:  Wählen Sie ein Kategorienbild für Ihre Kategorie aus, welches beim Kategorien-Umschalter im Frontend angezeigt werden soll und laden Sie dieses Bild hoch. Die optimale Größe des Bildes ist 140 x 60 Pixel. Nach dem Speichern werden automatisch die CSS-Styles für das Frontend angepasst. Beim Aktualisieren des Kategorien-Bildes einer Kategorie wird das alte Bild ersetzt. 
 
   - Mit dem "Speichern"-Button wird die Kategorie hinzugefügt. 
 
