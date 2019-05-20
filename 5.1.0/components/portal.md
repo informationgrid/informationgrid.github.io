@@ -667,3 +667,31 @@ Die Basis URL kann in der Date `ingrid-portal-apps.properties` konfiguriert werd
 # due to possible firewall issues, the logger resource can be specified here
 portal.logger.resource=http://localhost/logger.html
 {% endhighlight %}
+
+### Wie kann man die Leaflet Hintergrundkarte ändern?
+
+In der Datei `ingrid-portal-apps.properties` wird die Hintergrundkarte für Leaflet festgelegt:
+
+{% highlight text %}
+portal.mapclient.leaflet.bg.layer.wmts=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+{% endhighlight %}
+
+Um die Hintergrundkarte zu ändern, trägt man die WMTS-"templateUrl" des gewünschten Dienstes ein. 
+
+Möchte man aber ein WMS als Hintergrundkarte verwenden, so trägt man die Dienst-URL und die gewünschten Layername kommagetrennt in die folgende Eigenschaft ein:
+
+{% highlight text %}
+portal.mapclient.leaflet.bg.layer.wms=
+{% endhighlight %}
+
+Wird eine WMS-Karte eingetragen, so wird die WMTS-Karte ignoriert und die WMS-Karte wird als Hintergrundkarte dargestellt.
+
+Für den Copyright auf einer Leaflet-Karte bzw. für die Hintergrundkarte ist folgende Eigenschaft zuständig:
+
+{% highlight text %}
+portal.mapclient.leaflet.bg.layer.attribution=© <a href="https://openstreetmap.org">OpenStreetMap</a> contributors
+{% endhighlight %}
+
+Tragen Sie Ihren gewünschten Text in HTML-Sprache ein. 
+
+Um die Eigenschaften nicht nach einem Portal-Update zu verlieren. Übertragen Sie die geänderten Eigenschaften in die Datei `ingrid-portal-apps.override.properties`.
