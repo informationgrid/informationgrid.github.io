@@ -674,7 +674,10 @@ In der Datei `ingrid-portal-apps.properties` wird die Hintergrundkarte für Leaf
 
 {% highlight text %}
 portal.mapclient.leaflet.bg.layer.wmts=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+
+(Diese Eigenschaft wirkt sich auf alle Leaflet-Karten im Portal aus.)
 {% endhighlight %}
+
 
 Um die Hintergrundkarte zu ändern, trägt man die WMTS-"templateUrl" des gewünschten Dienstes ein. 
 
@@ -682,6 +685,8 @@ Möchte man aber ein WMS als Hintergrundkarte verwenden, so trägt man die Diens
 
 {% highlight text %}
 portal.mapclient.leaflet.bg.layer.wms=
+
+(Diese Eigenschaft wirkt sich **nicht** auf alle Leaflet-Karten im Portal aus. Auf der Messwerteseite, falls aktiv, kann z.Zt. die Hintergrundkarte nur mit WMTS-Karten ausgetauscht werden.)
 {% endhighlight %}
 
 Wird eine WMS-Karte eingetragen, so wird die WMTS-Karte ignoriert und die WMS-Karte wird als Hintergrundkarte dargestellt.
@@ -690,8 +695,10 @@ Für den Copyright auf einer Leaflet-Karte bzw. für die Hintergrundkarte ist fo
 
 {% highlight text %}
 portal.mapclient.leaflet.bg.layer.attribution=© <a href="https://openstreetmap.org">OpenStreetMap</a> contributors
+
+(Diese Eigenschaft wirkt sich auf alle Leaflet-Karten im Portal aus.)
 {% endhighlight %}
 
 Tragen Sie Ihren gewünschten Text in HTML-Sprache ein. 
 
-Um die Eigenschaften nicht nach einem Portal-Update zu verlieren. Übertragen Sie die geänderten Eigenschaften in die Datei `ingrid-portal-apps.override.properties`.
+Um die Eigenschaften nicht nach einem Portal-Update zu verlieren, übertragen Sie die geänderten Eigenschaften in die Datei `ingrid-portal-apps.override.properties` im gleichem Verzeichnis wie die Datei `ingrid-portal-apps.properties`.
