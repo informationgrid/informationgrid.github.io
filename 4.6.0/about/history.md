@@ -4,6 +4,17 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.5
+
+### Liste der Änderungen
+
+MetaVer
+- [Bug] [IGE] METAVER landesspezifische Lizenzen werden bei Update überschrieben ([REDMINE-1166](https://redmine.informationgrid.eu/issues/1166))
+
+### Komponenten
+
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/4.6.5/))
+
 ## Version 4.6.4
 
 ### Liste der Änderungen
