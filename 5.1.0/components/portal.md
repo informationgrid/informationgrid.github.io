@@ -651,6 +651,30 @@ Beispiel für die Facetten "Opendata" und "INSPIRE" (aus Niedersachsen):
 </facet>
 ```
 
+Mit den Eigenschaften "info" und "infoResultSelect" können zur Facette auch Informationen platziert werden.
+
+* info: Text in der Facettierung
+* infoResultSelect: Text überhalb der Ergebnisliste, wenn Facette ausgewählt
+
+Beispiel:
+
+```xml
+<!-- Aktualität -->
+    <facet>
+        <name>searchResult.facete.title.time</name>
+        <id>modtime</id>
+        <info>Bauleitpläne können im Filter "Aktualität" leider nicht berücksichtigt werden.</info>
+        <infoResultSelect>Bauleitpläne können im Filter "Aktualität" leider nicht berücksichtigt werden.</infoResultSelect>
+        <facets>
+        ...
+        </facets>
+    <facet>
+```
+
+Es müssen nicht beide Eigenschaften ("info", "infoResultSelect") verwendet werden.
+
+Weitere Informationen entnehmen Sie bitte aus der obengenannten Datei "facets-config.xml".
+
 ### Werden Anfragen, die keine Ergebnisse liefern protokolliert?
 
 Ja, die Anfragen werden im Webserver Logfile protokolliert. Dazu wird vom Portal eine bestimmte URL gerufen:
@@ -718,6 +742,7 @@ Beispiel:
 {% endhighlight %}
 
 Eine andere Möglichkeit:
+
 Mit dem Parameter "extent" kann der Kartenausschnitt festgelegt werden. Hierbei werden 4 WGS84-Koordinaten im Format "y1,x1,y2,x2" benötigt. 
 
 Beispiel:
