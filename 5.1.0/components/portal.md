@@ -702,3 +702,48 @@ portal.mapclient.leaflet.bg.layer.attribution=© <a href="https://openstreetmap.
 Tragen Sie Ihren gewünschten Text in HTML-Sprache ein. 
 
 Um die Eigenschaften nicht nach einem Portal-Update zu verlieren, übertragen Sie die geänderten Eigenschaften in die Datei `ingrid-portal-apps.override.properties` im gleichem Verzeichnis wie die Datei `ingrid-portal-apps.properties`.
+
+### UVP: Wie kann man den Kartenzustand per URL festlegen?
+
+Für das UVP-Portal, welches Leaflet als Kartenkomponente verwendet, kann der Zustand der Karte per URL-Parameter definiert werden. 
+
+#### Kartenausschnitt
+
+Mit den Parametern "N" (North), "E" (East) und "zoom" (Zoomstufe) kann der Kartenausschnitt festgelegt werden. Die Parametern "N" und "E" müssen hierbei WGS84-Koordinaten und der Parameter "zoom" eine Zahl von 1 bis 18.
+Alle drei Parameter sind notwendig um den Kartenausschnitt per URL festzulegen.
+
+Beispiel:
+{% highlight text %}
+?N=51.0&E=11.0&zoom=10
+{% endhighlight %}
+
+Eine andere Möglichkeit:
+Mit dem Parameter "extent" kann der Kartenausschnitt festgelegt werden. Hierbei werden 4 WGS84-Koordinaten im Format "y1,x1,y2,x2" benötigt. 
+
+Beispiel:
+{% highlight text %}
+&extent=51.35283,11.10786,54.26386,5.01329
+{% endhighlight %}
+
+#### Verfahrenstypen
+
+Mit dem Parameter "layer" können die Verfahrenstypen per Kürzel aktiviert werden. 
+
+Folgende Kürzel existieren:
+
+* blp = Bauleitplanung
+* zv = Zulassungsverfahren
+* av = Ausländische Vorhaben
+* vv = Vorgelagerte Verfahren
+* nv = Negative Vorprüfungen
+
+Beispiel:
+{% highlight text %}
+&layer=blp
+{% endhighlight %}
+
+Mehrere Verfahrenstypen werden durch eine kommagetrennte Auflistung aktiviert:
+{% highlight text %}
+&layer=vv,av,nv
+{% endhighlight %}
+
