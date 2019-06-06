@@ -494,6 +494,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
   ||Tooltip| Aktivieren Sie die GetFeature-Info-Abfrage, falls es die Karte erlaubt. | Wert aus der GetCapabilities des zugehörigen Dienstes.
   ||Transparenz|Definieren Sie die per default dargestellte Transparenz der Karte.| 1
   ||Login|Haben Sie die Karte über einen passwortgeschützten Dienst geladen, so wird unter Login der Benutzername des Dienstes angezeigt. <br><br> Anhand dem Login und der Dienst-URL wird das gespeicherte Passwort ermittelt und die Karte wird über den eigenen Server mit Authentifizierung geladen.|
+  ||Query-Layers|Layers die bei einer GetFeatureInfo-Anfrage abgefragt werden sollen. Nur bei aktiver Checkbox "Tooltip" sichtbar. Mehrere Layer werden kommagetrennt aufgelistet. | Layers für die GetMap-Anfrage.
+  ||Feature-Count|Anzahl an Features die bei einer GetFeatureInfo-Anfrage für die Karte(n) abgefragt werden sollen. Nur bei aktiver Checkbox "Tooltip" sichtbar. Wert sollte größer als 0 sein. | 10
   | **WMS** |
   ||WMS-URL|Tragen Sie hier die Dienst-URL Ihrer Karte ein. Anhand dieser URL werden diverse Anfrage, wie z.B. GetCapabilities, GetMap, GetFeatureInfo, etc. durchgeführt.| Wert aus der GetCapabilities des zugehörigen Dienstes.
   ||WMS-Layers| Tragen Sie hier den 'NAME' der dazustellenden Karte ein. Mehrere Karten werden kommagetrennte aufgelistet. <br><br>Hinweis: Zusammengesetzte Karten per kommagetrennt können im Webmap Client nur zusammen dargestellt werden.| Wert aus der GetCapabilities des zugehörigen Dienstes.
