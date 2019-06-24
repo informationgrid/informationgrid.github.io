@@ -4,6 +4,19 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.2.9
+
+Release 27.05.2019
+
+### Liste der Änderungen
+
+- [Feature] [IPLUG-SE] iPlug SE: Accept invalid SSL certificates (self signed, not in java certstore) ([REDMINE-1368](https://redmine.informationgrid.eu/issues/1368))
+
+### Komponenten
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.2.9/))
+
+
 ## Version 4.2.8
 
 Release 01.02.2019
@@ -303,7 +316,7 @@ Release: 14.12.2017
 - [Bug] [Portal] Räumliche Suche nach AGS/RS funktioniert nicht  ([REDMINE-934](https://dev.informationgrid.eu/redmine/issues/934))
 - [Bug] [IGE] Kindadressen werden nicht auf Veröffentlichungsbreite geprüft und auch geliefert, wenn "amtsinten" (Detaildarstellung) ([REDMINE-933](https://dev.informationgrid.eu/redmine/issues/933))
 - [Bug] [Portal] Anzeige von Datensätzen Probleme im Portal  ([REDMINE-931](https://dev.informationgrid.eu/redmine/issues/931))
-- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928)) 
+- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928))
 
 
 Profil UVP
@@ -333,9 +346,9 @@ Release: 28.11.2017
 ### Änderungen
 
 - [Bug] [IGE] Portal: Anpassung von Facettierung und Entfernen von Altlasten  ([REDMINE-926](https://dev.informationgrid.eu/redmine/issues/926))
-- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928)) 
-- [Bug] [Portal] Funktion 'Passwort vergessen' von mehreren Benutzern mit gleicher E-Mail Adresse angepasst. ([REDMINE-927](https://dev.informationgrid.eu/redmine/issues/927)) 
-- [Bug] [Portal] Webmap-Client fährt nicht hoch nach Portal-Installation unter Windows. ([REDMINE-929](https://dev.informationgrid.eu/redmine/issues/929)) 
+- [Bug] [Codelist-Repo] Codelist-Repo: Fährt nach Update nicht mehr hoch ([REDMINE-928](https://dev.informationgrid.eu/redmine/issues/928))
+- [Bug] [Portal] Funktion 'Passwort vergessen' von mehreren Benutzern mit gleicher E-Mail Adresse angepasst. ([REDMINE-927](https://dev.informationgrid.eu/redmine/issues/927))
+- [Bug] [Portal] Webmap-Client fährt nicht hoch nach Portal-Installation unter Windows. ([REDMINE-929](https://dev.informationgrid.eu/redmine/issues/929))
 
 Profil UVP, UVP-NI
 
@@ -655,7 +668,7 @@ Release: 11.04.2017
 - [Bug] [IGE] IGE: Initiales Laden von Objekten schlägt manchmal fehl ([REDMINE-614](https://dev.informationgrid.eu/redmine/issues/614))
 - [Bug] [Portal] Anzeige von Datumsangaben, Zeit ausblenden ([REDMINE-567](https://dev.informationgrid.eu/redmine/issues/567))
 - [Bug] [Portal] XML Button wird nicht angezeigt ([REDMINE-572](https://dev.informationgrid.eu/redmine/issues/572))
-- [Bug] [Portal] Portal: In der Detaildarstellung soll Portal-Header angezeigt werden ([REDMINE-588](https://dev.informationgrid.eu/redmine/issues/588)) 
+- [Bug] [Portal] Portal: In der Detaildarstellung soll Portal-Header angezeigt werden ([REDMINE-588](https://dev.informationgrid.eu/redmine/issues/588))
 - [Bug] [Portal] Portal: Löschen von Verzeichnisse/Dateien bei Portal-Aktualisierung ([REDMINE-589](https://dev.informationgrid.eu/redmine/issues/589))
 - [Bug] [Portal] Portal: Trennung von Impressum und Datenschutz ([REDMINE-628](https://dev.informationgrid.eu/redmine/issues/628))
 - [Bug] [Portal] Portal: Detailsuche liefert keine Liste eines Feldes ([REDMINE-616](https://dev.informationgrid.eu/redmine/issues/616))
@@ -1075,7 +1088,7 @@ Eine CSW-T Schnittstelle erlaubt das Verwalten von Metadaten über eine standard
 - iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/3.6.1/))
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/3.6.1/))
 - Server OpenSearch ([download](https://distributions.informationgrid.eu/ingrid-server-opensearch/3.6.1/))
- 
+
 
 ### Änderungen
 

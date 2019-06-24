@@ -4,6 +4,23 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 5.0.1
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [iPLug SE] iPlug SE: Accept invalid SSL certificates (self signed, not in java certstore) ([REDMINE-1368](https://redmine.informationgrid.eu/issues/1368))
+
+UVP
+- [Feature] Überarbeitung UVP Nummern Saarland ([REDMINE-1378](https://redmine.informationgrid.eu/issues/1378))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.0.1/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.0.1/))
+
+
 ## Version 5.0.0
 
 Release 16.04.2019
