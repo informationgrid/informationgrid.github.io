@@ -491,3 +491,11 @@ In der robots.txt muss der InGrid Crawler freigschaltet werden. Der nachstehende
 User-agent: ingrid
 Crawl-delay: 3
 </pre>
+
+### Kann der Crawler mit HTTPS URLs umgehen, die durch Self Signed Certificates gesichert sind oder deren Zertifikat abgelaufen ist?
+
+Es existiert ab Version 5.0.1 in der Konfiguration einer Crawl-Instanz eine Option die dies ermöglicht.
+
+| ingrid.accept.invalid.ssl.certificates | If true all SSL certificates are accepted. Use this if the resources use self signed certificates or certificates that are not in the java certstore.| Default:true
+
+Die Option ist bei neu erstellten Instanzen vorhanden und per Default auf "true" gesetzt.

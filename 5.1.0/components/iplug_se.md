@@ -498,3 +498,12 @@ Crawl-delay: 3
 Der Crawler kann aktuell mit Umlaut-URLs und IDN Domains umgehen. Dies gilt allerdings nur für das Indexieren von Einzel-URLs.
 
 Das Indexieren von Umlaut-URLs in URL-Räumen wird aktuell nicht von der NUTCH Suchmaschinenversion unterstützt. Hintergrund ist, dass innerhalb der NUTCH Suchmaschine die gesammelten Umlaut-Urls des Url-Raumes nicht entsprechend umkodiert werden, so dass beim Zugriff auf Umlaut-URLs Fehler generiert werden.
+
+
+### Kann der Crawler mit HTTPS URLs umgehen, die durch Self Signed Certificates gesichert sind oder deren Zertifikat abgelaufen ist?
+
+Es existiert in der Konfiguration einer Crawl-Instanz eine Option die dies ermöglicht.
+
+| ingrid.accept.invalid.ssl.certificates | If true all SSL certificates are accepted. Use this if the resources use self signed certificates or certificates that are not in the java certstore.| Default:true
+
+Die Option ist bei neu erstellten Instanzen vorhanden und per Default auf "true" gesetzt.
