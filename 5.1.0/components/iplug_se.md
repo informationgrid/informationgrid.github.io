@@ -491,3 +491,10 @@ In der robots.txt muss der InGrid Crawler freigschaltet werden. Der nachstehende
 User-agent: ingrid
 Crawl-delay: 3
 </pre>
+
+
+### Kann der Crawler mit Umlaut-URLs umgehen?
+
+Der Crawler kann aktuell mit Umlaut-URLs und IDN Domains umgehen. Dies gilt allerdings nur für das Indexieren von Einzel-URLs.
+
+Das Indexieren von Umlaut-URLs in URL-Räumen wird aktuell nicht von der NUTCH Suchmaschinenversion unterstützt. Hintergrund ist, dass innerhalb der NUTCH Suchmaschine die gesammelten Umlaut-Urls des Url-Raumes nicht entsprechend umkodiert werden, so dass beim Zugriff auf Umlaut-URLs Fehler generiert werden.
