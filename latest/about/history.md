@@ -4,6 +4,28 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 5.0.2
+
+### Liste der Änderungen
+
+InGrid
+- [Feature] [Portal] Aktualisierung Tomcat auf 7.0.94 ([REDMINE-1372](https://redmine.informationgrid.eu/issues/1372))
+- [Feature] [Portal] Aktualisierung SachsenPortalU Profil ([REDMINE-1330](https://redmine.informationgrid.eu/issues/1330))
+
+UVP
+- [Feature] [Portal] E-Mail Adresse für UVP "Vorschaltseite" aktualisiert ([REDMINE-1373](https://redmine.informationgrid.eu/issues/1373))
+- [Feature] [Portal] Anpassungen für die Verbesserung der BLP-Integration ([REDMINE-1291](https://redmine.informationgrid.eu/issues/1291))
+- [Feature] [Portal] Parametrisierung der Kartenansicht ([REDMINE-1113](https://redmine.informationgrid.eu/issues/1113))
+- [Bug] [IGE] IE 11 Fix für UVP Erfassungsformular ([REDMINE-1395](https://redmine.informationgrid.eu/issues/1395))
+- [Bug] [IGE] Fix für die Anzeige des Feldes "ID des übergeordneten Datensatzes" ([REDMINE-1396](https://redmine.informationgrid.eu/issues/1396))
+
+BAW
+- [Bug] [Portal] Fix Kartenmarker ([REDMINE-1380](https://redmine.informationgrid.eu/issues/1380))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.0.2/))
+
 ## Version 5.0.1
 
 ### Liste der Änderungen
