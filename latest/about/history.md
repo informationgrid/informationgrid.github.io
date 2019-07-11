@@ -16,7 +16,7 @@ InGrid
 - [Feature] [Portal] Aktualisierung SachsenPortalU Profil ([REDMINE-1330](https://redmine.informationgrid.eu/issues/1330))
 
 UVP
-- [Feature] [Portal] E-Mail Adresse für UVP "Vorschaltseite" aktualisiert ([REDMINE-1373](https://redmine.informationgrid.eu/issues/1373))
+- [Feature] [Portal] E-Mail Adresse für Brandenburg UVP "Vorschaltseite" aktualisiert ([REDMINE-1373](https://redmine.informationgrid.eu/issues/1373))
 - [Feature] [Portal] Anpassungen für die Verbesserung der BLP-Integration ([REDMINE-1291](https://redmine.informationgrid.eu/issues/1291))
 - [Feature] [Portal] Parametrisierung der Kartenansicht ([REDMINE-1113](https://redmine.informationgrid.eu/issues/1113))
 - [Bug] [IGE] IE 11 Fix für UVP Erfassungsformular ([REDMINE-1395](https://redmine.informationgrid.eu/issues/1395))
