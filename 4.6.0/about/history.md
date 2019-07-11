@@ -11,10 +11,12 @@ Release 27.05.2019
 ### Liste der Änderungen
 
 - [Feature] [IPLUG-SE] iPlug SE: Accept invalid SSL certificates (self signed, not in java certstore) ([REDMINE-1368](https://redmine.informationgrid.eu/issues/1368))
+- [Feature] [CODELIST-REPO] Codelist-Repository: Robusteres Lesen der Codelisten ([REDMINE-1303](https://redmine.informationgrid.eu/issues/1303))
 
 ### Komponenten
 
 - iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.6.6/))
+- Codelist Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/4.6.6/))
 
 
 ## Version 4.6.5
