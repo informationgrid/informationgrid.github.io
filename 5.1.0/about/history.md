@@ -8,130 +8,98 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.0.x. Release Notes
 
 
 
-## Version 5.0.0
+## Version 5.1.0
 
-Release 16.04.2019
+Release xx.07.2019
 
 ### Wichtige Änderungen
 
-#### Verwendung eines zentralen Index
+#### Neues Layout für uvp-verbund.de
 
-Mit der Version 5.0.0 wird ein zentraler Index eingeführt, in dem alle iPlugs ihre Daten indizieren. Die iPLugs werden bei einer Suchanfrage dann nicht mehr angesprochen. Dies erhöht die Performance der Suche signifikant und macht den Weg frei für weitere Entwicklungen, wie z.B. "Live Search" oder "Meinten Sie ...?".
+Für das Portal uvp-verbund.de wurde ein neues Layout erstellt.
 
-Die Admin GUI des iBus wurde um eine Funktion erweitert, die die Verwaltung des zentralen Index erlaubt. Hier können die Indexe der verschiedenen iPlugs administriert werden, so dass es nach wie vor möglich ist, Datenquellen zu- oder abzuschalten.
+![Neues Layout für uvp-verbund.de](../images/uvp_layout.png "Neues Layout für uvp-verbund.de")
+<figcaption class="figcaption">Neues Layout für uvp-verbund.de</figcaption>
 
-Bei der Umstellung sind folgende Punkte zu beachten:
+#### Verbesserung der kontext-sensitiven Hilfe im InGrid Editor
 
-**1.) Installation einer Elastic Search Instanz oder eine Clusters**
+Die kontext-sensitive Hilfe im IGE kann nun über Dateien, profilspezifische angepasst werden. Die Hilfetexte werden im Markdown Format erstellt und können selbstständig vom fachlich versierten Personen redaktionell betreut werden.
 
-Für die Verwendung des zentralen Index wird zwingend eine Elasticsearch-Cluster Installation benötigt. Folgende Schritte müssen daher vor der Aktualisierung der InGrid Komponenten ausgeführt werden:
+![Bearbeitung kontext-sensitive Hilfe mit Markdown und Vorschau](../images/context_help_md.png "Bearbeitung kontext-sensitive Hilfe mit Markdown und Vorschau")
+<figcaption class="figcaption">Bearbeitung kontext-sensitive Hilfe mit Markdown und Vorschau</figcaption>
 
-* Installation eines Elasticsearch-Knotens/-Clusters in der Version 6.4.2
-  * Hinzufügen des Elasticsearch-Plugins "Decompound-Plugin", welches für die Verarbeitung von zusammengesetzten Worten benötigt wird
-    * gehen Sie in das Verzeichnis von Elasticsearch
-    * und führen Sie folgenden Befehl aus:<br>
-    `sudo bin/elasticsearch-plugin install https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip`
-* Alternativ zur manuellen installation kann das folgende Docker-Image verwendet werden: `docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2`
+#### Parametrisierbare Kartenansicht im UVP-Portal
 
-**2.) Aktualisierung/Konfiguration des iBus**
+Die Kartendarstellunng im UVP-Portal kann nun parametrisiert werden. Die Parametrisierung umfasst den angezeigten Kartenausschnitt sowie die dargestellten Layer. Eine Dokumentation findet sich unter
 
-Der iBus sollte als erste Komponente aktualisiert werden. Durch die Rückwärtskompatibilität ist eine separate Aktualisierung problemlos möglich.
-
-Nach der Aktualisierung muss in der Admin-GUI des iBus der Elasticsearch Cluster konfiguriert werden. Dazu gehen Sie auf die Einstellungen ("Zahnrad" rechts oben) und geben die IP-Adresse und TCP-Port des Elasticsearche Knotens ein, zum Beispiel: `localhost:9300`. Danach sollte nach ein paar Sekunden das Statussymbol grün sein
-
-![Konfiguration von Elasticsearch im iBus](../images/iBus_elasticsearch_Konfiguration.png "Konfiguration von Elasticsearch im iBus")
-
-Nach der Aktualisierung der iPlugs werden in der "Index-Verwaltung" alle Indizes des ElasticSearch Knotens aufgelistet, die von den iPlugs generiert wurden. Diese können über den Schalter ![Index Schalter](../images/iBus_index_schalter.png "Index Schalter") an- bzw ausgeschaltet werden. Weitere Information sind [hier](../components/ibus) zu finden.
-
-![Verwaltung der Indizes im iBus](../images/iBus_index_Verwaltung.png "Verwaltung der Indizes im iBus")
-
-**3.) Aktualisierung aller weiterer Komponenten**
-
-Die weiteren InGrid Komponenten können nun aktualisiert werden.
-
-Die Komponenten nutzen danach automatisch den zentralen Index.
+https://www.ingrid-oss.eu/5.1.0/components/portal.html#uvp-wie-kann-man-den-kartenzustand-per-url-festlegen
 
 
-**Hinweis zu der Funktion "Verfügbarkeit der Ergebnisse"**
+![Parametrisierbare Kartendarstellung im UVP-Portal](../images/uvp_map_parameter.png "Parametrisierbare Kartendarstellung im UVP-Portal")
+<figcaption class="figcaption">Parametrisierbare Kartendarstellung im UVP-Portal</figcaption>
 
-Durch die Umstellung entfällt die Funktion der "Verfügbarkeit der Ergebnisse" in den iPlugs. Weil die Suche nicht mehr in den iPlugs erfolgt, können diese auch keinen Einfluss mehr auf die Ausgabe der Ergebnisse nehmen.
+#### Umstellung auf OpenJDK 8
 
-Wird diese Funktion benötigt, weil bspw. nur einen Teil der Daten weitergegeben werden soll, gibt es folgenden Lösungsansatz:
-
-* Installation eines zusätzlichen iPlugs
-* Anschluss an den iBus, an dem die Daten abgegeben werden sollen (in dessen zentral Index)
-* Anpassung der Indizierung, um nur die gewünschten Daten auszuliefern
-  * zum Beispiel in Datei `spring-mapper-object.xml` im Bean `recordSetProducer` die Eigenschaft `recordSql` anpassen
-
-#### Einführen von Instanz-Administratoren
-
-In der Admin-GUI des iPlug SE können Instanz-Administratoren definiert werden. Der Zugriff innerhalb der Admin GUI wird für diese Administratoren auf eine Instanz beschränkt. Zusätzlich können bestimmte Funktionen nicht verwendet werden.
-
-![SE iPlug Instanzen - Administratoren](../images/iplug_se_administratoren.png "SE iPlug Instanzen - Administratoren")
-<figcaption class="figcaption">SE iPlug Instanzen - Administratoren</figcaption>
-
-#### WMTS mit GetCapabilities-Assistent erfassen
-
-Im InGrid Editor lassen sich mir der GetCapabilities Funktion auch WMTS Dienste erfassen.
-
-#### Komprimierung von URL Parametern beim Aufruf von WMS Karten mit vielen Layern
-
-Der Status des Kartenviewers wird komplett über die URL abgebildet. Jede Änderung, z.B. An/Abschalten von Layern, Verschieben/Zoomen der Karte, Redlining innerhalb der Karte führt zu einer Anpassung der URL.  Dadurch kann ein bestimmter Zustand sehr einfach über ein Bookmark gesichert werden.
-
-Bei umfangreichen Kartenkonfigurationen konnte es vorkommen, dass die Länge der URL, die Anzahl der zulässigen Zeichen in bestimmten Browsern überschritt. Ein Bookmarking war dann nicht mehr möglich.
-
-Die Funktionalität wurde nun so angepasst, dass lange URLs automatisch zu einem Kürzel zusammengefasst werden. Unter diesem Kürzel wird die Kartenkonfiguration abgespeichert. So ist es nun möglich beliebig umfangreiche Konfigurationen zu erzeugen und weiterzugeben.
-
-#### UVP: Neues Eingabefeld wegen EU-Berichtspflicht zur Verfahrensdauer
-
-Ein neues Feld `Eingang des Antrags` wurde dem UVP Eingabeformular hinzugefügt. Die Verfahrensdauer spielt eine Rolle bei der Erstellung von EU Berichtspflichten.
-
-![UVP Formular - Neus Feld Eingang des Antrages](../images/uvp_eingang_des_antrages.png "UVP Formular - Neus Feld Eingang des Antrages")
-<figcaption class="figcaption">UVP Formular - Neus Feld Eingang des Antrages</figcaption>
-
-
+Alle Komponenten wurden auf OpenJDK 8 umgestellt. Die gesamte InGrid Installation ist damit unabhängig von der Lizenzpolitik Oracles.
 
 ### Liste der Änderungen
 
 InGrid
-- [Feature] [SYSTEM] Umstellung auf die zentrale Indexierung ([REDMINE-835](https://redmine.informationgrid.eu/issues/835))
-- [Feature] [SYSTEM] Aktualisierung von Libraries ([REDMINE-1196](https://redmine.informationgrid.eu/issues/1196))
-- [Feature] [PORTAL] Aktualisierung auf aktuelle TOMCAT 7 Version ([REDMINE-1271](https://redmine.informationgrid.eu/issues/1271))
-- [Feature] [Codelist-Repo] AdV-Produktgruppe erweitern ([REDMINE-1087](https://redmine.informationgrid.eu/issues/1087))
-- [Feature] [iPLug SE] Einführen von Instanz-Administratoren ([REDMINE-979](https://redmine.informationgrid.eu/issues/979))
-- [Feature] [IGE] Codeliste 6020 aus Katalog löschen ([REDMINE-564](https://redmine.informationgrid.eu/issues/564))
-- [Feature] [IGE] WMTS mit GetCapabilities-Assistent erfassen ([REDMINE-513](https://redmine.informationgrid.eu/issues/513))
-- [Feature] [MAPCLIENT] Komprimierung von URL Parametern beim Aufruf von WMS Karten mit vielen Layern ([REDMINE-415](https://redmine.informationgrid.eu/issues/415))
-- [BUG] [CODELIST/Portal]: Codelist-Service CannotResolveClassException ([REDMINE-1303](https://redmine.informationgrid.eu/issues/1303))
-- [BUG] [iPLug SE] Bestimmte Seiten heißen noch "Portal U Administration" ([REDMINE-1289](https://redmine.informationgrid.eu/issues/1289))
-- [BUG] [IGE/IBUS] Abfrage des Codelistrepositories in IGE und iBus (früher Management iPlug) berücksichtigt Proxy Einstellungen nicht ([REDMINE-1285](https://redmine.informationgrid.eu/issues/1285))
-- [BUG] [IGE] ISO-Element hoursOfService falsch im ISO-XML plaziert ([REDMINE-1284](https://redmine.informationgrid.eu/issues/1284))
-- [BUG] [IGE] Beim Einfügen oder Löschen im Strukturbaum muss Baum neu dargestellt werden (Refresh) ([REDMINE-1261](https://redmine.informationgrid.eu/issues/1261))
-- [BUG] [IGE] Eingabe-Regeln werden beim initialen Aufruf eines Metadatensatzes nicht korrekt angewandt ([REDMINE-1123](https://redmine.informationgrid.eu/issues/1123))
 
-NUMIS
-- [BUG] Header Logo Darstellung im Portal unter IE11 fehlerhaft ([REDMINE-1280](https://redmine.informationgrid.eu/issues/1280))
-- [BUG] Requests werden im https://matomo.niedersachsen.de nicht geloggt ([REDMINE-1264](https://redmine.informationgrid.eu/issues/1264))
+- [Feature] [PORTAL] Portal: Austausch Hintergrundkarte von Leaflet ([REDMINE-1392](https://redmine.informationgrid.eu/issues/1392))
+- [Feature] [IGE] Verbesserung der kontext-sensitiven Hilfe ([REDMINE-272](https://redmine.informationgrid.eu/issues/272))
+- [Feature] [IGE] IGE: INSPIRE TG MD 2.0: Feld: Zugriffsbeschränkungen ([REDMINE-1219](https://redmine.informationgrid.eu/issues/1219))
+- [Feature] [IGE] IGE: INSPIRE TG MD 2.0: Feld: Nutzungsbedingungen ([REDMINE-1218](https://redmine.informationgrid.eu/issues/1218))
+- [Feature] [IPLUG_IGE] IGE iPlug: Das Feld mod_time soll im index gespeichert werden ([REDMINE-1425](https://redmine.informationgrid.eu/issues/1425))
+- [Feature] [IPLUG-SE] [iPlug SE] Automatische URL Kodierung in der URL-Pflege ([REDMINE-270](https://redmine.informationgrid.eu/issues/270))
+- [Feature] [IPLUG-SE] iPlug SE: Accept invalid SSL certificates (self signed, not in java certstore) ([REDMINE-1368](https://redmine.informationgrid.eu/issues/1368))
+- [Feature] [INTERFACE-SEARCH] OpenSearch Schnittstelle: In den InGrid Daten der OpenSearch Schnittstelle soll das Modifikationsdatum ausgegeben werden. ([REDMINE-1426](https://redmine.informationgrid.eu/issues/1426))
+- [Feature] [INTERFACE-SEARCH] OpenSearch Interface: Kompatibilität mit Zentraler Indexierung herstellen ([REDMINE-1423](https://redmine.informationgrid.eu/issues/1423))
+- [Feature] [INTERFACE-SEARCH] Überarbeitung der automatisierten Erstellung von ATOM-Feeds aus dem IGE ([REDMINE-1310](https://redmine.informationgrid.eu/issues/1310))
+- [Feature] [IBUS] iBus: Menüpunkt "Indexieren" überarbeiten oder entfernen ([REDMINE-1371](https://redmine.informationgrid.eu/issues/1371))
+- [Feature] [SYSTEM] Umstellung auf OpenJDK 8 ([REDMINE-1263](https://redmine.informationgrid.eu/issues/1263))
+- [Bug] [PORTAL] Portal: Initiales Suchfeld enthält Wert statt Platzhalter ([REDMINE-1403](https://redmine.informationgrid.eu/issues/1403))
+- [Bug] [PORTAL] Portal: Falsche Darstellung von angeschlossenen Datenquellen ([REDMINE-1389](https://redmine.informationgrid.eu/issues/1389))
+- [Bug] [IGE] IGE: Auswahl von "Digitale Orthophotos" bei "AdV-Produktgruppe" führt zu Fehlern beim Veröffentlichen ([REDMINE-1128](https://redmine.informationgrid.eu/issues/1128))
+- [Bug] [IGE] IGE: Falsche Konformitätseinträge werden beim Laden von Datensätzen hinzugefügt ([REDMINE-1431](https://redmine.informationgrid.eu/issues/1431))
+- [Bug] [IGE] IGE: Dienst-URLs per GetCapabilities-Assistenten nicht erreichbar ([REDMINE-1344](https://redmine.informationgrid.eu/issues/1344))
+- [Bug] [MAPCLIENT] MAPCLIENT: ID-Generierung von neu hinzugefügten Karten führen zu Ausfall der Admin-GUI ([REDMINE-1365](https://redmine.informationgrid.eu/issues/1365))
+- [Bug] [IPLUG-SE] iPlug SE: Suche in Admin GUI funktioniert nicht erwartungsgemäß ([REDMINE-1421](https://redmine.informationgrid.eu/issues/1421))
+- [Bug] [IBUS] ibus: Anmeldung auf ibus Admin GUI funktioniert nur auf Port 80 ([REDMINE-1381](https://redmine.informationgrid.eu/issues/1381))
+
+MetaVer
+
+- [Bug] [Portal] Keine Verbindung zur Oracle DB nach Update auf 4.6.2 ([REDMINE-1397](https://redmine.informationgrid.eu/issues/1397))
 
 UVP
-- [Feature] Neues Eingabefeld wegen EU-Berichtspflicht zur Verfahrensdauer ([REDMINE-1110](https://redmine.informationgrid.eu/issues/1110))
-- [Feature] Integration von BLP-Referenzen der MetaVer-Partner in das UVP-Gemeinschaftsportal uvp-verbund.de auf Basis der nds. Lösung (Excel-Datei) ([REDMINE-914](https://redmine.informationgrid.eu/issues/914))
+
+- [Feature] [Portal] Parametrisierung der Kartenansicht ([REDMINE-1113](https://redmine.informationgrid.eu/issues/1113))
+- [Feature] [Portal] Aktualisierung BB Email Adresse auf Vorschaltseite ([REDMINE-1373](https://redmine.informationgrid.eu/issues/1373))
+- [Feature] [Portal] UVP: Keine BLP-Treffer bei Filter "Aktualität" ([REDMINE-1178](https://redmine.informationgrid.eu/issues/1178))
+- [Feature] [Portal] Umsetzung UVP Layout als Portal Profil ([REDMINE-1265](https://redmine.informationgrid.eu/issues/1265))
+- [Feature] [Portal] REDESIGN VON UVP-VERBUND.DE ([REDMINE-1150](https://redmine.informationgrid.eu/issues/1150))
+- [Feature] [CODELIST REPO] Überarbeitung UVP Nummern Saarland ([REDMINE-1378](https://redmine.informationgrid.eu/issues/1378))
+- [Bug] [IGE] UVP: In Sektion "Allgemein" wird beim Ausklappen das Feld "ID des übergeordneten Datensatzes angezeigt" ([REDMINE-1396](https://redmine.informationgrid.eu/issues/1396))
+- [Bug] [IGE] Im IE11 wird das UVP Erfassungsformular nicht angezeigt ([REDMINE-1395](https://redmine.informationgrid.eu/issues/1395))
+- [Bug] [Portal] Falsche Anzeige von Enddatum Erörterungstermin ([REDMINE-1387](https://redmine.informationgrid.eu/issues/1387))
+- [Bug] [Portal] UVP: Laden von Markern auf der Karte langsam ([REDMINE-1279](https://redmine.informationgrid.eu/issues/1279))
+
+BAW DMQS
+
+- [Bug] [IGE] Fehler beim CSW-Import  ([REDMINE-1336](https://redmine.informationgrid.eu/issues/1336))
+- [Bug] [IGE] Geokodierung Queries im BWaStr. Locator funktionieren mit POST nicht ([REDMINE-1380](https://redmine.informationgrid.eu/issues/1380))
 
 
 ### Komponenten
 
-- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.0.0/))
-- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.0.0/))
-- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.0.0/))
-- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.0.0/))
-- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.0.0/))
-- iPlug CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.0.1/))
-- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.0.1/))
-- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.0.1/))
-- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.0.0/))
-- iPlug Opensearch ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/5.0.1/))
-- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.0.0/))
-- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.0.0/))
-- iPlug WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.0.1/))
-- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/5.0.1/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.1.0/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.1.0/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.1.0/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.1.0/))
+- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.1.0/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.1.0/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.1.0/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.1.0/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.1.0/))
+- iPlug XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/5.1.0/))
 
