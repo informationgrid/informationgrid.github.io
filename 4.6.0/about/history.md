@@ -4,6 +4,23 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.7
+
+Release 11.07.2019
+
+### Liste der Änderungen
+
+- [Bug] [IGE] IGE: Falsche Konformitätseinträge werden beim Laden von Datensätzen hinzugefügt ([REDMINE-1431](https://redmine.informationgrid.eu/issues/1431))
+- [Bug] [Portal] Abfrage des Codelistrepositories in IGE berücksichtigt Proxy Einstellungen nicht. ([REDMINE-1285](https://redmine.informationgrid.eu/issues/1285))
+- [Bug] [IGE] IGE: Auswahl von "Digitale Orthophotos" bei "AdV-Produktgruppe" führt zu Fehlern beim Veröffentlichen ([REDMINE-1128](https://redmine.informationgrid.eu/issues/1128))
+
+
+### Komponenten
+
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.7/))
+
+
 ## Version 4.6.6
 
 Release 27.05.2019
