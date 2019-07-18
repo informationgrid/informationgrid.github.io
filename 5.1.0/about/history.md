@@ -32,7 +32,7 @@ Die kontext-sensitive Hilfe im IGE kann nun über Dateien, profilspezifische ang
 
 Die Kartendarstellunng im UVP-Portal kann nun parametrisiert werden. Die Parametrisierung umfasst den angezeigten Kartenausschnitt sowie die dargestellten Layer. Eine Dokumentation findet sich unter
 
-https://www.ingrid-oss.eu/5.1.0/components/portal.html#uvp-wie-kann-man-den-kartenzustand-per-url-festlegen
+[https://www.ingrid-oss.eu/5.1.0/components/portal.html#uvp-wie-kann-man-den-kartenzustand-per-url-festlegen](https://www.ingrid-oss.eu/5.1.0/components/portal.html#uvp-wie-kann-man-den-kartenzustand-per-url-festlegen)
 
 
 ![Parametrisierbare Kartendarstellung im UVP-Portal](../images/uvp_map_parameter.png "Parametrisierbare Kartendarstellung im UVP-Portal")
@@ -47,6 +47,7 @@ Alle Komponenten wurden auf OpenJDK 8 umgestellt. Die gesamte InGrid Installatio
 InGrid
 
 - [Feature] [PORTAL] Portal: Austausch Hintergrundkarte von Leaflet ([REDMINE-1392](https://redmine.informationgrid.eu/issues/1392))
+- [Feature] [MAPCLIENT] MAPCLIENT: Admin-GUI: Kategoriebilder hochladen ermöglichen ([REDMINE-1253](https://redmine.informationgrid.eu/issues/1253))
 - [Feature] [IGE] Verbesserung der kontext-sensitiven Hilfe ([REDMINE-272](https://redmine.informationgrid.eu/issues/272))
 - [Feature] [IGE] IGE: INSPIRE TG MD 2.0: Feld: Zugriffsbeschränkungen ([REDMINE-1219](https://redmine.informationgrid.eu/issues/1219))
 - [Feature] [IGE] IGE: INSPIRE TG MD 2.0: Feld: Nutzungsbedingungen ([REDMINE-1218](https://redmine.informationgrid.eu/issues/1218))
@@ -63,9 +64,12 @@ InGrid
 - [Bug] [IGE] IGE: Auswahl von "Digitale Orthophotos" bei "AdV-Produktgruppe" führt zu Fehlern beim Veröffentlichen ([REDMINE-1128](https://redmine.informationgrid.eu/issues/1128))
 - [Bug] [IGE] IGE: Falsche Konformitätseinträge werden beim Laden von Datensätzen hinzugefügt ([REDMINE-1431](https://redmine.informationgrid.eu/issues/1431))
 - [Bug] [IGE] IGE: Dienst-URLs per GetCapabilities-Assistenten nicht erreichbar ([REDMINE-1344](https://redmine.informationgrid.eu/issues/1344))
+- [Bug] [IGE] IGE: Parent Identifier wieder aktiv ([REDMINE-1427](https://redmine.informationgrid.eu/issues/1427))
 - [Bug] [MAPCLIENT] MAPCLIENT: ID-Generierung von neu hinzugefügten Karten führen zu Ausfall der Admin-GUI ([REDMINE-1365](https://redmine.informationgrid.eu/issues/1365))
+- [Bug] [MAPCLIENT] MAPCLIENT: Sonderzeichen werden falsch dargestellt ([REDMINE-1354](https://redmine.informationgrid.eu/issues/1354))
 - [Bug] [IPLUG-SE] iPlug SE: Suche in Admin GUI funktioniert nicht erwartungsgemäß ([REDMINE-1421](https://redmine.informationgrid.eu/issues/1421))
-- [Bug] [IBUS] ibus: Anmeldung auf ibus Admin GUI funktioniert nur auf Port 80 ([REDMINE-1381](https://redmine.informationgrid.eu/issues/1381))
+- [Bug] [IBUS] iBus: Anmeldung auf ibus Admin GUI funktioniert nur auf Port 80 ([REDMINE-1381](https://redmine.informationgrid.eu/issues/1381))
+- [Bug] [IBUS] iBus: Behebung von Login-Problemen am iBus ([REDMINE-1428](https://redmine.informationgrid.eu/issues/1428))
 
 MetaVer
 
@@ -81,11 +85,13 @@ UVP
 - [Feature] [CODELIST REPO] Überarbeitung UVP Nummern Saarland ([REDMINE-1378](https://redmine.informationgrid.eu/issues/1378))
 - [Bug] [IGE] UVP: In Sektion "Allgemein" wird beim Ausklappen das Feld "ID des übergeordneten Datensatzes angezeigt" ([REDMINE-1396](https://redmine.informationgrid.eu/issues/1396))
 - [Bug] [IGE] Im IE11 wird das UVP Erfassungsformular nicht angezeigt ([REDMINE-1395](https://redmine.informationgrid.eu/issues/1395))
+- [Bug] [IGE] UVP: Vergleichsansicht wirft JavaScript Fehler ([REDMINE-1433](https://redmine.informationgrid.eu/issues/1433))
 - [Bug] [Portal] Falsche Anzeige von Enddatum Erörterungstermin ([REDMINE-1387](https://redmine.informationgrid.eu/issues/1387))
 - [Bug] [Portal] UVP: Laden von Markern auf der Karte langsam ([REDMINE-1279](https://redmine.informationgrid.eu/issues/1279))
 
 BAW DMQS
 
+- [Feature] [IGE] Bezeichnung und Version des Metadatenstandards für die BAW anpassen ([REDMINE-1386](https://redmine.informationgrid.eu/issues/1386))
 - [Bug] [IGE] Fehler beim CSW-Import  ([REDMINE-1336](https://redmine.informationgrid.eu/issues/1336))
 - [Bug] [IGE] Geokodierung Queries im BWaStr. Locator funktionieren mit POST nicht ([REDMINE-1380](https://redmine.informationgrid.eu/issues/1380))
 
