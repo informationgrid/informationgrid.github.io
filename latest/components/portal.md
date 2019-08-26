@@ -442,10 +442,28 @@ Soll ein bestehendes Portal auf Postgres umgeschaltet werden (auf migrierte Date
 
 Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](#migration-nach-postgresql).
 
+### Lokalisierung
+
+Um Texte im Portal zu ändern müssen Sie Dateien in der Portal-Installation geändert werden.
+
+Die Lokalisierungsdatei finden Sie unter
+
+* <PORTAL-INSTALLATION>/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes/de/ingrid/portal/resources
+* <PORTAL-INSTALLATION>/apache-tomcat/webapps/ROOT/WEB-INF/classes/de/ingrid/portal/resources
+
+In verschiedenen Dateien sind die verwendeten Texte aus dem Portal hinterlegt.
+
+Die Änderungen werden erst nach einem Neustart des Portals sichtbar.
+
+## Benutzeroberfläche
 
 ### Administration
 
 Der Portal Administrator kann nach Login im Menü *Administration* u.a. folgendes ändern:
+
+#### Benutzer
+
+Verwalten Sie hier die Portal Benutzer. Hier können Sie Benutzer hinzufügen, ändern oder auch löschen. 
 
 #### Startseite
 
@@ -460,9 +478,46 @@ Hier können die RSS Feeds eingepflegt werden, von denen dann regelmäßig Nachr
 
 Probleme mit Feeds werden in der Spalte *Letztes Update* bzw *Fehler* angezeigt.
 
-#### Partner / Anbieter
+#### iPlug / iBus
+
+Hier gelangen Sie zu der Oberfläche des InGrid iBus bzw. zu den Oberflächen alle eingebunden iPlugs / Datenquellen.
+
+#### Inhalt
+
+Unter diesem Menüpunkt können Sie Inhalte für verschiedene Bereichen des Portals an Ihre eigene Bedürfnisse anpassen. 
+
+In der Tabelle werden Ihnen verschiedene Bereiche aufgelistet. Jeder Bereich hat hierbei einen Schlüssel:
+
+* ingrid.teaser.inform: InGrid INFORMIERT 
+  Wird Ihnen auf der Startseite angezeigt.
+* ingrid.about: Über InGrid
+  Wird Ihnen auf der Seite Porträt angezeigt. (Hauptmenü: Über InGrid -> Porträt)
+* ingrid.disclaimer: Impressum
+  Wird Ihnen auf der Seite Impressum angezeigt. (Footer: Impressum)
+* ingrid.privacy: Datenschutz
+  Wird Ihnen auf der Seite Datenschutz angezeigt. (Footer: Datenschutz)
+* ingrid.contact.intro.postEmail: Kontakt
+  Wird Ihnen auf der Seite Kontakt angezeigt. (Footer: Kontakt)
+
+Wählen Sie einen Eintrag den Sie ändern möchten per Klick aus und tragen Ihren Titel sowie Inhalt in HTML-Form ein. Wenn nötig und falls in Verwendung des Portal-Sprachumschalters auch in englischer Sprache. 
+Diese Inhalte werde in der Portal-Datenbank gespeichert und sind nach einem Neuladen des Portals im Browser gleich sichtbar.
+
+Andere (Text-) Änderungen erfolgen über die Portal-Installation und können nicht über die Portaloberfläche geändert werden. (siehe [Lokalisierung](#lokalisierung))
+
+#### Statistiken
+
+Rufen Sie die Statistiken auf. Falls ein Statistik-Tool (z.B. AWSTATS, PIWIK) verwenden, können Sie in der Konfigurationsdatei des Portals "ingrid-portal-apps(.profile).properties" den Link zum Tool unter der Eigenschaft "apache.statistics.url" hinterlegen. 
+Dieser Link ist dann unter der Administrationseite "Statistiken" per Klick aufrufbar.
+
+#### Partner / Anbieter (veraltet)
 
 ACHTUNG: Ab der Version 4.4.0 werden die Partner und Anbieter im  [Codelist Repository](codelist_repository.html) gepflegt und wurden aus der Administration des Portals entfernt.
+
+#### Portal Profile
+
+Im Portal sind verschiedene Portal-Profile erstellt. Jedes Profil weist einen eigenen Web-Auftritt und für sich angepasste Funktionen auf. 
+
+Hier können Sie ein Profil auswählen und nach einem Neustart des Portals wird Ihnen das Portal in einer anderen Darstellung präsentiert. 
 
 #### Jobs
 
@@ -487,6 +542,9 @@ Meldet einen Fehler, wenn keine Verbindung zum Upgrade Server aufgenommen werden
 * **AnniversaryFetcherJob**
 Holt sich vom SNS über das SNS iPlug historische Umweltereignisse, die in der Datenbank abgelegt werden und in der Chronik angezeigt und gesucht werden können.
 
+#### Karte
+
+Dieser Menüpunkt öffen die Administration des InGrid-WebmapClients. 
 
 ## FAQ
 
