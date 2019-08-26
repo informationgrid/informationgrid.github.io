@@ -446,14 +446,17 @@ Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](
 
 Um Texte im Portal zu ändern müssen Sie Dateien in der Portal-Installation geändert werden.
 
-Die Lokalisierungsdatei finden Sie unter
+Die Lokalisierungsdateien finden Sie unter
 
 * <PORTAL-INSTALLATION>/apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes/de/ingrid/portal/resources
+  Für Portale mit einem Profil existiert zusätzlich eine Datei **ProfileResources_de.properties** (ggf. auch mit _en). Kopieren Sie Schlüssel-Wert-Paare aus anderen Resource-Dateien in diese Datei und ändern Sie hier den Wert. Die hier definierten Schlüssel-Wert-Paare überschreiben die definierten Schlüssel-Wert-Paare der restlichen Dateien aus diesem Verzeichnis.
 * <PORTAL-INSTALLATION>/apache-tomcat/webapps/ROOT/WEB-INF/classes/de/ingrid/portal/resources
 
 In verschiedenen Dateien sind die verwendeten Texte aus dem Portal hinterlegt.
 
 Die Änderungen werden erst nach einem Neustart des Portals sichtbar.
+
+Weitere Texte können Sie über die Portal-Oberfläche anpassen. (siehe Adminstration - Inhalt](#inhalt))
 
 ## Benutzeroberfläche
 
@@ -488,15 +491,15 @@ Unter diesem Menüpunkt können Sie Inhalte für verschiedene Bereichen des Port
 
 In der Tabelle werden Ihnen verschiedene Bereiche aufgelistet. Jeder Bereich hat hierbei einen Schlüssel:
 
-* ingrid.teaser.inform: InGrid INFORMIERT 
+* **ingrid.teaser.inform**: InGrid INFORMIERT 
   Wird Ihnen auf der Startseite angezeigt.
-* ingrid.about: Über InGrid
+* **ingrid.about**: Über InGrid
   Wird Ihnen auf der Seite Porträt angezeigt. (Hauptmenü: Über InGrid -> Porträt)
-* ingrid.disclaimer: Impressum
+* **ingrid.disclaimer**: Impressum
   Wird Ihnen auf der Seite Impressum angezeigt. (Footer: Impressum)
-* ingrid.privacy: Datenschutz
+* **ingrid.privacy**: Datenschutz
   Wird Ihnen auf der Seite Datenschutz angezeigt. (Footer: Datenschutz)
-* ingrid.contact.intro.postEmail: Kontakt
+* **ingrid.contact.intro.postEmail**: Kontakt
   Wird Ihnen auf der Seite Kontakt angezeigt. (Footer: Kontakt)
 
 Wählen Sie einen Eintrag den Sie ändern möchten per Klick aus und tragen Ihren Titel sowie Inhalt in HTML-Form ein. Wenn nötig und falls in Verwendung des Portal-Sprachumschalters auch in englischer Sprache. 
