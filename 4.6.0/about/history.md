@@ -4,6 +4,20 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.8
+
+Release 27.08.2019
+
+### Liste der Änderungen
+
+- [Bug] [IPLUG-SE] iPlug SE: Zeitgesteuerter Crawl funktioniert nicht ([REDMINE-1466](https://redmine.informationgrid.eu/issues/1466))
+
+### Komponenten
+
+
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/4.6.8/))
+
+
 ## Version 4.6.2.2
 
 Release 19.08.2019
