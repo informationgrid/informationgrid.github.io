@@ -4,6 +4,21 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
+## Version 4.6.9
+
+Release 07.09.2019
+
+### Liste der Änderungen
+
+InGrid
+- [Bug] [Portal] Fehler bei der Darstellung der Detaildarstellung behoben. ([REDMINE-1442](https://redmine.informationgrid.eu/issues/1442))
+- [Feature] [Portal] Anpassung BKG Layout. ([REDMINE-1200](https://redmine.informationgrid.eu/issues/1200))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/4.6.9/))
+
+
 ## Version 4.6.8
 
 Release 27.08.2019
