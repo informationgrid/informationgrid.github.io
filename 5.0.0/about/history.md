@@ -7,6 +7,31 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.0.x. Release Notes ältere Versionen können hier eingesehen werden:  [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html), [4.4.x](/4.4.0/about/history.html)
 
 
+## Version 5.0.3
+
+### Liste der Änderungen
+
+InGrid
+
+- [Bug] [Portal] IGE: Auswahl von "Digitale Orthophotos" bei "AdV-Produktgruppe" führt zu Fehlern beim Veröffentlichen ([REDMINE-1128](https://redmine.informationgrid.eu/issues/1128))
+- [Bug] [Portal] IGE: Falsche Konformitätseinträge werden beim Laden von Datensätzen hinzugefügt ([REDMINE-1431](https://redmine.informationgrid.eu/issues/1431))
+- [Bug] [Portal] UVP: Vergleichsansicht wirft JavaScript Fehler ([REDMINE-1433](https://redmine.informationgrid.eu/issues/1433))
+
+
+UVP
+
+- [Bug] [Portal] UVP: BLP Urls ("fnp_url_finished", "fnp_url_in_progress", "bp_url_finished", "bp_url_in_progress") für NRW werden in Karte nicht angezeigt ([REDMINE-1436](https://redmine.informationgrid.eu/issues/1436))
+- [Bug] [Portal] Auswahl der Kategorien in der Karte in "Karte festlegen" funktioniert nicht ([REDMINE-1438](https://redmine.informationgrid.eu/issues/1438))
+- [Bug] [Portal] Portal: Manche Download Links werden nicht dargestellt ([REDMINE-1442](https://redmine.informationgrid.eu/issues/1442))
+- [Bug] [IGE iPlug] IGE: Ein eingetragenes "gültig bis" Datum wirkt sich auf alle nachfolgenden Dokumente innerhalb der Dokumententabelle aus ([REDMINE-1485](https://redmine.informationgrid.eu/issues/1485))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.0.3/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.0.3/))
+
+
 ## Version 5.0.2
 
 ### Liste der Änderungen
@@ -28,6 +53,7 @@ BAW
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.0.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.0.2/))
 
 ## Version 5.0.1
 
