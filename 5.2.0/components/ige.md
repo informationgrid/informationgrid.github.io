@@ -77,6 +77,82 @@ Die Konfigurationsdateien der einzelnen Service Provider finden sich im Verzeich
 
 Die Aktivierung der unterschiedlichen Services und deren Einstellungen sind beschrieben unter [iPlug-SNS](iplug_sns.html#service-provider)
 
+### File Upload
+
+Die Konfiguration des File Uploads erfolgt in der Datei `mdek.properties` im Verzeichnis `webapps/ingrid-portal-mdek-application/WEB-INF/classes`.
+
+HINWEIS: Sollen die Standardparameter mit installationsspezifishen Werten überschrieben werden, wäre hierfür die Datei `mdek.override.properties` im gleichen Verzeichnis die geeignete Wahl.
+
+Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestellt:
+
+- `upload.docsdir` Basisverzeichnis für alle Uploads. In diesem Verzeichnis legt der Editor die festen Verzeichnisse `_archive_` und `_trash_` sowie die iPlug- und dokumentspezifischen Upload-Verzeichnisse an.
+- `upload.partsdir` Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
+
+Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht mehr referenzierter Dateien, automatische Archivierung und De-Archivierung von Dateien abhängig vom Ablaufdatum) existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
+
+- `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
+- `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
+
+Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-Kette. Schlägt ein Validator fehl, wird der Upload zurückgewiesen. Die Konfiguration der Validatoren und deren Ausführungsreihenfolge werden in den folgenden Parametern festgelegt:
+
+- `upload.validators` Komma-separierte Liste von Validatornamen. Die Reihenfolge legt die Ausführungsreihenfolge fest. Jeder Eintrag muss eine Entsprechung im Parameter `upload.validators.config` haben.
+
+- `upload.validators.config` JSON kodierte Konfiguration aller Validatoren:
+
+  ```
+  upload.validators.config={
+      "filename":{
+          ...
+      },
+      "virusscan":{
+          ...
+      },
+      ...
+  }
+  ```
+
+  Für jeden Validator existiert ein Eintrag mit folgenden Eigenschaften:
+
+  - `impl` JAVA Implementierungsdatei (z.B. `de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator`)
+  - `properties` validatorspezifische Konfigurationswerte als Key-Value Liste
+
+Folgende **Validatoren** existieren:
+
+- `NameValidator`
+
+  ```
+  "filename":{
+      "impl":"de.ingrid.mdek.upload.storage.impl.FileSystemStorage$NameValidator",
+      "properties":{
+      }
+  }
+  ```
+
+- `VirusScanValidator`
+
+  ```
+  "virusscan":{
+      "impl":"de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator",
+      "properties":{
+          "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -archive %FILE%",
+          "infectedPattern":"(?m)^1 file out of 1 was infected.$",
+          "cleanPattern":"(?m)^No viruses were discovered.$"
+      }
+  }
+  ```
+
+  Der `VirusScanValidator` setzt die Installation eines Viren Scanners auf dem Betriebssystem des Servers voraus.
+
+  Um unterschiedliche Viren Scanner zu unterstützen, wird der Scanner über folgende Parameter konfiguriert:
+
+  - `command` Kommando zur Überprüfung einer Datei. Es muss die Zeichenkette `%FILE%` enthalten sein, die durch den zu prüfende Dateipfad ersetzt wird. Das Kommando muss eine Ausgabe liefern, aus der der Status der Datei hervorgeht. Zu beachten ist, dass auch die Überprüfung von Archiven notwendig ist.
+  - `infectedPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *einer* Infektion passt
+  - `cleanPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *keiner* Infektion passt
+
+  Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
+  
+  HINWEIS: Da alle Uploads zunächst in einem [temporären Dateiverzeichnis](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempFile-java.lang.String-java.lang.String-java.nio.file.attribute.FileAttribute...-) gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
+
 ## FAQ
 
 ### Es kommen keine Ergebnisse vom SNS (SSL-Problem)
@@ -269,7 +345,7 @@ context_help
       |- markdownfile_myprofile.md
       |- en // localization directory
          |- markdownfile_myprofile_en.md
- ```
+```
 
 #### Beispiel
 
@@ -296,7 +372,7 @@ Domain: 25 (gmd:abstract)
 
 ## Abbildung ISO 19139 XML
 
-```XML
+​```XML
 <MD_Metadata>
   <identificationInfo>
     <MD_DataIdentification>
