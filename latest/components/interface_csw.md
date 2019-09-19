@@ -239,7 +239,7 @@ Dieser Harvester dient ausschließlich zu Testzwecken. Testdaten werden indexier
 
 ### Control Scheduler
 
-Unter diesem Punkt kann festgelegt werden, wann und mit welcher Regelmäßigkeit das Harvesting durchgeführt werden soll. Die Bedienung entspricht dem im InGrid-System verwendeten Scheduling-Konzept. Siehe auch unter Scheduling.
+Unter diesem Punkt kann festgelegt werden, wann und mit welcher Regelmäßigkeit das Harvesting durchgeführt werden soll. Die Bedienung entspricht dem im InGrid-System verwendeten Scheduling-Konzept. Siehe auch unter [Scheduling](../iplug_admin_gui.html#scheduling).
 
 ### Manually issue harvesting
 
