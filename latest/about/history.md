@@ -10,7 +10,7 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.0.x. Release Notes
 
 ## Version 5.1.0
 
-Release xx.07.2019
+Release 18.07.2019
 
 ### Wichtige Änderungen
 
