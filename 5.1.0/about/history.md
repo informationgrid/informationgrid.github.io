@@ -4,7 +4,7 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-Diese Release Notes betreffen ausschließlich die Versionen 5.0.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
+Diese Release Notes betreffen ausschließlich die Versionen 5.1.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
 
