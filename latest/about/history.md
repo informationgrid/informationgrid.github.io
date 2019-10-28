@@ -116,6 +116,7 @@ Profil BKG
 - Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.2.0/))
 - Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.2.0/))
 - iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.2.0/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.2.0/))
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.2.0/))
 - iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.2.0/))
 
