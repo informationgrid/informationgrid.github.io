@@ -73,6 +73,7 @@ InGrid
 - [Bug] [IPLUG_IGE] Facette "Themen" funktioniert nicht mehr ([REDMINE-1448](https://redmine.informationgrid.eu/issues/1448))
 - [Bug] [IPLUG-SE] iPlug SE: Zeitgesteuerter Crawl funktioniert nicht ([REDMINE-1466](https://redmine.informationgrid.eu/issues/1466))
 - [Bug] [INTERFACE-SEARCH] Redirects werden bei MIME-Type Erkennung nicht korrekt verfolgt ([REDMINE-1481](https://redmine.informationgrid.eu/issues/1481))
+- [Bug] [IPLUG-SNS] Portal: Chronik liefert falsches Ergebnis ([REDMINE-1478](https://redmine.informationgrid.eu/issues/1478))
 
 Profil UVP
 
@@ -119,4 +120,5 @@ Profil BKG
 - iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.2.0/))
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.2.0/))
 - iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.2.0/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.2.0/))
 
