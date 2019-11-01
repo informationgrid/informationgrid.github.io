@@ -7,6 +7,36 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.1.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.1.1
+
+Release 01.11.2019
+
+InGrid
+
+- [Bug] [PORTAL] PORTAL: Funktion "Passwort vergessen" funktioniert nicht ([REDMINE-1543](https://redmine.informationgrid.eu/issues/1543))
+- [Bug] [IGE] IGE: Automatisches Setzen der Konformität bei getCapabilities Assistenten fehlt ([REDMINE-1446](https://redmine.informationgrid.eu/issues/1446))
+- [Bug] [IPLUG-SE] iPlug SE: Zeitgesteuerter Crawl funktioniert nicht ([REDMINE-1466](https://redmine.informationgrid.eu/issues/1466))
+- [Bug] [IPLUG-SE] iPlug SE:  Crawl schlägt fehl, wenn Index nicht (mehr) im elastic search existiert. ([REDMINE-1476](https://redmine.informationgrid.eu/issues/1476))
+
+UVP
+
+- [Feature] [IGE] Umbenennung Tabelle "Relevante Dokumente" ([REDMINE-1519](https://redmine.informationgrid.eu/issues/1519))
+- [Bug] [Portal] Portal: Manche Download Links werden nicht dargestellt ([REDMINE-1442](https://redmine.informationgrid.eu/issues/1442))
+- [Bug] [Portal] Portaltreffer werden bei Aktualität nicht nach Datum absteigend sortiert ([REDMINE-1467](https://redmine.informationgrid.eu/issues/1467))
+- [Bug] [Portal] Teaser auf Startseite sollen nur bei Klick auf Titel, Button ins Detail verlinken. ([REDMINE-1468](https://redmine.informationgrid.eu/issues/1468))
+- [Bug] [Portal] Popups zB Zeitraum der Erörterung gehen auf dem Smartphone im Portraitmode nicht mittig auf ([REDMINE-1469](https://redmine.informationgrid.eu/issues/1469))
+- [Bug] [Portal] Popups in Karte gehen auf Smartphone in Landscape nicht auf, weil Platz nicht ausreicht. ([REDMINE-1470](https://redmine.informationgrid.eu/issues/1470))
+- [Bug] [Portal] Eingabe Feld und Captcha Neuladen Butten zu eng zusammen ([REDMINE-1471](https://redmine.informationgrid.eu/issues/1471))
+- [Bug] [Portal] UVP: Paging in Suchergebnisseite bricht um ([REDMINE-1472](https://redmine.informationgrid.eu/issues/1472))
+- [Bug] [Portal] UVP: UVP Kategorie Text läuft in Detailbutton in Suchergebnis, Fehlendes Icon für UVP Kategorie 18 ([REDMINE-1473](https://redmine.informationgrid.eu/issues/1473))
+- [Bug] [Portal] UVP: Auf Smartphone Landscape lässt sich die Legende nicht mehr schließen ([REDMINE-1474](https://redmine.informationgrid.eu/issues/1474))
+- [Bug] [Portal] IGE: Ein eingetragenes "gültig bis" Datum wirkt sich auf alle nachfolgenden Dokumente innerhalb der Dokumententabelle aus ([REDMINE-1485](https://redmine.informationgrid.eu/issues/1485))
+
+BKG
+
+- [Feature] [] Gestaltung der Präsentationsoberfläche des BKG-Katalogs ([REDMINE-1200](https://redmine.informationgrid.eu/issues/1200))
+
+
 
 ## Version 5.1.0
 
