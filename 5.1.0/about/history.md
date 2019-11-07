@@ -7,6 +7,20 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.1.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.1.2
+
+Release 06.11.2019
+
+UVP
+
+- [Bug] [IGE] IGE: Verlinkung von hochgeladenen Dokumenten im Editor funktioniert nicht ([REDMINE-1553](https://redmine.informationgrid.eu/issues/1553))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.1.2/))
+
+
 ## Version 5.1.1
 
 Release 01.11.2019
@@ -36,6 +50,14 @@ BKG
 
 - [Feature] [] Gestaltung der Präsentationsoberfläche des BKG-Katalogs ([REDMINE-1200](https://redmine.informationgrid.eu/issues/1200))
 
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.1.1/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.1.1/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.1.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.1.0/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.1.0/))
 
 
 ## Version 5.1.0
