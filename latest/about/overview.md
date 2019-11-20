@@ -56,7 +56,7 @@ Aus der öffentlichen Verwaltung sind folgende Partner beteiligt:
 - Thüringen: Ministerium für Umwelt, Energie und Naturschutz
 - Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
 
-Die Firma [Wemove Digital Solutions GmbH](http://www.wemove.com/) betreut als Partner aus der Wirtschaft die technische Projekt-Infrastruktur.
+Die Firma [wemove digital solutions GmbH](http://www.wemove.com/) betreut als Partner aus der Wirtschaft die technische Projekt-Infrastruktur.
 
 Im Rahmen des Projektes wird die Software InGrid gepflegt und weiter entwickelt.
 
