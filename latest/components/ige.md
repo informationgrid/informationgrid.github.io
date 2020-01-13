@@ -94,6 +94,11 @@ Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht meh
 - `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
 - `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
 
+Für die regelmäßige **Virenprüfung der Dateiverzeichnisse** existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
+
+- `upload.virusscan.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 2 Uhr).
+- `upload.virusscan.quarantinedir` Verzeichnis, in das infizierte Dateien verschoben werden sollen.
+
 Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-Kette. Schlägt ein Validator fehl, wird der Upload zurückgewiesen. Die Konfiguration der Validatoren und deren Ausführungsreihenfolge werden in den folgenden Parametern festgelegt:
 
 - `upload.validators` Komma-separierte Liste von Validatornamen. Die Reihenfolge legt die Ausführungsreihenfolge fest. Jeder Eintrag muss eine Entsprechung im Parameter `upload.validators.config` haben.
