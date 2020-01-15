@@ -81,6 +81,8 @@ menu:
         href: components/iplug_excel.html
       - title: iPlug XML
         href: components/iplug_xml.html
+      - title: iPlug BLP
+        href: components/iplug_blp.html
       - title: Schnittstellenkomponenten
         type: header
       - title: Such-Schnittstelle
@@ -144,6 +146,7 @@ published: true
 - [iPlug WFS](components/iplug_dsc_wfs.html) - Indexierung von WFS-Diensten (Web Feature Service)
 - [iPlug Excel](components/iplug_excel.html) - Indexierung von Excel Dateien
 - [iPlug XML](components/iplug_xml.html) - Indexierung vom XML Daten
+- [iPlug BLP](components/iplug_blp.html) - Indexierung von Bauleitplanungsdaten aus einer Excel Datei
 
 ### Schnittstellenkomponenten
 

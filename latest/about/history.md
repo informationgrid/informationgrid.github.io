@@ -121,4 +121,5 @@ Profil BKG
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.2.0/))
 - iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.2.0/))
 - iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.2.0/))
+- iPlug BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.2.0/))
 
