@@ -108,6 +108,26 @@ Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen 
 
 ### Indexierung von BLP Excel Dateien
 
+#### Excelformat
+
+Als Datenbasis dient eine Exceldaten mit folgenden möglichen Spalten:
+
+| Spaltenname                           | Beschreibung                                             |
+|---------------------------------------|----------------------------------------------------------|
+| NAME (oder: STADT/GEMEINDE)           | Name des Markers in der Karte, Titel des Treffers (Bauleitplanung: <NAME>) |
+| LAT           | Latitude des Markers (sollte ein Wert zwischen 47 und 54 sein) |
+| LON           | Longitude des Markers (sollte ein Wert zwischen 5.9 und 15 sein) |
+| URL_VERFAHREN_OFFEN           | URL zu Bauleitplänen (in Bearbeitung)  |
+| URL_VERFAHREN_ABGESCHLOSSEN           | URL zu Bauleitplänen (abgeschlossen)  |
+| URL_VERFAHREN_FNP_LAUFEND           | URL zu Flächennutzungsplänen (in Bearbeitung)  |
+| URL_VERFAHREN_FNP_ABGESCHLOSSEN           | URL zu Flächennutzungsplänen (abgeschlossen)  |
+| URL_VERFAHREN_BEBAUUNGSPLAN_LAUFEND           | URL zu Bebauungsplänen (in Bearbeitung)  |
+| URL_VERFAHREN_BEBAUUNGSPLAN_ABGESCHLOSSEN           | URL zu Bebauungsplänen (abgeschlossen)  |
+| MITGLIEDSGEMEINDEN           | Beschreibung auf Marker in Karte und Treffer, wird dafür genutzt um Gemeindeverbünde zu benennen, z.B. "Britz, Chorin, Hohenfinow, Liepe, Lunow-Stolzenhagen, Niederfinow, Stadt Oderberg, Parsteinsee"  |
+
+Weitere Spalten sind im Excelfile möglich, werden aber beim Import ignoriert.
+
+
 #### Datei auswählen
 
 Im Bereich `Excel-Dateiupload` kann die zu indexierende Excel Datei hochgeladen werden.
