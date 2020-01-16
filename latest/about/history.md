@@ -52,7 +52,7 @@ Im InGrid Editor können nun auch WMTS Dienste komfortabel via Assistent erfasst
 #### Umstellung Lizenzen auf Open Data
 
 Die Lizenzen werden in Zukunft gemäß Open Data DCAT-AP.de Format gehandhabt und sind damit GovData konform.
-Dies bedeutet u.a. eine Umstellung der Lizenz-IDs und -Bezeichnungen gemäß der Liste der Lizenzen unter s. [DCAT-AP.de Lizenzen](https://www.dcat-ap.de/def/licenses/) .
+Dies bedeutet u.a. eine Umstellung der Lizenz-IDs und -Bezeichnungen gemäß der Liste der Lizenzen unter [DCAT-AP.de Lizenzen](https://www.dcat-ap.de/def/licenses/).
 Nähere Informationen s. auch [Anbindung der GDI-DE an GovData](https://wiki.gdi-de.org/display/gdk/Anbindung+der+GDI-DE+an+GovData).
 
 ![Open Data Lizenzen im Codelist Repo](../images/530_codelistrepo_opendata_lizenzen.png "Open Data Lizenzen im Codelist Repo")
