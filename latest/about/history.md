@@ -70,7 +70,7 @@ InGrid
 - [Feature] [IGE] Datenformat GML+Version für INSPIRE-relevante Datensätze ([REDMINE-1272](https://redmine.informationgrid.eu/issues/1272))
 - [Feature] [IGE] INSPIRE TG MD 2.0: ISO-Mapping der Felder Nutzungsbedingungen und Anwendungseinschränkungen normalisieren ([REDMINE-1220](https://redmine.informationgrid.eu/issues/1220))
 - [Feature] [PORTAL] Vermeidung von Klartext Passwörtern in E-Mails ([REDMINE-1118](https://redmine.informationgrid.eu/issues/1118))
-- [Feature] [ODELIST REPOSITORY] Änderung Lizenz-ID der Open Data Lizenzen ([REDMINE-1534](https://redmine.informationgrid.eu/issues/1534))
+- [Feature] [CODELIST REPO] Änderung Lizenz-ID der Open Data Lizenzen ([REDMINE-1534](https://redmine.informationgrid.eu/issues/1534))
 - [Feature] [INTERFACE CSW] Erstellung einer Transparenzportal-spezifischen CSW Schnittstellen Konfiguration ([REDMINE-1531](https://redmine.informationgrid.eu/issues/1531))
 - [Bug] [IPLUG-CSW] "Zeige in Karte" fehlt im Portal ([REDMINE-1598](https://redmine.informationgrid.eu/issues/1598))
 - [Bug] [IGE] Objektreferenzen die in Bearbeitung sind, dürfen nicht im Portal erscheinen ([REDMINE-1597](https://redmine.informationgrid.eu/issues/1597))
