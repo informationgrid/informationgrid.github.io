@@ -140,7 +140,7 @@ Folgende **Validatoren** existieren:
   "virusscan":{
       "impl":"de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator",
       "properties":{
-          "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -all -archive -mime %FILE%",
+          "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -archive %FILE%",
           "virusPattern":"(?m)^>>> Virus '([^']+)' found in file (.+)$",
           "cleanPattern":"(?m)^No viruses were discovered.$"
       }
@@ -158,19 +158,6 @@ Folgende **Validatoren** existieren:
   Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
   
   HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
-
-- `RemoteServiceVirusScanValidator`
-
-  ```
-  "virusscan":{
-      "impl":"de.ingrid.mdek.upload.storage.validate.impl.RemoteServiceVirusScanValidator",
-      "properties":{
-          "url":"http://localhost:3000/v1/"
-      }
-  }
-  ```
-Der `RemoteServiceVirusScanValidator` verwendet einen Service, der einen Viren Scanner per HTTP Schnittstelle anbindet.
-
 
 ## FAQ
 
