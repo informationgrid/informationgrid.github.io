@@ -87,7 +87,6 @@ Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestel
 
 - `upload.docsdir` Basisverzeichnis für alle Uploads. In diesem Verzeichnis legt der Editor die festen Verzeichnisse `_archive_` und `_trash_` sowie die iPlug- und dokumentspezifischen Upload-Verzeichnisse an.
 - `upload.partsdir` Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
-- `upload.tempdir` Vor dem endgültigen Upload überprüft der Editor alle Dateien. Zu diesem Zweck werden sie in dem hier definierten Verzeichnis zwischengespeichert.
 
 Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht mehr referenzierter Dateien, automatische Archivierung und De-Archivierung von Dateien abhängig vom Ablaufdatum) existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
 
@@ -136,7 +135,7 @@ Folgende **Validatoren** existieren:
       "impl":"de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator",
       "properties":{
           "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -archive %FILE%",
-          "virusPattern":"(?m)^>>> Virus '([^']+)' found in file (.+)$",
+          "infectedPattern":"(?m)^1 file out of 1 was infected.$",
           "cleanPattern":"(?m)^No viruses were discovered.$"
       }
   }
@@ -147,12 +146,12 @@ Folgende **Validatoren** existieren:
   Um unterschiedliche Viren Scanner zu unterstützen, wird der Scanner über folgende Parameter konfiguriert:
 
   - `command` Kommando zur Überprüfung einer Datei. Es muss die Zeichenkette `%FILE%` enthalten sein, die durch den zu prüfende Dateipfad ersetzt wird. Das Kommando muss eine Ausgabe liefern, aus der der Status der Datei hervorgeht. Zu beachten ist, dass auch die Überprüfung von Archiven notwendig ist.
-  - `virusPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *einer* Infektion passt und die Virusname und Dateiname jeweils in einer Gruppe speichert
+  - `infectedPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *einer* Infektion passt
   - `cleanPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *keiner* Infektion passt
 
   Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
   
-  HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
+  HINWEIS: Da alle Uploads zunächst in einem [temporären Dateiverzeichnis](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#createTempFile-java.lang.String-java.lang.String-java.nio.file.attribute.FileAttribute...-) gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
 
 ## FAQ
 
