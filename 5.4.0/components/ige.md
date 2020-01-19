@@ -83,7 +83,7 @@ Die Konfiguration des File Uploads erfolgt in der Datei `mdek.properties` im Ver
 
 HINWEIS: Sollen die Standardparameter mit installationsspezifishen Werten überschrieben werden, wäre hierfür die Datei `mdek.override.properties` im gleichen Verzeichnis die geeignete Wahl.
 
-Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestellt:
+Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestellt (Alle Verzeichnisse müssen existieren.):
 
 - `upload.docsdir` Basisverzeichnis für alle Uploads. In diesem Verzeichnis legt der Editor die festen Verzeichnisse `_archive_` und `_trash_` sowie die iPlug- und dokumentspezifischen Upload-Verzeichnisse an.
 - `upload.partsdir` Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
@@ -124,7 +124,7 @@ Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-K
 
 Folgende **Validatoren** existieren:
 
-- `NameValidator`
+**NameValidator**
 
   ```
   "filename":{
@@ -134,7 +134,7 @@ Folgende **Validatoren** existieren:
   }
   ```
 
-- `VirusScanValidator`
+**VirusScanValidator (per Default deaktiviert)**
 
   ```
   "virusscan":{
@@ -159,7 +159,7 @@ Folgende **Validatoren** existieren:
   
   HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
 
-- `RemoteServiceVirusScanValidator`
+**RemoteServiceVirusScanValidator (per Default deaktiviert)**
 
   ```
   "virusscan":{
@@ -169,7 +169,24 @@ Folgende **Validatoren** existieren:
       }
   }
   ```
-Der `RemoteServiceVirusScanValidator` verwendet einen Service, der einen Viren Scanner per HTTP Schnittstelle anbindet.
+Der `RemoteServiceVirusScanValidator` verwendet einen Service, der einen Viren Scanner per HTTP Schnittstelle anbindet. Über die Schnittstelle können Scan-Jobs eingestellt werden. Scan Jobs werden mit absoluten Pfaden aufgerufen. Der Service muss daher Zugriff auf das gleiche Filesystem haben wie der IGE.
+
+Bsp: Uploads werden im IGE per Default unter `/tmp/ingrid/upload` abgelegt. Der  `RemoteServiceVirusScanValidator` ruft den Virusscan-Service mit absoluten Pfaden in `/tmp/ingrid/upload/...` auf. Der Virusscan-Service muss daher auch Zugriff auf dieses Verzeichnis haben. Wenn IGE und Virsusscan-Service in einem Docker Container laufen, müssen die Pfade im Volume-Mapping entsprechend abgebildet werden.
+
+IGE:
+
+```
+- /mnt/files:/tmp/ingrid/upload
+```
+
+Virusscan-Service
+
+```
+- /mnt/files:/tmp/ingrid/upload
+```
+
+
+Der Service und die Schnittstellenbeschreibung ist aktuell noch nicht veröffentlicht.
 
 
 ## FAQ
