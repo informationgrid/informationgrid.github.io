@@ -10,9 +10,9 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes
 
 Release 24.01.2020
 
-- [Fix] [Portal] Portal: Keine Meldung beim Erstellen von Benutzer als Portaladmin  ([REDMINE-1671](https://redmine.informationgrid.eu/issues/1671))
-- [Fix] [Portal] Portal: Anpassungen am Layout von NUMIS und UVP-NI  ([REDMINE-1672](https://redmine.informationgrid.eu/issues/1672))
-- [Fix] [Portal] Portal: Passwort ändern funktioniert nicht  ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
+- [Fix] [Portal] Portal: Keine Meldung beim Erstellen von Benutzer als Portaladmin.  ([REDMINE-1671](https://redmine.informationgrid.eu/issues/1671))
+- [Fix] [Portal] Portal: Anpassungen am Layout von NUMIS und UVP-NI.  ([REDMINE-1672](https://redmine.informationgrid.eu/issues/1672))
+- [Fix] [Portal] Portal: Passwort ändern funktioniert nicht.  ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
 
 ### Komponenten
 
@@ -25,11 +25,13 @@ Release 22.01.2020
 - [Fix] [Codelist-Repository] Fix codelist 6005 und Wiederherstellung von verlorene Einträge.  ([REDMINE-1274](https://redmine.informationgrid.eu/issues/1274))
 - [Fix] [Portal] Portal: Fix Darstellungen von Einschränkungen/Constraints in der Portal-Detaildarstellung.  ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
 - [Fix] [IGE] IGE: Fix Pflichtfeldverhalten bei Verschlagwortung/INSPIRE.  ([REDMINE-1604](https://redmine.informationgrid.eu/issues/1604))
+- [Fix] [IGE] IGE: Nicht darzustellende Adressen werden trotzdem indexiert.  ([REDMINE-1604](https://redmine.informationgrid.eu/issues/1604))
 
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.1/))
 - Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.3.1/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.3.1/))
 
 
 ## Version 5.3.0
