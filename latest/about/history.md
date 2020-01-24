@@ -12,11 +12,13 @@ Release 24.01.2020
 
 - [Fix] [Portal] Portal: Keine Meldung beim Erstellen von Benutzer als Portaladmin.  ([REDMINE-1671](https://redmine.informationgrid.eu/issues/1671))
 - [Fix] [Portal] Portal: Anpassungen am Layout von NUMIS und UVP-NI.  ([REDMINE-1672](https://redmine.informationgrid.eu/issues/1672))
-- [Fix] [Portal] Portal: Passwort ändern funktioniert nicht.  ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
+- [Fix] [Portal] Portal: Passwort ändern funktioniert nicht.  ([REDMINE-1673](https://redmine.informationgrid.eu/issues/1673))
+- [Fix] [Portal] iPlug SE: Ergebnisse in Suchergebnisliste enthalten keine Anbieter und kein Summary.  ([REDMINE-1669](https://redmine.informationgrid.eu/issues/1669))
 
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.2/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.3.2/))
 
 ## Version 5.3.1
 
