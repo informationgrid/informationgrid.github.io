@@ -6,6 +6,18 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.2
+
+Release 24.01.2020
+
+- [Fix] [Portal] Portal: Keine Meldung beim Erstellen von Benutzer als Portaladmin  ([REDMINE-1671](https://redmine.informationgrid.eu/issues/1671))
+- [Fix] [Portal] Portal: Anpassungen am Layout von NUMIS und UVP-NI  ([REDMINE-1672](https://redmine.informationgrid.eu/issues/1672))
+- [Fix] [Portal] Portal: Passwort ändern funktioniert nicht  ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.2/))
+
 ## Version 5.3.1
 
 Release 22.01.2020
