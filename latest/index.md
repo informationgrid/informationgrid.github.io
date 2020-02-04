@@ -37,6 +37,8 @@ menu:
     menu:
       - title: Infrastruktur
         type: header
+      - title: Elasticsearch
+        href: components/elasticsearch.html
       - title: iBus
         href: components/ibus.html
       - title: iPlug SNS
