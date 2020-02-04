@@ -37,6 +37,8 @@ menu:
     menu:
       - title: Infrastruktur
         type: header
+      - title: Elasticsearch
+        href: components/elasticsearch.html
       - title: iBus
         href: components/ibus.html
       - title: iPlug SNS
@@ -117,6 +119,7 @@ published: true
 
 ### Infrastruktur
 
+- [Elasticsearch](components/elasticsearch.html) - Komponente für die zentrale Indexierung und Suche
 - [iBus](components/ibus.html) - Zentrale Komponente der InGrid Kommunikationsschicht
 - [iPlug SNS](components/iplug_sns.html) - Schnittstelle zu Thesaurus und Gazetteer
 - [Communication Gateway](components/communication_gateway.html) - Leitet InGrid Kommunikation über HTTP um.
