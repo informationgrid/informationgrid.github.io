@@ -16,25 +16,32 @@ Für die Trennung von zusammengesetzten Worten der deutschen Sprache wird ein so
 * 2 GB RAM
 * 10 GB Harddrive
 
-* JAVA 1.8
+* JAVA 8
 * Cygwin (unter Windows)
 
 
 ## Installation
 
 ### Manuelle Installation
-
+Zur Manuellen Installation kann die Version 6.4.2 auf den Seiten von Elasticsearch heruntergeladen werden.
 
 Download: [https://www.elastic.co/de/downloads/past-releases/elasticsearch-6-4-2](https://www.elastic.co/de/downloads/past-releases/elasticsearch-6-4-2)
 
-Dokumentation: [https://www.elastic.co/guide/en/elastic-stack/6.4/index.html](https://www.elastic.co/guide/en/elastic-stack/6.4/index.html)
+Installationsanleitung: [https://www.elastic.co/guide/en/elasticsearch/reference/6.4/install-elasticsearch.html](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/install-elasticsearch.html)
 
-Die Installation des Decompount Plugins erfolgt über den Plugin-Mechanismus von Elasticsearch:
+Bei der Installation ist darauf zu achten, als Cluster Name "ingrid" zu wählen.
 
+Im Falle einer manuellen Installation muss zusätzlich das Decompound-Plugin von InGrid installiiert werden, dies erfolgt über den Plugin-Mechanismus von Elasticsearch.
+Unter Linux/Unix:
 ```
 sudo bin/elasticsearch-plugin install https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip
 ```
+Unter Windows ist die Konsole mit Admin-Rechten aufzurufen.
+```
+bin\elasticsearch-plugin install https://nexus.informationgrid.eu/repository/maven-releases/org/xbib/elasticsearch/plugin/elasticsearch-analysis-decompound/6.4.2.0/elasticsearch-analysis-decompound-6.4.2.0.zip
+```
 
+Nach der Installation des Plugins muss Elasticsearch einmal gestoppt und neu gestartet werden.
 
 ### Installation per Docker
 
