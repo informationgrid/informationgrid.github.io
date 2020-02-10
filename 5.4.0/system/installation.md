@@ -52,7 +52,7 @@ Das System kann auch unter Windows installiert werden. Dies macht jedoch die Ins
 
 ## Systemvoraussetzungen
 
-- JAVA 8
+- JAVA 8 JDK (z.B. OpenJDK)
 - Cygwin (unter Windows)
 - MySQL, ORACLE oder PostgreSQL (ab InGrid 4.0.2)
 
