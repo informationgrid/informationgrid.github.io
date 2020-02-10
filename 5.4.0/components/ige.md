@@ -85,9 +85,9 @@ HINWEIS: Sollen die Standardparameter mit installationsspezifishen Werten übers
 
 Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestellt (Alle Verzeichnisse müssen existieren.):
 
-- `upload.docsdir` Basisverzeichnis für alle Uploads. In diesem Verzeichnis legt der Editor die festen Verzeichnisse `_archive_` und `_trash_` sowie die iPlug- und dokumentspezifischen Upload-Verzeichnisse an.
-- `upload.partsdir` Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
-- `upload.tempdir` Vor dem endgültigen Upload überprüft der Editor alle Dateien. Zu diesem Zweck werden sie in dem hier definierten Verzeichnis zwischengespeichert.
+- `upload.docsdir` (default: `/tmp/ingrid/upload/documents/`) Basisverzeichnis für alle Uploads. In diesem Verzeichnis legt der Editor die festen Verzeichnisse `_archive_` und `_trash_` sowie die iPlug- und dokumentspezifischen Upload-Verzeichnisse an.
+- `upload.partsdir` (default: `/tmp/ingrid/upload/parts/`) Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
+- `upload.tempdir` (default: `/tmp/ingrid/upload/tmp/`) Vor dem endgültigen Upload überprüft der Editor alle Dateien. Zu diesem Zweck werden sie in dem hier definierten Verzeichnis zwischengespeichert.
 
 Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht mehr referenzierter Dateien, automatische Archivierung und De-Archivierung von Dateien abhängig vom Ablaufdatum) existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
 
