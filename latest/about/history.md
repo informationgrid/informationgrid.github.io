@@ -6,6 +6,18 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.3
+
+Release 03.2.2020
+
+- [Fix] [Codelist-Repository] Fix codelist 6010: Bindestrich einfügen in "INSPIRE Richtlinie".  ([REDMINE-1698](https://redmine.informationgrid.eu/issues/1698))
+
+
+### Komponenten
+
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.3.3/))
+
+
 ## Version 5.3.2
 
 Release 24.01.2020
