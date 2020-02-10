@@ -6,6 +6,27 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.4
+
+Release 10.2.2020
+
+- [Update] [Portal] IGE: INSPIRE-TG MD 2.0.1: Werte und Verhalten des Feldes "Konformität" ändern (Umsetzung weiterer Anforderungen).  ([REDMINE-1274](https://redmine.informationgrid.eu/issues/1274))
+- [Fix] [Codelist-Repository] IGE: Spezifikationsdatum bei Spezifikation der Konformität soll "2010-12-08" bei "VERORDNUNG (EG) Nr. 1089/2010...".  ([REDMINE-1702](https://redmine.informationgrid.eu/issues/1702))
+- [Fix] [Portal] Portal: Indikator für Passwortstärke wird im IE11 nicht angezeigt (commit 809df8e).  ([REDMINE-1727](https://redmine.informationgrid.eu/issues/1727))
+
+Profil METAVER
+
+- [Update] [Portal] Migration von Sachsen nach METAVER: Aktualisierung METAVER Logo ("Sachsen" als Partner hinzugefügt).  ([REDMINE-1589](https://redmine.informationgrid.eu/issues/1589))
+
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.4/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.3.4/))
+
+
+
 ## Version 5.3.3
 
 Release 03.2.2020
