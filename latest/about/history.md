@@ -13,6 +13,8 @@ Release 10.2.2020
 - [Update] [Portal] IGE: INSPIRE-TG MD 2.0.1: Werte und Verhalten des Feldes "Konformität" ändern (Umsetzung weiterer Anforderungen).  ([REDMINE-1274](https://redmine.informationgrid.eu/issues/1274))
 - [Fix] [Codelist-Repository] IGE: Spezifikationsdatum bei Spezifikation der Konformität soll "2010-12-08" bei "VERORDNUNG (EG) Nr. 1089/2010...".  ([REDMINE-1702](https://redmine.informationgrid.eu/issues/1702))
 - [Fix] [Portal] Portal: Indikator für Passwortstärke wird im IE11 nicht angezeigt (commit 809df8e).  ([REDMINE-1727](https://redmine.informationgrid.eu/issues/1727))
+- [Add] [Mapclient] Mapclient: Aussagekräftigere Meldung beim Laden eines PW geschützten Dienstes im Kartenclient.  ([REDMINE-1592](https://redmine.informationgrid.eu/issues/1592))
+- [Bug] [Mapclient] Mapclient: GetFeatureInfo-Abfragen werden nicht mehr geparsed.  ([REDMINE-1737](https://redmine.informationgrid.eu/issues/1737))
 
 Profil METAVER
 
