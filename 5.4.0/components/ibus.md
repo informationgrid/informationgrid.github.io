@@ -115,6 +115,7 @@ Die Parameter haben folgende Bedeutung:
 | codelistrepo.username          | Der Benutzername für das Codelist-Repository |
 | codelistrepo.password          | Das Passwort für das Codelist-Repository |
 | elastic.remoteHosts            | Die TCP-Adresse des Elasticsearch-Clusters (`localhost:9300`) |
+| elastic.indexSearchDefaultFields | Indexfelder in dem der Suchbegriff recherchiert wird (default: "title,content,summary") |
 | spring.security.user.name      | Der Login für die Administrationsoberfläche |
 | spring.security.user.password  | Das Passwort für die Administrationsoberfläche |
 
@@ -207,3 +208,12 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 ### Der iBus soll auf einem Port unterhalb von 1024 betrieben werden.
 
 Der iBus muss als user root gestartet werden. Dazu muss die Variable `INGRID_USER=root` als Umgebungsvariable gesetzt, oder der entsprechende Eintrag in der Datei `start.sh` angepasst werden.
+
+### Wie kann bei der Suche eines Begriffs der Beschreibung (summary) des Treffers nicht beeinflussen?
+
+Durch die Default-Einstellung "elastic.indexSearchDefaultFields" ([siehe oben](#url-shortener)) wird durch Elasticsearch aus dem Indexfeld "summary" die Beschreibung des Suchergebnisses abhängig vom Suchbegriff geliefert, d.h. falls der Suchbegriff im "summary" enthalten ist, wird ein Teilabschnitt mit dem Suchbegriff aus der Beschreibung (ansonsten die komplette Beschreibung) zurückgegeben.
+Setzt man nun die Einstellung auf "elastic.indexSearchDefaultFields=title,content" so wird bei einem Treffer immer der komplette Wertes aus dem Indexfeld "summary" geliefert. 
+
+> Hinweis:
+> Änderung von Konfigurationen erfolgen in der Datei `conf/application-default.properties`.
+> 
