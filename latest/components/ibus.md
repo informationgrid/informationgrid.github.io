@@ -209,7 +209,7 @@ In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst wer
 
 Der iBus muss als user root gestartet werden. Dazu muss die Variable `INGRID_USER=root` als Umgebungsvariable gesetzt, oder der entsprechende Eintrag in der Datei `start.sh` angepasst werden.
 
-### Wie kann bei der Suche eines Begriffs der Beschreibung (summary) des Treffers nicht beeinflussen?
+### Warum wird bei der Suche mit einem Suchbegriff nur ein Teil der Beschreibung (summary) eines Treffers zurückgeliefert?
 
 Durch die Default-Einstellung "elastic.indexSearchDefaultFields" ([siehe oben](#url-shortener)) wird durch Elasticsearch aus dem Indexfeld "summary" die Beschreibung des Suchergebnisses abhängig vom Suchbegriff geliefert, d.h. falls der Suchbegriff im "summary" enthalten ist, wird ein Teilabschnitt mit dem Suchbegriff aus der Beschreibung (ansonsten die komplette Beschreibung) zurückgegeben.
 Setzt man nun die Einstellung auf "elastic.indexSearchDefaultFields=title,content" so wird bei einem Treffer immer der komplette Wertes aus dem Indexfeld "summary" geliefert. 
