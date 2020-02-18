@@ -94,7 +94,7 @@ Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht meh
 - `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
 - `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
 
-### File Upload
+### Virus Scanner
 
 Für den FileUpload kann optional ein Virusscan aktiviert werden. Der Dienst ist per Default deaktiviert.
 
