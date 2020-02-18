@@ -94,10 +94,9 @@ Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht meh
 - `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
 - `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
 
-Für die regelmäßige **Virenprüfung der Dateiverzeichnisse** existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
+### File Upload
 
-- `upload.virusscan.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 2 Uhr).
-- `upload.virusscan.quarantinedir` Verzeichnis, in das infizierte Dateien verschoben werden sollen.
+Für den FileUpload kann optional ein Virusscan aktiviert werden. Der Dienst ist per Default deaktiviert.
 
 Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-Kette. Schlägt ein Validator fehl, wird der Upload zurückgewiesen. Die Konfiguration der Validatoren und deren Ausführungsreihenfolge werden in den folgenden Parametern festgelegt:
 
@@ -156,10 +155,10 @@ Folgende **Validatoren** existieren:
   - `cleanPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *keiner* Infektion passt
 
   Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
-  
+
   HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
 
-**RemoteServiceVirusScanValidator (per Default deaktiviert)**
+**RemoteServiceVirusScanValidator**
 
   ```
   "virusscan":{
@@ -185,8 +184,17 @@ Virusscan-Service
 - /mnt/files:/tmp/ingrid/upload
 ```
 
-
 Der Service und die Schnittstellenbeschreibung ist aktuell noch nicht veröffentlicht.
+
+
+
+Für die regelmäßige **Virenprüfung der Dateiverzeichnisse** existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
+
+- `upload.virusscan.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 2 Uhr).
+- `upload.virusscan.quarantinedir` Verzeichnis (muss existieren), in das infizierte Dateien verschoben werden sollen.
+
+Der Hintergrundjob muss über eine Spring Konfiguration aktiviert werden. Siehe dazu die Dateien unter `webapps/ingrid-portal-mdek-application/WEB-INF/override/` und die Dokumentation dort und unter `webapps/ingrid-portal-mdek-application/WEB-INF/conf/mdek.properties`.
+
 
 
 ## FAQ
