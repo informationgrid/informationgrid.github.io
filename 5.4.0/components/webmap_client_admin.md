@@ -554,7 +554,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
   Mit dem Suchfeld in der Navigationsleiste des Akkordeon "Kategorien" können Sie nach Kategorien per ID suchen.
 
-#### Kategorie
+<a name="kategorie"></a>
+**Kategorie**
 
 - **Kategorien bearbeiten**
 
@@ -621,7 +622,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
 > Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
 
-#### Kategorie-Baum
+<a name="kategoriebaum"></a>
+**Kategorie-Baum**
 
 - **Hinzufügen**
 
