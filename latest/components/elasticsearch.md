@@ -43,6 +43,18 @@ bin\elasticsearch-plugin install https://nexus.informationgrid.eu/repository/mav
 
 Nach der Installation des Plugins muss Elasticsearch einmal gestoppt und neu gestartet werden.
 
+Unter Linux muss der *virtual memory* für Elasticsearch erhöht werden. Dazu sollte als root ausgeführt werden:
+
+```
+sysctl -w vm.max_map_count=262144
+```
+
+Zur Persistierung der Einstellung muss der Wert `vm.max_map_count`  in `/etc/sysctl.conf` übernommen werden.
+
+Siehe auch [https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html#vm-max-map-count](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html#vm-max-map-count)
+
+
+
 ### Installation per Docker
 
 Alternativ zur manuellen Installation kann das folgende Docker-Image verwendet werden:
@@ -50,6 +62,27 @@ Alternativ zur manuellen Installation kann das folgende Docker-Image verwendet w
 ```
 docker-registry.wemove.com/ingrid-elasticsearch-with-decompound:6.4.2
 ```
+
+Wenn das Datenverzeichnis in ein docker volume auf den host abgebildet werden soll:
+
+```
+# Ausschnitt aus docker-compose.yml
+
+volumes:
+# make esdata directory writable to container process
+# to obtain the user 'exec bash' into container
+# the adapt the rights of esdata
+# mkdir -p elastic/_data/esdata
+# chown -R 1000 elastic/_data/esdata
+./elastic/_data/esdata:/usr/share/elasticsearch/data
+```
+
+muss der Elasticsearch Prozess Schreibberechtigung für das host Verzeichnis `./elastic/_data/esdata` haben:
+
+```
+chown -R 1000 elastic/_data/esdata
+```
+
 
 
 ## Konfiguration
