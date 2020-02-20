@@ -62,7 +62,7 @@ Release 22.01.2020
 - [Fix] [Codelist-Repository] Fix codelist 6005 und Wiederherstellung von verlorene Einträge.  ([REDMINE-1274](https://redmine.informationgrid.eu/issues/1274))
 - [Fix] [Portal] Portal: Fix Darstellungen von Einschränkungen/Constraints in der Portal-Detaildarstellung.  ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
 - [Fix] [IGE] IGE: Fix Pflichtfeldverhalten bei Verschlagwortung/INSPIRE.  ([REDMINE-1604](https://redmine.informationgrid.eu/issues/1604))
-- [Fix] [IGE] IGE: Nicht darzustellende Adressen werden trotzdem indexiert.  ([REDMINE-1604](https://redmine.informationgrid.eu/issues/1604))
+- [Fix] [IGE] IGE: Nicht darzustellende Adressen werden trotzdem indexiert.  ([REDMINE-1668](https://redmine.informationgrid.eu/issues/1668))
 
 ### Komponenten
 
