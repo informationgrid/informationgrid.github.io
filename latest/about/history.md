@@ -6,6 +6,28 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.5
+
+Release 26.2.2020
+
+- [Fix] [Portal] Erweiterung METAVER_MD Profil für "Kommunaler Metadatenkatalog Sachsen-Anhalt".  ([REDMINE-1674](https://redmine.informationgrid.eu/issues/1674)) 
+- [Fix] [Portal] Update auf Version >= 5.2.1 schlägt fehl mit Oracle Datenbank.  ([REDMINE-1753](https://redmine.informationgrid.eu/issues/1753)) 
+- [Fix] [Portal] Detailansicht von Datensatz über Katalogbrowser liefert kein XML.  ([REDMINE-1309](https://redmine.informationgrid.eu/issues/1309)) 
+- [Fix] [MapClient] Portal-Update löscht Einstellungen vom Mapclient.  ([REDMINE-1758](https://redmine.informationgrid.eu/issues/1758)) 
+- [Fix] [IGE] Das Upload tmp Verzeichnis sollte automatisch angelegt werden.  ([REDMINE-1750](https://redmine.informationgrid.eu/issues/1750)) 
+- [Fix] [IGE] Anfangszustand des Felds "Zugriffbeschränkungen".  ([REDMINE-1675](https://redmine.informationgrid.eu/issues/1675)) 
+
+- [Update] [IGE] Vereinfachung (de-)aktivieren vom Virusscan per Spring override.  ([REDMINE-1726](https://redmine.informationgrid.eu/issues/1726)) 
+- [Update] [IGE] Verhalten der Felder zur "Datenqualität" ändern.  ([REDMINE-1276](https://redmine.informationgrid.eu/issues/1276)) 
+- [Update] [IGE] Überarbeitung der Verwendung des CI_OnLineFunctionCode bei der Erfassung von Verweisen.  ([REDMINE-1367](https://redmine.informationgrid.eu/issues/1367)) 
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.5/))
+
+
+
 ## Version 5.3.4
 
 Release 10.2.2020
