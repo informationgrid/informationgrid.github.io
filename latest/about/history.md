@@ -25,6 +25,7 @@ Release 26.2.2020
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.5/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.3.5/))
 
 
 
