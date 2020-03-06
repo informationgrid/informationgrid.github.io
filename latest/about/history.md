@@ -6,6 +6,18 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.6
+
+Release 06.02.2020
+
+- [Fix] [MapClient] Anzahl Threads steigt mit jedem "Drucken" im Mapclient.  ([REDMINE-1743](https://redmine.informationgrid.eu/issues/1743)) 
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.6/))
+
+
+
 ## Version 5.3.5
 
 Release 26.2.2020
