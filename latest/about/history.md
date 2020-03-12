@@ -6,6 +6,26 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.7
+
+Release 12.03.2020
+
+**ACHTUNG! Die Versionen von 5.2.0 bis einschl. 5.3.6 führen eine Migrationsstrategie falsch aus! So werden z.B. die Konformitäten von Geodatendiensten falsch auf 'nicht konform' gesetzt.**
+
+Zur Behebung des Fehlers bieten sich folgende Optionen an:
+
+* Einspielen eines alten Datenbank Standes in einer Version vor 5.2.0. Aktualisierung mit Version 5.3.7.
+* Manuelle Behebung der Probleme anhand des Import Log Files.
+
+Dieses Release betrifft ausschließlich INSPIRE relevante Metadatenverwaltungen.
+
+- [Fix] [IGE] Fix für 5.2.0a Strategie eingeführt mit #1274 (Konformitäten). Gilt nur für Updates von InGrid Versionen vor 5.2.0.  ([REDMINE-1762](https://redmine.informationgrid.eu/issues/1762)) 
+
+### Komponenten
+
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.3.7/))
+
+
 ## Version 5.3.6
 
 Release 06.02.2020
