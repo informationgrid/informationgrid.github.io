@@ -6,6 +6,11 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+
+## Version 5.4.0
+
+**ACHTUNG**: Tomcat Aktualisierung! Docker basierte Installationen mit einem Application Proxy (apache in der docker Konfiguration) müssen das Mapping der `server.xml` im Portal Container entfernen und die folgenden Umgebungsvariablen setzen: `PORTAL_SERVER_CONNECTOR_ATTR=proxyPort="443" scheme="https" secure="true" emptySessionPath="true"` 
+
 ## Version 5.3.0
 
 Release 15.01.2020
