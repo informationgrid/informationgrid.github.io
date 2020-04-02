@@ -6,6 +6,18 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.8
+
+Release 02.04.2020
+
+- [Fix] [IGE] IGE: Fehler beim Indexieren bei fehlendem JSON in CL 6360  ([REDMINE-1801](https://redmine.informationgrid.eu/issues/1801)) 
+
+### Komponenten
+
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.3.8/))
+
+
+
 ## Version 5.3.7
 
 Release 12.03.2020
