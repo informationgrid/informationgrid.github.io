@@ -329,6 +329,12 @@ Mit Constraints:
 http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&outputSchema=http://www.isotc211.org/2005/gmd&startPosition=1&maxRecords=1&typeNames=csw:Record&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=%3Cogc:Filter+xmlns%3Aogc%3D%22http%3A%2F%2Fwww.opengis.net%2Fogc%22%3E%3Cogc:PropertyIsEqualTo%3E%3Cogc:PropertyName%3Eapiso:ResourceIdentifier%3C/ogc:PropertyName%3E%3Cogc:Literal%3E7988c147-7523-45bb-8f18-7f39d0d20541%3C/ogc:Literal%3E%3C/ogc:PropertyIsEqualTo%3E%3C/ogc:Filter%3E
 {% endhighlight %}
 
+oder
+
+{% highlight text %}
+http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&startPosition=1&maxRecords=1&typeNames=csw:Record&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc"><ogc:PropertyIsEqualTo><ogc:PropertyName>apiso:partner</ogc:PropertyName><ogc:Literal>hb</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+{% endhighlight %}
+
 
 **GetRecords, POST XML**
 
@@ -510,9 +516,14 @@ Eine Filterung mehrerer iPlugs ist dann wie folgt möglich:
 
 **Hinweis**
 
-Um die `GetRecords`-Ergebnisse in einer GET-Anfrage auf einen Partner einzuschränken, braucht man das über das `constraint`-Parameter machen. Die GET Abfrage sieht dan so aus:
+Um die `GetRecords`-Ergebnisse in einer GET-Anfrage auf einen Partner einzuschränken, braucht man das über das `constraint`-Parameter machen. Die GET Abfrage sieht dann so aus:
 
 {% highlight text %}
 http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&outputSchema=http://www.isotc211.org/2005/gmd&startPosition=1&maxRecords=1&typeNames=csw:Record&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=%3Cogc:Filter%20xmlns:ogc=%22http://www.opengis.net/ogc%22%3E%3Cogc:PropertyIsEqualTo%3E%3Cogc:PropertyName%3Epartner%3C/ogc:PropertyName%3E%3Cogc:Literal%3Ehb%3C/ogc:Literal%3E%3C/ogc:PropertyIsEqualTo%3E%3C/ogc:Filter%3E
 {% endhighlight %}
 
+oder
+
+{% highlight text %}
+http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&startPosition=1&maxRecords=1&typeNames=csw:Record&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc"><ogc:PropertyIsEqualTo><ogc:PropertyName>apiso:partner</ogc:PropertyName><ogc:Literal>hb</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+{% endhighlight %}
