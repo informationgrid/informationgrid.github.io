@@ -16,6 +16,7 @@ Release 20.04.2020
 #### Aktualisierung des Metadaten-Datum auf Basis von Änderungen am ISO 19139 XML Format
 
 Das Metadaten Datum (gmd:dateStamp) wird nur dann aktualisiert, wenn ein Metadatensatz veröffentlicht wird und dieser sich geändert hat. Die Anzeige des Metadaten Datums erfolgt in der Rubrik Allgemeines, die dazu ausgeklappt werden muss.
+Mit Klick auf den Feld-Titel ist damit auch eine Hilfe abrufbar.
 
 ![Anzeige des Metadaten Datums](../images/540_ige_metadata_date.png "Anzeige des Metadaten Datums")
 <figcaption class="figcaption">Anzeige des Metadaten Datums</figcaption>
@@ -27,7 +28,7 @@ Dadurch wird sichergestellt, dass das Metadaten-Datum auch nicht-inhaltliche Än
 
 #### Unterstützung von Polygoneingabe im WKT (Well Known Text) Format
 
-Die Unterstützung von Raumbezugsangaben im WKT ([Well Known Text Format](https://de.wikipedia.org/wiki/Simple_Feature_Access) wurde ermöglicht. Dadurch können nun auch Polygonangaben im InGrid Editor hinzugefügt werden.
+Die Unterstützung von Raumbezugsangaben im WKT ([Well Known Text Format](https://de.wikipedia.org/wiki/Simple_Feature_Access)) wurde ermöglicht. Dadurch können nun auch Polygonangaben im InGrid Editor hinzugefügt werden.
 
 ![Begrenzungspolygon als WKT](../images/540_ige_polygon.png "Begrenzungspolygon als WKT")
 <figcaption class="figcaption">Begrenzungspolygon als WKT</figcaption>
@@ -37,14 +38,14 @@ Aktuell werden die Angaben noch nicht in der räumlichen Suche im Portal oder in
 
 #### Neuer Adresstyp Metadaten Auskunftsadresse
 
-Im IGE wird der Ansprechpartner von dem Metadatenverantwortlichen abgeleitet. Der Metadatenverantwortliche ist ein Login User (Redakteur) des Editors. Um an der Stelle auch eine Adresse angeben zu können, die nicht als Redakteur im Editor registriert sein muss, wurde ein neuer Adresstyp "Ansprechpartner MD" eingeführt.
+Im IGE wird der Ansprechpartner vom Metadatenverantwortlichen abgeleitet. Der Metadatenverantwortliche ist ein Login User (Redakteur) des Editors. Um an der Stelle auch eine Adresse angeben zu können, die nicht als Redakteur im Editor registriert sein muss, wurde ein neuer Adresstyp "Ansprechpartner MD" eingeführt.
 
 ![Ansprechpartner Metadaten](../images/540_pointofcontact_md.png "Ansprechpartner Metadaten")
 <figcaption class="figcaption">Ansprechpartner Metadaten</figcaption>
 
 Dadurch wird beim ISO 19139 Import auch der dort vermerkte Ansprechpartner (Rolle 'pointOfContact') korrekt importiert.
 
-Für den ISO 19139 Export wird nach wie vor der Metadatenverantwortliche verwendet, der kein "Ansprechpartner MD" definiert wurde.
+Für den ISO 19139 Export wird nach wie vor der Metadatenverantwortliche verwendet, wenn kein "Ansprechpartner MD" definiert wurde.
 
 
 #### Tomcat Aktualisierung auf Version 7.0.100
