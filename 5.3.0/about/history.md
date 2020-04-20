@@ -6,6 +6,21 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.9
+
+Release 20.04.2020
+
+- [Fix] [Portal] BKG-Katalog: Facetten nicht korrekt gefiltert  ([REDMINE-1774](https://redmine.informationgrid.eu/issues/1774)) 
+- [Fix] [Portal] Administration der Startseite im nds. UVP-Portal funktioniert nicht ([REDMINE-1828](https://redmine.informationgrid.eu/issues/1828)) 
+- [Fix] [Portal] Alte Links zu Detaildarstellungen funktionieren nicht mehr  ([REDMINE-1833](https://redmine.informationgrid.eu/issues/1833)) 
+- [Fix] [Mapclient] Mapclient: CORS Probleme im embed-Modus (iFrame)
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.9/))
+
+
+
 ## Version 5.3.8
 
 Release 02.04.2020
