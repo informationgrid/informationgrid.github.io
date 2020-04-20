@@ -4,130 +4,169 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
+Diese Release Notes betreffen ausschließlich die Versionen 5.4.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
 ## Version 5.4.0
 
-**ACHTUNG**: Tomcat Aktualisierung! Docker basierte Installationen mit einem Application Proxy (apache in der docker Konfiguration) müssen das Mapping der `server.xml` im Portal Container entfernen und die folgenden Umgebungsvariablen setzen: `PORTAL_SERVER_CONNECTOR_ATTR=proxyPort="443" scheme="https" secure="true" emptySessionPath="true"` 
-
-## Version 5.3.0
-
-Release 15.01.2020
+Release 20.04.2020
 
 ### Wichtige Änderungen
 
-#### Neues Portal Profil NUMIS / UVP Niedersachsen
+#### Aktualisierung des Metadaten-Datum auf Basis von Änderungen am ISO 19139 XML Format
 
-Für NUMIS / UVP NI wurde ein neues Portal Profil erstellt.
+Das Metadaten Datum (gmd:dateStamp) wird nur dann aktualisiert, wenn ein Metadatensatz veröffentlicht wird und dieser sich geändert hat. Die Anzeige des Metadaten Datums erfolgt in der Rubrik Allgemeines, die dazu ausgeklappt werden muss.
 
-![Neues Portal Profil NUMIS](../images/530_numis_portal_profile.png "Neues Portal Profil NUMIS")
-<figcaption class="figcaption">Neues Portal Profil NUMIS</figcaption>
+![Anzeige des Metadaten Datums](../images/540_ige_metadata_date.png "Anzeige des Metadaten Datums") <figcaption class="figcaption">Anzeige des Metadaten Datums</figcaption>
 
-![Neues Portal Profil UVP NI](../images/530_uvp_ni_portal_profile.png "Neues Portal Profil UVP NI")
-<figcaption class="figcaption">Neues Portal Profil UVP NI</figcaption>
+Die Änderung eines Metadatensatzes wird anhand der Änderung von Inhalt und Struktur erkannt. Dazu wird ein Fingerabdruck der ISO 19139 XML Daten erstellt und gespeichert. Das Metadaten-Datum wird nur aktualisiert, wenn sich bei einer Veröffentlichung auch der Fingerabdruck ändert.
 
-#### Neues Portal Profil HMDK
-
-Der HMDK wurde im Portal jetzt als eigenes Profil umgesetzt.
-
-![Neues Portal Profil HMDK](../images/530_hmdk_portal_profile.png "Neues Portal Profil HMDK")
-<figcaption class="figcaption">Neues Portal Profil HMDK</figcaption>
-
-#### Neue Felder im InGrid Editor
-
-Neues Feld "INSPIRE - priority data set"
-
-![Neues Feld "INSPIRE - priority data set"](../images/530_ige_field_priority_data_set.PNG "Feld 'INSPIRE - priority data set'")
-<figcaption class="figcaption">Feld "INSPIRE - priority data set"</figcaption>
-
-Neues Feld "INSPIRE - Räumlicher Anwendungsbereich"
-
-![Neues Feld "INSPIRE - Räumlicher Anwendungsbereich"](../images/530_ige_field_raeuml_anwber.PNG "Feld 'INSPIRE - Räumlicher Anwendungsbereich'")
-<figcaption class="figcaption">Feld "INSPIRE - Räumlicher Anwendungsbereich"</figcaption>
-
-#### Erfassung von WMTS via Assistenten
-
-Im InGrid Editor können nun auch WMTS Dienste komfortabel via Assistent erfasst werden.
-
-![Neues Feld "WMTS GetCapabilities Assistent"](../images/530_ige_wmts_assistant.png "Feld 'WMTS GetCapabilities Assistent'")
-<figcaption class="figcaption">WMTS GetCapabilities Assistent</figcaption>
+Dadurch wird sichergestellt, dass das Metadaten-Datum auch nicht-inhaltliche Änderungen reflektiert, die sich z.B. durch eine Anpassung der Struktur des Metadatensatzes ergibt. Dies ist wichtig, weil nachfolgende Systeme sich auf dieses Datum beziehen, um z.B. geänderte Metadatensätze zu ermitteln.
 
 
-#### Umstellung Lizenzen auf Open Data
+#### Unterstützung von Polygoneingabe im WKT (Well Known Text) Format
 
-Die Lizenzen werden in Zukunft gemäß Open Data DCAT-AP.de Format gehandhabt und sind damit GovData konform.
-Dies bedeutet u.a. eine Umstellung der Lizenz-IDs und -Bezeichnungen gemäß der Liste der Lizenzen unter [DCAT-AP.de Lizenzen](https://www.dcat-ap.de/def/licenses/).
-Nähere Informationen s. auch [Anbindung der GDI-DE an GovData](https://wiki.gdi-de.org/display/gdk/Anbindung+der+GDI-DE+an+GovData).
+Die Unterstützung von Raumbezugsangaben im WKT ([Well Known Text Format](https://de.wikipedia.org/wiki/Simple_Feature_Access) wurde ermöglicht. Dadurch können nun auch Polygonangaben im InGrid Editor hinzugefügt werden.
 
-![Open Data Lizenzen im Codelist Repo](../images/530_codelistrepo_opendata_lizenzen.png "Open Data Lizenzen im Codelist Repo")
-<figcaption class="figcaption">Open Data Lizenzen im Codelist Repo</figcaption>
+![Begrenzungspolygon als WKT](../images/540_ige_polygon.png "Begrenzungspolygon als WKT") <figcaption class="figcaption">Begrenzungspolygon als WKT</figcaption>
+
+Aktuell werden die Angaben noch nicht in der räumlichen Suche im Portal oder in der CSW Schnittstelle verwendet.
+
+
+#### Neuer Adresstyp Metadaten Auskunftsadresse
+
+Im IGE wird der Ansprechpartner von dem Metadatenverantwortlichen abgeleitet. Der Metadatenverantwortliche ist ein Login User (Redakteur) des Editors. Um an der Stelle auch eine Adresse angeben zu können, die nicht als Redakteur im Editor registriert sein muss, wurde ein neuer Adresstyp "Ansprechpartner MD" eingeführt.
+
+![Ansprechpartner Metadaten](../images/540_pointofcontact_md.png "Ansprechpartner Metadaten") <figcaption class="figcaption">Ansprechpartner Metadaten</figcaption>
+
+Dadurch wird beim ISO 19139 Import auch der dort vermerkte Ansprechpartner (Rolle 'pointOfContact') korrekt importiert.
+
+Für den ISO 19139 Export wird nach wie vor der Metadatenverantwortliche verwendet, der kein "Ansprechpartner MD" definiert wurde.
+
+
+#### Tomcat Aktualisierung auf Version 7.0.100
+
+**ACHTUNG**: Tomcat Aktualisierung! Docker basierte Installationen mit einem Application Proxy (apache in der docker Konfiguration) müssen das Mapping der `server.xml` im Portal Container entfernen und die folgenden Umgebungsvariablen setzen: `PORTAL_SERVER_CONNECTOR_ATTR=proxyPort="443" scheme="https" secure="true" emptySessionPath="true"`
+
+
+Bsp:
+
+```YAML
+...
+portal:
+    image: docker-registry.wemove.com/ingrid-portal:5.4.0
+    restart: unless-stopped
+    environment:
+        - PORTAL_SERVER_CONNECTOR_ATTR=proxyPort="443" scheme="https" secure="true" emptySessionPath="true"
+...
+```
+
+
 
 ### Liste der Änderungen
 
-InGrid
+- [Bug] [PORTAL] Portal: Raumbezugssysteme ohne EPSG-Code ohne Hyperlink ([REDMINE-1761](https://redmine.informationgrid.eu/issues/1761))
+- [Bug] [PORTAL] PORTAL: Facettierung dynamisch erzeugen über Index-Feld oder Codelist-ID ([REDMINE-1699](https://redmine.informationgrid.eu/issues/1699))
+- [Bug] [PORTAL] PORTAL: Fehlermeldung beim Login anpassen ([REDMINE-1826](https://redmine.informationgrid.eu/issues/1826))
+- [Bug] [PORTAL] Detailansicht von Datensatz über Katalogbrowser liefert kein XML ([REDMINE-1309](https://redmine.informationgrid.eu/issues/1309))
+- [Bug] [PORTAL] Portal: Problem Dopplungen unter Nutzungsbedingungen/Anwendungseinschränkungen in der Detaildarstellung im Portal ([REDMINE-1595](https://redmine.informationgrid.eu/issues/1595))
+- [Bug] [PORTAL] PORTAL: Keine Meldung beim Erstellen von Benutzer als Portaladmin ([REDMINE-1671](https://redmine.informationgrid.eu/issues/1671))
+- [Bug] [PORTAL] PORTAL: Update auf Version >= 5.2.1 schlägt fehl mit Oracle Datenbank ([REDMINE-1753](https://redmine.informationgrid.eu/issues/1753))
+- [Bug] [PORTAL] Portal: Indikator für Passwortstärke wird im IE11 nicht angezeigt ([REDMINE-1727](https://redmine.informationgrid.eu/issues/1727))
+- [Bug] [IGE] Bug: Import einer Achsenbezeichnung bei der Eingabe von Raster/Gridformat. ([REDMINE-1819](https://redmine.informationgrid.eu/issues/1819))
+- [Bug] [IGE] IGE: unvollständige Tooltips-Texte in Katalogeinstellungen ([REDMINE-1813](https://redmine.informationgrid.eu/issues/1813))
+- [Bug] [IGE] Vorschau und Druckansicht wird nicht angezeigt. ([REDMINE-1782](https://redmine.informationgrid.eu/issues/1782))
+- [Bug] [IGE] IGE: INSPIRE-relevant Bestätigungsdialog ist fehlerhaft ([REDMINE-1769](https://redmine.informationgrid.eu/issues/1769))
+- [Bug] [IGE] Nicht vorhandene Inhalte bei <gmd:distributionFormat> werden als Leerzeilen im IGE importiert ([REDMINE-1765](https://redmine.informationgrid.eu/issues/1765))
+- [Bug] [IGE] IGE: Fehler beim Indexieren bei fehlendem JSON in CL 6360 ([REDMINE-1801](https://redmine.informationgrid.eu/issues/1801))
+- [Bug] [IGE] IGE: Prüfung der Migration #1274 ([REDMINE-1762](https://redmine.informationgrid.eu/issues/1762))
+- [Bug] [IGE] IGE: Das Upload tmp Verzeichnis sollte automatisch angelegt werden ([REDMINE-1750](https://redmine.informationgrid.eu/issues/1750))
+- [Bug] [IPLUG_IGE] iPlug-IGE: Manchmal verliert das iPlug die DB Verbindung bei der Indexierung ([REDMINE-1547](https://redmine.informationgrid.eu/issues/1547))
+- [Bug] [IPLUG_IGE] IGE: Nicht darzustellende Adressen werden trotzdem indexiert ([REDMINE-1668](https://redmine.informationgrid.eu/issues/1668))
+- [Bug] [MAPCLIENT] MAPCLIENT: Aktualsierung auf den aktuellsten mf-geoadmin3 ([REDMINE-1754](https://redmine.informationgrid.eu/issues/1754))
+- [Bug] [IPLUG-SE] iPlug SE: Index Settings werden ignoriert ([REDMINE-1747](https://redmine.informationgrid.eu/issues/1747))
+- [Bug] [IPLUG-SE] iPlug SE: Ergebnisse in Suchergebnisliste enthalten keine Anbieter und kein Summary ([REDMINE-1669](https://redmine.informationgrid.eu/issues/1669))
+- [Bug] [CODELIST REPOSITORY] IGE: Spezifikationsdatum bei Spezifikation der Konformität soll "2010-12-08" bei "VERORDNUNG (EG) Nr. 1089/2010..." ([REDMINE-1702](https://redmine.informationgrid.eu/issues/1702))
+- [Bug] [MAPCLIENT] MAPCLIENT: Portal-Update löscht Einstellungen vom Mapclient ([REDMINE-1758](https://redmine.informationgrid.eu/issues/1758))
+- [Bug] [MAPCLIENT] MapClient: Anzahl Threads steigt mit jedem "Drucken" im Mapclient ([REDMINE-1743](https://redmine.informationgrid.eu/issues/1743))
+- [Bug] [MAPCLIENT] MAPCLIENT: Fehler beim Aufruf von GetFeatureInfo ([REDMINE-1737](https://redmine.informationgrid.eu/issues/1737))
+- [Bug] [IBUS] iBus: Anzeige des Abstracts sollte das Vorkommen des Suchbegriffes berücksichtigen ([REDMINE-1670](https://redmine.informationgrid.eu/issues/1670))
 
-- [Feature] [IGE] Änderung der URL im xml-Attribut codelist ([REDMINE-1554](https://redmine.informationgrid.eu/issues/1554))
-- [Feature] [IGE] Neues Feld "INSPIRE - Priority Dataset" ([REDMINE-1516](https://redmine.informationgrid.eu/issues/1516))
-- [Feature] [IGE] Neues Feld "INSPIRE - Räumlicher Anwendungsbereich" ([REDMINE-1517](https://redmine.informationgrid.eu/issues/1517))
-- [Feature] [IGE] INSPIRE-TG MD 2.0.1: Auflösung des Feldes "Kodierungsschema" in "Anwendungsschema" und "Datenformat" ([REDMINE-1273](https://redmine.informationgrid.eu/issues/1273))
-- [Feature] [IGE] WMTS mit GetCapabilities-Assistent erfassen ([REDMINE-513](https://redmine.informationgrid.eu/issues/513))
-- [Feature] [IGE] Datenformat GML+Version für INSPIRE-relevante Datensätze ([REDMINE-1272](https://redmine.informationgrid.eu/issues/1272))
-- [Feature] [IGE] INSPIRE TG MD 2.0: ISO-Mapping der Felder Nutzungsbedingungen und Anwendungseinschränkungen normalisieren ([REDMINE-1220](https://redmine.informationgrid.eu/issues/1220))
-- [Feature] [PORTAL] Vermeidung von Klartext Passwörtern in E-Mails ([REDMINE-1118](https://redmine.informationgrid.eu/issues/1118))
-- [Feature] [CODELIST REPO] Änderung Lizenz-ID der Open Data Lizenzen ([REDMINE-1534](https://redmine.informationgrid.eu/issues/1534))
-- [Feature] [INTERFACE CSW] Erstellung einer Transparenzportal-spezifischen CSW Schnittstellen Konfiguration ([REDMINE-1531](https://redmine.informationgrid.eu/issues/1531))
-- [Bug] [IPLUG-CSW] "Zeige in Karte" fehlt im Portal ([REDMINE-1598](https://redmine.informationgrid.eu/issues/1598))
-- [Bug] [IGE] Objektreferenzen die in Bearbeitung sind, dürfen nicht im Portal erscheinen ([REDMINE-1597](https://redmine.informationgrid.eu/issues/1597))
-- [Bug] [IGE] Seltener Fehler in Import von ISO 8601 Datumsangaben ([REDMINE-1586](https://redmine.informationgrid.eu/issues/1586))
-- [Bug] [IGE] Eingabe von spitzen Klammern in Quellenvermerk nicht möglich ([REDMINE-1530](https://redmine.informationgrid.eu/issues/1530))
-- [Bug] [IGE] Über gmx:Anchor abgebildete Raumbezugssysteme werden nicht importiert ([REDMINE-1569](https://redmine.informationgrid.eu/issues/1569))
-- [Bug] [CODELIST REPO] INSPIRE-Themen, LIST-ID:6100/106 Falsches INSPIRE-Thema ([REDMINE-1561](https://redmine.informationgrid.eu/issues/1561))
-- [Bug] [PORTAL] Funktion "Passwort vergessen" funktioniert nicht ([REDMINE-1543](https://redmine.informationgrid.eu/issues/1543))
-- [Bug] [PORTAL] Schreibfehler Kontaktformular ([REDMINE-1545](https://redmine.informationgrid.eu/issues/1545))
+- [Feature] [PORTAL] Portal: Ein eingegebenes Umringpolygons wird nicht unter dem zugehörigen Objekt  im Portal angezeigt. ([REDMINE-1781](https://redmine.informationgrid.eu/issues/1781))
+- [Feature] [PORTAL] Aktualisierung auf Tomcat 7.0.100 ([REDMINE-1768](https://redmine.informationgrid.eu/issues/1768))
+- [Feature] [IGE] IGE: Import von Metadaten Auskunftsadressen ([REDMINE-1767](https://redmine.informationgrid.eu/issues/1767))
+- [Feature] [IGE] Überarbeitung der Verwendung des CI_OnLineFunctionCode bei der Erfassung von Verweisen ([REDMINE-1367](https://redmine.informationgrid.eu/issues/1367))
+- [Feature] [IGE] Eingabe eines Umringpolygons in IGE ermöglichen ([REDMINE-1283](https://redmine.informationgrid.eu/issues/1283))
+- [Feature] [IGE] IGE: Aktualisierung des Metadaten-Datum ([REDMINE-1084](https://redmine.informationgrid.eu/issues/1084))
+- [Feature] [IGE] IGE: Erinnerungsmeldung - Text ändern ([REDMINE-1818](https://redmine.informationgrid.eu/issues/1818))
+- [Feature] [IGE] IGE: Adressen werden beim CSW-T Import nicht überschrieben ([REDMINE-1764](https://redmine.informationgrid.eu/issues/1764))
+- [Feature] [IGE] IGE: Optimierung bei Publizierung von Datensätzen ([REDMINE-1763](https://redmine.informationgrid.eu/issues/1763))
+- [Feature] [IGE] IGE: Verhalten der Felder zur "Datenqualität" ändern ([REDMINE-1276](https://redmine.informationgrid.eu/issues/1276))
+- [Feature] [IGE] Erweiterung METAVER_MD Profil für "Zentraler Geodatenknoten Sachsen-Anhalt (ZGDK), Kommunaler Metadatenkatalog Sachsen-Anhalt" ([REDMINE-1674](https://redmine.informationgrid.eu/issues/1674))
+- [Feature] [IGE] IGE: Einführung der Codeliste 5.24 MD_DimensionNameTypeCode für das Feld Achsenbezeichnung bei der Eingabe von Raster/Gridformat ([REDMINE-1772](https://redmine.informationgrid.eu/issues/1772))
+- [Feature] [IGE] IGE: Unterstützung von mehreren Vorschaugrafiken (GraphicOverview) ([REDMINE-1771](https://redmine.informationgrid.eu/issues/1771))
+- [Feature] [IGE] IGE: INSPIRE-TG MD 2.0.1: Werte und Verhalten des Feldes "Konformität" ändern ([REDMINE-1274](https://redmine.informationgrid.eu/issues/1274))
+- [Feature] [IGE] Umgang mit ungültigen Einträgen in "INSPIRE - Priority Dataset" ([REDMINE-1602](https://redmine.informationgrid.eu/issues/1602))
+- [Support] [IGE] IGE: Rechtschreibung "Platform" ([REDMINE-1778](https://redmine.informationgrid.eu/issues/1778))
+- [Feature] [IPLUG_IGE] IGE: Import/Export von Lizenz Quellenvermerk ([REDMINE-1443](https://redmine.informationgrid.eu/issues/1443))
+- [Feature] [MAPCLIENT] MAPCLIENT: Admin-GUI Erweiterung um die Funktion "Karten-Zuordnung entfernen" bei Kategorien ([REDMINE-1441](https://redmine.informationgrid.eu/issues/1441))
+- [Feature] [MAPCLIENT] MAPCLIENT: Admin-GUI Erweiterung um Checkbox "Gruppenlayer als Ordner laden" ([REDMINE-1439](https://redmine.informationgrid.eu/issues/1439))
+- [Feature] [MAPCLIENT] Aussagekräftigere Meldung beim Laden eines PW geschützten Dienstes im Kartenclient ([REDMINE-1592](https://redmine.informationgrid.eu/issues/1592))
+- [Feature] [MAPCLIENT] MAPCLIENT: Koordinatensuche triggert FindeNächsteAdresse = Fehlverhalten ([REDMINE-1664](https://redmine.informationgrid.eu/issues/1664))
+- [Feature] [MAPCLIENT] MAPCLIENT: Attribution, -URL mit in die URL, Somit bei importierten Diensten korrekt anzeigen ([REDMINE-1656](https://redmine.informationgrid.eu/issues/1656))
+- [Feature] [MAPCLIENT] MAPCLIENT: Admin-GUI Erweiterung um die Funktion "Mehrfachauswahl von Kategorie-Ordnern" zum Löschen ([REDMINE-1440](https://redmine.informationgrid.eu/issues/1440))
+- [Feature] [CODELIST REPOSITORY] IGE: Codeliste 6010 ändern, Bindestrich einfügen ([REDMINE-1698](https://redmine.informationgrid.eu/issues/1698))
+- [Feature] [IBUS] IBUS: Boosting für Objekte und Adressen ändern ([REDMINE-1459](https://redmine.informationgrid.eu/issues/1459))
 
-Profil UVP
 
-- [Feature] [PORTAL] Anpassung der länderspezifischen Vorschaltseiten an das neue UVP Layout ([REDMINE-1570](https://redmine.informationgrid.eu/issues/1570))
-- [Feature] [PORTAL] Sortierung der Trefferliste ([REDMINE-602](https://redmine.informationgrid.eu/issues/602))
-- [Feature] [PORTAL] Austausch Logo, Slogan zu "Umweltverträglichkeitsprüfungen der Länder" ([REDMINE-1577](https://redmine.informationgrid.eu/issues/1577))
-- [Feature] [PORTAL] Verfahrenstyp soll in Detaildarstellung angezeigt werden ([REDMINE-1590](https://redmine.informationgrid.eu/issues/1590))
-- [Feature] [IGE] Integration eines Virusscanners in den Upload Prozess ([REDMINE-1293](https://redmine.informationgrid.eu/issues/1293))
-- [Bug] [IGE] Upload von gleicher Datei in anderem Datensatz wird unter falscher UUID abgelegt ([REDMINE-1599](https://redmine.informationgrid.eu/issues/1599))
-- [Bug] [IGE] Versteckte Adresse wird in Trefferliste angezeigt ([REDMINE-1522](https://redmine.informationgrid.eu/issues/1522))
-- [Bug] [IGE] Verbesserung der Handhabung von Leerzeichen und Sonderzeichen in Dokumentennamen ([REDMINE-1555](https://redmine.informationgrid.eu/issues/1555))
-- [Bug] [IGE] Verlinkung von Dokumenten im Editor funktioniert nicht ([REDMINE-1553](https://redmine.informationgrid.eu/issues/1553))
-- [Bug] [PORTAL] Auswahl eines Partners lässt Facette komplet verschwinden ([REDMINE-1538](https://redmine.informationgrid.eu/issues/1538))
-- [Bug] [PORTAL] Fehler bei der Darstellung im IE11 ([REDMINE-1576](https://redmine.informationgrid.eu/issues/1576))
+Profil BAW DMQS
 
-Profil HMDK
+- [Bug] [PORTAL] Portal: Object-ID in Links zur XML-Export in Detailansicht wird nicht richtig gesetzt ([REDMINE-1475](https://redmine.informationgrid.eu/issues/1475))
+- [Feature] [PORTAL] Portal: Katalog-Ansicht im BAW Profil aktivieren ([REDMINE-1482](https://redmine.informationgrid.eu/issues/1482))
+- [Feature] [IGE] IGE: BAW-Auftragstitel und -Augtragsnummer nach MDP 1.3 abbilden ([REDMINE-1567](https://redmine.informationgrid.eu/issues/1567))
+- [Feature] [IGE] IGE: Bezeichnung der Hierarchieebene im BAW-Profil anpassen ([REDMINE-1455](https://redmine.informationgrid.eu/issues/1455))
+- [Feature] [IGE] IGE: Liste der Raumbezugssysteme erweitern ([REDMINE-1451](https://redmine.informationgrid.eu/issues/1451))
+- [Feature] [IGE] IGE: Eingabefelder für BWaStr.-Streckenabschnitte hinzufügen. ([REDMINE-1417](https://redmine.informationgrid.eu/issues/1417))
+- [Feature] [IGE] Bezeichnung und Version des Metadatenstandards für die BAW anpassen ([REDMINE-1386](https://redmine.informationgrid.eu/issues/1386))
+- [Feature] [IGE] IGE: BAW Schlagwortkatalog (2012) einbinden ([REDMINE-1558](https://redmine.informationgrid.eu/issues/1558))
 
-- [Feature] [PORTAL] Profilerstellung für HMDK Installation ([REDMINE-1523](https://redmine.informationgrid.eu/issues/1523))
+
+Profil InGrid Installation Rheinland-Pfalz
+
+- [Feature] [CODELIST REPOSITORY] Anpassen der Ministeriumsbezeichnung (MULEWF) ([REDMINE-1745](https://redmine.informationgrid.eu/issues/1745))
+
+Profil MetaVer
+
+- [Feature] [IGE] IGE: Umstellung der Eingabe einer Capabilities URL in Geodatendienst (Darstellungsdienst) von verpflichtend auf optional ([REDMINE-1518](https://redmine.informationgrid.eu/issues/1518))
 
 Profil NUMIS
 
-- [Feature] [PORTAL] Umsetzung der Layoutkonzeption NUMIS/UVP Niedersachsen ([REDMINE-1465](https://redmine.informationgrid.eu/issues/1465))
+- [Bug] [PORTAL] Administration der Startseite im nds. UVP-Portal funktioniert nicht ([REDMINE-1828](https://redmine.informationgrid.eu/issues/1828))-
+- [Bug] [PORTAL] PORTAL: Anpassungen am Layout von NUMIS und UVP-NI ([REDMINE-1672](https://redmine.informationgrid.eu/issues/1672))
 
-Profil BKG
+Profil UVP
 
-- [Feature] [PORTAL] Funktion "Ähnliche Begriffe" sollen aus Portal entfernt werden ([REDMINE-1528](https://redmine.informationgrid.eu/issues/1528))
-- [Feature] [IGE] Erfassung des Quellenvermerks ermöglichen ([REDMINE-971](https://redmine.informationgrid.eu/issues/971))
-- [Feature] [CODELIST REPO] Geänderte Codelisten übernehmen ([REDMINE-1410](https://redmine.informationgrid.eu/issues/1410))
+- [Bug] [IPLUG_BLP] In Suchergebnissen von BLP Daten werden zu viele Links dargestellt ([REDMINE-1831](https://redmine.informationgrid.eu/issues/1831))
+- [Bug] [CODELIST REPOSITORY] Aktualisierung der UVP Nummern Schleswig-Holstein ([REDMINE-1780](https://redmine.informationgrid.eu/issues/1780))
+- [Feature] [IGE] Indizes für Datenbank erstellen ([REDMINE-1600](https://redmine.informationgrid.eu/issues/1600))
+- [Feature] [IGE] IGE: Statistik mit Timeout bei vielen Datensätzen ([REDMINE-1562](https://redmine.informationgrid.eu/issues/1562))
+- [Feature] [IPLUG_BLP] BLP iPlug: Zulassen von Ortsnamen ab 3 Buchstaben ([REDMINE-1740](https://redmine.informationgrid.eu/issues/1740))
+- [Feature] [CODELIST REPOSITORY] Erweiterung der UVP-Nummern Bayern laut Anforderungen Ressort Wirtschaft ([REDMINE-1701](https://redmine.informationgrid.eu/issues/1701))
 
-Profil EBA
-
-- [Feature] [PORTAL] Erstellung Portal Profil EBA ([REDMINE-1593](https://redmine.informationgrid.eu/issues/1593))
 
 ### Komponenten
 
-- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.0/))
-- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.3.0/))
-- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.3.0/))
-- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.3.0/))
-- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.3.0/))
-- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.3.0/))
-- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.3.0/))
-- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.3.0/))
-- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.3.0/))
-- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.3.0/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.0/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.4.0/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.0/))
+- Interface CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.4.0/))
+- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.0/))
+- iPlug DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.4.0/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.4.0/))
+- iPlug WFS ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.4.0/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.4.0/))
+- iPlug Excel ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.4.0/))
+- iPlug BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.4.0/))
+- iPlug SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.4.0/))
+- iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.4.0/))
 
