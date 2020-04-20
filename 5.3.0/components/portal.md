@@ -734,36 +734,6 @@ Beispiel:
 
 Es müssen nicht beide Eigenschaften ("info", "infoResultSelect") verwendet werden.
 
-Um eine Facette über ein Indexfeld erzeugen zu lassen, gibt es folgende Möglichkeit:
-
-Beispiel:
-
-```xml
-    <facet>
-        <name>Datentypen</name>
-        <id>datatype</id>
-        <field>datatype</field>
-    </facet>
-```
-
-Hierbei bestimmt "field" das Indexfeld und erzeugt im Portal unterhalb von "Datentypen" alle möglichen Facetten dieses Types. 
-
-Um eine Facette über eine Liste aus dem Codelist-Repository erzeugen zu lassen, gibt es folgende Möglichkeit:
-
-Beispiel:
-
-```xml
-    <facet>
-        <name>INSPIRE-Themen</name>
-        <id>inspire_topics</id>
-        <field>t04_search.searchterm</field>
-        <codelist>6100</codelist>
-        <codelist-field>de</codelist-field>
-    </facet>
-```
-
-In diesem Fall wird eine Facettierung "INSPIRE-THEMEN" aus der Codelist "6100" und dem Schlüssel aus dem Codelisten-Eintrag "de" erstellt. Hinzu kommt noch, das ein Indexfeld unter "field" (hier: "t04_search.searchterm") angegeben werden muss.
-
 Weitere Informationen entnehmen Sie bitte aus der obengenannten Datei "facets-config.xml".
 
 ### Werden Anfragen, die keine Ergebnisse liefern protokolliert?

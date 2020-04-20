@@ -33,6 +33,7 @@ Eine Basis Installation enthält mind. folgende Komponenten:
 
 Genauere Informationen zur Installation der einzelnen Komponenten können bei der Dokumentation der einzelnen Komponenten eingesehen werden.
 
+
 ### Welche Datenbank wird verwendet?
 
 InGrid unterstützt MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2). Der Einsatz von MySQL oder PostgreSQL ist dabei vorzuziehen, da hier der Installer die Datenbank initial erzeugen und initialisieren kann (Portal und IGE iPlug).
@@ -48,7 +49,6 @@ Das Portal wird mit einem optionalen INSPIRE kompatiblen Metadateneditor (IGE - 
 Die empfohlene Plattform ist Linux (Ubuntu/Redhat).
 
 Das System kann auch unter Windows installiert werden. Dies macht jedoch die Installation von CYGWIN erforderlich.
-
 
 ## Systemvoraussetzungen
 

@@ -400,6 +400,8 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
   > Hinweis: Werden Karten hinzugefügt, erhalten die Karten eine eindeutige ID, d.h. möchte man die Karten mit der gleichen ID zu verschiedenen Kategorien hinzufügen, dann müssen die Kategorien alle in einen Schub ausgewählt werden und anschließend den Button "Hinzufügen" oder Button "Kombinieren und Hinzufügen" betätigen. Ansonsten besteht die Möglichkeit die Karten manuell über das Akkordeon "Kategorien" den jeweiligen (Unter-) Kategorien zuzuordnen.
 
+  - Die Checkbox "Gruppenlayer als Ordner laden" (über Auswahl "Kategorie auswählen") ermöglich es Ihnen die Gruppenlayer zu ignorieren, Gruppenlayer werden weder als einzelne Layer noch bei kombinierten Layer verwendet, und bei einem Zuordnen zu einer Kategorie zu einem Ordner geändert und in der Kategorie hinterlegt.
+
   ![Webmap Client Admin - Karten](../images/mapclient/admin/mapclient_admin_layers_add.gif "Webmap Client Admin - Karten hinzufügen")
 
 - **Karten löschen**
@@ -552,6 +554,9 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
 
   Mit dem Suchfeld in der Navigationsleiste des Akkordeon "Kategorien" können Sie nach Kategorien per ID suchen.
 
+<a name="kategorie"></a>
+**Kategorie**
+
 - **Kategorien bearbeiten**
 
   Haben Sie eine Kategorie in der Liste ausgewählt, so können Sie über den Button-"Bearbeiten" diese Kategorie bearbeiten:
@@ -616,6 +621,21 @@ Prüfen Sie auch die Liste der eingepflegten Karten nach fehlerhaften Karten (z.
   Mit dem "Aktualisieren"-Button können Sie den aktuell sichtbaren Kategorien-Baum.
 
 > Falls Sie das Konfigurationsverzeichnis des Webmap Clients außerhalb des Portal-Verzeichnisses, also nicht als ein Unterordner des Portal-Verzeichnisses, festgelegt haben, so bleiben die eingepflegten Kategorien auch für zukünftige Portal-Updates erhalten.
+
+<a name="kategoriebaum"></a>
+**Kategorie-Baum**
+
+- **Hinzufügen**
+
+  Fügen Sie der Kategorie einen Ordner hinzu. Geben Sie dem Ordner einen Titel und wählen Sie ggfs. dem Ordner eine Karte aus. Diese Einstellungen können Sie auch später wieder bearbeiten.
+
+- **Karten-Zuordnung entfernen**
+
+  Haben Sie über die Checkboxen vor den Karten bzw. Ordnern eine Auswahl getroffen, so können Sie mit diesem Button die zugeordnete Karte zu jeder Auswahl entfernen. 
+
+- **Auswahl löschen**
+
+  Haben Sie über die Checkboxen vor den Karten bzw. Ordnern eine Auswahl getroffen, so können Sie mit diesem Button Ihre Auswahl aus der Kategorie löschen.
 
 ### Einstellungen
 
