@@ -15,11 +15,11 @@ Release 23.04.2020
 
 Profil BAW DMQS
 
-- [Bug] [IGE] Fehler beim Setzen des Metadaten Datums im Zusammenhang mit dem BAW Profil ([REDMINE-1761](https://redmine.informationgrid.eu/issues/1839))
+- [Bug] [IGE] Fehler beim Setzen des Metadaten Datums im Zusammenhang mit dem BAW Profil ([REDMINE-1839](https://redmine.informationgrid.eu/issues/1839))
 
 Profil mCLOUD
 
-- [Bug] [IGE] IGE: Aktualisierung des Metadaten-Datum ([REDMINE-1761](https://redmine.informationgrid.eu/issues/1084))
+- [Bug] [IGE] IGE: Aktualisierung des Metadaten-Datum ([REDMINE-1084](https://redmine.informationgrid.eu/issues/1084))
 
 ### Komponenten
 
