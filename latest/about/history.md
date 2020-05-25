@@ -15,6 +15,7 @@ Release 25.05.2020
 
 - [Bug] [INTERFACE SEARCH] Interface Search wirft Runtimeexception ([REDMINE-1887](https://redmine.informationgrid.eu/issues/1887))
 - [Bug] [Portal] Portal: Fix URL parameter plugId on detail view. ([REDMINE-1833](https://redmine.informationgrid.eu/issues/1833))
+- [Bug] [IGE] IGE: XML Namensraum "xs" fehlt in der ISO-Abbildung ([REDMINE-1857](https://redmine.informationgrid.eu/issues/1857))
 
 Profil BAW DMQS
 
@@ -24,6 +25,7 @@ Profil BAW DMQS
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.2/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.4.2/))
 - Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.2/))
 
 
