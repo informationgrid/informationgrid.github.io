@@ -7,6 +7,20 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.4.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.4.2
+
+Release 25.05.2020
+
+### Liste der Änderungen
+
+- [Bug] [INTERFACE SEARCH] Interface Search wirft Runtimeexception ([REDMINE-1887](https://redmine.informationgrid.eu/issues/1887))
+
+### Komponenten
+
+- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.2/))
+
+
+
 ## Version 5.4.1
 
 Release 30.04.2020
