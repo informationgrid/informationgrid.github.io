@@ -14,9 +14,16 @@ Release 25.05.2020
 ### Liste der Änderungen
 
 - [Bug] [INTERFACE SEARCH] Interface Search wirft Runtimeexception ([REDMINE-1887](https://redmine.informationgrid.eu/issues/1887))
+- [Bug] [Portal] Portal: Fix URL parameter plugId on detail view. ([REDMINE-1833](https://redmine.informationgrid.eu/issues/1833))
+
+Profil BAW DMQS
+
+- [Bug] [Portal] Portal: HTML 403 Error-Seite fehlt im BAW-Profil ([REDMINE-1858](https://redmine.informationgrid.eu/issues/1858))
+
 
 ### Komponenten
 
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.2/))
 - Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.2/))
 
 
