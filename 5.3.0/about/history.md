@@ -6,6 +6,18 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.10
+
+Release 29.05.2020
+
+- [Add] [Portal] Hinzufügen der E-Mail ReplyTo-Funktion für das Kontaktformular im Portal und "Problem melden" im Kartenclient  ([REDMINE-1890](https://redmine.informationgrid.eu/issues/1890)) 
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.10/))
+
+
+
 ## Version 5.3.9
 
 Release 20.04.2020
