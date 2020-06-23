@@ -6,6 +6,20 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.4.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.4.4
+
+Release 23.06.2020
+
+### Liste der Änderungen
+
+- [Bug] [IGE] Fehler bei der Erstellung von Statistiken (Semikolon im Titel) ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929))
+- [Update] [Portal] Update vom Zeitreihenclient (1.0.16)
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.4/))
+
+
 ## Version 5.4.3
 
 Release 04.06.2020
