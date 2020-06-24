@@ -6,6 +6,19 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.11
+
+Release 22.06.2020
+
+Profil UVP
+
+- [Fix] [Portal] Fehler bei der Erstellung von Statistiken (Semikolon im Titel)  ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929)) 
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.11/))
+
+
 ## Version 5.3.10
 
 Release 29.05.2020
