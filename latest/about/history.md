@@ -8,7 +8,7 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.4.x. Release Notes
 
 ## Version 5.4.4
 
-Release 23.06.2020
+Release 25.06.2020
 
 ### Liste der Änderungen
 
