@@ -6,6 +6,22 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.4.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.4.5
+
+Release 25.06.2020
+
+### Liste der Änderungen
+
+Profil UVP
+
+- [Update] [CODELIST REPOSITORY] Erweiterung der UVP-Nummern Bayern auf alle UVP-G. ([REDMINE-1936](https://redmine.informationgrid.eu/issues/1936))
+
+
+### Komponenten
+
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.5/))
+
+
 ## Version 5.4.4
 
 Release 25.06.2020
