@@ -12,12 +12,18 @@ Release 23.06.2020
 
 ### Liste der Änderungen
 
-- [Bug] [IGE] Fehler bei der Erstellung von Statistiken (Semikolon im Titel) ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929))
+- [Bug] [CODELIST REPOSITORY] Umgebungsvariablen INGRID_OPTS und JAVA_OPTS werden in startscript nicht berücksichtigt. ([REDMINE-1920](https://redmine.informationgrid.eu/issues/1920))
 - [Update] [Portal] Update vom Zeitreihenclient (1.0.16)
+
+Profil UVP
+
+- [Bug] [IGE] Fehler bei der Erstellung von Statistiken (Semikolon im Titel) ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929))
+
 
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.4/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.4/))
 
 
 ## Version 5.4.3
