@@ -39,7 +39,7 @@ InGrid
 - [Bug] [CODELIST REPOSITORY]: Codeliste 101 mit dem Eintrag "Mittelwasser" erweitern ([REDMINE-1407](https://redmine.informationgrid.eu/issues/1407))
 - [Bug] [IGE]: XML-Encoding zu spatialRepresentationInfo begutachten ([REDMINE-1934](https://redmine.informationgrid.eu/issues/1934))
 - [Bug] [PORTAL] Katalog: Ausgabe der Qualitätsangaben fehlt ([REDMINE-1932](https://redmine.informationgrid.eu/issues/1932))
-- [Bug] [INTERFACE-SEARCH] Interface Search wirft Runtimeexception ([REDMINE-1887](https://redmine.informationgrid.eu/issues/1887))
+- [Bug] [INTERFACE-SEARCH]: Interface Search wirft Runtimeexception ([REDMINE-1887](https://redmine.informationgrid.eu/issues/1887))
 - [Bug] [PORTAL]: In der Detaildarstellung werden unter "Nutzungsbedingungen" leere Einträge angezeigt ([REDMINE-1854](https://redmine.informationgrid.eu/issues/1854))
 - [Bug] [PORTAL]: Alte Links zu Detaildarstellungen funktionieren nicht mehr ([REDMINE-1833](https://redmine.informationgrid.eu/issues/1833))
 - [Feature] [IPLUG-CSW]: HTTP Read Timeout konfigurierbar machen ([REDMINE-1988](https://redmine.informationgrid.eu/issues/1988))
@@ -47,12 +47,12 @@ InGrid
 - [Feature] [PORTAL]: Darstellung von mehreren Vorschaugrafiken wird im Portal nicht unterstützt ([REDMINE-1785](https://redmine.informationgrid.eu/issues/1785))
 - [Feature] [IGE]: Untersuchung -Änderung des Metadaten-Schemas APISO -  Auswirkung auf InGrid-Metadaten ([REDMINE-1044](https://redmine.informationgrid.eu/issues/1044))
 - [Feature] [MAPCLIENT]: Erweiterung Import von WMTS mit GetFeatureInfo-Funktion ([REDMINE-1953](https://redmine.informationgrid.eu/issues/1953))
-- [Feature] [INTERFACE-CSW] Verbesserung von Stabilität des Harvest-Prozesses der CSW Schnittstelle ([REDMINE-1901](https://redmine.informationgrid.eu/issues/1901))
+- [Feature] [INTERFACE-CSW]: Verbesserung von Stabilität des Harvest-Prozesses der CSW Schnittstelle ([REDMINE-1901](https://redmine.informationgrid.eu/issues/1901))
 
 MetaVer
 
 - [Bug] [IGE]: Verhalten der Nutzungsbedingungen als Pflichtfeld falsch  ([REDMINE-1975](https://redmine.informationgrid.eu/issues/1975))
-- [Feature] [PORTAL] Anpassung des Email-Versandes (Adressat in Reply-To bei Kontaktformular) ([REDMINE-1890](https://redmine.informationgrid.eu/issues/1890))
+- [Feature] [PORTAL]: Anpassung des Email-Versandes (Adressat in Reply-To bei Kontaktformular) ([REDMINE-1890](https://redmine.informationgrid.eu/issues/1890))
 
 NUMIS
 
@@ -60,7 +60,7 @@ NUMIS
 
 UVP
 
-- [Bug] [IGE] Fehler bei der Erstellung von Statistiken (Semikolon im Titel) ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929))
+- [Bug] [IGE]: Fehler bei der Erstellung von Statistiken (Semikolon im Titel) ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929))
 
 ### Komponenten
 
