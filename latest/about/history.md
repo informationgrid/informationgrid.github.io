@@ -9,7 +9,7 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes
 
 ## Version 5.5.0
 
-Release 24.07.2020
+Release 27.07.2020
 
 ### Liste der Änderungen
 
