@@ -6,7 +6,7 @@ description: "Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## InGrid
 
-InGrid ist eine modular aufgebaute Software, die vielseitig eingesetzt werden kann: Kernkomponenten sind ein Web-Portal, eine Suchmaschine, ein INSPIRE-konformer Metadatenkatalog, eine Visualisierungskomponente für OGC Web Map Services sowie diverse An- und Abfrageschnittstellen, die für die Recherche der angeschlossenen Komponenten, aber auch für die Weiterleitung der Ergebnisse an externe Systeme zuständig sind.
+InGrid ist eine modular aufgebaute Software, die vielseitig eingesetzt werden kann: Kernkomponenten sind ein Web-Portal, eine Suchmaschine, ein Metadatenkatalog mit Profilen für die Erfassung INSPRE-konformer Metadaten, offener Daten und UVP-Vorhaben, eine Visualisierungskomponente für OGC Web Map Services, ein Client zur Visualisierung von Zeitreihen sowie diverse An- und Abfrageschnittstellen, die für die Recherche der angeschlossenen Komponenten, aber auch für die Weiterleitung der Ergebnisse an externe Systeme zuständig sind.
 
 InGrid wurde u.a. entlang der Vorgaben und Empfehlungen der [Geodateninfrastruktur Deutschland](http://www.geoportal.de/) (GDI-DE) entwickelt und eignet sich daher auch zum Aufbau INSPIRE- und GDI-DE-konformer Geodateninfrastrukturen.
 
@@ -38,23 +38,24 @@ Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege un
 Aus der öffentlichen Verwaltung sind folgende Partner beteiligt:
 
 - Niedersachsen: Ministerium für Umwelt, Energie, Bauen und Klimaschutz (Federführung)
-- Bund: Informationstechnikzentrum Bund/WSV
+- Bund: Informationstechnikzentrum Bund / Wasser- und Schifffahrtsverwaltung des Bundes
+- Bund: Bundesanstalt für Wasserbau
+- Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
 - Baden-Württemberg: Ministerium für Umwelt, Klima und Energiewirtschaft
 - Bayern: Staatsministerium für Umwelt und Verbraucherschutz
 - Berlin: Senatsverwaltung für Umwelt, Verkehr und Klimaschutz
 - Brandenburg: Ministerium für Ländliche Entwicklung, Umwelt und Landwirtschaft
 - Bremen: GeoInformation Bremen
-- Hamburg: Behörde für Umwelt und Energie
+- Hamburg: Behörde für Umwelt, Klima, Energie und Agrarwirtschaft (BUKEA)
 - Hessen: Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz
 - Mecklenburg-Vorpommern: Landesamt für Umwelt, Naturschutz und Geologie
 - Nordrhein-Westfalen: Ministerium für Umwelt, Landwirtschaft, Natur- und Verbraucherschutz
 - Rheinland-Pfalz: Ministerium für Umwelt, Energie, Ernährung und Forsten
 - Saarland: Landesamt für Vermessung, Geoinformation und Landentwicklung
 - Sachsen: Landesamt für Umwelt, Landwirtschaft und Geologie
-- Sachsen-Anhalt: Ministerium für Umwelt, Landwirtschaft und Energie des Landes
+- Sachsen-Anhalt: Ministerium für Umwelt, Landwirtschaft und Energie
 - Schleswig-Holstein: Ministerium für Energiewende, Landwirtschaft, Umwelt und ländliche Räume
 - Thüringen: Ministerium für Umwelt, Energie und Naturschutz
-- Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
 
 Die Firma [wemove digital solutions GmbH](http://www.wemove.com/) betreut als Partner aus der Wirtschaft die technische Projekt-Infrastruktur.
 
