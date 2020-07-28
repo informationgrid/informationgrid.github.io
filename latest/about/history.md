@@ -11,6 +11,16 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes
 
 Release 27.07.2020
 
+### Wichtige Änderungen
+
+#### Implementierung von GetFeatureInfo bei importiertem WMTS
+
+Ist ResourceURL mit dem resourceType="FeatureInfo" definiert, so ist nach dem Hinzufügen des Layers eine GetFeatureInfo nun auch für importierte Karten möglich.
+
+#### Darstellung von mehreren Vorschaugrafiken wird nun im Portal unterstützt
+
+Sowohl in der Suchergebnisliste als auch in der Detaildarstellung gibt es jetzt die Möglichkeit, zwischen mehreren Vorschaugrafiken umzuschalten.
+
 ### Liste der Änderungen
 
 AG Metadaten
