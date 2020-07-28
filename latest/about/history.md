@@ -13,9 +13,9 @@ Release 27.07.2020
 
 ### Wichtige Änderungen
 
-#### Implementierung von GetFeatureInfo bei importiertem WMTS
+#### Erweiterung des Imports von WMTS mit GetFeatureInfo-Funktion
 
-Ist ResourceURL mit dem resourceType="FeatureInfo" definiert, so ist nach dem Hinzufügen des Layers eine GetFeatureInfo nun auch für importierte Karten möglich.
+Ist eine ResourceURL mit dem resourceType="FeatureInfo" definiert, so ist nach dem Hinzufügen des Layers eine GetFeatureInfo nun auch für importierte Karten möglich.
 
 #### Darstellung von mehreren Vorschaugrafiken wird nun im Portal unterstützt
 
@@ -45,7 +45,6 @@ InGrid
 - [Bug] [PORTAL]: Passwortmanager funktioniert nicht im Portal ([REDMINE-1900](https://redmine.informationgrid.eu/issues/1900))
 - [Bug] [IGE]: ListId von zusätzlicher Combobox wird nicht gespeichert ([REDMINE-1893](https://redmine.informationgrid.eu/issues/1893))
 - [Bug] [PORTAL]: Ständig auftretende Exception ([REDMINE-1874](https://redmine.informationgrid.eu/issues/1874))
-- [Bug] [IGE]: Vorschaugrafiken werden in Vorschau/Druckansicht nicht angezeigt ([REDMINE-1787](https://redmine.informationgrid.eu/issues/1787))
 - [Bug] [CODELIST REPOSITORY]: Codeliste 101 mit dem Eintrag "Mittelwasser" erweitern ([REDMINE-1407](https://redmine.informationgrid.eu/issues/1407))
 - [Bug] [IGE]: XML-Encoding zu spatialRepresentationInfo begutachten ([REDMINE-1934](https://redmine.informationgrid.eu/issues/1934))
 - [Bug] [PORTAL] Katalog: Ausgabe der Qualitätsangaben fehlt ([REDMINE-1932](https://redmine.informationgrid.eu/issues/1932))
@@ -53,10 +52,8 @@ InGrid
 - [Bug] [PORTAL]: In der Detaildarstellung werden unter "Nutzungsbedingungen" leere Einträge angezeigt ([REDMINE-1854](https://redmine.informationgrid.eu/issues/1854))
 - [Bug] [PORTAL]: Alte Links zu Detaildarstellungen funktionieren nicht mehr ([REDMINE-1833](https://redmine.informationgrid.eu/issues/1833))
 - [Feature] [IPLUG-CSW]: HTTP Read Timeout konfigurierbar machen ([REDMINE-1988](https://redmine.informationgrid.eu/issues/1988))
-- [Feature] [IGE]: Unterscheidung der Adressobjekte bei gleichen Institutionsbezeichnungen ermöglichen ([REDMINE-1816](https://redmine.informationgrid.eu/issues/1816))
 - [Feature] [PORTAL]: Darstellung von mehreren Vorschaugrafiken wird im Portal nicht unterstützt ([REDMINE-1785](https://redmine.informationgrid.eu/issues/1785))
-- [Feature] [IGE]: Untersuchung -Änderung des Metadaten-Schemas APISO -  Auswirkung auf InGrid-Metadaten ([REDMINE-1044](https://redmine.informationgrid.eu/issues/1044))
-- [Feature] [MAPCLIENT]: Erweiterung Import von WMTS mit GetFeatureInfo-Funktion ([REDMINE-1953](https://redmine.informationgrid.eu/issues/1953))
+- [Feature] [PORTAL]: Mapclient: Erweiterung Import von WMTS mit GetFeatureInfo-Funktion ([REDMINE-1953](https://redmine.informationgrid.eu/issues/1953))
 - [Feature] [INTERFACE-CSW]: Verbesserung von Stabilität des Harvest-Prozesses der CSW Schnittstelle ([REDMINE-1901](https://redmine.informationgrid.eu/issues/1901))
 
 MetaVer
