@@ -12,14 +12,15 @@ Release 05.08.2020
 
 ### Liste der Änderungen
 
-- [Update] [INTERFACE SEARCH] Berücksichtigung des neuen Feldes "Metadata-Datum" im interface-search bei der Bestimmung des modified Feldes in der OpenSearch Antwort ([REDMINE-2032](https://redmine.informationgrid.eu/issues/2032))
 - [Feature] [IPLUG_CSW] iPlug CSW: HTTP Read Timeout konfigurierbar machen ([REDMINE-1988](https://redmine.informationgrid.eu/issues/1988))
+- [Update] [INTERFACE_SEARCH] Berücksichtigung des neuen Feldes "Metadata-Datum" im interface-search bei der Bestimmung des modified Feldes in der OpenSearch Antwort ([REDMINE-2032](https://redmine.informationgrid.eu/issues/2032))
+- [Bug] [IGE] IGE: XML-Encoding zu spatialRepresentationInfo begutachten. ([REDMINE-1934](https://redmine.informationgrid.eu/issues/1934))
 
-iPlug CSW: HTTP Read Timeout konfigurierbar machen
 
 Profil UVP
 
 - [Update] [CODELIST REPOSITORY] Erweiterung der UVP-Nummern Bayern auf alle UVP-G. ([REDMINE-1936](https://redmine.informationgrid.eu/issues/1936))
+- [Bug] [IGE] IGE: Fix UVP profile record mapping. ([REDMINE-1084](https://redmine.informationgrid.eu/issues/1084))
 
 
 ### Komponenten
@@ -27,6 +28,7 @@ Profil UVP
 - Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.5/))
 - iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.4.5/))
 - Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.5/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.4.5/))
 
 
 ## Version 5.4.4
