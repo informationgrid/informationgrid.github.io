@@ -13,6 +13,9 @@ Release 05.08.2020
 ### Liste der Änderungen
 
 - [Update] [INTERFACE SEARCH] Berücksichtigung des neuen Feldes "Metadata-Datum" im interface-search bei der Bestimmung des modified Feldes in der OpenSearch Antwort ([REDMINE-2032](https://redmine.informationgrid.eu/issues/2032))
+- [Feature] [IPLUG_CSW] iPlug CSW: HTTP Read Timeout konfigurierbar machen ([REDMINE-1988](https://redmine.informationgrid.eu/issues/1988))
+
+iPlug CSW: HTTP Read Timeout konfigurierbar machen
 
 Profil UVP
 
@@ -22,6 +25,7 @@ Profil UVP
 ### Komponenten
 
 - Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.5/))
+- iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.4.5/))
 - Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.5/))
 
 
