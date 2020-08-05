@@ -8,9 +8,11 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.4.x. Release Notes
 
 ## Version 5.4.5
 
-Release 25.06.2020
+Release 05.08.2020
 
 ### Liste der Änderungen
+
+- [Update] [INTERFACE SEARCH] Berücksichtigung des neuen Feldes "Metadata-Datum" im interface-search bei der Bestimmung des modified Feldes in der OpenSearch Antwort ([REDMINE-2032](https://redmine.informationgrid.eu/issues/2032))
 
 Profil UVP
 
@@ -19,6 +21,7 @@ Profil UVP
 
 ### Komponenten
 
+- Interface Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.4.5/))
 - Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.5/))
 
 
