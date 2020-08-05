@@ -44,14 +44,32 @@ Profil UVP
 
 ## Version 5.4.3
 
-Release 04.06.2020
+Release 16.06.2020
 
 ### Liste der Änderungen
 
+
+- [Bug] [PORTAL] Portal: In der Detaildarstellung werden unter "Nutzungsbedingungen" leere Einträge angezeigt ([REDMINE-1854](https://redmine.informationgrid.eu/issues/1854))
+- [Bug] [PORTAL] Portal: Ständig auftretende Exception ([REDMINE-1874](https://redmine.informationgrid.eu/issues/1874))
+- [Bug] [PORTAL] Portal: Raumbezugssysteme ohne EPSG-Code ohne Hyperlink ([REDMINE-1761](https://redmine.informationgrid.eu/issues/1761))
+- [Bug] [IGE] IGE: Fehlende Versionsangaben im Info Dialog des Editors. ([REDMINE-1922](https://redmine.informationgrid.eu/issues/1922))
 - [Bug] [CODELIST REPOSITORY] INSPIRE Registry ist nur noch per HTTPS erreichbar ([REDMINE-1907](https://redmine.informationgrid.eu/issues/1907))
+
+BKG
+
+- [Bug] [PORTAL] Katalog: Ansicht eines MD im Reiter Zeit/Raum fehlerhaft ([REDMINE-1905](https://redmine.informationgrid.eu/issues/1905))
+- [Bug] [IGE] IGE: Feld "INSPIRE-Themen" kein Pflichtfeld für INSPIRE-Dienste ([REDMINE-1908](https://redmine.informationgrid.eu/issues/1908))
+- [Feature] [IGE] IGE: neues Feld "Begrenzungspolygon als wkt" - wie Anzeige steuern? ([REDMINE-1909](https://redmine.informationgrid.eu/issues/1909))
+
+MetaVer
+
+- [Feature] [PORTAL] Anpassung des Email-Versandes (Adressat in Reply-To bei Kontaktformular) ([REDMINE-1890](https://redmine.informationgrid.eu/issues/1890))
+
 
 ### Komponenten
 
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.3/))
+- iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.4.3/))
 - Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.3/))
 
 
