@@ -14,7 +14,7 @@ Das iPlug dient dem Indexieren von Webseiten. Die zu indexierenden Webseiten wer
 
 Es können mehrere Instanzen mit jeweils unterschiedlicher Konfiguration und unterschiedlichen URL Räumen, die durch Limit und Exclude URL Muster definiert werden, konfiguriert werden. Jede Instanz kann unabhängig gestartet und indexiert werden.
 
-Über eine mächtige Metadaten Funktionalität können bestimmten URL Räumen Metadaten mitgegeben werden. Diese werden mit indexiert und können in der Suche verwendet werden.
+Über eine mächtige Metadaten Funktionalität können bestimmten Start URLs  Metadaten mitgegeben werden. Diese werden mit indexiert und können in der Suche verwendet werden. Die Metadaten werden dabei auf alle weiteren URLs übertragen, die mit der Start-URL beginnen.
 
 
 Ein Indexierungsdurchlauf besteht aus mehreren Phasen:
@@ -27,7 +27,7 @@ Ein Indexierungsdurchlauf besteht aus mehreren Phasen:
 | Generate URLs | Aus der Nutch CrawlDB werden URLs für den Crawl ausgewählt. |
 | Fetch | Die URLs werden heruntergeladen. |
 | Update CrawlDB | Die Nutch CrawlDB wird mit den neu ermittelten Outlinks der heruntergeladenen Seiten aktualisiert. |
-| Update Metadata | Die neuen URLs werden mit den Metadaten aus der URL Raum Definition aktualisiert. |
+| Update Metadata | Die neuen URLs werden mit den Metadaten der Start-URLs aktualisiert. |
 | Create Host Statistics | Eine Host Statistik wird erzeugt (Anzahl URLs pro Host). |
 | Create Url Error Statistics | Eine Statistik über fehlerhafte URLs wird erzeugt. |
 | Create Url Report | Ein Statusreport für Start-URLs wird erzeugt. |
@@ -198,7 +198,7 @@ Für jeden URL Raum stehen folgende Aktionen zur Verfügung:
 
 **URL Raum Editieren**
 
-Die Parameter des URL Raumes können editiert werden. Die angezeigten Metadaten zeigen die Default-Einstellungen und können pro Instanz festgelegt werden.
+Die Parameter des URL Raumes können editiert werden. Die angezeigten Metadaten beziehen sich auf die Start-URL und zeigen die Default-Einstellungen und können pro Instanz festgelegt werden.
 
 ![SE iPlug URL Pflege - URL Raum editeren](../images/iplug_se_url_maintenance_edit.png "SE iPlug URL Pflege - URL Raum editeren")
 
@@ -379,16 +379,6 @@ Hier können Instanzadministratoren erstellt und verwaltet werden. Die erstellte
 ![SE iPlug Instanzen - Administratoren](../images/iplug_se_administratoren.png "SE iPlug Instanzen - Administratoren")
 <figcaption class="figcaption">SE iPlug Instanzen - Administratoren</figcaption>
 
-#### Instanzen - BLP Import
-
-Der BLP Import Tab ist optional. Zur Aktivierung muss in der Datei `config.override.properties` die Option `enable.blpImport=true` hinzugefügt werden.
-
-Nach der Auswahl einer [passenden Excel Datei](../images/blp_daten_template_20190418.xlsx) werden die Zeilen ausgewertet und die URLs in die Instanz aufgenommen. Nach dem Import kann dann wie gewohnt ein Crawl im Management Tab ausgeführt werden. Unter `Hinweise` können genauere Anweisungen eingeblendet werden.
-
-![SE iPlug Instanzen - BLP Import](../images/iplug_se_blp_import.png "SE iPlug Instanzen - BLP Import")
-<figcaption class="figcaption">SE iPlug Instanzen - BLP Import</figcaption>
-
-
 ## FAQ
 
 ### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
@@ -404,7 +394,7 @@ Es kann sein, dass die URL zu der weitergeleitet wird, nicht mehr Teil des defin
 
 Eine Umstellung des Protokolls von http auf https wird nicht übernommen, wenn sich die Domain einer URL selbst nicht ändert.
 
-Die Filteralgorithmen im SE iPlug berücksichtigen nicht das Protokoll, sondern nur die Domain einer URL. Zu der problematik existiert ein Ticket: https://dev.informationgrid.eu/redmine/issues/780
+Die Filteralgorithmen im SE iPlug berücksichtigen nicht das Protokoll, sondern nur die Domain einer URL. Zu der Problematik existiert ein Ticket: https://dev.informationgrid.eu/redmine/issues/780
 
 Workaround:
 
