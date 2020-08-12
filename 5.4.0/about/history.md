@@ -15,6 +15,15 @@ Release 05.08.2020
 - [Feature] [IPLUG_CSW] iPlug CSW: HTTP Read Timeout konfigurierbar machen ([REDMINE-1988](https://redmine.informationgrid.eu/issues/1988))
 - [Update] [INTERFACE_SEARCH] Berücksichtigung des neuen Feldes "Metadata-Datum" im interface-search bei der Bestimmung des modified Feldes in der OpenSearch Antwort ([REDMINE-2032](https://redmine.informationgrid.eu/issues/2032))
 - [Bug] [IGE] IGE: XML-Encoding zu spatialRepresentationInfo begutachten. ([REDMINE-1934](https://redmine.informationgrid.eu/issues/1934))
+- [Feature] [MAPCLIENT]: Erweiterung Import von WMTS mit GetFeatureInfo-Funktion  ([REDMINE-1953](https://redmine.informationgrid.eu/issues/1953))
+- [Feature] [MAPCLIENT]: "Hilfe" und "Problem melden" URLs anpassen  ([REDMINE-2043](https://redmine.informationgrid.eu/issues/2043))
+- [Bug] [MAPCLIENT]: Entfernen des Domain-Checks beim Druck 
+- [Bug] [MAPCLIENT]: Fehler beim Druck von importierten WMTS behoben
+- [Bug] [MAPCLIENT]: Einstellung von geöffneten Kategorien nun im korrekten Format (Admin-GUI)
+- [Bug] [PORTAL]: Katalog: Ausgabe der Qualitätsangaben fehlt  ([REDMINE-1932](https://redmine.informationgrid.eu/issues/1932))
+- [Bug] [IGE]: IGE: Verhalten der Nutzungsbedingungen als Pflichtfeld falsch ([REDMINE-1975](https://redmine.informationgrid.eu/issues/1975))
+o [Update] [MAPCLIENT]: Anpassung des Kartenclient-Caches  ([REDMINE-2012](https://redmine.informationgrid.eu/issues/2012))
+
 
 
 Profil UVP
@@ -29,6 +38,7 @@ Profil UVP
 - iPlug CSW ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.4.5/))
 - Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.4.5/))
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.4.5/))
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.4.5/))
 
 
 ## Version 5.4.4
