@@ -21,6 +21,9 @@ Ist eine ResourceURL mit dem resourceType="FeatureInfo" definiert, so ist nach d
 
 Sowohl in der Suchergebnisliste als auch in der Detaildarstellung gibt es jetzt die Möglichkeit, zwischen mehreren Vorschaugrafiken umzuschalten.
 
+![Auswahl mehrerer Vorschaugrafiken](../images/550_ige_vorschaugrafik.png "Auswahl mehrerer Vorschaugrafiken")
+<figcaption class="figcaption">Auswahl mehrerer Vorschaugrafiken</figcaption>
+
 ### Liste der Änderungen
 
 AG Metadaten
