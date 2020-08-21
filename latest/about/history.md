@@ -55,7 +55,7 @@ InGrid
 - [Feature] [PORTAL]: Darstellung von mehreren Vorschaugrafiken wird im Portal nicht unterstützt ([REDMINE-1785](https://redmine.informationgrid.eu/issues/1785))
 - [Feature] [PORTAL]: Mapclient: Erweiterung Import von WMTS mit GetFeatureInfo-Funktion ([REDMINE-1953](https://redmine.informationgrid.eu/issues/1953))
 - [Feature] [INTERFACE-CSW]: Verbesserung von Stabilität des Harvest-Prozesses der CSW Schnittstelle ([REDMINE-1901](https://redmine.informationgrid.eu/issues/1901))
-- [Feature]: Umstellung der Ausführung innerhalb der Docker Container auf unprivilegierten Benutzer
+- [Feature]: Umstellung der Ausführung innerhalb der Docker Container auf unprivilegierten Benutzer ([REDMINE-1898](https://redmine.informationgrid.eu/issues/1898))
 
 MetaVer
 
