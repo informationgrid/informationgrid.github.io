@@ -28,6 +28,15 @@ Sowohl in der Suchergebnisliste als auch in der Detaildarstellung gibt es jetzt 
 
 Bisher liefen die Komponenten innerhalb der generierten Docker Container unter dem Benutzer "root". Die Ausführung wurde auf den unprivilegierten Benutzer "ingrid" mit der userid 1000 umgestellt. Dadurch wird die Sicherheit erhöht.
 
+Beim volume mapping muss darauf geachtet werden, dass die Verzeichnisse auf dem Host dem im Container genutzten User gehören. Da der User "ingrid" auf dem Host oft nicht vorhanden ist (und sicherlich nicht unter der UID 1000), muss das Recht der userid 1000 gegeben werden.
+
+`chown -R 1000 <DOCKER-SETUP INGRID>`
+
+Innerhalb eines Containers kann so zum root user gewechselt werden:
+
+`docker-compose exec --user root <CONTAINER> sh`
+
+
 ### Liste der Änderungen
 
 AG Metadaten
