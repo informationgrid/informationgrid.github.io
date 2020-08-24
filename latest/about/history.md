@@ -24,6 +24,10 @@ Sowohl in der Suchergebnisliste als auch in der Detaildarstellung gibt es jetzt 
 ![Auswahl mehrerer Vorschaugrafiken](../images/550_ige_vorschaugrafik.png "Auswahl mehrerer Vorschaugrafiken")
 <figcaption class="figcaption">Auswahl mehrerer Vorschaugrafiken</figcaption>
 
+#### Umstellung der Ausführung innerhalb der Docker Container auf unprivilegierten Benutzer
+
+Bisher liefen die Komponenten innerhalb der generierten Docker Container unter dem Benutzer "root". Die Ausführung wurde auf den unprivilegierten Benutzer "ingrid" mit der userid 1000 umgestellt. Dadurch wird die Sicherheit erhöht.
+
 ### Liste der Änderungen
 
 AG Metadaten
