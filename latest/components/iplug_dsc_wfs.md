@@ -132,9 +132,9 @@ Beispiel für POST Request für alle Operationen:
 
 ```xml
 <map>
-	<entry key="GetCapabilities" value="de.ingrid.iplug.wfs.dsc.wfsclient.impl.PostRequest"/>
-	<entry key="DescribeFeatureType" value="de.ingrid.iplug.wfs.dsc.wfsclient.impl.PostRequest"/>
-	<entry key="GetFeature" value="de.ingrid.iplug.wfs.dsc.wfsclient.impl.PostRequest"/>
+    <entry key="GetCapabilities" value="de.ingrid.iplug.wfs.dsc.wfsclient.impl.PostRequest"/>
+    <entry key="DescribeFeatureType" value="de.ingrid.iplug.wfs.dsc.wfsclient.impl.PostRequest"/>
+    <entry key="GetFeature" value="de.ingrid.iplug.wfs.dsc.wfsclient.impl.PostRequest"/>
 </map>
 ```
 
@@ -175,8 +175,8 @@ Bei beiden Strategien kann mit dem Parameter `requestPause` eingestellt werden, 
 
 ```xml
 <bean id="wfsDefaultUpdateStrategy" class="de.ingrid.iplug.wfs.dsc.cache.impl.PagingUpdateStrategy">
-	<property name="requestPause" value="100" />
-	<property name="maxFeatures" value="1000" />
+    <property name="requestPause" value="100" />
+    <property name="maxFeatures" value="1000" />
 </bean>
 ```
 
@@ -184,7 +184,7 @@ oder
 
 ```xml
 <bean id="wfsDefaultUpdateStrategy" class="de.ingrid.iplug.wfs.dsc.cache.impl.DefaultUpdateStrategy">
-	<property name="requestPause" value="1000" />
+    <property name="requestPause" value="1000" />
 </bean>
 ```
 
@@ -196,13 +196,16 @@ Index (Mapping nach Lucene):
 
 ```xml
 <bean id="recordMapper" class="de.ingrid.iplug.wfs.dsc.index.mapper.WfsDocumentMapper">
-	<property name="mappingScripts">
-	  <list>
+    <property name="mappingScripts">
+        <list>
 ...
-		 <value>classpath:mapping/pegelonline-wfs-1.1.0_to_lucene-igc-1.0.3.js</value>
-	  </list>
-	</property>
-	<property name="compile" value="true"/>
+            <!-- Beispiel fuer Ergebnistyp Feature -->
+            <value>classpath:mapping/pegelonline-wfs-1.1.0_to_lucene-igc-1.0.3.js</value>
+            <!-- Beispiel fuer Ergebnistyp FeatureType -->
+            <!-- value>classpath:mapping/zdm-wfs-1.1.0_to_lucene-igc.js</value -->
+        </list>
+    </property>
+    <property name="compile" value="true"/>
 </bean>
 ```
 
@@ -210,13 +213,16 @@ Detaildarstellung (Mapping nach IDF = InGrid? Data Format):
 
 ```xml
 <bean id="idfMapper" class="de.ingrid.iplug.wfs.dsc.record.mapper.WfsIdfMapper">
-	<property name="mappingScripts">
-	  <list>
+    <property name="mappingScripts">
+        <list>
 ...
-		 <value>classpath:mapping/pegelonline-wfs-1.1.0_to_idf-1.0.0.js</value>
-	  </list>
-	</property>
-	<property name="compile" value="true"/>
+            <!-- Beispiel fuer Ergebnistyp Feature -->
+            <value>classpath:mapping/pegelonline-wfs-1.1.0_to_idf-1.0.0.js</value>
+            <!-- Beispiel fuer Ergebnistyp FeatureType -->
+            <!-- value>classpath:mapping/zdm-wfs-1.1.0_to_idf.js</value -->
+        </list>
+    </property>
+    <property name="compile" value="true"/>
 </bean>
 ```
 
