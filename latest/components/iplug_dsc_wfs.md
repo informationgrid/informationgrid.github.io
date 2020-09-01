@@ -143,12 +143,14 @@ Beispiel für POST Request für alle Operationen:
 Der Ergebnistyp einer Suchanfrage im Portal kann entweder ein Feature oder ein Feature Typ sein. Welcher Ergebnistyp bei der Indexierung erzeugt wird, kann über die Implementierung des `recordSetProducer` festgelegt werden:
 
 - `CachedFeatureRecordSetProducer` erzeugt den Ergebnistyp **Feature** im Index. Die Ergebnisse des Harvestings werden in einem internen Cache gehalten.
+
 ```xml
 <bean id="recordSetProducer" class="de.ingrid.iplug.wfs.dsc.index.producer.impl.CachedFeatureRecordSetProducer">
     <property name="factory" ref="wfsFactory" />
 </bean>
 ```
 -  `FeatureTypeRecordSetProducer` (**Ab Version 5.6**) erzeugt den Ergebnistyp **Feature Typ** im Index. Zu einem Feature Typ wird eine begrenzte Anzahl von Features dargestellt, wenn diese einen Maximalwert nicht überschreitet (siehe *Anzahl Features in Detaildarstellung* Konfigurationsparameter oben).
+
 ```xml
 <bean id="recordSetProducer" class="de.ingrid.iplug.wfs.dsc.index.producer.impl.FeatureTypeRecordSetProducer">
     <property name="factory" ref="wfsFactory" />
