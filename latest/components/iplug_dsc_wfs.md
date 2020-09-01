@@ -109,21 +109,26 @@ Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
 Die Basiskonfiguration für iPlugs kann [hier](iplug_admin_gui.html) eingesehen werden.
 
-
 ### Indexierung von WFS Diensten
 
-In der Administrationsoberfläche kann mit der Eigenschaft `ServiceUrl` die Service URL eines abzufragenden WFS Dienstes eingetragen werden.
+In der **Administrationsoberfläche** können im Abschnitt **WFS Parameter** folgende Eigenschaften eingestellt werden:
+
+- `Service Url` definiert die Service URL eines abzufragenden WFS Dienstes
+- `Anzahl Features in Detaildarstellung` (**Ab Version 5.6**) definiert die maximale Anzahl der Features, die in der Detaildarstellung eines Feature Typs angezeigt werden. Übersteigt die Anzahl der Features eines Feature Typs diesen Wert, werden keine Features angezeigt.
+  *Anmerkung*: Diese Einstellung wird nur verwendet, wenn als **Ergebnistyp** *Feature Typ* konfiguriert ist (siehe unten).
 
 
-In der Datei webapp/WEB-INF/spring.xml können weitere Einstellungen vorgenommen werden.
+In der Datei **webapp/WEB-INF/spring.xml** können folgende weitere Einstellungen vorgenommen werden:
 
 **Requesttyp der Anfrage**
 
-Es kann eingestellt werden, ob die Anfrage per GET, POST oder Soap Request erfolgt. Dies kann individuell per Operation eingestellt werden.
+Es kann eingestellt werden, ob die Anfrage per GET, POST oder SOAP Request erfolgt. Dies kann individuell per Operation eingestellt werden.
 
-- GET -> KVPGetRequest
-- POST -> PostRequest
-- Soap -> SoapRequest
+- `KVPGetRequest` für HTTP **GET** Requests mit Kodierung der Anfrageparameter als Key-Value Paare im Querystring.
+- `PostRequest` für HTTP **POST** Requests mit Übermittlung der Anfrageparameter als XML Dokument im Anfrage Body.
+- `SoapRequest` für die Kommunikation per **SOAP**.
+
+Beispiel für POST Request für alle Operationen:
 
 ```xml
 <map>
@@ -133,14 +138,36 @@ Es kann eingestellt werden, ob die Anfrage per GET, POST oder Soap Request erfol
 </map>
 ```
 
+**Ergebnistyp**
+
+Der Ergebnistyp einer Suchanfrage im Portal kann entweder ein Feature oder ein Feature Typ sein. Welcher Ergebnistyp bei der Indexierung erzeugt wird, kann über die Implementierung des `recordSetProducer` festgelegt werden:
+
+- `CachedFeatureRecordSetProducer` erzeugt den Ergebnistyp **Feature** im Index. Die Ergebnisse des Harvestings werden in einem internen Cache gehalten.
+```xml
+<bean id="recordSetProducer" class="de.ingrid.iplug.wfs.dsc.index.producer.impl.CachedFeatureRecordSetProducer">
+    <property name="factory" ref="wfsFactory" />
+</bean>
+```
+-  `FeatureTypeRecordSetProducer` (**Ab Version 5.6**) erzeugt den Ergebnistyp **Feature Typ** im Index. Zu einem Feature Typ wird eine begrenzte Anzahl von Features dargestellt, wenn diese einen Maximalwert nicht überschreitet (siehe *Anzahl Features in Detaildarstellung* Konfigurationsparameter oben).
+```xml
+<bean id="recordSetProducer" class="de.ingrid.iplug.wfs.dsc.index.producer.impl.FeatureTypeRecordSetProducer">
+    <property name="factory" ref="wfsFactory" />
+</bean>
+```
+*Anmerkung*: Es ist zu beachten, dass die verwendeten Mapping Skripte die Abbildung von Feature Typen unterstützen müssen (siehe unten).
+
 **Fetching Strategie**
 
-In folgendem Abschnitt wird eingestellt, mit welcher Strategie das Harvesting der Features mittels GetFeature Operation abläuft.
+In folgendem Abschnitt wird eingestellt, mit welcher Strategie das Harvesting der Features mittels *GetFeature* Operation abläuft.
+*Anmerkung*: Diese Einstellung wird nur verwendet, wenn als **Ergebnistyp** *Feature* konfiguriert ist.
 
-- `PagingUpdateStrategy`: Die Features eines Feature Typs werden nach und nach geholt, wobei zunächst die Gesamtanzahl der Features abgefragt und dann eine Maximalanzahl per request geholt wird (Paging Mechanismus).<br>Der Parameter maxFeatures bestimmt dabei die maximale Anzahl per Request.<br>Diese Strategie ist weniger speicheraufwendig und sollte angewandt werden, wenn der Service eine Anfrage mit maxFeatures und startIndex unterstützt.
-- `DefaultUpdateStrategy`: Die Features eines Feature Typs werden mittels eines Requests geholt, d.h. die gesamte Anzahl der Features wird übertragen.<br>Bei einer hohen Anzahl von Features kann dies sehr speicheraufwendig werden und zu OutOfMemory Exceptions führen.
+- `PagingUpdateStrategy`: Die Features eines Feature Typs werden nach und nach geholt, wobei zunächst die Gesamtanzahl der Features abgefragt und dann eine Maximalanzahl per Request geholt wird (Paging Mechanismus).
+  Der Parameter `maxFeatures` bestimmt dabei die maximale Anzahl per Request.
+  Diese Strategie ist weniger speicheraufwendig und sollte angewandt werden, wenn der Service eine Anfrage mit *maxFeatures* und *startIndex* unterstützt.
+- `DefaultUpdateStrategy`: Die Features eines Feature Typs werden mittels eines Requests geholt, d.h. die gesamte Anzahl der Features wird übertragen.
+  Bei einer hohen Anzahl von Features kann dies sehr speicheraufwendig werden und zu OutOfMemory Exceptions führen.
 
-Bei beiden Strategien kann mit dem requestPause Parameter eingestellt werden, wie lange zwischen den Requests gewartet werden soll (in Millisekunden).
+Bei beiden Strategien kann mit dem Parameter `requestPause` eingestellt werden, wie lange zwischen den Requests gewartet werden soll (in Millisekunden).
 
 ```xml
 <bean id="wfsDefaultUpdateStrategy" class="de.ingrid.iplug.wfs.dsc.cache.impl.PagingUpdateStrategy">
