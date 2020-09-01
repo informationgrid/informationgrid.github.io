@@ -146,7 +146,9 @@ Der Ergebnistyp einer Suchanfrage im Portal kann entweder ein Feature oder ein F
 
 ```xml
 <bean id="recordSetProducer" class="de.ingrid.iplug.wfs.dsc.index.producer.impl.CachedFeatureRecordSetProducer">
+    <property name="cache" ref="wfsCache" />
     <property name="factory" ref="wfsFactory" />
+    <property name="job" ref="wfsUpdateJob" />
 </bean>
 ```
 -  `FeatureTypeRecordSetProducer` (**Ab Version 5.6**) erzeugt den Ergebnistyp **Feature Typ** im Index. Zu einem Feature Typ wird eine begrenzte Anzahl von Features dargestellt, wenn diese einen Maximalwert nicht überschreitet (siehe *Anzahl Features in Detaildarstellung* Konfigurationsparameter oben).
