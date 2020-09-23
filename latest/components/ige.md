@@ -81,7 +81,7 @@ Die Aktivierung der unterschiedlichen Services und deren Einstellungen sind besc
 
 Die Konfiguration des File Uploads erfolgt in der Datei `mdek.properties` im Verzeichnis `webapps/ingrid-portal-mdek-application/WEB-INF/classes`.
 
-HINWEIS: Sollen die Standardparameter mit installationsspezifishen Werten überschrieben werden, wäre hierfür die Datei `mdek.override.properties` im gleichen Verzeichnis die geeignete Wahl.
+HINWEIS: Sollen die Standardparameter mit installationsspezifischen Werten überschrieben werden, wäre hierfür die Datei `mdek.override.properties` im gleichen Verzeichnis die geeignete Wahl.
 
 Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestellt (Alle Verzeichnisse müssen existieren.):
 
@@ -93,6 +93,8 @@ Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht meh
 
 - `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
 - `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
+
+Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benachrichtigung** an die im Parameter `system.mail.receiver` konfigurierte E-Mail Adresse verschickt.
 
 ### Virus Scanner
 
