@@ -94,7 +94,7 @@ Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht meh
 - `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
 - `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
 
-Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benachrichtigung** an die im Parameter `system.mail.receiver` konfigurierte E-Mail Adresse verschickt.
+Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benachrichtigung** an die im Parameter `system.mail.receiver` konfigurierte E-Mail Adresse verschickt (**Ab Version 5.6**).
 
 ### Virus Scanner
 
