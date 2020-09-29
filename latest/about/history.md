@@ -7,6 +7,40 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.5.1
+
+Release 29.09.2020
+
+- [Add] [IGE] Höhere Kompatibilität bei der Verarbeitung von Referenzsystemangaben in OGC Capabilities  ([REDMINE-2108](https://redmine.informationgrid.eu/issues/2108))
+- [Add] [Portal] Darstellung von IGE-Ordnern in der Datenkatalogansicht im Portal  ([REDMINE-1102](https://redmine.informationgrid.eu/issues/1102))
+- [Fix] [Mapclient] Problem melden - kml Infos in Permalink hinterlegen  ([REDMINE-2106](https://redmine.informationgrid.eu/issues/2106)
+- [Fix] [Mapclient] "Hilfe" und "Problem melden" URLs anpassen  ([REDMINE-2043](https://redmine.informationgrid.eu/issues/2043)
+
+- [Fix] [Portal] Layoutprobleme bei mobiler Ergebnisdarstellung  ([REDMINE-2087](https://redmine.informationgrid.eu/issues/2087))
+- [Fix] [IGE] Verhalten der Nutzungsbedingungen als Pflichtfeld falsch  ([REDMINE-1975](https://redmine.informationgrid.eu/issues/1975))
+- [Fix] [UVP] Anzeige von Vorschaltseiten funktioniert nicht (404).  ([REDMINE-2151](https://redmine.informationgrid.eu/issues/2151)
+- [Fix] [Portal] Fix Captcha im Kontaktformular funktioniert nicht  ([REDMINE-2144](https://redmine.informationgrid.eu/issues/2144)
+- [Fix] [Fix] Anzeige korrigieren  ([REDMINE-2117](https://redmine.informationgrid.eu/issues/2117)
+- [Fix] [UVP] Funktionalität "i" Button bei den Verfahrensschritten herstellen  ([REDMINE-2100](https://redmine.informationgrid.eu/issues/2100)
+- [Fix] [Make] Konfiguration der URL des NOMINATIM Dienstes  ([REDMINE-1860](https://redmine.informationgrid.eu/issues/1860)
+- [Fix] [Thesaurus] Thesaurus-Navigator Suche zeigt leere Treffer an  ([REDMINE-2040](https://redmine.informationgrid.eu/issues/2040)
+- [Fix] [Portal] Portal startet bei manueller Installation nicht unter Windows  ([REDMINE-2035](https://redmine.informationgrid.eu/issues/2035)
+- [Fix] [Portal] Umbenennung von Registrierungs-Button "Neuer Benutzer" zu "Registrieren"  ([REDMINE-2086](https://redmine.informationgrid.eu/issues/2086)
+- [Fix] [Mapclient] Entfernen von DNS-Check bei der Druckfunktion  
+- [Fix] [Mapclient] Fix Drucken von importierten WMTSe  
+- [Fix] [Mapclient] Fix Handhabung mit Attribute "selectedOpen"  
+
+- [Update] [Portal] Umbenennung des Änderungsdatums in der Portaldarstellung  ([REDMINE-2083](https://redmine.informationgrid.eu/issues/2083))
+- [Update] [Mapclient] Caching-Einstellungen wurden angepasst  ([REDMINE-2012](https://redmine.informationgrid.eu/issues/2012)
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.5.1/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.5.1/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.5.1/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.5.1/))
+
+
 ## Version 5.5.0
 
 Release 27.07.2020

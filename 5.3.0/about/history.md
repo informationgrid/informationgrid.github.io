@@ -6,6 +6,25 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.3.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.3.12
+
+Release 29.09.2020
+
+- [Add] [IGE] Höhere Kompatibilität bei der Verarbeitung von Referenzsystemangaben in OGC Capabilities  ([REDMINE-2108](https://redmine.informationgrid.eu/issues/2108))
+- [Add] [Portal] Darstellung von IGE-Ordnern in der Datenkatalogansicht im Portal  ([REDMINE-1102](https://redmine.informationgrid.eu/issues/1102))
+
+- [Fix] [Portal] Layoutprobleme bei mobiler Ergebnisdarstellung  ([REDMINE-2087](https://redmine.informationgrid.eu/issues/2087))
+- [Fix] [IGE] Verhalten der Nutzungsbedingungen als Pflichtfeld falsch  ([REDMINE-1975](https://redmine.informationgrid.eu/issues/1975))
+
+- [Update] [Portal] Umbenennung des Änderungsdatums in der Portaldarstellung  ([REDMINE-2083](https://redmine.informationgrid.eu/issues/2083))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.3.12/))
+- iBus ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.3.12/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.3.12/))
+
+
 ## Version 5.3.11
 
 Release 22.06.2020
