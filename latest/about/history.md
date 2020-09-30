@@ -29,6 +29,7 @@ Release 29.09.2020
 - [Fix] [Mapclient] Entfernen von DNS-Check bei der Druckfunktion  
 - [Fix] [Mapclient] Fix Drucken von importierten WMTSe  
 - [Fix] [Mapclient] Fix Handhabung mit Attribute "selectedOpen"  
+- [Fix] [iBus] Fix fehlende Facetten.  ([REDMINE-2159](https://redmine.informationgrid.eu/issues/2159)
 
 - [Update] [Portal] Umbenennung des Änderungsdatums in der Portaldarstellung  ([REDMINE-2083](https://redmine.informationgrid.eu/issues/2083))
 - [Update] [Mapclient] Caching-Einstellungen wurden angepasst  ([REDMINE-2012](https://redmine.informationgrid.eu/issues/2012)
