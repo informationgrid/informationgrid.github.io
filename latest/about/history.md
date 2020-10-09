@@ -7,6 +7,21 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.5.2
+
+Release 09.10.2020
+
+- [Add] [Mapclient] Warnhinweis beim Importieren von Layern ohne Extent (Admin-GUI).  ([REDMINE-2024](https://redmine.informationgrid.eu/issues/2024))
+- [Add] [Mapclient] Aufräumjob für Karten ohne Kategorienzuordnung.  ([REDMINE-2025](https://redmine.informationgrid.eu/issues/2025)
+- [Fix] [Portal] UVP: Raumsuche funktioniert im UVP-Portal nicht, wenn nach Aktualität sortiert wird.  ([REDMINE-2164](https://redmie.informationgrid.eu/issues/2164))
+- [Fix] [Portal] UVP/NUMIS: Kleinere Verbesserungen/Anpassungen NUMIS/UVP-Portal.  ([REDMINE-1821](https://redmine.informationgrid.eu/issues/1821)
+- [Fix] [Portal] NUMIS: Fix Darstellung von Ordneransicht.
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.5.2/))
+
+
 ## Version 5.5.1
 
 Release 29.09.2020
