@@ -7,6 +7,17 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.5.3
+
+Release 12.10.2020
+
+- [Update] [Portal] UVP Link von saarländischer Seite anpassen.  ([REDMINE-2150](https://redmine.informationgrid.eu/issues/2150))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.5.3/))
+
+
 ## Version 5.5.2
 
 Release 09.10.2020
@@ -48,6 +59,13 @@ Release 29.09.2020
 
 - [Update] [Portal] Umbenennung des Änderungsdatums in der Portaldarstellung  ([REDMINE-2083](https://redmine.informationgrid.eu/issues/2083))
 - [Update] [Mapclient] Caching-Einstellungen wurden angepasst  ([REDMINE-2012](https://redmine.informationgrid.eu/issues/2012)
+
+- [Add] [Portal] Messwerteclient: Konfiguration zur Darstellung von gemittelten Messwerten hinzugefügt.
+- [Add] [Portal] Messwerteclient: Eigenschaft hinzugefügt um die Darstellung und Zeitzone des Diagramms zu ändern.
+- [Add] [Portal] Messwerteclient: Verwendung von Elasticsearch "meta data" für die Stationstatistik
+- [Add] [Portal] Messwerteclient: Hinzufügen von "Jahr" im Auswahlbereich
+- [Add] [Portal] Messwerteclient: Download von CSV Daten ohne gemittelte Messwerten.
+- [Add] [Portal] Messwerteclient: Darstellung von Ladebalken beim CSV Export.
 
 ### Komponenten
 
