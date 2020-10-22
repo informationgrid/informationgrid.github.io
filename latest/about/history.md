@@ -35,11 +35,23 @@ Die Sprachangaben werden im ISO-19139 Import/Export interpretiert und entspreche
 
 #### Unterstützung von DOI Eingabe und Export im DataCite Format
 
+Basis ist die Umsetzungsvorschrift unter:
+https://redmine.informationgrid.eu/projects/nokis2ingrid/wiki/Mapping_DOI_und_InGrid
 
+![DOI Eingabe und Export DataCite](../images/560_ige_doi_datacite.png "DOI Eingabe und Export DataCite")
+<figcaption class="figcaption">DOI Eingabe und Export DataCite</figcaption>
 
-#### 
+#### Anpassung bezüglich INSPIRE kompatible Unterstützung des Feldes positionName
 
+Die Verwendung von positionName als Feld für die Bezeichnung nachgeordneter Abteilungen einer Behörde ist jetzt möglich.
 
+![INSPIRE positionName](../images/560_ige_inspire_positionname_1.png "INSPIRE positionName")
+<figcaption class="figcaption">INSPIRE positionName</figcaption>
+
+![INSPIRE positionName](../images/560_ige_inspire_positionname_2.png "INSPIRE positionName")
+<figcaption class="figcaption">INSPIRE positionName</figcaption>
+
+#### Capabilities Assistent kann jetzt Capabilities nach WFS Spezifikation 2.0.2 verarbeiten
 
 
 ### Liste der Änderungen
