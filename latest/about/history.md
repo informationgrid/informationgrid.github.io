@@ -16,7 +16,22 @@ Release 19.10.2020
 
 #### Unterstützung der Übersetzung in mehreren Sprachen für bestimmte Felder 
 
+Für die Erfassung von Übersetzungen einer Freitexteingabe gilt folgendes Signalwort, das eine Übersetzung in eine Sprache kennzeichnet: #locale-<ISO-639-2 CODE>
+Bei gewünschter Mehrsprachigkeit kann das Feld nach dem Schema "Deutscher Text#locale-eng:English text" gefüllt werden.
 
+Beispiel für einen Titel:
+Das ist ein Title von einem Datensatz.#locale-eng:This is a title of a dataset.
+
+Beispiel für einen Abstract:
+Das ist ein Abstract von einem Datensatz.
+#locale-eng:This is an abstract of a dataset.
+
+Whitespace Zeichen vor oder nach der Kennzeichnung oder Feldanfang oder -ende werden ignoriert.
+
+Die Sprachangaben werden im ISO-19139 Import/Export interpretiert und entsprechend umgesetzt.
+
+![Übersetzung in mehrere Sprachen](../images/560_ige_uebersetzung-in-mehrere-sprachen.png "Übersetzung in mehrere Sprachen")
+<figcaption class="figcaption">Übersetzung in mehrere Sprachen</figcaption>
 
 #### Unterstützung von DOI Eingabe und Export im DataCite Format
 
@@ -115,4 +130,3 @@ nokis2ingrid
 - iPlug IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.6.0/))
 - iPlug SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.6.0/))
 - iPlug WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.6.0/))
-
