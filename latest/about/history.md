@@ -57,10 +57,6 @@ Der Capabilities Assistent kann jetzt Capabilities nach WFS Spezifikation 2.0.2 
 
 ### Liste der Änderungen
 
-BKG
-
-- [Bug] [BKG] BKG: BUG: leeres Feld Nutzungsbedingungen sollte nicht in der Iso-Xml Anzeige als otherRestrictions ausgegeben werden. ([REDMINE-2070](https://redmine.informationgrid.eu/issues/2070))
-
 InGrid
 
 - [Bug] [SNS] SNS Iplug Suche schlägt fehl ([REDMINE-2187](https://redmine.informationgrid.eu/issues/2187))
@@ -105,23 +101,27 @@ InGrid
 - [Feature] [IGE] Beschreibung von OGC Dienst SensorThings API (STA) ermöglichen ([REDMINE-1234](https://redmine.informationgrid.eu/issues/1234))
 - [Feature] [IPLUG_IGE] Darstellung von IGE-Ordnern in der Datenkatalogansicht im Portal ([REDMINE-1102](https://redmine.informationgrid.eu/issues/1102))
 
+Profil BKG
+
+- [Bug] [BKG] BKG: BUG: leeres Feld Nutzungsbedingungen sollte nicht in der Iso-Xml Anzeige als otherRestrictions ausgegeben werden. ([REDMINE-2070](https://redmine.informationgrid.eu/issues/2070))
+
 InGrid Installation Saarland
 
 - [Feature] [PORTAL] UVP Link von saarländischer Seite anpassen ([REDMINE-2150](https://redmine.informationgrid.eu/issues/2150))
 
-NUMIS
+Profil NUMIS
 
 - [Feature] [IGE] IGE: UploadCleanupJob soll bei Fehler eine Email mit einer aussagekräftigen Fehlermeldung verschicken. ([REDMINE-2007](https://redmine.informationgrid.eu/issues/2007))
 - [Feature] [PORTAL] Kleinere Verbesserungen/Anpassungen NUMIS/UVP-Portal ([REDMINE-1821](https://redmine.informationgrid.eu/issues/1821))
 
-UVP
+Profil UVP
 
 - [Bug] [PORTAL] Anzeige von Vorschaltseiten funtioniert nicht (404). ([REDMINE-2151](https://redmine.informationgrid.eu/issues/2151))
 - [Bug] [PORTAL] UVP: Bei der Auswahl von mehreren UVP Nummern, die der gleichen UVP-G Kategorie zugeordnet sind, werden die UVP-G Kategorien mehrfach im Teaser dargestellt. ([REDMINE-2092](https://redmine.informationgrid.eu/issues/2092))
 - [Bug] [PORTAL] Raumsuche funktioniert im UVP-Portal nicht, wenn nach Aktualität sortiert wird ([REDMINE-2164](https://redmine.informationgrid.eu/issues/2164))
 - [Bug] [PORTAL] UVP-Portal: Funktionalität "i" Button bei den Verfahrensschritten herstellen ([REDMINE-2100](https://redmine.informationgrid.eu/issues/2100))
 
-nokis2ingrid
+Profil nokis2ingrid
 
 - [Feature] [IGE] Unterstützung der Übersetzung in mehreren Sprachen für bestimmte Felder ([REDMINE-1882](https://redmine.informationgrid.eu/issues/1882))
 - [Feature] [IGE] Anpassung der unterstützten Metadatenklassen ([REDMINE-1849](https://redmine.informationgrid.eu/issues/1849))
