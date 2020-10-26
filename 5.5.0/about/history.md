@@ -107,21 +107,6 @@ Innerhalb eines Containers kann so zum root user gewechselt werden:
 
 ### Liste der Änderungen
 
-AG Metadaten
-
-- [Feature] [IGE]: Verhalten der Checkbox "OpenData" ([REDMINE-1556](https://redmine.informationgrid.eu/issues/1556))
-
-BAW DMQS
-
-- [Bug] [IGE]: XML Namensraum "xs" fehlt in der ISO-Abbildung ([REDMINE-1857](https://redmine.informationgrid.eu/issues/1857))
-- [Feature] [PORTAL]: HTML 403 Error-Seite fehlt im BAW-Profil ([REDMINE-1858](https://redmine.informationgrid.eu/issues/1858))
-
-BKG
-
-- [Bug] [IGE]: Feld "INSPIRE-Themen" kein Pflichtfeld für INSPIRE-Dienste ([REDMINE-1908](https://redmine.informationgrid.eu/issues/1908))
-- [Bug] [PORTAL]: Ansicht eines MD im Reiter Zeit/Raum fehlerhaft ([REDMINE-1905](https://redmine.informationgrid.eu/issues/1905))
-- [Feature] [IGE]: neues Feld "Begrenzungspolygon als wkt" - wie Anzeige steuern? ([REDMINE-1909](https://redmine.informationgrid.eu/issues/1909))
-
 InGrid
 
 - [Bug] [IGE]: Fehlende Versionsangaben im Info Dialog des Editors. ([REDMINE-1922](https://redmine.informationgrid.eu/issues/1922))
@@ -140,17 +125,29 @@ InGrid
 - [Feature] [PORTAL]: Mapclient: Erweiterung Import von WMTS mit GetFeatureInfo-Funktion ([REDMINE-1953](https://redmine.informationgrid.eu/issues/1953))
 - [Feature] [INTERFACE-CSW]: Verbesserung von Stabilität des Harvest-Prozesses der CSW Schnittstelle ([REDMINE-1901](https://redmine.informationgrid.eu/issues/1901))
 - [Feature] [PORTAL]: Umstellung der Ausführung innerhalb der Docker Container auf unprivilegierten Benutzer ([REDMINE-1898](https://redmine.informationgrid.eu/issues/1898))
+- [Feature] [IGE]: Verhalten der Checkbox "OpenData" ([REDMINE-1556](https://redmine.informationgrid.eu/issues/1556))
 
-MetaVer
+Profil BAW DMQS
+
+- [Bug] [IGE]: XML Namensraum "xs" fehlt in der ISO-Abbildung ([REDMINE-1857](https://redmine.informationgrid.eu/issues/1857))
+- [Feature] [PORTAL]: HTML 403 Error-Seite fehlt im BAW-Profil ([REDMINE-1858](https://redmine.informationgrid.eu/issues/1858))
+
+Profil BKG
+
+- [Bug] [IGE]: Feld "INSPIRE-Themen" kein Pflichtfeld für INSPIRE-Dienste ([REDMINE-1908](https://redmine.informationgrid.eu/issues/1908))
+- [Bug] [PORTAL]: Ansicht eines MD im Reiter Zeit/Raum fehlerhaft ([REDMINE-1905](https://redmine.informationgrid.eu/issues/1905))
+- [Feature] [IGE]: neues Feld "Begrenzungspolygon als wkt" - wie Anzeige steuern? ([REDMINE-1909](https://redmine.informationgrid.eu/issues/1909))
+
+Profil MetaVer
 
 - [Bug] [IGE]: Verhalten der Nutzungsbedingungen als Pflichtfeld falsch  ([REDMINE-1975](https://redmine.informationgrid.eu/issues/1975))
 - [Feature] [PORTAL]: Anpassung des Email-Versandes (Adressat in Reply-To bei Kontaktformular) ([REDMINE-1890](https://redmine.informationgrid.eu/issues/1890))
 
-NUMIS
+Profil NUMIS
 
 - [Bug] [UVP]: Datei wurde nicht gelöscht ([REDMINE-2006](https://redmine.informationgrid.eu/issues/2006))
 
-UVP
+Profil UVP
 
 - [Bug] [IGE]: Fehler bei der Erstellung von Statistiken (Semikolon im Titel) ([REDMINE-1929](https://redmine.informationgrid.eu/issues/1929))
 
