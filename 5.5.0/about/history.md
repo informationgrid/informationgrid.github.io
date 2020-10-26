@@ -107,8 +107,6 @@ Innerhalb eines Containers kann so zum root user gewechselt werden:
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Bug] [IGE]: Fehlende Versionsangaben im Info Dialog des Editors. ([REDMINE-1922](https://redmine.informationgrid.eu/issues/1922))
 - [Bug] [CODELIST REPOSITORY]: Umgebungsvariablen INGRID_OPTS und JAVA_OPTS werden in startscript nicht berücksichtigt. ([REDMINE-1920](https://redmine.informationgrid.eu/issues/1920))
 - [Bug] [PORTAL]: Passwortmanager funktioniert nicht im Portal ([REDMINE-1900](https://redmine.informationgrid.eu/issues/1900))
