@@ -57,8 +57,6 @@ Der Capabilities Assistent kann jetzt Capabilities nach WFS Spezifikation 2.0.2 
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Bug] [SNS] SNS Iplug Suche schlägt fehl ([REDMINE-2187](https://redmine.informationgrid.eu/issues/2187))
 - [Bug] [IGE] IGE: Feld "Datenformat" wird angezeigt, obwohl es nur optional angezeigt werden sollte ([REDMINE-2141](https://redmine.informationgrid.eu/issues/2141))
 - [Bug] [IGE] Thesaurus-Navigator Suche Zeigt leere Treffer an ([REDMINE-2126](https://redmine.informationgrid.eu/issues/2126))
@@ -105,9 +103,15 @@ Profil BKG
 
 - [Bug] [BKG] BKG: BUG: leeres Feld Nutzungsbedingungen sollte nicht in der Iso-Xml Anzeige als otherRestrictions ausgegeben werden. ([REDMINE-2070](https://redmine.informationgrid.eu/issues/2070))
 
-InGrid Installation Saarland
+Profil NOKIS
 
-- [Feature] [PORTAL] UVP Link von saarländischer Seite anpassen ([REDMINE-2150](https://redmine.informationgrid.eu/issues/2150))
+- [Feature] [IGE] Unterstützung der Übersetzung in mehreren Sprachen für bestimmte Felder ([REDMINE-1882](https://redmine.informationgrid.eu/issues/1882))
+- [Feature] [IGE] Anpassung der unterstützten Metadatenklassen ([REDMINE-1849](https://redmine.informationgrid.eu/issues/1849))
+- [Feature] [IGE] Unterstützung für die Eingabe von Geometry Context ([REDMINE-1846](https://redmine.informationgrid.eu/issues/1846))
+- [Feature] [IGE] Unterstützung von DOI Eingabe und Export im DataCite Format ([REDMINE-1838](https://redmine.informationgrid.eu/issues/1838))
+- [Feature] [IGE] IGE Backend: ISO Abbildung von verticalCRS (358) überarbeiten. ([REDMINE-1406](https://redmine.informationgrid.eu/issues/1406))
+- [Feature] [IGE] Eingabefelder für Vektorformat (MD_VectorSpatialRepresentation) überarbeiten ([REDMINE-1398](https://redmine.informationgrid.eu/issues/1398))
+- [Feature] [IGE] Eingabefelder für Raster/Gridformat (MD_GridSpatialRepresentation) überarbeiten ([REDMINE-1267](https://redmine.informationgrid.eu/issues/1267))
 
 Profil NUMIS
 
@@ -120,16 +124,7 @@ Profil UVP
 - [Bug] [PORTAL] UVP: Bei der Auswahl von mehreren UVP Nummern, die der gleichen UVP-G Kategorie zugeordnet sind, werden die UVP-G Kategorien mehrfach im Teaser dargestellt. ([REDMINE-2092](https://redmine.informationgrid.eu/issues/2092))
 - [Bug] [PORTAL] Raumsuche funktioniert im UVP-Portal nicht, wenn nach Aktualität sortiert wird ([REDMINE-2164](https://redmine.informationgrid.eu/issues/2164))
 - [Bug] [PORTAL] UVP-Portal: Funktionalität "i" Button bei den Verfahrensschritten herstellen ([REDMINE-2100](https://redmine.informationgrid.eu/issues/2100))
-
-Profil nokis2ingrid
-
-- [Feature] [IGE] Unterstützung der Übersetzung in mehreren Sprachen für bestimmte Felder ([REDMINE-1882](https://redmine.informationgrid.eu/issues/1882))
-- [Feature] [IGE] Anpassung der unterstützten Metadatenklassen ([REDMINE-1849](https://redmine.informationgrid.eu/issues/1849))
-- [Feature] [IGE] Unterstützung für die Eingabe von Geometry Context ([REDMINE-1846](https://redmine.informationgrid.eu/issues/1846))
-- [Feature] [IGE] Unterstützung von DOI Eingabe und Export im DataCite Format ([REDMINE-1838](https://redmine.informationgrid.eu/issues/1838))
-- [Feature] [IGE] IGE Backend: ISO Abbildung von verticalCRS (358) überarbeiten. ([REDMINE-1406](https://redmine.informationgrid.eu/issues/1406))
-- [Feature] [IGE] Eingabefelder für Vektorformat (MD_VectorSpatialRepresentation) überarbeiten ([REDMINE-1398](https://redmine.informationgrid.eu/issues/1398))
-- [Feature] [IGE] Eingabefelder für Raster/Gridformat (MD_GridSpatialRepresentation) überarbeiten ([REDMINE-1267](https://redmine.informationgrid.eu/issues/1267))
+- [Feature] [PORTAL] UVP Link von saarländischer Seite anpassen ([REDMINE-2150](https://redmine.informationgrid.eu/issues/2150))
 
 
 ### Komponenten
