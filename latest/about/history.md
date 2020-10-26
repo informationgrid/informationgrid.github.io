@@ -51,8 +51,9 @@ Die Verwendung von positionName als Feld für die Bezeichnung nachgeordneter Abt
 ![INSPIRE positionName](../images/560_ige_inspire_positionname_2.png "INSPIRE positionName")
 <figcaption class="figcaption">INSPIRE positionName</figcaption>
 
-#### Capabilities Assistent kann jetzt Capabilities nach WFS Spezifikation 2.0.2 verarbeiten
+#### Unterstützung WFS 2.0.2
 
+Der Capabilities Assistent kann jetzt Capabilities nach WFS Spezifikation 2.0.2 verarbeiten.
 
 ### Liste der Änderungen
 
