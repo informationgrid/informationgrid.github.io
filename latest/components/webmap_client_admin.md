@@ -1027,7 +1027,7 @@ Dort können Sie Benutzer und Passwort ändern bzw. hinzufügen. Der Benutzer mu
 
 {% highlight text %}
 ...
-  <user username="BENUTZER" password="PASSWORT" roles="admin-gui"/>
+  <user username="BENUTZER" password="PASSWORT_IN_MD5" roles="admin-gui"/>
 ...
 {% endhighlight %}
 
