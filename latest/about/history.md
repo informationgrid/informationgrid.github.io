@@ -8,6 +8,24 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.6.x. Release Notes
 [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.6.1
+
+Release 30.10.2020
+
+- [Feature] [MAPCLIENT] Mapclient Admin-GUI: Account Passwörter verschlüsseln ([REDMINE-2207](https://redmine.informationgrid.eu/issues/2207))
+- [Bug] [IGE] Editor: Allererstes Anzeigen von Objekt liefert nicht alle Inhalte ! "Zugriffsbeschränkungen" fehlen ... ([REDMINE-2206](https://redmine.informationgrid.eu/issues/2206))
+- [Bug] [IGE] Eingabe eines Umringpolygons (WKT) wird in IGE nicht in Druckansicht und Vergleichsansicht berücksichtigt. ([REDMINE-2195](https://redmine.informationgrid.eu/issues/2195))
+- [Bug] [CODELIST REPOSITORY] Codelist Rep.: Korrektur der ISO Bezeichnung von "Dienst für den Zugriff auf Objektarten" ([REDMINE-2093](https://redmine.informationgrid.eu/issues/2093))
+- [Bug] [IPLUG_IGE] Import von ISO-Metadaten inklusive Hierarchien ([REDMINE-2194](https://redmine.informationgrid.eu/issues/2194))
+- [Bug] [IGE] IGE: Ungültige Baumanzeige beim erstellen eines neuen Ordners ([REDMINE-2114](https://redmine.informationgrid.eu/issues/2114))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.6.1/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.6.1/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.6.1/))
+
+
 ## Version 5.6.0
 
 Release 19.10.2020
