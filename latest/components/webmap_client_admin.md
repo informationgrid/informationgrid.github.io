@@ -1019,7 +1019,7 @@ Der Mapclient läuft in einem Tomcat und über die Login-Konfiguration vom Tomca
 
 {% highlight text %}
 
-/<PORTAL-INSTALLATION>/apache-tomcat/conf/tomcat-users.xml
+/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/conf/tomcat-users.xml
 
 {% endhighlight %}
 
@@ -1035,6 +1035,6 @@ Das Passwort muss verschlüsselt eingetragen werden. Hierbei können Sie folgend
 
 {% highlight text %}
 
-/<PORTAL-INSTALLATION>/apache-tomcat/bin/digest.sh -a md5 PASSWORT
+/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a md5 PASSWORT
 
 {% endhighlight %}
