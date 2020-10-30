@@ -1015,7 +1015,7 @@ Dadurch wird vermieden, dass die URL des Mapclients zu lange wird und im Browser
 
 #### Wo kann ich die Login-Daten für die Admin-GUI festlegen?
 
-Der Mapclient läuft in einem Tomcat und über die Login-Konfiguration vom Tomcat kann man die Login-Daten festlegen. Die Datei für die Login-Konfiguration findet Sie unter
+Der Mapclient läuft in einem Tomcat und über die Login-Konfiguration vom Tomcat kann man die Login-Daten für die Admin-GUI des Mapclients festlegen. Die Datei für die Login-Konfiguration findet Sie unter
 
 {% highlight text %}
 
@@ -1031,7 +1031,7 @@ Dort können Sie Benutzer und Passwort ändern bzw. hinzufügen. Der Benutzer mu
 ...
 {% endhighlight %}
 
-Das Passwort muss verschlüsselt eingetragen werden. Hierbei können Sie folgenden Befehl aus dem Tomcat verwenden, um sich ein Passwort verschlüsselt zu generieren:
+Das Passwort muss mit MD5 verschlüsselt eingetragen werden. Hierbei können Sie folgenden Befehl aus dem Tomcat verwenden, um sich ein Passwort verschlüsselt zu generieren:
 
 {% highlight text %}
 
