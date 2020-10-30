@@ -1012,3 +1012,29 @@ Theoretisch können auch andere Zeitperioden eingepflegt werden, aber die Funkti
 Im Mapclient wird der "layers"-Parameter in der URL komprimiert dargestellt. Hierbei werden die hinzugefügten Layern in der Karte nicht mehr per Komma getrennt in der URL aufgelistet, sondern die Liste der Layern werden in eine Datei geschrieben und im "layers"-Parameter wird der Dateiname referenziert.
 
 Dadurch wird vermieden, dass die URL des Mapclients zu lange wird und im Browser Probleme verursacht. 
+
+#### Wo kann ich die Login-Daten für die Admin-GUI festlegen?
+
+Der Mapclient läuft in einem Tomcat und über die Login-Konfiguration vom Tomcat kann man die Login-Daten festlegen. Die Datei für die Login-Konfiguration findet Sie unter
+
+{% highlight text %}
+
+/<PORTAL-INSTALLATION>/apache-tomcat/conf/tomcat-users.xml
+
+{% endhighlight %}
+
+Dort können Sie Benutzer und Passwort ändern bzw. hinzufügen. Der Benutzer muss nur die Rolle "admin-gui" haben.
+
+{% highlight text %}
+...
+  <user username="BENUTZER" password="PASSWORT" roles="admin-gui"/>
+...
+{% endhighlight %}
+
+Das Passwort muss verschlüsselt eingetragen werden. Hierbei können Sie folgenden Befehl aus dem Tomcat verwenden, um sich ein Passwort verschlüsselt zu generieren:
+
+{% highlight text %}
+
+/<PORTAL-INSTALLATION>/apache-tomcat/bin/digest.sh -a md5 PASSWORT
+
+{% endhighlight %}
