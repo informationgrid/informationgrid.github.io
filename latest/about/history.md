@@ -19,6 +19,8 @@ Verbesserung der Sicherheit: Die Passwörter für die Admin-GUI des Mapclients m
 Ein Passwort in md5 erhält man durch folgende Syntax:  
 `/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a md5 PASSWORT`
 
+[Wo kann ich die Login-Daten für die Admin-GUI festlegen?](/latest/components/webmap_client_admin.html#wo-kann-ich-die-login-daten-f%C3%BCr-die-admin-gui-festlegen)
+
 Bei einer Installation per Docker ist es möglich, in der docker-compose.yml das Mapping für die tomcat-users.xml zu entfernen und stattdessen im Bereich "portal:" bei "environment:" folgende Variable zu setzen:  
 `MAPCLIENT_ADMIN_PW=<PASSWORT_IN_MD5>`
 
