@@ -17,10 +17,10 @@ Release 30.10.2020
 Verbesserung der Sicherheit: Die Passwörter für die Admin-GUI des Mapclients müssen nun per md5 unter "apache-tomcat/conf/tomcat-users.xml" hinterlegt werden und nicht mehr im Klartext.
 
 Ein Passwort in md5 erhält man durch folgende Syntax:  
-/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a md5 PASSWORT
+`/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a md5 PASSWORT`
 
 Bei einer Installation per Docker ist es möglich, in der docker-compose.yml das Mapping für die tomcat-users.xml zu entfernen und stattdessen im Bereich "portal:" bei "environment:" folgende Variable zu setzen:  
-MAPCLIENT_ADMIN_PW=<PASSWORT_IN_MD5>
+`MAPCLIENT_ADMIN_PW=<PASSWORT_IN_MD5>`
 
 - [Feature] [MAPCLIENT] Mapclient Admin-GUI: Account Passwörter verschlüsseln ([REDMINE-2207](https://redmine.informationgrid.eu/issues/2207))
 
