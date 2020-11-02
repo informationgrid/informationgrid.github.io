@@ -12,12 +12,25 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.6.x. Release Notes
 
 Release 30.10.2020
 
+### Wichtige Änderung
+
+Verbesserung der Sicherheit: Die Passwörter für die Admin-GUI des Mapclients müssen nun per md5 unter "apache-tomcat/conf/tomcat-users.xml" hinterlegt werden und nicht mehr im Klartext.
+
+Ein Passwort in md5 erhält man durch folgende Syntax:
+/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a md5 PASSWORT
+
+Bei einer Installation per Docker ist es möglich, in der docker-compose.yml das Mapping für die tomcat-users.xml zu entfernen und stattdessen im Bereich "portal:" bei "environment:" folgende Variable zu setzen:
+MAPCLIENT_ADMIN_PW=<PASSWORT_IN_MD5>
+
 - [Feature] [MAPCLIENT] Mapclient Admin-GUI: Account Passwörter verschlüsseln ([REDMINE-2207](https://redmine.informationgrid.eu/issues/2207))
-- [Bug] [IGE] Editor: Allererstes Anzeigen von Objekt liefert nicht alle Inhalte ! "Zugriffsbeschränkungen" fehlen ... ([REDMINE-2206](https://redmine.informationgrid.eu/issues/2206))
+
+### Bugfixes
+
+- [Bug] [IGE] Editor: Allererstes Anzeigen von Objekt liefert nicht alle Inhalte. "Zugriffsbeschränkungen" fehlen ([REDMINE-2206](https://redmine.informationgrid.eu/issues/2206))
 - [Bug] [IGE] Eingabe eines Umringpolygons (WKT) wird in IGE nicht in Druckansicht und Vergleichsansicht berücksichtigt. ([REDMINE-2195](https://redmine.informationgrid.eu/issues/2195))
 - [Bug] [CODELIST REPOSITORY] Codelist Rep.: Korrektur der ISO Bezeichnung von "Dienst für den Zugriff auf Objektarten" ([REDMINE-2093](https://redmine.informationgrid.eu/issues/2093))
 - [Bug] [IPLUG_IGE] Import von ISO-Metadaten inklusive Hierarchien ([REDMINE-2194](https://redmine.informationgrid.eu/issues/2194))
-- [Bug] [IGE] IGE: Ungültige Baumanzeige beim erstellen eines neuen Ordners ([REDMINE-2114](https://redmine.informationgrid.eu/issues/2114))
+- [Bug] [IGE] IGE: Ungültige Baumanzeige beim Erstellen eines neuen Ordners ([REDMINE-2114](https://redmine.informationgrid.eu/issues/2114))
 
 ### Komponenten
 
