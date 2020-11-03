@@ -131,6 +131,7 @@ Der Capabilities Assistent kann jetzt Capabilities nach WFS Spezifikation 2.0.2 
 - [Feature] [IGE] Konfiguration der URL des NOMINATIM Dienstes ([REDMINE-1860](https://redmine.informationgrid.eu/issues/1860))
 - [Feature] [IGE] Beschreibung von OGC Dienst SensorThings API (STA) ermöglichen ([REDMINE-1234](https://redmine.informationgrid.eu/issues/1234))
 - [Feature] [IPLUG_IGE] Darstellung von IGE-Ordnern in der Datenkatalogansicht im Portal ([REDMINE-1102](https://redmine.informationgrid.eu/issues/1102))
+- [Feature] [PORTAL] Alternative CAPTCHA-Verfahren im Kontaktformular ([REDMINE-2214](https://redmine.informationgrid.eu/issues/2214))
 
 Profil BKG
 
