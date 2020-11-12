@@ -8,6 +8,34 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.6.x. Release Notes
 [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.6.2
+
+Release 12.11.2020
+
+### Liste der Änderungen
+
+- [Feature] [PORTAL] Knoten "Freie Adressen" auch in Portal Katalogansicht aufnehmen  ([REDMINE-2212](https://redmine.informationgrid.eu/issues/2212)).
+- [Bug] [MAPCLIENT] Hinzufügen von Karten in der Admin-GUI des Mapclients funktioniert nicht  ([REDMINE-2230](https://redmine.informationgrid.eu/issues/2230)).
+- [Bug] [PORTAL] Bereinigung der benutzerspezifischen Portal-Startseite  ([REDMINE-2227](https://redmine.informationgrid.eu/issues/2227)).
+- [Bug] [PORTAL] Installation über Installer aktualisiert die Tomcat-Konfiguration nicht  ([REDMINE-2216](https://redmine.informationgrid.eu/issues/2216)).
+- [Feature] [PORTAL] Portal: Portal: Verbesserung der Barrierefreiheit des Portals  ([REDMINE-1810](https://redmine.informationgrid.eu/issues/1810)).
+- [Feature] [IGE] Import von ISO Verweistypen aus CI_OnLineFunctionCode  ([REDMINE-2215](https://redmine.informationgrid.eu/issues/2215)).
+- [Feature] [IGE/PORTAL] Unterstützung der NOKIS-Wortliste  ([REDMINE-2210](https://redmine.informationgrid.eu/issues/2210)).
+- [Bug] [IGE] Download URL wird im ISO 2mal hinzugefügt bei gekoppeltem Geodatensatz, wenn auch im gekoppelten -dienst vorhanden  ([REDMINE-2226](https://redmine.informationgrid.eu/issues/2226)).
+- [Bug] [IGE/PORTAL] Portal: Zeige in Karte Link wird trotz Kennzeichnung "geschützter Dienst"  ([REDMINE-2199](https://redmine.informationgrid.eu/issues/2199)).
+- [Update] [IGE] Überarbeitung der Verwendung des CI_OnLineFunctionCode bei der Erfassung von Verweisen  ([REDMINE-1367](https://redmine.informationgrid.eu/issues/1367)).
+- [Update] [IGE] Bei einem Geodatensatzes sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werden  ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228)).
+- [Feature] [Codelist Repository] Unterstützung der NOKIS-Wortliste  ([REDMINE-2210](https://redmine.informationgrid.eu/issues/2210)).
+- [Update] [Codelist Repository] Anpassung der Codeliste "Provider"  ([REDMINE-2167](https://redmine.informationgrid.eu/issues/2167)).
+- [Update] [Codelist Repository] Codelist 111 Aktualisierung ([REDMINE-2229](https://redmine.informationgrid.eu/issues/2229)).
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.6.2/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.6.2/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.6.2/))
+
+
 ## Version 5.6.1
 
 Release 30.10.2020
