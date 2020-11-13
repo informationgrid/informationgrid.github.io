@@ -15,15 +15,15 @@ Release 12.11.2020
 ### Liste der Änderungen
 
 - [Feature] [PORTAL] Knoten "Freie Adressen" auch in Portal Katalogansicht aufnehmen. ([REDMINE-2212](https://redmine.informationgrid.eu/issues/2212))
+- [Feature] [PORTAL] Portal: Portal: Verbesserung der Barrierefreiheit des Portals. ([REDMINE-1810](https://redmine.informationgrid.eu/issues/1810))
+- [Feature] [IGE] Import von ISO Verweistypen aus CI_OnLineFunctionCode. ([REDMINE-2215](https://redmine.informationgrid.eu/issues/2215))
+- [Update] [IGE] Überarbeitung der Verwendung des CI_OnLineFunctionCode bei der Erfassung von Verweisen. ([REDMINE-1367](https://redmine.informationgrid.eu/issues/1367))
+- [Update] [IGE] Bei einem Geodatensatzes sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werden. ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228))
 - [Bug] [MAPCLIENT] Hinzufügen von Karten in der Admin-GUI des Mapclients funktioniert nicht. ([REDMINE-2230](https://redmine.informationgrid.eu/issues/2230))
 - [Bug] [PORTAL] Bereinigung der benutzerspezifischen Portal-Startseite. ([REDMINE-2227](https://redmine.informationgrid.eu/issues/2227))
 - [Bug] [PORTAL] Installation über Installer aktualisiert die Tomcat-Konfiguration nicht. ([REDMINE-2216](https://redmine.informationgrid.eu/issues/2216))
-- [Feature] [PORTAL] Portal: Portal: Verbesserung der Barrierefreiheit des Portals. ([REDMINE-1810](https://redmine.informationgrid.eu/issues/1810))
-- [Feature] [IGE] Import von ISO Verweistypen aus CI_OnLineFunctionCode. ([REDMINE-2215](https://redmine.informationgrid.eu/issues/2215))
 - [Bug] [IGE] Download URL wird im ISO 2mal hinzugefügt bei gekoppeltem Geodatensatz, wenn auch im gekoppelten -dienst vorhanden.  ([REDMINE-2226](https://redmine.informationgrid.eu/issues/2226))
 - [Bug] [IGE/PORTAL] Portal: Zeige in Karte Link wird trotz Kennzeichnung "geschützter Dienst".  ([REDMINE-2199](https://redmine.informationgrid.eu/issues/2199))
-- [Update] [IGE] Überarbeitung der Verwendung des CI_OnLineFunctionCode bei der Erfassung von Verweisen. ([REDMINE-1367](https://redmine.informationgrid.eu/issues/1367))
-- [Update] [IGE] Bei einem Geodatensatzes sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werden. ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228))
 
 Pofil MetaVer
 
