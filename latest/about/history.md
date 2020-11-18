@@ -24,6 +24,7 @@ Release 12.11.2020
 - [Bug] [PORTAL] Installation über Installer aktualisiert die Tomcat-Konfiguration nicht. ([REDMINE-2216](https://redmine.informationgrid.eu/issues/2216))
 - [Bug] [IGE] Download URL wird im ISO 2mal hinzugefügt bei gekoppeltem Geodatensatz, wenn auch im gekoppelten -dienst vorhanden.  ([REDMINE-2226](https://redmine.informationgrid.eu/issues/2226))
 - [Bug] [IGE/PORTAL] Portal: Zeige in Karte Link wird trotz Kennzeichnung "geschützter Dienst".  ([REDMINE-2199](https://redmine.informationgrid.eu/issues/2199))
+- [BUG] [IGE/Portal] Mapping und Anzeige der Spezifikation von der Datenformat-Tabelle
 
 Profil MetaVer
 
