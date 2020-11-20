@@ -8,6 +8,23 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.6.x. Release Notes
 [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.6.3
+
+Release 20.11.2020
+
+### Liste der Änderungen
+
+Fixed Bugs:
+- [Fix] [IGE] IGE: Erinnerungsmeldung - Text ändern  ([REDMINE-1818](https://redmine.informationgrid.eu/issues/1818))
+- [Update] [PORTAL] Aktualisierung Messwerte-Client auf Version 1.0.21
+- [Update] [IGE] Löschen des Eintrags im Feld "Identifikator der Datenquelle" beim Kopieren von Datensätzen ([REDMINE-1581](https://redmine.informationgrid.eu/issues/1581))
+- [Update] [IGE] Kontexthilfe für freie Schlagworte  ([REDMINE-2231](https://redmine.informationgrid.eu/issues/2231))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.6.3/))
+
+
 ## Version 5.6.2
 
 Release 12.11.2020
