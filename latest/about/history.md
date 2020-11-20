@@ -14,7 +14,8 @@ Release 20.11.2020
 
 ### Liste der Änderungen
 
-Fixed Bugs:
+- [Fix] [IGE] IGE: Erinnerungsmeldung - Text ändern  ([REDMINE-1818](https://redmine.informationgrid.eu/issues/1818))
+- [Fix] [IGE] Opendata Kategorien werden im Portal in unterschiedlicher Reihenfolge wie im IGE angegeben dargestellt  ([REDMINE-2236](https://redmine.informationgrid.eu/issues/2236))
 - [Fix] [IGE] IGE: Erinnerungsmeldung - Text ändern  ([REDMINE-1818](https://redmine.informationgrid.eu/issues/1818))
 - [Update] [PORTAL] Aktualisierung Messwerte-Client auf Version 1.0.21
 - [Update] [IGE] Löschen des Eintrags im Feld "Identifikator der Datenquelle" beim Kopieren von Datensätzen ([REDMINE-1581](https://redmine.informationgrid.eu/issues/1581))
@@ -23,6 +24,7 @@ Fixed Bugs:
 ### Komponenten
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.6.3/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.6.3/))
 
 
 ## Version 5.6.2
