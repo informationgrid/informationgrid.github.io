@@ -45,7 +45,7 @@ Sie können nun die Komponente mit
 sh start.sh start
 ```
 
-starten. 
+starten.
 
 
 ## Aktualisierung
@@ -65,7 +65,7 @@ cp -r /opt/ingrid/ingrid-interface-search BACKUP_DIRECTORY
 ```
 
 
-Die Aktualisierung erfolgt über den Installer. 
+Die Aktualisierung erfolgt über den Installer.
 
 ```sh
 java -jar ingrid-interface-search-NEW-VERSION-installer.jar
@@ -88,18 +88,18 @@ start.sh [start|stop|restart|status]
 Die LOG Ausgaben finden sich in der Datei `log.log` und `console.log`.
 
 
-## OpenSearch Schnittstelle 
+## OpenSearch Schnittstelle
 
 Die OpenSearch Schnittstelle basiert auf der OpenSearch Spezifikation [http://www.opensearch.org](http://www.opensearch.org). Sie dient vor allem der Integration der InGrid Suche in andere Systeme.
 
-Die Definition der Schnittstelle wurde erweitert, um die Besonderheiten der Ingrid-Suche abbilden zu können. 
+Die Definition der Schnittstelle wurde erweitert, um die Besonderheiten der Ingrid-Suche abbilden zu können.
 
 Die Schnittstelle wird per HTTP/GET angefragt. Sie hat 2 Methoden:
 
 - Anfordern des OpenSearch descriptors (`descriptor`)
 - Absetzen einer Suche (`query`)
 
-Über die query-Methode ist es auch möglich Detailinformationen über den oder die Datensätze zu bekommen. Diese werden dann für jeden Hit in die Antwort (RSS2.0 kompatibles XML-Format) geschrieben. 
+Über die query-Methode ist es auch möglich Detailinformationen über den oder die Datensätze zu bekommen. Diese werden dann für jeden Hit in die Antwort (RSS2.0 kompatibles XML-Format) geschrieben.
 
 ### Request
 
@@ -159,8 +159,8 @@ Ein Beispiel-Deskriptor sieht folgendermaßen aus:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<openSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" 
-     xmlns:georss="http://www.georss.org/georss" 
+<openSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+     xmlns:georss="http://www.georss.org/georss"
      xmlns:ingridsearch="http://www.portalu.de/opensearch/extension/1.0"
      xmlns:geo="http://a9.com/-/opensearch/extensions/geo/1.0/">
   <ShortName>InGrid OpenSearch</ShortName>
@@ -170,8 +170,8 @@ Ein Beispiel-Deskriptor sieht folgendermaßen aus:
   <Url type="application/rss+xml" template="http://harrison.its-technidata.de/opensearch/query?q={searchTerms}+datatype:default+ranking:score&amp;bbox={geo:box?}&amp;p={startPage?}&amp;h={count?}&amp;xml={ingridsearch:xml?}&amp;detail={ingridsearch:detail?}&amp;georss={ingridsearch:georss?}&amp;ingrid={ingridsearch:ingrid?}&amp;format=rss" />
  </OpenSearchDescription>
 ```
- 
-Die Anzufragende URL befindet sich im Attribut `template` des Tags `Url`. Der Typ des Ausgabeformats verbirgt sich hinter `type` und ist in diesem Fall `application/rss+xml`. Ein Fragezeichen `?` in einem Platzhalter bedeutet, dass dieser Parameter optional ist. In diesem Beispiel wird nur verlangt, dass `{searchTerms}` mit einem entsprechenden Wert ersetzt wird. Mehr Informationen über den Deskriptor findet man hier [http://www.opensearch.org/Specifications/OpenSearch/1.1](http://www.opensearch.org/Specifications/OpenSearch/1.1). 
+
+Die Anzufragende URL befindet sich im Attribut `template` des Tags `Url`. Der Typ des Ausgabeformats verbirgt sich hinter `type` und ist in diesem Fall `application/rss+xml`. Ein Fragezeichen `?` in einem Platzhalter bedeutet, dass dieser Parameter optional ist. In diesem Beispiel wird nur verlangt, dass `{searchTerms}` mit einem entsprechenden Wert ersetzt wird. Mehr Informationen über den Deskriptor findet man hier [http://www.opensearch.org/Specifications/OpenSearch/1.1](http://www.opensearch.org/Specifications/OpenSearch/1.1).
 
 
 ### Response
@@ -231,14 +231,14 @@ Die Antwort der Schnittstelle erfolgt im RSS2.0 kompatiblen XML-Format. Die Schn
 ### Request vom MapClient
 
 Die Suche nach Diensten im MapClient erfolgt über die OpenSearch Schnittstelle.
-Die Suche nach "Wasser" im MapClient setzt z.B. folgenden 
+Die Suche nach "Wasser" im MapClient setzt z.B. folgenden
 [REST-Request](https://dev.informationgrid.eu/ingrid-webmap-client/rest/search/query?q=Wasser&lang=de&type=services&searchUrl=https://dev.informationgrid.eu/opensearch/query?q={query}+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100) ab, der folgende [Open Search Query](https://dev.informationgrid.eu/opensearch/query?q=Wasser+t011_obj_serv_op_connpoint.connect_point:http*+t011_obj_serv.type:view+cache:off+datatype:metadata+ranking:score&ingrid=1&h=100) auslöst.
 
 Das Ergebnis liefert Kartendienste mit "Wasser", die im MapClient hinzugefügt werden können.
 
-## ATOM Download Service Feed Schnittstelle 
+## ATOM Download Service Feed Schnittstelle
 
-INSPIRE-relevante Daten, welche durch Daten-Metadaten beschrieben sind, müssen über Download-Dienste verfügbar gemacht werden. Wie ein Download Dienst realisiert sein kann, ist in “Technical Guidance for the implementation of INSPIRE Download Services”, derzeit in der Version 3.0 vorliegend, beschrieben.
+INSPIRE-relevante Daten, welche durch Daten-Metadaten beschrieben sind, müssen über Download-Dienste verfügbar gemacht werden. Wie ein Download Dienst realisiert sein kann, ist in “Technical Guidance for the implementation of INSPIRE Download Services” beschrieben. Diese Umsetzung bezieht sich auf die Spezifikation in Version 3.0.
 
 Die Grundidee dabei ist, dass vom Metadaten-Erfasser im InGridCatalog/IGE Serivce-Metadaten für einen oder mehrere Download-Dienste angelegt werden. Mit diesen Objekten werden Daten-Metadaten als gekoppelte Resourcen verknüpft. Für jeden dieser Download-Service-Metadatensätze wird durch einen Webservice (bzw. eine Service-Fassade) ein solcher Download-Dienst automatisch bereitgestellt. Hierzu wird dynamisch der Service-Feed erzeugt. Dieser entspricht einem Capabilities-Dokument bei OGC-Webservices.
 
@@ -251,7 +251,7 @@ Folgende Kopplungen können im InGrid Catalog (Editor) angegeben werden:
 
 Im InGrid Catalog/InGrid Editor kann dies entweder über einen Eintrag in "gekoppelte Daten" im Geodatenservice
 
-Eine weitere Anforderung an die dynamisch generierten Download-Services ist die Bereitstellung eines OpenSearch-Interfaces mit einem fest definierten Satz an Operationen. 
+Eine weitere Anforderung an die dynamisch generierten Download-Services ist die Bereitstellung eines OpenSearch-Interfaces mit einem fest definierten Satz an Operationen.
 
 ### Methoden
 
@@ -265,10 +265,50 @@ Die unterschiedlichen Methoden der Schnittstelle werde über unterschiedliche Zu
 | OpenSearch: Describe Spatial Data Set Operation | dls/dataset/{servicefeed-uuid}/?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&language={language?} | `service-uuid` repräsentiert die UUID eines Metatdatensatzes vom Typ Geodatendienst.<br><br>`inspire_dls:spatial_dataset_identifier_code` repräsentiert den Resource Identifikator der Datenquelle (ohne Namespace)<br><br>`inspire_dls:spatial_dataset_identifier_namespace` repräsentiert den Namespace des Resource Identifikator der Datenquelle<br><br>`language`: Die Sprache des Datensatzes. Momentan wird der Parameter ignoriert, da die Datensätze eines Kataloges immer in einer Sprache vorliegen<br><br>Die Methode liefert einen Dataset ATOM Feed zurück.
 |OpenSearch: Get Spatial Data Set Operation | dls/get-dataset/{servicefeed-uuid}/?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&crs={inspire_dls:crs?}&language={language?} | `service-uuid` repräsentiert die UUID eines Metatdatensatzes vom Typ Geodatendienst.<br><br>`inspire_dls:spatial_dataset_identifier_code` repräsentiert den Resource Identifikator der Datenquelle (ohne Namespace)<br><br>`inspire_dls:spatial_dataset_identifier_namespace` repräsentiert den Namespace des Resource Identifikator der Datenquelle<br><br>`crs` repräsentiert das Referenzsystem des Datensatzes.<br><br>`language`: Die Sprache des Datensatzes. Momentan wird der Parameter ignoriert, da die Datensätze eines Kataloges immer in einer Sprache vorliegen.<br><br>Die Methode liefert direkt zum Datendownload. Falls mehrere Downloads in den Metadaten definiert wurden, wird ein ATOM Feed mit allen Download Links zurückgeliefert. |
 | OpenSearch: Description | dls/opensearch-description/{servicefeed-uuid} | `service-uuid` repräsentiert die UUID eines Metatdatensatzes vom Typ Geodatendienst.<br><br>Liefert die OpenSearch? Description für den ATOM Download Service.
-| Download Service Feed HTML Client | dls/ | Stellt alle Download Daten über eine HTML Applikation zur Verfügung. | 
-| Partner-spezifisches Branding des HTML Clients | dls/#?partner={PARTNER ID: bb, be, ni, ...} | Stellt den Client in einer partner-spezifischen Darstellung (Logo, Farben im Kopfbereich) dar und schränkt alle Dienste auf den jeweiligen Partner ein. | 
-| Partner-spezifisches Branding des HTML Clients und Darstellung eines spezifischen Dienstes | dls/#?serviceId={SERVICE UUID}&partner={PARTNER ID: bb, be, ni, ...} | Stellt den Client in einer partner-spezifischen Darstellung (Logo, Farben im Kopfbereich) dar und zeigt einen bestimmten Dienst an. | 
-| Partner-spezifisches Branding des HTML Clients und Darstellung eines spezifischen Dienstes, Ausblenden der Diensteauswahl | dls/#?serviceId={SERVICE UUID}&partner={PARTNER ID: bb, be, ni, ...}&serviceOnly | Stellt den Client in einer partner-spezifischen Darstellung (Logo, Farben im Kopfbereich) dar, zeigt einen bestimmten Dienst an und blendet die Diensteauswahl aus. | 
+| Download Service Feed HTML Client | dls/ | Stellt alle Download Daten über eine HTML Applikation zur Verfügung. |
+| Partner-spezifisches Branding des HTML Clients | dls/#?partner={PARTNER ID: bb, be, ni, ...} | Stellt den Client in einer partner-spezifischen Darstellung (Logo, Farben im Kopfbereich) dar und schränkt alle Dienste auf den jeweiligen Partner ein. |
+| Partner-spezifisches Branding des HTML Clients und Darstellung eines spezifischen Dienstes | dls/#?serviceId={SERVICE UUID}&partner={PARTNER ID: bb, be, ni, ...} | Stellt den Client in einer partner-spezifischen Darstellung (Logo, Farben im Kopfbereich) dar und zeigt einen bestimmten Dienst an. |
+| Partner-spezifisches Branding des HTML Clients und Darstellung eines spezifischen Dienstes, Ausblenden der Diensteauswahl | dls/#?serviceId={SERVICE UUID}&partner={PARTNER ID: bb, be, ni, ...}&serviceOnly | Stellt den Client in einer partner-spezifischen Darstellung (Logo, Farben im Kopfbereich) dar, zeigt einen bestimmten Dienst an und blendet die Diensteauswahl aus. |
+
+
+### Abbildung der Daten
+
+Im folgenden wird die Abbildung der verwendeten ISO Felder auf die Felder im ATOM Feed Format dokumentiert:
+
+| Methode | ATOM Feed Referenz | ISO 19139 Referenz |
+| --- | --- | --- |
+| Download Service Feed | `/feed` | Die folgende Pfade beziehen sich auf einen Geodatendienst. |
+|  | `/feed/title` | `//gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString` |
+|  | `/feed/subtitle` | `//gmd:identificationInfo//gmd:abstract/gco:CharacterString` |
+|  | `/feed/rights` | Durch `;` getrennte Liste aus folgenden Elementen `//gmd:identificationInfo/*/gmd:resourceConstraints/gmd:accessConstraints/*/@codeListValue` und  `//gmd:identificationInfo/*/gmd:resourceConstraints/gmd:otherConstraints/gco:CharacterString`|
+|  | `/feed/updated` | `//gmd:dateStamp/gco:DateTime | //gmd:dateStamp/gco:Date[not(../gco:DateTime)]`|
+|  | `/feed/author` | `//gmd:identificationInfo//gmd:pointOfContact//gmd:organisationName/gco:CharacterString`|
+| Download Service Feed (Entries) | `/feed/entry/` | Die folgenden Pfade beziehen sich auf die gekoppelten Geodatensätze. |
+|  | `/feed/entry/title` | `//gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString`|
+|  | `/feed/entry/rights` | Durch `;` getrennte Liste aus folgenden Elementen `//gmd:identificationInfo/*/gmd:resourceConstraints/gmd:accessConstraints/*/@codeListValue` und  `//gmd:identificationInfo/*/gmd:resourceConstraints/gmd:otherConstraints/gco:CharacterString`|
+|  | `/feed/entry/updated` | `//gmd:dateStamp/gco:DateTime | //gmd:dateStamp/gco:Date[not(../gco:DateTime)]`|
+|  | `/feed/entry/summary` | `//gmd:identificationInfo//gmd:abstract/gco:CharacterString`|
+|  | `/feed/entry/georss:polygon` | Polygon aus der vorhandene Bounding Box: `//gmd:identificationInfo//gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:westBoundLongitude/gco:Decimal`, `//gmd:identificationInfo//gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:eastBoundLongitude/gco:Decimal`, `//gmd:identificationInfo//gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:southBoundLatitude/gco:Decimal`, `//gmd:identificationInfo//gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox/gmd:northBoundLatitude/gco:Decimal` |
+|  | `/feed/entry/category@term` | `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gco:CharacterString|//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gmx:Anchor`|
+|  | `/feed/entry/category@label` | `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString`|
+|  | `/feed/entry/inspire_dls:spatial_dataset_identifier_code` | Teilstring nach `#` aus `//gmd:identificationInfo//gmd:citation//gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString|//gmd:identificationInfo//gmd:citation//gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor` ermittelt. Falls der String kein `#` enthält wird der gesamte String verwendet.|
+|  | `/feed/entry/inspire_dls:spatial_dataset_identifier_namespace` | Teilstring vor `#` aus `//gmd:identificationInfo//gmd:citation//gmd:identifier/gmd:MD_Identifier/gmd:code/gco:CharacterString|//gmd:identificationInfo//gmd:citation//gmd:identifier/gmd:MD_Identifier/gmd:code/gmx:Anchor` ermittelt. Ist leer, falls der String kein `#` enthält.|
+
+| Methode | ATOM Feed Referenz | ISO 19139 Referenz |
+| --- | --- | --- |
+| Dataset Feed | `/feed` | Die folgende Pfade beziehen sich auf einen Geodatensatz. |
+|  | `/feed/title` | `//gmd:identificationInfo//gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString` |
+|  | `/feed/subtitle` | `//gmd:identificationInfo//gmd:abstract/gco:CharacterString` |
+|  | `/feed/rights` | Durch `;` getrennte Liste aus folgenden Elementen `//gmd:identificationInfo/*/gmd:resourceConstraints/gmd:accessConstraints/*/@codeListValue` und  `//gmd:identificationInfo/*/gmd:resourceConstraints/gmd:otherConstraints/gco:CharacterString` |
+|  | `/feed/updated` | `//gmd:dateStamp/gco:DateTime | //gmd:dateStamp/gco:Date[not(../gco:DateTime)]`|
+|  | `/feed/author` | `//gmd:identificationInfo//gmd:pointOfContact//gmd:organisationName/gco:CharacterString`|
+| Dataset Feed (Entries) | `/feed/entry/` | Die folgenden Pfade beziehen sich auf die Download Ressourcen des Geodatensatzes. Als Download Ressourcen werden alle Ergebnisse aus `//gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine[.//gmd:function/gmd:CI_OnLineFunctionCode/@codeListValue='Download of data' or .//gmd:function/gmd:CI_OnLineFunctionCode/@codeListValue='download' or .//gmd:function/gmd:CI_OnLineFunctionCode/@codeListValue='Datendownload']` verwendet. Die nachfolgenden Pfade beziehen sich auf das `gmd:onLine` Element. |
+|  | `/feed/entry/title` | `.//gmd:name//gco:CharacterString`|
+|  | `/feed/entry/link@href` | `.//gmd:linkage/gmd:URL`|
+|  | `/feed/entry/link@type` | Mime-Type, wird automatisch aus den verlinkten Daten mit Hilfe Apache TIKA ermittelt. Falls unter `.//gmd:applicationProfile/gco:CharacterString` "gml" angegeben ist und der Download als ZIP File erkannt wurde, wird hier `application/x-gmz` eingetragen. |
+|  | `/feed/entry/updated` | `.//gmd:name//gco:CharacterString`|
+|  | `/feed/entry/category@term` | Hier werde die Daten aus dem Geoadatensatz unter `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gco:CharacterString|//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gmx:Anchor` verwendet.|
+|  | `/feed/entry/category@label` | Hier werde die Daten aus dem Geoadatensatz unter `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString` verwendet.|
 
 
 
@@ -292,7 +332,7 @@ opensearch.descriptor.file=conf/descriptor.xml
 # use this in case of application hiding via an proxy
 opensearch.proxy.url=http://dev.informationgrid.eu/search/opensearch
 
-# url to display detailed view of metadata results 
+# url to display detailed view of metadata results
 # use this in case of providing links to details of metadata results
 # only makes sence, if the query has the parameter xml=0
 metadata.details.url=http://dev.informationgrid.eu/trefferanzeige
@@ -300,7 +340,7 @@ metadata.details.url=http://dev.informationgrid.eu/trefferanzeige
 # enable/disable caching during bus queries
 enable.caching=false
 
-# max timeout for ibus search queries. 
+# max timeout for ibus search queries.
 # After timeout milliseconds the ibus must interrupt iplug search processes.
 ibus.search.max.timeout=60000
 
@@ -351,7 +391,7 @@ Um die Schnittstelle über Port 80 erreichen zu können, bietet sich die Verwend
 
 - mod_proxy
 - mod_proxy_connect
-- mod_proxy_http 
+- mod_proxy_http
 
 In der Apache Konfiguration muss folgendes eingetragen werden:
 
@@ -369,7 +409,7 @@ ProxyPassReverse /opensearch http://localhost:8183/opensearch
 
 Der angegebene Port muss mit dem Port der Schnittstelle übereinstimmen.
 
-Nun ist die Schnittstelle auch über http://SERVER_DOMAIN/search/... erreichbar. 
+Nun ist die Schnittstelle auch über http://SERVER_DOMAIN/search/... erreichbar.
 
 Die Schnittstelle kann sowohl per HTTPS als auch per HTTP benutzt werden. Wichtig ist bei der oben beschriebenen Proxy Weiterleitung, dass Anfragen, die per HTTPS an den Proxy gestellt werden, auch so an die Schnittstelle weitergeleitet werden, dass diese den HTTPS Aufruf erkennt. Die kann durch folgende Ergänzung im der Apache Konfiguration erfolgen:
 
@@ -433,7 +473,7 @@ Folgende Bedingungen müssen erfüllt sein, so dass ein Dienst mit seinen Downlo
 3. Es muss mindestens eine Referenz auf ein Objekt vom Typ "Geodatensatz" vorhanden sein.
 4. Dieser Geodatensatz muss mindestens einen Verweis vom Typ "Download" besitzen.
 5. Ein angeschlossenes iPlug-DSC muss die Daten des IGC indexiert haben.
- 
+
 *Kopplung mit externem Datensatz* (ab Version 3.5.1)
 
 1. wie oben
