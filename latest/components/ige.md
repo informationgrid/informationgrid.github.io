@@ -89,6 +89,8 @@ Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestel
 - `upload.partsdir` (default: `/tmp/ingrid/upload/parts/`) Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
 - `upload.tempdir` (default: `/tmp/ingrid/upload/tmp/`) Vor dem endgültigen Upload überprüft der Editor alle Dateien. Zu diesem Zweck werden sie in dem hier definierten Verzeichnis zwischengespeichert.
 
+**Dateiarchive** werden nach dem Upload entpackt, wenn dies im Upload-Request definiert wurde.
+
 Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-Kette. Schlägt ein Validator fehl, wird der Upload zurückgewiesen. Die Konfiguration der Validatoren und deren Ausführungsreihenfolge werden in den folgenden Parametern festgelegt:
 
 - `upload.validators` Komma-separierte Liste von Validatornamen. Die Reihenfolge legt die Ausführungsreihenfolge fest. Jeder Eintrag muss eine Entsprechung im Parameter `upload.validators.config` haben.
@@ -123,7 +125,7 @@ Folgende **Validatoren** existieren:
       }
   }
   ```
-Der `NameValidator` überprüft die Namen der übertragenen Dateien auf ungültige Zeichen und reservierte Namen.
+Der `NameValidator` überprüft die Namen der übertragenen Dateien auf ungültige Zeichen und reservierte Namen. Auch die Namen von Dateien, die aus Dateiarchiven extrahiert wurden, werden überprüft.
 
 **SizeValidator (Ab Version 5.6, per Default deaktiviert)**
 
@@ -137,7 +139,7 @@ Der `NameValidator` überprüft die Namen der übertragenen Dateien auf ungülti
   }
   ```
 
-Der `SizeValidator` prüft, ob eine einzelne Datei eine festgelegte Größe (`maxFileSize`) überschreitet oder ob der gesamte Metadatensatz, zu dem die Datei gehört eine festgelegte Größe (`maxDirSize`) überschreitet.
+Der `SizeValidator` prüft, ob eine einzelne Datei eine festgelegte Größe (`maxFileSize`) überschreitet oder ob der gesamte Metadatensatz, zu dem die Datei gehört eine festgelegte Größe (`maxDirSize`) überschreitet. Aus Dateiarchiven extrahierte Dateien können den `maxFileSize` Wert überschreiten, solange die Summe aller Dateien nicht den `maxDirSize` überschreitet.
 
 Weitere Validatoren sind in folgenden Abschnitten dokumentiert.
 
@@ -151,6 +153,8 @@ Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benac
 ### Virus Scanner
 
 Für den FileUpload kann optional ein Virusscan aktiviert werden. Der Dienst ist per Default deaktiviert.
+
+Zu beachten ist, dass der Viren Scan beim Upload eines Dateiarchivs aus Performance-Gründen nur auf der Archivdatei ausgeführt wird und nicht auf den gepackten Einzeldateien.
 
 Der Dienst wird durch Konfiguration eines der folgenden Validatoren aktiviert:
 
@@ -179,7 +183,7 @@ Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wi
 
 HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
 
-**RemoteServiceVirusScanValidator**
+**RemoteServiceVirusScanValidator (per Default deaktiviert)**
 
   ```
   "virusscan":{
