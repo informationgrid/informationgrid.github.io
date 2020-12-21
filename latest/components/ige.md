@@ -89,7 +89,16 @@ Die verwendeten **Dateiverzeichnisse** werden über folgende Parameter eingestel
 - `upload.partsdir` (default: `/tmp/ingrid/upload/parts/`) Große Dateien überträgt der Editor in einzelnen Paketen. Diese werden in dem hier definierten Verzeichnis zwischengespeichert.
 - `upload.tempdir` (default: `/tmp/ingrid/upload/tmp/`) Vor dem endgültigen Upload überprüft der Editor alle Dateien. Zu diesem Zweck werden sie in dem hier definierten Verzeichnis zwischengespeichert.
 
-**Dateiarchive** werden nach dem Upload entpackt, wenn dies im Upload-Request definiert wurde.
+Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht mehr referenzierter Dateien, automatische Archivierung und De-Archivierung von Dateien abhängig vom Ablaufdatum) existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
+
+- `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
+- `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
+
+Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benachrichtigung** an die im Parameter `system.mail.receiver` konfigurierte E-Mail Adresse verschickt (**Ab Version 5.6**).
+
+### Virus Scanner
+
+Für den FileUpload kann optional ein Virusscan aktiviert werden. Der Dienst ist per Default deaktiviert.
 
 Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-Kette. Schlägt ein Validator fehl, wird der Upload zurückgewiesen. Die Konfiguration der Validatoren und deren Ausführungsreihenfolge werden in den folgenden Parametern festgelegt:
 
@@ -102,7 +111,7 @@ Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-K
       "filename":{
           ...
       },
-      "size":{
+      "virusscan":{
           ...
       },
       ...
@@ -111,7 +120,7 @@ Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-K
 
   Für jeden Validator existiert ein Eintrag mit folgenden Eigenschaften:
 
-  - `impl` JAVA Implementierungsdatei (z.B. `de.ingrid.mdek.upload.storage.validate.impl.SizeValidator`)
+  - `impl` JAVA Implementierungsdatei (z.B. `de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator`)
   - `properties` validatorspezifische Konfigurationswerte als Key-Value Liste
 
 Folgende **Validatoren** existieren:
@@ -125,38 +134,6 @@ Folgende **Validatoren** existieren:
       }
   }
   ```
-Der `NameValidator` überprüft die Namen der übertragenen Dateien auf ungültige Zeichen und reservierte Namen. Auch die Namen von Dateien, die aus Dateiarchiven extrahiert wurden, werden überprüft.
-
-**SizeValidator (Ab Version 5.6, per Default deaktiviert)**
-
-  ```
-  "size":{
-      "impl":"de.ingrid.mdek.upload.storage.validate.impl.SizeValidator",
-      "properties":{
-	      "maxFileSize":"2147483648",
-	      "maxDirSize":"5368709120"
-      }
-  }
-  ```
-
-Der `SizeValidator` prüft, ob eine einzelne Datei eine festgelegte Größe (`maxFileSize`) überschreitet oder ob der gesamte Metadatensatz, zu dem die Datei gehört eine festgelegte Größe (`maxDirSize`) überschreitet. Aus Dateiarchiven extrahierte Dateien können den `maxFileSize` Wert überschreiten, solange die Summe aller Dateien nicht den `maxDirSize` überschreitet.
-
-Weitere Validatoren sind in folgenden Abschnitten dokumentiert.
-
-Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht mehr referenzierter Dateien, automatische Archivierung und De-Archivierung von Dateien abhängig vom Ablaufdatum) existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
-
-- `upload.cleanup.schedule` Definition der Ausführungszeit im [Quartz cron pattern](https://www.freeformatter.com/cron-expression-generator-quartz.html) Format (Standard: täglich 1 Uhr).
-- `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
-
-Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benachrichtigung** an die im Parameter `system.mail.receiver` konfigurierte E-Mail Adresse verschickt (**Ab Version 5.6**).
-
-### Virus Scanner
-
-Für den FileUpload kann optional ein Virusscan aktiviert werden. Der Dienst ist per Default deaktiviert.
-
-Zu beachten ist, dass der Viren Scan beim Upload eines Dateiarchivs aus Performance-Gründen nur auf der Archivdatei ausgeführt wird und nicht auf den gepackten Einzeldateien.
-
-Der Dienst wird durch Konfiguration eines der folgenden Validatoren aktiviert:
 
 **VirusScanValidator (per Default deaktiviert)**
 
@@ -171,19 +148,19 @@ Der Dienst wird durch Konfiguration eines der folgenden Validatoren aktiviert:
   }
   ```
 
-Der `VirusScanValidator` setzt die Installation eines Viren Scanners auf dem Betriebssystem des Servers voraus.
+  Der `VirusScanValidator` setzt die Installation eines Viren Scanners auf dem Betriebssystem des Servers voraus.
 
-Um unterschiedliche Viren Scanner zu unterstützen, wird der Scanner über folgende Parameter konfiguriert:
+  Um unterschiedliche Viren Scanner zu unterstützen, wird der Scanner über folgende Parameter konfiguriert:
 
   - `command` Kommando zur Überprüfung einer Datei. Es muss die Zeichenkette `%FILE%` enthalten sein, die durch den zu prüfende Dateipfad ersetzt wird. Das Kommando muss eine Ausgabe liefern, aus der der Status der Datei hervorgeht. Zu beachten ist, dass auch die Überprüfung von Archiven notwendig ist.
   - `virusPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *einer* Infektion passt und die Virusname und Dateiname jeweils in einer Gruppe speichert
   - `cleanPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *keiner* Infektion passt
 
-Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
+  Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
 
-HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
+  HINWEIS: Da alle Uploads zunächst im Verzeichnis `upload.tempdir` gespeichert werden und anschließend vom Virus Scanner explizit geprüft werden (*on-demand*), sollte zur Vermeidung von Konflikten die *on-access* Methode des Scanners deaktiviert oder zumindest das temporäre Verzeichnis ausgenommen sein.
 
-**RemoteServiceVirusScanValidator (per Default deaktiviert)**
+**RemoteServiceVirusScanValidator**
 
   ```
   "virusscan":{
@@ -210,6 +187,8 @@ Virusscan-Service
 ```
 
 Der Service und die Schnittstellenbeschreibung ist aktuell noch nicht veröffentlicht.
+
+
 
 Für die regelmäßige **Virenprüfung der Dateiverzeichnisse** existiert ein Hintergrundjob, der über folgende Parameter konfiguriert wird:
 
