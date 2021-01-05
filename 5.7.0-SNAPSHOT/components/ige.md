@@ -139,7 +139,7 @@ Der `NameValidator` überprüft die Namen der übertragenen Dateien auf ungülti
   }
   ```
 
-Der `SizeValidator` prüft, ob eine einzelne Datei eine festgelegte Größe (`maxFileSize`) überschreitet oder ob der gesamte Metadatensatz, zu dem die Datei gehört eine festgelegte Größe (`maxDirSize`) überschreitet. Aus Dateiarchiven extrahierte Dateien können den `maxFileSize` Wert überschreiten, solange die Summe aller Dateien nicht den `maxDirSize` überschreitet.
+Der `SizeValidator` prüft, ob eine einzelne Datei eine festgelegte Größe (`maxFileSize`) überschreitet oder ob der gesamte Metadatensatz, zu dem die Datei gehört eine festgelegte Größe (`maxDirSize`) überschreitet.
 
 Weitere Validatoren sind in folgenden Abschnitten dokumentiert.
 
