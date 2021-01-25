@@ -785,6 +785,8 @@ Damit bleiben die veränderten Einstellungen auch nach einem Update des Portals 
 | scheduler.layer.update.mail       | Soll bei der Aktualisierung eine Mail verschickt werden ?                 | Boolean        | false |
 | **Cleanup Job Settings (Job zur Löschung von veralteten Dateien im Konfigurationsverzeichnis):** | | |
 | scheduler.cleanup.data            | Wann soll der Job ausgeführt werden ?                                     | String         | 0 4 * * * |
+| admin.lock | Verhindert, das sich mehrere Benutzer gleichzeitig in der Admin-GUI anmelden können. | Boolean | false |
+| admin.lock.file | Ist die Eigenschaft "admin.lock" aktiv, so wird beim Anmelden eines Benutzer die Datei unter dem definierten Pfad von "config.dir" hinterlegt. Ist diese Datei vorhanden, kann sich kein anderer Benutzer auf die Admin-GUI anmelden. Die Datei wird gelöscht, so bald sich der eingeloggte Benutzer ausloggt bzw. die Session des eingeloggten Benutzers (10 min) beendet ist. | String | admin.lock |
 
 Beispiel:
 Mit Hinzufügen der nachfolgenden Einstellungen in die Datei *application.override.properties* werden die JS Konfigurationsdateien für's Frontend und die KML Dateien für's Zeichnen aus dem zentralen *WebmapClientData* Verzeichnis geladen/abgelegt.
@@ -1038,3 +1040,16 @@ Das Passwort muss mit MD5 verschlüsselt eingetragen werden. Hierbei können Sie
 /PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a md5 PASSWORT
 
 {% endhighlight %}
+
+
+#### Wie kann die Sessiondauer eines Benutzers für die Admin-GUI geändert werden?
+
+Die Sessiondauer eines Benutzers wird in der Datei "opt/ingrid/ingrid-portal/apache-tomcat/webapps/ingrid-webmap-client/WEB-INF/web.xml" festgelegt:
+
+{% highlight text %}
+<session-config>
+  <session-timeout>10</session-timeout>
+</session-config>
+{% endhighlight %}
+
+Per Default beträgt die Sessiondauer 10 min.
