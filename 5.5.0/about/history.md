@@ -6,10 +6,44 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.5.5
+
+Release 29.01.2021
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] [IPLUG_IGE] IGE: Abgabe von gekoppelten Daten über den Dienste-Datensatz, wenn Kopplung über Kataloggrenzen hinweg erfolgt ([REDMINE-1746](https://redmine.informationgrid.eu/issues/1746))
+
+### Komponenten
+
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.5.5/))
+
+## Version 5.5.4
+
+Release 20.01.2021
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] [PORTAL] Knoten "Freie Adressen" auch in Portal Katalogansicht aufnehmen ([REDMINE-2212](https://redmine.informationgrid.eu/issues/2212))
+
+UVP
+
+- [Feature] [IGE] Protokollierung von gelöschten Unterdokumenten ([REDMINE-2319](https://redmine.informationgrid.eu/issues/2319))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.5.4/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.5.4/))
 
 ## Version 5.5.3
 
 Release 12.10.2020
+
+### Liste der Änderungen
 
 - [Update] [Portal] UVP Link von saarländischer Seite anpassen. ([REDMINE-2150](https://redmine.informationgrid.eu/issues/2150))
 
@@ -21,6 +55,8 @@ Release 12.10.2020
 ## Version 5.5.2
 
 Release 09.10.2020
+
+### Liste der Änderungen
 
 - [Feature] [Mapclient] Warnhinweis beim Importieren von Layern ohne Extent (Admin-GUI). ([REDMINE-2024](https://redmine.informationgrid.eu/issues/2024))
 - [Feature] [Mapclient] Aufräumjob für Karten ohne Kategorienzuordnung. ([REDMINE-2025](https://redmine.informationgrid.eu/issues/2025)

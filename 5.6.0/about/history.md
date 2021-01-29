@@ -8,6 +8,51 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.6.x. Release Notes
 [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.6.5
+
+Release 14.12.2020
+
+### Liste der Änderungen
+
+- [Feature] [Portal] Erstellung ADVMIS InGrid Profil inkl. Deployment Konfiguration ([REDMINE-1536](https://redmine.informationgrid.eu/issues/1536))
+
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.6.5/))
+
+
+## Version 5.6.4
+
+Release 05.12.2020
+
+### Liste der Änderungen
+
+BKG
+
+- [Feature] [CodeList-Repo] CodeList-Repo: codeliste-Werte editieren ([REDMINE-2240](https://redmine.informationgrid.eu/issues/2240))
+
+InGrid
+
+- [Bug] [IGE] Fehlende Kontexthilfe in Raster/Gridformat ([REDMINE-2265](https://redmine.informationgrid.eu/issues/2265))
+- [Bug] [IGE] Pflichtfelder bei "Raster, Gitter"-Auswahl ([REDMINE-2262](https://redmine.informationgrid.eu/issues/2262))
+- [Bug] [IGE] Erben von Verweisen beinhaltet auch Vorschaugrafiken ([REDMINE-2247](https://redmine.informationgrid.eu/issues/2247))
+- [Bug] [IPLUG_IGE] Fehler bei der ISO-Erstellung bei DOI ([REDMINE-2241](https://redmine.informationgrid.eu/issues/2241))
+- [Feature] [IGE] IGE: Feld "Datengrundlage" in mehrzeiliges Feld ändern ([REDMINE-1429](https://redmine.informationgrid.eu/issues/1429))
+
+MetaVer
+
+- [Bug] [IGE] Auswahlliste für Zellengeometrie ist leer ([REDMINE-2264](https://redmine.informationgrid.eu/issues/2264))
+
+nokis2ingrid
+
+- [Feature] [IGE] BAW-Metadaten-Import ([REDMINE-2176](https://redmine.informationgrid.eu/issues/2176))
+
+### Komponenten
+
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.6.4/))
+
+
 ## Version 5.6.3
 
 Release 20.11.2020
