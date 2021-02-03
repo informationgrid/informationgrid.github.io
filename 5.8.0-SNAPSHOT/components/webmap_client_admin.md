@@ -960,6 +960,21 @@ Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) CSS-Eintäge 
 ...
 {% endhighlight %}
 
+#### Kann man das Bild zum Hintergrundkarten-Wechsel anpassen?
+
+Für diesen Zweck gibt es keine Funktion in der Admin-GUI und es müssen auch Operationen auf dem Server ausgeführt werden.
+
+Sie können unter `WebmapClientData/img/category/` entweder per Git, wenn eingerichtet, oder per Hochladen direkt auf den Server ein PNG hinterlegen.
+Dieses PNG sollten Sie dann per `https://<IHRE-DOMAIN>/ingrid-webmap-client/rest/admin/image/category/<DATEINAME-OHNE-DATEIENDUNG>` aufrufen können.
+
+Per Admin-GUI können Sie dann unter Akkordeon [Style](#style) einen neuen CSS-Eintrag hinzufügen, z.B.:
+
+{% highlight text %}
+[ga-background-selector] .ga-bg-layer, [ga-background-selector] .ga-bg-layer-bt, [ga-background-selector] .ga-bg-layer-bt-close {
+    background: #fff url(https://<IHRE-DOMAIN>/ingrid-webmap-client/rest/admin/image/category/<DATEINAME-OHNE-DATEIENDUNG>) no-repeat 0 center !important;
+}
+{% endhighlight %}
+
 #### URL-Shortener funktioniert nicht korrekt?
 
 Der per Default eingestellte URL-Shortner (https://is.gd/create.php?format=json) verkürzt nur URL's mit einer Domain und keine mit einer IP-Adresse. Hier liefert der URL-Shortener einen Fehler und vom Webmap Client wird die ungekürzte URL zurückgeliefert. 
