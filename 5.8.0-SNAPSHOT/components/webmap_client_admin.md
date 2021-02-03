@@ -971,7 +971,7 @@ Per Admin-GUI können Sie dann unter Akkordeon [Style](#style) einen neuen CSS-E
 
 {% highlight text %}
 [ga-background-selector] .ga-bg-layer, [ga-background-selector] .ga-bg-layer-bt, [ga-background-selector] .ga-bg-layer-bt-close {
-    background: #fff url(https://<IHRE-DOMAIN>/ingrid-webmap-client/rest/admin/image/category/<DATEINAME-OHNE-DATEIENDUNG>) no-repeat 0 center !important;
+    background: #fff url(https://<IHRE-DOMAIN>/ingrid-webmap-client/rest/admin/image/category/<DATEINAME-OHNE-DATEIENDUNG>) no-repeat 0 center;
 }
 {% endhighlight %}
 
