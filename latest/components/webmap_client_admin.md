@@ -963,8 +963,9 @@ Fügen Sie in der Admin-GUI hierzu unter Akkordeon [Style](#style) CSS-Eintäge 
 #### Kann man das Bild zum Hintergrundkarten-Wechsel anpassen?
 
 Für diesen Zweck gibt es keine Funktion in der Admin-GUI und es müssen auch Operationen auf dem Server ausgeführt werden.
-Sie können unter "WebmapClientData/img/category/" entweder per Git, wenn eingerichtet, oder per Hochladen direkt auf den Server ein PNG hinterlegen.
-Dieses PNG sollten Sie dann per "https://<IHRE-DOMAIN>/ingrid-webmap-client/rest/admin/image/category/<DATEINAME-OHNE-DATEIENDUNG>" aufrufen können.
+
+Sie können unter _WebmapClientData/img/category/_ entweder per Git, wenn eingerichtet, oder per Hochladen direkt auf den Server ein PNG hinterlegen.
+Dieses PNG sollten Sie dann per `https://<IHRE-DOMAIN>/ingrid-webmap-client/rest/admin/image/category/<DATEINAME-OHNE-DATEIENDUNG>` aufrufen können.
 
 Per Admin-GUI können Sie dann unter Akkordeon [Style](#style) einen neuen CSS-Eintrag hinzufügen, z.B.:
 
