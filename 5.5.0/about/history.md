@@ -20,6 +20,23 @@ InGrid
 
 - Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.5.7/))
 
+## Version 5.5.6
+
+Release 09.02.2021
+
+### Liste der Änderungen
+
+UVP
+
+- [Bug] [CODELIST-REPOSITORY] In den UVP Nummern von HH (Codeliste 9001) sind auch UVP Nummern aus Sachsen enthalten ([REDMINE-2365](https://redmine.informationgrid.eu/issues/2365))
+- [Feature] [IGE] Optionale Indexierung von neg. Vorprüfungen ohne Raumbezug ([REDMINE-2346](https://redmine.informationgrid.eu/issues/2346))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.5.6/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.5.6/))
+- Codelist-Repository ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.5.6/))
+
 ## Version 5.5.5
 
 Release 29.01.2021

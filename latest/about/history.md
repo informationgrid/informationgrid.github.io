@@ -7,6 +7,40 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.7.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.7.1
+
+Release 05.02.2021
+
+### Liste der Änderungen
+
+InGrid
+
+- [Bug] [IGE] IGE: Feld "Konformität" / "geprüft mit" - Anzeige des Default-Wert nach Import ([REDMINE-2348](https://redmine.informationgrid.eu/issues/2348))
+- [Bug] [IGE] IGE: Label und Tooltip aktualisieren ([REDMINE-2338](https://redmine.informationgrid.eu/issues/2338))
+- [Bug] [IGE] IGE: Feld "Konformität" - Eintrag nicht bearbeitbar ([REDMINE-2337](https://redmine.informationgrid.eu/issues/2337))
+- [Bug] [IGE] Feld "Vektorformat" - Beschriftung der Tabellenspalte Geometrietyp fehlerhaft ([REDMINE-2336](https://redmine.informationgrid.eu/issues/2336))
+- [Bug] [PORTAL] Portal: In Katalogdarstellung sollen nur Katalog mit Suchergebnissen dargestellt werden ([REDMINE-2303](https://redmine.informationgrid.eu/issues/2303))
+- [Bug] [IGE] Bei einem Geodatensatzes sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werd
+  en. ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228))
+- [Bug] [PORTAL] Anzeige von Kurzbezeichnung ist in der Portal Detaildarstellung falsch, wenn eine AdV Produktgruppe angegeben wurden. ([REDMINE-2290](https://redmine.informationgrid.eu/issues/2290))
+- [Bug] [IPLUG-SNS] Editor - Verschlagwortungsassistent kann Text mit % nicht interpretieren ([REDMINE-2321](https://redmine.informationgrid.eu/issues/2321))
+
+NUMIS
+
+- [Bug] [INTERFACE-SEARCH] Keine Dowloads im ATOM Service Download Feed ([REDMINE-2340](https://redmine.informationgrid.eu/issues/2340))
+
+UVP
+
+- [Feature] [IGE] Optionale Indexierung von neg. Vorprüfungen ohne Raumbezug ([REDMINE-2346](https://redmine.informationgrid.eu/issues/2346))
+- [Feature] [IGE] Protokollierung von gelöschten Unterdokumenten ([REDMINE-2319](https://redmine.informationgrid.eu/issues/2319))
+
+### Komponenten
+
+- Portal ([download](https://distributions.informationgrid.eu/ingrid-portal/5.7.1/))
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.7.1/))
+- Interface-Search ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.7.1/))
+- iPlug-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.7.1/))
+
 ## Version 5.7.0
 
 Release 19.01.2021
