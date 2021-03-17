@@ -116,6 +116,7 @@ Folgende Parameter sind zulässig:
 | | georss | Geo-Referenzierung mit ausgeben (Standard: georss=0) |
 | | ingrid | Zusätzliche InGrid Informationen wie *partner*, *provider* etc. per Ergebnis mit ausgeben (Standard: ingrid=0) |
 | | detail | Fügt in die Antwort die Detailinformationen zu jedem Treffer im InGridDataFormat (IDF) hinzu, wenn 'ingrid = 1' und 'xml = 0'; Standard: 0 |
+| | uvp | Liefert die Antwort auf die Anfrage im Stil des UVP RSS-Feeds zurück (Standard: uvp=0) |
 
 
 Bsp:
@@ -137,6 +138,12 @@ https://dev.informationgrid.eu/interface-search/opensearch/query?q=boden+datatyp
 {% endhighlight %}
 
 ... fordert 20 Ergebnisse aus den 'metadata' Datenquellen (z.B. iPlug-UDK-DB) der ersten Seite für die query "boden" an, sortiert nach Relevanz . Zusätzliche InGrid Informationen werden je Ergebnis mit ausgegeben (Parameter ingrid=1 ). Der Link zum Detail von Metadaten verweist auf die OpenSearch-Darstellung (Parameter xml=1 ).
+
+{% highlight text %}
+https://uvp.niedersachsen.de/interface-opensearch/query?q=datatype:default+ranking:date&uvp=1
+{% endhighlight %}
+
+... fordert die 10 aktuellesten UVP-Datensätze, sortiert nach Änderungsdatum an. Die Ausgabe wird UVP-spezifisch dargestellt und enthält Felder wie "guid", "pubDate", "uvp:latest-phase" und "author".
 
 
 ### Deskriptor-Response
@@ -383,6 +390,21 @@ atom.url.read.timeout=1000
 
 # atom download service client source directory
 atom.download.service.client.path=client
+
+# opensearch channel title
+opensearch.channel.title=
+
+# opensearch channel description
+opensearch.channel.description=
+
+# opensearch channel language
+opensearch.channel.language=
+
+# opensearch channel copyright
+opensearch.channel.copyright=
+
+# opensearch channel link
+opensearch.channel.link=
 {% endhighlight %}
 
 ### Benutzung mit Apache mod_proxy
