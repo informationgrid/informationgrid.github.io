@@ -13,3 +13,4 @@ Die Bilder für die Dokumentation sind im Google-Drive des Accounts info@informa
 ** dieses in das Verzeichnis "latest" umbenennen
 * history.md Datei in `latest` anpassen mit den Release-Änderungen
 * Verzeichnis `latest` kopieren zur neuen SNAPSHOT-Version, als Vorbereitung für das nächste Release
+* `_config.yml` anpassen, so dass neue Version angezeigt wird
