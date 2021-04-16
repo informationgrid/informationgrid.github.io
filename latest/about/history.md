@@ -85,13 +85,13 @@ UVP
 
 ### Komponenten
 
-- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.8.0/)
-- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.8.0/)
-- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.8.0/)
-- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.8.0/)
-- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.8.0/)
-- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.8.0/)
-- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.8.0/)
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.8.0/)
-- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.0/)
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.8.0/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.8.0/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.8.0/))
+- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.8.0/))
+- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.8.0/))
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.8.0/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.8.0/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.8.0/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.0/))
 
