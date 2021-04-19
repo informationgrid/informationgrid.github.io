@@ -11,7 +11,7 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.8.x. Release Notes
 
 Release 16.04.2021
 
-### Wichtige Änderung
+### Wichtige Änderungen
 
 #### Änderung am Interface-Search
 
@@ -25,6 +25,15 @@ Folgende Eigenschaft muss in der Datei `interface-search.properties` angepasst w
 # atom.download.dataset.feed.extension=/dataset/{servicefeed-uuid}/{datasetfeed-uuid}
 atom.download.dataset.feed.extension=/dataset/{servicefeed-uuid}?datasetUuid={datasetfeed-uuid}
 ```
+
+#### Erweiterung des Kontaktformulars von UVP für Zammad
+
+Am 01.03.2021 wurde das Open-Source-Ticketsystem namens [Zammad](https://de.wikipedia.org/wiki/Zammad) in Betrieb genommen. Ziele sind eine Verbesserung des Supports durch die Nachverfolgung der Anfragen sowie die Sicherstellung der Zuständigkeiten.
+Dafür wurde auch das [Kontaktformular auf www.uvp-verbund.de](https://www.uvp-verbund.de/kontakt) angepasst:
+
+![Erweiterung des Kontaktformulars von UVP für Zammad](../images/580_portal_uvp_contact-form.png "Erweiterung des Kontaktformulars von UVP für Zammad")
+<figcaption class="figcaption">Erweiterung des Kontaktformulars von UVP für Zammad</figcaption>
+
 
 ### Liste der Änderungen
 
