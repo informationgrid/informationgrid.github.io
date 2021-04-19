@@ -41,7 +41,6 @@ InGrid
 - [Bug] [IPLUG-CSW] Verbesserung der Suche nach Karten und der Suche im Karten Client bei Daten aus einem CSW iPlug ([REDMINE-2287](https://redmine.informationgrid.eu/issues/2287))
 - [Bug] [IPLUG_IGE] iPlug IGE: AnsprechpartnerMD wird beim ISO-Export auch als Ansprechpartner für den Datensatz gesetzt ([REDMINE-2277](https://redmine.informationgrid.eu/issues/2277))
 - [Bug] [PORTAL] Portal: Facetten fehlen ([REDMINE-1575](https://redmine.informationgrid.eu/issues/1575))
-- [Bug] [PORTAL] HMDK: Inhalt von Fachbezug/Systemumgebung erscheint bei Beschreibung ([REDMINE-2409](https://redmine.informationgrid.eu/issues/2409))
 - [Bug] [PORTAL] Portal: Facetten überlagen Footer ([REDMINE-2373](https://redmine.informationgrid.eu/issues/2373))
 - [Bug] [IGE] IGE: Feld "Konformität" / "geprüft mit" - Anzeige des Default-Wert nach Import ([REDMINE-2348](https://redmine.informationgrid.eu/issues/2348))
 - [Bug] [IGE] IGE: Label und Tooltip aktualisieren ([REDMINE-2338](https://redmine.informationgrid.eu/issues/2338))
@@ -53,11 +52,6 @@ InGrid
 - [Bug] [IGE] IGE: Verweistypen werden nicht importiert ([REDMINE-1844](https://redmine.informationgrid.eu/issues/1844))
 - [Feature] [IBUS] iBus: Verwaltung des Konfigurationsindex ([REDMINE-2342](https://redmine.informationgrid.eu/issues/2342))
 - [Feature] [PORTAL] Aktualisierung TOMCAT auf aktuellere Version ([REDMINE-2294](https://redmine.informationgrid.eu/issues/2294))
-- [Feature] [IPLUG_IGE] Dokumentation von Voraussetzungen in den WMS Capabilities für die automatische Erzeugung von Geodatensätzen aus Layerinformationen durch den GetCapabilities Assistent ([REDMINE-2372](https://redmine.informationgrid.eu/issues/2372))
-
-InGrid Installation Saarland
-
-- [Feature] [PORTAL] Freischaltung des Saarländischen Umweltdatenkatalogs ([REDMINE-2431](https://redmine.informationgrid.eu/issues/2431))
 
 InGrid Installation Schleswig-Holstein
 
