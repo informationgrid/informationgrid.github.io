@@ -73,5 +73,8 @@ Diese Konfiguration wird nur für einfache Systeme ohne hohe Last oder zum Teste
 Beim Einsatz von der Suchmaschine (iPlug-SE) können durch den Crawl Prozess große Datenmengen anfallen. Die Festplattengröße ist entsprechend zu wählen.
 
 
+## Installation mit Docker
 
+Die Installation von InGrid per Docker ermöglicht ein beschleunigtes Setup und einen einfacheren Updateprozess. Benötigt wird ein System auf dem Docker läuft. Dafür eignet sich Linux, WSL2 auf Windows, oder Mac (nicht getestet). Da die default-Installation alle Komponenten beinhaltet, muss man hier ein System mit ≥8GB RAM verwenden.
 
+Die default-Installation ist Schritt-für-Schritt hier beschrieben: <https://github.com/informationgrid/ingrid-docker>. Die Installation kann sowohl lokal als auch auf einem Server durchgeführt werden.
