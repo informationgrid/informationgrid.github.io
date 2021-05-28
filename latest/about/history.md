@@ -7,11 +7,67 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.8.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.8.1
+
+Release 26.05.2021
+
+### Liste der Änderungen
+
+InGrid
+
+- [Bug] [PORTAL] Popup öffnet sich in Chrome 90 nicht mehr ([REDMINE-2493](https://redmine.informationgrid.eu/issues/2493))
+- [Bug] [IGE] MD-Import verbessern - Vorschaubild-Beschreibung  ([REDMINE-2488](https://redmine.informationgrid.eu/issues/2488))
+- [Bug] [PORTAL] Anzeige des Identifikators der Datenquelle defekt ([REDMINE-2459](https://redmine.informationgrid.eu/issues/2459))
+- [Bug] [IGE] Übernahme neuer Metadatenkatalog Saarland ins Produktivsystem ([REDMINE-2405](https://redmine.informationgrid.eu/issues/2405))
+- [Bug] [IGE] Kontakt für die Ressource, wenn auch glechzeitig Kontakt für die Metadaten, wird nicht richtig importiert ([REDMINE-1986](https://redmine.informationgrid.eu/issues/1986))
+- [Bug] [PORTAL] HMDK: Inhalt von Fachbezug/Systemumgebung erscheint bei Beschreibung ([REDMINE-2409](https://redmine.informationgrid.eu/issues/2409))
+- [Feature] [IGE] transferOptions / Abfolge in xml ([REDMINE-2418](https://redmine.informationgrid.eu/issues/2418))
+- [Feature] [IGE] WCS-Dienst mit GetCapabilities-Assistent erfassen ([REDMINE-2381](https://redmine.informationgrid.eu/issues/2381))
+- [Feature] [CODELIST REPOSITORY] Zusätzlicher Wert in Codeliste "Datenformat - Name" - GeoTIFF ([REDMINE-2376](https://redmine.informationgrid.eu/issues/2376))
+- [Feature] [IGE] Validierung GML+Version für INSPIRE-relevante Datensätze entfernen ([REDMINE-2281](https://redmine.informationgrid.eu/issues/2281))
+- [Feature] [SYSTEM] IGE: Anpassung der Referenzierung des Metadaten-Schemas und -Namespaces ([REDMINE-1876](https://redmine.informationgrid.eu/issues/1876))
+- [Feature] [IGE] Erfassung von Metadaten in English ([REDMINE-967](https://redmine.informationgrid.eu/issues/967))
+- [Feature] [IPLUG_IGE] Dokumentation von Voraussetzungen in den WMS Capabilities für die automatische Erzeugung von Geodatensätzen aus Layerinformationen durch den GetCapabilities Assistent ([REDMINE-2372](https://redmine.informationgrid.eu/issues/2372))
+
+BKG
+
+- [Feature] [IGE] Engl.: Funktionalität "Freie Schlagworte" autom. einem Thesaurus zuordnen - Anpassung an engl.Sprache ([REDMINE-2463](https://redmine.informationgrid.eu/issues/2463))
+- [Feature] [PORTAL] Portalanzeige: Filteranzeige ergänzen - Anwendungen ([REDMINE-2300](https://redmine.informationgrid.eu/issues/2300))
+
+InGrid Installation Schleswig-Holstein
+
+- [Bug] [PORTAL] Aktive Seite ist schlecht erkennbar beim Paging in Ergebnisliste ([REDMINE-2457](https://redmine.informationgrid.eu/issues/2457))
+
+MetaVer
+
+- [Feature] [CSW] In der CSW Schnittstelle für das Hamburger Transparenzportal soll der alte GML Namespace verwendet werden ([REDMINE-2505](https://redmine.informationgrid.eu/issues/2505))
+- [Feature] [PORTAL] Anpassung Kontakt-Formular MetaVer Test für Zammad ([REDMINE-2461](https://redmine.informationgrid.eu/issues/2461))
+
+UVP
+
+- [Bug] [PORTAL] Anmeldeseite wird von Suchmaschinen indexiert ([REDMINE-2462](https://redmine.informationgrid.eu/issues/2462))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.8.1/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.8.1/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.8.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.8.1/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.1/))
+
+
 ## Version 5.8.0
 
 Release 16.04.2021
 
 ### Wichtige Änderungen
+
+#### Umstellung Umweltportal PortalU von Rheinland-Pfalz auf neues Design
+
+Am 04.05.2021 wurde das neue Layout für www.portalu.rlp.de live geschaltet:
+
+![Neues Layout für PortalU](../images/580_portal_portalu_new-layout.png "Neues Layout für PortalU")
+<figcaption class="figcaption">Neues Layout für PortalU</figcaption>
 
 #### Änderung am Interface-Search
 
@@ -61,6 +117,10 @@ InGrid
 - [Bug] [IGE] IGE: Verweistypen werden nicht importiert ([REDMINE-1844](https://redmine.informationgrid.eu/issues/1844))
 - [Feature] [IBUS] iBus: Verwaltung des Konfigurationsindex ([REDMINE-2342](https://redmine.informationgrid.eu/issues/2342))
 - [Feature] [PORTAL] Aktualisierung TOMCAT auf aktuellere Version ([REDMINE-2294](https://redmine.informationgrid.eu/issues/2294))
+
+InGrid Installation Rheinland-Pfalz
+
+- [Feature] [PORTAL] PortalU RLP - Umstellung auf neues Design ([REDMINE-2185](https://redmine.informationgrid.eu/issues/2185))
 
 InGrid Installation Schleswig-Holstein
 
