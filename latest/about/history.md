@@ -21,11 +21,11 @@ InGrid
 - [Bug] [IGE] Übernahme neuer Metadatenkatalog Saarland ins Produktivsystem ([REDMINE-2405](https://redmine.informationgrid.eu/issues/2405))
 - [Bug] [IGE] Kontakt für die Ressource, wenn auch glechzeitig Kontakt für die Metadaten, wird nicht richtig importiert ([REDMINE-1986](https://redmine.informationgrid.eu/issues/1986))
 - [Bug] [PORTAL] HMDK: Inhalt von Fachbezug/Systemumgebung erscheint bei Beschreibung ([REDMINE-2409](https://redmine.informationgrid.eu/issues/2409))
+- [Feature] [IGE] Anpassung der Referenzierung des Metadaten-Schemas und -Namespaces ([REDMINE-1876](https://redmine.informationgrid.eu/issues/1876))
 - [Feature] [IGE] transferOptions / Abfolge in xml ([REDMINE-2418](https://redmine.informationgrid.eu/issues/2418))
 - [Feature] [IGE] WCS-Dienst mit GetCapabilities-Assistent erfassen ([REDMINE-2381](https://redmine.informationgrid.eu/issues/2381))
 - [Feature] [CODELIST REPOSITORY] Zusätzlicher Wert in Codeliste "Datenformat - Name" - GeoTIFF ([REDMINE-2376](https://redmine.informationgrid.eu/issues/2376))
 - [Feature] [IGE] Validierung GML+Version für INSPIRE-relevante Datensätze entfernen ([REDMINE-2281](https://redmine.informationgrid.eu/issues/2281))
-- [Feature] [SYSTEM] IGE: Anpassung der Referenzierung des Metadaten-Schemas und -Namespaces ([REDMINE-1876](https://redmine.informationgrid.eu/issues/1876))
 - [Feature] [IGE] Erfassung von Metadaten in English ([REDMINE-967](https://redmine.informationgrid.eu/issues/967))
 - [Feature] [IPLUG_IGE] Dokumentation von Voraussetzungen in den WMS Capabilities für die automatische Erzeugung von Geodatensätzen aus Layerinformationen durch den GetCapabilities Assistent ([REDMINE-2372](https://redmine.informationgrid.eu/issues/2372))
 
