@@ -249,4 +249,4 @@ Um die Katalogsprache zu ändern müssen die Einträge für `language_key` und `
 | 123 | English |
 | 150 | Deutsch |
 
-Anschließend sollte das IGE iPlug neu gestartet werden.
+Anschließend sollte das IGE iPlug neu gestartet werden. Die Standardeinstellung ist Deutsch.
