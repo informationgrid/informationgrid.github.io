@@ -239,3 +239,14 @@ Die Migration nach PostgreSQL ist beschrieben unter [Migration nach PostgreSQL](
 ### Wie kann ich ein Überschreiben der Datei `env.sh` bei einer Aktualisierung verhindern.
 
 In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
+
+### Wie kann ich die Katalogsprache ändern
+
+Um die Katalogsprache zu ändern müssen die Einträge für `language_key` und `language_value` in der Tabelle `t03_catalogue` der Katalogdatenbank angepasst werden. Folgende Werte werden unterstützt:
+
+| language_key | language_value |
+| ----------- | ----------- |
+| 123 | English |
+| 150 | Deutsch |
+
+Anschließend sollte das IGE iPlug neu gestartet werden.
