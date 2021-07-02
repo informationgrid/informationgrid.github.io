@@ -7,6 +7,31 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.8.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+
+## Version 5.8.4
+
+Release 02.07.2021
+
+### Liste der Änderungen
+
+InGrid
+
+- [Bug] [MAPCLIENT] Karte: GetFeatureInfo enthält unnötige Formatierungen "br" ([REDMINE-2563](https://redmine.informationgrid.eu/issues/2563))
+- [Bug] [IGE] Katalogeinstellungen - Checkbox "Schlüsselkatalog" kommt doppelt vor ([REDMINE-2543](https://redmine.informationgrid.eu/issues/2543))
+- [Bug] [IGE] Engl. Katalog - Maßstabsausgabe im abstract nicht übersetzt ([REDMINE-2542](https://redmine.informationgrid.eu/issues/2542))
+- [Bug] [IGE] Pflichtfelder von Digitale Repräsentation und Datenformat wenn INSPIRE/nicht konform ([REDMINE-2521](https://redmine.informationgrid.eu/issues/2521))
+
+BKG
+
+- [Bug] [IGE] Engl.: Werteingabe unvollständig nach ISO-XML ([REDMINE-2567](https://redmine.informationgrid.eu/issues/2567))
+- [Bug] [IGE] Funktion "Suchbegriffe" funktioniert nicht ([REDMINE-2564](https://redmine.informationgrid.eu/issues/2564))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.8.4/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.4/))
+
+
 ## Version 5.8.3
 
 Release 14.06.2021
@@ -14,6 +39,7 @@ Release 14.06.2021
 ### Liste der Änderungen
 
 InGrid
+
 - [Bug] [IGE] Stabilisierung der automatischen DB Erstellung
 - [Bug] [IGE] Stabilisierung der Verschlagwortung während des Imports
 
