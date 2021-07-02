@@ -57,7 +57,7 @@ Release 10.06.2021
 InGrid
 
 - [Feature] [MAPCLIENT] GPX import - Beschreibung fehlt ([REDMINE-2519](https://redmine.informationgrid.eu/issues/2519))
-- [Bug] [MAPCLIENT] Identifier der Datenquelle in Verbindung mit Anzeig des Kartenlayers ([REDMINE-2460](https://redmine.informationgrid.eu/issues/2460))
+- [Bug] [MAPCLIENT] Identifier der Datenquelle in Verbindung mit Anzeige des Kartenlayers ([REDMINE-2460](https://redmine.informationgrid.eu/issues/2460))
 - [Bug] [IGE] Hamburger Logik nach Update auf 5.8.1 für LGV und Dataport ([REDMINE-2514](https://redmine.informationgrid.eu/issues/2514))
 
 UVP
@@ -92,7 +92,7 @@ InGrid
 
 BKG
 
-- [Feature] [IGE] Engl.: Funktionalität "Freie Schlagworte" autom. einem Thesaurus zuordnen - Anpassung an engl.Sprache ([REDMINE-2463](https://redmine.informationgrid.eu/issues/2463))
+- [Feature] [IGE] Engl.: Funktionalität "Freie Schlagworte" autom. einem Thesaurus zuordnen - Anpassung an engl. Sprache ([REDMINE-2463](https://redmine.informationgrid.eu/issues/2463))
 - [Feature] [PORTAL] Portalanzeige: Filteranzeige ergänzen - Anwendungen ([REDMINE-2300](https://redmine.informationgrid.eu/issues/2300))
 
 InGrid Installation Schleswig-Holstein
@@ -160,23 +160,23 @@ InGrid
 - [Bug] [IGE] Paging/ Anzeige von Suchergebnismengen nicht korrekt ([REDMINE-2378](https://redmine.informationgrid.eu/issues/2378))
 - [Bug] [IPLUG-SNS] Chronik liefert manchmal keine Ergebnisse ([REDMINE-2355](https://redmine.informationgrid.eu/issues/2355))
 - [Bug] [IGE] Hilfeseite im IGE wird nicht angezeigt ([REDMINE-2354](https://redmine.informationgrid.eu/issues/2354))
-- [Bug] [IGE] IGE: Umlaute werden falsch angezeigt ([REDMINE-2331](https://redmine.informationgrid.eu/issues/2331))
+- [Bug] [IGE] Umlaute werden falsch angezeigt ([REDMINE-2331](https://redmine.informationgrid.eu/issues/2331))
 - [Bug] [IGE] Weitere Verbesserung der operatesOn Elemente beim Import ([REDMINE-2330](https://redmine.informationgrid.eu/issues/2330)
   )
 - [Bug] [IGE] Editor - Verschlagwortungsassistent kann Text mit % nicht interpretieren ([REDMINE-2321](https://redmine.informationgrid.eu/issues/2321))
 - [Bug] [IPLUG-CSW] Verbesserung der Suche nach Karten und der Suche im Karten Client bei Daten aus einem CSW iPlug ([REDMINE-2287](https://redmine.informationgrid.eu/issues/2287))
-- [Bug] [IPLUG_IGE] iPlug IGE: AnsprechpartnerMD wird beim ISO-Export auch als Ansprechpartner für den Datensatz gesetzt ([REDMINE-2277](https://redmine.informationgrid.eu/issues/2277))
-- [Bug] [PORTAL] Portal: Facetten fehlen ([REDMINE-1575](https://redmine.informationgrid.eu/issues/1575))
-- [Bug] [PORTAL] Portal: Facetten überlagen Footer ([REDMINE-2373](https://redmine.informationgrid.eu/issues/2373))
-- [Bug] [IGE] IGE: Feld "Konformität" / "geprüft mit" - Anzeige des Default-Wert nach Import ([REDMINE-2348](https://redmine.informationgrid.eu/issues/2348))
-- [Bug] [IGE] IGE: Label und Tooltip aktualisieren ([REDMINE-2338](https://redmine.informationgrid.eu/issues/2338))
+- [Bug] [IPLUG_IGE] AnsprechpartnerMD wird beim ISO-Export auch als Ansprechpartner für den Datensatz gesetzt ([REDMINE-2277](https://redmine.informationgrid.eu/issues/2277))
+- [Bug] [PORTAL] Facetten fehlen ([REDMINE-1575](https://redmine.informationgrid.eu/issues/1575))
+- [Bug] [PORTAL] Facetten überlagen Footer ([REDMINE-2373](https://redmine.informationgrid.eu/issues/2373))
+- [Bug] [IGE] Feld "Konformität" / "geprüft mit" - Anzeige des Default-Wert nach Import ([REDMINE-2348](https://redmine.informationgrid.eu/issues/2348))
+- [Bug] [IGE] Label und Tooltip aktualisieren ([REDMINE-2338](https://redmine.informationgrid.eu/issues/2338))
 - [Bug] [IGE] Feld "Vektorformat" - Beschriftung der Tabellenspalte Geometrietyp fehlerhaft ([REDMINE-2336](https://redmine.informationgrid.eu/issues/2336))
-- [Bug] [PORTAL] Portal: In Katalogdarstellung sollen nur Katalog mit Suchergebnissen dargestellt werden ([REDMINE-2303](https://redmine.informationgrid.eu/issues/2303))
+- [Bug] [PORTAL] In Katalogdarstellung sollen nur Katalog mit Suchergebnissen dargestellt werden ([REDMINE-2303](https://redmine.informationgrid.eu/issues/2303))
 - [Bug] [PORTAL] Anzeige von Kurzbezeichnung ist in der Portal Detaildarstellung falsch, wenn eine AdV Produktgruppe angegeben wurden.
   ([REDMINE-2290](https://redmine.informationgrid.eu/issues/2290))
-- [Bug] [IGE] Bei einem Geodatensatzes sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werden. ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228))
-- [Bug] [IGE] IGE: Verweistypen werden nicht importiert ([REDMINE-1844](https://redmine.informationgrid.eu/issues/1844))
-- [Feature] [IBUS] iBus: Verwaltung des Konfigurationsindex ([REDMINE-2342](https://redmine.informationgrid.eu/issues/2342))
+- [Bug] [IGE] Bei einem Geodatensatz sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werden. ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228))
+- [Bug] [IGE] Verweistypen werden nicht importiert ([REDMINE-1844](https://redmine.informationgrid.eu/issues/1844))
+- [Feature] [IBUS] Verwaltung des Konfigurationsindex ([REDMINE-2342](https://redmine.informationgrid.eu/issues/2342))
 - [Feature] [PORTAL] Aktualisierung TOMCAT auf aktuellere Version ([REDMINE-2294](https://redmine.informationgrid.eu/issues/2294))
 
 InGrid Installation Rheinland-Pfalz
@@ -196,7 +196,7 @@ NUMIS
 - [Bug] [INTERFACE-SEARCH] Bei Download-Diensten werden die Downloaddateien und Nutzungsbedingungen nicht im ATOM-Client/Feed angezeigt, wenn die dargestellten Daten per GetRecordById-Request verkoppelt sind ([REDMINE-2366](https://redmine.informationgrid.eu/issues/2366))
 - [Bug] [PORTAL] Keine Legende beim Ausdruck eines Kartenausschnitts ([REDMINE-2399](https://redmine.informationgrid.eu/issues/2399))
 - [Bug] [INTERFACE-SEARCH] Keine Dowloads im ATOM Service Download Feed ([REDMINE-2340](https://redmine.informationgrid.eu/issues/2340))
-- [Bug] [PORTAL] Portal: Anpassung Darstellung Teaser Boxen ([REDMINE-2315](https://redmine.informationgrid.eu/issues/2315))
+- [Bug] [PORTAL] Anpassung Darstellung Teaser Boxen ([REDMINE-2315](https://redmine.informationgrid.eu/issues/2315))
 
 UVP
 
