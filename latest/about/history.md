@@ -79,6 +79,10 @@ zu einer Bilddatei anzugeben.
 ![Link angeben im Dokument-Upload](../images/590_ige_dokument-upload_link-angeben.png "Link angeben im Dokument-Upload")
 <figcaption class="figcaption">Link angeben im Dokument-Upload</figcaption>
 
+#### Erfassung von Metadaten in Englisch
+
+Metadaten können nun auch in englischer Sprache erfasst werden.
+
 ### Liste der Änderungen
 
 InGrid
