@@ -647,27 +647,72 @@ Zu jeder einzelnen Einstellung existiert ein Button "i" um detailierte Informati
 
 Folgende Einstellungen sind möglich:
 
+#### Karte
+
 |Einstellung|Info|Default|
 |-------------|--------------|----------|
 |**Default Kategorie**|Wählen Sie eine Kategorie aus, welches per Default (sofern in der URL des Webmap Clients mit dem Parameter "topic" nichts anderes festgelegt wurde) im Menü des Webmap Clients ausgewählt und angezeigt wird.<br><br>Hinweis: Eine Auswahl an Kategorien ist nur dann möglich, wenn unter dem Akkordeon "Kategorien" auch Kategorien angelegt wurden.| themen |
+|**Kataloge Akkordeon verstecken**| Verstecken Sie im Menü des Webmap Clients das Kategorien-Akkordeon.|false|
+|**Dienst importieren - Layer umgekehrt**| Die Layer eines Dienstes werden der Karte in umgekehrter Reihenfolge hinzugefügt. | false|
+|**Dienst importieren - Mehrere Layer mit gleichem Identifier**| Beim Import eines Dienstes mit einem Identifier werden auch mehrere Layer mit gleichem Identifier ohne Abfrage/Popup der Karte hinzugefügt.
+ | false|
+|**Dienst importieren - Alle Layer**| Beim Import eines Dienstes ohne Identifier-Abfrage werden alle Layer ohne Abfrage/Popup der Karte hinzugefügt. | false|
 |**EPSG / Projektion**| Legen Sie hier die Projektion der Kartendarstellung im Webmap Client fest. <br><br> Nicht alle Projektion werden unterstützt, da der Webmap Client nicht alle Projektionen supported und ggf. erweitert werden muss. Unterstützte Projektionen sind: <br><br> - EPSG:3857<br> - EPSG:4326<br> - EPSG:31466<br> - EPSG:31467<br> - EPSG:31468<br> - EPSG:31469<br> - EPSG:25832<br> - EPSG:25833<br><br> Hinweis: Achten Sie darauf, das Ihre verwendeten WMS- und WMTS-Dienste die Projektion unterstützten.| EPSG:3857
 |**Initiale Ausdehnung (WGS84)**|Legen Sie den Kartenausschnitt fest, welchen Bereich der Karte per Default (sofern in der URL des Webmap Clients mit dem Parameter "E", "N" und "zoom" nichts anderes festgelegt wurde) im Webmap Client dargestellen werden soll. <br><br>Die Koordinaten des Bereiches müssen in der Projektion EPSG:4326/WGS-84 festgelegt werden. <br><br>Hinweis: Die Koordinaten des definierten Bereiches werden im Webmap Client auch bei dem Button "Auf initiale Kartenausdehnung" (rechts unter den Zoom-Buttons) verwendet.| [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
 |**Maximale Ausdehnung (WGS84)**| Der Webmap Client unterstützt nicht alle Projektionen und zu manchen Projektion kennt der Webmap Client auch nicht das Extent einer Projektion, z.B. bei "EPSG:25832".<br><br>Kennt der Webmap Client nicht das Extent der Default-Projektion  (siehe oben), so kann man mit dieser Einstellung den Extent in EPSG:4326/WGS-84 festlegen bzw. redefinieren. So ist es auch möglich die Darstellung der Karte im Webmap Client auf einen bestimmten Bereich einzugrenzen.| [0.42587260523, 46.9672880527, 15.7908768234, 55.1764096793]|
 |**Sprache**| Legen Sie hier die unterstützten Sprachen des Webmap Clients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.<br><br>Existierte eine Sprache die der Webmap Client noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.<br><br>Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.| [“de”, “en”]|
-|**Dienst für den URL-Shortener**|Legen Sie den Dienst um die URL Ihres Webmap Clients zu verkürzen. Die URL des Webmap Clients spiegelt den aktuellen Zustand Ihres Webmap Clients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Webmap Client verwendet. <br><br>Ihr Dienst muss ein JSON zurückliefern.<br><br> Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.| https://is.gd/create.php?format=json|
+|**Default Mauszeiger-Projektion**| Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen. <br><br> Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.|['EPSG:3857', 'EPSG:4326', 'EPSG:31466', 'EPSG:31467', 'EPSG:31468', 'EPSG:31469', 'EPSG:25832', 'EPSG:25833']|
+
+#### Layerinfo
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
+|**Karten-Scale prüfen**| Definieren Sie hier, ob die Karten im Menü nach Ihrer Sichtbarkeit/Scale geprüft werden soll. Hierbei werden die Karten in den Akkordeon ausgegraut dargestellt, sobald eine Karte nicht im Sichbarkeitsbereich des aktuellen Kartenausschnitts ist. <br><br> Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein. | true|
+|**Darstellung vom Service-Baum**| Stellen Sie in der Infobox einer Karte ('i'-Button) die Zugehörigkeit einer Karte zu seinem Dienst in einem weiterem Tab dar.| true|
+|**Darstellung von Layer-Bezeichnung**| Listen Sie in der Infobox einer Karte ('i'-Button), zusätzlich zu dem Titel und der Zusammenfassung, die Layer-Bezeichnung(en) auf.| true|
+
+#### Suche
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
 |**Dienstsuche (Opensearch)**|Verwenden Sie die InGrid-Opensearch-Schnittstelle um nach WMS-Diensten zu suchen und im  Webmap Client zu visualisieren.<br><br>Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.| 
-|**Zoomstufe für Locationsuche**|Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Webmap Client zu diesem Ort mit der definierten Zoomstufe.<br><br> Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.| 10
+|**Darstellung ISO-XML-Link**| Hier können Sie die Darstellung des CSW-Links in Infobox bei der Dienstsuche aktivieren.| true|
 |**Dienst-URL Nominatim**|Tragen Sie hier die URL für die Ortsuche ein. <br><br>Ihr Dienst muss ein JSON zurückliefern. <br><br> Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert.| https://nominatim.openstreetmap.org/search?format=json%26countrycodes=de|
+|**Zoomstufe für Locationsuche**|Legen Sie Ihre die Zoomstufe für die Ortsuche fest. Wird nach der Suche eine Ort ausgewählt, dann springt der Webmap Client zu diesem Ort mit der definierten Zoomstufe.<br><br> Hinweis: Für die Ortsuche wird Nominatim (nächster Eintrag) verwendet.| 10
+|**Koordinatensuche-Zoomstufe**| Legen Sie, analog zur Ortsuche, die Zoomstufe für die Koordinaten-Suche fest.| 16|
+|**Koordinaten-Achsen XY**| Definieren Sie den Koordinaten-Tausch bei der Suche für Ihre Default-Projektion.| false|
 |**Dienst-URL BWaStr-Locator**|Möchten Sie den BWaStr-Locator in der Suche, um nach Bundeswasserstraßen zu suchen, verwenden, so tragen Sie hier die zugehörige Dienst-URL ein. <br><br> Hinweis: Entfernen Sie den Eintrag und für die Suche wird der Dienst ignoriert. | https://atlas.wsv.bund.de/bwastr-locator/rest/bwastrinfo/query?limit=200%26searchfield=all|
 |**Dienst-URL BwaStr-Locator (Geo)**|Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Geokodierung von Bundeswasserstraßen eintragen.<br><br>Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert. | https://atlas.wsv.bund.de/bwastr-locator/rest/geokodierung/query|
 |**Dienst-URL BwaStr-Locator (Station)**|Zugehörig zu der Funktion "Dienst-URL BWaStr-Locator" können Sie hier die Dienst-URL für die Stationierung von Bundeswasserstraßen eintragen.<br><br>Hinweis: Entfernen Sie den Eintrag und der Dienst ignoriert.| https://atlas.wsv.bund.de/bwastr-locator/rest/stationierung/query|
+|**W3W-Dienst**| (De-)aktvieren Sie im Popup 'Positionen' die Darstellung von What3Words.|true|
+|**W3W Dienst-URL**| Tragen Sie hier die Dienst-URL für W3W ein.| https://api.what3words.com**|
+|**W3W Api-Schlüssel**| Tragen Sie hier den Api-Schlüssel für W3W ein.|OM48J50Y|
+
+#### Verweise
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
 |**URL zum Problem melden** (ab Version 5.5.1) |Tragen Sie hier die URL zu Ihrer "Problem melden"-Seite ein. Im Webmap Client wird der Link oben rechts dargestellt.| Integrierte Funktion wird verwendet|
 |**URL zur Hilfe** (ab Version 5.5.1) |Tragen Sie hier die URL zu Ihrer Hilfe-Seite ein. Im Webmap Client wird der Link oben rechts dargestellt.| /hilfe?hkey=maps-1|
 |**Copyright URL**|Tragen Sie hier die URL zu Ihrer Copyright-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.| /impressum|
 |**Sitemap URL**|Tragen Sie hier die URL zu Ihrer Sitemap-Seite ein. Im Webmap Client wird der Link unter rechts dargestellt.|/inhaltsverzeichnis|
-|**Verwendung von Geodesic**|(De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Webmap Client ein.| true|
-|**Default Mauszeiger-Projektion**| Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen. <br><br> Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.|['EPSG:3857', 'EPSG:4326', 'EPSG:31466', 'EPSG:31467', 'EPSG:31468', 'EPSG:31469', 'EPSG:25832', 'EPSG:25833']|
-|**Default Dienstauswahlliste beim Import**|Passen Sie die Liste der Dienste an, die im Webmap Client zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.| ["http://atlas.wsv.bund.de/bwastr/wms?VERSION=1.1.1", "http://atlas.wsv.bund.de/ienc/wms?",   "http://atlas.wsv.bund.de/wadaba/wms?", "http://atlas.wsv.bund.de/bwastr/wmts/1.0.0/WMTSCapabilities.xml", "http://atlas.wsv.bund.de/ienc/wmts/1.0.0/WMTSCapabilities.xml"]|
+
+#### Druck/KML
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
+|**URL zum Print-Logo**| Tragen Sie hier die URL zu Ihrem Logo ein, welches beim Druck verwendet werden soll.| {location.protocol}//{location.host}/ingrid-webmap-client/frontend/prd/img/print_logo.png|
+|**URL zum Nordzeiger-Logo**| Tragen Sie hier die URL zu Ihrem Nordzeiger-Logo ein, welches beim Druck verwendet werden soll.| {location.protocol}//{location.host}/ingrid-webmap-client/frontend/prd/img/north_arrow.png|
+|**Koordinatennetz-Layer(s)**| Legen Sie hier die URL und deren Layer für das Koordinatennetz beim Druck fest. Hierbei ist ein JSON-Format mit 'url' (URL zum Dienst) und 'layers' (Liste von Layer-Name) notwendig. <br><br> Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren. | { "url": "http://atlas.wsv.bund.de/netze/wms?", "layers": ["GN","GNB"] }|
+|**Dateiname des Drucks**| Tragen Sie hier den Dateiname für den Druck ein.| Print.InGrid|
+|**Druck abhängig von Mauszeiger-Projektion**| Hier können Sie den Druck der Karte abhängig von der ausgewählten Mauszeiger-Projektion aktivieren. Die dargestellten Karten müssen aber die Projektion unterstützen.<br><br> Hinweis: Diese Funktion ist experimentell.|false|
+|**KML-Dateiname bei Export**| Definieren Sie den Prefix für die Datei beim KML-Download.|INGRID|
+
+#### Teilen
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
+|**Dienst für den URL-Shortener**|Legen Sie den Dienst um die URL Ihres Webmap Clients zu verkürzen. Die URL des Webmap Clients spiegelt den aktuellen Zustand Ihres Webmap Clients wieder. Dieser Dienst wird z.B. beim Druck oder unter dem Akkordeon "Teilen" im Webmap Client verwendet. <br><br>Ihr Dienst muss ein JSON zurückliefern.<br><br> Hinweis: Entfernen Sie den Eintrag, so wird keine URL verkürzt und in den verwendeten Funktionen wird die komplette URL Ihres Webmap Clients angezeigt.| https://is.gd/create.php?format=json|
 |**Teile per Facebook**| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Facebook. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
 |**Teile per E-Mail**| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per E-Mail. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
 |**Teile per Google+**| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Google+. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
@@ -676,22 +721,13 @@ Folgende Einstellungen sind möglich:
 |**Teile per Link**| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Link. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL. | true|
 |**Teile per QR**-Code| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per QR-Code. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.| true|
 |**Teile per Whatsapp**| (De-)aktivieren Sie das Teilen Ihres Webmap Client-Zustand per Whatsapp. Die Funktion steht Ihnen im Webmap Client-Menü unter dem Akkordeon "Teilen" nur für die Betriebssysteme Android oder iOS zur Verfügung. Hierbei wird die URL des Webmap Client versendet. Falls ein URL-Shortener verwendet wird, dann die Short-URL.| true|
-|**URL zum Print-Logo**| Tragen Sie hier die URL zu Ihrem Logo ein, welches beim Druck verwendet werden soll.| {location.protocol}//{location.host}/ingrid-webmap-client/frontend/prd/img/print_logo.png|
-|**URL zum Nordzeiger-Logo**| Tragen Sie hier die URL zu Ihrem Nordzeiger-Logo ein, welches beim Druck verwendet werden soll.| {location.protocol}//{location.host}/ingrid-webmap-client/frontend/prd/img/north_arrow.png|
-|**Koordinatennetz-Layer(s)**| Legen Sie hier die URL und deren Layer für das Koordinatennetz beim Druck fest. Hierbei ist ein JSON-Format mit 'url' (URL zum Dienst) und 'layers' (Liste von Layer-Name) notwendig. <br><br> Hinweis: Tragen Sie ein leeres JSON-Objekt ("{}") ein, um die Funktion "Koordinatennetz" zu deaktivieren. | { "url": "http://atlas.wsv.bund.de/netze/wms?", "layers": ["GN","GNB"] }|
-|**Dateiname des Drucks**| Tragen Sie hier den Dateiname für den Druck ein.| Print.InGrid|
-|**Druck abhängig von Mauszeiger-Projektion**| Hier können Sie den Druck der Karte abhängig von der ausgewählten Mauszeiger-Projektion aktivieren. Die dargestellten Karten müssen aber die Projektion unterstützen.<br><br> Hinweis: Diese Funktion ist experimentell.|false|
-|**KML-Dateiname bei Export**| Definieren Sie den Prefix für die Datei beim KML-Download.|INGRID|
-|**Kataloge Akkordeon verstecken**| Verstecken Sie im Menü des Webmap Clients das Kategorien-Akkordeon.|false|
-|**W3W-Dienst**| (De-)aktvieren Sie im Popup 'Positionen' die Darstellung von What3Words.|true|
-|**W3W Dienst-URL**| Tragen Sie hier die Dienst-URL für W3W ein.| https://api.what3words.com**|
-|**W3W Api-Schlüssel**| Tragen Sie hier den Api-Schlüssel für W3W ein.|OM48J50Y|
-|**Darstellung vom Service-Baum**| Stellen Sie in der Infobox einer Karte ('i'-Button) die Zugehörigkeit einer Karte zu seinem Dienst in einem weiterem Tab dar.| true|
-|**Darstellung von Layer-Bezeichnung**| Listen Sie in der Infobox einer Karte ('i'-Button), zusätzlich zu dem Titel und der Zusammenfassung, die Layer-Bezeichnung(en) auf.| true|
-|**Karten-Scale prüfen**| Definieren Sie hier, ob die Karten im Menü nach Ihrer Sichtbarkeit/Scale geprüft werden soll. Hierbei werden die Karten in den Akkordeon ausgegraut dargestellt, sobald eine Karte nicht im Sichbarkeitsbereich des aktuellen Kartenausschnitts ist. <br><br> Hinweis: Die Scale-Prüfung erfolgt über die eingetragenen Werte der Karten/Layern in der GetCapabilities und können ggf. nicht korrekt sein. | true|
-|**Darstellung ISO-XML-Link**| Hier können Sie die Darstellung des CSW-Links in Infobox bei der Dienstsuche aktivieren.| true|
-|**Koordinaten-Achsen XY**| Definieren Sie den Koordinaten-Tausch bei der Suche für Ihre Default-Projektion.| false|
-|**Koordinatensuche-Zoomstufe**| Legen Sie, analog zur Ortsuche, die Zoomstufe für die Koordinaten-Suche fest.| 16|
+
+#### Sonstige
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
+|**Default Dienstauswahlliste beim Import**|Passen Sie die Liste der Dienste an, die im Webmap Client zur Vorauswahl beim Importieren von Kartendienste (WMS, WMTS, KML) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen.| ["http://atlas.wsv.bund.de/bwastr/wms?VERSION=1.1.1", "http://atlas.wsv.bund.de/ienc/wms?",   "http://atlas.wsv.bund.de/wadaba/wms?", "http://atlas.wsv.bund.de/bwastr/wmts/1.0.0/WMTSCapabilities.xml", "http://atlas.wsv.bund.de/ienc/wmts/1.0.0/WMTSCapabilities.xml"]|
+|**Verwendung von Geodesic**|(De-)aktivieren Sie hier die Verwendung von Geodesic zum Messen in Ihrem Webmap Client ein.| true|
 |**3D-Funktion**| Hier können Sie die 3D-Funktion für die Karte aktivieren. <br><br>Hinweis: Diese Funktion ist experimentell. | false|
 |**Terrain-URL (3D)**| Definieren Sie einen Terrain (URL) für die 3D Funktion. <br><br> Hinweis: Diese Funktion ist experimentell.| //assets.agi.com/stk-terrain/world|
 
