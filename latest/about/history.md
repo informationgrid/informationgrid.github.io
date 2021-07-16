@@ -68,12 +68,16 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 ![Neues Layout für metaver.de Karte](../images/590_portal_metaver_new-layout_map.png "Neues Layout für metaver.de Karte")
 <figcaption class="figcaption">Neues Layout für metaver.de Karte</figcaption>
 
-
-
 #### Hochladen von Vorschaubildern
 
 Vorschaubilder können jetzt hochgeladen und somit auf dem Server abgelegt werden. Weiterhin ist es auch möglich einen Link
 zu einer Bilddatei anzugeben.
+
+![Vorschaubild hinzufügen](../images/590_ige_vorschaugrafik_vorschaubild-hinzufuegen.png "Vorschaubild hinzufügen")
+<figcaption class="figcaption">Vorschaubild hinzufügen</figcaption>
+
+![Link angeben im Dokument-Upload](../images/590_ige_dokument-upload_link-angeben.png "Link angeben im Dokument-Upload")
+<figcaption class="figcaption">Link angeben im Dokument-Upload</figcaption>
 
 ### Liste der Änderungen
 
