@@ -87,6 +87,7 @@ Metadaten können nun auch in englischer Sprache erfasst werden.
 
 InGrid
 
+- [Feature] [MAPCLIENT] MapClient: Komprimierung von weiteren URL Parametern beim Aufruf von WMS Karten mit vielen Layern ([REDMINE-2602](https://redmine.informationgrid.eu/issues/2602))
 - [Feature] [IGE] Vorschaugrafiken im IGE ablegen und verwalten ([REDMINE-1667](https://redmine.informationgrid.eu/issues/1667))
 - [Feature] [MAPCLIENT] MetaVer-Kartenclient alle geladene Layer deaktiviren / alle geladenen Layer löschen ([REDMINE-2598](https://redmine.informationgrid.eu/issues/2598))
 - [Feature] [PORTAL] Ergebnisliste (neues Layout): Anbieter und Quelle nach Detaildarstellung übertragen ([REDMINE-2544](https://redmine.informationgrid.eu/issues/2544))
@@ -115,6 +116,7 @@ InGrid
 - [Bug] [MAPCLIENT] Identifier der Datenquelle in Verbindung mit Anzeig des Kartenlayers ([REDMINE-2460](https://redmine.informationgrid.eu/issues/2460))
 - [Bug] [PORTAL] Anzeige des Identifikators der Datenquelle defekt ([REDMINE-2459](https://redmine.informationgrid.eu/issues/2459))
 - [Bug] [IGE] Kontakt für die Ressource, wenn auch glechzeitig Kontakt für die Metadaten, wird nicht richtig importiert ([REDMINE-1986](https://redmine.informationgrid.eu/issues/1986))
+- [Bug] [PORTAL] Portal: RSS-Job bei Links mit vielen Zeilenumbrüchen führen zu Datenbankfehlern ([REDMINE-2603](https://redmine.informationgrid.eu/issues/2603))
 
 BAW DMQS
 
