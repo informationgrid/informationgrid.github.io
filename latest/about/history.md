@@ -65,6 +65,12 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 ![Neues Layout für metaver.de Suche](../images/590_portal_metaver_new-layout_search.png "Neues Layout für metaver.de Suche")
 <figcaption class="figcaption">Neues Layout für metaver.de Suche</figcaption>
 
+![Neues Layout für metaver.de Suche Mehr Infos](../images/590_portal_metaver_new-layout_search-more-infos.png "Neues Layout für metaver.de Suche Mehr Infos")
+<figcaption class="figcaption">Neues Layout für metaver.de Suche Mehr Infos</figcaption>
+
+![Neues Layout für metaver.de Suche Detail](../images/590_portal_metaver_new-layout_search-detail.png "Neues Layout für metaver.de Suche Detail")
+<figcaption class="figcaption">Neues Layout für metaver.de Suche Detail</figcaption>
+
 ![Neues Layout für metaver.de Karte](../images/590_portal_metaver_new-layout_map.png "Neues Layout für metaver.de Karte")
 <figcaption class="figcaption">Neues Layout für metaver.de Karte</figcaption>
 
