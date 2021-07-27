@@ -74,6 +74,30 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 ![Neues Layout für metaver.de Karte](../images/590_portal_metaver_new-layout_map.png "Neues Layout für metaver.de Karte")
 <figcaption class="figcaption">Neues Layout für metaver.de Karte</figcaption>
 
+
+#### Erfassung von Metadaten in Englisch
+
+Metadaten können nun auch in englischer Sprache erfasst werden.
+
+![Katalogsprache English](../images/590_ige_katalogsprache.png "Katalogsprache English")
+<figcaption class="figcaption">Katalogsprache English</figcaption>
+
+![Neues Objekt Assistent](../images/590_ige_neues-objekt_assistent.png "Neues Objekt Assistent")
+<figcaption class="figcaption">Neues Objekt Assistent</figcaption>
+
+![Neues Objekt Adressen](../images/590_ige_neues-objekt_adressen.png "Neues Objekt Adressen")
+<figcaption class="figcaption">Neues Objekt Adressen</figcaption>
+
+![Neues Objekt Art des Dienstes](../images/590_ige_neues-objekt_art-des-dienstes.png "Neues Objekt Art des Dienstes")
+<figcaption class="figcaption">Neues Objekt Art des Dienstes</figcaption>
+
+![Neues Objekt Sprache Metadatensatz](../images/590_ige_neues-objekt_sprache-metadatensatz.png "Neues Objekt Sprache Metadatensatz")
+<figcaption class="figcaption">Neues Objekt Sprache Metadatensatz</figcaption>
+
+![Neues Objekt ISO-Themenkategorie](../images/590_ige_neues-objekt_iso-themenkategorie.png "Neues Objekt ISO-Themenkategorie")
+<figcaption class="figcaption">Neues Objekt ISO-Themenkategorie</figcaption>
+
+
 #### Hochladen von Vorschaubildern
 
 Vorschaubilder können jetzt hochgeladen und somit auf dem Server abgelegt werden. Weiterhin ist es auch möglich einen Link
@@ -85,9 +109,6 @@ zu einer Bilddatei anzugeben.
 ![Link angeben im Dokument-Upload](../images/590_ige_dokument-upload_link-angeben.png "Link angeben im Dokument-Upload")
 <figcaption class="figcaption">Link angeben im Dokument-Upload</figcaption>
 
-#### Erfassung von Metadaten in Englisch
-
-Metadaten können nun auch in englischer Sprache erfasst werden.
 
 ### Liste der Änderungen
 
