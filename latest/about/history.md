@@ -79,23 +79,13 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 
 Metadaten können nun auch in englischer Sprache erfasst werden.
 
-Für die Erfassung von Übersetzungen einer Freitexteingabe wurde ein Signalwort vereinbart, das eine Übersetzung in eine Sprache kennzeichnet:
+Siehe dazu auch:
 
-`#locale-<ISO-639-2 CODE>:`
+[Wie kann ich die Katalogsprache ändern](https://www.ingrid-oss.eu/latest/components/iplug_ige.html#wie-kann-ich-die-katalogsprache-%C3%A4ndern)
 
-Beispiel für einen Titel:
+[Unterstützung der Übersetzung in mehreren Sprachen für bestimmte Felder](https://www.ingrid-oss.eu/5.6.0/about/history.html#unterst%C3%BCtzung-der-%C3%BCbersetzung-in-mehreren-sprachen-f%C3%BCr-bestimmte-felder)
 
-Das ist ein Title von einem Datensatz.`#locale-eng:`This is a title of a dataset.
-
-Beispiel für einen Abstract:
-
-Das ist ein Abstract von einem Datensatz.
-
-`#locale-eng:`This is an abstract of a dataset.
-
-Whitespace Zeichen vor oder nach der Kennzeichnung oder Feldanfang oder -ende werden ignoriert.
-
-Die Sprachangaben werden im ISO-19139 Import/Export interpretiert und entsprechend umgesetzt.
+Einige Beispiel-Screenshots:
 
 ![Katalogsprache English](../images/590_ige_katalogsprache.png "Katalogsprache English")
 <figcaption class="figcaption">Katalogsprache English</figcaption>
