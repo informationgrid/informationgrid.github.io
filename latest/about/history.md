@@ -74,6 +74,17 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 ![Neues Layout für metaver.de Karte](../images/590_portal_metaver_new-layout_map.png "Neues Layout für metaver.de Karte")
 <figcaption class="figcaption">Neues Layout für metaver.de Karte</figcaption>
 
+#### Umfangreiche Überarbeitung der Suchergebnisliste und Detaildarstellung bei NUMIS
+
+Die Darstellung der Suchergebnisse und der Detailansicht wurde umfassend überarbeitet und erweitert:
+
+![Neue Suchergebnisliste NUMIS](../images/590_portal_numis_new-serp.png "Neue Suchergebnisliste NUMIS")
+<figcaption class="figcaption">Neue Suchergebnisliste NUMIS</figcaption>
+
+![Neue Detaildarstellung NUMIS](../images/590_portal_numis_new-search-detail.png "Neue Detaildarstellung NUMIS")
+<figcaption class="figcaption">Neue Detaildarstellung NUMIS</figcaption>
+
+
 
 #### Erfassung von Metadaten in Englisch
 
