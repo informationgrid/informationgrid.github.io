@@ -74,9 +74,9 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 ![Neues Layout für metaver.de Karte](../images/590_portal_metaver_new-layout_map.png "Neues Layout für metaver.de Karte")
 <figcaption class="figcaption">Neues Layout für metaver.de Karte</figcaption>
 
-#### Layer in Kartenclient erweitert
+#### Handling der Layer im Kartenclient erweitert
 
-Das Handling von Layern im Kartenclient wurde erweitert, hier im Beispiel von metaver.de:
+Das Handling von Layern im Kartenclient wurde erweitert, hier am Beispiel von metaver.de:
 
 - Beim Hinzufügen eines Kartendienstes aus der Suche oder Detaildarstellung können die Layer jetzt interaktiv gewählt werden (wie beim Import).
 - Per Button-Klick können alle Layer hinzugefügt werden.
