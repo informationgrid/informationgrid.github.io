@@ -78,6 +78,10 @@ Für das Portal metaver.de wurde ein neues Layout erstellt:
 
 Das Handling von Layern im Kartenclient wurde erweitert, hier im Beispiel von metaver.de:
 
+- Beim Hinzufügen eines Kartendienstes aus der Suche oder Detaildarstellung können die Layer jetzt interaktiv gewählt werden (wie beim Import).
+- Per Button-Klick können alle Layer hinzugefügt werden.
+- Einzelne Layer können direkt mittels ihres Identifiers hinzugefügt werden, ohne vorherige Auswahl.
+
 ![Layer Kartenclient metaver.de](../images/590_portal_metaver_webmapclient-new-layer.png "Layer Kartenclient metaver.de")
 <figcaption class="figcaption">Layer Kartenclient metaver.de</figcaption>
 
