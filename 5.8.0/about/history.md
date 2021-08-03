@@ -8,6 +8,20 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.8.x. Release Notes
 [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.8.5
+
+Release 03.08.2021
+
+### Liste der Änderungen
+
+InGrid
+
+- [Bug] [IGE] Verfahrensschritt kann nicht gelöscht werden ([REDMINE-2621](https://redmine.informationgrid.eu/issues/2621))
+
+### Komponenten
+
+- IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.5/))
+
 ## Version 5.8.4
 
 Release 02.07.2021
