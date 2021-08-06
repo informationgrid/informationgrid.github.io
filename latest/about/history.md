@@ -7,6 +7,45 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.9.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+
+## Version 5.9.1
+
+Release 05.08.2021
+
+### Wichtige Änderung
+
+#### Neue Katalogansicht
+
+Die Katalogansicht wurde umfangreich überarbeitet.
+Jeder Knoten im Katalogbaum ist nun durch eine eindeutige ID (MD5-Hash und Knoten-Level) gekennzeichnet. Durch diese eindeutige ID, die nun auch über die URL transportiert wird, kann eine Katalogansicht wiederhergestellt und versendet werden.
+Die Katalogansicht lädt nun auch viel schneller, da die Knoten nun dynamisch über JavaScript (jQuery) geladen werden. Ein Reload der Seite beim Öffnen eines Knotens ist nicht mehr notwendig.
+
+![Neue Katalogansicht NUMIS](../images/590_portal_numis_katalogansicht.png "Neue Katalogansicht NUMIS")
+<figcaption class="figcaption">Neue Katalogansicht NUMIS</figcaption>
+
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] [PORTAL] Katalogansicht dynamisch aufbauen (ohne Reload der Portalseite) ([REDMINE-2610](https://redmine.informationgrid.eu/issues/2610))
+
+NUMIS
+
+- [Feature] [PORTAL] MESSWERTECLIENT: "Zurück zur Kartenansicht" zeigt nicht den letzten Kartenausschnitt an ([REDMINE-2609](https://redmine.informationgrid.eu/issues/2609))
+- [Bug] [PORTAL] Probleme nach Update auf 5.9.0 ([REDMINE-2608](https://redmine.informationgrid.eu/issues/2608))
+
+UVP
+
+- [Bug] Bauleitplanungsseite BB führt zu leeren Ergebnissen ([REDMINE-2667](https://redmine.informationgrid.eu/issues/2667))
+- [Bug] [IGE] Verfahrensschritt kann nicht gelöscht werden ([REDMINE-2621](https://redmine.informationgrid.eu/issues/2621))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.9.1/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.9.1/))
+
+
 ## Version 5.9.0
 
 Release 16.07.2021
