@@ -6,11 +6,11 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Der InGrid Editor erlaubt die Erfassung und Publizierung von ISO 19115/19119/OGC und INSPIRE-konforme Metadaten. Der folgende Screenshot zeigt den Blick auf die Erfassungsmaske.
+Der InGrid Editor erlaubt die Erfassung und Publizierung von ISO 19115/19119/OGC- und INSPIRE-konformen Metadaten. Der folgende Screenshot zeigt den Blick auf die Erfassungsmaske.
 
 ![Erfassungsmaske InGrid Editor](../images/ingrid_ige_hierarchy.png "Erfassungsmaske InGrid Editor")
 
-Die Komponente ist normalerweise Bestandteil des Portals und wird mit diesem installiert. Es ist aber auch möglich den InGrid-Editor separat zu installieren und ohne ein Portal zu betreiben. Daraus ergibt sich eine neue Benutzerverwaltung, die sonst vom Portal bereitgestellt wurde. Wie diese Benutzerverwaltung betrieben wird, wird in diesem Dokument beschrieben.
+Die Komponente ist normalerweise Bestandteil des Portals und wird mit diesem installiert. Es ist aber auch möglich, den InGrid-Editor separat zu installieren und ohne ein Portal zu betreiben. Daraus ergibt sich eine neue Benutzerverwaltung, die sonst vom Portal bereitgestellt wurde. Wie diese Benutzerverwaltung betrieben wird, wird in diesem Dokument beschrieben.
 
 
 ## Systemvoraussetzungen
