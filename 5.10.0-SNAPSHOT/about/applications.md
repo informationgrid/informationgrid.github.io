@@ -33,7 +33,7 @@ InGrid unterstützt die Erfassung und Publikation von Umweltverträglichkeitspr�
  
 ### Einsatz als allgemeines Verwaltungsportal
 
-Über InGrid lässt sich zudem ein allgemeines Verwaltungsportal aufbauen. Dabei ist der thematische Fokus nicht auf den Bereich Umwelt eingeschränkt, sondern deckt alle verwaltungsrelevanten Themenbereiche ab. Erforderliche Anpassungen am Layout lassen sich unaufwändig realsieren.
+Über InGrid lässt sich zudem ein allgemeines Verwaltungsportal aufbauen. Dabei ist der thematische Fokus nicht auf den Bereich Umwelt eingeschränkt, sondern deckt alle verwaltungsrelevanten Themenbereiche ab. Erforderliche Anpassungen am Layout lassen sich ohne viel Aufwand realisieren.
  
 ### Einsatz als Umweltportal in anderen europäischen Staaten
 
