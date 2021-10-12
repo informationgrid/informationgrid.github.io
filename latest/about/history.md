@@ -26,6 +26,7 @@ InGrid
 - [Bug] [PORTAL] BKG: IGE: Zeichenkodierung fehlerhaft ([REDMINE-2822](https://redmine.informationgrid.eu/issues/2822))
 - [Bug] [IGE] IGE: Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
 - [Bug] [IGE] IGE: Lagegenauigkeit wird nicht importiert ([REDMINE-2755](https://redmine.informationgrid.eu/issues/2755))
+- [Bug] [IGE] ISO-XML: Angabe des DCP-Elements unzureichend abgebildet ([REDMINE-2245](https://redmine.informationgrid.eu/issues/2245))
 
 UVP
 
