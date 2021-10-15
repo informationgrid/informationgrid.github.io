@@ -16,6 +16,7 @@ Release 11.10.2021
 
 InGrid
 
+- [Feature] [PORTAL] Portal: Weitere Anpassungen am HMDK Profil ([REDMINE-1523](https://redmine.informationgrid.eu/issues/1523))
 - [Feature] [PORTAL] Portal: Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
 - [Feature] [PORTAL] Aktualisierung TOMCAT Version auf 9.0.53 ([REDMINE-2926](https://redmine.informationgrid.eu/issues/2926))
 - [Feature] [PORTAL] Verstecken der Tomcat Version in Tomcat Fehlerseiten ([REDMINE-2925](https://redmine.informationgrid.eu/issues/2925))
