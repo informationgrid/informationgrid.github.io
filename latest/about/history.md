@@ -37,11 +37,25 @@ SH
 
 - [Feature] [PORTAL] SH: Kontaktformular: Die E-Mail des Nutzers soll im REPLY-TO Header verwendet werden ([REDMINE-2804](https://redmine.informationgrid.eu/issues/2804))
 
-
 ### Komponenten
 
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.9.2/))
 - IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.9.2/))
+
+
+
+## Version 5.9.1.1
+
+Release 06.10.2021
+
+### Liste der Änderungen
+
+- [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle im MapClient beheben ([REDMINE-2924](https://redmine.informationgrid.eu/issues/2924))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.9.1.1/))
+
 
 
 ## Version 5.9.1
