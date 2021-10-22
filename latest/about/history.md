@@ -37,7 +37,6 @@ InGrid
 - [Bug] [IGE] Fehler bei Upload von Vorschaugrafiken ([REDMINE-2920](https://redmine.informationgrid.eu/issues/2920))
 - [Bug] [IGE] IGE: Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
 - [Bug] [IGE] IGE: Fehler beim Exportieren einer Codeliste ([REDMINE-2489](https://redmine.informationgrid.eu/issues/2489))
-- [Bug] [SYSTEM] Fehlerhafte Metadaten, u.a. Problem mit Daten-Dienst-Kopplung ([REDMINE-2334](https://redmine.informationgrid.eu/issues/2334))
 - [Bug] [IGE] Veröffentlichung von Datensätzen mit Veröffentlichung "Internet" unter Ordner mit Veröffentlichung "amtsintern" möglich. ([REDMINE-2096](https://redmine.informationgrid.eu/issues/2096))
 - [Bug] [IGE] IGE: Feld Historie bei Geodatendiensten wird nicht importiert. ([REDMINE-1845](https://redmine.informationgrid.eu/issues/1845))
 - [Bug] [IPLUG-SE] iPlug SE: Einschränkung der Suche nach domain (Parameter "site") funktioniert nicht ([REDMINE-1477](https://redmine.informationgrid.eu/issues/1477))
