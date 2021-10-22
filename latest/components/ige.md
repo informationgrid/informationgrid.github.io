@@ -166,7 +166,8 @@ Der Dienst wird durch Konfiguration eines der folgenden Validatoren aktiviert:
       "properties":{
           "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -all -archive -mime %FILE%",
           "virusPattern":"(?m)^>>> Virus '([^']+)' found in file (.+)$",
-          "cleanPattern":"(?m)^No viruses were discovered.$"
+          "cleanPattern":"(?m)^No viruses were discovered.$",
+          "timeout": "60"
       }
   }
   ```
@@ -178,6 +179,7 @@ Um unterschiedliche Viren Scanner zu unterstützen, wird der Scanner über folge
   - `command` Kommando zur Überprüfung einer Datei. Es muss die Zeichenkette `%FILE%` enthalten sein, die durch den zu prüfende Dateipfad ersetzt wird. Das Kommando muss eine Ausgabe liefern, aus der der Status der Datei hervorgeht. Zu beachten ist, dass auch die Überprüfung von Archiven notwendig ist.
   - `virusPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *einer* Infektion passt und die Virusname und Dateiname jeweils in einer Gruppe speichert
   - `cleanPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *keiner* Infektion passt
+  - `timeout` (Optional - Default `60`) Timeout für den Aufruf des Virenscanners in Sekunden
 
 Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.
 
@@ -219,6 +221,23 @@ Für die regelmäßige **Virenprüfung der Dateiverzeichnisse** existiert ein Hi
 Der Hintergrundjob muss über eine Spring Konfiguration aktiviert werden. Siehe dazu die Dateien unter `webapps/ingrid-portal-mdek-application/WEB-INF/override/` und die Dokumentation dort und unter `webapps/ingrid-portal-mdek-application/WEB-INF/conf/mdek.properties`.
 
 
+### Prüfung von extern gekoppelten Ressourcen
+
+Ein Hintergrundjob prüft täglich um 2 Uhr alle extern gekoppelten Ressourcen von den Datensätzen aus den angeschlossenen Katalogen.
+Über eine getRecordById-Anfrage wird geprüft, ob sich der Identifier geändert hat. Ist dies der Fall, so wird der Datensatz durch eine Datenbankänderung aktualisiert.
+
+Im Log werden Probleme festgehalten und für jedes angeschlossene Backend eine Zusammenfassung ausgegeben. Diese beinhaltet die Anzahl der:
+
+* überprüften URLs
+* URLs ohne korrekter Antwort (Ressource nicht mehr erreichbar)
+* aktualisierten Datensätze
+
+Die Ausführungszeit kann in der Datei `mdek.override.properties` durch einen cron-Ausdruck geändert werden:
+
+```properties
+# Schedule for background update job for external coupled resources, default: every day at 2am
+update.coupled.resources.schedule=0 0 2 * * ? *
+```
 
 ## FAQ
 
