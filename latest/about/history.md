@@ -11,10 +11,6 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.10.x. Release Note
 
 Release 21.10.2021
 
-### Hinweise für die Aktualisierung
-
-...
-
 ### Wichtige Änderungen
 
 ...
