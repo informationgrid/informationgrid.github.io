@@ -23,10 +23,10 @@ Release 21.10.2021
 
 BAW Datenrepository
 
-- [Bug] [PORTAL] Style von Textboxen verbessern ([REDMINE-2323](https://redmine.informationgrid.eu/issues/2323))
 - [Feature] [PORTAL] Language-Switcher Portlet aktivieren ([REDMINE-2790](https://redmine.informationgrid.eu/issues/2790))
 - [Feature] [PORTAL] Portal-Layout für das baw_doi Profil aktualisieren ([REDMINE-2747](https://redmine.informationgrid.eu/issues/2747))
 - [Feature] [PORTAL] BAW Datenrepository ([REDMINE-2664](https://redmine.informationgrid.eu/issues/2664))
+- [Bug] [PORTAL] Style von Textboxen verbessern ([REDMINE-2323](https://redmine.informationgrid.eu/issues/2323))
 
 BKG
 
@@ -34,6 +34,16 @@ BKG
 
 InGrid
 
+- [Feature] [IGE] Namensnennung 3.0 Deutschland (CC BY 3.0 DE) in Codeliste 6500 aufnehmen ([REDMINE-2837](https://redmine.informationgrid.eu/issues/2837))
+- [Feature] [IGE] transferOptions / Abfolge in xml - Ergänzende Anpassungen ([REDMINE-2600](https://redmine.informationgrid.eu/issues/2600))
+- [Feature] [IPLUG_IGE] Extern-gekoppelte Datensätze werden regelmäßig analysiert ([REDMINE-2389](https://redmine.informationgrid.eu/issues/2389))
+- [Feature] [PORTAL] Integration Portalprofil MDI-DE (NOKIS) ([REDMINE-2246](https://redmine.informationgrid.eu/issues/2246))
+- [Feature] [SYSTEM] Umsetzung Verbesserung der Suche in den InGrid Komponenten ([REDMINE-2085](https://redmine.informationgrid.eu/issues/2085))
+- [Feature] [PORTAL] Aktualisierung TOMCAT Version ([REDMINE-2926](https://redmine.informationgrid.eu/issues/2926))
+- [Feature] [PORTAL] Verstecken der Tomcat Version in Tomcat Fehlerseiten. ([REDMINE-2925](https://redmine.informationgrid.eu/issues/2925))
+- [Feature] [PORTAL] PORTAL: Katalogansicht dynamisch aufbauen (ohne Reload der Portalseite) ([REDMINE-2610](https://redmine.informationgrid.eu/issues/2610))
+- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" ([REDMINE-2184](https://redmine.informationgrid.eu/issues/2184))
+- [Feature] [PORTAL] Portal: Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
 - [Bug] [IGE] Fehler bei Upload von Vorschaugrafiken ([REDMINE-2920](https://redmine.informationgrid.eu/issues/2920))
 - [Bug] [IGE] IGE: Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
 - [Bug] [IGE] IGE: Fehler beim Exportieren einer Codeliste ([REDMINE-2489](https://redmine.informationgrid.eu/issues/2489))
@@ -45,16 +55,6 @@ InGrid
 - [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle im MapClient beheben ([REDMINE-2924](https://redmine.informationgrid.eu/issues/2924))
 - [Bug] [IGE] IGE: Lagegenauigkeit wird nicht importiert ([REDMINE-2755](https://redmine.informationgrid.eu/issues/2755))
 - [Bug] [IPLUG_IGE] ISO-XML: Angabe des DCP-Elements unzureichend abgebildet ([REDMINE-2245](https://redmine.informationgrid.eu/issues/2245))
-- [Feature] [IGE] Namensnennung 3.0 Deutschland (CC BY 3.0 DE) in Codeliste 6500 aufnehmen ([REDMINE-2837](https://redmine.informationgrid.eu/issues/2837))
-- [Feature] [IGE] transferOptions / Abfolge in xml - Ergänzende Anpassungen ([REDMINE-2600](https://redmine.informationgrid.eu/issues/2600))
-- [Feature] [IPLUG_IGE] Extern-gekoppelte Datensätze werden regelmäßig analysiert ([REDMINE-2389](https://redmine.informationgrid.eu/issues/2389))
-- [Feature] [PORTAL] Integration Portalprofil MDI-DE (NOKIS) ([REDMINE-2246](https://redmine.informationgrid.eu/issues/2246))
-- [Feature] [SYSTEM] Umsetzung Verbesserung der Suche in den InGrid Komponenten ([REDMINE-2085](https://redmine.informationgrid.eu/issues/2085))
-- [Feature] [PORTAL] Aktualisierung TOMCAT Version ([REDMINE-2926](https://redmine.informationgrid.eu/issues/2926))
-- [Feature] [PORTAL] Verstecken der Tomcat Version in Tomcat Fehlerseiten. ([REDMINE-2925](https://redmine.informationgrid.eu/issues/2925))
-- [Feature] [PORTAL] PORTAL: Katalogansicht dynamisch aufbauen (ohne Reload der Portalseite) ([REDMINE-2610](https://redmine.informationgrid.eu/issues/2610))
-- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" ([REDMINE-2184](https://redmine.informationgrid.eu/issues/2184))
-- [Feature] [PORTAL] Portal: Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
 
 InGrid Installation Schleswig-Holstein
 
@@ -62,10 +62,10 @@ InGrid Installation Schleswig-Holstein
 
 MetaVer
 
-- [Bug] [PORTAL] Eingaben werden nicht ausreichend auf XSS Angriffe gefiltert ([REDMINE-2871](https://redmine.informationgrid.eu/issues/2871))
 - [Feature] [IGE] IGE-Tabelle Vorschaugrafik ([REDMINE-2832](https://redmine.informationgrid.eu/issues/2832))
 - [Feature] [PORTAL] ReDesign MetaVer ([REDMINE-1564](https://redmine.informationgrid.eu/issues/1564))
 - [Feature] [PORTAL] Profilerstellung für HMDK Installation ([REDMINE-1523](https://redmine.informationgrid.eu/issues/1523))
+- [Bug] [PORTAL] Eingaben werden nicht ausreichend auf XSS Angriffe gefiltert ([REDMINE-2871](https://redmine.informationgrid.eu/issues/2871))
 
 NUMIS
 
@@ -74,13 +74,13 @@ NUMIS
 
 UVP
 
+- [Feature] [PORTAL] Verbesserung des Fehler Benachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
+- [Feature] [PORTAL] Icon im UVP-Portal einfügen ([REDMINE-2819](https://redmine.informationgrid.eu/issues/2819))
 - [Bug] [IGE] Verfahrensschritt kann nicht gelöscht werden ([REDMINE-2621](https://redmine.informationgrid.eu/issues/2621))
 - [Bug] [IGE] Urls von Downloads werden nicht richtig kodiert ([REDMINE-1460](https://redmine.informationgrid.eu/issues/1460))
 - [Bug] [PORTAL] Bauleitplanungsseite BB führt zu leeren Ergebnissen ([REDMINE-2667](https://redmine.informationgrid.eu/issues/2667))
 - [Bug] [IGE] Probleme mit dem Eintrag von "Gültig bis" ([REDMINE-2446](https://redmine.informationgrid.eu/issues/2446))
 - [Feature] [PORTAL] Kartenlegende, Hinweis, dass die Karte nur der Orientierung dient und keinen Bezug zu den Verfahren hat. ([REDMINE-1949](https://redmine.informationgrid.eu/issues/1949))
-- [Feature] [PORTAL] Verbesserung des Fehler Benachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
-- [Feature] [PORTAL] Icon im UVP-Portal einfügen ([REDMINE-2819](https://redmine.informationgrid.eu/issues/2819))
 
 ### Komponenten
 
