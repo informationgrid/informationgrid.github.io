@@ -13,7 +13,37 @@ Release 21.10.2021
 
 ### Wichtige Änderungen
 
-...
+#### Erweitertes Layout für BAW Datenrepository
+
+Das Portal-Layout vom BAW Datenrepository-Profil wurde aktualisiert. Für die Suchergebnisansicht und die "Karteikarte" in der Detailansicht wird zusätzlich "Zitat für diesen Datensatz" angezeigt.
+
+![Erweitertes Layout für BAW Datenrepository Suche](../images/5100_portal_baw-doi_layout_search.png "Erweitertes Layout für BAW Datenrepository Suche")
+<figcaption class="figcaption">Erweitertes Layout für BAW Datenrepository Suche</figcaption>
+
+![Erweitertes Layout für BAW Datenrepository Suche Detail](../images/5100_portal_baw-doi_layout_search-detail.png "Erweitertes Layout für BAW Datenrepository Suche Detail")
+<figcaption class="figcaption">Erweitertes Layout für BAW Datenrepository Suche Detail</figcaption>
+
+#### Verbesserung der Suche in den InGrid-Komponenten
+
+Folgende Verbesserungen an der InGrid-Suche wurden umgesetzt:
+
+##### Ersetzen des Decompound-Analyzer durch nGram-Analyzer
+Hierdurch werden auch Wortteile gefunden, die durch die bisherige Worttrennung nicht erfasst wurden.
+Durch die Kombination aus nGram- und Edge-nGram-Analyzer ist es möglich, Wortteile am Anfang des Wortes stärker zu gewichten als Wortteile die im Wort enthalten sind.
+    
+##### Booster für Suchfelder
+Durch den Boost auf Suchfelder können Ergebnisse abhängig davon, wo der Suchbegriff vorkommt, gewichtet werden.
+Die Standard-Einstellung ist:
+`title^10.0,title.edge_ngram^4.0,title.ngram^2.0,summary,summary.edge_ngram^0.4,summary.ngram^0.2,content^0.2,content.ngram^0.1`
+Damit wird der Titel stärker als die Beschreibung und die Beschreibung stärker als der sonstige Inhalt gewichtet. Der Suchbegriff als ganzes Wort wird stärker gewichtet als Wortanfang und Wortteile.
+**Achtung: Die Einstellung von durchsuchten Feldern und Boost kann in der Datei `application-default.properties` im Eintrag `elastic.indexSearchDefaultFields` überschrieben werden. Hier gemachte Angaben müssen gegebenenfalls angepasst werden.**
+    
+##### Zusätzliche Suche als Such-Phrase
+Durch die Suche als Such-Phrase ist es möglich, beispielsweise nach Titeln zu suchen, die Zeichen mit einer Sonderfunktion innerhalb der Suche haben (z.B. '-' für Negation oder ':' für die Feldsuche).
+Durch die Umstellung der Abfrage-Struktur wurde ebenfalls das Problem behoben, dass bei einer Suche mit Oder-Verknüpfung die Facettierung nicht korrekt funktioniert hat.
+    
+##### Zusätzliches Sortierkriterium
+Durch die Einführung eines zusätzlichen Hash-Feldes, das als sekundäres Sortierkriterium verwendet wird, entsteht bei Ergebnissen mit gleicher Relevanz im primären Sortierkriterium eine bessere Durchmischung der Ergebnisse aus verschiedenen Quellen.
 
 ### Liste der Änderungen
 
