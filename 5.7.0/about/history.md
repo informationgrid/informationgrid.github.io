@@ -13,23 +13,21 @@ Release 05.02.2021
 
 ### Liste der Änderungen
 
-InGrid
-
-- [Bug] [IGE] IGE: Feld "Konformität" / "geprüft mit" - Anzeige des Default-Wert nach Import ([REDMINE-2348](https://redmine.informationgrid.eu/issues/2348))
-- [Bug] [IGE] IGE: Label und Tooltip aktualisieren ([REDMINE-2338](https://redmine.informationgrid.eu/issues/2338))
-- [Bug] [IGE] IGE: Feld "Konformität" - Eintrag nicht bearbeitbar ([REDMINE-2337](https://redmine.informationgrid.eu/issues/2337))
+- [Bug] [IGE] Feld "Konformität" / "geprüft mit" - Anzeige des Default-Wert nach Import ([REDMINE-2348](https://redmine.informationgrid.eu/issues/2348))
+- [Bug] [IGE] Label und Tooltip aktualisieren ([REDMINE-2338](https://redmine.informationgrid.eu/issues/2338))
+- [Bug] [IGE] Feld "Konformität" - Eintrag nicht bearbeitbar ([REDMINE-2337](https://redmine.informationgrid.eu/issues/2337))
 - [Bug] [IGE] Feld "Vektorformat" - Beschriftung der Tabellenspalte Geometrietyp fehlerhaft ([REDMINE-2336](https://redmine.informationgrid.eu/issues/2336))
-- [Bug] [PORTAL] Portal: In Katalogdarstellung sollen nur Katalog mit Suchergebnissen dargestellt werden ([REDMINE-2303](https://redmine.informationgrid.eu/issues/2303))
+- [Bug] [PORTAL] In Katalogdarstellung sollen nur Katalog mit Suchergebnissen dargestellt werden ([REDMINE-2303](https://redmine.informationgrid.eu/issues/2303))
 - [Bug] [IGE] Bei einem Geodatensatzes sollen nur die Verweise vom Typ "Verweis zum Dienst" aus dem gekoppelten Geodatendienst für die Darstellung im Portal übernommen werd
   en. ([REDMINE-2228](https://redmine.informationgrid.eu/issues/2228))
 - [Bug] [PORTAL] Anzeige von Kurzbezeichnung ist in der Portal Detaildarstellung falsch, wenn eine AdV Produktgruppe angegeben wurden. ([REDMINE-2290](https://redmine.informationgrid.eu/issues/2290))
 - [Bug] [IPLUG-SNS] Editor - Verschlagwortungsassistent kann Text mit % nicht interpretieren ([REDMINE-2321](https://redmine.informationgrid.eu/issues/2321))
 
-NUMIS
+Profil NUMIS
 
 - [Bug] [INTERFACE-SEARCH] Keine Dowloads im ATOM Service Download Feed ([REDMINE-2340](https://redmine.informationgrid.eu/issues/2340))
 
-UVP
+Profil UVP
 
 - [Feature] [IGE] Optionale Indexierung von neg. Vorprüfungen ohne Raumbezug ([REDMINE-2346](https://redmine.informationgrid.eu/issues/2346))
 - [Feature] [IGE] Protokollierung von gelöschten Unterdokumenten ([REDMINE-2319](https://redmine.informationgrid.eu/issues/2319))
@@ -47,82 +45,81 @@ Release 19.01.2021
 
 ### Liste der Änderungen
 
-BAW Datenrepository
-
-- [Bug] [PORTAL] Portal: Verweise von Eltern-Datensatz werden auch im Kind-Datensatz gezeigt ([REDMINE-2296](https://redmine.informationgrid.eu/issues/2296))
-- [Bug] [PORTAL] Portal: Mehrfache Einträge in der Katalogansicht ([REDMINE-2288](https://redmine.informationgrid.eu/issues/2288))
-- [Feature] [PORTAL] Portal: Links zu den gekoppelten Dienste sollen von "Weitern Verweise" entfernt werden ([REDMINE-2286](https://redmine.informationgrid.eu/issues/2286))
-- [Feature] [PORTAL] Portal: Doktortitel vom Datensatz-Zitat entfernen. ([REDMINE-2285](https://redmine.informationgrid.eu/issues/2285))
-- [Feature] [IGE] Export von Metadaten im DataCite-Format als Dateidownload implementieren ([REDMINE-2225](https://redmine.informationgrid.eu/issues/2225))
-- [Feature] [PORTAL] Portal: Detailansicht anpassen ([REDMINE-2193](https://redmine.informationgrid.eu/issues/2193))
-- [Feature] [PORTAL] Portal: Mehrsprachigkeit ([REDMINE-2190](https://redmine.informationgrid.eu/issues/2190))
-- [Feature] [IGE] IGE: Angabe von Querverweisen in der Rubrik "Verweise" ermöglichen ([REDMINE-2189](https://redmine.informationgrid.eu/issues/2189))
-- [Feature] [IGE] IGE: Profil für BAW-Datenrepository erstellen ([REDMINE-2186](https://redmine.informationgrid.eu/issues/2186))
-- [Feature] [PORTAL] Portal: Profil für BAW-Datenrepository erstellen ([REDMINE-2183](https://redmine.informationgrid.eu/issues/2183))
-- [Feature] [Datenrepository] Datenrepository für Daten mit DOIs ([REDMINE-2171](https://redmine.informationgrid.eu/issues/2171))
-
-BKG
-
-- [Feature] [PORTAL] BKG-MIS: WebDesign ändern ([REDMINE-1935](https://redmine.informationgrid.eu/issues/1935))
-- [Support] [Code-Repo] Code-Repo: Codelist 10003 und 10004 erweitern ([REDMINE-2278](https://redmine.informationgrid.eu/issues/2278))
-
-InGrid
-
-- [Bug] [IGE] IGE: Hilfetext für Feld "Lagegenauigkeit" ist falsch ([REDMINE-2305](https://redmine.informationgrid.eu/issues/2305))
-- [Bug] [PORTAL] Portal: In der dockerbasierten Installation soll das DB Passwort nur einmal angegeben werden müssen. ([REDMINE-2283](https://redmine.informationgrid.eu/issues/2283))
+- [Bug] [IGE] Hilfetext für Feld "Lagegenauigkeit" ist falsch ([REDMINE-2305](https://redmine.informationgrid.eu/issues/2305))
+- [Bug] [PORTAL] In der dockerbasierten Installation soll das DB Passwort nur einmal angegeben werden müssen. ([REDMINE-2283](https://redmine.informationgrid.eu/issues/2283))
 - [Bug] [IGE] UVP-Katalog: Vorschau und Druckansicht funktioniert nicht ([REDMINE-2282](https://redmine.informationgrid.eu/issues/2282))
-- [Bug] [IGE] IGE: Im Duplikatcheck funktioniert der Sprung in die Baumstruktur nicht mehr.  ([REDMINE-2261](https://redmine.informationgrid.eu/issues/2261))
+- [Bug] [IGE] Im Duplikatcheck funktioniert der Sprung in die Baumstruktur nicht mehr.  ([REDMINE-2261](https://redmine.informationgrid.eu/issues/2261))
 - [Bug] [IPLUG_IGE] Fehler bei der ISO-Erstellung bei DOI ([REDMINE-2241](https://redmine.informationgrid.eu/issues/2241))
 - [Bug] [IPLUG-OPENSEARCH] iPlug speichert Ranking-Information nicht ab ([REDMINE-2239](https://redmine.informationgrid.eu/issues/2239))
 - [Bug] [IGE] Problem beim Verschieben von "freien Adressen" ! Verschieben überhaupt möglich ? ([REDMINE-2213](https://redmine.informationgrid.eu/issues/2213))
 - [Bug] [SYSTEM] Redmine-Links in changes-report falsch ([REDMINE-2211](https://redmine.informationgrid.eu/issues/2211))
 - [Bug] [IPLUG_IGE] Import von ISO-Metadaten inklusive Hierarchien ([REDMINE-2194](https://redmine.informationgrid.eu/issues/2194))
-- [Bug] [IGE] IGE: Ungültige Baumanzeige beim erstellen eines neuen Ordners ([REDMINE-2114](https://redmine.informationgrid.eu/issues/2114))
-- [Bug] [IGE] IGE: XML-Encoding in Dienst-MD fehlerhaft bei "Open Data" und "Veröffentlichung gemäß HmbTG" ([REDMINE-1954](https://redmine.informationgrid.eu/issues/1954))
+- [Bug] [IGE] Ungültige Baumanzeige beim erstellen eines neuen Ordners ([REDMINE-2114](https://redmine.informationgrid.eu/issues/2114))
+- [Bug] [IGE] XML-Encoding in Dienst-MD fehlerhaft bei "Open Data" und "Veröffentlichung gemäß HmbTG" ([REDMINE-1954](https://redmine.informationgrid.eu/issues/1954))
 - [Bug] [IGE] Fehlende Kontexthilfe in Raster/Gridformat ([REDMINE-2265](https://redmine.informationgrid.eu/issues/2265))
 - [Bug] [IGE] Erben von Verweisen beinhaltet auch Vorschaugrafiken ([REDMINE-2247](https://redmine.informationgrid.eu/issues/2247))
 - [Bug] [IPLUG_IGE] ISO-XML: Angabe des DCP-Elements unzureichend abgebildet ([REDMINE-2245](https://redmine.informationgrid.eu/issues/2245))
 - [Bug] [IGE] Opendata Kategorien werden im Portal in unterschiedlicher Reihenfolge wie im IGE angegeben dargestellt. ([REDMINE-2236](https://redmine.informationgrid.eu/issues/2236))
 - [Bug] [IGE] Mapping und Anzeige der Spezifikation von Datenformat ([REDMINE-2232](https://redmine.informationgrid.eu/issues/2232))
 - [Bug] [MAPCLIENT] Hinzufügen von Karten in der Admin-GUI des Mapclients funktioniert nicht ([REDMINE-2230](https://redmine.informationgrid.eu/issues/2230))
-- [Bug] [PORTAL] PORTAL: Bereinigung der benutzerspezifischen Portal-Startseiten ([REDMINE-2227](https://redmine.informationgrid.eu/issues/2227))
-- [Bug] [PORTAL] PORTAL: Installation über Installer aktualisiert die Tomcat-Konfiguration nicht ([REDMINE-2216](https://redmine.informationgrid.eu/issues/2216))
+- [Bug] [PORTAL] Bereinigung der benutzerspezifischen Portal-Startseiten ([REDMINE-2227](https://redmine.informationgrid.eu/issues/2227))
+- [Bug] [PORTAL] Installation über Installer aktualisiert die Tomcat-Konfiguration nicht ([REDMINE-2216](https://redmine.informationgrid.eu/issues/2216))
 - [Bug] [IGE] Editor: Allererstes Anzeigen von Objekt liefert nicht alle Inhalte ! "Zugriffsbeschränkungen" fehlen ... ([REDMINE-2206](https://redmine.informationgrid.eu/issues/2206))
-- [Bug] [PORTAL] Portal: Zeige in Karte Link wird trotz Kennzeichnung "geschützter Dienst" ([REDMINE-2199](https://redmine.informationgrid.eu/issues/2199))
+- [Bug] [PORTAL] Zeige in Karte Link wird trotz Kennzeichnung "geschützter Dienst" ([REDMINE-2199](https://redmine.informationgrid.eu/issues/2199))
 - [Bug] [COMMUNICATION-GATEWAY] IGE nicht mehr erreichbar nach Exception in der communication ([REDMINE-2197](https://redmine.informationgrid.eu/issues/2197))
 - [Bug] [IGE] Eingabe eines Umringpolygons (WKT) wird in IGE nicht in Druckansicht und Vergleichsansicht berücksichtigt. ([REDMINE-2195](https://redmine.informationgrid.eu/issues/2195))
-- [Bug] [CODELIST REPOSITORY] Codelist Rep.: Korrektur der ISO Bezeichnung von "Dienst für den Zugriff auf Objektarten" ([REDMINE-2093](https://redmine.informationgrid.eu/issues/2093))
-- [Feature] [MAPCLIENT] Kartenclient - Admin GUI: Konkurierende Zugriffe absichern ([REDMINE-2284](https://redmine.informationgrid.eu/issues/2284))
+- [Bug] [CODELIST REPOSITORY] Korrektur der ISO Bezeichnung von "Dienst für den Zugriff auf Objektarten" ([REDMINE-2093](https://redmine.informationgrid.eu/issues/2093))
+- [Feature] [MAPCLIENT] Admin GUI: Konkurierende Zugriffe absichern ([REDMINE-2284](https://redmine.informationgrid.eu/issues/2284))
 - [Feature] [IGE] Umbenennung des IGE-Feldes Vorschaugrafik-Dateiname ([REDMINE-2198](https://redmine.informationgrid.eu/issues/2198))
-- [Feature] [IGE] IGE: neue MD-Felder - Qualitätsangaben erweitern ([REDMINE-1783](https://redmine.informationgrid.eu/issues/1783))
-- [Feature] [IPLUG_IGE] IGE: Abgabe von gekoppelten Daten über den Dienste-Datensatz, wenn Kopplung über Kataloggrenzen hinweg erfolgt ([REDMINE-1746](https://redmine.informationgrid.eu/issues/1746))
+- [Feature] [IGE] Neue MD-Felder - Qualitätsangaben erweitern ([REDMINE-1783](https://redmine.informationgrid.eu/issues/1783))
+- [Feature] [IPLUG_IGE] Abgabe von gekoppelten Daten über den Dienste-Datensatz, wenn Kopplung über Kataloggrenzen hinweg erfolgt ([REDMINE-1746](https://redmine.informationgrid.eu/issues/1746))
 - [Feature] [IBUS] iPlug IDs sollen auch Großbuchstaben enthalten können ([REDMINE-1566](https://redmine.informationgrid.eu/issues/1566))
 - [Feature] [IGE] Kontexthilfe für freie Schlagworte ([REDMINE-2231](https://redmine.informationgrid.eu/issues/2231))
 - [Feature] [PORTAL] Knoten "Freie Adressen" auch in Portal Katalogansicht aufnehmen ([REDMINE-2212](https://redmine.informationgrid.eu/issues/2212))
-- [Feature] [MAPCLIENT] Mapclient Admin-GUI: Account Passwörter verschlüsseln ([REDMINE-2207](https://redmine.informationgrid.eu/issues/2207))
+- [Feature] [MAPCLIENT] Admin-GUI: Account Passwörter verschlüsseln ([REDMINE-2207](https://redmine.informationgrid.eu/issues/2207))
 - [Feature] [PORTAL] Verbesserung der Barrierefreiheit des Portals ([REDMINE-1810](https://redmine.informationgrid.eu/issues/1810))
 - [Feature] [IGE] Löschen des Eintrags im Feld "Identifikator der Datenquelle" beim Kopieren von Datensätzen ([REDMINE-1581](https://redmine.informationgrid.eu/issues/1581))
 - [Feature] [IGE] Überarbeitung der Verwendung des CI_OnLineFunctionCode bei der Erfassung von Verweisen ([REDMINE-1367](https://redmine.informationgrid.eu/issues/1367))
 
-InGrid Installation Saarland
+Profil BAW Datenrepository
+
+- [Bug] [PORTAL] Verweise von Eltern-Datensatz werden auch im Kind-Datensatz gezeigt ([REDMINE-2296](https://redmine.informationgrid.eu/issues/2296))
+- [Bug] [PORTAL] Mehrfache Einträge in der Katalogansicht ([REDMINE-2288](https://redmine.informationgrid.eu/issues/2288))
+- [Feature] [PORTAL] Links zu den gekoppelten Dienste sollen von "Weitern Verweise" entfernt werden ([REDMINE-2286](https://redmine.informationgrid.eu/issues/2286))
+- [Feature] [PORTAL] Doktortitel vom Datensatz-Zitat entfernen. ([REDMINE-2285](https://redmine.informationgrid.eu/issues/2285))
+- [Feature] [IGE] Export von Metadaten im DataCite-Format als Dateidownload implementieren ([REDMINE-2225](https://redmine.informationgrid.eu/issues/2225))
+- [Feature] [PORTAL] Detailansicht anpassen ([REDMINE-2193](https://redmine.informationgrid.eu/issues/2193))
+- [Feature] [PORTAL] Mehrsprachigkeit ([REDMINE-2190](https://redmine.informationgrid.eu/issues/2190))
+- [Feature] [IGE] Angabe von Querverweisen in der Rubrik "Verweise" ermöglichen ([REDMINE-2189](https://redmine.informationgrid.eu/issues/2189))
+- [Feature] [IGE] Profil für BAW-Datenrepository erstellen ([REDMINE-2186](https://redmine.informationgrid.eu/issues/2186))
+- [Feature] [PORTAL] Profil für BAW-Datenrepository erstellen ([REDMINE-2183](https://redmine.informationgrid.eu/issues/2183))
+- [Feature] [Datenrepository] Datenrepository für Daten mit DOIs ([REDMINE-2171](https://redmine.informationgrid.eu/issues/2171))
+
+Profil BKG
+
+- [Feature] [PORTAL] BKG-MIS: WebDesign ändern ([REDMINE-1935](https://redmine.informationgrid.eu/issues/1935))
+- [Support] [Code-Repo] Codelist 10003 und 10004 erweitern ([REDMINE-2278](https://redmine.informationgrid.eu/issues/2278))
+
+Profil Installation Saarland
 
 - [Bug] [IGE] Bearbeitung des Kommunalen Datenkatalog ([REDMINE-2147](https://redmine.informationgrid.eu/issues/2147))
 
-MetaVer
+Profil MetaVer
 
 - [Feature] [Codelist Repository] Anpassung der Codeliste "Provider" (List-ID 11) ([REDMINE-2167](https://redmine.informationgrid.eu/issues/2167))
 
-UVP
+Profil nokis2ingrid
+
+- [Feature] [DOKU] Erstellung einer User-Dokumentation ([REDMINE-2174](https://redmine.informationgrid.eu/issues/2174))
+
+Profil UVP
 
 - [Bug] [MAPCLIENT] Karte bei Raumbezugssuche stark verzögert ([REDMINE-2260](https://redmine.informationgrid.eu/issues/2260))
 - [Bug] [IGE] Ein doppelter Punkt und ein fehlender Punkt in der Liste der UVP-pflichtigen Vorhaben  ([REDMINE-2254](https://redmine.informationgrid.eu/issues/2254))
-- [Bug] [IGE] IGE: Upload von gleicher Datei in anderem Datensatz wird unter falscher UUID abgelegt ([REDMINE-1599](https://redmine.informationgrid.eu/issues/1599))
+- [Bug] [IGE] Upload von gleicher Datei in anderem Datensatz wird unter falscher UUID abgelegt ([REDMINE-1599](https://redmine.informationgrid.eu/issues/1599))
 - [Bug] [IGE] Fehler beim Umgang von "gültig bis" Daten und referenzierten Uploads (ein Dokument wird in mehreren Verfahren genutzt) ([REDMINE-1308](https://redmine.informationgrid.eu/issues/1308))
 - [Bug] [IGE] Das Feld Metadaten-Datum darf im UVP Profil nicht angezeigt werden ([REDMINE-2280](https://redmine.informationgrid.eu/issues/2280))
 
-nokis2ingrid
-
-- [Feature] [DOKU] Erstellung einer User-Dokumentation ([REDMINE-2174](https://redmine.informationgrid.eu/issues/2174))
 
 ### Komponenten
 
