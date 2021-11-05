@@ -32,10 +32,10 @@ Hierdurch werden auch Wortteile gefunden, die durch die bisherige Worttrennung n
 Durch die Kombination aus nGram- und Edge-nGram-Analyzer ist es möglich, Wortteile am Anfang des Wortes stärker zu gewichten als Wortteile die im Wort enthalten sind.
     
 ##### Booster für Suchfelder
-Durch den Boost auf Suchfelder können Ergebnisse abhängig davon, wo der Suchbegriff vorkommt, gewichtet werden.
+Durch den Boost auf Suchfelder können Ergebnisse abhängig davon, wo der Suchbegriff vorkommt, gewichtet werden.<br>
 Die Standard-Einstellung ist:
 `title^10.0,title.edge_ngram^4.0,title.ngram^2.0,summary,summary.edge_ngram^0.4,summary.ngram^0.2,content^0.2,content.ngram^0.1`
-Damit wird der Titel stärker als die Beschreibung und die Beschreibung stärker als der sonstige Inhalt gewichtet. Der Suchbegriff als ganzes Wort wird stärker gewichtet als Wortanfang und Wortteile.
+Damit wird der Titel stärker als die Beschreibung und die Beschreibung stärker als der sonstige Inhalt gewichtet. Der Suchbegriff als ganzes Wort wird stärker gewichtet als Wortanfang und Wortteile.<br>
 **Achtung: Die Einstellung von durchsuchten Feldern und Boost kann in der Datei `application-default.properties` im Eintrag `elastic.indexSearchDefaultFields` überschrieben werden. Hier gemachte Angaben müssen gegebenenfalls angepasst werden.**
     
 ##### Zusätzliche Suche als Such-Phrase
@@ -47,19 +47,6 @@ Durch die Einführung eines zusätzlichen Hash-Feldes, das als sekundäres Sorti
 
 ### Liste der Änderungen
 
-BAW Datenrepository
-
-- [Feature] [PORTAL] Language-Switcher Portlet aktivieren ([REDMINE-2790](https://redmine.informationgrid.eu/issues/2790))
-- [Feature] [PORTAL] Portal-Layout für das baw_doi Profil aktualisieren ([REDMINE-2747](https://redmine.informationgrid.eu/issues/2747))
-- [Feature] [PORTAL] BAW Datenrepository ([REDMINE-2664](https://redmine.informationgrid.eu/issues/2664))
-- [Bug] [PORTAL] Style von Textboxen verbessern ([REDMINE-2323](https://redmine.informationgrid.eu/issues/2323))
-
-BKG
-
-- [Bug] [IGE] Zeichenkodierung fehlerhaft ([REDMINE-2822](https://redmine.informationgrid.eu/issues/2822))
-
-InGrid
-
 - [Feature] [IGE] Namensnennung 3.0 Deutschland (CC BY 3.0 DE) in Codeliste 6500 aufnehmen ([REDMINE-2837](https://redmine.informationgrid.eu/issues/2837))
 - [Feature] [IGE] transferOptions / Abfolge in xml - Ergänzende Anpassungen ([REDMINE-2600](https://redmine.informationgrid.eu/issues/2600))
 - [Feature] [IPLUG_IGE] Extern-gekoppelte Datensätze werden regelmäßig analysiert ([REDMINE-2389](https://redmine.informationgrid.eu/issues/2389))
@@ -67,38 +54,49 @@ InGrid
 - [Feature] [SYSTEM] Umsetzung Verbesserung der Suche in den InGrid Komponenten ([REDMINE-2085](https://redmine.informationgrid.eu/issues/2085))
 - [Feature] [PORTAL] Aktualisierung TOMCAT Version ([REDMINE-2926](https://redmine.informationgrid.eu/issues/2926))
 - [Feature] [PORTAL] Verstecken der Tomcat Version in Tomcat Fehlerseiten. ([REDMINE-2925](https://redmine.informationgrid.eu/issues/2925))
-- [Feature] [PORTAL] PORTAL: Katalogansicht dynamisch aufbauen (ohne Reload der Portalseite) ([REDMINE-2610](https://redmine.informationgrid.eu/issues/2610))
+- [Feature] [PORTAL] Katalogansicht dynamisch aufbauen (ohne Reload der Portalseite) ([REDMINE-2610](https://redmine.informationgrid.eu/issues/2610))
 - [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" ([REDMINE-2184](https://redmine.informationgrid.eu/issues/2184))
-- [Feature] [PORTAL] Portal: Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
+- [Feature] [PORTAL] Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
 - [Bug] [IGE] Fehler bei Upload von Vorschaugrafiken ([REDMINE-2920](https://redmine.informationgrid.eu/issues/2920))
-- [Bug] [IGE] IGE: Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
-- [Bug] [IGE] IGE: Fehler beim Exportieren einer Codeliste ([REDMINE-2489](https://redmine.informationgrid.eu/issues/2489))
+- [Bug] [IGE] Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
+- [Bug] [IGE] Fehler beim Exportieren einer Codeliste ([REDMINE-2489](https://redmine.informationgrid.eu/issues/2489))
 - [Bug] [IGE] Veröffentlichung von Datensätzen mit Veröffentlichung "Internet" unter Ordner mit Veröffentlichung "amtsintern" möglich. ([REDMINE-2096](https://redmine.informationgrid.eu/issues/2096))
-- [Bug] [IGE] IGE: Feld Historie bei Geodatendiensten wird nicht importiert. ([REDMINE-1845](https://redmine.informationgrid.eu/issues/1845))
-- [Bug] [IPLUG-SE] iPlug SE: Einschränkung der Suche nach domain (Parameter "site") funktioniert nicht ([REDMINE-1477](https://redmine.informationgrid.eu/issues/1477))
-- [Bug] [IPLUG-SE] iPlug-SE: Aufruf beim Kopieren von Instanzen liefert falsches Resultat ([REDMINE-1464](https://redmine.informationgrid.eu/issues/1464))
-- [Bug] [IPLUG-SE] iPlug-SE: Bestimmte URLs führen zu Problemen beim Ausführen eines Crawls ([REDMINE-1286](https://redmine.informationgrid.eu/issues/1286))
+- [Bug] [IGE] Feld Historie bei Geodatendiensten wird nicht importiert. ([REDMINE-1845](https://redmine.informationgrid.eu/issues/1845))
+- [Bug] [IPLUG-SE] Einschränkung der Suche nach domain (Parameter "site") funktioniert nicht ([REDMINE-1477](https://redmine.informationgrid.eu/issues/1477))
+- [Bug] [IPLUG-SE] Aufruf beim Kopieren von Instanzen liefert falsches Resultat ([REDMINE-1464](https://redmine.informationgrid.eu/issues/1464))
+- [Bug] [IPLUG-SE] Bestimmte URLs führen zu Problemen beim Ausführen eines Crawls ([REDMINE-1286](https://redmine.informationgrid.eu/issues/1286))
 - [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle im MapClient beheben ([REDMINE-2924](https://redmine.informationgrid.eu/issues/2924))
-- [Bug] [IGE] IGE: Lagegenauigkeit wird nicht importiert ([REDMINE-2755](https://redmine.informationgrid.eu/issues/2755))
+- [Bug] [IGE] Lagegenauigkeit wird nicht importiert ([REDMINE-2755](https://redmine.informationgrid.eu/issues/2755))
 - [Bug] [IPLUG_IGE] ISO-XML: Angabe des DCP-Elements unzureichend abgebildet ([REDMINE-2245](https://redmine.informationgrid.eu/issues/2245))
 
-InGrid Installation Schleswig-Holstein
+Profil BAW Datenrepository
 
-- [Bug] [PORTAL] Kontaktformular: Die E-Mail des Nutzers soll im REPLY-TO Header verwendet werden ([REDMINE-2804](https://redmine.informationgrid.eu/issues/2804))
+- [Feature] [PORTAL] Language-Switcher Portlet aktivieren ([REDMINE-2790](https://redmine.informationgrid.eu/issues/2790))
+- [Feature] [PORTAL] Portal-Layout für das baw_doi Profil aktualisieren ([REDMINE-2747](https://redmine.informationgrid.eu/issues/2747))
+- [Feature] [PORTAL] BAW Datenrepository ([REDMINE-2664](https://redmine.informationgrid.eu/issues/2664))
+- [Bug] [PORTAL] Style von Textboxen verbessern ([REDMINE-2323](https://redmine.informationgrid.eu/issues/2323))
 
-MetaVer
+Profil BKG
+
+- [Bug] [IGE] Zeichenkodierung fehlerhaft ([REDMINE-2822](https://redmine.informationgrid.eu/issues/2822))
+
+Profil MetaVer
 
 - [Feature] [IGE] IGE-Tabelle Vorschaugrafik ([REDMINE-2832](https://redmine.informationgrid.eu/issues/2832))
 - [Feature] [PORTAL] ReDesign MetaVer ([REDMINE-1564](https://redmine.informationgrid.eu/issues/1564))
 - [Feature] [PORTAL] Profilerstellung für HMDK Installation ([REDMINE-1523](https://redmine.informationgrid.eu/issues/1523))
 - [Bug] [PORTAL] Eingaben werden nicht ausreichend auf XSS Angriffe gefiltert ([REDMINE-2871](https://redmine.informationgrid.eu/issues/2871))
 
-NUMIS
+Profil NUMIS
 
 - [Feature] [MESSWERTECLIENT] "Zurück zur Kartenansicht" zeigt nicht den letzten Kartenausschnitt an ([REDMINE-2609](https://redmine.informationgrid.eu/issues/2609))
 - [Feature] [PORTAL] NUMIS-/UVP-Portal: Erkennung von Brute-Force-Attacken im Anmeldeprozess ([REDMINE-1343](https://redmine.informationgrid.eu/issues/1343))
 
-UVP
+Profil Umweltportal Schleswig-Holstein
+
+- [Bug] [PORTAL] Kontaktformular: Die E-Mail des Nutzers soll im REPLY-TO Header verwendet werden ([REDMINE-2804](https://redmine.informationgrid.eu/issues/2804))
+
+Profil UVP
 
 - [Feature] [PORTAL] Verbesserung des Fehler Benachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
 - [Feature] [PORTAL] Icon im UVP-Portal einfügen ([REDMINE-2819](https://redmine.informationgrid.eu/issues/2819))
@@ -107,6 +105,7 @@ UVP
 - [Bug] [PORTAL] Bauleitplanungsseite BB führt zu leeren Ergebnissen ([REDMINE-2667](https://redmine.informationgrid.eu/issues/2667))
 - [Bug] [IGE] Probleme mit dem Eintrag von "Gültig bis" ([REDMINE-2446](https://redmine.informationgrid.eu/issues/2446))
 - [Feature] [PORTAL] Kartenlegende, Hinweis, dass die Karte nur der Orientierung dient und keinen Bezug zu den Verfahren hat. ([REDMINE-1949](https://redmine.informationgrid.eu/issues/1949))
+
 
 ### Komponenten
 
