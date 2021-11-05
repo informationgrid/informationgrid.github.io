@@ -110,6 +110,7 @@ UVP
 
 ### Komponenten
 
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.10.0/))
 - IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.10.0/))
 - INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.10.0/))
 - IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.10.0/))
