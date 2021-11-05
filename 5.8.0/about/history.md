@@ -14,8 +14,6 @@ Release 03.10.2021
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Feature] [PORTAL] Verstecken der Tomcat Version in Tomcat Fehlerseiten. ([REDMINE-2925](https://redmine.informationgrid.eu/issues/2925))
 - [Bug] [PORTAL] IGE: Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
 - [Bug] [PORTAL] SSRF mit XML External Entity (XXE) Schwachstelle im MapClient beheben ([REDMINE-2924](https://redmine.informationgrid.eu/issues/2924))
@@ -31,8 +29,6 @@ Release 03.08.2021
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Bug] [IGE] Verfahrensschritt kann nicht gelöscht werden ([REDMINE-2621](https://redmine.informationgrid.eu/issues/2621))
 
 ### Komponenten
@@ -45,14 +41,12 @@ Release 02.07.2021
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Bug] [MAPCLIENT] Karte: GetFeatureInfo enthält unnötige Formatierungen "br" ([REDMINE-2563](https://redmine.informationgrid.eu/issues/2563))
 - [Bug] [IGE] Katalogeinstellungen - Checkbox "Schlüsselkatalog" kommt doppelt vor ([REDMINE-2543](https://redmine.informationgrid.eu/issues/2543))
 - [Bug] [IGE] Engl. Katalog - Maßstabsausgabe im abstract nicht übersetzt ([REDMINE-2542](https://redmine.informationgrid.eu/issues/2542))
 - [Bug] [IGE] Pflichtfelder von Digitale Repräsentation und Datenformat wenn INSPIRE/nicht konform ([REDMINE-2521](https://redmine.informationgrid.eu/issues/2521))
 
-BKG
+Profil BKG
 
 - [Bug] [IGE] Engl.: Werteingabe unvollständig nach ISO-XML ([REDMINE-2567](https://redmine.informationgrid.eu/issues/2567))
 - [Bug] [IGE] Funktion "Suchbegriffe" funktioniert nicht ([REDMINE-2564](https://redmine.informationgrid.eu/issues/2564))
@@ -69,8 +63,6 @@ Release 14.06.2021
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Bug] [IGE] Stabilisierung der automatischen DB Erstellung
 - [Bug] [IGE] Stabilisierung der Verschlagwortung während des Imports
 
@@ -85,13 +77,11 @@ Release 10.06.2021
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Feature] [MAPCLIENT] GPX import - Beschreibung fehlt ([REDMINE-2519](https://redmine.informationgrid.eu/issues/2519))
 - [Bug] [MAPCLIENT] Identifier der Datenquelle in Verbindung mit Anzeige des Kartenlayers ([REDMINE-2460](https://redmine.informationgrid.eu/issues/2460))
 - [Bug] [IGE] Hamburger Logik nach Update auf 5.8.1 für LGV und Dataport ([REDMINE-2514](https://redmine.informationgrid.eu/issues/2514))
 
-UVP
+Profil UVP
 
 - [Bug] [PORTAL] Fehler bei Archivierung von Dateien ([REDMINE-2526](https://redmine.informationgrid.eu/issues/2526))
 
@@ -104,8 +94,6 @@ UVP
 Release 26.05.2021
 
 ### Liste der Änderungen
-
-InGrid
 
 - [Bug] [PORTAL] Popup öffnet sich in Chrome 90 nicht mehr ([REDMINE-2493](https://redmine.informationgrid.eu/issues/2493))
 - [Bug] [IGE] MD-Import verbessern - Vorschaubild-Beschreibung  ([REDMINE-2488](https://redmine.informationgrid.eu/issues/2488))
@@ -121,21 +109,21 @@ InGrid
 - [Feature] [IGE] Erfassung von Metadaten in English ([REDMINE-967](https://redmine.informationgrid.eu/issues/967))
 - [Feature] [IPLUG_IGE] Dokumentation von Voraussetzungen in den WMS Capabilities für die automatische Erzeugung von Geodatensätzen aus Layerinformationen durch den GetCapabilities Assistent ([REDMINE-2372](https://redmine.informationgrid.eu/issues/2372))
 
-BKG
+Profil BKG
 
 - [Feature] [IGE] Engl.: Funktionalität "Freie Schlagworte" autom. einem Thesaurus zuordnen - Anpassung an engl. Sprache ([REDMINE-2463](https://redmine.informationgrid.eu/issues/2463))
 - [Feature] [PORTAL] Portalanzeige: Filteranzeige ergänzen - Anwendungen ([REDMINE-2300](https://redmine.informationgrid.eu/issues/2300))
 
-InGrid Installation Schleswig-Holstein
-
-- [Bug] [PORTAL] Aktive Seite ist schlecht erkennbar beim Paging in Ergebnisliste ([REDMINE-2457](https://redmine.informationgrid.eu/issues/2457))
-
-MetaVer
+Profil MetaVer
 
 - [Feature] [CSW] In der CSW Schnittstelle für das Hamburger Transparenzportal soll der alte GML Namespace verwendet werden ([REDMINE-2505](https://redmine.informationgrid.eu/issues/2505))
 - [Feature] [PORTAL] Anpassung Kontakt-Formular MetaVer Test für Zammad ([REDMINE-2461](https://redmine.informationgrid.eu/issues/2461))
 
-UVP
+Profil Umweltportal Schleswig-Holstein
+
+- [Bug] [PORTAL] Aktive Seite ist schlecht erkennbar beim Paging in Ergebnisliste ([REDMINE-2457](https://redmine.informationgrid.eu/issues/2457))
+
+Profil UVP
 
 - [Bug] [PORTAL] Anmeldeseite wird von Suchmaschinen indexiert ([REDMINE-2462](https://redmine.informationgrid.eu/issues/2462))
 
@@ -185,8 +173,6 @@ Dafür wurde auch das [Kontaktformular auf www.uvp-verbund.de](https://www.uvp-v
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Bug] [IBUS] Index nach Indizierung nicht durchsuchbar ([REDMINE-2385](https://redmine.informationgrid.eu/issues/2385))
 - [Bug] [IGE] Paging/ Anzeige von Suchergebnismengen nicht korrekt ([REDMINE-2378](https://redmine.informationgrid.eu/issues/2378))
 - [Bug] [IPLUG-SNS] Chronik liefert manchmal keine Ergebnisse ([REDMINE-2355](https://redmine.informationgrid.eu/issues/2355))
@@ -210,7 +196,7 @@ InGrid
 - [Feature] [IBUS] Verwaltung des Konfigurationsindex ([REDMINE-2342](https://redmine.informationgrid.eu/issues/2342))
 - [Feature] [PORTAL] Aktualisierung TOMCAT auf aktuellere Version ([REDMINE-2294](https://redmine.informationgrid.eu/issues/2294))
 
-InGrid Installation Rheinland-Pfalz
+Profil Installation Rheinland-Pfalz
 
 - [Feature] [PORTAL] PortalU RLP - Umstellung auf neues Design ([REDMINE-2185](https://redmine.informationgrid.eu/issues/2185))
 
@@ -218,18 +204,18 @@ InGrid Installation Schleswig-Holstein
 
 - [Feature] [PORTAL] Erstellung Portal-Profil ([REDMINE-2256](https://redmine.informationgrid.eu/issues/2256))
 
-MetaVer
+Profil MetaVer
 
 - [Feature] [PORTAL] Anpassung Kontakt-Formular UVP Test für Zammad ([REDMINE-2345](https://redmine.informationgrid.eu/issues/2345))
 
-NUMIS
+Profil NUMIS
 
 - [Bug] [INTERFACE-SEARCH] Bei Download-Diensten werden die Downloaddateien und Nutzungsbedingungen nicht im ATOM-Client/Feed angezeigt, wenn die dargestellten Daten per GetRecordById-Request verkoppelt sind ([REDMINE-2366](https://redmine.informationgrid.eu/issues/2366))
 - [Bug] [PORTAL] Keine Legende beim Ausdruck eines Kartenausschnitts ([REDMINE-2399](https://redmine.informationgrid.eu/issues/2399))
 - [Bug] [INTERFACE-SEARCH] Keine Dowloads im ATOM Service Download Feed ([REDMINE-2340](https://redmine.informationgrid.eu/issues/2340))
 - [Bug] [PORTAL] Anpassung Darstellung Teaser Boxen ([REDMINE-2315](https://redmine.informationgrid.eu/issues/2315))
 
-UVP
+Profil UVP
 
 - [Bug] [PORTAL] Suchergebnisseite enthält "Mitgliedsgemeinden:", auch wenn keine vorhanden sind ([REDMINE-2435](https://redmine.informationgrid.eu/issues/2435))
 - [Bug] [CODELIST-REPOSITORY] In den UVP Nummern von HH (Codeliste 9001) sind auch UVP Nummern aus Sachsen enthalten ([REDMINE-2365](https://redmine.informationgrid.eu/issues/2365))
