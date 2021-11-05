@@ -14,34 +14,32 @@ Release 11.10.2021
 
 ### Liste der Änderungen
 
-InGrid
-
-- [Feature] [PORTAL] Portal: Weitere Anpassungen am HMDK Profil ([REDMINE-1523](https://redmine.informationgrid.eu/issues/1523))
-- [Feature] [PORTAL] Portal: Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
+- [Feature] [PORTAL] Weitere Anpassungen am HMDK Profil ([REDMINE-1523](https://redmine.informationgrid.eu/issues/1523))
+- [Feature] [PORTAL] Erkennung von Brute-Force-Attacken in Anmeldeprozess von Portal ([REDMINE-1313](https://redmine.informationgrid.eu/issues/1313))
 - [Feature] [PORTAL] Aktualisierung TOMCAT Version auf 9.0.53 ([REDMINE-2926](https://redmine.informationgrid.eu/issues/2926))
 - [Feature] [PORTAL] Verstecken der Tomcat Version in Tomcat Fehlerseiten ([REDMINE-2925](https://redmine.informationgrid.eu/issues/2925))
 - [Feature] [IGE] IGE-Tabelle Vorschaugrafik ([REDMINE-2832](https://redmine.informationgrid.eu/issues/2832))
-- [Feature] [IGE] IGE: Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" ([REDMINE-2184](https://redmine.informationgrid.eu/issues/2184))
+- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" ([REDMINE-2184](https://redmine.informationgrid.eu/issues/2184))
 - [Bug] [PORTAL] Eingaben werden nicht ausreichend auf XSS Angriffe gefiltert ([REDMINE-2871](https://redmine.informationgrid.eu/issues/2871))
 - [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle im MapClient beheben ([REDMINE-2924](https://redmine.informationgrid.eu/issues/2924))
 - [Bug] [PORTAL] BKG: IGE: Zeichenkodierung fehlerhaft ([REDMINE-2822](https://redmine.informationgrid.eu/issues/2822))
-- [Bug] [IGE] IGE: Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
-- [Bug] [IGE] IGE: Lagegenauigkeit wird nicht importiert ([REDMINE-2755](https://redmine.informationgrid.eu/issues/2755))
+- [Bug] [IGE] Operationen bearbeiten enthält Index statt Wert ([REDMINE-2749](https://redmine.informationgrid.eu/issues/2749))
+- [Bug] [IGE] Lagegenauigkeit wird nicht importiert ([REDMINE-2755](https://redmine.informationgrid.eu/issues/2755))
 - [Bug] [IGE] ISO-XML: Angabe des DCP-Elements unzureichend abgebildet ([REDMINE-2245](https://redmine.informationgrid.eu/issues/2245))
 
-UVP
+Profil Umweltportal Schleswig-Holstein
+
+- [Feature] [PORTAL] SH: Kontaktformular: Die E-Mail des Nutzers soll im REPLY-TO Header verwendet werden ([REDMINE-2804](https://redmine.informationgrid.eu/issues/2804))
+
+Profil UVP
 
 - [Feature] [PORTAL] UVP: Icon im UVP-Portal einfügen ([REDMINE-2819](https://redmine.informationgrid.eu/issues/2819))
 
-SH
-
-- [Feature] [PORTAL] SH: Kontaktformular: Die E-Mail des Nutzers soll im REPLY-TO Header verwendet werden ([REDMINE-2804](https://redmine.informationgrid.eu/issues/2804))
 
 ### Komponenten
 
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.9.2/))
 - IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.9.2/))
-
 
 
 ## Version 5.9.1.1
@@ -76,16 +74,14 @@ Die Katalogansicht lädt nun auch viel schneller, da die Knoten nun dynamisch ü
 
 ### Liste der Änderungen
 
-InGrid
-
 - [Feature] [PORTAL] Katalogansicht dynamisch aufbauen (ohne Reload der Portalseite) ([REDMINE-2610](https://redmine.informationgrid.eu/issues/2610))
 
-NUMIS
+Profil NUMIS
 
 - [Feature] [PORTAL] MESSWERTECLIENT: "Zurück zur Kartenansicht" zeigt nicht den letzten Kartenausschnitt an ([REDMINE-2609](https://redmine.informationgrid.eu/issues/2609))
 - [Bug] [PORTAL] Probleme nach Update auf 5.9.0 ([REDMINE-2608](https://redmine.informationgrid.eu/issues/2608))
 
-UVP
+Profil UVP
 
 - [Bug] Bauleitplanungsseite BB führt zu leeren Ergebnissen ([REDMINE-2667](https://redmine.informationgrid.eu/issues/2667))
 - [Bug] [IGE] Verfahrensschritt kann nicht gelöscht werden ([REDMINE-2621](https://redmine.informationgrid.eu/issues/2621))
@@ -231,9 +227,7 @@ zu einer Bilddatei anzugeben.
 
 ### Liste der Änderungen
 
-InGrid
-
-- [Feature] [MAPCLIENT] MapClient: Komprimierung von weiteren URL Parametern beim Aufruf von WMS Karten mit vielen Layern ([REDMINE-2602](https://redmine.informationgrid.eu/issues/2602))
+- [Feature] [MAPCLIENT] Komprimierung von weiteren URL Parametern beim Aufruf von WMS Karten mit vielen Layern ([REDMINE-2602](https://redmine.informationgrid.eu/issues/2602))
 - [Feature] [IGE] Vorschaugrafiken im IGE ablegen und verwalten ([REDMINE-1667](https://redmine.informationgrid.eu/issues/1667))
 - [Feature] [MAPCLIENT] MetaVer-Kartenclient alle geladene Layer deaktiviren / alle geladenen Layer löschen ([REDMINE-2598](https://redmine.informationgrid.eu/issues/2598))
 - [Feature] [PORTAL] Ergebnisliste (neues Layout): Anbieter und Quelle nach Detaildarstellung übertragen ([REDMINE-2544](https://redmine.informationgrid.eu/issues/2544))
@@ -245,44 +239,36 @@ InGrid
 - [Feature] [PORTAL] Umsetzung der Konzeption der Darstellung von Detaildaten im Portal ([REDMINE-1358](https://redmine.informationgrid.eu/issues/1358))
 - [Feature] [CODELIST REPOSITORY] Neue Opendata-Lizenzen für die Codeliste 6500 ([REDMINE-1290](https://redmine.informationgrid.eu/issues/1290))
 - [Feature] [MAPCLIENT] GPX import - Beschreibung fehlt ([REDMINE-2519](https://redmine.informationgrid.eu/issues/2519))
-- [Feature] [IGE] IGE: WCS-Dienst mit GetCapabilities-Assistent erfassen ([REDMINE-2381](https://redmine.informationgrid.eu/issues/2381))
-- [Feature] [CODELIST REPOSITORY] CodeRepo: zusätzlicher Wert in Codeliste "Datenformat - Name" - GeoTIFF ([REDMINE-2376](https://redmine.informationgrid.eu/issues/2376))
-- [Feature] [IGE] IGE: Validierung GML+Version für INSPIRE-relevante Datensätze entfernen ([REDMINE-2281](https://redmine.informationgrid.eu/issues/2281))
-- [Feature] [SYSTEM] IGE: Anpassung der Referenzierung des Metadaten-Schemas und -Namespaces ([REDMINE-1876](https://redmine.informationgrid.eu/issues/1876))
-- [Feature] [IGE] IGE: Erfassung von Metadaten in English ([REDMINE-967](https://redmine.informationgrid.eu/issues/967))
-- [Bug] [MAPCLIENT] MAPCLIENT: Aktualisierung auf den aktuellsten mf-geoadmin3 (2021-07-29) ([REDMINE-2594](https://redmine.informationgrid.eu/issues/2594))
+- [Feature] [IGE] WCS-Dienst mit GetCapabilities-Assistent erfassen ([REDMINE-2381](https://redmine.informationgrid.eu/issues/2381))
+- [Feature] [CODELIST REPOSITORY] Zusätzlicher Wert in Codeliste "Datenformat - Name" - GeoTIFF ([REDMINE-2376](https://redmine.informationgrid.eu/issues/2376))
+- [Feature] [IGE] Validierung GML+Version für INSPIRE-relevante Datensätze entfernen ([REDMINE-2281](https://redmine.informationgrid.eu/issues/2281))
+- [Feature] [SYSTEM] Anpassung der Referenzierung des Metadaten-Schemas und -Namespaces ([REDMINE-1876](https://redmine.informationgrid.eu/issues/1876))
+- [Feature] [IGE] Erfassung von Metadaten in English ([REDMINE-967](https://redmine.informationgrid.eu/issues/967))
+- [Bug] [MAPCLIENT] Aktualisierung auf den aktuellsten mf-geoadmin3 (2021-07-29) ([REDMINE-2594](https://redmine.informationgrid.eu/issues/2594))
 - [Bug] [IGE] Diskrepanz der Anzeige der Schlagworte mit verschiedenen Thesaurus  ([REDMINE-2392](https://redmine.informationgrid.eu/issues/2392))
 - [Bug] [MAPCLIENT] Karte: GetFeatureInfo enthält unnötige Formatierungen "br" ([REDMINE-2563](https://redmine.informationgrid.eu/issues/2563))
-- [Bug] [IGE] IGE: Katalogeinstellungen - Checkbox "Schlüsselkatalog" kommt doppelt vor ([REDMINE-2543](https://redmine.informationgrid.eu/issues/2543))
-- [Bug] [IGE] IGE: engl. Katalog - Maßstabsausgabe im abstract nicht übersetzt ([REDMINE-2542](https://redmine.informationgrid.eu/issues/2542))
-- [Bug] [IGE] IGE: Pflichtfelder von Digitale Repräsentation und Datenformat wenn INSPIRE/nicht konform ([REDMINE-2521](https://redmine.informationgrid.eu/issues/2521))
-- [Bug] [IGE] IGE: Hamburger Logik nach Update auf 5.8.1 für LGV und Dataport ([REDMINE-2514](https://redmine.informationgrid.eu/issues/2514))
+- [Bug] [IGE] Katalogeinstellungen - Checkbox "Schlüsselkatalog" kommt doppelt vor ([REDMINE-2543](https://redmine.informationgrid.eu/issues/2543))
+- [Bug] [IGE] Engl. Katalog - Maßstabsausgabe im abstract nicht übersetzt ([REDMINE-2542](https://redmine.informationgrid.eu/issues/2542))
+- [Bug] [IGE] Pflichtfelder von Digitale Repräsentation und Datenformat wenn INSPIRE/nicht konform ([REDMINE-2521](https://redmine.informationgrid.eu/issues/2521))
+- [Bug] [IGE] Hamburger Logik nach Update auf 5.8.1 für LGV und Dataport ([REDMINE-2514](https://redmine.informationgrid.eu/issues/2514))
 - [Bug] [PORTAL] Popup öffnet sich in Chrome 90 nicht mehr ([REDMINE-2493](https://redmine.informationgrid.eu/issues/2493))
-- [Bug] [IGE] IGE: MD-Import verbessern - Vorschaubild-Beschreibung  ([REDMINE-2488](https://redmine.informationgrid.eu/issues/2488))
+- [Bug] [IGE] MD-Import verbessern - Vorschaubild-Beschreibung  ([REDMINE-2488](https://redmine.informationgrid.eu/issues/2488))
 - [Bug] [MAPCLIENT] Identifier der Datenquelle in Verbindung mit Anzeig des Kartenlayers ([REDMINE-2460](https://redmine.informationgrid.eu/issues/2460))
 - [Bug] [PORTAL] Anzeige des Identifikators der Datenquelle defekt ([REDMINE-2459](https://redmine.informationgrid.eu/issues/2459))
 - [Bug] [IGE] Kontakt für die Ressource, wenn auch glechzeitig Kontakt für die Metadaten, wird nicht richtig importiert ([REDMINE-1986](https://redmine.informationgrid.eu/issues/1986))
-- [Bug] [PORTAL] Portal: RSS-Job bei Links mit vielen Zeilenumbrüchen führen zu Datenbankfehlern ([REDMINE-2603](https://redmine.informationgrid.eu/issues/2603))
+- [Bug] [PORTAL] RSS-Job bei Links mit vielen Zeilenumbrüchen führen zu Datenbankfehlern ([REDMINE-2603](https://redmine.informationgrid.eu/issues/2603))
 
-BAW DMQS
+Profil BAW DMQS
 
 - [Feature] InGrid-Utils: UUID-Typ-3 Generierung ähnlich zu analogen Funktionen in Python, Ruby, etc. gestalten ([REDMINE-2512](https://redmine.informationgrid.eu/issues/2512))
 
-BKG
+Profil BKG
 
 - [Feature] [IGE] IGE engl.: Funktionalität "Freie Schlagworte" autom. einem Thesaurus zuordnen - Anpassung an engl.Sprache ([REDMINE-2463](https://redmine.informationgrid.eu/issues/2463))
 - [Bug] [IGE] IGE-engl.: Werteingabe unvollständig nach ISO-XML ([REDMINE-2567](https://redmine.informationgrid.eu/issues/2567))
 - [Bug] [IGE] Funktion "Suchbegriffe" funktioniert nicht ([REDMINE-2564](https://redmine.informationgrid.eu/issues/2564))
 
-InGrid Installation Saarland
-
-- [Support] Freischaltung des Saarländischen Umweltdatenkatalogs ([REDMINE-2431](https://redmine.informationgrid.eu/issues/2431))
-
-InGrid Installation Schleswig-Holstein
-
-- [Bug] [PORTAL] Aktive Seite ist schlecht erkennbar beim Paging in Ergebnisliste ([REDMINE-2457](https://redmine.informationgrid.eu/issues/2457))
-
-MetaVer
+Profil MetaVer
 
 - [Feature] [PORTAL] ReDesign MetaVer ([REDMINE-1564](https://redmine.informationgrid.eu/issues/1564))
 - [Feature] [PORTAL] Austausch von Länderwappen PNG Icons durch SVG-basierte Icons ([REDMINE-2506](https://redmine.informationgrid.eu/issues/2506))
@@ -292,7 +278,15 @@ MetaVer
 - [Feature] [PORTAL] Anpassung Kontakt-Formular MetaVer Test für Zammad ([REDMINE-2461](https://redmine.informationgrid.eu/issues/2461))
 - [Bug] Neues Layout METAVER.DE: In die Gliederungsebene von z. B. ?Weitere Verweise? einordnen ([REDMINE-2547](https://redmine.informationgrid.eu/issues/2547))
 
-UVP
+Profil Installation Saarland
+
+- [Support] Freischaltung des Saarländischen Umweltdatenkatalogs ([REDMINE-2431](https://redmine.informationgrid.eu/issues/2431))
+
+Profil Installation Schleswig-Holstein
+
+- [Bug] [PORTAL] Aktive Seite ist schlecht erkennbar beim Paging in Ergebnisliste ([REDMINE-2457](https://redmine.informationgrid.eu/issues/2457))
+
+Profil UVP
 
 - [Bug] [IGE] Fehler bei Archivierung von Dateien ([REDMINE-2526](https://redmine.informationgrid.eu/issues/2526))
 - [Bug] [PORTAL] Anmeldeseite wird von Suchmaschinen indexiert ([REDMINE-2462](https://redmine.informationgrid.eu/issues/2462))
