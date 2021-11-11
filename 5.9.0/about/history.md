@@ -19,6 +19,18 @@ Release 11.11.2021
 
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.9.2.1/))
 
+## Version 5.9.1.2
+
+Release 11.11.2021
+
+### Liste der Änderungen
+
+- [Bug] [PORTAL] SSRF mit XML External Entity (XXE) Schwachstelle (2) ([REDMINE-3161](https://redmine.informationgrid.eu/issues/3161))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.9.1.2/))
+
 
 ## Version 5.9.2
 
