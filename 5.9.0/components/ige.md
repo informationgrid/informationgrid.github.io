@@ -105,6 +105,9 @@ Die **Validierung der Dateien** erfolgt über eine konfigurierbare Validatoren-K
       "size":{
           ...
       },
+      "filetype":{
+          ...
+      },
       ...
   }
   ```
@@ -140,6 +143,19 @@ Der `NameValidator` überprüft die Namen der übertragenen Dateien auf ungülti
   ```
 
 Der `SizeValidator` prüft, ob eine einzelne Datei eine festgelegte Größe (`maxFileSize`) überschreitet oder ob der gesamte Metadatensatz, zu dem die Datei gehört eine festgelegte Größe (`maxDirSize`) überschreitet.
+
+**ExtensionValidator**
+
+  ```
+  "filetype":{
+        "impl":"de.ingrid.mdek.upload.storage.validate.impl.ExtensionValidator",
+        "properties":{
+            "allowedExtensions": "gif,jpeg,png,svg,webp,bmp,ico,jpg"
+        }
+    }
+  ```
+
+Der `ExtensionValidator` überprüft die Erweiterung der hochzuladenden Datei und bricht den Upload ab, wenn die Erweiterung nicht erlaubt ist.
 
 Weitere Validatoren sind in folgenden Abschnitten dokumentiert.
 
