@@ -17,6 +17,8 @@ Release xx.xx.xxxx
 
 ### Wichtige Änderungen
 
-...
+### Kritische Änderungen
+
+Die Opendata Kategorien wurden an den GovData Standard angepasst. Da hiefrür eine Migration nötig ist, müssen das Portal, Ige-iPlug und Codelist-repository gemeinsam aktualisiert werden.
 
 ### Liste der Änderungen
