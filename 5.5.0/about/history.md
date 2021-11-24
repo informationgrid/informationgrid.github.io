@@ -6,6 +6,20 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes ältere Versionen können hier eingesehen werden:  [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+
+## Version 5.5.10 
+
+### Liste der Änderungen
+
+Profil UVP
+
+- [Feature] [CODELIST-REPOSITORY] Aktualisierung der UVP Nummern Sachsen ([REDMINE-3100](https://redmine.informationgrid.eu/issues/3100))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.5.10/))
+
+
 ## Version 5.5.9
 
 Release 28.07.2021
