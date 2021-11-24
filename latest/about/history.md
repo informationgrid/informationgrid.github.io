@@ -40,8 +40,8 @@ Profil UVP
 
 - CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.10.1/))
 - IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.10.1/))
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.10.1/))
 - IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.10.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.10.1/))
 
 
 ## Version 5.10.0.1
