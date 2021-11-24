@@ -9,6 +9,8 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.5.x. Release Notes
 
 ## Version 5.5.10 
 
+Release 22.11.2021
+
 ### Liste der Änderungen
 
 Profil UVP
