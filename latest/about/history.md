@@ -8,6 +8,42 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.10.x. Release Note
 [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+
+## Version 5.10.1
+
+Release 23.11.2021
+
+### Liste der Änderungen
+
+- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" redux ([REDMINE-2903](https://redmine.informationgrid.eu/issues/2903))
+- [Feature] [IGE] Namensnennung 3.0 Deutschland (CC BY 3.0 DE) in Codeliste 6500 aufnehmen ([REDMINE-2837](https://redmine.informationgrid.eu/issues/2837))
+- [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle (2) ([REDMINE-3161](https://redmine.informationgrid.eu/issues/3161))
+- [Bug] [IGE] Fehler bei Upload von Vorschaugrafiken ([REDMINE-2920](https://redmine.informationgrid.eu/issues/2920))
+- [Bug] [IGE] Feld Historie bei Geodatendiensten wird nicht importiert. ([REDMINE-1845](https://redmine.informationgrid.eu/issues/1845))
+
+Profil Schleswig-Holstein
+
+- [Feature] [IGE] Geometry Context im SH Profil ergänzen ([REDMINE-2823](https://redmine.informationgrid.eu/issues/2823))
+- [Feature] [PORTAL] Anpassen der Hilfetexte ([REDMINE-2644](https://redmine.informationgrid.eu/issues/2644))
+- [Bug] [PORTAL] Link aus Email an neu-registrierte Benutzer ([REDMINE-3144](https://redmine.informationgrid.eu/issues/3144))
+
+Profil MetaVer
+
+- [Bug] [PORTAL] Darstellung der Webseiten Treffer fehlerhaft ([REDMINE-3105](https://redmine.informationgrid.eu/issues/3105))
+
+Profil UVP
+
+- [Feature] [PORTAL] UVP: Beschränkung der Vorhaben im Überblick auf der Startseite auf UVP- und Ausländische Verfahren ([REDMINE-1583](https://redmine.informationgrid.eu/issues/1583))
+- [Feature] [CODELIST-REPOSITORY] Aktualisierung der UVP Nummern Sachsen ([REDMINE-3100](https://redmine.informationgrid.eu/issues/3100))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.10.1/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.10.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.10.1/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.10.1/))
+
+
 ## Version 5.10.0.1
 
 Release 11.11.2021
