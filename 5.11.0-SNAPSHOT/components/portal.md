@@ -818,6 +818,19 @@ Tragen Sie Ihren gewünschten Text in HTML-Sprache ein.
 
 Um die Eigenschaften nicht nach einem Portal-Update zu verlieren, übertragen Sie die geänderten Eigenschaften in die Datei `ingrid-portal-apps.override.properties` im gleichem Verzeichnis wie die Datei `ingrid-portal-apps.properties`.
 
+### UVP: Wie kann die Anzeig der Teaser auf der Startseite beeinflusst werden?
+
+In der Datei `apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes/ingrid-portal-apps.override.properties` kann über die Eigenschaft `hit.teaser.search.query` festgelegt werden, welche Datensatzarten berücksichtigt werden.
+         
+Alle Datensatzarten:
+
+`hit.teaser.search.query=ranking:date datatype:metadata`
+         
+Nur Zulassungsverfahren und Ausländische Verfahren:
+
+`hit.teaser.search.query=(t01_object.obj_class:10 OR t01_object.obj_class:11) ranking:date`         
+
+
 ### UVP: Wie kann man den Kartenzustand per URL festlegen?
 
 Für das UVP-Portal, welches Leaflet als Kartenkomponente verwendet, kann der Zustand der Karte per URL-Parameter definiert werden. 
