@@ -8,6 +8,26 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.8.x. Release Notes
 [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.8.8
+
+Release 14.12.2021
+
+### Liste der Änderungen
+
+- [Bug] [SYSTEM] Kritische Sicherheitslücke Log4Shell in der weitverbreiteten Java-Logging-Bibliothek log4j ([REDMINE-3292](https://redmine.informationgrid.eu/issues/3292))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.8.8/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.8.8/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.8.8/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.8.8/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.8/))
+- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.8.8/))
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.8.8/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.8.8/))
+
+
 ## Version 5.8.7
 
 Release 11.11.2021
