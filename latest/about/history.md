@@ -8,6 +8,24 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.10.x. Release Note
 [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.10.1.2
+
+Release 13.12.2021
+
+### Liste der Änderungen
+
+- [Feature] [MAPCLIENT] Import von geschützten Diensten ([REDMINE-3109](https://redmine.informationgrid.eu/issues/3109))
+- [Bug] [IGE] "Veröffentlichung verzögern" bei bereits veröffentlichten Datensätzen ([REDMINE-3266](https://redmine.informationgrid.eu/issues/3266))
+
+Profil MetaVer
+
+- [Bug] [PORTAL] Fehler in der Portal Detaildarstellung ([REDMINE-3279](https://redmine.informationgrid.eu/issues/3279))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.10.1.2/))
+
+
 ## Version 5.10.1.1
 
 Release 12.12.2021
