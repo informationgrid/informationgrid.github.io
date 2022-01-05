@@ -30,6 +30,19 @@ Folgende Orte müssen überprüft werden, insofern diese überschrieben werden:
     * DB_URL_PORTAL
     * DB_URL_MDEK
 
+#### Anpassung des SQL-Modus
+
+Seit MySQL Version 5.7.5 wird der SQL-Modus "ONLY_FULL_GROUP_BY" standardmäßig aktiviert. Dies kann zu Problemen führen,
+insbesondere wenn HQL-Queries ausgeführt werden. Um diesen Modus wieder zu entfernen, muss im docker-compose.yml der
+command-Befehl mit dem Parameter `sql-mode` ergänzt werden.
+
+Beispiel:
+```
+mysql:
+    image: mysql:5.7
+    command: docker-entrypoint.sh mysqld --character-set-server=utf8 --lower-case-table-names=1 --collation-server=utf8_unicode_ci --sql_mode="STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION"
+```
+
 ### Wichtige Änderungen
 
 ### Kritische Änderungen
