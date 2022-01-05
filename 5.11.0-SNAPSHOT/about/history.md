@@ -13,7 +13,22 @@ Release xx.xx.xxxx
 
 ### Hinweise für die Aktualisierung
 
-...
+#### Anpassung der DB-URLs
+
+Mit der Aktualisierung der MySQL Datenbank werden viele Warnungen im Log angezeigt:
+
+> WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+
+Um diese zu vermeiden, müssen alle DB-URLs mit dem Parameter "useSSL=false" ergänzt werden. Daraus ergibt sich bspw. folgender Eintrag in einer config.override.properties-Datei eines IGE-iPlugs:
+
+`iplug.database.url=jdbc\:mysql\://mysql\:3306/igc_test?useSSL=false`
+
+Folgende Orte müssen überprüft werden, insofern diese überschrieben werden:
+* config.override.properties (iPlug-IGE)
+* default-datasource.properties (Portal -> MDEK-Application)
+* Umgebungsvariablen in docker-compose.yml
+    * DB_URL_PORTAL
+    * DB_URL_MDEK
 
 ### Wichtige Änderungen
 
