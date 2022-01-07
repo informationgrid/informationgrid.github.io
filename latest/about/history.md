@@ -132,7 +132,8 @@ Folgende Verbesserungen an der InGrid-Suche wurden umgesetzt:
 
 ##### Ersetzen des Decompound-Analyzer durch nGram-Analyzer
 Hierdurch werden auch Wortteile gefunden, die durch die bisherige Worttrennung nicht erfasst wurden.
-Durch die Kombination aus nGram- und Edge-nGram-Analyzer ist es möglich, Wortteile am Anfang des Wortes stärker zu gewichten als Wortteile die im Wort enthalten sind.
+Durch die Kombination aus nGram- und Edge-nGram-Analyzer ist es möglich, Wortteile am Anfang des Wortes stärker zu gewichten als Wortteile, die im Wort enthalten sind.<br>
+**Achtung: Hierfür wurden Änderungen an den Dateien default-mappings.json und default-settings.json vorgenommen. Wenn diese bei der Installation überschrieben werden, müssen diese ersetzt werden.**
     
 ##### Booster für Suchfelder
 Durch den Boost auf Suchfelder können Ergebnisse abhängig davon, wo der Suchbegriff vorkommt, gewichtet werden.<br>
