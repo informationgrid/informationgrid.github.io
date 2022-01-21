@@ -824,17 +824,13 @@ In der Datei `apache-tomcat/webapps/ingrid-portal-apps/WEB-INF/classes/ingrid-po
          
 Alle Datensatzarten:
 
-```
-hit.teaser.search.query=ranking:date datatype:metadata
-```
+`hit.teaser.search.query=ranking:date datatype:metadata`
          
 Nur Zulassungsverfahren und Ausländische Verfahren:
 
-```
-hit.teaser.search.query=(t01_object.obj_class:10 OR t01_object.obj_class:11) ranking:date
-```
-         
-         
+`hit.teaser.search.query=(t01_object.obj_class:10 OR t01_object.obj_class:11) ranking:date`         
+
+
 ### UVP: Wie kann man den Kartenzustand per URL festlegen?
 
 Für das UVP-Portal, welches Leaflet als Kartenkomponente verwendet, kann der Zustand der Karte per URL-Parameter definiert werden. 
