@@ -41,9 +41,15 @@ mysql:
     command: docker-entrypoint.sh mysqld --character-set-server=utf8 --lower-case-table-names=1 --collation-server=utf8_unicode_ci --sql_mode="STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION"
 ```
 
-### Kritische Änderung
+### Kritische Änderungen
 
-Die Opendata Kategorien wurden an den GovData Standard angepasst. Da hierfür eine Migration nötig ist, müssen das Portal, IGE-iPlug und Codelist-Repository gemeinsam aktualisiert werden. ([REDMINE-1989](https://redmine.informationgrid.eu/issues/1989))
+#### Kritische Sicherheitslücke Log4Shell in Java-Logging-Bibliothek Log4j gefixt
+
+Die kritische Sicherheitslücke Log4Shell ([CVE-2021-44228](https://www.cve.org/CVERecord?id=CVE-2021-44228)) in der weitverbreiteten Java-Logging-Bibliothek Log4j wurde gefixt. ([REDMINE-3292](https://redmine.informationgrid.eu/issues/3292))
+
+#### OpenData-Kategorien an GovData-Standard angepasst
+
+Die OpenData-Kategorien wurden an den GovData-Standard angepasst. Da hierfür eine Migration nötig ist, müssen das Portal, IGE-iPlug und Codelist-Repository gemeinsam aktualisiert werden. ([REDMINE-1989](https://redmine.informationgrid.eu/issues/1989))
 
 ### Wichtige Änderungen
 
