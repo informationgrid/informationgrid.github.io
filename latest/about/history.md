@@ -9,7 +9,7 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.11.x. Release Note
 
 ## Version 5.11.0
 
-Release 20.01.2022
+Release 27.01.2022
 
 ### Hinweise für die Aktualisierung
 
@@ -109,6 +109,7 @@ Im iPlug-IGE wurde der Umgang mit WKT-Geometrien deutlich verbessert. ([REDMINE-
 - [Feature] [IGE] Erweiterung der Liste der Referenzsysteme ([REDMINE-2532](https://redmine.informationgrid.eu/issues/2532))
 - [Feature] [IGE] Anpassung der OpenData Kategorien an den GovData Standard ([REDMINE-1989](https://redmine.informationgrid.eu/issues/1989))
 - [Feature] [Codelisten] CodeListService um Getter für CodeListEntry ergänzen ([REDMINE-2490](https://redmine.informationgrid.eu/issues/2490))
+- [Support] [PORTAL] Neues Passwort bei Aktualisierung eines Accounts ([REDMINE-3411](https://redmine.informationgrid.eu/issues/3411))
 - [Bug] [INTERFACE-SEARCH] Selbstreferenzierender Link in Datensatz ist falsch ([REDMINE-3364](https://redmine.informationgrid.eu/issues/3364))
 - [Bug] [IGE] Ersetzte Thesaurus-Begriffe werden in der Suche nicht angezeigt ([REDMINE-3350](https://redmine.informationgrid.eu/issues/3350))
 - [Bug] [PORTAL] SSL Warnungen zur Datenbank ([REDMINE-3341](https://redmine.informationgrid.eu/issues/3341))
@@ -126,6 +127,7 @@ Im iPlug-IGE wurde der Umgang mit WKT-Geometrien deutlich verbessert. ([REDMINE-
 - [Bug] [IGE] WCS-Dienst mit GetCapabilities-Assistent erfassen - Fehler in der Ablage der REQUEST-URL ([REDMINE-3262](https://redmine.informationgrid.eu/issues/3262))
 - [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle (2) ([REDMINE-3161](https://redmine.informationgrid.eu/issues/3161))
 - [Bug] [INTERFACE-CSW] CSW Schnittstelle hat Fehler beim Sortieren der Ergebnisse ([REDMINE-1444](https://redmine.informationgrid.eu/issues/1444))
+- [Bug] [PORTAL] Problem bei Darstellung der Landing Page für neu angemeldete Benutzer ([REDMINE-3412](https://redmine.informationgrid.eu/issues/3412))
 
 Profil BAW Datenrepository
 
@@ -139,6 +141,10 @@ Profil BAW DMQS
 - [Feature] [PORTAL] Kartenansicht für den Raumbezug anpassen ([REDMINE-2744](https://redmine.informationgrid.eu/issues/2744))
 - [Bug] [IPLUG_IGE] Elasticsearch: Die Suche nach Aller liefert keine Ergebnisse ([REDMINE-3344](https://redmine.informationgrid.eu/issues/3344))
 - [Bug] [PORTAL] BWaStr.IDs für Haupt- und Nebenstrecken in Kombination mit fehlendem WKT führen zu fehlender Darstellung von Features in der Kartenansicht ([REDMINE-3389](https://redmine.informationgrid.eu/issues/3389))
+
+Profil BKG
+
+- [Feature] [PORTAL] Katalogausgabe entsprechend #1358 für BKG-MIS umsetzen ([REDMINE-2618](https://redmine.informationgrid.eu/issues/2618))
 
 Profil MetaVer
 
