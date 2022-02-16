@@ -183,6 +183,7 @@ Der Dienst wird durch Konfiguration eines der folgenden Validatoren aktiviert:
           "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -all -archive -mime %FILE%",
           "virusPattern":"(?m)^>>> Virus '([^']+)' found in file (.+)$",
           "cleanPattern":"(?m)^No viruses were discovered.$",
+          "errorPattern":"(?m)^\\d* error(s\\b|\\b) ((\\was\\b)|(\\were\\b)) encountered.$"\,
           "timeout": "60"
       }
   }
@@ -195,6 +196,7 @@ Um unterschiedliche Viren Scanner zu unterstützen, wird der Scanner über folge
   - `command` Kommando zur Überprüfung einer Datei. Es muss die Zeichenkette `%FILE%` enthalten sein, die durch den zu prüfende Dateipfad ersetzt wird. Das Kommando muss eine Ausgabe liefern, aus der der Status der Datei hervorgeht. Zu beachten ist, dass auch die Überprüfung von Archiven notwendig ist.
   - `virusPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *einer* Infektion passt und die Virusname und Dateiname jeweils in einer Gruppe speichert
   - `cleanPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle *keiner* Infektion passt
+  - `errorPattern` Regulärer Ausdruck, der auf die Ausgabe des Scans im Falle eines während des Scans auftretenden Fehlers passt (z.B. wenn eine entschlüsselte Datei nicht gescannt werden kann)
   - `timeout` (Optional - Default `60`) Timeout für den Aufruf des Virenscanners in Sekunden
 
 Im Falle eines Fehlers (z.B. weil das Kommando nicht ausgeführt werden kann) wird die Validierung als erfolgreich betrachtet und der Fehler im Logfile vermerkt.

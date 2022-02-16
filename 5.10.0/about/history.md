@@ -149,8 +149,13 @@ Durch die Umstellung der Abfrage-Struktur wurde ebenfalls das Problem behoben, d
 ##### Zusätzliches Sortierkriterium
 Durch die Einführung eines zusätzlichen Hash-Feldes, das als sekundäres Sortierkriterium verwendet wird, entsteht bei Ergebnissen mit gleicher Relevanz im primären Sortierkriterium eine bessere Durchmischung der Ergebnisse aus verschiedenen Quellen.
 
+#### Verbesserung der Fehlerbenachrichtigung des Virusscans
+Wenn Fehler während des Virusscans auftreten, wie zum Beispiel fehlerhafter Zugriff auf Dateien, wird eine Exception aufgelöst. Der Administrator wird mit der gesamten Log-Ausgabe des Scans benachrichtigt.
+**Achtung: das neue errorPattern muss in den Konfigurationsdateien hinzugefügt werden**
+
 ### Liste der Änderungen
 
+- [Feature] [PORTAL] Verbesserung des Fehlerbenachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
 - [Feature] [IGE] Namensnennung 3.0 Deutschland (CC BY 3.0 DE) in Codeliste 6500 aufnehmen ([REDMINE-2837](https://redmine.informationgrid.eu/issues/2837))
 - [Feature] [IGE] transferOptions / Abfolge in xml - Ergänzende Anpassungen ([REDMINE-2600](https://redmine.informationgrid.eu/issues/2600))
 - [Feature] [IPLUG_IGE] Extern-gekoppelte Datensätze werden regelmäßig analysiert ([REDMINE-2389](https://redmine.informationgrid.eu/issues/2389))

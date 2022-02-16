@@ -91,9 +91,14 @@ Geschützte Dienste können über die bestehende Import-Funktion des Mapclients 
 
 Im iPlug-IGE wurde der Umgang mit WKT-Geometrien deutlich verbessert. ([REDMINE-3034](https://redmine.informationgrid.eu/issues/3034))
 
+#### Verbesserung der Fehlerbenachrichtigung des Virusscans
+
+Wenn Fehler während des Virusscans auftreten, wie zum Beispiel fehlerhafter Zugriff auf Dateien, wird eine Exception aufgelöst. Der Administrator wird mit der gesamten Log-Ausgabe des Scans benachrichtigt.
+**Achtung: das neue errorPattern muss in den Konfigurationsdateien hinzugefügt werden** ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
 
 ### Liste der Änderungen
 
+- [Feature] [PORTAL] Verbesserung des Fehlerbenachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
 - [Feature] [IGE] Feld Kurzbezeichnung im IGE verschieben ([REDMINE-3093](https://redmine.informationgrid.eu/issues/3093))
 - [Feature] [IPLUG_IGE] Umgang mit WKT-Geometrien verbessern ([REDMINE-3034](https://redmine.informationgrid.eu/issues/3034))
 - [Feature] [IGE] Timeout für Virenscanner konfigurierbar machen ([REDMINE-3030](https://redmine.informationgrid.eu/issues/3030))

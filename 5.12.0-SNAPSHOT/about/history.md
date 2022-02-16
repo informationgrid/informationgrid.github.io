@@ -21,9 +21,12 @@ Release TT.MM.JJJJ
 
 ### Wichtige Änderungen
 
-...
+#### Verbesserung der Fehlerbenachrichtigung des Virusscans
+Wenn Fehler während des Virusscans auftreten, wie zum Beispiel fehlerhafter Zugriff auf Dateien, wird eine Exception aufgelöst. Der Administrator wird mit der gesamten Log-Ausgabe des Scans benachrichtigt.
+**Achtung: das neue errorPattern muss in den Konfigurationsdateien hinzugefügt werden**
 
 
 ### Liste der Änderungen
 
-...
+- [Feature] [PORTAL] Verbesserung des Fehlerbenachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
+
