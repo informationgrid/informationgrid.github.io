@@ -7,6 +7,43 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.11.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+
+## Version 5.11.2
+
+Release 18.02.2022
+
+### Liste der Änderungen
+
+- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" - front end ([REDMINE-2944](https://redmine.informationgrid.eu/issues/2944))
+- [Bug] [PORTAL] Wenn ein Datensatz nicht gefunden wird, soll ein 404 Fehler generiert werden. ([REDMINE-3493](https://redmine.informationgrid.eu/issues/3493))
+- [Bug] [MAPCLIENT] Fehlerhebung beim Import von geschützten Diensten ([REDMINE-3476](https://redmine.informationgrid.eu/issues/3476))
+
+Profil NUMIS
+
+- [Bug] [PORTAL] Im Footer des nds. UVP-Portals fehlt der MU-Tag ([REDMINE-3494](https://redmine.informationgrid.eu/issues/3494))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.11.2/))
+
+
+## Version 5.11.1
+
+Release 28.01.2022
+
+### Liste der Änderungen
+
+- [Bug] [CODELIST-REPOSITORY] Migration der alten Versionsinformation ([REDMINE-3391](https://redmine.informationgrid.eu/issues/3391))
+
+Profil BKG
+
+- [Feature] [CODELIST-REPOSITORY] Codelist 10004 editieren ([REDMINE-3315](https://redmine.informationgrid.eu/issues/3315))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.11.1/))
+
+
 ## Version 5.11.0
 
 Release 27.01.2022
