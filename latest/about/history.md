@@ -15,7 +15,6 @@ Release 18.02.2022
 ### Liste der Änderungen
 
 - [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" - front end ([REDMINE-2944](https://redmine.informationgrid.eu/issues/2944))
-- [Bug] [PORTAL] Wenn ein Datensatz nicht gefunden wird, soll ein 404 Fehler generiert werden. ([REDMINE-3493](https://redmine.informationgrid.eu/issues/3493))
 - [Bug] [MAPCLIENT] Fehlerhebung beim Import von geschützten Diensten ([REDMINE-3476](https://redmine.informationgrid.eu/issues/3476))
 
 Profil NUMIS
