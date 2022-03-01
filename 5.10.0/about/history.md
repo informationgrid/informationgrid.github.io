@@ -7,6 +7,34 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.10.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
+## Version 5.10.2 (noch nicht veröffentlicht)
+
+Release TT.MM.JJJJ
+
+### Hinweise für die Aktualisierung
+
+#### Hinzufügen des neuen errorPatterns in den Konfigurationsdateien (Antivirus Scan)
+Es gibt ein neues errorPattern für die Erkennung von Fehlern, die während des Virusscans auftreten, aber keine Exception werfen (z.B. fehlerhafter Zugriff auf Dateien).
+Das neue errorPattern muss in der Properties des VirusScanValidators aufgenommen werden. Die Properties befinden sich normalerweise in der `mdek.override.properties`-Datei.
+
+Beispiel:
+  ```
+  "virusscan":{
+      "impl":"de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator",
+      "properties":{
+          "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -all -archive -mime %FILE%",
+          "virusPattern":"(?m)^>>> Virus '([^']+)' found in file (.+)$",
+          "cleanPattern":"(?m)^No viruses were discovered.$",
+          "errorPattern":"(?m)^\\d* error(s\\b|\\b) ((\\was\\b)|(\\were\\b)) encountered.$"\,
+          "timeout": "60"
+      }
+  }
+  ```
+
+### Liste der Änderungen
+
+- [Feature] [PORTAL] Verbesserung des Fehlerbenachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
+
 
 ## Version 5.10.1.3
 
@@ -155,7 +183,6 @@ Wenn Fehler während des Virusscans auftreten, wie zum Beispiel fehlerhafter Zug
 
 ### Liste der Änderungen
 
-- [Feature] [PORTAL] Verbesserung des Fehlerbenachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
 - [Feature] [IGE] Namensnennung 3.0 Deutschland (CC BY 3.0 DE) in Codeliste 6500 aufnehmen ([REDMINE-2837](https://redmine.informationgrid.eu/issues/2837))
 - [Feature] [IGE] transferOptions / Abfolge in xml - Ergänzende Anpassungen ([REDMINE-2600](https://redmine.informationgrid.eu/issues/2600))
 - [Feature] [IPLUG_IGE] Extern-gekoppelte Datensätze werden regelmäßig analysiert ([REDMINE-2389](https://redmine.informationgrid.eu/issues/2389))

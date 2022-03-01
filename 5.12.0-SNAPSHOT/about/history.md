@@ -13,7 +13,23 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
-...
+#### Hinzufügen des neuen errorPatterns in den Konfigurationsdateien (Antivirus Scan)
+Es gibt ein neues errorPattern für die Erkennung von Fehlern, die während des Virusscans auftreten, aber keine Exception werfen (z.B. fehlerhafter Zugriff auf Dateien).
+Das neue errorPattern muss in der Properties des VirusScanValidators aufgenommen werden. Die Properties befinden sich normalerweise in der `mdek.override.properties`-Datei.
+
+Beispiel:
+  ```
+  "virusscan":{
+      "impl":"de.ingrid.mdek.upload.storage.validate.impl.VirusScanValidator",
+      "properties":{
+          "command":"\\\\path\\\\to\\\\sophos\\\\savscan -f -all -archive -mime %FILE%",
+          "virusPattern":"(?m)^>>> Virus '([^']+)' found in file (.+)$",
+          "cleanPattern":"(?m)^No viruses were discovered.$",
+          "errorPattern":"(?m)^\\d* error(s\\b|\\b) ((\\was\\b)|(\\were\\b)) encountered.$"\,
+          "timeout": "60"
+      }
+  }
+  ```
 
 ### Kritische Änderung
 
@@ -21,10 +37,7 @@ Release TT.MM.JJJJ
 
 ### Wichtige Änderungen
 
-#### Verbesserung der Fehlerbenachrichtigung des Virusscans
-Wenn Fehler während des Virusscans auftreten, wie zum Beispiel fehlerhafter Zugriff auf Dateien, wird eine Exception aufgelöst. Der Administrator wird mit der gesamten Log-Ausgabe des Scans benachrichtigt.
-**Achtung: das neue errorPattern muss in den Konfigurationsdateien hinzugefügt werden**
-
+...
 
 ### Liste der Änderungen
 
