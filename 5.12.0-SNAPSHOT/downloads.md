@@ -4,7 +4,12 @@ title: Downloads
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-## Bedienungsanleitung UVP Editor (uvp-verbund.de)
+## Bedienungsanleitung UVP Editor (uvp-verbund.de) NEU
+
+[uvp-verbund-bedienungsanleitung.readthedocs.io](https://uvp-verbund-bedienungsanleitung.readthedocs.io/de/latest)
+
+
+## Bedienungsanleitung UVP Editor (uvp-verbund.de) ALT
 
 
 [UVP Erfassungsanleitung, Teil 1: Der UVP Editor, Stand 07.04.2021](https://github.com/informationgrid/informationgrid.github.io/raw/master/latest/images/Erfassungsanleitung_UVP-Portal_Teil-1_UVP-Editor_Stand-2021-04-07.pdf)
