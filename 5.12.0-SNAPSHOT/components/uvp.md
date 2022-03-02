@@ -41,5 +41,5 @@ Das InGrid UVP-Portal ist in der Lage, Bauleitplanungsdaten zu integrieren. Dabe
 
 ## Bedienungsanleitung UVP Editor (uvp-verbund.de)
 
-Eine Bedienungsanleitung steht unter [uvp-verbund-bedienungsanleitung.readthedocs.io](https://uvp-verbund-bedienungsanleitung.readthedocs.io/de/latest/) zur Verfügung. Dort finden Sie weitere Informationen und eine genaue Benutzeranleitung.
+Eine Bedienungsanleitung für den UVP-Editor und das [UVP-Portal](https://www.uvp-verbund.de) steht unter [uvp-verbund-bedienungsanleitung.readthedocs.io](https://uvp-verbund-bedienungsanleitung.readthedocs.io/de/latest/) zur Verfügung. Dort finden Sie weitere Informationen und eine genaue Benutzeranleitung.
 
