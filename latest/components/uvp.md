@@ -30,16 +30,8 @@ Das InGrid UVP-Portal ist in der Lage, Bauleitplanungsdaten zu integrieren. Dabe
 
 ![Darstellung von BLP Daten in der Kartenansicht](../images/blp_daten.png "Darstellung von BLP Daten in der Kartenansicht")
 
-## Systemvoraussetzungen
 
-* 1 GB RAM
-* 20 GB Harddrive (Bei Upload von Dokumenten entsprechend mehr.)
+## Bedienungsanleitung UVP-Editor (uvp-verbund.de)
 
-* JAVA 8
-* Cygwin (unter Windows)
-
-
-## Bedienungsanleitung UVP Editor (uvp-verbund.de)
-
-Eine Bedienungsanleitung steht unter [Downloadbereich InGrid](https://www.ingrid-oss.eu/latest/downloads.html) zur Verfügung. Dort finden Sie weitere Informationen und eine genaue Benuteranleitung.
+Eine Bedienungsanleitung für den UVP-Editor und das [UVP-Portal](https://www.uvp-verbund.de) steht unter [uvp-verbund-bedienungsanleitung.readthedocs.io](https://uvp-verbund-bedienungsanleitung.readthedocs.io/de/latest/) zur Verfügung. Dort finden Sie weitere Informationen und eine genaue Benutzeranleitung.
 
