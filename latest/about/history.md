@@ -37,6 +37,11 @@ Beispiel:
 - [Bug] [IGE] Editor - Im GUI "Dokument-Upload" ersetzen mit "hinzufügen" ([REDMINE-1903](https://redmine.informationgrid.eu/issues/1903))
 - [Bug] [Mapclient] Mapclient: Teilen von Zeichnung enthält falsche URL ([REDMINE-3545](https://redmine.informationgrid.eu/issues/3545))
 
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.11.3/))
+
+
 ## Version 5.11.2
 
 Release 18.02.2022
