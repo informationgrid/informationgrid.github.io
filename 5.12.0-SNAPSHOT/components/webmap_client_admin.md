@@ -1088,7 +1088,7 @@ Das Passwort muss mit MD5 verschlüsselt eingetragen werden. Hierbei können Sie
 
 {% highlight text %}
 
-/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a sha -s 0 PASSWORT
+/PORTAL-INSTALLATIONS-PFAD/apache-tomcat/bin/digest.sh -a sha-256 -s 0 PASSWORT
 
 {% endhighlight %}
 
