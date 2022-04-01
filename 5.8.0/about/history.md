@@ -8,6 +8,32 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.8.x. Release Notes
 [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html), [4.6.x](/4.6.0/about/history.html), [4.5.x](/4.5.0/about/history.html)
 
 
+## Version 5.8.9
+
+Release 11.03.2022
+
+### Liste der Änderungen
+
+- [Bug] [SYSTEM] IT-Sicherheitsmängel in Docker Basis Images beseitigen ([REDMINE-3596](https://redmine.informationgrid.eu/issues/3596))
+
+Profil MetaVer
+
+- [Bug] [MAPCLIENT] Reload Mapclient - weiße Seite ([REDMINE-3594](https://redmine.informationgrid.eu/issues/3594))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.8.9/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.8.9/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.8.9/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.8.9/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.8.9/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.8.9/))
+- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.8.9/))
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.8.9/))
+- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.8.9/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.8.9/))
+
+
 ## Version 5.8.8
 
 Release 14.12.2021
