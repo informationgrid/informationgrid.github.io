@@ -662,6 +662,12 @@ Folgende Einstellungen sind möglich:
 |**Sprache**| Legen Sie hier die unterstützten Sprachen des Webmap Clients fest. Tragen Sie hierfür das Länderkürzel ein und fügen Sie es der Liste der Sprache hinzu oder entfernen Sie Sprachen.<br><br>Existierte eine Sprache die der Webmap Client noch nicht unterstützt, so wird die deutschsprachige Lokalisierung und Hilfe kopiert und verwendet.<br><br>Hinweis: Eine Anpassung der Lokalisierung in der Admin-GUI existiert noch nicht.| [“de”, “en”]|
 |**Default Mauszeiger-Projektion**| Passen Sie die Liste der Projektionen an, die im Webmap Client zur Auswahl der Maus-Zeiger-Koordinaten und im Positions-Popup (Rechtsklick auf Karte) zur Verfügung stehen, indem Sie die Reihenfolge ändern, Einträge entfernen und/oder hinzufügen. <br><br> Hinweis: Wie auch unter Punkt "EPSG / Projektion" schon hingewiesen, werden nicht alle Projektionen unterstützt und es muss ggfs. im Webmap Client Anpassungen durchgeführt werden.|['EPSG:3857', 'EPSG:4326', 'EPSG:31466', 'EPSG:31467', 'EPSG:31468', 'EPSG:31469', 'EPSG:25832', 'EPSG:25833']|
 
+#### Import
+
+|Einstellung|Info|Default|
+|-------------|--------------|----------|
+|**WMS-TileLayer Gutter definieren**| Definieren Sie den ignorierten Rand (in Pixel) um die Karten-Tiles. <br> Gutter funktioniert nur bei der Klasse ol.source.TileWMS. Also wenn der Layer die Karte in Kacheln lädt. Bei Single-Tile wird die Klasse ol.source.ImageWMS verwendet und dort gibt es die Option gutter nicht. Da nun per default Single-Tile verwendet wird, bringt die Einstellung Gutter hier nichts. | 0|
+
 #### Layerinfo
 
 |Einstellung|Info|Default|
