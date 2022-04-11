@@ -6,7 +6,7 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 
 ## Allgemeines
 
-Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DSC Scripted verhält sich hier generisch, das heißt, dass Datenbanken mit beliebiger Datenstruktur angeschlossen werden können. Als Datenbank-Typen werden alle Datenbanken unterstützt, die über JDBC angesprochen werden können. Mit der Installation werden nur die JDBC Treiber für MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2) mitgeliefert. Andere Treiber müssen heruntergeladen werden und ins lib-Verzeichnis kopiert werden.
+Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DSC (Scripted) verhält sich hier generisch, das heißt, dass Datenbanken mit beliebiger Datenstruktur angeschlossen werden können. Als Datenbank-Typen werden alle Datenbanken unterstützt, die über JDBC angesprochen werden können. Mit der Installation werden nur die JDBC Treiber für MySQL, Oracle und PostgreSQL (ab InGrid 4.0.2) mitgeliefert. Andere Treiber müssen heruntergeladen werden und ins lib-Verzeichnis kopiert werden.
 
 ![InGrid Komponente iPlug DSC](../images/ingrid_iplug_dsc.png "InGrid Komponente iPlug DSC")
 
@@ -24,7 +24,7 @@ Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DS
 
 ## Installation
 
-Download: [https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/)
+Download: [https://distributions.informationgrid.eu/ingrid-iplug-dsc/](https://distributions.informationgrid.eu/ingrid-iplug-dsc/)
 
 Um die Installationsroutine zu starten, doppel-klicken Sie auf das Installationsprogramm oder geben Sie folgenden Befehl auf der Kommandozeile ein:
 
@@ -62,7 +62,7 @@ aufgerufen und die Konfiguration vervollständigt.
 
 ## Aktualisierung
 
-Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/](https://distributions.informationgrid.eu/ingrid-iplug-dsc-scripted/) herunterladen.
+Neues Release von [https://distributions.informationgrid.eu/ingrid-iplug-dsc/](https://distributions.informationgrid.eu/ingrid-iplug-dsc/) herunterladen.
 
 iPlug stoppen.
 
@@ -160,7 +160,7 @@ KML-Erstellung
 
 Die Darstellung der Punkt Koordinaten im Kartenkomponente des Portals erfolgt im KML Format. Dieses Format wird bei der IDF Detaildaten Generierung (IDF Mapping) im iPlug.
 
-Um das IDF-Mapping mit KML zu erweitern muss das Mapping-Script `igc-x.x.x_to_idf.js` des DSC-Scripted erweitert werden:
+Um das IDF-Mapping mit KML zu erweitern muss das Mapping-Script `igc-x.x.x_to_idf.js` des DSC (Scripted) erweitert werden:
 
 ```javascript
 DOM.addNS("xlink", "http://www.w3.org/1999/xlink");
