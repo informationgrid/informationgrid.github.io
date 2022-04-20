@@ -4,17 +4,44 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-Diese Release Notes betreffen ausschließlich die Versionen 5.11.x. Release Notes älterer Versionen können hier eingesehen werden:
-[5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
+Diese Release Notes betreffen ausschließlich die Versionen 5.12.x. Release Notes älterer Versionen können hier eingesehen werden:
+[5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
-## Version 5.11.3
+## Version 5.12.0
 
-Release 04.03.2022
+Release 12.04.2022
 
 ### Hinweise für die Aktualisierung
 
+#### Optimierung der Indexierung: Beschränkung der Datenmenge, die vom N-GRAM Algorithmus verarbeitet wird
+
+Der erhöhte Speicherverbrauch wurde zu großen Teilen durch den N-Gram Analyzer für die Phrasen-Suche erzeugt, da hier die N-Grams ohne vorherige Zerlegung in Teilworte erfolgte.
+
+Auf dieses Index-Feld kann allerdings verzichtet werden, wenn man in Kauf nimmt, dass die Phrasen-Suche nur an Wortgrenzen funktioniert und keine Teilworte abdeckt.<br>
+Beispiel:<br>
+"Digitales Oberflächenmodell aus der Befliegung 2003 - Kachel: Wilhelmshaven_9 Digital surface model from the aerial flight 2003 - tile: Wilhelmshaven_9" wird bei der Suche nach "Kachel: Wilhelmshaven_9" gefunden, jedoch nicht bei der Suche nach "Kachel: Wilhelmshaven".
+
+WICHTIG: Für die Entfernung des Indexfelds wurden Änderungen an den Dateien default-mappings.json und default-settings.json vorgenommen. Wenn diese bei der Installation überschrieben werden, müssen diese ersetzt werden. ([REDMINE-3492](https://redmine.informationgrid.eu/issues/3492#note-3))
+
+#### Instanzen von iPlug SE müssen neu erstellt werden
+
+Aufgrund der Anpassungen an Elasticsearch müssen die Instanzen im iPlug SE nach der Aktualisierung neu erstellt und indexiert werden:
+
+- Aufruf iPlug-Administration -> SE-Settings -> SE-Instanzen
+- Instanzen kopieren
+- Neue, kopierte Instanzen entweder manuell crawlen und indexieren ("Management" -> "Start Crawl") oder vorhandes Scheduling (Zeitplanung) von den alten Instanzen übernehmen für automatisches Crawlen und Indexieren der neuen Instanzen
+- Nachdem neue Instanzen gecrawlt und indexiert sind, können die alten Instanzen gelöscht werden
+
+#### Änderung der Hashfunktion für den Webmap Client-Login
+
+Im Zuge der Verbesserung der Passwortsicherheit wurde die Hashfunktion des Webmap Clients von MD5 geändert auf SHA-256.
+Deshalb muss das bestehende Passwort neu verschlüsselt werden:<br>
+[Wo kann ich die Login-Daten für die Admin-GUI festlegen?](https://www.ingrid-oss.eu/latest/components/webmap_client_admin.html#wo-kann-ich-die-login-daten-f%C3%BCr-die-admin-gui-festlegen)
+([REDMINE-3669](https://redmine.informationgrid.eu/issues/3669))
+
 #### Hinzufügen des neuen errorPatterns in den Konfigurationsdateien (Antivirus Scan)
-Es gibt ein neues errorPattern für die Erkennung von Fehlern, die während des Virusscans auftreten, aber keine Exception werfen (z.B. fehlerhafter Zugriff auf Dateien).
+
+Es gibt ein neues errorPattern für die Erkennung von Fehlern, die während des Virusscans auftreten, aber keine Exception auswerfen (z.B. fehlerhafter Zugriff auf Dateien).
 Das neue errorPattern muss in der Properties des VirusScanValidators aufgenommen werden. Die Properties befinden sich normalerweise in der `mdek.override.properties`-Datei.
 
 Beispiel:
@@ -31,234 +58,145 @@ Beispiel:
   }
   ```
 
+### Wichtige Änderungen
+
+#### Aktualisiertes Portal-Layout für das GeoPortal.WSV
+
+Das Portal-Layout für GeoPortal.WSV wurde aktualisiert. ([REDMINE-3636](https://redmine.informationgrid.eu/issues/3636))
+
+![Aktualisiertes Portal-Layout für das GeoPortal.WSV Startseite](../images/5120_portal_geoportalwsv_new-layout_startpage.png "Aktualisiertes Portal-Layout für das GeoPortal.WSV Startseite")
+<figcaption class="figcaption">Aktualisiertes Portal-Layout für das GeoPortal.WSV Startseite</figcaption>
+
+![Aktualisiertes Portal-Layout für das GeoPortal.WSV Karte](../images/5120_portal_geoportalwsv_new-layout_map.png "Aktualisiertes Portal-Layout für das GeoPortal.WSV Karte")
+<figcaption class="figcaption">Aktualisiertes Portal-Layout für das GeoPortal.WSV Karte</figcaption>
+
+#### Aktualisiertes Portal-Layout für das GeoPortal.EBA
+
+Das Portal-Layout für GeoPortal.EBA wurde aktualisiert. ([REDMINE-3637](https://redmine.informationgrid.eu/issues/3637))
+
+![Aktualisiertes Portal-Layout für das GeoPortal.EBA Karte](../images/5120_portal_geoportaleba_new-layout_map.png "Aktualisiertes Portal-Layout für das GeoPortal.EBA Karte")
+<figcaption class="figcaption">Aktualisiertes Portal-Layout für das GeoPortal.EBA Karte</figcaption>
+
+#### Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP
+
+Die Layouts für die Suchergebnisseite und die Detaildarstellung des PortalU RLP wurden angepasst. ([REDMINE-3631](https://redmine.informationgrid.eu/issues/3631))
+
+![Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche](../images/5120_portal_portalurlp_new-layout_search.png "Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche")
+<figcaption class="figcaption">Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche</figcaption>
+
+![Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Mehr Infos](../images/5120_portal_portalurlp_new-layout_search_more-infos.png "Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Mehr Infos")
+<figcaption class="figcaption">Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Mehr Infos</figcaption>
+
+![Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Detail](../images/5120_portal_portalurlp_new-layout_search-detail.png "Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Detail")
+<figcaption class="figcaption">Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Detail</figcaption>
+
+#### Neue Elasticsearch-Version für den Messwerte-Client
+
+Mit der Version 5.12.0 wurde die Elasticsearch-Version des Messwerte-Clients im Portal aktualisiert auf 7.16.2. Damit steht eine aktuelle, stabile Basis für die Indexierung und Suche von Zeitreihen zur Verfügung, die Indexierungsschicht und APIs wurden entsprechend angepasst.
+
+#### TopPlusOpen-Light als Hintergrundkarte in MetaVer
+
+Die Karte TopPlusOpen-Light wird neu als Hintergrundkarte für Kartenanwendungen in MetaVer verwendet.
+
+![TopPlusOpen-Light als Hintergrundkarte in MetaVer](../images/5120_portal_metaver_map_topplusopen-light.png "TopPlusOpen-Light als Hintergrundkarte in MetaVer")
+<figcaption class="figcaption">TopPlusOpen-Light als Hintergrundkarte in MetaVer</figcaption>
+
+#### Verbesserung der URL zur Detaildatensuche im Portal
+
+Aktuell werden aus Kompatibilitätsgründen die Parameter plugid und docid für den Zugriff auf eine Detail-URL generiert:<br>
+https://example.org/trefferanzeige?docuuid=F1FF6ED0-2C54-4CF8-8575-A46AF9388CB6&plugid=/ingrid-group:ige-iplug-test&docid=F1FF6ED0-2C54-4CF8-8575-A46AF9388CB6
+
+Der Link kann aber meist vereinfacht werden zu:<br>
+https://example.org/trefferanzeige?docuuid=F1FF6ED0-2C54-4CF8-8575-A46AF9388CB6
+
+Ausnahme: Existieren in zwei Katalogen Datensätze mit gleicher UUID, muss das iPlug (Katalog) mit angegeben werden.
+
+Per default wird in der URL der Detaildarstellung kein Parameter plugid mehr geliefert.
+Das Hinzufügen des Parameters plugid kann mit der Portal-Einstellung `portal.detail.use.parameter.plugid` wieder aktiviert werden.
+Der Parameter docid wurde aus der Detail-URL entfernt.
+
+
 ### Liste der Änderungen
 
-- [Feature] [PORTAL] Verbesserung des Fehlerbenachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
-- [Bug] [IGE] Editor - Im GUI "Dokument-Upload" ersetzen mit "hinzufügen" ([REDMINE-1903](https://redmine.informationgrid.eu/issues/1903))
-- [Bug] [Mapclient] Mapclient: Teilen von Zeichnung enthält falsche URL ([REDMINE-3545](https://redmine.informationgrid.eu/issues/3545))
-
-### Komponenten
-
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.11.3/))
-
-
-## Version 5.11.2
-
-Release 18.02.2022
-
-### Liste der Änderungen
-
-- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" - front end ([REDMINE-2944](https://redmine.informationgrid.eu/issues/2944))
+- [Feature] [IGE] SchemaLocation - Eintrag im XML ändern ([REDMINE-3392](https://redmine.informationgrid.eu/issues/3392))
+- [Feature] [IGE] Regionalschlüssel (RS) erfassen per Freihand-Eingabe ([REDMINE-2620](https://redmine.informationgrid.eu/issues/2620))
+- [Feature] [IGE] Zusätzliche Validierungsregel für die Eingabe von "Durch die Ressource abgedeckte Zeitspanne" implementieren ([REDMINE-2377](https://redmine.informationgrid.eu/issues/2377))
+- [Feature] [IGE] Editor - Im GUI "Dokument-Upload" ersetzen mit "hinzufügen" ([REDMINE-1903](https://redmine.informationgrid.eu/issues/1903))
+- [Feature] [INTERFACE-CSW] CSW-T (Geodatensatz Teil1): alle HH-spezifischen Anpassungen sollen für die CSW-T Funktionalität berücksichtigt werden ([REDMINE-2097](https://redmine.informationgrid.eu/issues/2097))
+- [Feature] [MAPCLIENT] Hilfe-Link im Footer vom Kartenviewer einbinden  ([REDMINE-3667](https://redmine.informationgrid.eu/issues/3667))
+- [Feature] [MAPCLIENT] Barrierefreiheit-Link im Footer vom Kartenviewer einbinden ([REDMINE-3666](https://redmine.informationgrid.eu/issues/3666))
+- [Feature] [MAPCLIENT] Import von Layern per Single-Tile ([REDMINE-3665](https://redmine.informationgrid.eu/issues/3665))
+- [Feature] [MAPCLIENT] Import von Layern mit Gutter ([REDMINE-3685](https://redmine.informationgrid.eu/issues/3685))
+- [Feature] [PORTAL] Aktualisierung Portal-Layout für das GeoPortal.EBA ([REDMINE-3637](https://redmine.informationgrid.eu/issues/3637))
+- [Feature] [PORTAL] Aktualisierung Portal-Layout für das GeoPortal.WSV ([REDMINE-3636](https://redmine.informationgrid.eu/issues/3636))
+- [Feature] [PORTAL] Verbesserung der URL zur Detaildatensuche ([REDMINE-3495](https://redmine.informationgrid.eu/issues/3495))
+- [Feature] [SYSTEM] Optimierung Indexierung: Beschränkung der Datenmenge die vom N-GRAM Algorithmus verarbeitet wird. ([REDMINE-3492](https://redmine.informationgrid.eu/issues/3492))
+- [Feature] [SYSTEM] Aktualisierung Spring Framework ([REDMINE-3687](https://redmine.informationgrid.eu/issues/3687))
+- [Feature] [SYSTEM] Vermeidung von Nutzung des MD5 HASH Algorithmus für Kodierung von Passwörtern ([REDMINE-3669](https://redmine.informationgrid.eu/issues/3669))
+- [Bug] [CODELIST REPOSITORY] Migration der alten Versionsinformation ([REDMINE-3391](https://redmine.informationgrid.eu/issues/3391))
+- [Bug] [CODELIST REPOSITORY] Falsche Codelist-URL in ISO-XML für GovData-Schlüsselwörter ([REDMINE-3428](https://redmine.informationgrid.eu/issues/3428))
+- [Bug] [IGE] Hinzugefügter Eintrag am Ende der Beschreibung ([REDMINE-3462](https://redmine.informationgrid.eu/issues/3462))
+- [Bug] [MAPCLIENT] Dienst-Import über das Portal funktioniert nicht ([REDMINE-3584](https://redmine.informationgrid.eu/issues/3584))
+- [Bug] [MAPCLIENT] Teilen von Zeichnung enthält falsche URL ([REDMINE-3545](https://redmine.informationgrid.eu/issues/3545))
 - [Bug] [MAPCLIENT] Fehlerhebung beim Import von geschützten Diensten ([REDMINE-3476](https://redmine.informationgrid.eu/issues/3476))
+- [Bug] [PORTAL] Detail-Ausgabe für Vektordaten werden nicht vollständig angezeigt ([REDMINE-3377](https://redmine.informationgrid.eu/issues/3377))
+- [Bug] [PORTAL] Automatische Auflösung von Redirects bei der Darstellung von Vorschaubildern (http -> https) ([REDMINE-3668](https://redmine.informationgrid.eu/issues/3668))
+- [Bug] [SYSTEM] IT-Sicherheitsmängel in Docker Basis Images beseitigen ([REDMINE-3596](https://redmine.informationgrid.eu/issues/3596))
+- [Bug] [SYSTEM] Überprüfung von Unstimmigkeiten bei der Optimierung der Suche ([REDMINE-3222](https://redmine.informationgrid.eu/issues/3222))
+- [Bug] [SYSTEM] Ein '#' oder ein Suchbegriff mit abschließendem ':' in der Suche führt zu 0 Treffern und einer fehlerhaften Darstellung ([REDMINE-3408](https://redmine.informationgrid.eu/issues/3408))
+
+Profil BAW MIS
+
+- [Feature] [IGE] Formular für Software anpassen ([REDMINE-2771](https://redmine.informationgrid.eu/issues/2771))
+- [Feature] [IGE] Formular für Messdaten anpassen ([REDMINE-2770](https://redmine.informationgrid.eu/issues/2770))
+- [Feature] [PORTAL] Filter-Facetten im baw_mis Profil anpassen ([REDMINE-3303](https://redmine.informationgrid.eu/issues/3303))
+- [Bug] [PORTAL] "Auswahl anwenden" Button für die räumliche Suche nicht sichtbar ([REDMINE-3544](https://redmine.informationgrid.eu/issues/3544))
+
+Profil BKG
+
+- [Feature] [PORTAL] Katalogausgabe entsprechend #1358 für AdV-MIS umsetzen ([REDMINE-3277](https://redmine.informationgrid.eu/issues/3277))
+- [Bug] [IGE] Wechsel des Reiters blockiert ([REDMINE-3286](https://redmine.informationgrid.eu/issues/3286))
+- [Bug] [PORTAL] BKG-Design: Info-Seite "Session abgelaufen" ([REDMINE-3654](https://redmine.informationgrid.eu/issues/3654))
+
+Profil InGrid Installation Rheinland-Pfalz
+
+- [Feature] [PORTAL] Layouts anpassen für die Suchergebnisseite und die Detaildarstellung im RLP-Profil ([REDMINE-3631](https://redmine.informationgrid.eu/issues/3631))
+
+Profil MetaVer
+
+- [Feature] [MAPCLIENT] Hintergrundkarten in Metaver - Einbinden der TopPlusOpen-Light Karten ([REDMINE-3095](https://redmine.informationgrid.eu/issues/3095))
+- [Feature] [PORTAL] Bereinigen der Nutzer im metaver.de Portal ([REDMINE-2081](https://redmine.informationgrid.eu/issues/2081))
+- [Bug] [MAPCLIENT] Logo in "Print.InGrid.pdf" austauschen ([REDMINE-3569](https://redmine.informationgrid.eu/issues/3569))
+- [Bug] [MAPCLIENT] Reload Mapclient - weiße Seite ([REDMINE-3594](https://redmine.informationgrid.eu/issues/3594))
+- [Bug] [MAPCLIENT] Fehlermeldung "Layer hinzufügen" in Kartenanwendung ([REDMINE-3399](https://redmine.informationgrid.eu/issues/3399))
+- [Bug] [PORTAL] Objektklassen in MetaVer wieder anpassen ([REDMINE-3638](https://redmine.informationgrid.eu/issues/3638))
+- [Bug] [PORTAL] Zeitbezug der Daten  Von: 13.09.1945 01:00:00 Bis: 31.12.1989 ([REDMINE-3618](https://redmine.informationgrid.eu/issues/3618))
 
 Profil NUMIS
 
 - [Bug] [PORTAL] Im Footer des nds. UVP-Portals fehlt der MU-Tag ([REDMINE-3494](https://redmine.informationgrid.eu/issues/3494))
 
-### Komponenten
-
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.11.2/))
-
-
-## Version 5.11.1
-
-Release 28.01.2022
-
-### Liste der Änderungen
-
-- [Bug] [CODELIST-REPOSITORY] Migration der alten Versionsinformation ([REDMINE-3391](https://redmine.informationgrid.eu/issues/3391))
-
-Profil BKG
-
-- [Feature] [CODELIST-REPOSITORY] Codelist 10004 editieren ([REDMINE-3315](https://redmine.informationgrid.eu/issues/3315))
-
-### Komponenten
-
-- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.11.1/))
-
-
-## Version 5.11.0
-
-Release 27.01.2022
-
-### Hinweise für die Aktualisierung
-
-#### Anpassung der DB-URLs
-
-Mit der Aktualisierung der MySQL Datenbank werden viele Warnungen im Log angezeigt:
-
-> WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-
-Um diese zu vermeiden, müssen alle DB-URLs mit dem Parameter "useSSL=false" ergänzt werden. Daraus ergibt sich bspw. folgender Eintrag in einer config.override.properties-Datei eines IGE-iPlugs:
-
-`iplug.database.url=jdbc\:mysql\://mysql\:3306/igc_test?useSSL=false`
-
-Folgende Orte müssen überprüft werden, insofern diese überschrieben werden:
-* config.override.properties (iPlug-IGE)
-* default-datasource.properties (Portal -> MDEK-Application)
-* Umgebungsvariablen in docker-compose.yml
-    * DB_URL_PORTAL
-    * DB_URL_MDEK
-
-#### Anpassung des SQL-Modus
-
-Seit MySQL Version 5.7.5 wird der SQL-Modus "ONLY_FULL_GROUP_BY" standardmäßig aktiviert. Dies kann zu Problemen führen, insbesondere wenn HQL-Queries ausgeführt werden. Um diesen Modus wieder zu entfernen, muss im docker-compose.yml der command-Befehl mit dem Parameter `sql-mode` ergänzt werden.
-
-Beispiel:
-```
-mysql:
-    image: mysql:5.7
-    command: docker-entrypoint.sh mysqld --character-set-server=utf8 --lower-case-table-names=1 --collation-server=utf8_unicode_ci --sql_mode="STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION"
-```
-
-### Kritische Änderungen
-
-#### Kritische Sicherheitslücke Log4Shell in Java-Logging-Bibliothek Log4j gefixt
-
-Die kritische Sicherheitslücke Log4Shell ([CVE-2021-44228](https://www.cve.org/CVERecord?id=CVE-2021-44228)) in der weitverbreiteten Java-Logging-Bibliothek Log4j wurde gefixt. ([REDMINE-3292](https://redmine.informationgrid.eu/issues/3292))
-
-#### OpenData-Kategorien an GovData-Standard angepasst
-
-Die OpenData-Kategorien wurden an den GovData-Standard angepasst. Da hierfür eine Migration nötig ist, müssen das Portal, IGE-iPlug und Codelist-Repository gemeinsam aktualisiert werden. ([REDMINE-1989](https://redmine.informationgrid.eu/issues/1989))
-
-### Wichtige Änderungen
-
-#### Erweitertes Layout für BAW DMQS
-
-Das Portal-Layout vom BAW DMQS wurde aktualisiert. ([REDMINE-2746](https://redmine.informationgrid.eu/issues/2746))
-
-![Erweitertes Layout für BAW DMQS Suche](../images/5110_baw-dmqs_search.png "Erweitertes Layout für BAW DMQS Suche")
-<figcaption class="figcaption">Erweitertes Layout für BAW DMQS Suche</figcaption>
-
-![Erweitertes Layout für BAW DMQS Detail](../images/5110_baw-dmqs_detail.png "Erweitertes Layout für BAW DMQS Detail")
-<figcaption class="figcaption">Erweitertes Layout für BAW DMQS Detail</figcaption>
-
-#### UVP: Optimierte Darstellung der Verfahren in der Karte
-
-Die serverseitige Implementierung wurde optimiert, so dass die Daten für die Kartendarstellung schneller generiert werden.
-Es werden nur die für die Darstellung des Markers benötigten Informationen übertragen. Die Detailinformationen einer Markierung werden erst geladen, wenn der Benutzer auf eine Markierung klickt.
-In der Karte wurde eine Möglichkeit geschaffen, nur Verfahren anzuzeigen, deren Datum der Entscheidung nicht älter als ein Jahr zurückliegt. Dies ist die Defaulteinstellung. Bei Bedarf kann sich der Benutzer alle Verfahren anzeigen lassen. Diese Funktion betrifft NICHT die Bauleitplanungsinformationen. ([REDMINE-1582](https://redmine.informationgrid.eu/issues/1582))
-
-![Optimierte Darstellung der Verfahren in der Suche](../images/5110_portal_uvp_search.png "Optimierte Darstellung der Verfahren in der Suche")
-<figcaption class="figcaption">Optimierte Darstellung der Verfahren in der Suche</figcaption>
-
-![Optimierte Darstellung der Verfahren in der Karte](../images/5110_portal_uvp_map.png "Optimierte Darstellung der Verfahren in der Karte")
-<figcaption class="figcaption">Optimierte Darstellung der Verfahren in der Karte</figcaption>
-
-#### UVP: Button zum Sammeldownload aller Dokumente auf Detailergebnisseiten verfügbar
-
-Die Zahl der Einzeldokumente kann bei größeren Vorhaben recht hoch werden, so dass ein Download "Datei für Datei" für Interessenten, die alle Dokumente downloaden wollen, sehr langwierig ist.
-Daher wurde auf den Detailergebnisseiten aller Vorhabenskategorien an geeigneter Stelle neben "Verfahrensschritte" ein Button "Alle Dokumente als ZIP-Datei herunterladen" eingefügt. Bei Klick werden alle vorhandenen Dokumente des Vorhabens in eine ZIP-Datei gepackt und zum Download/Speichern angeboten. ([REDMINE-1897](https://redmine.informationgrid.eu/issues/1897))
-
-![Button zum Sammeldownload aller Dokumente auf Detailergebnisseiten](../images/5110_portal_detail_button-collective-download.png "Button zum Sammeldownload aller Dokumente auf Detailergebnisseiten")
-<figcaption class="figcaption">Button zum Sammeldownload aller Dokumente auf Detailergebnisseiten</figcaption>
-
-#### Im Kartenclient können jetzt geschützte Dienste hinzugefügt werden
-
-Geschützte Dienste können über die bestehende Import-Funktion des Mapclients hinzugefügt werden. Das gilt für WMS, WMTS, KML und GPX. ([REDMINE-3109](https://redmine.informationgrid.eu/issues/3109))
-
-#### Der Umgang mit WKT-Geometrien im iPlug-IGE wurde verbessert
-
-Im iPlug-IGE wurde der Umgang mit WKT-Geometrien deutlich verbessert. ([REDMINE-3034](https://redmine.informationgrid.eu/issues/3034))
-
-### Liste der Änderungen
-
-- [Feature] [IGE] Feld Kurzbezeichnung im IGE verschieben ([REDMINE-3093](https://redmine.informationgrid.eu/issues/3093))
-- [Feature] [IPLUG_IGE] Umgang mit WKT-Geometrien verbessern ([REDMINE-3034](https://redmine.informationgrid.eu/issues/3034))
-- [Feature] [IGE] Timeout für Virenscanner konfigurierbar machen ([REDMINE-3030](https://redmine.informationgrid.eu/issues/3030))
-- [Feature] [SYSTEM] Aktualisierung auf JAVA 11 oder 17 (LTS): Konzeption ([REDMINE-2592](https://redmine.informationgrid.eu/issues/2592))
-- [Feature] [IGE] Feld "Fachliche Grundlage" - Label, Hilfetext und Verpflichtung überarbeiten ([REDMINE-2073](https://redmine.informationgrid.eu/issues/2073))
-- [Feature] [PORTAL] Absicherung des Anmeldeformulars ([REDMINE-3314](https://redmine.informationgrid.eu/issues/3314))
-- [Feature] [MAPCLIENT] Erweiterung der Druckfunktion mit der Auswahl DPI ([REDMINE-3256](https://redmine.informationgrid.eu/issues/3256))
-- [Feature] [MAPCLIENT] Import von geschützten Diensten ([REDMINE-3109](https://redmine.informationgrid.eu/issues/3109))
-- [Feature] [PORTAL] HMDK: Bei Daten Dienste Kopplung wird der abstract bei Verweise angezeigt ([REDMINE-3089](https://redmine.informationgrid.eu/issues/3089))
-- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" - front end ([REDMINE-2944](https://redmine.informationgrid.eu/issues/2944))
-- [Feature] [IGE] Anpassung der Zeitbezüge in "Durch die Ressource abgedeckte Zeitspanne" redux ([REDMINE-2903](https://redmine.informationgrid.eu/issues/2903))
-- [Feature] [IGE] Angabe in XML-Element "geographicIdentifier" - differenzierter befüllen ([REDMINE-2606](https://redmine.informationgrid.eu/issues/2606))
-- [Feature] [IGE] Erweiterung der Liste der Referenzsysteme ([REDMINE-2532](https://redmine.informationgrid.eu/issues/2532))
-- [Feature] [IGE] Anpassung der OpenData Kategorien an den GovData Standard ([REDMINE-1989](https://redmine.informationgrid.eu/issues/1989))
-- [Feature] [Codelisten] CodeListService um Getter für CodeListEntry ergänzen ([REDMINE-2490](https://redmine.informationgrid.eu/issues/2490))
-- [Support] [PORTAL] Neues Passwort bei Aktualisierung eines Accounts ([REDMINE-3411](https://redmine.informationgrid.eu/issues/3411))
-- [Bug] [INTERFACE-SEARCH] Selbstreferenzierender Link in Datensatz ist falsch ([REDMINE-3364](https://redmine.informationgrid.eu/issues/3364))
-- [Bug] [IGE] Ersetzte Thesaurus-Begriffe werden in der Suche nicht angezeigt ([REDMINE-3350](https://redmine.informationgrid.eu/issues/3350))
-- [Bug] [PORTAL] SSL Warnungen zur Datenbank ([REDMINE-3341](https://redmine.informationgrid.eu/issues/3341))
-- [Bug] [IGE] ISO-Import vom Schlüsselkatalog fehlt ([REDMINE-3316](https://redmine.informationgrid.eu/issues/3316))
-- [Bug] [IGE] Sichtbarkeit des Feldes "Vektorformat" korrigieren ([REDMINE-3298](https://redmine.informationgrid.eu/issues/3298))
-- [Bug] [IGE] transferOptions / Abfolge in xml ([REDMINE-3287](https://redmine.informationgrid.eu/issues/3287))
-- [Bug] [IGE] Reindizierung darf nur bei neuen Codelisten geschehen ([REDMINE-3152](https://redmine.informationgrid.eu/issues/3152))
-- [Bug] [IGE] Importfehler beim Vektorformat ([REDMINE-3150](https://redmine.informationgrid.eu/issues/3150))
-- [Bug] [IGE] Importfehler, wenn URL ohne Namen länger als 255 Zeichen ([REDMINE-3145](https://redmine.informationgrid.eu/issues/3145))
-- [Bug] [SYSTEM] Fehlerhafte Metadaten, u.a. Problem mit Daten-Dienst-Kopplung ([REDMINE-2334](https://redmine.informationgrid.eu/issues/2334))
-- [Bug] [INTERFACE-CSW] CSW Schnittstelle hat Fehler beim Sortieren der Ergebnisse ([REDMINE-1444](https://redmine.informationgrid.eu/issues/1444))
-- [Bug] [IGE] ISO-XML-Ausgabe der Werte in "Raster-/Gridformat" nicht iso-valide ([REDMINE-3299](https://redmine.informationgrid.eu/issues/3299))
-- [Bug] [SYSTEM] Kritische Sicherheitslücke Log4Shell in der weitverbreiteten Java-Logging-Bibliothek log4j ([REDMINE-3292](https://redmine.informationgrid.eu/issues/3292))
-- [Bug] [IGE] "Veröffentlichung verzögern" bei bereits veröffentlichten Datensätzen ([REDMINE-3266](https://redmine.informationgrid.eu/issues/3266))
-- [Bug] [IGE] WCS-Dienst mit GetCapabilities-Assistent erfassen - Fehler in der Ablage der REQUEST-URL ([REDMINE-3262](https://redmine.informationgrid.eu/issues/3262))
-- [Bug] [MAPCLIENT] SSRF mit XML External Entity (XXE) Schwachstelle (2) ([REDMINE-3161](https://redmine.informationgrid.eu/issues/3161))
-- [Bug] [INTERFACE-CSW] CSW Schnittstelle hat Fehler beim Sortieren der Ergebnisse ([REDMINE-1444](https://redmine.informationgrid.eu/issues/1444))
-- [Bug] [PORTAL] Problem bei Darstellung der Landing Page für neu angemeldete Benutzer ([REDMINE-3412](https://redmine.informationgrid.eu/issues/3412))
-
-Profil BAW Datenrepository
-
-- [Feature] [IGE] Literatur Objektklasse nochmal aktivieren ([REDMINE-2326](https://redmine.informationgrid.eu/issues/2326))
-
-Profil BAW DMQS
-
-- [Feature] [PORTAL] Hintergrundkarte in der Kartenansicht austauschen ([REDMINE-3318](https://redmine.informationgrid.eu/issues/3318))
-- [Feature] [PORTAL] Portal-Layout für das baw_mis Profil aktualisieren ([REDMINE-2746](https://redmine.informationgrid.eu/issues/2746))
-- [Feature] [IGE] REST-API zum Verschieben der Dateien im IGE integrieren ([REDMINE-2678](https://redmine.informationgrid.eu/issues/2678))
-- [Feature] [PORTAL] Kartenansicht für den Raumbezug anpassen ([REDMINE-2744](https://redmine.informationgrid.eu/issues/2744))
-- [Bug] [IPLUG_IGE] Elasticsearch: Die Suche nach Aller liefert keine Ergebnisse ([REDMINE-3344](https://redmine.informationgrid.eu/issues/3344))
-- [Bug] [PORTAL] BWaStr.IDs für Haupt- und Nebenstrecken in Kombination mit fehlendem WKT führen zu fehlender Darstellung von Features in der Kartenansicht ([REDMINE-3389](https://redmine.informationgrid.eu/issues/3389))
-
-Profil BKG
-
-- [Feature] [PORTAL] Katalogausgabe entsprechend #1358 für BKG-MIS umsetzen ([REDMINE-2618](https://redmine.informationgrid.eu/issues/2618))
-
-Profil MetaVer
-
-- [Feature] [PORTAL] Entfernung der Facetten "Messwerte" und "Forschungsprojekte" ([REDMINE-2546](https://redmine.informationgrid.eu/issues/2546))
-- [Feature] [PORTAL] Button Karte - Karte in neuen Tab öffnen ([REDMINE-2383](https://redmine.informationgrid.eu/issues/2383))
-- [Feature] [PORTAL] Portal / Verweise - Verweise auf externe Webseiten in neuen Tab öffnen ([REDMINE-2367](https://redmine.informationgrid.eu/issues/2367))
-- [Bug] [IGE] Metadatenkatalog Sachsen-Anhalt - Datensatz INSPIRE ST Orthofotografie ATKIS DOP20 - lässt sich nicht veröffentlichen ([REDMINE-3221](https://redmine.informationgrid.eu/issues/3221))
-- [Bug] [PORTAL] Fehler in der Portal Detaildarstellung ([REDMINE-3279](https://redmine.informationgrid.eu/issues/3279))
-- [Bug] [PORTAL] Darstellung der Webseiten Treffer fehlerhaft ([REDMINE-3105](https://redmine.informationgrid.eu/issues/3105))
-
-Profil NUMIS
-
-- [Bug] [PORTAL] Probleme mit den BLPs im nds. UVP-Portal (Kartenansicht) ([REDMINE-3338](https://redmine.informationgrid.eu/issues/3338))
-
-Profil Umweltportal Schleswig-Holstein
-
-- [Feature] [IGE] Attribut-Tabelle kann nicht importiert werden (ZEBIS Metadaten) ([REDMINE-3240](https://redmine.informationgrid.eu/issues/3240))
-- [Feature] [IGE] Geometry Context im SH Profil ergänzen ([REDMINE-2823](https://redmine.informationgrid.eu/issues/2823))
-- [Feature] [PORTAL] Anpassen der Hilfetexte ([REDMINE-2644](https://redmine.informationgrid.eu/issues/2644))
-- [Bug] [PORTAL] Link aus Email an neu-registrierte Benutzer ([REDMINE-3144](https://redmine.informationgrid.eu/issues/3144))
-
 Profil UVP
 
-- [Feature] [IGE] Link zu UVP-G in Hilfe zu Feld "UVP-Nummer" integrieren ([REDMINE-3272](https://redmine.informationgrid.eu/issues/3272))
-- [Feature] [CODELIST REPOSITORY] Aktualisierung der UVP Nummern Sachsen ([REDMINE-3100](https://redmine.informationgrid.eu/issues/3100))
-- [Feature] [PORTAL] Optimierte Darstellung der Verfahren in der Karte ([REDMINE-1582](https://redmine.informationgrid.eu/issues/1582))
-- [Feature] [PORTAL] Button zum Sammeldownload aller Dokumente auf Detailergebnisseiten ([REDMINE-1897](https://redmine.informationgrid.eu/issues/1897))
-- [Feature] [PORTAL] Beschränkung der Vorhaben im Überblick auf der Startseite auf UVP- und Ausländische Verfahren ([REDMINE-1583](https://redmine.informationgrid.eu/issues/1583))
-- [Bug] [IGE] Statistik zeigt nur Fehlermeldung ([REDMINE-3340](https://redmine.informationgrid.eu/issues/3340))
+- [Feature] [IGE] Hilfetext zu UVP-Nummern anpassen ([REDMINE-2768](https://redmine.informationgrid.eu/issues/2768))
+- [Feature] [PORTAL] UVP: Mehrfachauswahl unter Facetten "Verfahrenstypen" und "Kategorien" ([REDMINE-3317](https://redmine.informationgrid.eu/issues/3317))
+- [Feature] [SYSTEM] Verbesserung des Fehler Benachrichtigung des Virusscans ([REDMINE-1797](https://redmine.informationgrid.eu/issues/1797))
 
 
 ### Komponenten
 
-- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.11.0/))
-- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.11.0/))
-- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.11.0/))
-- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.11.0/))
-- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.11.0/))
-- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.11.0/))
-- IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.11.0/))
-- IPLUG-EXCEL ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.11.0/))
-- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.11.0/))
-- IPLUG-OPENSEARCH ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/5.11.0/))
-- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.11.0/))
-- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.11.0/))
-- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.11.0/))
-- IPLUG-XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/5.11.0/))
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.11.0/))
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.12.0/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.12.0/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.12.0/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/5.12.0/))
+- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/5.12.0/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/5.12.0/))
+- IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/5.12.0/))
+- IPLUG-EXCEL ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/5.12.0/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.12.0/))
+- IPLUG-OPENSEARCH ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/5.12.0/))
+- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.12.0/))
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/5.12.0/))
+- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/5.12.0/))
+- IPLUG-XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/5.12.0/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.12.0/))
