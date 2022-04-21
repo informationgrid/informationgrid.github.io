@@ -34,8 +34,8 @@ Aufgrund der Anpassungen an Elasticsearch müssen die Instanzen im iPlug SE nach
 
 #### Änderung der Hashfunktion für den Webmap Client-Login
 
-Im Zuge der Verbesserung der Passwortsicherheit wurde die Hashfunktion des Webmap Clients von MD5 geändert auf SHA-256.
-Deshalb muss das bestehende Passwort neu verschlüsselt werden:<br>
+Im Zuge der Verbesserung der Passwortsicherheit wurde die Hashfunktion des Webmap Clients von MD5 geändert auf SHA-256. Damit erfüllt die Passwortverschlüsselung die Anforderungen des BSI (Bundesamt für Sicherheit in der Informationstechnik).
+Ein bestehendes Passwort muss daher neu verschlüsselt werden:<br>
 [Wo kann ich die Login-Daten für die Admin-GUI festlegen?](https://www.ingrid-oss.eu/latest/components/webmap_client_admin.html#wo-kann-ich-die-login-daten-f%C3%BCr-die-admin-gui-festlegen)
 ([REDMINE-3669](https://redmine.informationgrid.eu/issues/3669))
 
