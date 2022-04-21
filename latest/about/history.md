@@ -21,7 +21,7 @@ Auf dieses Index-Feld kann allerdings verzichtet werden, wenn man in Kauf nimmt,
 Beispiel:<br>
 "Digitales Oberflächenmodell aus der Befliegung 2003 - Kachel: Wilhelmshaven_9 Digital surface model from the aerial flight 2003 - tile: Wilhelmshaven_9" wird bei der Suche nach "Kachel: Wilhelmshaven_9" gefunden, jedoch nicht bei der Suche nach "Kachel: Wilhelmshaven".
 
-WICHTIG: Für die Entfernung des Indexfelds wurden Änderungen an den Dateien default-mappings.json und default-settings.json vorgenommen. Wenn diese bei der Installation überschrieben werden, müssen diese ersetzt werden. ([REDMINE-3492](https://redmine.informationgrid.eu/issues/3492#note-3))
+**WICHTIG:** Für die Entfernung des Indexfelds wurden Änderungen an den Dateien `default-mappings.json` und `default-settings.json` vorgenommen. Wenn diese bei der Installation überschrieben werden, müssen diese ersetzt werden. ([REDMINE-3492](https://redmine.informationgrid.eu/issues/3492#note-3))
 
 #### Instanzen von iPlug SE müssen neu erstellt werden
 
