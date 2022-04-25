@@ -28,7 +28,7 @@ Beispiel:<br>
 Aufgrund der Anpassungen an Elasticsearch müssen die Instanzen im iPlug SE nach der Aktualisierung neu erstellt und indexiert werden:
 
 - Aufruf iPlug-Administration -> SE-Settings -> SE-Instanzen
-- Instanzen kopieren
+- Bestehende, aktive SE-Instanzen kopieren und zwecks Unterscheidung jeweils einen anderen Namen vergeben (z.B. _JJJJMMDD an den Namen anhängen)
 - Neue, kopierte Instanzen entweder manuell crawlen und indexieren ("Management" -> "Start Crawl") oder vorhandes Scheduling (Zeitplanung) von den alten Instanzen übernehmen für automatisches Crawlen und Indexieren der neuen Instanzen
 - Nachdem neue Instanzen gecrawlt und indexiert sind, können die alten Instanzen gelöscht werden
 
