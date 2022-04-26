@@ -90,6 +90,18 @@ Die Layouts für die Suchergebnisseite und die Detaildarstellung des PortalU RLP
 ![Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Detail](../images/5120_portal_portalurlp_new-layout_search-detail.png "Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Detail")
 <figcaption class="figcaption">Aktualisierte Layouts Suchergebnisseite und Detaildarstellung für das PortalU RLP Suche Detail</figcaption>
 
+#### UVP: Mehrfachauswahl bei Facetten "Verfahrenstypen" und "Kategorien" in der Suche
+
+Im UVP-Profil ist es jetzt möglich, in der Suche bei "Verfahrenstypen" und "Kategorien" jeweils mehrere Facetten per Checkbox auszuwählen und zu kombinieren. ([REDMINE-3317](https://redmine.informationgrid.eu/issues/3317))
+
+![Mehrfachauswahl bei Facetten Verfahrenstypen und Kategorien in der Suche des niedersächsischen UVP-Portals](../images/5120_portal_uvp-ni_search_multiple-selection.png "Mehrfachauswahl bei Facetten Verfahrenstypen und Kategorien in der Suche des niedersächsischen UVP-Portals")
+<figcaption class="figcaption">Mehrfachauswahl bei Facetten Verfahrenstypen und Kategorien in der Suche des niedersächsischen UVP-Portals</figcaption>
+
+Auf der Karte wurden die Schieberegler für die Anzeige von "nur aktuellen" Verfahren bei weiteren Verfahrenstypen hinzugefügt.
+
+![Schieberegler für die Anzeige von nur aktuellen Verfahren bei weiteren Verfahrenstypen auf der Karte des niedersächsischen UVP-Portals](../images/5120_portal_uvp-ni_map_slider.jpg "Schieberegler für die Anzeige von nur aktuellen Verfahren bei weiteren Verfahrenstypen auf der Karte des niedersächsischen UVP-Portals")
+<figcaption class="figcaption">Schieberegler für die Anzeige von nur aktuellen Verfahren bei weiteren Verfahrenstypen auf der Karte des niedersächsischen UVP-Portals</figcaption>
+
 #### Neue Elasticsearch-Version für den Messwerte-Client
 
 Mit der Version 5.12.0 wurde die Elasticsearch-Version des Messwerte-Clients im Portal aktualisiert auf 7.16.2. Damit steht eine aktuelle, stabile Basis für die Indexierung und Suche von Zeitreihen zur Verfügung, die Indexierungsschicht und APIs wurden entsprechend angepasst.
