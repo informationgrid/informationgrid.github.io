@@ -131,7 +131,6 @@ Der Parameter docid wurde aus der Detail-URL entfernt.
 ### Liste der Änderungen
 
 - [Feature] [IGE] SchemaLocation - Eintrag im XML ändern ([REDMINE-3392](https://redmine.informationgrid.eu/issues/3392))
-- [Feature] [IGE] Regionalschlüssel (RS) erfassen per Freihand-Eingabe ([REDMINE-2620](https://redmine.informationgrid.eu/issues/2620))
 - [Feature] [IGE] Zusätzliche Validierungsregel für die Eingabe von "Durch die Ressource abgedeckte Zeitspanne" implementieren ([REDMINE-2377](https://redmine.informationgrid.eu/issues/2377))
 - [Feature] [IGE] Editor - Im GUI "Dokument-Upload" ersetzen mit "hinzufügen" ([REDMINE-1903](https://redmine.informationgrid.eu/issues/1903))
 - [Feature] [INTERFACE-CSW] CSW-T (Geodatensatz Teil1): alle HH-spezifischen Anpassungen sollen für die CSW-T Funktionalität berücksichtigt werden ([REDMINE-2097](https://redmine.informationgrid.eu/issues/2097))
