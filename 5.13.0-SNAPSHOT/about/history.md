@@ -13,6 +13,8 @@ Release TT.MM.2022
 
 ### Hinweise für die Aktualisierung
 
+Die Aktualisierung vom iPlug-SE macht eine Migration der Instanzen erforderlich. TBD: Informationen aus https://redmine.informationgrid.eu/issues/132 übertragen. 
+
 ...
 
 ### Kritische Änderungen
