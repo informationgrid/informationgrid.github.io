@@ -8,6 +8,38 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.12.x. Release Note
 [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 5.12.2
+
+Release 10.06.2022
+
+### Wichtige Änderungen
+
+#### Ortssuche in der Karte des UVP-Portals auf Basis von Nominatim
+
+In der Karte wurde eine Ortssuche basierend auf Nominatim hinzugefügt. ([REDMINE-3621](https://redmine.informationgrid.eu/issues/3621))
+
+![Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim](../images/5122_portal_uvp-ni_map-search.png "Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim")
+<figcaption class="figcaption">Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim</figcaption>
+
+### Liste der Änderungen
+
+- [Feature] [MAPCLIENT] Positionierung über Request an BWaStr-Locator ([REDMINE-3807](https://redmine.informationgrid.eu/issues/3807))
+
+Profil MetaVer
+
+- [Feature] [PORTAL] HB - Vorschaubild austauschen: inkl. Bremerhaven ([REDMINE-3907](https://redmine.informationgrid.eu/issues/3907))
+
+Profil UVP
+
+- [Feature] [PORTAL] Metadaten im UVP-Portal für Suchmaschinen und für Nutzer optimieren ([REDMINE-3635](https://redmine.informationgrid.eu/issues/3635))
+- [Feature] [PORTAL] Ortssuche in der Karte des UVP-Portals auf Basis von NOMINATIM ([REDMINE-3621](https://redmine.informationgrid.eu/issues/3621))
+- [Feature] [PORTAL] Optimierung Sammeldownload-Funktionalität ([REDMINE-3456](https://redmine.informationgrid.eu/issues/3456))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.12.2/))
+
+
 ## Version 5.12.1
 
 Release 18.05.2022
