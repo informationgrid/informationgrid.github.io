@@ -84,6 +84,23 @@ Profil UVP
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.12.1/))
 
 
+
+## Version 5.12.0.2
+
+Release 22.06.2022
+
+### Liste der Änderungen
+
+Profil UVP
+
+- [Bug] [PORTAL] Upload wird unter falscher UUID abgelegt ([REDMINE-3965](https://redmine.informationgrid.eu/issues/3965))
+- [Bug] [PORTAL] Ausländisches Verfahren wird unter "Verfahren" angelegt ([REDMINE-2487](https://redmine.informationgrid.eu/issues/2487))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.12.0.2/))
+
+
 ## Version 5.12.0.1
 
 Release 28.04.2022
