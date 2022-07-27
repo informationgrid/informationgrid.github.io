@@ -19,19 +19,17 @@ Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neu
 
 **WICHTIG:**<br>
 Existierende Instanzen im iPlug SE müssen wie folgt migriert werden (s. auch [REDMINE-132](https://redmine.informationgrid.eu/issues/132#note-46)).
-- Erstellung einer neuen Instanz. Im `<instance>/conf` Verzeichnis auf dem server sind dann alle Konfigurationsfiles vorhanden, die benötigt werden.
+- Erstellung einer neuen Instanz. Im `<instance>/conf` Verzeichnis auf dem Server sind dann alle Konfigurationsfiles vorhanden, die benötigt werden.
 - Erstellen einer Kopie der alten Instanz in der Admin GUI
-- Die kopierte Instanz muss dann auf dem Server mit den Konfigurationsfiles versorgt werden. Dazu werden die Dateien **außer die Datei** `nutch-site.xml` aus der neu erstellten Instanz in die kopierte Instanz übertragen.<br>
+- Die kopierte Instanz muss dann auf dem Server mit den Konfigurationsfiles versorgt werden. Dazu werden die Dateien, **außer der Datei** `nutch-site.xml`, aus der neu erstellten Instanz in die kopierte Instanz übertragen.<br>
 Beispiel: 
   ```
   # backup directory "instance_copy" 
   cd <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_new
   cp `ls | grep -v "nutch-site.xml"` <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_copy/
   ```
-  
 - Löschen der neuen Instanz
 - Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)
-
 
 Bei der Gelegenheit sollte überprüft werden, ob das Feld `plugin.includes` in der Konfiguration der Instanz auf dem folgenden Wert steht:
 
@@ -41,11 +39,81 @@ Dies behebt evtl. fehlende Beschreibungen unterhalb der Treffer, die aus diesem 
 
 ### Kritische Änderungen
 
-...
+#### iPlug SE - Aktualisierung auf akt. NUTCH Version
+
+Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neue leistungsfähigere Version aktualisiert ([REDMINE-132](https://redmine.informationgrid.eu/issues/132)).<br>
+**WICHTIG:**
+Existierende Instanzen im iPlug SE müssen manuell migriert werden s.o. [Instanzen vom iPlug SE müssen migriert werden](#instanzen-vom-iplug-se-müssen-migriert-werden)
 
 ### Wichtige Änderungen
 
-...
+#### Kartenclient: Direkte Positionierung über Request an BWaStr-Locator
+
+Über einen Request auf den BWaStr-Locator kann nun direkt ein Punkt in der Karte gesetzt und die Karte positioniert werden ([REDMINE-3807](https://redmine.informationgrid.eu/issues/3807)).
+
+Beispiel: `Km-Wert: 200, Abstand: 20, Zoom: 16` [Positionierung im Demo-Kartenclient](https://dev.informationgrid.eu/kartendienste?bwaStrId=0701&bwaStrKm=200&bwaStrOffset=20&zoom=16)
+
+#### Kartenclient: Kopplung WMS Layer und WFS Featuretype mit Download-Möglichkeiten
+
+Im Kartenclient kann im Admin-GUI nun eine Kopplung zwischen WMS Layer und WFS Featuretypes eingerichtet werden, die dann im Kartenclient in der Karte herunter geladen werden können ([REDMINE-3585](https://redmine.informationgrid.eu/issues/3585)).
+
+![Mapclient: Kopplung WMS Layer und WFS Featuretype und Download-Möglichkeiten - Webmap Client Admin GUI](../images/5121_portal_mapclient_wms-wfs-admin-gui.png "Mapclient: Kopplung WMS und WFS im Admin GUI")
+<figcaption class="figcaption">Mapclient: Kopplung WMS und WFS im Admin GUI</figcaption><br>
+
+![Mapclient: Kopplung WMS Layer und WFS Featuretype und Download-Möglichkeiten - Webmap Client Frontend](../images/5121_portal_mapclient_wms-wfs-frontend.png "Mapclient: Download-Möglichkeiten der Features im Kartenclient")
+<figcaption class="figcaption">Mapclient: Download-Möglichkeiten der Features je FeatureType im Kartenclient</figcaption>
+
+#### Kartenclient: Darstellung von Features eines Typs direkt via URL
+
+Über Parameter in der URL können direkt alle Features eines Typs, auch mit Zoom auf ein bestimmtes Feature, in der Karte angezeigt werden ([REDMINE-4073](https://redmine.informationgrid.eu/issues/4073#note-4)).
+
+Beispiel aus Demo Portal:
+- Alle Features vom Typ `strassen_und_wegebrueckenanlagen` aus dem WFS der WSV in Karte anzeigen als Layer `Strassen_und_Wegebrueckenanlagen`<br>
+https://dev.informationgrid.eu/kartendienste?layers=WFS||Strassen%20und%20Wegebr%C3%BCckenanlagen||https://via.bund.de/wsv/gst/wfs||strassen_und_wegebrueckenanlagen
+
+#### Kartenclient: Sprung zu Portal Metadaten aus Karten Layer
+
+In der Admin-GUI kann nun eine Portal URL zu jedem Karten Layer eingepflegt werden.
+Von der Info Box der Karte im Kartenclient kann dann direkt zu den Metadaten des Layers im Portal gesprungen werden ([REDMINE-4016](https://redmine.informationgrid.eu/issues/4016#note-1)).
+
+![Sprung zu Metadaten eines Karten Layers](../images/5130_metadatenLinkInKarte.png "Sprung zu Metadaten eines Karten Layers")
+<figcaption class="figcaption">Sprung zu Metadaten eines Karten Layers</figcaption>
+
+#### ATOM Download Service: Update Layout, auch partnerspezifisch und direkte Verlinkung zu den Metadaten
+
+Im Zuge der Neugestaltung der Portale (z.B. METAVER) wurde das Layout des ATOM Download Service (DLS) überarbeitet:
+- Neutrales Layout, das mit verschiedenen Portalen funktioniert
+- Berücksichtigung der landesspezifischen Darstellung
+- Überarbeitung der Darstellung der Downloads
+
+Anhand des geladenen Services wird ermittelt, welches Bundesland den Dienst bereitstellt. Das Layout wird daraufhin automatisch angepasst.
+Der Link `Weitere Informationen` führt vom Feed direkt zu den Metadaten im Portal ([REDMINE-4087](https://redmine.informationgrid.eu/issues/4087), [REDMINE-3987](https://redmine.informationgrid.eu/issues/2498), [REDMINE-3987](https://redmine.informationgrid.eu/issues/3987)).
+
+![ATOM Download Service - Direkte Verlinkung zu den Metadaten](../images/5130_atomfeed_2_metadata_1.png "ATOM Download Service - Direkte Verlinkung zu den Metadaten")
+
+![ATOM Download Service - Metadaten im Portal](../images/5130_atomfeed_2_metadata_2.png "ATOM Download Service - Metadaten im Portal")
+<figcaption class="figcaption">ATOM Download Service - Partnerspezifisches Layout und direkte Verlinkung zu den Metadaten</figcaption>
+
+#### Export der Daten im DCAT-AP.DE Format über search Schnittstelle
+
+Die Schnittstelle liefert zunächst DCAT-AP.DE 1.1 im RDF XML Format, da dieses Format auch in der Abbildung von ISO -> DCAT-AP.DE klar definiert ist.
+Die Schnittstelle kann leicht um die DCAT-AP.DE 2.0 Spezifikation erweitert werden (URL Konzept).<br>
+Die Daten sind filterbar, also z.B. nur Daten aus speziellen Katalogen. Der RDF-Export kann über den Parameter format=rdf angesteuert werden.
+Details s. [REDMINE-3632](https://redmine.informationgrid.eu/issues/3632#note-10).
+
+Beispiel aus NI: [Export DCAT-AP.de RDF in NI](https://numis.niedersachsen.de/search/opensearch/query?format=rdf)
+
+#### Ortssuche in der Karte des UVP-Portals auf Basis von Nominatim
+
+In der Karte wurde eine Ortssuche basierend auf Nominatim hinzugefügt. ([REDMINE-3621](https://redmine.informationgrid.eu/issues/3621))
+
+![Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim](../images/5122_portal_uvp-ni_map-search.png "Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim")
+<figcaption class="figcaption">Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim</figcaption>
+
+#### UVP: Entfernen großer verwaister ZIP Uploads vom Server
+
+Nicht mehr benötigte Zip-Dateien (z.B. nach Löschung der jeweiligen Vorhaben) werden nun vom Server gelöscht.
+Alle Zeiten und Quotas (Dateigröße) können eingestellt werden ([REDMINE-3456](https://redmine.informationgrid.eu/issues/3456#note-6)).
 
 ### Liste der Änderungen
 
@@ -96,10 +164,6 @@ InGrid Installation Schleswig-Holstein
 MetaVer
 
 - [Support] [PORTAL] HB - Vorschaubild austauschen: inkl. Bremerhaven ([REDMINE-3907](https://redmine.informationgrid.eu/issues/3907))
-
-NUMIS
-
-- [Bug] [PORTAL] Nds. UVP-Portal: Anzeige BLP-Details "Mitgliedsgemeinden:" ([REDMINE-4070](https://redmine.informationgrid.eu/issues/4070))
 
 UVP
 
