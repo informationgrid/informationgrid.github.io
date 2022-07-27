@@ -22,11 +22,11 @@ Existierende Instanzen im iPlug SE müssen wie folgt migriert werden (s. auch [R
 - Erstellung einer neuen Instanz. Im `instance/conf` Verzeichnis sind dann alle Konfigurationsfiles vorhanden, die benötigt werden.
 - Erstellen einer Kopie der alten Instanz
 - Die kopierte Instanz muss dann mit den Konfigurationsfiles versorgt werden. Dazu werden die Dateien **außer die Datei** `nutch-site.xml` aus der neu erstellten Instanz in die kopierte Instanz übertragen.<br>
-Bsp: 
+Beispiel: 
   ```
-# backup directory "instance_copy" 
-cd .../instance_new
-cp `ls | grep -v "nutch-site.xml"` .../instance_copy/
+  # backup directory "instance_copy" 
+  cd .../instance_new
+  cp `ls | grep -v "nutch-site.xml"` .../instance_copy/
   ```
 
 ### Kritische Änderungen
