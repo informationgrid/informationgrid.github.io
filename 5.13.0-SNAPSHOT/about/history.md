@@ -13,9 +13,21 @@ Release 21.07.2022
 
 ### Hinweise für die Aktualisierung
 
-Die Aktualisierung vom iPlug-SE macht eine Migration der Instanzen erforderlich. TBD: Informationen aus https://redmine.informationgrid.eu/issues/132 übertragen. 
+#### Instanzen vom iPlug SE müssen migriert werden
 
-...
+Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neue Version gehoben.
+
+**WICHTIG:**<br>
+Existierende Instanzen im iPlug SE müssen wie folgt migriert werden (s. auch [REDMINE-132](https://redmine.informationgrid.eu/issues/132#note-46)).
+- Erstellung einer neuen Instanz. Im `instance/conf` Verzeichnis sind dann alle Konfigurationsfiles vorhanden, die benötigt werden.
+- Erstellen einer Kopie der alten Instanz
+- Die kopierte Instanz muss dann mit den Konfigurationsfiles versorgt werden. Dazu werden die Dateien **außer die Datei** `nutch-site.xml` aus der neu erstellten Instanz in die kopierte Instanz übertragen.<br>
+Bsp: 
+  ```
+# backup directory "instance_copy" 
+cd .../instance_new
+cp `ls | grep -v "nutch-site.xml"` .../instance_copy/
+  ```
 
 ### Kritische Änderungen
 
