@@ -47,15 +47,17 @@ Existierende Instanzen im iPlug SE müssen manuell migriert werden s.o. [Instanz
 
 ### Wichtige Änderungen
 
-#### Kartenclient: Direkte Positionierung über Request an BWaStr-Locator
+#### Kartenclient: Direkte Positionierung über BWaStr-Locator
 
-Über einen Request auf den BWaStr-Locator kann nun direkt ein Punkt in der Karte gesetzt und die Karte positioniert werden ([REDMINE-3807](https://redmine.informationgrid.eu/issues/3807)).
+Über Parameter des [Bundeswasserstraßen-Locators](https://www.gdws.wsv.bund.de/DE/service/karten/02_Geodatendienste_Geoanwendungen/02_geoanwendungen/BWaStr-Locator/BWaStr-Locator_node.html) kann nun direkt ein Punkt in der Karte gesetzt und die Karte positioniert werden ([REDMINE-3807](https://redmine.informationgrid.eu/issues/3807)).
 
-Beispiel: `Km-Wert: 200, Abstand: 20, Zoom: 16` [Positionierung im Demo-Kartenclient](https://dev.informationgrid.eu/kartendienste?bwaStrId=0701&bwaStrKm=200&bwaStrOffset=20&zoom=16)
+Beispiel:<br>
+- Positionierung im Demo-Kartenclient:<br> `BWaStr-Id: 0701 Elbe Hauptstrecke, Km-Wert: 200, Abstand: 20, Zoom: 16`<br>
+https://dev.informationgrid.eu/kartendienste?bwaStrId=0701&bwaStrKm=200&bwaStrOffset=20&zoom=16
 
-#### Kartenclient: Kopplung WMS Layer und WFS Featuretype mit Download-Möglichkeiten
+#### Kartenclient: Kopplung WMS Layer und WFS FeatureTypes mit Download-Möglichkeiten
 
-Im Kartenclient kann im Admin-GUI nun eine Kopplung zwischen WMS Layer und WFS Featuretypes eingerichtet werden, die dann im Kartenclient in der Karte herunter geladen werden können ([REDMINE-3585](https://redmine.informationgrid.eu/issues/3585)).
+Im Kartenclient kann im Admin-GUI nun eine Kopplung zwischen WMS Layer und WFS FeatureTypes eingerichtet werden, die dann im Kartenclient in der Karte herunter geladen werden können ([REDMINE-3585](https://redmine.informationgrid.eu/issues/3585)).
 
 ![Mapclient: Kopplung WMS Layer und WFS Featuretype und Download-Möglichkeiten - Webmap Client Admin GUI](../images/5121_portal_mapclient_wms-wfs-admin-gui.png "Mapclient: Kopplung WMS und WFS im Admin GUI")
 <figcaption class="figcaption">Mapclient: Kopplung WMS und WFS im Admin GUI</figcaption><br>
@@ -63,13 +65,16 @@ Im Kartenclient kann im Admin-GUI nun eine Kopplung zwischen WMS Layer und WFS F
 ![Mapclient: Kopplung WMS Layer und WFS Featuretype und Download-Möglichkeiten - Webmap Client Frontend](../images/5121_portal_mapclient_wms-wfs-frontend.png "Mapclient: Download-Möglichkeiten der Features im Kartenclient")
 <figcaption class="figcaption">Mapclient: Download-Möglichkeiten der Features je FeatureType im Kartenclient</figcaption>
 
-#### Kartenclient: Darstellung von Features eines Typs direkt via URL
+#### Kartenclient: Darstellung von Features eines WFS direkt via URL
 
-Über Parameter in der URL können direkt alle Features eines Typs, auch mit Zoom auf ein bestimmtes Feature, in der Karte angezeigt werden ([REDMINE-4073](https://redmine.informationgrid.eu/issues/4073#note-4)).
+Über Parameter in der URL können direkt alle Features eines FeatureTypes, auch mit Zoom auf ein bestimmtes Feature, in der Karte angezeigt werden ([REDMINE-4073](https://redmine.informationgrid.eu/issues/4073#note-4)).
 
 Beispiel aus Demo Portal:
 - Alle Features vom Typ `strassen_und_wegebrueckenanlagen` aus dem WFS der WSV in Karte anzeigen als Layer `Strassen_und_Wegebrueckenanlagen`<br>
 https://dev.informationgrid.eu/kartendienste?layers=WFS||Strassen%20und%20Wegebr%C3%BCckenanlagen||https://via.bund.de/wsv/gst/wfs||strassen_und_wegebrueckenanlagen
+
+- mit Zoom auf Feature `strassen_und_wegebrueckenanlagen.2560`<br>
+https://dev.informationgrid.eu/kartendienste?layers=WFS||Strassen%20und%20Wegebr%C3%BCckenanlagen||https://via.bund.de/wsv/gst/wfs||strassen_und_wegebrueckenanlagen||strassen_und_wegebrueckenanlagen.2560
 
 #### Kartenclient: Sprung zu Portal Metadaten aus Karten Layer
 
@@ -110,10 +115,10 @@ In der Karte wurde eine Ortssuche basierend auf Nominatim hinzugefügt. ([REDMIN
 ![Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim](../images/5122_portal_uvp-ni_map-search.png "Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim")
 <figcaption class="figcaption">Ortssuche in der Karte des niedersächsischen UVP-Portals auf Basis von Nominatim</figcaption>
 
-#### UVP: Entfernen großer verwaister ZIP Uploads vom Server
+#### UVP: Entfernen verwaister ZIP Uploads vom Server
 
 Nicht mehr benötigte Zip-Dateien (z.B. nach Löschung der jeweiligen Vorhaben) werden nun vom Server gelöscht.
-Alle Zeiten und Quotas (Dateigröße) können eingestellt werden ([REDMINE-3456](https://redmine.informationgrid.eu/issues/3456#note-6)).
+Zeitliches Verhalten und Quotas (Dateigröße) können eingestellt werden ([REDMINE-3456](https://redmine.informationgrid.eu/issues/3456#note-6)).
 
 ### Liste der Änderungen
 
