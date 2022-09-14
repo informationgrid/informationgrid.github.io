@@ -25,8 +25,8 @@ Existierende Instanzen im iPlug SE müssen wie folgt migriert werden (s. auch [R
 Beispiel: 
   ```
   # backup directory "instance_copy" 
-  cd <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_new
-  cp `ls | grep -v "nutch-site.xml"` <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_copy/
+  cd <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_new/conf/
+  cp `ls | grep -v "nutch-site.xml"` <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_copy/conf/
   ```
 - Löschen der neuen Instanz
 - Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)
