@@ -29,6 +29,7 @@ Beispiel:
   cp `ls | grep -v "nutch-site.xml"` <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_copy/conf/
   ```
 - Löschen der neuen Instanz
+- SE iPlug neu starten
 - Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)
 
 Bei der Gelegenheit sollte überprüft werden, ob das Feld `plugin.includes` in der Konfiguration der Instanz auf dem folgenden Wert steht:
