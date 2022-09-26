@@ -15,7 +15,7 @@ Release 21.07.2022
 
 #### Instanzen vom iPlug SE müssen migriert werden
 
-Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neue Version gehoben.
+Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neue Version 1.18 gehoben.
 
 **WICHTIG:**<br>
 Existierende Instanzen im iPlug SE müssen wie folgt migriert werden (s. auch [REDMINE-132](https://redmine.informationgrid.eu/issues/132#note-46)).
@@ -31,6 +31,15 @@ Beispiel:
 - Löschen der neuen Instanz
 - SE iPlug neu starten
 - Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)
+ACHTUNG:
+Beim Crawl gibt es in Version 5.13.x noch ein Problem mit Redirects/Excludes s. [REDMINE-4262](https://redmine.informationgrid.eu/issues/4262#note-5).
+Das Problem kann durch das Hinzufügen einer Option in der NUTCH Konfiguration der Instanz behoben werden:
+  ```
+  http.redirect.max = 1
+  ```
+Dadurch werden Redirects während des Crawls bis zu einer Tiefe von 1 aufgelöst.
+Die Option wird in version 5.14.0 per Default für alle neuen Instanzen gesetzt.
+
 
 Bei der Gelegenheit sollte überprüft werden, ob das Feld `plugin.includes` in der Konfiguration der Instanz auf dem folgenden Wert steht:
 
