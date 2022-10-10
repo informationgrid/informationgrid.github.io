@@ -101,7 +101,7 @@ Die Option wird in version 5.14.0 per Default für alle neuen Instanzen gesetzt.
 
 Bei der Gelegenheit sollte überprüft werden, ob das Feld `plugin.includes` in der Konfiguration der Instanz auf dem folgenden Wert steht:
 
-`ingrid-protocol-httpclient|urlfilter-regex|parse-(html|tika)|index-(anchor|metadata|more)|ingrid-(indexer-elastic|index-basic)|scoring-ingrid|ingrid-language-identifier|urlnormalizer-(pass|regex|basic)|analysis-de`
+`protocol-httpclient|urlfilter-(regex|validator)|parse-(html|tika)|index-(basic|anchor|metadata|more)|ingrid-indexer-elastic|scoring-ingrid|ingrid-language-identifier|urlnormalizer-(pass|regex|basic)|analysis-de`
 
 Dies behebt evtl. fehlende Beschreibungen unterhalb der Treffer, die aus diesem iPlug stammen.
 
