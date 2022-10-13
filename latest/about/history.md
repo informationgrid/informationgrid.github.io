@@ -13,14 +13,34 @@ Release 04.10.2022
 
 ### Wichtige Änderungen
 
+#### Kartenclient: WFS Feature über individuelle Attribute hervorheben
 
+Über individuelle Attribute können Features auf der Karte hervorgehoben und gezoomt werden ([REDMINE-4259](https://redmine.informationgrid.eu/issues/4259)).
 
+![Kartenclient: WFS Feature über individuelle Attribute hervorheben](../images/5140_mapclient_upsh_attributes.png "Kartenclient: WFS Feature über individuelle Attribute hervorheben")
+<figcaption class="figcaption">Kartenclient: WFS Feature über individuelle Attribute hervorheben</figcaption>
 
+#### UVP: Mehrfachauswahl bei der Suche und Anzeige der im letzten Jahr bearbeiteten Verfahren
 
+Bei der Suche können jetzt mehrere Facetten gleichzeitig ausgewählt werden. Mit dem Umschalter "Nur aktuelle" können nur die im letzten Jahr bearbeiteten Verfahren angezeigt werden. ([REDMINE-3598](https://redmine.informationgrid.eu/issues/3598))
+
+![UVP: Mehrfachauswahl bei der Suche und Anzeige der im letzten Jahr bearbeiteten Verfahren](../images/5140_uvp_portal_multiple-selection_search.png "UVP: Mehrfachauswahl bei der Suche und Anzeige der im letzten Jahr bearbeiteten Verfahren")
+<figcaption class="figcaption">UVP: Mehrfachauswahl bei der Suche und Anzeige der im letzten Jahr bearbeiteten Verfahren</figcaption>
+
+![UVP: Anzeige der im letzten Jahr bearbeiteten Verfahren](../images/5140_uvp_portal_current-only_map.jpg "UVP: Anzeige der im letzten Jahr bearbeiteten Verfahren")
+<figcaption class="figcaption">UVP: Anzeige der im letzten Jahr bearbeiteten Verfahren</figcaption>
+
+#### UVP: Bundesländer auf der Startseite anzeigen
+
+Auf der Startseite des UVP-Portals werden unter dem neuen Bereich "Bundesländer" die Wappen aller Bundesländer dargestellt. Dort werden pro Bundesland die Anzahl und Verlinkung auf alle im letzten Jahr bearbeiten Verfahren sowie den Verfahrenstyp "Bauleitplanung" angezeigt ([REDMINE-2515](https://redmine.informationgrid.eu/issues/2515)).
+
+![Wappen der Bundesländer auf der Startseite](../images/5140_portal_uvp_coat-of-arms.png "Wappen der Bundesländer auf der Startseite")
+<figcaption class="figcaption">Wappen der Bundesländer auf der Startseite</figcaption>
 
 ### Liste der Änderungen
 
 - [Feature] [CODELIST REPOSITORY] Codelist 520 um Eintrag "HDD" erweitern ([REDMINE-4115](https://redmine.informationgrid.eu/issues/4115))
+- [Feature] [IGE] KVP- und RESTful-Capabilities-URL unterscheiden ([REDMINE-3369](https://redmine.informationgrid.eu/issues/3369))
 - [Feature] [IPLUG_IGE] Checkbox "Open Data" für HMDK überarbeiten ([REDMINE-3413](https://redmine.informationgrid.eu/issues/3413))
 - [Feature] [MAPCLIENT] Verbesserung der Absicherung der Formular-Aktionen im MapClient ([REDMINE-4270](https://redmine.informationgrid.eu/issues/4270))
 - [Feature] [PORTAL] Geforderte Passwortkomplexität soll per Default erhöht werden ([REDMINE-1314](https://redmine.informationgrid.eu/issues/1314))
@@ -45,7 +65,6 @@ Profil BAW MIS
 Profil BKG
 
 - [Feature] [IGE] WMTS - getCapabilities-Assistent und ISO-Abbildung ([REDMINE-3651](https://redmine.informationgrid.eu/issues/3651))
-- [Feature] [IGE] KVP- und RESTful-Capabilities-URL unterscheiden ([REDMINE-3369](https://redmine.informationgrid.eu/issues/3369))
 
 Profil NUMIS
 
