@@ -13,7 +13,16 @@ Release ...2023
 
 ### Hinweise für die Aktualisierung
 
-...
+#### Aktualisierung von Elasticsearch
+
+Die neue Version des iBus kann mit der Elasticsearch-Version 7.17.6 umgehen. Alle anderen Komponenten benötigen hierfür
+keine Aktualisierung, da die Kommunikation über den iBus geht. Als zusätzliche Anpassung muss darauf geachtet werden,
+dass das Elasticsearch-Image korrekt konfiguriert ist.
+
+* Image: docker.elastic.co/elasticsearch/elasticsearch:7.17.6
+* zusätzliche Umgebungsvariablen:
+  * discovery.type=single-node
+  * ingest.geoip.downloader.enabled=false
 
 ### Wichtige Änderungen
 
