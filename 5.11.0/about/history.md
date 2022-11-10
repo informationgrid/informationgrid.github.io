@@ -102,7 +102,7 @@ Folgende Orte müssen überprüft werden, insofern diese überschrieben werden:
 
 #### Anpassung des SQL-Modus
 
-Seit MySQL Version 5.7.5 wird der SQL-Modus "ONLY_FULL_GROUP_BY" standardmäßig aktiviert. Dies kann zu Problemen führen, insbesondere wenn HQL-Queries ausgeführt werden. Um diesen Modus wieder zu entfernen, muss im docker-compose.yml der command-Befehl mit dem Parameter `sql-mode` ergänzt werden.
+Seit MySQL Version 5.7.5 wird der SQL-Modus "ONLY_FULL_GROUP_BY" standardmäßig aktiviert. Dies kann zu Problemen führen, insbesondere wenn HQL-Queries ausgeführt werden. Um diesen Modus wieder zu entfernen, muss im docker-compose.yml der command-Befehl mit dem Parameter `sql_mode` ergänzt werden.
 
 Beispiel:
 ```
