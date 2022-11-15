@@ -12,7 +12,7 @@ E-Mail: vkoopuis@informationgrid.eu
 
 ### Projektpartner Öffentliche Verwaltung:
 
-- Niedersachsen: Ministerium für Umwelt, Energie, Bauen und Klimaschutz (Federführung)
+- Niedersachsen: Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
 - Bund: Informationstechnikzentrum Bund/WSV
 - Baden-Württemberg: Ministerium für Umwelt, Klima und Energiewirtschaft
 - Bayern: Staatsministerium für Umwelt und Verbraucherschutz
