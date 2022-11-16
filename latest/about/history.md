@@ -7,6 +7,63 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Notes älterer Versionen können hier eingesehen werden:
 [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+
+## Version 5.14.1
+
+Release 09.11.2022
+
+### Liste der Änderungen
+
+- [Feature] [IGE] Regionalschlüssel erfassen - Minimallösung ([REDMINE-3928](https://redmine.informationgrid.eu/issues/3928))
+- [Feature] [INTERFACE-SEARCH] Atom-Feed Client - Lösung für ST ([REDMINE-2400](https://redmine.informationgrid.eu/issues/2400))
+- [Feature] [MAPCLIENT] Admin-GUI - Einbindung WMTS mit anderer Projektion ([REDMINE-4479](https://redmine.informationgrid.eu/issues/4479))
+- [Feature] [PORTAL] Entfernen von IGE-Applikation bei Installation über Docker ([REDMINE-4447](https://redmine.informationgrid.eu/issues/4447))
+- [Feature] [PORTAL] Portalanzeige Koordinatensysteme ([REDMINE-4486](https://redmine.informationgrid.eu/issues/4486))
+- [Bug] [IGE] Regression von Metadaten-Import ([REDMINE-4340](https://redmine.informationgrid.eu/issues/4340))
+- [Bug] [IGE-NG] Probleme beim Verschieben von Dokumenten mit "gültig-bis" Daten ([REDMINE-4363](https://redmine.informationgrid.eu/issues/4363))
+
+Profil BAW MIS
+
+- [Feature] [PORTAL] Bibliografische Angaben auch im baw_mis Profil implementieren ([REDMINE-4351](https://redmine.informationgrid.eu/issues/4351))
+- [Feature] [PORTAL] Anpassungen in den Detail- und Suchtreffer-Ansichten ([REDMINE-4167](https://redmine.informationgrid.eu/issues/4167))
+
+Profil BKG
+
+- [Bug] [PORTAL] Fehler in BKG-MIS-Release 5.14.0 ([REDMINE-4460](https://redmine.informationgrid.eu/issues/4460))
+- [Bug] [PORTAL] Fehler in BKG-MIS-Release 5.13.1 ([REDMINE-4345](https://redmine.informationgrid.eu/issues/4345))
+
+Profil LUBW
+
+- [Feature] [MAPCLIENT] Direkte Anzeige, wenn nur ein Layer im WMS existiert ([REDMINE-4376](https://redmine.informationgrid.eu/issues/4376))
+
+Profil RLP
+
+- [Feature] [PORTAL] Layouts anpassen für die Suchergebnisseite und die Detaildarstellung im RLP-Profil ([REDMINE-3631](https://redmine.informationgrid.eu/issues/3631))
+
+Profil MetaVer
+
+- [Feature] [MAPCLIENT] Kartenclient METAVER - Webatlas farbe/grau ersetzen durch basemap.de Web Raster farbe/grau ([REDMINE-4230](https://redmine.informationgrid.eu/issues/4230))
+
+Profil NUMIS
+
+- [Feature] [PORTAL] Erstellung neuer Bereich "APIs" ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374))
+
+Profil UVP
+
+- [Feature] [PORTAL] UVP: Darstellung des Bundeslandes oder des Landkreises in dem das Vorhaben erfolgt ([REDMINE-1806](https://redmine.informationgrid.eu/issues/1806))
+
+### Komponenten
+
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.14.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.1/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.14.1/))
+
+
+
+
+
+
+
 ## Version 5.14.0
 
 Release 04.10.2022
