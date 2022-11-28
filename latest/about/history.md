@@ -8,6 +8,50 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 5.14.2
+
+Release 24.11.2022
+
+
+
+### Liste der Änderungen
+
+- [Bug] [PORTAL] Neustart des Docker-Container verursacht Löschung von Einstellung ([REDMINE-4502](https://redmine.informationgrid.eu/issues/4502))
+- [Bug] [PORTAL] MVIS-Client ausschließen von Messnetze ([REDMINE-4573](https://redmine.informationgrid.eu/issues/4573))
+- [Bug] [PORTAL] Anpassung Position Regionalschlüssel ([REDMINE-4542](https://redmine.informationgrid.eu/issues/4542))
+
+Profil BKG
+
+- [Feature] [PORTAL] Bezeichnung "Objekt-ID" ersetzen ([REDMINE-4465](https://redmine.informationgrid.eu/issues/4465))
+- [Feature] [PORTAL] Label "Datensatz / Datenserie" ändern ([REDMINE-4236](https://redmine.informationgrid.eu/issues/4236))
+
+Profil LUBW
+
+- [Feature] [IGE] Feld für Erfassung des OAC im IGE einfügen ([REDMINE-4378](https://redmine.informationgrid.eu/issues/4378))
+- [Feature] [PORTAL] Profilerstellung - Anpassung Metadatenmodell, Transformationsvorschriften ([REDMINE-4004](https://redmine.informationgrid.eu/issues/4004))
+
+Profil NUMIS
+
+- [Feature] [PORTAL] Ministeriumsname aktualisieren ([REDMINE-4498](https://redmine.informationgrid.eu/issues/4498))
+- [Feature] [PORTAL] UVP, Portal: Menüeintrag verkürzen ([REDMINE-4495](https://redmine.informationgrid.eu/issues/4495))
+- [Feature] [PORTAL] Log-in niedersächsischer UVP Editor (IGE-NG) ([REDMINE-4337](https://redmine.informationgrid.eu/issues/4337))
+
+Profil RLP
+
+- [Feature] [PORTAL] Deaktivierung von Facetten in der Suche ([REDMINE-4552](https://redmine.informationgrid.eu/issues/4552))
+
+Profil Umweltportal Schleswig-Holstein
+
+- [Feature] [MAPCLIENT] Barrierefreiheit Karten (Einbetten) ([REDMINE-4306](https://redmine.informationgrid.eu/issues/4306))
+- [Feature] [PORTAL] Geometriekontext-Attribute im UP sichtbar machen ([REDMINE-4366](https://redmine.informationgrid.eu/issues/4366))
+
+
+### Komponenten
+
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.14.2/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.2/))
+
+
 ## Version 5.14.1
 
 Release 09.11.2022
