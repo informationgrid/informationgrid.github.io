@@ -37,7 +37,7 @@ Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege un
 
 Aus der öffentlichen Verwaltung sind folgende Partner beteiligt:
 
-- Niedersachsen: Ministerium für Umwelt, Energie, Bauen und Klimaschutz (Federführung)
+- Niedersachsen: Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
 - Bund: Informationstechnikzentrum Bund / Wasser- und Schifffahrtsverwaltung des Bundes
 - Bund: Bundesanstalt für Wasserbau
 - Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
