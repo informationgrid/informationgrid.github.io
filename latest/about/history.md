@@ -12,7 +12,14 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 
 Release 24.11.2022
 
+### Wichtige Änderung
 
+#### Geometrie-Kontext-Attribute werden im Portal angezeigt
+
+Für das Profil Umweltportal Schleswig-Holstein werden jetzt die Geometrie-Kontext-Attribute in der Detail-Ansicht im Portal angezeigt. ([REDMINE-4366](https://redmine.informationgrid.eu/issues/4366)).
+
+![Portal: Geometrie-Kontext-Attribute werden im Portal angezeigt](../images/5142_5150_portal_upsh_geometrics-context.png "Portal: Geometrie-Kontext-Attribute werden im Portal angezeigt")
+<figcaption class="figcaption">Portal: Geometrie-Kontext-Attribute werden im Portal angezeigt</figcaption>
 
 ### Liste der Änderungen
 
@@ -63,7 +70,7 @@ Release 09.11.2022
 Für das Profil NUMIS wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
 Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374)).
 
-![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser](../images/5141_5150_numis_portal_api.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser")
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser](../images/5141_5150_portal_numis_api.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser")
 <figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser</figcaption>
 
 ![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5141_5150_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
