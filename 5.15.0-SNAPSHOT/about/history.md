@@ -13,6 +13,43 @@ Release ...2023
 
 ### Hinweise für die Aktualisierung
 
+**Für den Betrieb der Komponente iPLug SE außerhalb von Docker Containern wird mind. JAVA 11 benötigt.**
+
+#### Instanzen vom iPlug SE müssen migriert werden
+
+Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neue Version 1.19 gehoben.
+
+**WICHTIG:**<br>
+Existierende Instanzen im iPlug SE müssen wie folgt migriert werden (s. auch [REDMINE-132](https://redmine.informationgrid.eu/issues/132#note-46)).
+- Erstellung einer neuen Instanz. Im `<instance>/conf` Verzeichnis auf dem Server sind dann alle Konfigurationsfiles vorhanden, die benötigt werden.
+- Erstellen einer Kopie der alten Instanz in der Admin GUI
+- Die kopierte Instanz muss dann auf dem Server mit den Konfigurationsfiles versorgt werden. Dazu werden die Dateien, **außer der Datei** `nutch-site.xml`, aus der neu erstellten Instanz in die kopierte Instanz übertragen.<br>
+Beispiel: 
+  ```
+  # backup directory "instance_copy" 
+  cd <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_new/conf/
+  cp `ls | grep -v "nutch-site.xml"` <PATH_TO_INSTANCE_DIR_OF_IPLUG_SE>/instance_copy/conf/
+  ```
+- Löschen der neuen Instanz
+- SE iPlug neu starten
+- Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)
+ACHTUNG:
+Beim Crawl gibt es in Version 5.13.x noch ein Problem mit Redirects/Excludes s. [REDMINE-4262](https://redmine.informationgrid.eu/issues/4262#note-5).
+Das Problem kann durch das Hinzufügen einer Option in der NUTCH Konfiguration der Instanz behoben werden:
+  ```
+  http.redirect.max = 5
+  ```
+Dadurch werden Redirects während des Crawls bis zu einer Tiefe von 5 aufgelöst.
+Die Option wird in version 5.14.0 per Default für alle neuen Instanzen gesetzt.
+
+
+Bei der Gelegenheit sollte überprüft werden, ob das Feld `plugin.includes` in der Konfiguration der Instanz auf dem folgenden Wert steht:
+
+`protocol-httpclient|urlfilter-(regex|validator)|parse-(html|tika)|index-(basic|anchor|metadata|more)|ingrid-indexer-elastic|scoring-ingrid|ingrid-language-identifier|urlnormalizer-(pass|regex|basic)|analysis-de`
+
+Dies behebt evtl. fehlende Beschreibungen unterhalb der Treffer, die aus diesem iPlug stammen.
+
+
 #### Aktualisierung von Elasticsearch
 
 Die neue Version des iBus kann mit der Elasticsearch-Version 7.17.6 umgehen. Alle anderen Komponenten benötigen hierfür
