@@ -8,6 +8,33 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 5.14.3
+
+Release 07.12.2022
+
+### Liste der Änderungen
+
+- [Feature] [IPLUG-SE] SE iPlug - Upgrade NUTCH auf 1.19 ([REDMINE-4489](https://redmine.informationgrid.eu/issues/4489))
+
+Profil LUBW
+
+- [Feature] [IPLUG-IGE] Metadatentransformation und -migration ([REDMINE-4008](https://redmine.informationgrid.eu/issues/4008))
+- [Feature] [PORTAL] Überarbeitung der "Hilfe" ([REDMINE-4583](https://redmine.informationgrid.eu/issues/4583))
+- [Feature] [PORTAL] Zugriffsbeschränkungen - Angabe in MD ergänzen, Darstellung im Portal ([REDMINE-4576](https://redmine.informationgrid.eu/issues/4576))
+- [Feature] [PORTAL] Inhaltliche Anpassungen ([REDMINE-4371](https://redmine.informationgrid.eu/issues/4371))
+
+Profil MetaVer
+
+- [Feature] [PORTAL] Verbesserung Startseite MetaVer - Feld für Wartungsarbeiten einfügen ([REDMINE-4421](https://redmine.informationgrid.eu/issues/4421))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/5.14.3/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.14.3/))
+- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/5.14.3/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.3/))
+
+
 ## Version 5.14.2
 
 Release 24.11.2022
