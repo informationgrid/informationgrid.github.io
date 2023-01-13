@@ -61,6 +61,23 @@ dass das Elasticsearch-Image korrekt konfiguriert ist.
   * discovery.type=single-node
   * ingest.geoip.downloader.enabled=false
 
+#### Aktualisierung von Interface-CSW
+
+Die Anmeldung über CSW-T wurde bisher über die Datei `csw-t.properties` bestimmt. Die Nutzer für den Zugriff der CSW-T Schnittstelle 
+werden jetzt in der `config.override.properties` über die Eigenschaft `cswt.users`. Hier werden die Benutzer und Passwortinformationen
+kommasepariert angegeben. Dies geschieht nach dem folgenden Format:
+
+```
+cswt.users=<user1>::<bcrypt-passwordUser1>,<user2>::<bcrypt-passwordUser2>,...
+```
+
+Hierbei muss das Passwort im BCrypt-Format vorliegen. Dieses kann über das Start-Skript generiert werden, so dass es dann in
+die Konfiguration eingetragen werden kann. Das Kommando dafür lautet:
+
+```
+sh start.sh calcPassword <clear-text-password>
+```
+
 ### Wichtige Änderungen
 
 ...
