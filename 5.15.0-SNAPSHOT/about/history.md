@@ -78,6 +78,11 @@ die Konfiguration eingetragen werden kann. Das Kommando dafür lautet:
 sh start.sh calcPassword <clear-text-password>
 ```
 
+#### Aktualisierung von iPlugs
+
+iPlugs bei denen die Konfiguration der Beans überschrieben wurden, müssen in diesem Release angepasst werden. Erkennbar sind diese durch eine gemappte XML-Datei in das Verzeichnis "WEB-INF/override".
+Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: "<iPlug-path>/conf/override"
+
 ### Wichtige Änderungen
 
 ...
