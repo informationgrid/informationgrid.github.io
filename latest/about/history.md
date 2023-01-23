@@ -75,9 +75,36 @@ sh start.sh calcPassword <clear-text-password>
 iPlugs, bei denen die Konfiguration der Beans überschrieben wurden, müssen in diesem Release angepasst werden. Erkennbar sind diese durch eine gemappte XML-Datei in das Verzeichnis `WEB-INF/override`.<br>
 Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: `<iPlug-path>/conf/override`.
 
+### Sicherheitsrelevante Änderungen
+
+#### Upgrade von JAVA 8 auf JAVA 17
+
+**Das InGrid-Framework setzt ab Version 6.0.0 eine JAVA 17 Laufzeitumgebung voraus. Innerhalb der Docker-Container wird diese bereits automatisch bereitgestellt.**
+
+**Neben der Aktualisierung der JAVA-Laufzeitumgebung wurden viele Abhängigkeiten zu externen Libraries aktualisiert, so dass mit Version 6.0.0 eine wesentliche Verbesserung der IT-Sicherheit umgesetzt wurde.**
+
 ### Wichtige Änderungen
 
-...
+#### UVP: Erweiterung iPlug BLP um Indexierung von verlinkten Website-Inhalten
+
+Die Indexierung des iPlug BLP wurde so erweitert, dass die Inhalte der im Excelfile hinterlegten URLs mit indexiert werden. Dazu sind folgende Punkte zu beachten:
+
+* Indexiert werden nur die Nutzdaten, alle HTML-Strukturelemente werden abgestreift
+* Alle Daten werden als Sprache "Deutsch" indexiert
+* Redirects von der im Excel angegebenen URL zu anderen URLs werden verfolgt
+* Die Inhalte aller im Excel angegebenen URLs werden dem einen BLP-Eintrag zugeordnet
+* Es findet keine Aufbereitung bzgl. Textanalyse statt
+
+([REDMINE-4366](https://redmine.informationgrid.eu/issues/1416))
+
+#### MetaVer und UVP: Nutzung von OSM und der Nominatim-Suche
+
+Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte in den Raumbezügen OpenStreetMap (OSM) verwendet. Für UVP ist die Nominatim-Suche aktiviert.
+
+![UVP Karte: Nominatim-Suche](../images/5144_6000_mapclient_uvp_nominatim-search.jpg "UVP Karte: Nominatim-Suche")
+<figcaption class="figcaption">UVP Karte: Nominatim-Suche</figcaption>
+
+([REDMINE-4366](https://redmine.informationgrid.eu/issues/4634))
 
 ### Liste der Änderungen
 
@@ -173,7 +200,7 @@ Profil UPSH
 Profil UVP
 
 - [Feature] [IPLUG-BLP] Erweiterung iPlug BLP um Indexierung von verlinkten Website Inhalten ([REDMINE-1416](https://redmine.informationgrid.eu/issues/1416))
-- [Feature] [MAPCLIENT] Nutzung OSM inkl. NOMINATIN im UVP-Portal ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634))
+- [Feature] [MAPCLIENT] Nutzung OSM inkl. Nominatim im UVP-Portal ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634))
 - [Feature] [MAPCLIENT] UVP-Portal - Wechsel der Hintergrundkarte und der Karte in den Raumbezügen ([REDMINE-2810](https://redmine.informationgrid.eu/issues/2810))
 - [Feature] [PORTAL] UVP: Darstellung des Bundeslandes oder des Landkreises in dem das Vorhaben erfolgt ([REDMINE-1806](https://redmine.informationgrid.eu/issues/1806))
 - [Feature] [PORTAL] Änderung Text auf länderspezifischen Seiten ([REDMINE-4072](https://redmine.informationgrid.eu/issues/4072))
