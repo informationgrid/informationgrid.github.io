@@ -13,9 +13,9 @@ Release 13.01.2023
 
 ### Hinweise für die Aktualisierung
 
-**Für den Betrieb der Komponente iPLug SE außerhalb von Docker Containern wird mind. JAVA 11 benötigt.**
+**Für den Betrieb der Komponente iPlug SE außerhalb von Docker Containern wird mindestens JAVA 11 benötigt.**
 
-#### Instanzen vom iPlug SE müssen migriert werden
+#### Instanzen im iPlug SE müssen migriert werden
 
 Die der Suchmaschine zugrundeliegende Software NUTCH wurde auf eine komplett neue Version 1.19 gehoben.
 
@@ -32,14 +32,13 @@ Beispiel:
   ```
 - Löschen der neuen Instanz
 - SE iPlug neu starten
-- Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)
+- Die so migrierten Instanzen müssen neu aufgebaut werden (new crawl)<br>
 ACHTUNG:
 Beim Crawl gibt es in Version 5.13.x noch ein Problem mit Redirects/Excludes s. [REDMINE-4262](https://redmine.informationgrid.eu/issues/4262#note-5).
 Das Problem kann durch das Hinzufügen einer Option in der NUTCH Konfiguration der Instanz behoben werden:
   ```
   http.redirect.max = 5
-  ```
-Dadurch werden Redirects während des Crawls bis zu einer Tiefe von 5 aufgelöst.
+  ```Dadurch werden Redirects während des Crawls bis zu einer Tiefe von 5 aufgelöst.
 Die Option wird in version 5.14.0 per Default für alle neuen Instanzen gesetzt.
 
 Bei der Gelegenheit sollte überprüft werden, ob das Feld `plugin.includes` in der Konfiguration der Instanz auf dem folgenden Wert steht:
@@ -50,7 +49,7 @@ Dies behebt evtl. fehlende Beschreibungen unterhalb der Treffer, die aus diesem 
 
 #### Aktualisierung von Elasticsearch
 
-Die neue Version des iBus kann mit der Elasticsearch-Version 7.17.6 umgehen. Alle anderen Komponenten benötigen hierfür keine Aktualisierung, da die Kommunikation über den iBus geht. Als zusätzliche Anpassung muss darauf geachtet werden, dass das Elasticsearch-Image korrekt konfiguriert ist.
+Die neue Version des iBus kann mit der Elasticsearch-Version 7.17.8 umgehen. Alle anderen Komponenten benötigen hierfür keine Aktualisierung, da die Kommunikation über den iBus geht. Als zusätzliche Anpassung muss darauf geachtet werden, dass das Elasticsearch-Image korrekt konfiguriert ist.
 
 * Image: docker.elastic.co/elasticsearch/elasticsearch:7.17.8
 * zusätzliche Umgebungsvariablen:
@@ -59,13 +58,13 @@ Die neue Version des iBus kann mit der Elasticsearch-Version 7.17.6 umgehen. All
 
 #### Aktualisierung von Interface-CSW
 
-Die Anmeldung über CSW-T wurde bisher über die Datei `csw-t.properties` bestimmt. Die Nutzer für den Zugriff der CSW-T Schnittstelle werden jetzt in der `config.override.properties` über die Eigenschaft `cswt.users`. Hier werden die Benutzer und Passwortinformationen kommasepariert angegeben. Dies geschieht nach dem folgenden Format:
+Die Anmeldung über CSW-T wurde bisher über die Datei `csw-t.properties` bestimmt. Die Nutzer für den Zugriff der CSW-T Schnittstelle werden jetzt in der `config.override.properties` über die Eigenschaft `cswt.users` konfiguriert. Hier werden die Benutzer und Passwortinformationen kommasepariert angegeben. Dies geschieht nach dem folgenden Format:
 
 ```
 cswt.users=<user1>::<bcrypt-passwordUser1>,<user2>::<bcrypt-passwordUser2>,...
 ```
 
-Hierbei muss das Passwort im BCrypt-Format vorliegen. Dieses kann über das Start-Skript generiert werden, so dass es dann in die Konfiguration eingetragen werden kann. Das Kommando dafür lautet:
+Hierbei muss das Passwort im bcrypt-Format vorliegen. Dieses kann über das Start-Skript generiert werden, so dass es dann in die Konfiguration eingetragen werden kann. Das Kommando dafür lautet:
 
 ```
 sh start.sh calcPassword <clear-text-password>
@@ -73,8 +72,8 @@ sh start.sh calcPassword <clear-text-password>
 
 #### Aktualisierung von iPlugs
 
-iPlugs bei denen die Konfiguration der Beans überschrieben wurden, müssen in diesem Release angepasst werden. Erkennbar sind diese durch eine gemappte XML-Datei in das Verzeichnis "WEB-INF/override".
-Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: "<iPlug-path>/conf/override"
+iPlugs, bei denen die Konfiguration der Beans überschrieben wurden, müssen in diesem Release angepasst werden. Erkennbar sind diese durch eine gemappte XML-Datei in das Verzeichnis `WEB-INF/override`.<br>
+Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: `<iPlug-path>/conf/override`.
 
 ### Wichtige Änderungen
 
@@ -99,7 +98,7 @@ Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: "<iPlug-p
 - [Feature] [SYSTEM] Hinzufügen eines Parameters für Systemmail prefixes ([REDMINE-4663](https://redmine.informationgrid.eu/issues/4663))
 - [Bug] [IGE] Regression von Metadaten-Import ([REDMINE-4340](https://redmine.informationgrid.eu/issues/4340))
 - [Bug] [IGE] MD zu CSW-Geodatendiensten: GetCapabilities-Verweis wird im MD doppelt angelegt ([REDMINE-4260](https://redmine.informationgrid.eu/issues/4260))
-- [Bug] [INTERFACE-CSW] CSW-T Schnittstelle mit besserer Passwordverschlüsselung ([REDMINE-3749](https://redmine.informationgrid.eu/issues/3749))
+- [Bug] [INTERFACE-CSW] CSW-T Schnittstelle mit besserer Passwortverschlüsselung ([REDMINE-3749](https://redmine.informationgrid.eu/issues/3749))
 - [Bug] [INTERFACE-CSW] Nicht thread sichere Bearbeitung von Filter Requests in CSW Schnittstelle ([REDMINE-4354](https://redmine.informationgrid.eu/issues/4354))
 - [Bug] [INTERFACE-CSW] Verbesserung der Fehlermeldung im Interface CSW ([REDMINE-4352](https://redmine.informationgrid.eu/issues/4352))
 - [Bug] [INTERFACE-SEARCH] Atom-Feed Client - fehlerhafte Downloads weiter anzeigen ([REDMINE-4409](https://redmine.informationgrid.eu/issues/4409))
