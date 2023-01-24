@@ -38,12 +38,12 @@ Profil LUBW
 
 Profil UPSH
 
-- [Feature] [] Button "Registrieren" ausblenden ([REDMINE-4626](https://redmine.informationgrid.eu/issues/4626))
+- [Feature] [PORTAL] Button "Registrieren" ausblenden ([REDMINE-4626](https://redmine.informationgrid.eu/issues/4626))
 
 Profil UVP
 
-- [Feature] [] Nutzung OSM inkl. Nominatim im UVP-Portal ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634))
-- [Feature] [] Änderung Text auf länderspezifischen Seiten ([REDMINE-4072](https://redmine.informationgrid.eu/issues/4072))
+- [Feature] [MAPCLIENT] Nutzung OSM inkl. Nominatim im UVP-Portal ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634))
+- [Feature] [PORTAL] Änderung Text auf länderspezifischen Seiten ([REDMINE-4072](https://redmine.informationgrid.eu/issues/4072))
 
 ### Komponenten
 
