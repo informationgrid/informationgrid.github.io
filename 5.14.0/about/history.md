@@ -31,8 +31,8 @@ Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte i
 Profil LUBW
 
 - [Feature] [IGE] OAC fehlt in (manchen) Metadatensätzen ([REDMINE-4615](https://redmine.informationgrid.eu/issues/4615))
-- [Feature] [PORTAL] Hilfetexte im Portal austauschen ([REDMINE-4607](https://redmine.informationgrid.eu/issues/4607))
 - [Feature] [MAPCLIENT] Automatische URL im Kartendruck ersetzen ([REDMINE-4603](https://redmine.informationgrid.eu/issues/4603))
+- [Feature] [PORTAL] Hilfetexte im Portal austauschen ([REDMINE-4607](https://redmine.informationgrid.eu/issues/4607))
 - [Feature] [PORTAL] Deutschlandkarte verkleinern, ersetzen oder entfernen ([REDMINE-4598](https://redmine.informationgrid.eu/issues/4598))
 - [Bug] [IGE] Falsche Platzierung von environmentDescription im Export ISO ([REDMINE-4622](https://redmine.informationgrid.eu/issues/4622))
 
