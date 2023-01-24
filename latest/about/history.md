@@ -89,11 +89,17 @@ Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: `<iPlug-p
 
 Für die Landesanstalt für Umwelt Baden-Württemberg (LUBW) in Karlsruhe wurde ein eigenes Profil mit eigenem Design und Layout erstellt.
 
+##### Startseite
+
 ![LUBW: Startseite](../images/600_portal_lubw_startpage.png "LUBW: Startseite")
 <figcaption class="figcaption">LUBW: Startseite</figcaption>
 
+##### Suche
+
 ![LUBW: Suche](../images/600_portal_lubw_search.png "LUBW: Suche")
 <figcaption class="figcaption">LUBW: Suche</figcaption>
+
+##### Karten
 
 ![LUBW: Karten](../images/600_mapclient_lubw_maps.png "LUBW: Karten")
 <figcaption class="figcaption">LUBW: Karten</figcaption>
