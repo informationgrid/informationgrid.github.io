@@ -16,12 +16,10 @@ Release 16.01.2023
 
 #### MetaVer und UVP: Nutzung von OSM und der Nominatim-Suche
 
-Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte in den Raumbezügen OpenStreetMap (OSM) verwendet. Für UVP ist die Nominatim-Suche aktiviert.
+Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte in den Raumbezügen OpenStreetMap (OSM) verwendet. Für UVP ist die Nominatim-Suche aktiviert ([REDMINE-4366](https://redmine.informationgrid.eu/issues/4634)).
 
 ![UVP Karte: Nominatim-Suche](../images/5144_6000_mapclient_uvp_nominatim-search.jpg "UVP Karte: Nominatim-Suche")
 <figcaption class="figcaption">UVP Karte: Nominatim-Suche</figcaption>
-
-([REDMINE-4366](https://redmine.informationgrid.eu/issues/4634))
 
 ### Liste der Änderungen
 
@@ -124,7 +122,7 @@ Release 24.11.2022
 
 #### Geometrie-Kontext-Attribute werden im Portal angezeigt
 
-Für das Profil Umweltportal Schleswig-Holstein werden jetzt die Geometrie-Kontext-Attribute in der Detail-Ansicht im Portal angezeigt. ([REDMINE-4366](https://redmine.informationgrid.eu/issues/4366)).
+Für das Profil Umweltportal Schleswig-Holstein werden jetzt die Geometrie-Kontext-Attribute in der Detail-Ansicht im Portal angezeigt ([REDMINE-4366](https://redmine.informationgrid.eu/issues/4366)).
 
 ![Portal: Geometrie-Kontext-Attribute werden im Portal angezeigt](../images/5142_5150_portal_upsh_geometrics-context.png "Portal: Geometrie-Kontext-Attribute werden im Portal angezeigt")
 <figcaption class="figcaption">Portal: Geometrie-Kontext-Attribute werden im Portal angezeigt</figcaption>
