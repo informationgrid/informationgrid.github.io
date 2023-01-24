@@ -85,6 +85,19 @@ Die Datei muss stattdessen in das folgende Verzeichnis gemappt werden: `<iPlug-p
 
 ### Wichtige Änderungen
 
+#### Neues Profil LUBW
+
+Für die Landesanstalt für Umwelt Baden-Württemberg (LUBW) in Karlsruhe wurde ein eigenes Profil mit eigenem Design und Layout erstellt.
+
+![LUBW: Startseite](../images/600_portal_lubw_startpage.png "LUBW: Startseite")
+<figcaption class="figcaption">LUBW: Startseite</figcaption>
+
+![LUBW: Suche](../images/600_portal_lubw_search.png "LUBW: Suche")
+<figcaption class="figcaption">LUBW: Suche</figcaption>
+
+![LUBW: Karten](../images/600_mapclient_lubw_maps.png "LUBW: Karten")
+<figcaption class="figcaption">LUBW: Karten</figcaption>
+
 #### UVP: Erweiterung iPlug BLP um Indexierung von verlinkten Website-Inhalten
 
 Die Indexierung des iPlug BLP wurde so erweitert, dass die Inhalte der im Excelfile hinterlegten URLs mit indexiert werden. Dazu sind folgende Punkte zu beachten:
