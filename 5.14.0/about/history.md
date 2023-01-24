@@ -8,6 +8,49 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 5.14.4
+
+Release 16.01.2023
+
+### Wichtige Änderungen
+
+#### MetaVer und UVP: Nutzung von OSM und der Nominatim-Suche
+
+Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte in den Raumbezügen OpenStreetMap (OSM) verwendet. Für UVP ist die Nominatim-Suche aktiviert.
+
+![UVP Karte: Nominatim-Suche](../images/5144_6000_mapclient_uvp_nominatim-search.jpg "UVP Karte: Nominatim-Suche")
+<figcaption class="figcaption">UVP Karte: Nominatim-Suche</figcaption>
+
+([REDMINE-4366](https://redmine.informationgrid.eu/issues/4634))
+
+### Liste der Änderungen
+
+- [Feature] [IGE] AdV-Checkbox nur in Objektarten Geodatendienst, Geodatensatz und Anwendung sichtbar machen ([REDMINE-3104](https://redmine.informationgrid.eu/issues/3104))
+- [Bug] [IGE] MD zu CSW-Geodatendiensten: GetCapabilities-Verweis wird im MD doppelt angelegt ([REDMINE-4260](https://redmine.informationgrid.eu/issues/4260))
+
+Profil LUBW
+
+- [Feature] [IGE] OAC fehlt in (manchen) Metadatensätzen ([REDMINE-4615](https://redmine.informationgrid.eu/issues/4615))
+- [Feature] [PORTAL] Hilfetexte im Portal austauschen ([REDMINE-4607](https://redmine.informationgrid.eu/issues/4607))
+- [Feature] [MAPCLIENT] Automatische URL im Kartendruck ersetzen ([REDMINE-4603](https://redmine.informationgrid.eu/issues/4603))
+- [Feature] [PORTAL] Deutschlandkarte verkleinern, ersetzen oder entfernen ([REDMINE-4598](https://redmine.informationgrid.eu/issues/4598))
+- [Bug] [IGE] Falsche Platzierung von environmentDescription im Export ISO ([REDMINE-4622](https://redmine.informationgrid.eu/issues/4622))
+
+Profil UPSH
+
+- [Feature] [] Button "Registrieren" ausblenden ([REDMINE-4626](https://redmine.informationgrid.eu/issues/4626))
+
+Profil UVP
+
+- [Feature] [] Nutzung OSM inkl. Nominatim im UVP-Portal ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634))
+- [Feature] [] Änderung Text auf länderspezifischen Seiten ([REDMINE-4072](https://redmine.informationgrid.eu/issues/4072))
+
+### Komponenten
+
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.14.4/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.4/))
+
+
 ## Version 5.14.3
 
 Release 07.12.2022
