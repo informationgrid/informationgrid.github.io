@@ -320,11 +320,11 @@ Im folgenden wird die Abbildung der verwendeten ISO Felder auf die Felder im ATO
 
 ## Endpoint für DCAT-AP.DE Daten
 
-Für die Abgabe an GOV.DATA können die Metadaten auch im RDF/XML Format abgegeben werden. 
+Für die Weitergabe an GOV.DATA können die Metadaten auch im RDF/XML Format abgegeben werden. 
 
 Die Opensearch-Schnittstelle des Interface-Search wurde dazu um einen Export im RDF/XML erweitert. Der RDF-Export kann über den Parameter format=rdf angesteuert werden.
 
-Bsp: https://dev.informationgrid.eu/interface-search/opensearch/query?format=rdf
+Bsp: [https://dev.informationgrid.eu/interface-search/opensearch/query?format=rdf](https://dev.informationgrid.eu/interface-search/opensearch/query?format=rdf)
 
 Der Export ist Kompatibel zur DCAT-AP.de Version 1.1. Die Paginierung erfolgt über die PagedCollection aus dem Hydra-Namespace des W3C (https://www.w3.org/ns/hydra/spec/latest/core/) die Einstellmöglichkeiten der Datensätze pro Seite entspricht den Möglichkeiten der Items pro Seite im OpenSearch-Schnittstelle.
 
