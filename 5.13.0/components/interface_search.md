@@ -318,6 +318,29 @@ Im folgenden wird die Abbildung der verwendeten ISO Felder auf die Felder im ATO
 |  | `/feed/entry/category@label` | Hier werde die Daten aus dem Geoadatensatz unter `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString` verwendet.|
 
 
+## Endpoint für DCAT-AP.DE Daten
+
+Für die Abgabe an GOV.DATA können die Metadaten auch im RDF/XML Format abgegeben werden. Der Export ist Kompatibel zur DCAT-AP.de Version 1.1. Die Paginierung erfolgt über die PagedCollection aus dem Hydra-Namespace des W3C (https://www.w3.org/ns/hydra/spec/latest/core/) die Einstellmöglichkeiten der Datensätze pro Seite entspricht den Möglichkeiten der Items pro Seite im OpenSearch-Schnittstelle.
+
+Der Export der Opendata-Metadaten erfolgt aus den IDF-Daten auf Basis der [Mapping-Tabelle für GDI-DE, Stand 16.02.2022](../images/20220216_Mapping_ISO_DCAT-AP-DE_konsolidiert_Aenderungen.xlsx).
+
+Lizenzen werden gemäß der Tabelle unter https://www.dcat-ap.de/def/licenses/ (Stand 20210721) auf DCAT-AP.de URIs gemapped. Sollte keine Lizenz URL gefunden werden oder keine Abbildung auf eine URI möglich sein wird eine Default-Lizenz angegeben (Sofern nicht anders konfiguriert http://dcat-ap.de/def/licenses/other-open).
+
+Für die Periodizität werden gängige Bezeichnungen und Codelist-Values auf das Vokabular in http://publications.europa.eu/resource/authority/frequency gemapped. Alle Varianten kürzer als eine Stunde werden auf CONT (Kontinuierlich) abgebildet.
+
+Das Distribution-Format wird entsprechend der Mapping-Übersicht übernommen, sofern das Format im Vokabular unter http://publications.europa.eu/resource/authority/file-type vorkommt. Ein Mapping von abweichenden Bezeichnungen kann über ein JSON-File im Classpath ergänzt werden.
+
+Folgende Eigenschaften können über die Konfiguration `interface-search.properties` eingestellt werden.
+
+| Schlüssel | Beschreibung |
+| --- | --- | 
+| opensearch.dcat.catalog.title | Katalog-Titel, z.B. `Umweltdatenkatalog Niedersachsen` |
+| opensearch.dcat.catalog.description | Katalog-Beschreibung, z.B. `Das niedersächsiche Umweltportal` |
+| opensearch.dcat.contributor_id | Datenbereitsteller, z.B. `http://dcat-ap.de/def/contributors/NUMIS` |
+| opensearch.dcat.catalog.publisher.name | Id des Katalog-Herausgeber, z.B. `MU_Niedersachsen` |
+| opensearch.dcat.catalog.publisher.url | Url Katalog-Herausgeber, z.B. `https://numis.niedersachsen.de` |
+
+Die Werte müssen mit GOV.DATA abgestimmt werden.
 
 ## Konfiguration
 
