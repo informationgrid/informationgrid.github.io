@@ -551,7 +551,7 @@ Dieser Menüpunkt öffen die Administration des InGrid-WebmapClients.
 
 ## FAQ
 
-### Wie kann ich ein Überschreiben der Datei `TOMCAT/bin/env.sh` bei einer Aktualisierung verhindern.
+### Wie kann ich ein Überschreiben der Datei `TOMCAT/bin/env.sh` bei einer Aktualisierung verhindern?
 
 In der Datei env.sh können Systemvariablen komponenten-spezifisch angepasst werden (z.B. Proxy oder Heap Einstellungen). Um die Einstellungen nach einer Aktualisierung nicht zu verlieren, muss die Datei `env.sh` nach `user.env.sh` kopiert werden. Die Änderungen in `user.env.sh` werden nicht überschrieben.
 
@@ -577,6 +577,7 @@ Achtung: Die Trennung mit dem pipe Symbol muss unter Windows/cygwin anders escap
 Das Bezugsdatum bei der Sortierung nach Aktualität ist das Änderungsdatum der Seite (last-modified Info aus dem HTTP-Header). Ist dieses nicht vorhanden, wird das Datum des letzten Fetch der Seite angenommen.
 
 <a name="GroupingReihenfolge"></a>
+
 ### Wie ist die Reihenfolge der gruppierten Ergebnisse definiert ?
 
 Grundlage ist das Ranking. Sind die ersten 60 Ergebnisse der gerankten Suchanfrage von einem Partner/Anbieter werden diese gruppiert. Es kann also sein, dass auf einer gruppierten Seite der gleiche Partner/Anbieter mehrfach vorkommt.
@@ -876,3 +877,17 @@ Mehrere Verfahrenstypen werden durch eine kommagetrennte Auflistung aktiviert:
 &layer=vv,av,nv
 {% endhighlight %}
 
+### Wie kann man einen Hinweis auf der Startseite hinzufügen?
+
+Wenn man sich als Administrator im Portal anmeldet, kann man über das Menü den Punkt "Inhalte" auswählen. Dort kann in der Datei
+`1 ingrid.teaser.inform` in beide Formularfelder "Inhalt (Deutsch)* " und "Inhalt (Englisch)*" am Ende folgender Text ergänzt (und ggf. wieder entfernt) werden:
+
+```
+<script>
+var newElement = document.createElement("div");
+newElement.innerHTML = "<div class=\"row\"><div class=\"columns\"><div class=\"teaser-data\" style=\"min-height: 0;margin-top: 58px; font-size:24px; border-color:red\"><div class=\"text-wrapper\">
+<p style=\"line-height: 38px;\"><strong>Hier den Text ergänzen</strong></p></div></div></div></div>";
+var elements = document.getElementsByClassName("banner");
+elements[0].parentNode.insertBefore(newElement, elements[0].nextSibling);
+</script>
+```
