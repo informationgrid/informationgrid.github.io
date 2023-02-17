@@ -116,9 +116,11 @@ Die Indexierung des iPlug BLP wurde so erweitert, dass die Inhalte der im Excelf
 
 ([REDMINE-1416](https://redmine.informationgrid.eu/issues/1416))
 
-#### MetaVer und UVP: Nutzung von OSM und der Nominatim-Suche
+#### MetaVer und UVP: Verbesserung der Karten bei OSM und Nominatim-Suche
 
-Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte in den Raumbezügen OpenStreetMap (OSM) verwendet. Für UVP ist die Nominatim-Suche aktiviert ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634)).
+Für die Profile MetaVer und UVP wird jetzt als Hintergrundkarte und als Karte in den Raumbezügen für OpenStreetMap (OSM) inklusive Nominatim ein kommerzieller Anbieter aus Deutschland verwendet. Die offiziellen OSM-Dienste sollten nicht für den produktiven Einsatz verwendet werden, weil deren Infrastruktur dafür nicht ausgelegt ist.<br>
+Zudem wurde damit die Datenschutzkonformität weiter verbessert. Die Standard-OSM-Server können teilweise außerhalb der EU stehen.<br>
+Für UVP wurde die Nominatim-Suche aktiviert ([REDMINE-4634](https://redmine.informationgrid.eu/issues/4634)).
 
 ##### UVP-Karte: Nominatim-Suche
 
