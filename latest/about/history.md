@@ -58,7 +58,7 @@ Die neue Version des iBus kann mit der Elasticsearch-Version 7.17.8 umgehen. All
 
 #### Aktualisierung von Interface-CSW
 
-Die Anmeldung über CSW-T wurde bisher über die Datei `csw-t.properties` bestimmt. Die Nutzer für den Zugriff der CSW-T Schnittstelle werden jetzt in der `config.override.properties` über die Eigenschaft `cswt.users` konfiguriert. Hier werden die Benutzer und Passwortinformationen kommasepariert angegeben. Dies geschieht nach dem folgenden Format:
+Die Anmeldung über CSW-T wurde bisher über die Datei `csw-t.realm.properties` bestimmt. Die Nutzer für den Zugriff der CSW-T Schnittstelle werden jetzt in der `config.override.properties` über die Eigenschaft `cswt.users` konfiguriert. Hier werden die Benutzer und Passwortinformationen kommasepariert angegeben. Dies geschieht nach dem folgenden Format:
 
 ```
 cswt.users=<user1>::<bcrypt-passwordUser1>,<user2>::<bcrypt-passwordUser2>,...
