@@ -7,6 +7,43 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 6.0.0. Release Notes älterer Versionen können hier eingesehen werden:
 [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+
+## Version 6.0.1
+
+Release 16.02.2023
+
+### Liste der Änderungen
+
+- [Feature] [CODELIST-REPOSITORY] Zentrale Codelist anpassen ([REDMINE-4699](https://redmine.informationgrid.eu/issues/4699))
+- [Feature] [IGE] Korrektur Regionalschlüssel erfassen - Minimallösung ([REDMINE-4597](https://redmine.informationgrid.eu/issues/4597))
+- [Feature] [PORTAL] AdV-MIS: Kontakt des Vertriebs aus distributionInfo als "Vertrieb" ausgeben ([REDMINE-4449](https://redmine.informationgrid.eu/issues/4449))
+- [Feature] [PORTAL] Erstellung neuer Bereich "APIs" ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374))
+- [Bug] [PORTAL] XSS Schwachstelle im InGrid Portal ([REDMINE-4723](https://redmine.informationgrid.eu/issues/4723))
+- [Bug] [PORTAL] Email versenden führt zu einem Fehler ([REDMINE-4704](https://redmine.informationgrid.eu/issues/4704))
+- [Bug] [IPLUG-CSW] Verwendung von Filtern führen zu Fehler bei Indizierung ([REDMINE-4705](https://redmine.informationgrid.eu/issues/4705))
+- [Bug] [IPLUG-DSC] IGE: anderssprachige Eingaben - fehlerhafte Ausgabe im ISO-XML ([REDMINE-4670](https://redmine.informationgrid.eu/issues/4670))
+
+Profil BKG
+
+- [Feature] [CODELIST-REPOSITORY] Codeliste 10003 und 10004 editieren ([REDMINE-4201](https://redmine.informationgrid.eu/issues/4201))
+
+Profil HMDK
+
+- [Feature] [PORTAL] Aktivierung des API Menübereiches im allgemeinen Profil ([REDMINE-4677](https://redmine.informationgrid.eu/issues/4677))
+
+Profil LUBW
+
+- [Bug] [PORTAL] Text-, Design- und Layout-Korrekturen am Portal ([REDMINE-4604](https://redmine.informationgrid.eu/issues/4604))
+
+Profil MetaVer
+
+- [Bug] [PORTAL] Fehler "Freie Adressen" unter METAVER / Kataloge ([REDMINE-4674](https://redmine.informationgrid.eu/issues/4674))
+
+Profil UPSH
+
+- [Feature] [IPLUG-IGE] Workaround für parentIdentifier mit problematischem Format ([REDMINE-3786](https://redmine.informationgrid.eu/issues/3786))
+
+
 ## Version 6.0.0
 
 Release 13.01.2023
