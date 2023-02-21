@@ -12,6 +12,24 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.0.0. Release Notes
 
 Release 16.02.2023
 
+### Sicherheitsrelevante Änderungen
+
+In der Portal-Komponente wurde eine Sicherheitslücke bezüglich Cross-Site-Scripting (XSS) geschlossen ([REDMINE-4723](https://redmine.informationgrid.eu/issues/4723)).
+
+### Wichtige Änderungen
+
+#### Neuer Bereich "API"
+
+Für das Profil NUMIS wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
+Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374)).
+
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser](../images/5145_601_610_portal_numis_api.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser</figcaption>
+
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5145_601_610_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren</figcaption>
+
+
 ### Liste der Änderungen
 
 - [Feature] [CODELIST-REPOSITORY] Zentrale Codelist anpassen ([REDMINE-4699](https://redmine.informationgrid.eu/issues/4699))
