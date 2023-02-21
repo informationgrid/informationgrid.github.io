@@ -171,17 +171,6 @@ Release 09.11.2022
 
 ### Wichtige Änderungen
 
-#### Neuer Bereich "API"
-
-Für das Profil NUMIS wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
-Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374)).
-
-![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser](../images/5141_5150_portal_numis_api.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser")
-<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser</figcaption>
-
-![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5141_5150_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
-<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren</figcaption>
-
 #### Bibliografische Angaben
 
 Im Profil des BAW MIS werden jetzt in der Detail-Ansicht auch bibliografische Angaben angezeigt ([REDMINE-4351](https://redmine.informationgrid.eu/issues/4351)).
