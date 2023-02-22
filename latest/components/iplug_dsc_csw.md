@@ -251,6 +251,26 @@ Das SAML Ticket wird für eine bestimmte Dauer gecached, damit ein Verfall des T
 ```
 
 
+### Erhöhung der Fehlerresilienz
+
+Beim Harvesting kann es bei der Kommunikation zur CSW Schnittstelle zu Fehlern kommen. Die folgenden Parameter können in der Daten `confg.override.properties` angepasst werden, um die Kommunikation robuster zu gestalten:
+
+```
+# Fetching: The number of retries of a specific GetRecords request on failure (requesting a specific chunk of records)
+numRetriesPerRequest=3
+
+# Fetching: The time to wait between retry of a specific GetRecords request in MILLISECONDS.
+# NOTICE: Is multiplied with the number of retries. So last retry starts after numRetriesPerRequest * timeBetweenRetries
+# 0 causes immediate retries !
+timeBetweenRetries=1000
+
+# Fetching: How many failed requests (leading to a loss of records) should we tolerate ?
+# 0 causes abort of fetching as soon as a chunk of records is lost !
+# -1 means we tolerate all failed requests, this only makes sense if we have successful requests in between !
+# Or just enter an arbitrary number. If that number of failed requests (lost chunks of records) is reached the fetching process is ended.
+maxNumSkippedRequests=0
+```
+
 ### InGrid Communication
 
 
