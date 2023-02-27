@@ -8,6 +8,30 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.0.0. Release Notes
 [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+
+## Version 6.0.1.1
+
+Release 27.02.2023
+
+### Liste der Änderungen
+
+Profil LUBW
+
+- [Feature] [MAPCLIENT] Direkte Anzeige, wenn nur ein Layer im WMS existiert ([REDMINE-4376](https://redmine.informationgrid.eu/issues/4376))
+
+Profil NUMIS
+
+- [Bug] [MAPCLIENT] Kartenanwendung lädt nicht im NUMIS-Testsystem ([REDMINE-4869](https://redmine.informationgrid.eu/issues/4869))
+
+Profil UPSH
+
+- [Bug] [MAPCLIENT] "Problem melden" in der Karte -> E-Mail-Adresse wird nicht weitergegeben ([REDMINE-4796](https://redmine.informationgrid.eu/issues/4796))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/6.0.1.1/))
+
+
 ## Version 6.0.1
 
 Release 16.02.2023
@@ -28,7 +52,6 @@ Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informa
 
 ![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5145_601_610_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
 <figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren</figcaption>
-
 
 ### Liste der Änderungen
 
@@ -60,6 +83,14 @@ Profil MetaVer
 Profil UPSH
 
 - [Feature] [IPLUG-IGE] Workaround für parentIdentifier mit problematischem Format ([REDMINE-3786](https://redmine.informationgrid.eu/issues/3786))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/6.0.1/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/6.0.1/))
+- IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/6.0.1/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/6.0.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/6.0.1/))
 
 
 ## Version 6.0.0
