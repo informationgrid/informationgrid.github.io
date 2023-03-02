@@ -11,9 +11,13 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.0.0. Release Notes
 
 ## Version 6.0.1.1
 
-Release 27.02.2023
+Release 02.03.2023
 
 ### Liste der Änderungen
+
+Profil BAW MIS
+
+- [Bug] [IPLUG-IGE] Implementierung vom Ticket #4026 nicht im 6.0.1-Release vorhanden ([REDMINE-4891](https://redmine.informationgrid.eu/issues/4891))
 
 Profil LUBW
 
@@ -29,6 +33,7 @@ Profil UPSH
 
 ### Komponenten
 
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/6.0.1.1/))
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/6.0.1.1/))
 
 
