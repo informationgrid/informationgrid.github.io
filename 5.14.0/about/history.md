@@ -8,6 +8,24 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+
+## Version 5.14.4.1
+
+Release 23.02.2023
+
+Profil LUBW
+
+- [Feature] [MAPCLIENT] Direkte Anzeige, wenn nur ein Layer im WMS existiert ([REDMINE-4376](https://redmine.informationgrid.eu/issues/4376))
+
+Profil UPSH
+
+- [Bug] [MAPCLIENT] "Problem melden" in der Karte -> E-Mail-Adresse wird nicht weitergegeben ([REDMINE-4796](https://redmine.informationgrid.eu/issues/4796))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.4.1/))
+
+
 ## Version 5.14.4
 
 Release 16.01.2023
@@ -226,11 +244,6 @@ Profil UVP
 - INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/5.14.1/))
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.1/))
 - IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.14.1/))
-
-
-
-
-
 
 
 ## Version 5.14.0
