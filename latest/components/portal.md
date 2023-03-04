@@ -49,7 +49,7 @@ Profile bestehen aus einer Sammlung von Dateien (Stylesheets, Templates, Bilder)
 - 768 MB RAM
 - 1 GB Harddrive
 
-- JAVA 8
+- JAVA 17
 - Cygwin (unter Windows)
 - MySQL, ORACLE oder PostgreSQL (ab InGrid 4.0.2)
 

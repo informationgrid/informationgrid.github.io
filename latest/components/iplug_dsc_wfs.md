@@ -21,7 +21,7 @@ Das iPlug fragt die WFS Schnittstelle regelmäßig (z.B. einmal täglich) ab. Di
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

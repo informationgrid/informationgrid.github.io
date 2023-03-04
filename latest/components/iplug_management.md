@@ -23,7 +23,7 @@ Das Management-iPlug dient als Schnittstelle zwischen den Komponenten des System
 * 256 MB RAM
 * 1 GB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

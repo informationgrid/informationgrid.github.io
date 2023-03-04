@@ -18,7 +18,7 @@ Das iPlug Opensearch dient der Einbindung von openSearch Schnittstellen in die I
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

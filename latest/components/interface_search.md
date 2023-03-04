@@ -23,7 +23,7 @@ Unterstützte Schnittstellen:
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 
@@ -365,7 +365,7 @@ opensearch.max.requested.hits=10000
 opensearch.descriptor.file=conf/descriptor.xml
 
 # interface url displayed in opensearch results
-# use this in case of application hiding via an proxy
+# use this in case of application is behind a reverse-proxy
 opensearch.proxy.url=http://dev.informationgrid.eu/search/opensearch
 
 # url to display detailed view of metadata results

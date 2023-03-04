@@ -28,7 +28,7 @@ Der erstellte IGC wird dann mit dem IGE iPlug an die Erfassung (InGridEditor) im
 * 256 MB RAM
 * 1 GB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

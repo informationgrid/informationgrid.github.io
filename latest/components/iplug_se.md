@@ -46,7 +46,7 @@ Ein Indexierungsdurchlauf besteht aus mehreren Phasen:
 * 512 MB RAM
 * 10 GB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

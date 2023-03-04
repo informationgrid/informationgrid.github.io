@@ -16,7 +16,7 @@ Für die Trennung von zusammengesetzten Worten der deutschen Sprache wird ein so
 * 2 GB RAM
 * 10 GB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

@@ -18,7 +18,7 @@ Das iPlug dient dem Indexieren von Bauleitplanungsdaten aus einer Excel-Datei.
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

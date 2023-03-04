@@ -19,7 +19,7 @@ Das iPlug dient dem Indexieren von Excel Daten. Excel Dateien können komfortabe
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

@@ -19,7 +19,7 @@ Das iPlug dient dem Indexieren von XML Daten. Die XML Daten müssen in Form von 
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

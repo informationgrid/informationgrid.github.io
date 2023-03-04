@@ -21,7 +21,7 @@ Seit Version 4.4.0 wird zudem ein zentraler Index unterstützt. Hierbei sollen d
 * 128 MB RAM
 * 80 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 

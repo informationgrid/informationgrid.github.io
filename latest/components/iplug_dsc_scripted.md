@@ -18,7 +18,7 @@ Der Datasource Client dient der Indizierung von Inhalten aus Datenbanken. Der DS
 * 256 MB RAM
 * 500 MB Harddrive
 
-* JAVA 8
+* JAVA 17
 * Cygwin (unter Windows)
 
 
