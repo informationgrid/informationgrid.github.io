@@ -12,6 +12,17 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 
 Release 16.03.2023
 
+#### Neuer Bereich "API"
+
+Für das Profil NUMIS wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
+Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374)).
+
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser](../images/5145_601_610_portal_numis_api.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser</figcaption>
+
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5145_601_610_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren</figcaption>
+
 ### Liste der Änderungen
 
 - [Feature] CORS und CSRF im iBus konfigurierbar machen ([REDMINE-4714](https://redmine.informationgrid.eu/issues/4714))
@@ -260,10 +271,6 @@ Profil RLP
 Profil MetaVer
 
 - [Feature] [MAPCLIENT] Kartenclient METAVER - Webatlas farbe/grau ersetzen durch basemap.de Web Raster farbe/grau ([REDMINE-4230](https://redmine.informationgrid.eu/issues/4230))
-
-Profil NUMIS
-
-- [Feature] [PORTAL] Erstellung neuer Bereich "APIs" ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374))
 
 Profil UVP
 
