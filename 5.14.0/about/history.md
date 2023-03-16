@@ -8,10 +8,40 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 5.14.5
+
+Release 16.03.2023
+
+### Liste der Änderungen
+
+- [Feature] CORS und CSRF im iBus konfigurierbar machen ([REDMINE-4714](https://redmine.informationgrid.eu/issues/4714))
+- [Feature] Erstellung neuer Bereich "APIs" ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374))
+- [Bug] MAPCLIENT: Legenden-URL werden nicht mehr durch den Job aktualisiert ([REDMINE-4911](https://redmine.informationgrid.eu/issues/4911))
+
+Profil LUBW
+
+- [Feature] Statistik über Seitenaufrufe ([REDMINE-4706](https://redmine.informationgrid.eu/issues/4706))
+- [Feature] Portal - Sortierung nach Relevanz/Aktualität ([REDMINE-4581](https://redmine.informationgrid.eu/issues/4581))
+- [Feature] Direkte Anzeige, wenn nur ein Layer im WMS existiert ([REDMINE-4376](https://redmine.informationgrid.eu/issues/4376))
+- [Bug] Fehlerhafte Mailadresse / Änderung beim Nutzer anlegen ([REDMINE-4688](https://redmine.informationgrid.eu/issues/4688))
+- [Bug] Text-, Design- und Layout-Korrekturen am Portal ([REDMINE-4604](https://redmine.informationgrid.eu/issues/4604))
+
+Profil UPSH
+
+- [Bug] MAPCLIENT: "Problem melden" in der Karte -> E-Mail-Adresse wird nicht weitergegeben ([REDMINE-4796](https://redmine.informationgrid.eu/issues/4796))
+
+### Komponenten
+
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/5.14.5/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/5.14.5/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/5.14.5/))
+
 
 ## Version 5.14.4.1
 
 Release 23.02.2023
+
+### Liste der Änderungen
 
 Profil LUBW
 
