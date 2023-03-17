@@ -12,6 +12,8 @@ Diese Release Notes betreffen ausschließlich die Versionen 5.14.x. Release Note
 
 Release 16.03.2023
 
+### Wichtige Änderungen
+
 #### Neuer Bereich "API"
 
 Für das Profil NUMIS wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
