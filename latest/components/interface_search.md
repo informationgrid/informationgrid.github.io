@@ -337,14 +337,14 @@ Das Distribution-Format wird entsprechend der Mapping-Übersicht übernommen, so
 
 Folgende Eigenschaften können über die Konfiguration `interface-search.properties` eingestellt werden.
 
-| Schlüssel                                        | Beschreibung |
+| Schlüssel                              | Beschreibung                                                                                                                                      |
 | --- | --- | 
-| opensearch.dcat.catalog.title                    | Katalog-Titel, z.B. `Umweltdatenkatalog Niedersachsen` |
-| opensearch.dcat.catalog.description              | Katalog-Beschreibung, z.B. `Das niedersächsiche Umweltportal` |
-| opensearch.dcat.contributor_id                   | Datenbereitsteller, z.B. `http://dcat-ap.de/def/contributors/NUMIS` |
-| opensearch.dcat.catalog.publisher.name           | Id des Katalog-Herausgeber, z.B. `MU_Niedersachsen` |
-| opensearch.dcat.catalog.publisher.url            | Url Katalog-Herausgeber, z.B. `https://numis.niedersachsen.de` |
-| opensearch.dcat.basequery  `(Ab Version 6.0.2)`  | Basis Filterung für den DCAT-AP.de Export, gilt zusätzlich zu der Abfrage aus dem Query-Parameter `q`. Default: `datatype:metadata (t04_search.searchterm:opendata OR t04_search.searchterm:opendataident)` |
+| opensearch.dcat.catalog.title          | Katalog-Titel, z.B. `Umweltdatenkatalog Niedersachsen`                                                                                            |
+| opensearch.dcat.catalog.description    | Katalog-Beschreibung, z.B. `Das niedersächsiche Umweltportal`                                                                                     |
+| opensearch.dcat.contributor_id         | Datenbereitsteller, z.B. `http://dcat-ap.de/def/contributors/NUMIS`                                                                               |
+| opensearch.dcat.catalog.publisher.name | Id des Katalog-Herausgeber, z.B. `MU_Niedersachsen`                                                                                               |
+| opensearch.dcat.catalog.publisher.url  | Url Katalog-Herausgeber, z.B. `https://numis.niedersachsen.de`                                                                                    |
+| opensearch.dcat.basequery              | Basis Filterung für den DCAT-AP.de Export, gilt zusätzlich zu der Abfrage aus dem Query-Parameter `q`. Default: `datatype:metadata (t04_search.searchterm:opendata OR t04_search.searchterm:opendataident)` |
 
 Die Werte müssen mit GOV.DATA abgestimmt werden.
 
