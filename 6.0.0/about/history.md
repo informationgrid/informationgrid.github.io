@@ -58,6 +58,9 @@ Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informa
 ![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5145_601_610_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
 <figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren</figcaption>
 
+Auch für das allgemeine Profil wurde der neue Bereich "API" integriert ([REDMINE-4677](https://redmine.informationgrid.eu/issues/4677)).
+
+
 ### Liste der Änderungen
 
 - [Feature] [CODELIST-REPOSITORY] Zentrale Codelist anpassen ([REDMINE-4699](https://redmine.informationgrid.eu/issues/4699))
