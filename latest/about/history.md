@@ -15,7 +15,70 @@ Release 19.04.2023
 
 ### Wichtige Änderungen
 
-...
+
+#### Portal: Neuer Bereich "API"
+
+Für das Profil NUMIS wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
+Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informationgrid.eu/issues/4374)).
+
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser](../images/5145_601_610_portal_numis_api.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Enduser</figcaption>
+
+![Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren](../images/5145_601_610_portal_numis_api_admin.png "Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil NUMIS - Ansicht Portal Inhalte administrieren</figcaption>
+
+Auch für das allgemeine Profil wurde der neue Bereich "API" integriert ([REDMINE-4677](https://redmine.informationgrid.eu/issues/4677)).
+
+
+#### Messdatenclient: Responsivität verbessert
+
+Für den Messdatenclient wurde die Responsivität überarbeitet und verbessert. Dadurch wird die mobile Ansicht optimiert ([REDMINE-4109](https://redmine.informationgrid.eu/issues/4109)).
+
+![Messdatenclient: Responsivität verbessert - Feinstaub](../images/610_portal_measurementclient_responsive_particulate-matter.jpg "Messdatenclient: Responsivität verbessert - Feinstaub")
+<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Feinstaub</figcaption>
+
+![Messdatenclient: Responsivität verbessert - Wasserstand](../images/610_portal_measurementclient_responsive_water-level.jpg "Messdatenclient: Responsivität verbessert - Wasserstand")
+<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Wasserstand</figcaption>
+
+
+#### Portal: Neue Facette "Zeitbezug" in der Suche
+
+Für das Profil BAW MIS wurde in der Suche eine neue Facette für die Filterung nach Zeitbezug der Daten/Ressource hinzugefügt ([REDMINE-4185](https://redmine.informationgrid.eu/issues/4185)).
+
+![Portal: Neue Facette Zeitbezug in der Suche](../images/610_portal_baw-doi-time-facet.png "Portal: Neue Facette Zeitbezug in der Suche")
+<figcaption class="figcaption">Portal: Neue Facette Zeitbezug in der Suche</figcaption>
+
+
+#### Portal: Neue Facette "Art der Dienste" in der Suche
+
+Für die Profile BKG-MIS und AdV-MIS wurde in der Suche eine neue Facette für eine Differenzierung der Dienste hinzugefügt ([REDMINE-3278](https://redmine.informationgrid.eu/issues/3278)).
+
+![Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS](../images/610_portal_bkg-mis_type-of-services.png "Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS")
+<figcaption class="figcaption">Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS</figcaption>
+
+![Portal: Neue Facette Art der Dienste in der Suche bei AdV-MIS](../images/610_portal_adv-mis_type-of-services.png "Portal: Neue Facette Art der Dienste in der Suche bei AdV-MIS")
+<figcaption class="figcaption">Portal: Neue Facette Art der Dienste in der Suche bei AdV-MIS</figcaption>
+
+
+#### Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei
+
+Für das Profil LUBW wurde eine neue Downloadoption hinzugefügt, mit der man die Ergebnisliste der Suche als CSV-Datei herunterladen kann ([REDMINE-4377](https://redmine.informationgrid.eu/issues/4377)).
+
+![Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben](../images/610_portal_lubw_download-serp-csv_top.png "Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben")
+<figcaption class="figcaption">Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben</figcaption>
+
+![Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten](../images/610_portal_lubw_download-serp-csv_bottom.png "Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten")
+<figcaption class="figcaption">Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten</figcaption>
+
+
+#### Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt
+
+Für das Profil LUBW wurde der Kartenclient so angepasst, dass alle WMS, die nur einen Layer beinhalten, per default direkt importiert und angezeigt werden.
+Dafür gibt es eine neue Einstellung in der Admin-Oberfläche des Kartenclients.
+
+![Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt](../images/610_portal_lubw_mapclient_wms-single-layer.png "Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt")
+<figcaption class="figcaption">Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt</figcaption>
+
 
 ### Liste der Änderungen
 
