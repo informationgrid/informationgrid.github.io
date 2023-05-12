@@ -226,6 +226,7 @@ Für UVP wurde die Nominatim-Suche aktiviert ([REDMINE-4634](https://redmine.inf
 - [Feature] [IGE] AdV-Checkbox nur in Objektarten Geodatendienst, Geodatensatz und Anwendung sichtbar machen ([REDMINE-3104](https://redmine.informationgrid.eu/issues/3104))
 - [Feature] [IGE] Hilfetext zum Feld "Durch die Ressource abgedeckte Zeitspanne" anpassen ([REDMINE-3976](https://redmine.informationgrid.eu/issues/3976))
 - [Feature] [IGE] Regionalschlüssel erfassen - Minimallösung ([REDMINE-3928](https://redmine.informationgrid.eu/issues/3928))
+- [Feature] [IGE] Anpassung der Liste "AdV-Produktgruppe" ([REDMINE-1535](https://redmine.informationgrid.eu/issues/1535))
 - [Feature] [IPLUG-SE] SE iPlug - Upgrade NUTCH auf 1.19 ([REDMINE-4489](https://redmine.informationgrid.eu/issues/4489))
 - [Feature] [MAPCLIENT] Admin-GUI - Einbindung WMTS mit anderer Projektion ([REDMINE-4479](https://redmine.informationgrid.eu/issues/4479))
 - [Feature] [PORTAL] Portalanzeige Koordinatensysteme ([REDMINE-4486](https://redmine.informationgrid.eu/issues/4486))
