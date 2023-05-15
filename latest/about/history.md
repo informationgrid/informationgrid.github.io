@@ -127,9 +127,6 @@ Für die Profile BKG-MIS und AdV-MIS wurde in der Suche eine neue Facette für e
 ![Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS](../images/610_portal_bkg-mis_type-of-services.png "Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS")
 <figcaption class="figcaption">Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS</figcaption>
 
-![Portal: Neue Facette Art der Dienste in der Suche bei AdV-MIS](../images/610_portal_adv-mis_type-of-services.png "Portal: Neue Facette Art der Dienste in der Suche bei AdV-MIS")
-<figcaption class="figcaption">Portal: Neue Facette Art der Dienste in der Suche bei AdV-MIS</figcaption>
-
 
 #### Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei
 
