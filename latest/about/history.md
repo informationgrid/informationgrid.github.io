@@ -133,9 +133,7 @@ Für die Profile BKG-MIS und AdV-MIS wurde in der Suche eine neue Facette für e
 Für den Messdatenclient wurde die Responsivität überarbeitet und verbessert. Dadurch wird die mobile Ansicht optimiert ([REDMINE-4109](https://redmine.informationgrid.eu/issues/4109)).
 
 ![Messdatenclient: Responsivität verbessert - Feinstaub](../images/610_portal_measurementclient_responsive_particulate-matter.jpg "Messdatenclient: Responsivität verbessert - Feinstaub")
-<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Feinstaub</figcaption>
-
-![Messdatenclient: Responsivität verbessert - Wasserstand](../images/610_portal_measurementclient_responsive_water-level.jpg "Messdatenclient: Responsivität verbessert - Wasserstand")
+<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Feinstaub</figcaption>![Messdatenclient: Responsivität verbessert - Wasserstand](../images/610_portal_measurementclient_responsive_water-level.jpg "Messdatenclient: Responsivität verbessert - Wasserstand")
 <figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Wasserstand</figcaption>
 
 
