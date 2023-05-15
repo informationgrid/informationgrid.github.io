@@ -12,6 +12,20 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.1.0. Release Notes
 
 Release 10.05.2023
 
+### Wichtige Änderungen
+
+#### Karten: Statt der Maßstabslinie mit der Längen-Angabe kann jetzt auch die Maßstabszahl angezeigt werden
+
+In der Admin-Oberfläche des Mapclients gibt es folgende neue Einstellung:  
+Einstellungen -> Karte -> Zeige die Maßstabszahl der Karte an  
+Ist die Einstellung aktiv, so wird die Maßstabszahl angezeigt, ansonsten die Maßstabslinie. Per default ist die Einstellung deaktiviert.
+
+![Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient](../images/620_611_5147_mapclient_scale-number_admin.png "Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient")
+<figcaption class="figcaption">Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient</figcaption>
+
+![Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser](../images/620_611_5147_mapclient_scale-number.png "Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser")
+<figcaption class="figcaption">Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser</figcaption>
+
 ### Liste der Änderungen
 
 - [Feature] MAPCLIENT: KM-Angabe durch Maßstab ersetzen ([REDMINE-5083](https://redmine.informationgrid.eu/issues/5083))
