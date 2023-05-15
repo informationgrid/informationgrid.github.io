@@ -101,15 +101,15 @@ Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-4374](https://redmine.informa
 Auch für das allgemeine Profil wurde der neue Bereich "API" integriert ([REDMINE-4677](https://redmine.informationgrid.eu/issues/4677)).
 
 
-#### Messdatenclient: Responsivität verbessert
+#### Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei
 
-Für den Messdatenclient wurde die Responsivität überarbeitet und verbessert. Dadurch wird die mobile Ansicht optimiert ([REDMINE-4109](https://redmine.informationgrid.eu/issues/4109)).
+Für das Profil LUBW wurde eine neue Downloadoption hinzugefügt, mit der man die Ergebnisliste der Suche als CSV-Datei herunterladen kann ([REDMINE-4377](https://redmine.informationgrid.eu/issues/4377)).
 
-![Messdatenclient: Responsivität verbessert - Feinstaub](../images/610_portal_measurementclient_responsive_particulate-matter.jpg "Messdatenclient: Responsivität verbessert - Feinstaub")
-<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Feinstaub</figcaption>
+![Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben](../images/610_portal_lubw_download-serp-csv_top.png "Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben")
+<figcaption class="figcaption">Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben</figcaption>
 
-![Messdatenclient: Responsivität verbessert - Wasserstand](../images/610_portal_measurementclient_responsive_water-level.jpg "Messdatenclient: Responsivität verbessert - Wasserstand")
-<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Wasserstand</figcaption>
+![Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten](../images/610_portal_lubw_download-serp-csv_bottom.png "Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten")
+<figcaption class="figcaption">Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten</figcaption>
 
 
 #### Portal: Neue Facette "Zeitbezug" in der Suche
@@ -128,15 +128,15 @@ Für die Profile BKG-MIS und AdV-MIS wurde in der Suche eine neue Facette für e
 <figcaption class="figcaption">Portal: Neue Facette Art der Dienste in der Suche bei BKG-MIS</figcaption>
 
 
-#### Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei
+#### Messdatenclient: Responsivität verbessert
 
-Für das Profil LUBW wurde eine neue Downloadoption hinzugefügt, mit der man die Ergebnisliste der Suche als CSV-Datei herunterladen kann ([REDMINE-4377](https://redmine.informationgrid.eu/issues/4377)).
+Für den Messdatenclient wurde die Responsivität überarbeitet und verbessert. Dadurch wird die mobile Ansicht optimiert ([REDMINE-4109](https://redmine.informationgrid.eu/issues/4109)).
 
-![Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben](../images/610_portal_lubw_download-serp-csv_top.png "Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben")
-<figcaption class="figcaption">Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - oben</figcaption>
+![Messdatenclient: Responsivität verbessert - Feinstaub](../images/610_portal_measurementclient_responsive_particulate-matter.jpg "Messdatenclient: Responsivität verbessert - Feinstaub")
+<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Feinstaub</figcaption>
 
-![Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten](../images/610_portal_lubw_download-serp-csv_bottom.png "Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten")
-<figcaption class="figcaption">Portal: Neue Option für den Download aller Suchergebnisse als CSV-Datei - unten</figcaption>
+![Messdatenclient: Responsivität verbessert - Wasserstand](../images/610_portal_measurementclient_responsive_water-level.jpg "Messdatenclient: Responsivität verbessert - Wasserstand")
+<figcaption class="figcaption">Messdatenclient: Responsivität verbessert - Wasserstand</figcaption>
 
 
 #### Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt
