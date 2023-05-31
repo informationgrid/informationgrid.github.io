@@ -891,3 +891,17 @@ var elements = document.getElementsByClassName("banner");
 elements[0].parentNode.insertBefore(newElement, elements[0].nextSibling);
 </script>
 ```
+
+### Wird die fehlerhafte Anmeldung eines existierenden Benutzers nach einer festzulegenden Anzahl für eine festzulegende Zeit gesperrt?
+
+Ja, die fehlerhaften Anmeldeversuche eines Benutzers werden im Portal erkannt und nach eine festgelegten Anzahl an Versuchen für eine festgelegte Zeit gesperrt. 
+
+Per Default sind folgende Einstellungen aktiv:
+
+```
+portal.login.auth.failures.limit=3
+portal.login.auth.failures.time=5
+```
+
+D.h. nach drei fehlerhaften Anmeldeversuche wird das Anmelden für den Benutzer für fünf Minuten gesperrt.
+Werden die Login-Daten vor dem dritten Versuch schon korrekt eingegeben, so werden die fehlerhaften Versuche annulliert. 
