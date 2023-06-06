@@ -30,6 +30,9 @@ InGrid lässt sich als Intranet Portal verwenden. Mit unterschiedlichen Datenque
 
 InGrid unterstützt die Erfassung und Publikation von Umweltverträglichkeitsprüfungen inkl. Abbildung von Verfahrensschritten, Upload von Dokumenten und Publikation von Informationen zur Bauleitplanung.
 
+* [Umweltverträglichkeitsprüfungen der deutschen Bundesländer](https://www.uvp-verbund.de)
+* [Umweltverträglichkeitsprüfungen von Niedersachsen](https://uvp.niedersachsen.de)
+
  
 ### Einsatz als allgemeines Verwaltungsportal
 
@@ -49,14 +52,15 @@ Technisch gesehen unterscheidet sich der Einsatz von InGrid auf europäischer Eb
 
 * [MetadatenVerbund (MetaVer) der Länder Brandenburg, Bremen, Hamburg, Sachsen-Anhalt, Mecklenburg-Vorpommern](http://metaver.de/)
 * [NUMIS - Niedersächsisches Umweltportal](http://numis.niedersachsen.de/)
-* [Saarland - PortalU SL](http://portalu.saarland.de/)
-* [Sachsen PortalU - behördliche Umweltinformationen aus Sachsen](http://portalu.smul.sachsen.de/)
 * [PortalU Rheinland Pfalz - behördliche Umweltinformationen aus Rheinland Pfalz](http://www.portalu.rlp.de/)
+* [Umweltportal Schleswig-Holstein](https://umweltportal.schleswig-holstein.de/)
+* [Umweltgeodaten für Baden-Württemberg](https://rips-metadaten.lubw.de)
         
-        
+
 ### Weitere Anwendungen
 
 * Geoportal der Wasser- und Schifffahrtsverwaltung des Bundes im Geschäftsbereich des Bundesministeriums für Verkehr und digitale Infrastruktur, betrieben durch das [Informationstechnikzentrum Bund (ITZBund)](https://www.itzbund.de/)
+
 
 		
 ## InGrid auf EU-Ebene:
