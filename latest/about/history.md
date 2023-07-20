@@ -12,17 +12,91 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.2.0. Release Notes
 
 Release 11.07.2023
 
-### Hinweise für die Aktualisierung
-
-...
-
-### Sicherheitsrelevante Änderungen
-
-...
-
 ### Wichtige Änderungen
 
-...
+#### Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer
+
+Die Facetten wurden umstrukturiert. Als Facette auf der obersten Ebene wurde "Metadaten" eingeführt. Unterhalb der Facette "Metadaten" werden die einzelnen Objektklassen gelistet.
+Unterhalb der bestehenden Facette "Ergebnistypen" wurde eine neue Facette "AdV" eingefügt.
+([REDMINE-5043](https://redmine.informationgrid.eu/issues/5043))
+
+![Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer](../images/620_portal_metaver_search-new-facets.png "Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer")
+<figcaption class="figcaption">Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer</figcaption>
+
+#### Portal: Neuer Bereich "API" im Profil HMDK
+
+Für das Profil HMDK wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
+Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-5056](https://redmine.informationgrid.eu/issues/5056)).
+
+![Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Enduser](../images/620_611_portal_hmdk_api.png "Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Enduser")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Enduser</figcaption>
+
+![Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Inhalte administrieren](../images/620_611_portal_hmdk_api_admin.png "Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Inhalte administrieren")
+<figcaption class="figcaption">Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Inhalte administrieren</figcaption>
+
+#### Portal: Neues Inhaltselement für zweiten Hinweistext eingefügt im Profil LUBW
+
+Im Portal wurde ein neues Inhaltselement `ingrid.teaser.inform.2` eingefügt. Dadurch kann ein zweiter Hinweistext erstellt werden, der direkt unterhalb der Kategorien angezeigt wird.
+([REDMINE-5142](https://redmine.informationgrid.eu/issues/5142))
+
+![Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Id](../images/620_portal_lubw_startpage_new-teaser_admin-cms-id.png "Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Id")
+<figcaption class="figcaption">Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Id</figcaption>
+
+![Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Feld](../images/620_portal_lubw_startpage_new-teaser_admin-cms-field.png "Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Feld")
+<figcaption class="figcaption">Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Feld</figcaption>
+
+![Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Auswahl](../images/620_portal_lubw_startpage_new-teaser_admin-cms-selection.png "Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Auswahl")
+<figcaption class="figcaption">Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Auswahl</figcaption>
+
+![Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite](../images/620_portal_lubw_startpage_new-teaser.png "Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite")
+<figcaption class="figcaption">Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite</figcaption>
+
+#### Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"
+
+Für die Facette "Verfahrenstypen" wurde der Schalter "Nur aktuelle" hinzugefügt.
+([REDMINE-5190](https://redmine.informationgrid.eu/issues/5190))
+
+![Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"](../images/620_portal_uvp_search-facet-procedure-typ.jpg "Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"")
+<figcaption class="figcaption">Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"</figcaption>
+
+#### Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg
+
+Für Geodatensätze und Geodatendienste wird bei Klick auf "Kartenansicht öffnen" nicht mehr die interne Kartenkomponente geöffnet, sondern in einem neuen Fenster die externe URL geoportal-hamburg.de mit der UUID des Datensatzes.
+Beispiel nach Klick auf "Kartenansicht öffnen" für "Schulstammdaten und Schülerzahlen der Hamburger Schulen":
+https://geoportal-hamburg.de/geo-online/?mdid=D3DDBBA3-7329-475C-BB07-14D539ED6B1E
+([REDMINE-4680](https://redmine.informationgrid.eu/issues/4680))
+
+![Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg](../images/620_611_portal_hmdk_view_external_map.png "Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg"")
+<figcaption class="figcaption">Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg</figcaption>
+
+#### Karten: Statt der Maßstabslinie mit der Längen-Angabe kann jetzt auch die Maßstabszahl angezeigt werden
+
+In der Admin-Oberfläche des Mapclients gibt es folgende neue Einstellung:  
+Einstellungen -> Karte -> Zeige die Maßstabszahl der Karte an  
+Ist die Einstellung aktiv, so wird die Maßstabszahl angezeigt, ansonsten die Maßstabslinie. Per default ist die Einstellung deaktiviert.
+([REDMINE-5083](https://redmine.informationgrid.eu/issues/5083))
+
+![Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient](../images/620_611_5147_mapclient_ingrid_scale-number_admin.png "Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient")
+<figcaption class="figcaption">Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient</figcaption>
+
+![Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser](../images/620_611_5147_mapclient_ingrid_scale-number.png "Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser")
+<figcaption class="figcaption">Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser</figcaption>
+
+#### Portal: Neuer Verweis auf ARS-Tool in Hilfetext im Profil MetaVer
+
+Eine interaktive Suche nach amtlichen Regionalschlüsseln ermöglicht das ARS-Tool:
+https://opengovtech.de/ars
+Der Link wurde in den betreffenen Hilfetext eingefügt.
+([REDMINE-5045](https://redmine.informationgrid.eu/issues/5045))
+
+![Portal: Neuer Verweis auf ARS-Tool in Hilfetext im Profil MetaVer](../images/620_611_portal_metaver_help-ars-tool.png "Portal: Neuer Verweis auf ARS-Tool in Hilfetext im Profil MetaVer")
+<figcaption class="figcaption">Portal: Neuer Verweis auf ARS-Tool in Hilfetext im Profil MetaVer</figcaption>
+
+#### System: Speichernutzung für die InGrid-Komponenten wurde verbessert
+
+Die Speichernutzung für jede InGrid-Komponente wurde optimiert. Dafür wurden Konfigurationsparameter der Java Virtual Machine angepasst.
+([REDMINE-5117](https://redmine.informationgrid.eu/issues/5117))
+
 
 ### Liste der Änderungen
 

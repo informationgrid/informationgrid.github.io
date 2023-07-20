@@ -19,11 +19,12 @@ Release 10.05.2023
 In der Admin-Oberfläche des Mapclients gibt es folgende neue Einstellung:  
 Einstellungen -> Karte -> Zeige die Maßstabszahl der Karte an  
 Ist die Einstellung aktiv, so wird die Maßstabszahl angezeigt, ansonsten die Maßstabslinie. Per default ist die Einstellung deaktiviert.
+([REDMINE-5083](https://redmine.informationgrid.eu/issues/5083))
 
-![Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient](../images/620_611_5147_mapclient_scale-number_admin.png "Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient")
+![Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient](../images/620_611_5147_mapclient_ingrid_scale-number_admin.png "Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient")
 <figcaption class="figcaption">Karten: Maßstabszahl statt Maßstabslinie - Admin-Oberfläche Mapclient</figcaption>
 
-![Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser](../images/620_611_5147_mapclient_scale-number.png "Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser")
+![Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser](../images/620_611_5147_mapclient_ingrid_scale-number.png "Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser")
 <figcaption class="figcaption">Karten: Maßstabszahl statt Maßstabslinie - Ansicht Enduser</figcaption>
 
 ### Liste der Änderungen
@@ -144,6 +145,16 @@ Dafür gibt es eine neue Einstellung in der Admin-Oberfläche des Kartenclients.
 
 ![Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt](../images/610_portal_lubw_mapclient_wms-single-layer.png "Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt")
 <figcaption class="figcaption">Kartenclient: Wenn nur ein Layer im WMS existiert, dann wird dieser direkt angezeigt</figcaption>
+
+#### Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg
+
+Für Geodatensätze und Geodatendienste wird bei Klick auf "Kartenansicht öffnen" nicht mehr die interne Kartenkomponente geöffnet, sondern in einem neuen Fenster die externe URL geoportal-hamburg.de mit der UUID des Datensatzes.
+Beispiel nach Klick auf "Kartenansicht öffnen" für "Schulstammdaten und Schülerzahlen der Hamburger Schulen":
+https://geoportal-hamburg.de/geo-online/?mdid=D3DDBBA3-7329-475C-BB07-14D539ED6B1E
+([REDMINE-4680](https://redmine.informationgrid.eu/issues/4680))
+
+![Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg](../images/620_611_portal_hmdk_view_external_map.png "Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg"")
+<figcaption class="figcaption">Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg</figcaption>
 
 
 ### Liste der Änderungen
