@@ -16,6 +16,9 @@ Release 11.07.2023
 
 #### Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer
 
+Mehrfachauswahl
+
+
 Die Facetten wurden umstrukturiert. Als Facette auf der obersten Ebene wurde "Metadaten" eingeführt. Unterhalb der Facette "Metadaten" werden die einzelnen Objektklassen gelistet.
 Unterhalb der bestehenden Facette "Ergebnistypen" wurde eine neue Facette "AdV" eingefügt.
 ([REDMINE-5043](https://redmine.informationgrid.eu/issues/5043))
@@ -25,7 +28,7 @@ Unterhalb der bestehenden Facette "Ergebnistypen" wurde eine neue Facette "AdV" 
 
 #### Portal: Neuer Bereich "API" im Profil HMDK
 
-Für das Profil HMDK wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des niedersächsischen Umweltportals dokumentiert werden.
+Für das Profil HMDK wurde ein neuer Bereich "API" erstellt. Dort sollen die [Programmierschnittstellen](https://de.wikipedia.org/wiki/Programmierschnittstelle) des Hamburger Metadatenkatalogs dokumentiert werden.
 Vorlage ist [bund.dev](https://bund.dev) ([REDMINE-5056](https://redmine.informationgrid.eu/issues/5056)).
 
 ![Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Enduser](../images/620_611_portal_hmdk_api.png "Portal: Neuer Bereich "API" im Profil HMDK - Ansicht Portal Enduser")
@@ -51,19 +54,19 @@ Im Portal wurde ein neues Inhaltselement `ingrid.teaser.inform.2` eingefügt. Da
 ![Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite](../images/620_portal_lubw_startpage_new-teaser.png "Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite")
 <figcaption class="figcaption">Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite</figcaption>
 
-#### Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"
+#### Suche: Schalter "Nur aktuelle" für Facette "Verfahrenstypen" angepasst
 
-Für die Facette "Verfahrenstypen" wurde der Schalter "Nur aktuelle" hinzugefügt.
+Für die Facette "Verfahrenstypen" wurde der Schalter "Nur aktuelle" verbessert.
+Bei aktivem Schalter werden jetzt bei allen Verfahrensarten auch die laufenden Verfahren angezeigt und nicht nur die Verfahren mit "Datum der Entscheidung jünger als 1 Jahr".
 ([REDMINE-5190](https://redmine.informationgrid.eu/issues/5190))
 
-![Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"](../images/620_portal_uvp_search-facet-procedure-typ.jpg "Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"")
-<figcaption class="figcaption">Suche: Neuer Schalter "Nur aktuelle" für Facette "Verfahrenstypen"</figcaption>
+![Suche: Schalter "Nur aktuelle" für Facette "Verfahrenstypen" angepasst](../images/620_portal_uvp_search-facet-procedure-typ.jpg "Suche: Schalter "Nur aktuelle" für Facette "Verfahrenstypen" angepasst")
+<figcaption class="figcaption">Suche: Schalter "Nur aktuelle" für Facette "Verfahrenstypen" angepasst</figcaption>
 
 #### Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg
 
 Für Geodatensätze und Geodatendienste wird bei Klick auf "Kartenansicht öffnen" nicht mehr die interne Kartenkomponente geöffnet, sondern in einem neuen Fenster die externe URL geoportal-hamburg.de mit der UUID des Datensatzes.
-Beispiel nach Klick auf "Kartenansicht öffnen" für "Schulstammdaten und Schülerzahlen der Hamburger Schulen":
-https://geoportal-hamburg.de/geo-online/?mdid=D3DDBBA3-7329-475C-BB07-14D539ED6B1E
+Beispiel nach Klick auf "Kartenansicht öffnen" für ["Schulstammdaten und Schülerzahlen der Hamburger Schulen"](https://geoportal-hamburg.de/geo-online/?mdid=D3DDBBA3-7329-475C-BB07-14D539ED6B1E)
 ([REDMINE-4680](https://redmine.informationgrid.eu/issues/4680))
 
 ![Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg](../images/620_611_portal_hmdk_view_external_map.png "Portal: "Kartenansicht öffnen" verweist jetzt auf das Geoportal Hamburg"")
@@ -84,8 +87,8 @@ Ist die Einstellung aktiv, so wird die Maßstabszahl angezeigt, ansonsten die Ma
 
 #### Portal: Neuer Verweis auf ARS-Tool in Hilfetext im Profil MetaVer
 
-Eine interaktive Suche nach amtlichen Regionalschlüsseln ermöglicht das ARS-Tool:
-https://opengovtech.de/ars
+Eine interaktive Suche nach amtlichen Regionalschlüsseln ermöglicht das [ARS-Tool](
+https://opengovtech.de/ars).
 Der Link wurde in den betreffenen Hilfetext eingefügt.
 ([REDMINE-5045](https://redmine.informationgrid.eu/issues/5045))
 
@@ -94,7 +97,7 @@ Der Link wurde in den betreffenen Hilfetext eingefügt.
 
 #### System: Speichernutzung für die InGrid-Komponenten wurde verbessert
 
-Die Speichernutzung für jede InGrid-Komponente wurde optimiert. Dafür wurden Konfigurationsparameter der Java Virtual Machine angepasst.
+Die Speichernutzung für die InGrid-Komponenten wurde optimiert. Dafür wurden Konfigurationsparameter der Java Virtual Machine angepasst.
 ([REDMINE-5117](https://redmine.informationgrid.eu/issues/5117))
 
 
