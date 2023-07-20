@@ -14,13 +14,11 @@ Release 11.07.2023
 
 ### Wichtige Änderungen
 
-#### Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer
-
-Mehrfachauswahl
-
+#### Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer, jetzt Mehrfachauswahl möglich
 
 Die Facetten wurden umstrukturiert. Als Facette auf der obersten Ebene wurde "Metadaten" eingeführt. Unterhalb der Facette "Metadaten" werden die einzelnen Objektklassen gelistet.
 Unterhalb der bestehenden Facette "Ergebnistypen" wurde eine neue Facette "AdV" eingefügt.
+Jetzt ist auch eine Mehrfachauswahl möglich.
 ([REDMINE-5043](https://redmine.informationgrid.eu/issues/5043))
 
 ![Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer](../images/620_portal_metaver_search-new-facets.png "Portal: Neue Facetten wurden hinzugefügt im Profil MetaVer")
