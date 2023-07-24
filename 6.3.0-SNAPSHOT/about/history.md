@@ -16,17 +16,17 @@ Release TT.MM.JJJJ
 
 ...
 
-### Sicherheitsrelevante Änderungen  
+### Sicherheitsrelevante Änderungen
 
-... 
+...
 
-### Wichtige Änderungen  
+### Wichtige Änderungen
 
-...  
+...
 
 ### Liste der Änderungen (wird noch nicht von make history ausgegeben, sollte aber, lieber André :)
 
-...  
+...
 
 (### Komponenten wird von make history helper ausgegeben)
 
