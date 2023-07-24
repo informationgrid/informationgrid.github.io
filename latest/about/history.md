@@ -52,6 +52,27 @@ Im Portal wurde ein neues Inhaltselement `ingrid.teaser.inform.2` eingefügt. Da
 ![Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite](../images/620_portal_lubw_startpage_new-teaser.png "Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite")
 <figcaption class="figcaption">Portal: Neues Inhaltselement für zweiten Hinweistext im Profil LUBW - Startseite</figcaption>
 
+#### Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer
+
+In der Admin-GUI des Mapclients wird für Ordner, die untergeordnete Ordner enthalten, die neue Option "Mehrfachauswahl" angeboten.
+Wird diese auf "true" gesetzt, so wird im Kartenclient hinter dem betreffenden Ordner (Layer) eine Checkbox angezeigt. Wird diese aktiviert, so werden alle untergeordneten Layer ausgewählt und der Karte hinzugefügt.
+([REDMINE-5023](https://redmine.informationgrid.eu/issues/5023))
+
+![Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Admin-GUI Button](../images/620_mapclient_ingrid_admin-activate-subfolder-multiple-selection-button.png "Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Admin-GUI Button")
+<figcaption class="figcaption">Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Admin-GUI Button</figcaption>
+
+![Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Admin-GUI Dropdown](../images/620_mapclient_ingrid_admin-activate-subfolder-multiple-selection-dropdown.png "Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Admin-GUI Dropdown")
+<figcaption class="figcaption">Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Admin-GUI Dropdown</figcaption>
+
+![Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Checkbox](../images/620_mapclient_ingrid_viewer-activate-subfolder-multiple-selection-checkbox.png "Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Checkbox")
+<figcaption class="figcaption">Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Checkbox</figcaption>
+
+![Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Ausgewählte Checkbox](../images/620_mapclient_ingrid_viewer-activate-subfolder-multiple-selection-checked-checkbox.png "Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Ausgewählte Checkbox")
+<figcaption class="figcaption">Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Ausgewählte Checkbox</figcaption>
+
+![Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Ausgewählte Layer](../images/620_mapclient_ingrid_viewer-activate-subfolder-multiple-selection-selected-layer.png "Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Ausgewählte Layer")
+<figcaption class="figcaption">Karten: Neue Option "Mehrfachauswahl" für untergeordnete Layer - Ausgewählte Layer</figcaption>
+
 #### Suche: Schalter "Nur aktuelle" für Facette "Verfahrenstypen" angepasst
 
 Für die Facette "Verfahrenstypen" wurde der Schalter "Nur aktuelle" verbessert.
@@ -104,6 +125,7 @@ Die Speichernutzung für die InGrid-Komponenten wurde optimiert. Dafür wurden K
 - [Feature] Reduzierung Memory Verbrauch (Anpassung der Garbage Collection Settings in JAVA) ([REDMINE-5117](https://redmine.informationgrid.eu/issues/5117))
 - [Feature] MAPCLIENT: KM-Angabe durch Maßstab ersetzen ([REDMINE-5083](https://redmine.informationgrid.eu/issues/5083))
 - [Feature] Portal: Reihung der Angaben ändern ([REDMINE-4533](https://redmine.informationgrid.eu/issues/4533))
+- [Feature] Alle Layer eines Ordners mit Checkbox aktivieren ([REDMINE-5023](https://redmine.informationgrid.eu/issues/5023))
 - [Bug] Datenbezüge Adresse: Diskrepanz Anzahl in IGE und Portal ([REDMINE-5305](https://redmine.informationgrid.eu/issues/5305))
 - [Bug] MAPCLIENT: Probleme BWaStrLocator Anfrage im GeoViewer ([REDMINE-5255](https://redmine.informationgrid.eu/issues/5255))
 - [Bug] Korrektur der GetCapabilities-URL ([REDMINE-5204](https://redmine.informationgrid.eu/issues/5204))
