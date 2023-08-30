@@ -15,7 +15,7 @@ Die Schnittstelle bietet die Möglichkeit bestimmte Einschränkungen in der Anfr
 <figcaption class="figcaption">InGrid Komponente CSW Schnittstelle</figcaption>
 
 
-Die Entwicklung der Schnittstelle wurde mit der OGC CSW 2.0.2 AP ISO 1.0 [Testsuite der GDI-DE](http://testsuite.gdi-de.org/gdi/) getestet.
+Die Entwicklung der Schnittstelle wurde mit der OGC CSW 2.0.2 AP ISO 1.0 [Testsuite der GDI-DE](https://testsuite.gdi-de.org) getestet.
 
 Die Schnittstelle bildet Daten aus dem InGrid Catalog Datenraum wie folgt ab:
 
