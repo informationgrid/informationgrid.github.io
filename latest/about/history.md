@@ -12,6 +12,30 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.2.0. Release Notes
 
 Release 11.09.2023
 
+### Sicherheitsrelevante Änderungen
+
+Es wurden diverse Verbesserungen bezüglich der Sicherheit umgesetzt.
+([REDMINE-5325](https://redmine.informationgrid.eu/issues/5325))
+([REDMINE-5324](https://redmine.informationgrid.eu/issues/5324))
+([REDMINE-5338](https://redmine.informationgrid.eu/issues/5338))
+
+### Wichtige Änderung
+
+#### Portal: Layout für das Profil KRZN
+
+Für das Profil KRZN wurde ein Portal-Layout erstellt.
+([REDMINE-5146](https://redmine.informationgrid.eu/issues/5146))
+
+![Portal: Layout für das Profil KRZN - Startseite](../images/630_621_portal_krzn_startpage.png "Portal: Layout für das Profil KRZN - Startseite")
+<figcaption class="figcaption">Portal: Layout für das Profil KRZN - Startseite</figcaption>
+
+![Portal: Layout für das Profil KRZN - Suche](../images/630_621_portal_krzn_search.png "Portal: Layout für das Profil KRZN - Suche")
+<figcaption class="figcaption">Portal: Layout für das Profil KRZN - Suche</figcaption>
+
+![Portal: Layout für das Profil KRZN - Detail Geoanwendung](../images/630_621_portal_krzn_detail_geoapplication.png "Portal: Layout für das Profil KRZN - Detail Geoanwendung")
+<figcaption class="figcaption">Portal: Layout für das Profil KRZN - Detail Geoanwendung</figcaption>
+
+
 ### Liste der Änderungen
 
 - [Feature] Behebung Server Side Request Forgery (SSRF) Schwachstellen ([REDMINE-5325](https://redmine.informationgrid.eu/issues/5325))
