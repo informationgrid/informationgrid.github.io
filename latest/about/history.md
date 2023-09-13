@@ -8,6 +8,66 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.2.0. Release Notes
 [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 6.2.1
+
+Release 11.09.2023
+
+### Liste der Änderungen
+
+- [Feature] Behebung Server Side Request Forgery (SSRF) Schwachstellen ([REDMINE-5325](https://redmine.informationgrid.eu/issues/5325))
+- [Feature] Sanitizing von Formularfeldern ([REDMINE-5324](https://redmine.informationgrid.eu/issues/5324))
+- [Feature] Kontakt "Vertrieb" als "Anbieter" im Portal konfigurieren - entsprechende Facette einrichten ([REDMINE-4488](https://redmine.informationgrid.eu/issues/4488))
+- [Bug] Mapclient: Für WMS-Dienste von MV werden die Attributinformationen (GetFeatureInfo-Attribute) nicht angezeigt ([REDMINE-5439](https://redmine.informationgrid.eu/issues/5439))
+- [Bug] Export von externen gekoppelten Daten inkorrekt ins ISO ([REDMINE-5394](https://redmine.informationgrid.eu/issues/5394))
+- [Bug] Fehlermeldung zu VelocityViewServlet  ([REDMINE-5387](https://redmine.informationgrid.eu/issues/5387))
+- [Bug]  Veraltete JavaScript Bibliotheken austauschen ([REDMINE-5338](https://redmine.informationgrid.eu/issues/5338))
+- [Bug] Entfernen von externen Ressourcen im Atom-Feed Client ([REDMINE-5323](https://redmine.informationgrid.eu/issues/5323))
+
+Profil BAW MIS
+
+- [Bug] ISO-XML Ausgabe im Datenfinder und Datenrepository nicht valide ([REDMINE-5177](https://redmine.informationgrid.eu/issues/5177))
+
+Profil KRZN
+
+- [Feature] Anpassung des Kartenausschnitts unter "Auf Karte festelegen" ([REDMINE-5429](https://redmine.informationgrid.eu/issues/5429))
+- [Feature] http://krzn-demo.informationgrid.eu/hintergrundinformationen --> anpassen ([REDMINE-5428](https://redmine.informationgrid.eu/issues/5428))
+- [Feature] 404-Text anpassen ([REDMINE-5426](https://redmine.informationgrid.eu/issues/5426))
+- [Feature] Statistiken - Menüeintrag/Link deaktiveren (ausblenden) ([REDMINE-5352](https://redmine.informationgrid.eu/issues/5352))
+- [Feature] PORTAL: Umsetzung Layout inkl. Profilerstellung ([REDMINE-5146](https://redmine.informationgrid.eu/issues/5146))
+- [Bug] Beschreibung des Datensatzes  ([REDMINE-5430](https://redmine.informationgrid.eu/issues/5430))
+- [Bug] Adressen erscheinen noch in Suchergebnissen ([REDMINE-5425](https://redmine.informationgrid.eu/issues/5425))
+- [Bug] Font Style der Anzahl vor Ergebnisse ([REDMINE-5424](https://redmine.informationgrid.eu/issues/5424))
+- [Bug] Hoverfunktion bei Kategoriekarte Geodatendienst funktioniert nicht richtig ([REDMINE-5423](https://redmine.informationgrid.eu/issues/5423))
+- [Bug] „Überschrift“ Geodatenkatalog Niederrhein ([REDMINE-5422](https://redmine.informationgrid.eu/issues/5422))
+- [Bug] Kategorie "Open Data" erscheint nicht auf der Startseite ([REDMINE-5421](https://redmine.informationgrid.eu/issues/5421))
+- [Bug] Seitentitel im Tab ([REDMINE-5420](https://redmine.informationgrid.eu/issues/5420))
+
+Profil LUBW
+
+- [Feature]  PORTAL: "RIPS-Metadaten" (2) ([REDMINE-5397](https://redmine.informationgrid.eu/issues/5397))
+- [Feature] PORTAL: "RIPS-Metadaten" ([REDMINE-5361](https://redmine.informationgrid.eu/issues/5361))
+- [Feature] Weiterentwicklung Portfolio ([REDMINE-4997](https://redmine.informationgrid.eu/issues/4997))
+
+Profil MetaVer
+
+- [Bug] Raumbezugssuche, falsche Ergebnisse? ([REDMINE-5461](https://redmine.informationgrid.eu/issues/5461))
+
+Profil NUMIS
+
+- [Feature] Gendern in der Infobox der Kartendienste ([REDMINE-5363](https://redmine.informationgrid.eu/issues/5363))
+
+Profil UVP
+
+- [Feature] Tooltip für "nur aktuelle" anpassen ([REDMINE-5462](https://redmine.informationgrid.eu/issues/5462))
+
+### Komponenten
+
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/6.2.1/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/6.2.1/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/6.2.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/6.2.1/))
+
+
 ## Version 6.2.0.2
 
 ### Liste der Änderungen
