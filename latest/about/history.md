@@ -54,7 +54,7 @@ Profil BAW MIS
 
 Profil KRZN
 
-- [Feature] Anpassung des Kartenausschnitts unter "Auf Karte festelegen" ([REDMINE-5429](https://redmine.informationgrid.eu/issues/5429))
+- [Feature] Anpassung des Kartenausschnitts unter "Auf Karte festlegen" ([REDMINE-5429](https://redmine.informationgrid.eu/issues/5429))
 - [Feature] http://krzn-demo.informationgrid.eu/hintergrundinformationen --> anpassen ([REDMINE-5428](https://redmine.informationgrid.eu/issues/5428))
 - [Feature] 404-Text anpassen ([REDMINE-5426](https://redmine.informationgrid.eu/issues/5426))
 - [Feature] Statistiken - Menüeintrag/Link deaktiveren (ausblenden) ([REDMINE-5352](https://redmine.informationgrid.eu/issues/5352))
