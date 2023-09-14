@@ -15,8 +15,8 @@ Release 11.09.2023
 ### Sicherheitsrelevante Änderungen
 
 Es wurden diverse Verbesserungen bezüglich der Sicherheit umgesetzt.
-([REDMINE-5325](https://redmine.informationgrid.eu/issues/5325))
 ([REDMINE-5324](https://redmine.informationgrid.eu/issues/5324))
+([REDMINE-5325](https://redmine.informationgrid.eu/issues/5325))
 ([REDMINE-5338](https://redmine.informationgrid.eu/issues/5338))
 
 ### Wichtige Änderung
@@ -44,8 +44,9 @@ Für das Profil KRZN wurde ein Portal-Layout erstellt.
 - [Bug] Mapclient: Für WMS-Dienste von MV werden die Attributinformationen (GetFeatureInfo-Attribute) nicht angezeigt ([REDMINE-5439](https://redmine.informationgrid.eu/issues/5439))
 - [Bug] Export von externen gekoppelten Daten inkorrekt ins ISO ([REDMINE-5394](https://redmine.informationgrid.eu/issues/5394))
 - [Bug] Fehlermeldung zu VelocityViewServlet  ([REDMINE-5387](https://redmine.informationgrid.eu/issues/5387))
-- [Bug]  Veraltete JavaScript Bibliotheken austauschen ([REDMINE-5338](https://redmine.informationgrid.eu/issues/5338))
+- [Bug] Veraltete JavaScript Bibliotheken austauschen ([REDMINE-5338](https://redmine.informationgrid.eu/issues/5338))
 - [Bug] Entfernen von externen Ressourcen im Atom-Feed Client ([REDMINE-5323](https://redmine.informationgrid.eu/issues/5323))
+- [Bug] Beschreibung des Datensatzes  ([REDMINE-5430](https://redmine.informationgrid.eu/issues/5430))
 
 Profil BAW MIS
 
@@ -58,7 +59,6 @@ Profil KRZN
 - [Feature] 404-Text anpassen ([REDMINE-5426](https://redmine.informationgrid.eu/issues/5426))
 - [Feature] Statistiken - Menüeintrag/Link deaktiveren (ausblenden) ([REDMINE-5352](https://redmine.informationgrid.eu/issues/5352))
 - [Feature] PORTAL: Umsetzung Layout inkl. Profilerstellung ([REDMINE-5146](https://redmine.informationgrid.eu/issues/5146))
-- [Bug] Beschreibung des Datensatzes  ([REDMINE-5430](https://redmine.informationgrid.eu/issues/5430))
 - [Bug] Adressen erscheinen noch in Suchergebnissen ([REDMINE-5425](https://redmine.informationgrid.eu/issues/5425))
 - [Bug] Font Style der Anzahl vor Ergebnisse ([REDMINE-5424](https://redmine.informationgrid.eu/issues/5424))
 - [Bug] Hoverfunktion bei Kategoriekarte Geodatendienst funktioniert nicht richtig ([REDMINE-5423](https://redmine.informationgrid.eu/issues/5423))
@@ -68,13 +68,13 @@ Profil KRZN
 
 Profil LUBW
 
-- [Feature]  PORTAL: "RIPS-Metadaten" (2) ([REDMINE-5397](https://redmine.informationgrid.eu/issues/5397))
-- [Feature] PORTAL: "RIPS-Metadaten" ([REDMINE-5361](https://redmine.informationgrid.eu/issues/5361))
+- [Feature] PORTAL: Textanpassungen RIPS-Metadaten ([REDMINE-5361](https://redmine.informationgrid.eu/issues/5361))
+- [Feature] PORTAL: Weitere Textanpassungen RIPS-Metadaten ([REDMINE-5397](https://redmine.informationgrid.eu/issues/5397))
 - [Feature] Weiterentwicklung Portfolio ([REDMINE-4997](https://redmine.informationgrid.eu/issues/4997))
 
 Profil MetaVer
 
-- [Bug] Raumbezugssuche, falsche Ergebnisse? ([REDMINE-5461](https://redmine.informationgrid.eu/issues/5461))
+- [Bug] Ergebnisse werden in Raumbezugssuche nicht korrekt dargestellt ([REDMINE-5461](https://redmine.informationgrid.eu/issues/5461))
 
 Profil NUMIS
 
