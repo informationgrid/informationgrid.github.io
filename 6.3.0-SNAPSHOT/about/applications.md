@@ -21,6 +21,13 @@ InGrid unterstützt die von der GDI-DE bzw. von INSPIRE geforderten OGC-Standard
 
 Mit dem InGridCatalog verfügt die InGrid-Architektur über eine web-basierte leistungsfähige Metadatenerfassungs- und -pflegekomponente, die konform zu den maßgeblichen Standards (ISO 19115/19119, OGC-CSW/WMS, INSPIRE,  GDI-DE-Konventionen) weiter entwickelt wird. Damit erfüllt InGrid alle Kriterien zum Einsatz als Geoportal.
 
+### Einsatz als Opendata Portal
+
+InGrid bringt alle Komponenten für den Aufbau eines Opendata Portals mit. Der leistungsfähige, flexible Editor ermöglicht die komfortable Erfassung von Opendata Metadaten.
+
+Die Daten können über das angeschlossene Portal recherchiert werden oder im DCAT-AP.DE Format über eine GOVDATA.de kompatible REST Schnittstelle abgegeben werden.
+
+
 
 ### Einsatz als Intranet GeoPortal
 
@@ -33,6 +40,11 @@ InGrid unterstützt die Erfassung und Publikation von Umweltverträglichkeitspr�
 * [Umweltverträglichkeitsprüfungen der deutschen Bundesländer](https://www.uvp-verbund.de)
 * [Umweltverträglichkeitsprüfungen von Niedersachsen](https://uvp.niedersachsen.de)
 
+### Einsatz als Opendata Editor
+
+Über die flexible Komponenten-Architektur kann InGrid auch als reines Erfassungstool für offene Daten verwendet werden.
+
+* [Zentraler Open Data Editor des Bundes (im Aufbau)](https://editor.opendata.bund.de/index.html)
  
 ### Einsatz als allgemeines Verwaltungsportal
 
