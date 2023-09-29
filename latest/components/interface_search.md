@@ -317,9 +317,9 @@ Im folgenden wird die Abbildung der verwendeten ISO Felder auf die Felder im ATO
 |  | `/feed/entry/category@term` | Hier werde die Daten aus dem Geoadatensatz unter `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gco:CharacterString|//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code/gmx:Anchor` verwendet.|
 |  | `/feed/entry/category@label` | Hier werde die Daten aus dem Geoadatensatz unter `//gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:codeSpace/gco:CharacterString` verwendet.|
 
-## Endpoint für DCAT-AP.DE Daten
+## Endpoint für DCAT-AP.DE Daten (Opendata)
 
-Für die Weitergabe an GOV.DATA können die Metadaten auch im RDF/XML Format abgegeben werden. 
+Für die Weitergabe von Opendata-Metadaten an GOV.DATA.DE oder andere Opendata Portale, können die Metadaten auch im RDF/XML Format abgegeben werden. 
 
 Die Opensearch-Schnittstelle des Interface-Search wurde dazu um einen Export im RDF/XML erweitert. Der RDF-Export kann über den Parameter format=rdf angesteuert werden.
 
