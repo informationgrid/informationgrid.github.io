@@ -50,24 +50,28 @@ GIS-InVeKoS-Daten (InVeKoS = Integriertes Verwaltungs- und Kontrollsystem) sind 
 
 Im IGE werden nun Neue konfigurierbare Auswahllisten zur Verfügung gestellt. Dazu muss die Checkbox "INSPIRE relevant" aktiv sein, dann wird die Auswahlliste sichtbar
 Die neue Auswahlliste enthält die Einträge `Kein InVeKOS Datensatz`, `InVeKoS/IACS (GSAA)`, `InVeKoS/IACS (LPIS)` und wird eingeblendet wenn die Checkbox in den Katalogeinstellungen zu geschaltet ist.
-Dabei wurden Anpassungen der ISO 19139 Abbildung an die verschiedenen Anforderungen berücksichtigt
+Dabei wurden Anpassungen der ISO 19139 Abbildung an die verschiedenen Anforderungen berücksichtigt.
+
 ([REDMINE-5549](https://redmine.informationgrid.eu/issues/5549))
+
+
+![IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze](../images/630_ige-classic_inspire-relevant_checkbox.png "IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze"")
+<figcaption class="figcaption">IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze</figcaption>
 
 ![IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze](../images/630_ige-classic_dropdownmenu_invekos.png "IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze"")
 <figcaption class="figcaption">IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze</figcaption>
 
-![IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze](../images/630_ige-classic_inspire-relevant_checkbox.png "IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze"")
-<figcaption class="figcaption">IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze</figcaption>
 
 #### Erweiterung der Räumlichen Suche (KRZN)
 
 
 Räumliche Suchen sollen überlappend agieren, und nicht "ganz enthaltend". Die Default-Funktionisweise der Suche-Funktion im Portal unter "Nach Ort suchen" und "Auf Karte festlegen" liefern nur Ergebnisse, deren Raumbezug komplett im Suchbereich enthalten sind. Das hat zur Folge wenn in eine nähere Umgebung reingezoomt wird, u.U. gar keine Ergebnisse erscheinen. Es müssen genaue Informationen vorliegen, z.B. wo das Gemeindegebiet liegt.
-Die wurde Bei KRZN so angepasst, dass auch sich überlappende Raumbezüge in der Suche berücksichtigt werden (Siehe Skizze).
+Um Usern besser entgegen zu kommen wurde dies bei KRZN so angepasst, dass auch sich überlappende Raumbezüge in der Suche berücksichtigt werden (Siehe Skizze).
+
 ([REDMINE-5368](https://redmine.informationgrid.eu/issues/5368))
 
-![Portal: "Das Suchfenster ist dabei gestrichelt schwarz. Es sollen die Objekte in blau (include), gelb (intersect) und grün (inside) gefunden werden, nicht jedoch die roten.](../images/630_portal_search_location_overlapping.png "Portal: Das Suchfenster ist dabei gestrichelt schwarz. Es sollen die Objekte in blau (include), gelb (intersect) und grün (inside) gefunden werden, nicht jedoch die roten."")
-<figcaption class="figcaption">Portal: Das Suchfenster ist dabei gestrichelt schwarz. Es sollen die Objekte in blau (include), gelb (intersect) und grün (inside) gefunden werden, nicht jedoch die roten.</figcaption>
+![Portal: "Das Suchfenster ist dabei gestrichelt schwarz. Es werden die Objekte in blau, gelb und grün gefunden, nicht jedoch die roten."](../images/630_portal_search_location_overlapping.png "Portal: Das Suchfenster ist dabei gestrichelt schwarz. Es werden die Objekte in blau, gelb und grün gefunden, nicht jedoch die roten."")
+<figcaption class="figcaption">Portal: Das Suchfenster ist dabei gestrichelt schwarz. Es werden die Objekte in blau, gelb und grün gefunden, nicht jedoch die roten</figcaption>
 
 
 
