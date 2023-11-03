@@ -46,7 +46,7 @@ Um aktuellere Postgresql Versionen verwenden zu können. wurde die Postgres-Bibl
 
 #### Umsetzung der Angabe von InVeKoS-Daten im IGE-Classic (HMDK)
 
-GIS-InVeKoS-Daten (InVeKoS = Integriertes Verwaltungs- und Kontrollsystem) sind nun mit INSPIRE Standard kompatibel. Verwendet wurden keywords der entsprechenden codelisten d.h. INSPIRE-registry https://inspire.ec.europa.eu/metadata-codelist .
+GIS-InVeKoS-Daten (InVeKoS = Integriertes Verwaltungs- und Kontrollsystem) sind nun mit INSPIRE-Spezifikation kompatibel. Verwendet wurden Keywords der entsprechenden Codelisten d.h. INSPIRE-registry https://inspire.ec.europa.eu/metadata-codelist .
 
 Im IGE werden nun Neue konfigurierbare Auswahllisten zur Verfügung gestellt. Dazu muss die Checkbox "INSPIRE relevant" aktiv sein, dann wird die Auswahlliste sichtbar
 Die neue Auswahlliste enthält die Einträge `Kein InVeKOS Datensatz`, `InVeKoS/IACS (GSAA)`, `InVeKoS/IACS (LPIS)` und wird eingeblendet wenn die Checkbox in den Katalogeinstellungen zu geschaltet ist.
