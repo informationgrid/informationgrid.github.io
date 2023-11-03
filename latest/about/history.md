@@ -12,17 +12,64 @@ Diese Release Notes betreffen ausschließlich die Versionen 6.3.0. Release Notes
 
 Release 17.10.2023
 
-### Hinweise für die Aktualisierung
-
-...
 
 ### Sicherheitsrelevante Änderungen
 
-...
+#### Behebung Server Side Request Forgery (SSRF) Schwachstellen
+Serverseitige Weiterleitungen basierend auf Benutzereingaben sind nicht mehr zugelassen. Benutzereingaben werden serverseitig validiert und bei Unstimmigkeiten verworfen.
+([REDMINE-5325](https://redmine.informationgrid.eu/issues/5325))
+
+#### Sanitizing von Formularfeldern
+
+Die Eingaben in Formularfeldern werden ausführlich auf korrekte Eingaben überprüft
+([REDMINE-5324](https://redmine.informationgrid.eu/issues/5324))
+
+#### Sicherheitsproblem mit SPRING Komponenten
+
+Kritisches Sicherheitsproblem mit SPRING Komponenten wie in CVE-2023-20862 beschrieben ist behoben
+([REDMINE-5350](https://redmine.informationgrid.eu/issues/5350))
+
+
+#### JavaScript Bibliothek
+
+Veraltete jQuery und Leaflet wurden mit aktuellen Versionen ausgetauscht.
+([REDMINE-5338](https://redmine.informationgrid.eu/issues/5338))
+
+#### Datenbank: Aktualisierung der Postgres-Bibliothek
+Um aktuellere Postgresql Versionen verwenden zu können. wurde die Postgres-Bibliothek auf den aktuellen Stand gehoben
+([REDMINE-5553](https://redmine.informationgrid.eu/issues/5553))
+
+
 
 ### Wichtige Änderungen
 
-...
+
+#### Umsetzung der Angabe von InVeKoS-Daten im IGE-Classic (HMDK)
+
+GIS-InVeKoS-Daten (InVeKoS = Integriertes Verwaltungs- und Kontrollsystem) sind nun mit INSPIRE Standard kompatibel. Verwendet wurden keywords der entsprechenden codelisten d.h. INSPIRE-registry https://inspire.ec.europa.eu/metadata-codelist .
+
+Im IGE werden nun Neue konfigurierbare Auswahllisten zur Verfügung gestellt. Dazu muss die Checkbox "INSPIRE relevant" aktiv sein, dann wird die Auswahlliste sichtbar
+Die neue Auswahlliste enthält die Einträge `Kein InVeKOS Datensatz`, `InVeKoS/IACS (GSAA)`, `InVeKoS/IACS (LPIS)` und wird eingeblendet wenn die Checkbox in den Katalogeinstellungen zu geschaltet ist.
+Dabei wurden Anpassungen der ISO 19139 Abbildung an die verschiedenen Anforderungen berücksichtigt
+([REDMINE-5549](https://redmine.informationgrid.eu/issues/5549))
+
+![IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze](../images/630_ige-classic_dropdownmenu_invekos.png "IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze"")
+<figcaption class="figcaption">IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze</figcaption>
+
+![IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze](../images/630_ige-classic_inspire-relevant_checkbox.png "IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze"")
+<figcaption class="figcaption">IGE-Classic: "Wenn INSPIRE-Relevant Auswahlliste für InVeKos Datensätze</figcaption>
+
+#### Erweiterung der Räumlichen Suche (KRZN)
+
+
+Räumliche Suchen sollen überlappend agieren, und nicht "ganz enthaltend". Die Default-Funktionisweise der Suche-Funktion im Portal unter "Nach Ort suchen" und "Auf Karte festlegen" liefern nur Ergebnisse, deren Raumbezug komplett im Suchbereich enthalten sind. Das hat zur Folge wenn in eine nähere Umgebung reingezoomt wird, u.U. gar keine Ergebnisse erscheinen. Es müssen genaue Informationen vorliegen, z.B. wo das Gemeindegebiet liegt.
+Die wurde Bei KRZN so angepasst, dass auch sich überlappende Raumbezüge in der Suche berücksichtigt werden (Siehe Skizze).
+([REDMINE-5368](https://redmine.informationgrid.eu/issues/5368))
+
+![Portal: "Das Suchfenster ist dabei gestrichelt schwarz. Es sollen die Objekte in blau (include), gelb (intersect) und grün (inside) gefunden werden, nicht jedoch die roten.](../images/630_portal_search_location_overlapping.png "Portal: Das Suchfenster ist dabei gestrichelt schwarz. Es sollen die Objekte in blau (include), gelb (intersect) und grün (inside) gefunden werden, nicht jedoch die roten."")
+<figcaption class="figcaption">Portal: Das Suchfenster ist dabei gestrichelt schwarz. Es sollen die Objekte in blau (include), gelb (intersect) und grün (inside) gefunden werden, nicht jedoch die roten.</figcaption>
+
+
 
 ### Liste der Änderungen
 
