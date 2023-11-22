@@ -14,7 +14,24 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
-...
+#### Codelist-Repository
+
+Die Credentials für die Benutzer werden jetzt nicht mehr aus der `realm.properties` ausgelesen, sondern aus der `config.properties`. Es ist nun möglich, die Benutzerinformation über Umgebungsvariablen zu setzen.
+Für die manuelle Migration müssen die Benutzer aus der `realm.properties`-Datei wie folgt übertragen werden:
+
+* Umgebungsvariable: `CREDENTIALS_ADMIN`
+  * jedes Credential ist durch ein `,` getrennt
+  * Angabe eines Credentials: `username`=>`password`
+  * Bsp.: ein Eintrag aus der realm.properties:
+    * `admin: my-password,admin` wird überführt in `CREDENTIALS_ADMIN=admin=>my-password`
+    * `admin2: MD5:032324252,admin` wird überführt in `CREDENTIALS_ADMIN=admin2=>MD5:032324252`
+* Umgebungsvariable: `CREDENTIALS_USER`
+  * wie bei `CREDENTIALS_ADMIN`
+  * Beispiele:
+    * `meier: my-password,user` wird überführt in `CREDENTIALS_USER=meier=>my-password`
+    * `meier: password-meier,user` und `schmidt: password-schmidt,user` werden überführt in `CREDENTIALS_USER=meier=>password-meier,schmidt=>password-schmidt`
+
+Die `realm.properties`-Datei wird nicht mehr benötigt und kann gelöscht werden.
 
 ### Sicherheitsrelevante Änderungen
 
