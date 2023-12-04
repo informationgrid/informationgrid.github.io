@@ -33,6 +33,24 @@ Für die manuelle Migration müssen die Benutzer aus der `realm.properties`-Date
 
 Die `realm.properties`-Datei wird nicht mehr benötigt und kann gelöscht werden.
 
+#### IGE-NG
+
+In der neuen Version müssen die folgenden Umgebungsvariablen konfiguriert werden:
+* KEYCLOAK_BACKEND_USER
+* KEYCLOAK_BACKEND_USER_PASSWORD
+
+Hierfür sollte der IGE-Super-Admin Benutzer verwendet werden, der bereits in Keycloak eingerichtet wurde.
+Hintergrund ist, dass die Rechte von IGE-NG Benutzern eingeschränkt werden sollen und diese keine Möglichkeit haben sollen, Keycloak Ressourcen direkt zu empfangen oder zu ändern. Stattdessen erfolgt die Kommunikation nur über das Backend, um sich bspw. Benutzer zu holen oder zu verändern.
+
+In bestehenden Installationen muss in der Keycloak-Administration folgendes getätigt werden, um den Benutzern die Rechte zu entziehen:
+* im InGrid-Realm die "Realm roles" aufrufen
+* Rolle "ige-user" öffnen
+  * Assoziierte Rolle `view-users` entfernen
+* Rolle "ige-user-manager" öffnen
+  * Assoziierte Rollen `manage-realm` und `manage-users` entfernen
+
+In der bereitgestellten Keycloak Version `docker-registry.wemove.com/keycloak:22.0.4-2`, werden die Rollen korrekt angelegt, wenn Keycloak das erste Mal auf einem System aufgesetzt wird. Bitte nur noch Version `22.0.4-2` und größer installieren.
+
 ### Sicherheitsrelevante Änderungen
 
 ...
