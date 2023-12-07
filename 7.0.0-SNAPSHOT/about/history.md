@@ -51,6 +51,12 @@ In bestehenden Installationen muss in der Keycloak-Administration folgendes get�
 
 In der bereitgestellten Keycloak Version `docker-registry.wemove.com/keycloak:22.0.4-2`, werden die Rollen korrekt angelegt, wenn Keycloak das erste Mal auf einem System aufgesetzt wird. Bitte nur noch Version `22.0.4-2` und größer installieren.
 
+Zuletzt sollte überprüft werden, dass in den Keycloak-Einstellungen der Direktzugriff aktiviert ist. Dazu muss folgendes getan werden:
+
+* im InGrid-Realm die `Clients` aufrufen
+* Client `ige-ng-frontend` öffnen
+* Prüfen, ob die Checkbox `Direct access grants` aktiviert ist
+
 ### Sicherheitsrelevante Änderungen
 
 ...
