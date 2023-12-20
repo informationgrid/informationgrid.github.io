@@ -39,9 +39,22 @@ Die `realm.properties`-Datei wird nicht mehr benötigt und kann gelöscht werden
 
 ### Wichtige Änderungen
 
-...
+#### InGrid Editor Schnittstellen
+InGrid Editor stellt zwei neue Schnittstellen optional bereit. Mit diesen Schnittstellen können Dokumente auch ohne GUI aktualisiert, gelöscht oder hinzugefügt werden. 
+
+Unterstützte Schnittstellen:
+- CSW-t nach ISO 19139 (2007)
+  - Kann mit dem Profil `csw-t` hinzugefügt werden.
+- OGC Records API
+  - Kann mit dem Profil `ogc-api` hinzugefügt werden.
+
+Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu erreichen. Es dient als Hilfestellung für Testanfragen und gibt detailierte Auskunft über Anfrage-Parameter und Pfad-Struktur.
+
 
 ### Liste der Änderungen
+- [Feature] OGC API Records Schnittstelle mit IGE-NG Schema ([REDMINE-5107](https://redmine.informationgrid.eu/issues/5107))
+
+
 
 ...
 
