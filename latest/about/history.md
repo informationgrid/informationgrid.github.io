@@ -78,7 +78,7 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **[Swagger-UI](http
 
 #### Import für alle Nutzer zugänglich machen 
 
-Die Funktion zum importieren von Dateien in verschiedene Datensätze ist nun nicht mehr dem Katadmin vorbehalten. Alle Nutzer*innen können nun Dateien importieren.
+Die Funktion zum importieren von Dateien in verschiedene Datensätze ist nicht mehr dem Katadmin vorbehalten. Alle Nutzer*innen können nun Dateien importieren.
 ([REDMINE-4857](https://redmine.informationgrid.eu/issues/4857))
 
 #### Automatisches zuweisen zu einer Gruppe
@@ -91,7 +91,7 @@ Beim erstellen eines neuen Nutzers/einer neuen Nutzerin ist die Zuweisung zu ein
 
 #### Hervorhebung der Zugangs-URL
 
-Mit dem Update InGrid 7.0.0 wird die Zugangs-URL hervorgehoben wenn ein Metadatensatz zu einem Dienst oder einer Anwendung gehört.
+Die Zugangs-URL wird hervorgehoben wenn ein Metadatensatz zu einem Dienst oder einer Anwendung gehört.
 Die Ausgabe der Zugangs-URL des Dienstes oder der Anwendung im Portal ist zu finden als "URL des Zugangs" und wird angezeigt in der:
 * erweiterten Suchergebnisanzeige an oberster Position der Liste der Verweise/Downloads
 * in der Metadaten-Detail-Ausgabe in der Rubrik "Übersicht" ebenfalls an oberster Position
@@ -107,9 +107,9 @@ Die Ausgabe der Zugangs-URL des Dienstes oder der Anwendung im Portal ist zu fin
 
 #### URL's als Hyperlink anzeigen
 
-URL's werden nicht nur als Text sondern als Hyperlink angezeigt.
+URL's im Fliesstext werden automatisch zu einem Hyperlink generiert.
 
-![Portal-Suche: "Zeige URL's als Hyperlink"](../images/700_portal_search_detail_generate_hyperlink.png "Portal-Suche: "Zeige URL's als Hyperlink"")
+![Portal-Suche: "Zeige URL's als Hyperlink"](../images/700_portal_search_preview_generate_hyperlink.png "Portal-Suche: "Zeige URL's als Hyperlink"")
 <figcaption class="figcaption">Portal-Suche: "Zeige URL's als Hyperlink"</figcaption>
 
 ([REDMINE-4668](https://redmine.informationgrid.eu/issues/4668))
@@ -124,7 +124,7 @@ Der CSW-Output der CSW-Schnittstelle von InGrid unterstützt zusätzlich zum ISO
 
 ####  Alternativer Karten Client
 
-Metadatensätze erhalten im InGrid Editor des KRZN-Profils ein zusätzliches Feld um einen alternativen Kartenclient angeben zu können. Beim erstellen eines Metadatensatzes kann unter dem Feld "Alternativer Karten Client" 
+Metadatensätze erhalten im InGrid Editor des KRZN-Profils ein zusätzliches Feld um einen alternativen Kartenclient angeben zu können. Beim erstellen eines Metadatensatzes kann unter dem Feld "Alternativer Karten Client" ein alternativer Karten Client ausgewählt werden.
 
 ![InGrid Editor: "Alternativer Karten Client"](../images/700_ingrid_editor_metadata_alt_map_client.png "InGrid Editor: "Alternativer Karten Client"")
 <figcaption class="figcaption">InGrid Editor: "Alternativer Karten Client"</figcaption>
