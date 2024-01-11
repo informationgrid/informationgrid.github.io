@@ -107,7 +107,7 @@ Die Ausgabe der Zugangs-URL des Dienstes oder der Anwendung im Portal ist zu fin
 
 #### URL's als Hyperlink anzeigen
 
-URL's im Fliesstext werden automatisch zu einem Hyperlink generiert.
+URL's im Fließtext werden automatisch in einen Hyperlink generiert.
 
 ![Portal-Suche: "Zeige URL's als Hyperlink"](../images/700_portal_search_preview_generate_hyperlink.png "Portal-Suche: "Zeige URL's als Hyperlink"")
 <figcaption class="figcaption">Portal-Suche: "Zeige URL's als Hyperlink"</figcaption>
