@@ -93,6 +93,8 @@ menu:
         href: components/interface_csw.html
       - title: Opensearch Server
         href: components/server_opensearch.html
+      - title: InGrid Editor Schnittstelle
+        href: components/interface_ige.html
   - title: Downloads
     href: "downloads.html"
 published: true
@@ -157,5 +159,6 @@ published: true
 - [ATOM Download Service](components/interface_search.html#atom-download-service-feed-schnittstelle) - Download von Basisdaten von Geodatendiensten
 - [CSW Schnittstelle](components/interface_csw.html) - Recherchieren über eine CSW Schnittstelle (Catalog Service Web)
 - [Opensearch Server](components/server_opensearch.html) - Anbindung von Datenbanken über eine OpenSearch Schnittstelle
+- [InGrid Editor Schnittstelle](components/interface_ige.html) - Hinzufügen, aktualisieren und löschen von Dokumenten mit der InGrid Editor Schnittstelle 
 
 

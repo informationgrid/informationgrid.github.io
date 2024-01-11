@@ -139,17 +139,23 @@ Die CSW-T Schnittstelle ermöglicht das Ausführen von Operationen auf einem IGE
 
 Die CSW-T Schnittstelle wird mittels einer "Basic Authentication" für den unbefugten Zugriff abgesichert. Bevor diese verwendet werden kann, müssen die Benutzer erstellt werden, die darauf Zugriff haben sollen. Da die CSW-Schnittstelle unabhängig vom IGE-iPlug läuft, wird hier ein separater Zugang benötigt.
 
-In der Datei `config.override.properties`, werden die Benutzer über die Eigenschaft `cswt.users` konfiguriert. Hier werden die Benutzer und Passwortinformationen kommasepariert angegeben. Dies geschieht nach dem folgenden Format:
+In der Datei "conf/csw-t.realm.properties", werden die Benutzer per Hand eingetragen. Hierfür gilt folgende Syntax:
 
-```
-cswt.users=<user1>::<bcrypt-passwordUser1>,<user2>::<bcrypt-passwordUser2>,...
-```
+{% highlight text %}
+username: password[,rolename ...]
+{% endhighlight %}
 
-Hierbei muss das Passwort im bcrypt-Format vorliegen. Dieses kann über das Start-Skript generiert werden, so dass es dann in die Konfiguration eingetragen werden kann. Das Kommando dafür lautet:
+wobei der Rollenname auf "user" stehen muss, um den Zugriff zu erhalten. Das Passwort kann als Klartext oder als MD5-verschlüsseltes Passwort abgelegt werden. Wenn verschlüsselt, dann lautet die Syntax:
 
-```
-sh start.sh calcPassword <clear-text-password>
-```
+{% highlight text %}
+username: MD5:password[,rolename ...]
+{% endhighlight %}
+
+Unter Unix lässt sich das Passwort wie folgt mittels MD5 verschlüsseln:
+
+{% highlight text %}
+echo -n "password" | md5sum
+{% endhighlight %}
 
 Nachdem diese Datei verändert wurde, muss die CSW-Schnittstelle neu gestartet werden.
 

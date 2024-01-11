@@ -165,7 +165,7 @@ Für das regelmäßige **Aufräumen der Dateiverzeichnisse** (Löschen nicht meh
 - `upload.cleanup.file.minAge` Minimale Zeit in Sekunden, die der Upload einer Datei zurückliegen muss, damit sie in diesem Job behandelt wird (Standard: 2 Stunden).
 
 Tritt während der Ausführung des Jobs ein Fehler auf, wird eine **E-Mail Benachrichtigung** an die im Parameter `system.mail.receiver` konfigurierte E-Mail Adresse verschickt (**Ab Version 5.6**).
-Außerdem kann mit `system.mail.prefix` ein prefix Text definiert werden, der vor dem Betreff jeder E-Mail steht.
+Außerdem kann mit `system.mail.prefix` Ein prefix Text definiert werden, der vor dem Betreff jeder E-Mail steht.
 
 ### Virus Scanner
 
