@@ -58,11 +58,11 @@ Zuletzt sollte überprüft werden, dass in den Keycloak-Einstellungen der Direkt
 * Prüfen, ob die Checkbox `Direct access grants` aktiviert ist
 
 
-### Wichtige Änderungen
+## Wichtige Änderungen
 
-#### InGrid Editor
+### InGrid Editor
 
-##### InGrid Editor Schnittstellen
+#### InGrid Editor Schnittstellen
 
 InGrid Editor stellt zwei neue Schnittstellen optional bereit. Mit diesen Schnittstellen können Dokumente auch ohne GUI aktualisiert, gelöscht oder hinzugefügt werden. 
 
@@ -76,20 +76,20 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **[Swagger-UI](http
 
 ([REDMINE-5107](https://redmine.informationgrid.eu/issues/5107))
 
-##### Import für alle Nutzer zugänglich machen 
+#### Import für alle Nutzer zugänglich machen 
 
 Die Funktion zum importieren von Dateien in verschiedene Datensätze ist nun nicht mehr dem Katadmin vorbehalten. Alle Nutzer*innen können nun Dateien importieren.
 ([REDMINE-4857](https://redmine.informationgrid.eu/issues/4857))
 
-##### Automatisches zuweisen zu einer Gruppe
+#### Automatisches zuweisen zu einer Gruppe
 
 Beim erstellen eines neuen Nutzers/einer neuen Nutzerin ist die Zuweisung zu einer Gruppe nicht mehr optional. So wird sichergestellt, dass Nutzer*innen eienr Gruppe angehören.
 ([REDMINE-5669](https://redmine.informationgrid.eu/issues/5669))
 
 
-#### InGrid
+### InGrid
 
-##### Hervorhebung der Zugangs-URL
+#### Hervorhebung der Zugangs-URL
 
 Mit dem Update InGrid 7.0.0 wird die Zugangs-URL hervorgehoben wenn ein Metadatensatz zu einem Dienst oder einer Anwendung gehört.
 Die Ausgabe der Zugangs-URL des Dienstes oder der Anwendung im Portal ist zu finden als "URL des Zugangs" und wird angezeigt in der:
@@ -105,37 +105,35 @@ Die Ausgabe der Zugangs-URL des Dienstes oder der Anwendung im Portal ist zu fin
 
 ([REDMINE-5410](https://redmine.informationgrid.eu/issues/5410))
 
-##### URL's als Hyperlink anzeigen
+#### URL's als Hyperlink anzeigen
 
 URL's werden nicht nur als Text sondern als Hyperlink angezeigt.
 
-![Portal-Suche: "Zeige URL's als Hyperlink"](../images/700_portal_search_detail_show_hyperlink.png "Portal-Suche: "Zeige URL's als Hyperlink"")
+![Portal-Suche: "Zeige URL's als Hyperlink"](../images/700_portal_search_detail_generate_hyperlink.png "Portal-Suche: "Zeige URL's als Hyperlink"")
 <figcaption class="figcaption">Portal-Suche: "Zeige URL's als Hyperlink"</figcaption>
 
 ([REDMINE-4668](https://redmine.informationgrid.eu/issues/4668))
 
-##### Erweiterung der CSW-Schnittstelle 
+#### Erweiterung der CSW-Schnittstelle 
 
 Der CSW-Output der CSW-Schnittstelle von InGrid unterstützt zusätzlich zum ISO Schema nun auch das OGC Schena (http://www.opengis.net/cat/csw/2.0.2).
 
 ([REDMINE-5223](https://redmine.informationgrid.eu/issues/5223))
 
-#### KRZN 
+### KRZN 
 
-#####  Alternativer Karten Client
+####  Alternativer Karten Client
 
-IGE-NG (ingrid editor) alternative Kartenclient, wird im portal genutzt für die Kartenansicht bei KRZN
+Metadatensätze erhalten im InGrid Editor des KRZN-Profils ein zusätzliches Feld um einen alternativen Kartenclient angeben zu können. Beim erstellen eines Metadatensatzes kann unter dem Feld "Alternativer Karten Client" 
 
-Metadatensätze erhalten im Ingrid Editor des KRZN-Profils ein zusätzliches Feld um einen alternativen Kartenclient angeben zu können. Beim erstellen eines Metadatensatzes kann unter dem Feld "Alternativer Karten Client" 
-
-![InGrid Editor: "Alternativer Karten Client"](../images/700_ingrid_editor_metadat_alt_map_client.png "InGrid Editor: "Alternativer Karten Client"")
+![InGrid Editor: "Alternativer Karten Client"](../images/700_ingrid_editor_metadata_alt_map_client.png "InGrid Editor: "Alternativer Karten Client"")
 <figcaption class="figcaption">InGrid Editor: "Alternativer Karten Client"</figcaption>
 
 ([REDMINE-5192](https://redmine.informationgrid.eu/issues/5192))
 
-#### MetaVer
+### MetaVer
 
-#####  Detaillierter CSV export 
+####  Detaillierter CSV export 
 
 INSPIRE SQL-Abfragen geben nun zusätzlich folgende Angaben im CSV- Export aus:
 *  Datensatztyp
