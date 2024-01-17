@@ -521,3 +521,34 @@ oder
 {% highlight text %}
 http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&startPosition=1&maxRecords=1&typeNames=gmd:MD_Metadata&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc"><ogc:PropertyIsEqualTo><ogc:PropertyName>apiso:partner</ogc:PropertyName><ogc:Literal>hb</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
 {% endhighlight %}
+
+
+### Wie kann ich das Ausgabeformat (outputSchema) meiner Anfrage bestimmen ?
+Standardmäßig ist das Ausgabeformat auf ISO (GMD, http://www.isotc211.org/2005/gmd) eingestellt, wenn bei der Anfrage keine explizite Festlegung erfolgt oder wenn das GMD-Format explizit angefragt wird. 
+Die Festlegung des Parameters outputSchema erfolgt über den Parameter `outputSchema` in der Anfrage. 
+Folgende Angaben werden bei dem `outputSchema`-Parameter unterstützt:
+* http://www.isotc211.org/2005/gmd
+* http://www.opengis.net/ogc
+
+Bei Festlegung des OGC-Standards (Dublin Core Format) und ISO 19139 (GMD) als Ausgabeformat liefert die Komponente die Ergebnisse in dem entsprechenden Format. 
+Das DC-Format ist ein Metadatenstandard für allgemeine Zwecke und dient dazu, eine Vielzahl von digitalen Ressourcen im Web zu beschreiben.
+Beispiel einer GetRecords-Anfrage mit Ausgabe im OGC Format:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2" maxRecords="10" outputFormat="text/xml"
+            outputSchema="http://www.opengis.net/ogc" requestId="csw:1" resultType="results" service="CSW"
+            startPosition="1" version="2.0.2">
+    <Query typeNames="csw:service,csw:dataset">
+        <ElementSetName typeNames="">full</ElementSetName>
+        <Constraint version="1.1.0">
+            <Filter xmlns="http://www.opengis.net/ogc">
+                <PropertyIsEqualTo>
+                    <PropertyName>AnyText</PropertyName>
+                    <Literal>wasser</Literal>
+                </PropertyIsEqualTo>
+            </Filter>
+        </Constraint>
+    </Query>
+</GetRecords>
+```
