@@ -524,11 +524,11 @@ http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=re
 
 
 ### Wie kann ich das Ausgabeformat (outputSchema) meiner Anfrage bestimmen ?
-Standardmäßig ist das Ausgabeformat auf ISO (GMD, http://www.isotc211.org/2005/gmd) eingestellt, wenn bei der Anfrage keine explizite Festlegung erfolgt oder wenn das GMD-Format explizit angefragt wird. 
-Die Festlegung des Parameters outputSchema erfolgt über den Parameter `outputSchema` in der Anfrage. 
+Standardmäßig ist das Ausgabeformat auf ISO (GMD, http://www.isotc211.org/2005/gmd) eingestellt, wenn bei der Anfrage keine explizite Festlegung erfolgt oder wenn das GMD-Format explizit angefragt wird.
+Die Festlegung der Ausgabe des outputSchemas erfolgt über den Parameter `outputSchema` in der Anfrage.
 Folgende Angaben werden bei dem `outputSchema`-Parameter unterstützt:
 * http://www.isotc211.org/2005/gmd
-* http://www.opengis.net/ogc
+* http://www.opengis.net/cat/csw/2.0.2
 
 Bei Festlegung des OGC-Standards (Dublin Core Format) und ISO 19139 (GMD) als Ausgabeformat liefert die Komponente die Ergebnisse in dem entsprechenden Format. 
 Das DC-Format ist ein Metadatenstandard für allgemeine Zwecke und dient dazu, eine Vielzahl von digitalen Ressourcen im Web zu beschreiben.
@@ -537,7 +537,7 @@ Beispiel einer GetRecords-Anfrage mit Ausgabe im OGC Format:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <GetRecords xmlns="http://www.opengis.net/cat/csw/2.0.2" maxRecords="10" outputFormat="text/xml"
-            outputSchema="http://www.opengis.net/ogc" requestId="csw:1" resultType="results" service="CSW"
+            outputSchema="http://www.opengis.net/cat/csw/2.0.2" requestId="csw:1" resultType="results" service="CSW"
             startPosition="1" version="2.0.2">
     <Query typeNames="csw:service,csw:dataset">
         <ElementSetName typeNames="">full</ElementSetName>
