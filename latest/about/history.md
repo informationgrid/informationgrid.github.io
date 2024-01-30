@@ -8,6 +8,52 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.0.0. Release Notes
 [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 7.0.2
+
+Release 30.01.2024
+
+IGE-NG
+
+- [Bug] IGE-NG Capabilities Assistent ändert Bundesland ([REDMINE-5874](https://redmine.informationgrid.eu/issues/5874))
+- [Bug] Vorschaubilder in Über-/Untgereordneten Objekten aus dem IGE-NG erscheinen nicht im Portal ([REDMINE-5866](https://redmine.informationgrid.eu/issues/5866))
+
+InGrid
+
+- [Bug] Beim Export von erweiterten InGrid-Profilen werden nicht alle Export-Typen angezeigt ([REDMINE-5907](https://redmine.informationgrid.eu/issues/5907))
+- [Bug] Konflikt beim Export wenn mehrere Profile aktiv sind ([REDMINE-5906](https://redmine.informationgrid.eu/issues/5906))
+- [Bug] MAPCLIENT: Fehler bei GFI auf PEGELONLINE WMS, GetMap braucht boolean TRANSPARENT Param ([REDMINE-5905](https://redmine.informationgrid.eu/issues/5905))
+- [Bug] Fehlermeldung bei Vorschau ([REDMINE-5852](https://redmine.informationgrid.eu/issues/5852))
+- [Bug] "Version des Dienstes" wird über die Importfunktion nicht importiert ([REDMINE-5831](https://redmine.informationgrid.eu/issues/5831))
+- [Bug] gmd:MD_Distributor Element: CI_ResponsibeParty wird nicht mehr in XML exportiert, aber die Rolle ([REDMINE-5818](https://redmine.informationgrid.eu/issues/5818))
+
+
+Profil BKG
+
+- [Feature] AdV-MIS: Korrektur der Facette "Verwaltet von" ([REDMINE-5692](https://redmine.informationgrid.eu/issues/5692))
+
+Profil KRZN
+
+- [Feature] Pflichtfeld "Alternativer Kartenclient" ([REDMINE-5885](https://redmine.informationgrid.eu/issues/5885))
+- [Feature] Defaultwert "Alternativer Kartenclient" wird nicht übernommen ([REDMINE-5884](https://redmine.informationgrid.eu/issues/5884))
+- [Bug] Anzeige der Längen- / Breitengrade  korrigieren ([REDMINE-5897](https://redmine.informationgrid.eu/issues/5897))
+
+Profil UPSH
+
+- [Feature] Menü anpassen ([REDMINE-5857](https://redmine.informationgrid.eu/issues/5857))
+
+Profil UVP
+
+- [Bug] PORTAL: Fehler bei der Darstellung der Treffer-Beschreibung ([REDMINE-5900](https://redmine.informationgrid.eu/issues/5900))
+
+### Komponenten
+
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.0.2/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/7.0.2/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.0.2/))
+
+
+
+
 ## Version 7.0.1
 
 Release 11.01.2024
