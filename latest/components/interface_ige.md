@@ -25,22 +25,24 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
     Um einen API-Endpunkt über die Swagger-Benutzeroberfläche zu testen, müssen Sie den zuständigen Server auswählen (Dropdown-Menü "Server") und ein gültiges Bearer-Token eingeben (Schaltfläche "Authorise").
 
 ### CSW-t Transaction
-| Method | Type  | Description |
-|--------|-------|-------------|
-| POST   | CSW-t | INSERT, UPDATE & DELETE transaction <br> Endpoint:  ```/api/cswt``` <br> Example: ```../api/cswt?SERVICE=CSW&REQUEST=Transaction&catalog=CATALOG_ID``` |
+
+| Method | Type | Description |
+|--------|------|-------------|
+| POST   | CSW-t | INSERT, UPDATE & DELETE transaction <br> Endpoint:  `/api/cswt` <br> Example: `../api/cswt?SERVICE=CSW&REQUEST=Transaction&catalog=CATALOG_ID` |
 
 ### OGC Records APIs
-| Method | Type  | Description |
-|--------|-------|-------------|
-| GET | Landing Page | Get general information about OGC API Records <br>Endpoint: ```/api/ogc``` |
-| GET | Conformance | Get conformance class of OGC API Records <br>Endpoint: ```/api/ogc/conformance```|
-| GET | Collections | Get multiple collections <br>Endpoint: ```/api/ogc/collections``` |
-| GET | Collection | Get collection by collection-ID <br>Endpoint: ```/api/ogc/collections/{collectionId}```|
-| GET | Records | Get multiple records of a collection <br>Endpoint: ```/api/ogc/collections/{collectionId}/items``` |
-| GET | Record | Get record by record-ID <br>Endpoint: ```/api/ogc/collections/{collectionId}/items/{recordId}``` |
-| POST | Records | Insert multiple records into a collection <br>Endpoint: ```/api/ogc/collections/{collectionId}/items``` |
-| PUT | Record | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: ```/api/ogc/collections/{collectionId}/items/{recordId}``` |
-| DELETE | Record | Delete a record by record-ID <br>Endpoint: ```/api/ogc/collections/{collectionId}/items/{recordId}```|
+
+| Method | Type | Description |
+|--------|------|-------------|
+| GET | Landing Page | Get general information about OGC API Records <br>Endpoint: `/api/ogc` |
+| GET | Conformance | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance` |
+| GET | Collections | Get multiple collections <br>Endpoint: `/api/ogc/collections` |
+| GET | Collection | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}` |
+| GET | Records | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items` |
+| GET | Record | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| POST | Records | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items` |
+| PUT | Record | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| DELETE | Record | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
 
