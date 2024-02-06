@@ -131,17 +131,16 @@ Ein Textfeld im oberen Bereich dient der schnellen Suche nach einem Codelistenei
 
 ### Nutzer für den Zugriff auf das Codelist-Repository
 
-Während der Installation des Codelist-Repositories wird der Administrator mit Nutzernamen und Passwort angegeben. Weitere Nutzer können über die Datei realm.properties (im conf-Verzeichnis) hinzugefügt werden.
+Die Benutzer können über Umgebungsvariablen oder die config.override.properties gesetzt werden.
 
-Beispiel: ein Benutzer `admin`, der auf alles Rechte hat und ein Benutzer `user` (Passwort: `user`), der nur auf die REST-Schnittstelle Zugriff hat, über welche die Codelisten angefragt werden können
+| Property          | Umgebungsvariable | Beispiel                                                         |
+|-------------------|-------------------|------------------------------------------------------------------|
+| credentials.admin | CREDENTIALS_ADMIN | credentials.admin=schulz=>password-schulz                        |
+| credentials.user  | CREDENTIALS_USER  | CREDENTIALS_USER=meier=>password-meier,schmidt=>password-schmidt |
 
-{% highlight text %}
-### the administrator with full access (role: admin)
-admin: MD5:21232f297a57a5a743894a0e4a801fc3,admin
+Mehrere Zugänge werden durch "," getrennt. Das Passwort kann als Klartext, MD5 oder CRYPT angegeben werden.
 
-### the user with access to receive codelists only (role: user)
-user: user,user
-{% endhighlight %}
+Ein `admin` hat Rechte auf alles, wohingegen ein `user` nur auf die REST-Schnittstelle Zugriff hat, über welche die Codelisten angefragt werden können.
 
 
 ## REST-API
