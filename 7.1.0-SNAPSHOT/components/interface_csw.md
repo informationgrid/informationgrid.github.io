@@ -523,14 +523,14 @@ http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=re
 {% endhighlight %}
 
 
-### Wie kann ich das Ausgabeformat (outputSchema) meiner Anfrage bestimmen ?
-Standardmäßig ist das Ausgabeformat auf ISO (GMD, http://www.isotc211.org/2005/gmd) eingestellt, wenn bei der Anfrage keine explizite Festlegung erfolgt oder wenn das GMD-Format explizit angefragt wird. 
-Die Festlegung der Ausgabe des outputSchemas erfolgt über den Parameter `outputSchema` in der Anfrage. 
+### Wie kann ich das Ausgabeformat (outputSchema) der Antwort meiner Anfrage bestimmen?
+Standardmäßig ist das Ausgabeformat auf ISO (GMD, http://www.isotc211.org/2005/gmd) eingestellt, wenn bei der Anfrage keine explizite Festlegung erfolgt oder wenn das GMD-Format explizit angefragt wird.
+Die Festlegung der Ausgabe des outputSchemas erfolgt über den Parameter `outputSchema` in der Anfrage.
 Folgende Angaben werden bei dem `outputSchema`-Parameter unterstützt:
 * http://www.isotc211.org/2005/gmd
 * http://www.opengis.net/cat/csw/2.0.2
 
-Bei Festlegung des OGC-Standards (Dublin Core Format) und ISO 19139 (GMD) als Ausgabeformat liefert die Komponente die Ergebnisse in dem entsprechenden Format. 
+Bei Festlegung des OGC/CSW-Standards (Dublin Core Format) und ISO 19139 (GMD) als Ausgabeformat liefert die Komponente die Ergebnisse in dem entsprechenden Format.
 Das DC-Format ist ein Metadatenstandard für allgemeine Zwecke und dient dazu, eine Vielzahl von digitalen Ressourcen im Web zu beschreiben.
 Beispiel einer GetRecords-Anfrage mit Ausgabe im OGC Format:
 
@@ -552,3 +552,10 @@ Beispiel einer GetRecords-Anfrage mit Ausgabe im OGC Format:
     </Query>
 </GetRecords>
 ```
+
+Ähnlich kann man die das outputSchema auch in einer HTTTP GET-Anfrage festlegen, in der URL muss der Parameter `outputSchema` mit dem gewünschten URI angegeben werden.
+Beispiel einer HTTP GET GetRecords-Anfrage mit OGC/CSW outputSchema:
+
+{% highlight text %}
+https://dev.informationgrid.eu/csw?service=CSW&VERSION=2.0.2&typeNames=csw:Record&request=GetRecords&resultType=results&ElementSetName=full&outputSchema=http://www.opengis.net/cat/csw/2.0.2&constraintlanguage=FILTER&CONSTRAINT_LANGUAGE_VERSION=1.1.0constraint=%20%3Cogc:Filter%20xmlns:ogc=%22http://www.opengis.net/ogc%22%3E%20%3Cogc:PropertyIsEqualTo%3E%20%3Cogc:PropertyName%3Ecsw:AnyText%3C/ogc:PropertyName%3E%20%3Cogc:Literal%3EGeografische%3C/ogc:Literal%3E%20%3C/ogc:PropertyIsEqualTo%3E%20%3C/ogc:Filter%3E
+{% endhighlight %}
