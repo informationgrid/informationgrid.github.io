@@ -557,5 +557,5 @@ Beispiel einer GetRecords-Anfrage mit Ausgabe im OGC Format:
 Beispiel einer HTTP GET GetRecords-Anfrage mit OGC/CSW outputSchema: 
 
 {% highlight text %}
-https://dev.informationgrid.eu/csw?service=CSW&VERSION=2.0.2&typeNames=csw:Record&request=GetRecords&resultType=results&ElementSetName=full&outputSchema=http://www.opengis.net/cat/csw/2.0.2&constraintlanguage=FILTER&CONSTRAINT_LANGUAGE_VERSION=1.1.0constraint=%20%3Cogc:Filter%20xmlns:ogc=%22http://www.opengis.net/ogc%22%3E%20%3Cogc:PropertyIsEqualTo%3E%20%3Cogc:PropertyName%3Ecsw:AnyText%3C/ogc:PropertyName%3E%20%3Cogc:Literal%3EGeografische%3C/ogc:Literal%3E%20%3C/ogc:PropertyIsEqualTo%3E%20%3C/ogc:Filter%3E
+https://dev.informationgrid.eu/csw?service=CSW&VERSION=2.0.2&typeNames=csw:Record&request=GetRecords&resultType=results&ElementSetName=full&outputSchema=http://www.opengis.net/cat/csw/2.0.2&constraintlanguage=FILTER&CONSTRAINT_LANGUAGE_VERSION=1.1.0&constraint=%20%3Cogc:Filter%20xmlns:ogc=%22http://www.opengis.net/ogc%22%3E%20%3Cogc:PropertyIsEqualTo%3E%20%3Cogc:PropertyName%3Ecsw:AnyText%3C/ogc:PropertyName%3E%20%3Cogc:Literal%3EGeografische%3C/ogc:Literal%3E%20%3C/ogc:PropertyIsEqualTo%3E%20%3C/ogc:Filter%3E
 {% endhighlight %}
