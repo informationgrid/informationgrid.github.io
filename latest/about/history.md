@@ -7,6 +7,42 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.0.0. Release Notes älterer Versionen können hier eingesehen werden:
 [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 7.0.3
+
+Release 08.03.2024
+
+IGE-NG
+
+- [Bug] Endlose Fehlerschleife bei der Änderung der Veröffentlichungsbreite einer Adresse ([REDMINE-5923](https://redmine.informationgrid.eu/issues/5923))
+- [Bug] Import mehrerer Dateien nicht möglich - Texte ändern ([REDMINE-5864](https://redmine.informationgrid.eu/issues/5864))
+
+InGrid
+
+- [Feature] Umstellung auf Checkboxen in der Facettierung auf der Suchseite, Verhalten der Facettierung bei 0 Treffern ([REDMINE-5963](https://redmine.informationgrid.eu/issues/5963))
+
+LÜN
+
+- [Support] Deployment der MVIS Applikation ([REDMINE-6014](https://redmine.informationgrid.eu/issues/6014))
+- [Bug] Darstellung von NULL Werten im CSV Download ([REDMINE-5960](https://redmine.informationgrid.eu/issues/5960))
+- [Bug] Absturz der MVIS App bei bestimmten Parametern ([REDMINE-5959](https://redmine.informationgrid.eu/issues/5959))
+
+Profil Hamburger Metadaten Katalog
+
+- [Bug] HMDK-Classic: Fehler in der Portal Detaildarstellung ([REDMINE-5992](https://redmine.informationgrid.eu/issues/5992))
+
+Profil NUMIS
+
+- [Support] Probleme mit Kategorieerstellung und Dienstzuweisung im InGrid Webmap Client Admin-GUI der NUMIS-Testumgebung ([REDMINE-6004](https://redmine.informationgrid.eu/issues/6004))
+- [Feature] Menüeintrag "Metadaten" im Portal entfernen ([REDMINE-5931](https://redmine.informationgrid.eu/issues/5931))
+- [Bug] "Stationen" der Messnetze im NUMIS-Messdatenviewer werden nicht angezeigt ([REDMINE-5926](https://redmine.informationgrid.eu/issues/5926))
+
+Profil UVP
+
+- [Bug] Kontexthilfe nicht eingebunden im Adressbereich ([REDMINE-5942](https://redmine.informationgrid.eu/issues/5942))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.0.3/))
 
 ## Version 7.0.2
 
