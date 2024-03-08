@@ -19,6 +19,7 @@ IGE-NG
 InGrid
 
 - [Feature] Umstellung auf Checkboxen in der Facettierung auf der Suchseite, Verhalten der Facettierung bei 0 Treffern ([REDMINE-5963](https://redmine.informationgrid.eu/issues/5963))
+- [Bug] Anführungszeichen escapen bei "Quelle" ([REDMINE-6071](https://redmine.informationgrid.eu/issues/6071))
 
 LÜN
 
