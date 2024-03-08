@@ -22,7 +22,6 @@ InGrid
 
 LÜN
 
-- [Support] Deployment der MVIS Applikation ([REDMINE-6014](https://redmine.informationgrid.eu/issues/6014))
 - [Bug] Darstellung von NULL Werten im CSV Download ([REDMINE-5960](https://redmine.informationgrid.eu/issues/5960))
 - [Bug] Absturz der MVIS App bei bestimmten Parametern ([REDMINE-5959](https://redmine.informationgrid.eu/issues/5959))
 
@@ -32,7 +31,6 @@ Profil Hamburger Metadaten Katalog
 
 Profil NUMIS
 
-- [Support] Probleme mit Kategorieerstellung und Dienstzuweisung im InGrid Webmap Client Admin-GUI der NUMIS-Testumgebung ([REDMINE-6004](https://redmine.informationgrid.eu/issues/6004))
 - [Feature] Menüeintrag "Metadaten" im Portal entfernen ([REDMINE-5931](https://redmine.informationgrid.eu/issues/5931))
 - [Bug] "Stationen" der Messnetze im NUMIS-Messdatenviewer werden nicht angezeigt ([REDMINE-5926](https://redmine.informationgrid.eu/issues/5926))
 
