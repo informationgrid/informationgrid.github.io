@@ -59,8 +59,10 @@ menu:
         href: components/webmap_client_admin.html
       - title: Metadatenkomponenten
         type: header
-      - title: InGrid Editor
+      - title: InGrid Editor - Classic
         href: components/ige.html
+      - title: InGrid Editor - NG
+        href: components/ige-ng.html
       - title: iPlug IGE / InGrid Catalog
         href: components/iplug_ige.html
       - title: UVP-Portal
