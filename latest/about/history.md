@@ -20,6 +20,7 @@ InGrid
 
 - [Feature] Umstellung auf Checkboxen in der Facettierung auf der Suchseite, Verhalten der Facettierung bei 0 Treffern ([REDMINE-5963](https://redmine.informationgrid.eu/issues/5963))
 - [Bug] Anführungszeichen escapen bei "Quelle" ([REDMINE-6071](https://redmine.informationgrid.eu/issues/6071))
+- [Bug] CSW Schnittstelle, OGC Darstellung: Dokumentation des HTTP GET Zugriffs in der InGrid Dokumentation ([REDMINE-5952](https://redmine.informationgrid.eu/issues/5952))
 
 LÜN
 
@@ -42,6 +43,7 @@ Profil UVP
 ### Komponenten
 
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.0.3/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.0.3/))
 
 ## Version 7.0.2
 
