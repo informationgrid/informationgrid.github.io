@@ -14,7 +14,13 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
+#### IGE-NG
 
+Die Konfiguration für die Verbindungen hat sich geändert und muss nach der Aktualisierung neu eingerichtet werden. Dazu folgendes Vorgehen:
+
+* System-Menü öffnen (3-Punkte oben rechts)
+* Verbindungen öffnen
+* iBus oder Elasticsearch-Verbindung hinzufügen
 
 
 ## Wichtige Änderungen
