@@ -64,10 +64,13 @@ Für die Bessere Übersichtlichkeit und damit Vereinfachung der Zuweisung von Co
 
 Verschiedene iBus und Elasticsearch Instanzen können übder den InGrid Editor angebunden werden. In den *Systemeinstellungen* (3-Punkte Menü) unter *Verbindungen* können iBus und Elasticsearch Verbindungen konfiguriert werden. 
 
-![InGrid Editor: "Konfiguration der Verbindungen"](../images/710_ige-ng_codelists_favorites.png "InGrid Editor: "Konfiguration der Verbindungen"")
+![InGrid Editor: "Konfiguration der Verbindungen"](../images/710_ige-ng_connections.png "InGrid Editor: "Konfiguration der Verbindungen"")
 <figcaption class="figcaption">InGrid Editor: "Konfiguration der Verbindungen"</figcaption>
 
-Außerdem können die angezeigten Felder im Portal/der Detaildarstellung in Abhängigkeit der jeweiligen Verbindung vorgefiltert werden, so dass für die Nutzer*innen eine für Ihren Arbeitsbereich (bspw. Intranet/Extranet) angepasst Ansicht vorfinden.
+![InGrid Editor: "Konfiguration der Verbindungen"](../images/710_ige-ng_connections_ibus_elastic.png "InGrid Editor: "Konfiguration der Verbindungen"")
+<figcaption class="figcaption">InGrid Editor: "Konfiguration der Verbindungen"</figcaption>
+
+Außerdem können die angezeigten Felder im Portal/der Detaildarstellung in Abhängigkeit der jeweiligen Verbindung vorgefiltert werden, so dass für die Nutzer*innen eine für Ihren Arbeitsbereich (bspw. Intranet/Extranet) angepasste Ansicht vorfinden.
 
 ([REDMINE-4078](https://redmine.informationgrid.eu/issues/4078))
 
