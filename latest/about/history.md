@@ -4,366 +4,258 @@ title: News
 description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 ---
 
-Diese Release Notes betreffen ausschließlich die Versionen 7.0.0. Release Notes älterer Versionen können hier eingesehen werden:
-[6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
+Diese Release Notes betreffen ausschließlich die Versionen 7.1.0. Release Notes älterer Versionen können hier eingesehen werden:
+[7.0.0](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
-## Version 7.0.3
 
-Release 08.03.2024
+## Version 7.1.0
+
+Release 27.03.2024
+
+### Hinweise für die Aktualisierung
+
+#### IGE-NG
+
+Die Konfiguration für die Verbindungen hat sich geändert und muss nach der Aktualisierung neu eingerichtet werden. Dazu folgendes Vorgehen:
+
+* System-Menü öffnen (3-Punkte oben rechts)
+* Verbindungen öffnen
+* iBus oder Elasticsearch-Verbindung hinzufügen
+
+
+### Wichtige Änderungen
+
+
+#### Aktivitätsbericht
+
+Die Löschung von Verfahren sowie zurückgezogene Veröffentlichungen können nachvollzogen werden. Im Menüpunkt *Reports* Untermenü *Aktivitätsbericht* werden Verfahren angezeigt die gelöscht oder zurückgezogen wurden. Hierbei kann gefiltert werden nach:
+
+* Daum
+* Erstellung
+* Aktualisierung
+* Veröffentlichung
+* Löschung
+
+![InGrid Editor: "Aktivitätsbericht"](../images/710_ige-ng_activity-report.png "InGrid Editor: "Aktivitätsbericht"")
+<figcaption class="figcaption">InGrid Editor: "Aktivitätsbericht"</figcaption>
+
+([REDMINE-5676](https://redmine.informationgrid.eu/issues/5676))
+
+#### Monitoring
+
+Die Erreichbarkeit von Dokumenten bzw. Verfahren kann in Echtzeit abgefragt werden. Ist eine Abfrage mittels dem Monitoring-Tool Zabbix eingebunden, wird mit Version 7.1.0 im InGrid Editor (IGE-NG) im Menü-Punkt *Reports* Untermenü *Monitoring* angezeigt falls ein Dokument bzw. ein Vorhaben nicht erreichbar ist. Der Menüpunkt ist sichtbar abhänging von den Berechtigungen des jeweiligen Nutzers/der jeweiligen Nutzerin.
+
+![InGrid Editor: "Monitoring nicht erreichbarer Dokumente/Verfahren"](../images/710_ige-ng_monitoring.png "InGrid Editor: "Monitoring nicht erreichbarer Dokumente/Verfahren"")
+<figcaption class="figcaption">InGrid Editor: "Monitoring nicht erreichbarer Dokumente/Verfahren"</figcaption>
+
+([REDMINE-5016](https://redmine.informationgrid.eu/issues/5016))
+ 
+
+#### Favoriten der Codelisten
+
+Für die Bessere Übersichtlichkeit und damit Vereinfachung der Zuweisung von Codelisten können mit Version 7.1.0 Favoriten ausgewählt werden. Die favorisierten Codelisten erscheinen damit oberhalb der übrigen Codelisten, gekennzeichnet als *Favoriten*
+
+![InGrid Editor: "Favoriten der Codelisten"](../images/710_ige-ng_codelists_favorites.png "InGrid Editor: "Favoriten der Codelisten"")
+<figcaption class="figcaption">InGrid Editor: "Favoriten der Codelisten"</figcaption>
+
+([REDMINE-5185](https://redmine.informationgrid.eu/issues/5185))
+
+#### Konfiguration der Verbindungen
+
+Verschiedene iBus und Elasticsearch Instanzen können übder den InGrid Editor angebunden werden. In den *Systemeinstellungen* (3-Punkte Menü) unter *Verbindungen* können iBus und Elasticsearch Verbindungen konfiguriert werden. 
+
+![InGrid Editor: "Konfiguration der Verbindungen"](../images/710_ige-ng_codelists_favorites.png "InGrid Editor: "Konfiguration der Verbindungen"")
+<figcaption class="figcaption">InGrid Editor: "Konfiguration der Verbindungen"</figcaption>
+
+Außerdem können die angezeigten Felder im Portal/der Detaildarstellung in Abhängigkeit der jeweiligen Verbindung vorgefiltert werden, so dass für die Nutzer*innen eine für Ihren Arbeitsbereich (bspw. Intranet/Extranet) angepasst Ansicht vorfinden.
+
+([REDMINE-4078](https://redmine.informationgrid.eu/issues/4078))
+
+#### Geodatenlink für Geodatensätze
+
+Der Geodatenlink (Geo data URL) wird nun mit angezeigt:
+
+* Portal: Im Portal wird das Feld "Geodatenlink" im Abschnitt "Fachinformationen -> Zusatzinformationen" unterhalb des Feldes *Datenformat* angezeigt.
+* InGrid Editor (IGE-NG): Im InGrid Editor wird die Erfassung im Abschnitt *Verfügbarkeit* nach den Feldern für Datenformat und vor Medienoption eingefügt.
+
+![Portal / InGrid Editor: "Geodatenlink für Geodatensätze"](../images/710_portal_detail-view_data-set-uri.png "Portal / InGrid Editor: "Geodatenlink für Geodatensätze"")
+<figcaption class="figcaption">Portal / InGrid Editor: "Geodatenlink für Geodatensätze"</figcaption>
+
+([REDMINE-5908](https://redmine.informationgrid.eu/issues/5908))
+
+#### "Von mir" Filter
+
+Für eine vereinfachte Übersicht der eigenen Aktivität können Nutzer*innen schnell nach ihren zuletzt bearbeiteten Verfahren filtern mittels eines Klicks auf die Checkbox "Von mir".
+
+![InGrid Editor: "Von mir Filter"](../images/710_ige-ng_by-me.png "InGrid Editor: "Von mir Filter"")
+<figcaption class="figcaption">InGrid Editor: "Von mir Filter"</figcaption>
+
+([REDMINE-4075](https://redmine.informationgrid.eu/issues/4075))
+
+#### Zeitgemäßer Suche-Filter
+
+Das Verhalten der Suche wurde auf aktuelle Erwartungen der Nutzer*innen angepasst. Mit dieser Version werden die eingestellten Filter beim wechseln der Seite nicht mehr wie gewohnt beibehalten, sondern entfernt. Ein aktives entfernen der Filter oder löschen der Cookies ist damit nicht mehr nötig.
+
+([REDMINE-4605](https://redmine.informationgrid.eu/issues/4605))
+
+
+#### Elastic Search, jetzt noch sicherer!
+
+Für Umgebungen mit erhöhten Sicherheitsanforderungen kann ab sofort zwischen iBus und Elastic Search eine sichere Verbindung hergestellt werden. Ist die Elastic Search Instanz abgesichert kann der iBus so konfiguriert werden, dass er sich authetifizieren kann.
+
+([REDMINE-6103](https://redmine.informationgrid.eu/issues/6103))
+
+### Liste der Änderungen
 
 IGE-NG
 
+- [Feature] Hinzufügen von Servern zum Dropdown-Menü der Serverlist im Swagger-UI ([REDMINE-6046](https://redmine.informationgrid.eu/issues/6046))
+- [Feature] IGE-NG: Export aus Nutzer-/Gruppenverwaltung erweitern ([REDMINE-4482](https://redmine.informationgrid.eu/issues/4482))
+- [Feature] Filtern nach "Von mir" bei "Zuletzt bearbeitet im Katalog" ([REDMINE-4075](https://redmine.informationgrid.eu/issues/4075))
+- [Bug] Fix the style in preview dialog ([REDMINE-6091](https://redmine.informationgrid.eu/issues/6091))
+- [Bug] User aus Keycloak werden nicht im IGE-NG angezeigt ([REDMINE-6088](https://redmine.informationgrid.eu/issues/6088))
+- [Bug] Tooltip shows 'undefined' when analyzing keywords and adding them to  'INSPIRE-Themen' ([REDMINE-6016](https://redmine.informationgrid.eu/issues/6016))
+- [Bug] ' Zurücksetzen ' and ' Hinzufügen' buttons should be disabled in Codelist page when the item comes from Codelist-Repository ([REDMINE-5968](https://redmine.informationgrid.eu/issues/5968))
 - [Bug] Endlose Fehlerschleife bei der Änderung der Veröffentlichungsbreite einer Adresse ([REDMINE-5923](https://redmine.informationgrid.eu/issues/5923))
-- [Bug] Import mehrerer Dateien nicht möglich - Texte ändern ([REDMINE-5864](https://redmine.informationgrid.eu/issues/5864))
-
-InGrid
-
-- [Feature] Umstellung auf Checkboxen in der Facettierung auf der Suchseite, Verhalten der Facettierung bei 0 Treffern ([REDMINE-5963](https://redmine.informationgrid.eu/issues/5963))
-- [Bug] Anführungszeichen escapen bei "Quelle" ([REDMINE-6071](https://redmine.informationgrid.eu/issues/6071))
-- [Bug] CSW Schnittstelle, OGC Darstellung: Dokumentation des HTTP GET Zugriffs in der InGrid Dokumentation ([REDMINE-5952](https://redmine.informationgrid.eu/issues/5952))
-
-LÜN
-
-- [Bug] Darstellung von NULL Werten im CSV Download ([REDMINE-5960](https://redmine.informationgrid.eu/issues/5960))
-- [Bug] Absturz der MVIS App bei bestimmten Parametern ([REDMINE-5959](https://redmine.informationgrid.eu/issues/5959))
-
-Profil Hamburger Metadaten Katalog
-
-- [Bug] HMDK-Classic: Fehler in der Portal Detaildarstellung ([REDMINE-5992](https://redmine.informationgrid.eu/issues/5992))
-
-Profil NUMIS
-
-- [Feature] Menüeintrag "Metadaten" im Portal entfernen ([REDMINE-5931](https://redmine.informationgrid.eu/issues/5931))
-- [Bug] "Stationen" der Messnetze im NUMIS-Messdatenviewer werden nicht angezeigt ([REDMINE-5926](https://redmine.informationgrid.eu/issues/5926))
-
-Profil UVP
-
-- [Bug] Kontexthilfe nicht eingebunden im Adressbereich ([REDMINE-5942](https://redmine.informationgrid.eu/issues/5942))
-
-### Komponenten
-
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.0.3/))
-- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.0.3/))
-
-## Version 7.0.2
-
-Release 30.01.2024
-
-IGE-NG
-
+- [Bug] Some bugs related to Codelist  ([REDMINE-5916](https://redmine.informationgrid.eu/issues/5916))
 - [Bug] IGE-NG Capabilities Assistent ändert Bundesland ([REDMINE-5874](https://redmine.informationgrid.eu/issues/5874))
 - [Bug] Vorschaubilder in Über-/Untgereordneten Objekten aus dem IGE-NG erscheinen nicht im Portal ([REDMINE-5866](https://redmine.informationgrid.eu/issues/5866))
+- [Bug] Import mehrerer Dateien nicht möglich - Texte ändern ([REDMINE-5864](https://redmine.informationgrid.eu/issues/5864))
+- [Bug] The toolbar buttons should be enabled after deleting datasets using multiple select  ([REDMINE-5820](https://redmine.informationgrid.eu/issues/5820))
+- [Bug] Aufruf Ansicht von IBus-Verwaltung wirft Fehler  ([REDMINE-5811](https://redmine.informationgrid.eu/issues/5811))
+- [Bug] Searching terms gives error when they contain some special characters  ([REDMINE-5776](https://redmine.informationgrid.eu/issues/5776))
+- [Bug] Validierungsfehler liefert absolute Pfade der Schema-Dateien ([REDMINE-5772](https://redmine.informationgrid.eu/issues/5772))
+- [Bug] Beim sehr schnellen Wechsel von dem Reiter Katalog -> Konfiguration zum benachbarten Reiter wird ein Fehler angezeigt ([REDMINE-5704](https://redmine.informationgrid.eu/issues/5704))
+- [Bug] Englisches Keyword wird nicht automatisch erfasst ([REDMINE-5464](https://redmine.informationgrid.eu/issues/5464))
+- [Bug] Super admin should navigate to any catalog directly  ([REDMINE-4642](https://redmine.informationgrid.eu/issues/4642))
 
 InGrid
 
+- [Feature] Unterstützung von Authentifizierung bei Elasticsearch ([REDMINE-6103](https://redmine.informationgrid.eu/issues/6103))
+- [Feature] Für Dienste-MD die Angaben zum Zeitbezug im Portal NICHT anzeigen ([REDMINE-6028](https://redmine.informationgrid.eu/issues/6028))
+- [Feature] Konfigurierbarkeit der Karte verbessern ([REDMINE-5964](https://redmine.informationgrid.eu/issues/5964))
+- [Feature] Umstellung auf Checkboxen in der Facettierung auf der Suchseite, Verhalten der Facettierung bei 0 Treffern ([REDMINE-5963](https://redmine.informationgrid.eu/issues/5963))
+- [Feature] Meldung zur Synchronisation des Codelist Repository nicht hilfreich ([REDMINE-5849](https://redmine.informationgrid.eu/issues/5849))
+- [Feature] IGE-NG, Bessere Benennung des intern verwendeten Schlüssels für Publikationen ([REDMINE-5828](https://redmine.informationgrid.eu/issues/5828))
+- [Feature] Verbesserung der kontextsensitiven Hilfe für das Feld "Klassifikation des Dienstes"  ([REDMINE-5613](https://redmine.informationgrid.eu/issues/5613))
+- [Feature] Kontexthilfe für InVeKos-Kennzeichnung ([REDMINE-5524](https://redmine.informationgrid.eu/issues/5524))
+- [Feature] Klassifikation des Dienstes - Auswahl erleichtern, Favoriten bei Auswahllisten ([REDMINE-5185](https://redmine.informationgrid.eu/issues/5185))
+- [Feature] Docker Prozesse sollen unter unterschiedlichen Nutzer/Gruppe laufen ([REDMINE-4989](https://redmine.informationgrid.eu/issues/4989))
+- [Feature] Filter (Einschränkung) bei der Suche bei Seitenwechsel löschen ([REDMINE-4605](https://redmine.informationgrid.eu/issues/4605))
+- [Feature] iBus-Auswahl soll katalogspezifisch sein / iBus-spezifischer Export ([REDMINE-4078](https://redmine.informationgrid.eu/issues/4078))
+- [Support] Keycloak: Wozu dienen die Rollen? ([REDMINE-5860](https://redmine.informationgrid.eu/issues/5860))
+- [Bug] Styles werden nicht automatisch hinzugefügt bei Hintergrundkartenbild ([REDMINE-6138](https://redmine.informationgrid.eu/issues/6138))
+- [Bug] Keycloak erlaubt keine Leerzeichen im Loginnamen ([REDMINE-6130](https://redmine.informationgrid.eu/issues/6130))
+- [Bug] In der Registrierungsmail soll der Link zur Anmeldung hinterlegt werden. ([REDMINE-6095](https://redmine.informationgrid.eu/issues/6095))
+- [Bug] Anführungszeichen escapen bei "Quelle" ([REDMINE-6071](https://redmine.informationgrid.eu/issues/6071))
+- [Bug] Feldzuordnung bei Adressen korrigieren ([REDMINE-6067](https://redmine.informationgrid.eu/issues/6067))
+- [Bug] Aktualisierung sicherheitskritischer Libraries ([REDMINE-6018](https://redmine.informationgrid.eu/issues/6018))
+- [Bug] Verweistypen sollen wenn nicht aus der ISO Liste kommend, als Type "information" abgegeben werden. ([REDMINE-6017](https://redmine.informationgrid.eu/issues/6017))
+- [Bug] Löschung Account, Login in Bestätigungs-E-Mail fehlt ([REDMINE-5997](https://redmine.informationgrid.eu/issues/5997))
+- [Bug] Leere Eingabe in Feld 'url' in der iBus Verwaltung Seite ([REDMINE-5990](https://redmine.informationgrid.eu/issues/5990))
+- [Bug] Verantwortlicher beim Report "Abgelaufene Metadaten" verbessern ([REDMINE-5986](https://redmine.informationgrid.eu/issues/5986))
+- [Bug] Reihenfolge der Organisationen bei Anzeige der Adressen umdrehen ([REDMINE-5981](https://redmine.informationgrid.eu/issues/5981))
+- [Bug] Fehler in Historie wenn Datensatz noch nicht gespeichert wurde ([REDMINE-5980](https://redmine.informationgrid.eu/issues/5980))
+- [Bug] Sprung vom Geodatensatz zum gekoppelten Dienst - Abfrage bei ungespeicherten Änderungen hinzufügen ([REDMINE-5979](https://redmine.informationgrid.eu/issues/5979))
+- [Bug] Fehlermeldung nach Hinzufügen einer Adresse und Speichern erst bei Sprung zu Adressbereich ([REDMINE-5974](https://redmine.informationgrid.eu/issues/5974))
+- [Bug] CSW Schnittstelle, OGC Darstellung: Dokumentation des HTTP GET Zugriffs in der InGrid Dokumentation ([REDMINE-5952](https://redmine.informationgrid.eu/issues/5952))
+- [Bug] Lucene Index erweitern ([REDMINE-5932](https://redmine.informationgrid.eu/issues/5932))
 - [Bug] Beim Export von erweiterten InGrid-Profilen werden nicht alle Export-Typen angezeigt ([REDMINE-5907](https://redmine.informationgrid.eu/issues/5907))
 - [Bug] Konflikt beim Export wenn mehrere Profile aktiv sind ([REDMINE-5906](https://redmine.informationgrid.eu/issues/5906))
 - [Bug] MAPCLIENT: Fehler bei GFI auf PEGELONLINE WMS, GetMap braucht boolean TRANSPARENT Param ([REDMINE-5905](https://redmine.informationgrid.eu/issues/5905))
+- [Bug] Katalog-Administrator ohne Kataloge führt zu vielen Fehlern ([REDMINE-5889](https://redmine.informationgrid.eu/issues/5889))
+- [Bug] Fehlermeldung bei Import von json bei "draft" ([REDMINE-5858](https://redmine.informationgrid.eu/issues/5858))
 - [Bug] Fehlermeldung bei Vorschau ([REDMINE-5852](https://redmine.informationgrid.eu/issues/5852))
+- [Bug] Prüfung der CSW-Schnittstelle mit OGC-Schema ([REDMINE-5836](https://redmine.informationgrid.eu/issues/5836))
 - [Bug] "Version des Dienstes" wird über die Importfunktion nicht importiert ([REDMINE-5831](https://redmine.informationgrid.eu/issues/5831))
 - [Bug] gmd:MD_Distributor Element: CI_ResponsibeParty wird nicht mehr in XML exportiert, aber die Rolle ([REDMINE-5818](https://redmine.informationgrid.eu/issues/5818))
+- [Bug] Fehler "Es dürfen keine leeren Zeilen vorkommen" bei "Datenformat" ([REDMINE-5109](https://redmine.informationgrid.eu/issues/5109))
 
+Profil BASt
+
+- [Feature] Überarbeitung Portal-Layout / Teil 2 ([REDMINE-6112](https://redmine.informationgrid.eu/issues/6112))
+- [Feature] Überarbeitung Portal-Layout / Teil 1 ([REDMINE-6111](https://redmine.informationgrid.eu/issues/6111))
+- [Feature] Anpassungen Editor ([REDMINE-6077](https://redmine.informationgrid.eu/issues/6077))
+- [Feature] IGE-NG, Exporter für internes/externes Portal ([REDMINE-6002](https://redmine.informationgrid.eu/issues/6002))
+- [Feature] IGE-NG, BASt-Profil umsetzen ([REDMINE-5775](https://redmine.informationgrid.eu/issues/5775))
+- [Feature] Konzeption BASt-spezifisches Layout ([REDMINE-5768](https://redmine.informationgrid.eu/issues/5768))
 
 Profil BKG
 
 - [Feature] AdV-MIS: Korrektur der Facette "Verwaltet von" ([REDMINE-5692](https://redmine.informationgrid.eu/issues/5692))
+- [Feature] IGE: BKG-MIS - Feld "Zugriffsbeschränkungen" wieder herstellen ([REDMINE-5481](https://redmine.informationgrid.eu/issues/5481))
+- [Bug] Portal: Rubrik Nutzung - Textausgabe - unterschiedlichen Zeilenabstand angleichen ([REDMINE-5998](https://redmine.informationgrid.eu/issues/5998))
+
+Profil  HMDK
+
+- [Bug] "Open Data Kategorien", zwei Korrekturen ([REDMINE-6115](https://redmine.informationgrid.eu/issues/6115))
+- [Bug] Migration InVeKos-MD ([REDMINE-6109](https://redmine.informationgrid.eu/issues/6109))
+- [Bug] HMDK-Classic: Fehler in der Portal Detaildarstellung ([REDMINE-5992](https://redmine.informationgrid.eu/issues/5992))
 
 Profil KRZN
 
+- [Feature] IGE-NG Hintergrunddaten sollen unseren OSM Server verwenden ([REDMINE-5912](https://redmine.informationgrid.eu/issues/5912))
+- [Feature] Einrichtung des Feldes dataSetURI / Geodatenlink für Geodatensätze ([REDMINE-5908](https://redmine.informationgrid.eu/issues/5908))
 - [Feature] Pflichtfeld "Alternativer Kartenclient" ([REDMINE-5885](https://redmine.informationgrid.eu/issues/5885))
 - [Feature] Defaultwert "Alternativer Kartenclient" wird nicht übernommen ([REDMINE-5884](https://redmine.informationgrid.eu/issues/5884))
 - [Bug] Anzeige der Längen- / Breitengrade  korrigieren ([REDMINE-5897](https://redmine.informationgrid.eu/issues/5897))
 
+Profil LUBW
+
+- [Bug] Korrekte Wiedergabe der WMS und WFS URLs im CSV-Export ([REDMINE-6074](https://redmine.informationgrid.eu/issues/6074))
+
+Profil LÜN
+
+- [Feature] Verbesserung der Werteanzeige beim Roll Over  ([REDMINE-5957](https://redmine.informationgrid.eu/issues/5957))
+- [Support] Deployment der MVIS Applikation ([REDMINE-6014](https://redmine.informationgrid.eu/issues/6014))
+- [Bug] Darstellung von NULL Werten im CSV Download ([REDMINE-5960](https://redmine.informationgrid.eu/issues/5960))
+- [Bug] Absturz der MVIS App bei bestimmten Parametern ([REDMINE-5959](https://redmine.informationgrid.eu/issues/5959))
+
+Profil MetaVer
+
+- [Feature] Verringerung von Exceptions im LOG des Portals ([REDMINE-6125](https://redmine.informationgrid.eu/issues/6125))
+- [Bug] IGE-NG - Kommunaler Metadatenkatalog Sachsen-Anhalt - getCapabilitie Assistent kann Geodatendienste der Stadt Halle (Saale) nicht analysieren ([REDMINE-5620](https://redmine.informationgrid.eu/issues/5620))
+
+Profil NUMIS
+
+- [Feature] CSV-Export und Tests ([REDMINE-5961](https://redmine.informationgrid.eu/issues/5961))
+- [Feature] Menüeintrag "Metadaten" im Portal entfernen ([REDMINE-5931](https://redmine.informationgrid.eu/issues/5931))
+- [Support] Probleme mit Kategorieerstellung und Dienstzuweisung im InGrid Webmap Client Admin-GUI der NUMIS-Testumgebung ([REDMINE-6004](https://redmine.informationgrid.eu/issues/6004))
+- [Bug] "Stationen" der Messnetze im NUMIS-Messdatenviewer werden nicht angezeigt ([REDMINE-5926](https://redmine.informationgrid.eu/issues/5926))
+
 Profil UPSH
 
 - [Feature] Menü anpassen ([REDMINE-5857](https://redmine.informationgrid.eu/issues/5857))
-
-Profil UVP
-
-- [Bug] PORTAL: Fehler bei der Darstellung der Treffer-Beschreibung ([REDMINE-5900](https://redmine.informationgrid.eu/issues/5900))
-
-### Komponenten
-
-- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.0.2/))
-- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/7.0.2/))
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.0.2/))
-
-
-
-
-## Version 7.0.1
-
-Release 11.01.2024
-
-### List der Änderungen
-
-IGE-NG
-
-- [Bug] Aufruf Ansicht von IBus-Verwaltung wirft Fehler  ([REDMINE-5811](https://redmine.informationgrid.eu/issues/5811))
-
-Profil UPSH
-
 - [Bug] "Datenformat" für Verweise wurde nicht migriert ([REDMINE-5853](https://redmine.informationgrid.eu/issues/5853))
 
 Profil UVP
 
+- [Feature] Erweiterung Report über "Veröffentlichung zurückziehen" ([REDMINE-6042](https://redmine.informationgrid.eu/issues/6042))
+- [Feature] Integration eines vereinfachten, katalogspezifischen Reports über die Ereichbarkeit der Dokumente - Sichtbarkeit erweitern ([REDMINE-5798](https://redmine.informationgrid.eu/issues/5798))
+- [Feature] Report Änderungen von Verfahren / neg. Vorprüfungen (insbesondere Löschung) ([REDMINE-5676](https://redmine.informationgrid.eu/issues/5676))
+- [Feature] IGE-NG: Integration eines vereinfachten, katalogspezifischen Reports über die Erreichbarkeit der Dokumente ([REDMINE-5016](https://redmine.informationgrid.eu/issues/5016))
+- [Bug] Auffälligkeit bei Datensatz, Country wurde zum Teil nicht richtig migriert ([REDMINE-6098](https://redmine.informationgrid.eu/issues/6098))
+- [Bug] Auffälligkeit bei Datensatz, Salutation wurde zum Teil nicht richtig migriert ([REDMINE-6097](https://redmine.informationgrid.eu/issues/6097))
+- [Bug] Kontexthilfe nicht eingebunden im Adressbereich ([REDMINE-5942](https://redmine.informationgrid.eu/issues/5942))
+- [Bug] PORTAL: Fehler bei der Darstellung der Treffer-Beschreibung ([REDMINE-5900](https://redmine.informationgrid.eu/issues/5900))
 - [Bug] IGE-NG: Verbesserung Datumsbehandlung bei verzögertem Veröffentlichen ([REDMINE-5770](https://redmine.informationgrid.eu/issues/5770))
+- [Bug] Dateien werden nicht immer beim Veröffentlichen verschoben ([REDMINE-4736](https://redmine.informationgrid.eu/issues/4736))
+- [Bug] IGE-NG: Vorprüfungen negativ - Ergebnis der Vorprüfung - Hilfetext ([REDMINE-3366](https://redmine.informationgrid.eu/issues/3366))
 
 ### Komponenten
 
-- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.0.1/))
-
-
-
-## Version 7.0.0
-
-Release 05.01.2024
-
-### Hinweise für die Aktualisierung
-
-#### Codelist-Repository
-
-Die Credentials für die Benutzer werden jetzt nicht mehr aus der `realm.properties` ausgelesen, sondern aus der `config.properties`. Es ist nun möglich, die Benutzerinformation über Umgebungsvariablen zu setzen.
-Für die manuelle Migration müssen die Benutzer aus der `realm.properties`-Datei wie folgt übertragen werden:
-
-* Umgebungsvariable: `CREDENTIALS_ADMIN`
-  * jedes Credential ist durch ein `,` getrennt
-  * Angabe eines Credentials: `username`=>`password`
-  * Bsp.: ein Eintrag aus der realm.properties:
-    * `admin: my-password,admin` wird überführt in `CREDENTIALS_ADMIN=admin=>my-password`
-    * `admin2: MD5:032324252,admin` wird überführt in `CREDENTIALS_ADMIN=admin2=>MD5:032324252`
-* Umgebungsvariable: `CREDENTIALS_USER`
-  * wie bei `CREDENTIALS_ADMIN`
-  * Beispiele:
-    * `meier: my-password,user` wird überführt in `CREDENTIALS_USER=meier=>my-password`
-    * `meier: password-meier,user` und `schmidt: password-schmidt,user` werden überführt in `CREDENTIALS_USER=meier=>password-meier,schmidt=>password-schmidt`
-
-Die `realm.properties`-Datei wird nicht mehr benötigt und kann gelöscht werden.
-
-#### IGE-NG
-
-In der neuen Version müssen die folgenden Umgebungsvariablen konfiguriert werden:
-* KEYCLOAK_BACKEND_USER
-* KEYCLOAK_BACKEND_USER_PASSWORD
-
-Hierfür sollte der IGE-Super-Admin Benutzer verwendet werden, der bereits in Keycloak eingerichtet wurde.
-Hintergrund ist, dass die Rechte von IGE-NG Benutzern eingeschränkt werden sollen und diese keine Möglichkeit haben sollen, Keycloak Ressourcen direkt zu empfangen oder zu ändern. Stattdessen erfolgt die Kommunikation nur über das Backend, um sich bspw. Benutzer zu holen oder zu verändern.
-
-In bestehenden Installationen muss in der Keycloak-Administration folgendes getätigt werden, um den Benutzern die Rechte zu entziehen:
-* im InGrid-Realm die "Realm roles" aufrufen
-* Rolle "ige-user" öffnen
-  * Assoziierte Rolle `view-users` entfernen
-* Rolle "ige-user-manager" öffnen
-  * Assoziierte Rollen `manage-realm` und `manage-users` entfernen
-
-In der bereitgestellten Keycloak Version `docker-registry.wemove.com/keycloak:22.0.4-2`, werden die Rollen korrekt angelegt, wenn Keycloak das erste Mal auf einem System aufgesetzt wird. Bitte nur noch Version `22.0.4-2` und größer installieren.
-
-Zuletzt sollte überprüft werden, dass in den Keycloak-Einstellungen der Direktzugriff aktiviert ist. Dazu muss folgendes getan werden:
-
-* im InGrid-Realm die `Clients` aufrufen
-* Client `ige-ng-frontend` öffnen
-* Prüfen, ob die Checkbox `Direct access grants` aktiviert ist
-
-
-## Wichtige Änderungen
-
-### InGrid Editor
-
-#### InGrid Editor Schnittstellen
-
-InGrid Editor stellt zwei neue Schnittstellen optional bereit. Mit diesen Schnittstellen können Dokumente auch ohne GUI aktualisiert, gelöscht oder hinzugefügt werden. 
-
-Unterstützte Schnittstellen:
-* CSW-t nach ISO 19139 (2007)
-  * Kann mit dem Profil `csw-t` hinzugefügt werden.
-* OGC Records API
-  * Kann mit dem Profil `ogc-api` hinzugefügt werden.
-
-Eine ausführliche Dokumentation der Endpunkte ist über das **[Swagger-UI](https://ige-ng.informationgrid.eu/swagger-ui/index.html)** zu erreichen. Es dient als Hilfestellung für Testanfragen und gibt detailierte Auskunft über Anfrage-Parameter und Pfad-Struktur.
-
-([REDMINE-5107](https://redmine.informationgrid.eu/issues/5107))
-
-#### Import für alle Nutzer zugänglich machen 
-
-Die Funktion zum importieren von Dateien in verschiedene Datensätze ist nicht mehr dem Katadmin vorbehalten. Alle Nutzer*innen können nun Dateien importieren.
-([REDMINE-4857](https://redmine.informationgrid.eu/issues/4857))
-
-#### Automatisches zuweisen zu einer Gruppe
-
-Beim erstellen eines neuen Nutzers/einer neuen Nutzerin ist die Zuweisung zu einer Gruppe nicht mehr optional. So wird sichergestellt, dass Nutzer*innen eienr Gruppe angehören.
-([REDMINE-5669](https://redmine.informationgrid.eu/issues/5669))
-
-
-### InGrid
-
-#### Hervorhebung der Zugangs-URL
-
-Die Zugangs-URL wird hervorgehoben wenn ein Metadatensatz zu einem Dienst oder einer Anwendung gehört.
-Die Ausgabe der Zugangs-URL des Dienstes oder der Anwendung im Portal ist zu finden als "URL des Zugangs" und wird angezeigt in der:
-* erweiterten Suchergebnisanzeige an oberster Position der Liste der Verweise/Downloads
-* in der Metadaten-Detail-Ausgabe in der Rubrik "Übersicht" ebenfalls an oberster Position
-
-
-![Portal-Suche: "Hervorhebung Zugangs-URL in der Vorschau"](../images/700_portal_search_preview_show_url.png "Portal-Suche: "Hervorhebung Zugangs-URL in der Vorschau"")
-<figcaption class="figcaption">Portal-Suche: "Hervorhebung Zugangs-URL in der Vorschau"</figcaption>
-
-![Portal-Suche: "Hervorhebung Zugangs-URL in der Metadaten Detailansicht"](../images/700_portal_search_detail_show_url.png "Portal-Suche: "Hervorhebung Zugangs-URL in der Metadaten Detailansicht"")
-<figcaption class="figcaption">Portal-Suche: "Hervorhebung Zugangs-URL in der Metadaten Detailansicht"</figcaption>
-
-([REDMINE-5410](https://redmine.informationgrid.eu/issues/5410))
-
-#### URL's als Hyperlink anzeigen
-
-URL's im Fließtext werden automatisch in einen Hyperlink generiert.
-
-![Portal-Suche: "Zeige URL's als Hyperlink"](../images/700_portal_search_preview_generate_hyperlink.png "Portal-Suche: "Zeige URL's als Hyperlink"")
-<figcaption class="figcaption">Portal-Suche: "Zeige URL's als Hyperlink"</figcaption>
-
-([REDMINE-4668](https://redmine.informationgrid.eu/issues/4668))
-
-#### Erweiterung der CSW-Schnittstelle 
-
-Der CSW-Output der CSW-Schnittstelle von InGrid unterstützt zusätzlich zum ISO Schema nun auch das OGC Schena (http://www.opengis.net/cat/csw/2.0.2).
-
-([REDMINE-5223](https://redmine.informationgrid.eu/issues/5223))
-
-### KRZN 
-
-####  Alternativer Karten Client
-
-Metadatensätze erhalten im InGrid Editor des KRZN-Profils ein zusätzliches Feld um einen alternativen Kartenclient angeben zu können. Beim erstellen eines Metadatensatzes kann unter dem Feld "Alternativer Karten Client" ein alternativer Karten Client ausgewählt werden.
-
-![InGrid Editor: "Alternativer Karten Client"](../images/700_ingrid_editor_metadata_alt_map_client.png "InGrid Editor: "Alternativer Karten Client"")
-<figcaption class="figcaption">InGrid Editor: "Alternativer Karten Client"</figcaption>
-
-([REDMINE-5192](https://redmine.informationgrid.eu/issues/5192))
-
-### MetaVer
-
-####  Detaillierter CSV export 
-
-INSPIRE SQL-Abfragen geben nun zusätzlich folgende Angaben im CSV- Export aus:
-*  Datensatztyp
-*  Datensatz-ID
-*  Veröffentlichungsstatus (in Bearbeitung, Veröffentlicht)
-*  Veröffentlichungsrecht (Internet, Intranet, amtsintern)
-
-
-([REDMINE-5558](https://redmine.informationgrid.eu/issues/5558))
-
-### Liste der Änderungen
-
-
-IGE-NG
-
-- [Feature] OGC API Records Schnittstelle mit IGE-NG Schema ([REDMINE-5107](https://redmine.informationgrid.eu/issues/5107))
-- [Feature] Status wird über die Importfunktion nicht importiert ([REDMINE-5827](https://redmine.informationgrid.eu/issues/5827))
-- [Feature] Benutzer anlegen - Gruppe als Pflichtfeld aufnehmen + anderes Label ([REDMINE-5669](https://redmine.informationgrid.eu/issues/5669))
-- [Feature] Fehlermeldung zu unspezifisch ([REDMINE-5525](https://redmine.informationgrid.eu/issues/5525))
-- [Feature] Import für alle Nutzer ermöglichen ([REDMINE-4857](https://redmine.informationgrid.eu/issues/4857))
-- [Feature] IGE-NG: Repo nach GitHub überführen ([REDMINE-5680](https://redmine.informationgrid.eu/issues/5680))
-- [Bug] unklare Fehlermeldung beim Import einer XML Datei  ([REDMINE-5826](https://redmine.informationgrid.eu/issues/5826))
-- [Bug] Unklare Fehlmeldung bei XML Import ([REDMINE-5801](https://redmine.informationgrid.eu/issues/5801))
-- [Bug] Druckvorschau beeinflusst Hauptformular ([REDMINE-5792](https://redmine.informationgrid.eu/issues/5792))
-- [Bug] MD-Admin kann keine Benutzer löschen ([REDMINE-5746](https://redmine.informationgrid.eu/issues/5746))
-- [Bug] ARS wird in Nominatim-Suche nicht mehr angezeigt ([REDMINE-5711](https://redmine.informationgrid.eu/issues/5711))
-- [Bug] Beim Selektieren mehrerer Datensätze werden die verfügbaren Aktionen nicht korrekt ausgeblendet ([REDMINE-5703](https://redmine.informationgrid.eu/issues/5703))
-- [Bug] GDI-Testsuite, Fehler ([REDMINE-5694](https://redmine.informationgrid.eu/issues/5694))
-- [Bug] IGE-NG - XML - gmd:MD_DigitalTransferOptions ([REDMINE-5663](https://redmine.informationgrid.eu/issues/5663))
-- [Bug] Raumbezug mit WKT wird in der NG Testumgebung nicht angezeigt. ([REDMINE-5641](https://redmine.informationgrid.eu/issues/5641))
-- [Bug] Capabilites-Assistent: Schlagworte zuordnen ([REDMINE-5400](https://redmine.informationgrid.eu/issues/5400))
-- [Bug] IGE-NG: Portalanzeige Regionalschlüssel anpassen ([REDMINE-5717](https://redmine.informationgrid.eu/issues/5717))
-
-InGrid
-
-- [Feature] Der CSV Export der Suchergebnisse soll die UUID des Datensatzes mit ausgeben ([REDMINE-5829](https://redmine.informationgrid.eu/issues/5829))
-- [Feature] Feld "Datenformat" für Verweise wieder einführen ([REDMINE-5744](https://redmine.informationgrid.eu/issues/5744))
-- [Feature] Kontexthilfe für ARS einbinden ([REDMINE-5655](https://redmine.informationgrid.eu/issues/5655))
-- [Feature] Admin Passwort aus realm.properties ([REDMINE-5637](https://redmine.informationgrid.eu/issues/5637))
-- [Feature] PORTAL: Umsetzung für InVeKos ([REDMINE-5507](https://redmine.informationgrid.eu/issues/5507))
-- [Feature] Portal: Zugangs-URL von Dienst / Anwendung hervorheben ([REDMINE-5410](https://redmine.informationgrid.eu/issues/5410))
-- [Feature] levelDescription mit Klartext befüllen ([REDMINE-5288](https://redmine.informationgrid.eu/issues/5288))
-- [Feature] CSW-Schnittstelle soll auch OGC Schema unterstützen ([REDMINE-5223](https://redmine.informationgrid.eu/issues/5223))
-- [Feature] URLs in bestimmten Textelementen im Portal automatisch als Verweis anzeigen ([REDMINE-4668](https://redmine.informationgrid.eu/issues/4668))
-- [Feature] Umstellung Lizenz auf EUPL Version 1.2 ([REDMINE-1585](https://redmine.informationgrid.eu/issues/1585))
-- [Bug] Import in Ordner möglich, an denen man nicht berechtigt ist ([REDMINE-5814](https://redmine.informationgrid.eu/issues/5814))
-- [Bug] MVIS - Bei Vergleich Messreihen wird minimaler Wert auf x-Achse dargestellt und ist nicht erkennbar (im Balkendiagramm) ([REDMINE-5790](https://redmine.informationgrid.eu/issues/5790))
-- [Bug] Druck - GFI Dialog nicht vollständig ([REDMINE-5789](https://redmine.informationgrid.eu/issues/5789))
-- [Bug] Anzeige (Koordinaten) der Raumbezüge unterschiedlich, Nominatim vs. wfs_gnde ([REDMINE-5784](https://redmine.informationgrid.eu/issues/5784))
-- [Bug] Webmap Client: Sicherheitsmangel - Reflektion beliebiger Eingaben ([REDMINE-5782](https://redmine.informationgrid.eu/issues/5782))
-- [Bug] Webmap Client: Path Traversal Schwachstelle ([REDMINE-5780](https://redmine.informationgrid.eu/issues/5780))
-- [Bug] gmd:hierarchyLevel für Datenserien richtig setzen ([REDMINE-5779](https://redmine.informationgrid.eu/issues/5779))
-- [Bug] XML URL in Detaildarstellung wird nicht korrekt befüllt ([REDMINE-5763](https://redmine.informationgrid.eu/issues/5763))
-- [Bug] Capabilites-Assistent: Fehler bei der Veröffentlichung eines Eintrags zum Demokatalog CSW ([REDMINE-5761](https://redmine.informationgrid.eu/issues/5761))
-- [Bug] Interface-CSW fährt nicht hoch wenn pattern-Datei leer ist ([REDMINE-5755](https://redmine.informationgrid.eu/issues/5755))
-- [Bug] Aktualisierung sicherheitskritischer Libraries ([REDMINE-5724](https://redmine.informationgrid.eu/issues/5724))
-- [Bug] "anchor" im Mapping Skript berücksichtigen ([REDMINE-5596](https://redmine.informationgrid.eu/issues/5596))
-- [Bug] Portal: In der Beschreibung von über- und untergeordneten Objekten werden Zeilenumbrüche nicht angezeigt ([REDMINE-5586](https://redmine.informationgrid.eu/issues/5586))
-
-Profil BAW MIS
-
-- [Feature] Portal: Kontakte sollen nicht verlinkt werden ([REDMINE-5271](https://redmine.informationgrid.eu/issues/5271))
-
-Profil BKG
-
-- [Support] AdV-MIS: Testsystem mit UserFlexibilisierung - LogFiles "iplug csw" protokolliert Fehlermeldungen ([REDMINE-5696](https://redmine.informationgrid.eu/issues/5696))
-
-Profil KRZN
-
-- [Feature] Button zum Teilen in den sozialen Netzwerken von allen Seiten entfernen ([REDMINE-5595](https://redmine.informationgrid.eu/issues/5595))
-- [Feature] IGE-NG in Kubernetes Umgebung, Keycloak-Abindung ([REDMINE-5570](https://redmine.informationgrid.eu/issues/5570))
-- [Feature] Verfügbarkeit > Zugriffsbeschränkungen soll ein Pflichtfeld sein ([REDMINE-5463](https://redmine.informationgrid.eu/issues/5463))
-- [Feature] PORTAL: Hilfetexte anzeigen ([REDMINE-5291](https://redmine.informationgrid.eu/issues/5291))
-- [Feature] IGE-NG, PORTAL: verschiedene Geofachportale für Kartenansicht aufrufen können ([REDMINE-5192](https://redmine.informationgrid.eu/issues/5192))
-- [Feature] IGE-NG: Feld "Produktionsumgebung" hinzufügen ([REDMINE-5191](https://redmine.informationgrid.eu/issues/5191))
-- [Feature] IGE-NG, PORTAL: verschiedene Geofachportale für Kartenansicht aufrufen können ([REDMINE-5192](https://redmine.informationgrid.eu/issues/5192))
-- [Feature] IGE-NG: Feld "Produktionsumgebung" hinzufügen ([REDMINE-5191](https://redmine.informationgrid.eu/issues/5191))
-- [Bug] Geodatensatz kann ohne Pflichtfeld Zugriffsbeschränkungen veröffentlicht werden ([REDMINE-5815](https://redmine.informationgrid.eu/issues/5815))
-- [Bug] Metadaten der Gemeindegrenzen können nicht als XML runtergeladen werden. ([REDMINE-5752](https://redmine.informationgrid.eu/issues/5752))
-- [Bug] URL-Pflege funktioniert nicht im Geodatenkatalog Niederrhein ([REDMINE-5727](https://redmine.informationgrid.eu/issues/5727))
-- [Bug] Fehler JSON-Validierung ([REDMINE-5722](https://redmine.informationgrid.eu/issues/5722))
-- [Bug] Fax Icon Farbe korrigieren ([REDMINE-5700](https://redmine.informationgrid.eu/issues/5700))
-
-Profil LUBW
-
-- [Feature] Mapclient: OSM als Kartenhintergrund einbinden, Orthofoto austauschen ([REDMINE-4606](https://redmine.informationgrid.eu/issues/4606))
-- [Bug] CSV-Export: Angabe "Zugang geschützt" für Geodatensätze ([REDMINE-5794](https://redmine.informationgrid.eu/issues/5794))
-- [Bug] INSPIRE Konformität der Metadatensätze nicht erfüllt ([REDMINE-5702](https://redmine.informationgrid.eu/issues/5702))
-- [Bug] Fehlende Vorschaubilder im Editor (und Portal) ([REDMINE-5500](https://redmine.informationgrid.eu/issues/5500))
-
-Profil Schleswig-Holstein
-
-- [Feature] Umsetzung Profil IGE-NG für UP-SH ([REDMINE-5599](https://redmine.informationgrid.eu/issues/5599))
-
-Profil MetaVer
-
-- [Feature] Profil Kommunaler Metadatenkatalog Sachsen-Anhalt: Schalter für für das Anzeigen aller Eingabefelder auf "Aus" ([REDMINE-5619](https://redmine.informationgrid.eu/issues/5619))
-- [Feature] Log-in Seite umstellen ([REDMINE-5616](https://redmine.informationgrid.eu/issues/5616))
-- [Feature] IGE-NG: Anpassung CSV Export für INSPIRE-relevante MD ([REDMINE-5558](https://redmine.informationgrid.eu/issues/5558))
-- [Bug] PORTAL: Menüeintrag "Metadaten" entfernen ([REDMINE-5683](https://redmine.informationgrid.eu/issues/5683))
-- [Bug] Systemumgebung wird nicht korrekt ins ISO geschrieben ([REDMINE-5682](https://redmine.informationgrid.eu/issues/5682))
-
-Profil UVP
-
-- [Support] URL für BB ändern ([REDMINE-5804](https://redmine.informationgrid.eu/issues/5804))
-- [Feature] Anzeige der "Abgelaufenen Metadaten" im Report ausblenden ([REDMINE-5743](https://redmine.informationgrid.eu/issues/5743))
-- [Bug] Ordner dürfen nicht indiziert werden ([REDMINE-5681](https://redmine.informationgrid.eu/issues/5681))
-- [Bug] IGE-NG: Nächtlicher Virusscan wird nicht ausgeführt ([REDMINE-5031](https://redmine.informationgrid.eu/issues/5031))
-
-### Komponenten
-
-- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/7.0.0/))
-- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.0.0/))
-- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.0.0/))
-- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/7.0.0/))
-- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/7.0.0/))
-- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.0.0/))
-- IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/7.0.0/))
-- IPLUG-EXCEL ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/7.0.0/))
-- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/7.0.0/))
-- IPLUG-OPENSEARCH ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/7.0.0/))
-- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/7.0.0/))
-- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/7.0.0/))
-- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/7.0.0/))
-- IPLUG-XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/7.0.0/))
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.0.0/))
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/7.1.0/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.1.0/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.1.0/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/7.1.0/))
+- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/7.1.0/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.1.0/))
+- IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/7.1.0/))
+- IPLUG-EXCEL ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/7.1.0/))
+- IPLUG-OPENSEARCH ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/7.1.0/))
+- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/7.1.0/))
+- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/7.1.0/))
+- IPLUG-XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/7.1.0/))
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/7.1.0/))
+- IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/7.1.0/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.1.0/))

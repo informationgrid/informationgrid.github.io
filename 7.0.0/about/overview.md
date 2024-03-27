@@ -58,7 +58,8 @@ Verbraucherschutz
 - Sachsen-Anhalt: Ministerium für Umwelt, Landwirtschaft und Energie
 - Schleswig-Holstein: Ministerium für Energiewende, Klimaschutz, Umwelt und Natur des Landes Schleswig-Holstein
 - Thüringen: Thüringer Ministerium für Umwelt, Energie und Naturschutz (TMUEN)
-- Bund: Bundesamt für Kartographie und Geodäsie (BKG) (Assoziiert)
+- Bund: Bundesamt für Kartographie und Geodäsie (BKG; Assoziiert)
+- Bund: Bundesanstalt für Straßenwesen (BASt; Assoziiert)
 
 Die Firma [wemove digital solutions GmbH](http://www.wemove.com/) betreut als Partner aus der Wirtschaft die technische Projekt-Infrastruktur.
 
