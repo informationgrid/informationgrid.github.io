@@ -60,7 +60,7 @@ menu:
       - title: Metadatenkomponenten
         type: header
       - title: InGrid Editor - NG
-        href: components/ige-ng/index.html
+        href: ige-ng/
       - title: InGrid Editor - Classic
         href: components/ige.html
       - title: iPlug IGE / InGrid Catalog
