@@ -26,7 +26,7 @@ Die Konfiguration für die Verbindungen hat sich geändert und muss nach der Akt
 ### Wichtige Änderungen
 
 
-#### Aktivitätsbericht
+#### [UVP] Aktivitätsbericht
 
 Die Löschung von Verfahren sowie zurückgezogene Veröffentlichungen können nachvollzogen werden. Im Menüpunkt *Reports* Untermenü *Aktivitätsbericht* werden Verfahren angezeigt die gelöscht oder zurückgezogen wurden. Hierbei kann gefiltert werden nach:
 
@@ -41,7 +41,7 @@ Die Löschung von Verfahren sowie zurückgezogene Veröffentlichungen können na
 
 ([REDMINE-5676](https://redmine.informationgrid.eu/issues/5676))
 
-#### Monitoring
+#### [UVP] Monitoring
 
 Die Erreichbarkeit von Dokumenten bzw. Verfahren kann in Echtzeit abgefragt werden. Ist eine Abfrage mittels dem Monitoring-Tool Zabbix eingebunden, wird mit Version 7.1.0 im InGrid Editor (IGE-NG) im Menü-Punkt *Reports* Untermenü *Monitoring* angezeigt falls ein Dokument bzw. ein Vorhaben nicht erreichbar ist. Der Menüpunkt ist sichtbar abhänging von den Berechtigungen des jeweiligen Nutzers/der jeweiligen Nutzerin.
 
@@ -74,7 +74,7 @@ Außerdem können die angezeigten Felder im Portal/der Detaildarstellung in Abh�
 
 ([REDMINE-4078](https://redmine.informationgrid.eu/issues/4078))
 
-#### Geodatenlink für Geodatensätze
+#### [KRZN] Geodatenlink für Geodatensätze
 
 Der Geodatenlink (Geo data URL) wird nun mit angezeigt:
 
@@ -104,7 +104,7 @@ Das Verhalten der Suche wurde auf aktuelle Erwartungen der Nutzer*innen angepass
 
 #### Elastic Search, jetzt noch sicherer!
 
-Für Umgebungen mit erhöhten Sicherheitsanforderungen kann ab sofort zwischen iBus und Elastic Search eine sichere Verbindung hergestellt werden. Ist die Elastic Search Instanz abgesichert kann der iBus so konfiguriert werden, dass er sich authetifizieren kann.
+Für Umgebungen mit erhöhten Sicherheitsanforderungen kann ab sofort zwischen iBus und Elastic Search eine sichere Verbindung hergestellt werden. Ist die Elastic Search Instanz abgesichert kann der iBus so konfiguriert werden, dass er sich authentifizieren kann.
 
 ([REDMINE-6103](https://redmine.informationgrid.eu/issues/6103))
 
