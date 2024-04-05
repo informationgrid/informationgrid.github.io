@@ -26,25 +26,42 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 
 ### CSW-t Transaction
 
-| Method | Type | Description |
-|--------|------|-------------|
+| Method | Type  | Description                                                                                                                                    |
+|--------|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | POST   | CSW-t | INSERT, UPDATE & DELETE transaction <br> Endpoint:  `/api/cswt` <br> Example: `../api/cswt?SERVICE=CSW&REQUEST=Transaction&catalog=CATALOG_ID` |
 
 ### OGC Records APIs
 
-| Method | Type | Description |
-|--------|------|-------------|
-| GET | Landing Page | Get general information about OGC API Records <br>Endpoint: `/api/ogc` |
-| GET | Conformance | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance` |
-| GET | Collections | Get multiple collections <br>Endpoint: `/api/ogc/collections` |
-| GET | Collection | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}` |
-| GET | Records | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items` |
-| GET | Record | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
-| POST | Records | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items` |
-| PUT | Record | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
-| DELETE | Record | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| Method | Type          | Description                                                                                                                                                                             |
+|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | Landing Page  | Get general information about OGC API Records <br>Endpoint: `/api/ogc`                                                                                                                  |
+| GET    | Conformance   | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance`                                                                                                           |
+| GET    | Collections   | Get multiple collections <br>Endpoint: `/api/ogc/collections`                                                                                                                           |
+| GET    | Collection    | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}`                                                                                                     |
+| GET    | Records       | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                          |
+| GET    | Record        | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                            |
+| POST   | Records       | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                     |
+| PUT    | Record        | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| DELETE | Record        | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                       |
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
+
+### OGC Resources API (für Datein)
+Folgenden Endpunkte können genutzt werden, um Datein von einem Datensatz zu verwalten. 
+Dabei sind die Endpunkte ausschließlich für die Verwaltung von Dateien zuständig. 
+Metainformationen über eine Datei müssen dem Datensatz seperat über die OGC Records API hinzugefügt werden. 
+
+
+> **_NOTE:_** Vor dem Hochladen einer Datei muss der Datensatz um die Metainformation der Datei ergänzt werden.
+
+> **_NOTE:_** Nur veröffentliche Datensätze ohne Bearbeitungsversion können um Dateien ergänzt werden. 
+
+| Method | Type               | Description                                                                                                                                                 |
+|--------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | Resource/Resources | Abfrage von Informationen bzgl. verlinkter Ressource(n) von einem Datensatz <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/resources` |
+| GET    | Resource           | Download einer Resource <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/resources/download?uri={fileUri}`                              |
+| POST   | Resources          | Upload von Ressourcen (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                         |
+| DELETE | Resource           | Löschen einer Ressource (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}?uri={fileUri}`       |
 
 ## Authentifizierung
 
@@ -52,17 +69,17 @@ Alle APIs sind mit OAuth 2.0 über Keycloak gesichert. Um mit Endpunkten zu inte
 
 Überblick über die erforderlichen Variablen und Berechtigungsnachweise:
 
-| Variable | Description |
-|----------|-------------|
-| *$KEYCLOAK_HOST* | Keycloak Host e.g. `https://keycloak.informationgrid.eu` |
-| *$REALM* | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
-| *$CLIENTID* | Keycloak client ID  (e.g. "ige-ng-frontend") |
-| *$CLIENTSECRET* | Keycloak client secret (e.g. "admin") |
-| *$USERNAME* | Benutzername (InGird Editor Login) |
-| *$PASSWORD* | Passwort (InGrid Editor Login) |
-| Grant type | Type: Password Credential |
-| Access Token URL | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token |
-| Refresh Token URL | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token |
+| Variable          | Description                                                                                                                          |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| *$KEYCLOAK_HOST*  | Keycloak Host e.g. `https://keycloak.informationgrid.eu`                                                                             |
+| *$REALM*          | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
+| *$CLIENTID*       | Keycloak client ID  (e.g. "ige-ng-frontend")                                                                                         |
+| *$CLIENTSECRET*   | Keycloak client secret (e.g. "admin")                                                                                                |
+| *$USERNAME*       | Benutzername (InGird Editor Login)                                                                                                   |
+| *$PASSWORD*       | Passwort (InGrid Editor Login)                                                                                                       |
+| Grant type        | Type: Password Credential                                                                                                            |
+| Access Token URL  | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token                                                                        |
+| Refresh Token URL | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token                                                                        |
 
 > **_NOTE:_** Zugangstokens sind 1 Minute lang gültig. Nach Ablauf der Gültigkeitsdauer muss das Token mit einem Refresh-Token aufgefrischt werden.
 
