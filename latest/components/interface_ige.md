@@ -133,6 +133,14 @@ curl --location 'https://ige-ng.informationgrid.eu/api/cswt?SERVICE=CSW&REQUEST=
     
     <csw:Update>
         <!-- ein vollständiges Dokument im Format ISO 19139 (2007) -->
+        <csw:Constraint version="2.0.0">
+            <ogc:Filter>
+                <ogc:PropertyIsEqualTo>
+                    <ogc:PropertyName>apiso:identifier</ogc:PropertyName>
+                    <ogc:Literal>18c19e21-6931-4c8c-931e-79beefbfa7b2</ogc:Literal>
+                </ogc:PropertyIsEqualTo>
+            </ogc:Filter>
+        </csw:Constraint>
     </csw:Update>
     
     <csw:Delete>
