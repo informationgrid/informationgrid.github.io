@@ -46,22 +46,31 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
 
-### OGC Resources API (für Datein)
-Folgenden Endpunkte können genutzt werden, um Datein von einem Datensatz zu verwalten. 
+### OGC Distributions API (für Datein)
+Dieser Abschnitt beschreibt die Endpunkte, um Datein von einem Datensatz zu verwalten. 
 Dabei sind die Endpunkte ausschließlich für die Verwaltung von Dateien zuständig. 
-Metainformationen über eine Datei müssen dem Datensatz seperat über die OGC Records API hinzugefügt werden. 
+Der Datensatz muss vor dem Hochladen einer Datei um die Metainformation der Datei ergänzt werden. Dies geschieht seperat über die OGC Records API.
+Ist eine Datei nicht in einem Datensatz vermerkt (oder mehr als einmal vermerkt), wird die Upload-Transaktion abgebrochen.
 
+Ob eine Datei in einem Datensatz vermerkt ist, wird profilspezifisch geprüft.
+Folgenden Katalog-Profile werden unterstützt: `uvp`, `bmi` & `ingrid`
 
-> **_NOTE:_** Vor dem Hochladen einer Datei muss der Datensatz um die Metainformation der Datei ergänzt werden.
+Mit dem Spring Profile `ogc-distributions-api` kann die OGC Erweiterung freigeschaltet werden.
 
-> **_NOTE:_** Nur veröffentliche Datensätze ohne Bearbeitungsversion können um Dateien ergänzt werden. 
+> **_NOTE:_** Nur veröffentliche Datensätze ohne Bearbeitungsversion können um Dateien ergänzt werden.
 
-| Method | Type               | Description                                                                                                                                                 |
-|--------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GET    | Resource/Resources | Abfrage von Informationen bzgl. verlinkter Ressource(n) von einem Datensatz <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/resources` |
-| GET    | Resource           | Download einer Resource <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/resources/download?uri={fileUri}`                              |
-| POST   | Resources          | Upload von Ressourcen (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                         |
-| DELETE | Resource           | Löschen einer Ressource (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}?uri={fileUri}`       |
+| Method | Type          | Description                                                                                                                                                     |
+|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                  |
+| DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?uri={fileUri}` |
+
+**Hinweis zu DELETE Distributions**:
+Wenn die Metadaten bzgl. einer Datei aus ein Datensatz entfernt werden, dann werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind.
+Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig, da die Datei bereits in den "_trash_" Ordner verschoben wurde.
+Das Löschen von Dateien ist auch möglich ohne den Datensatz upzudaten. (Zum Beispiel wenn eine Datei gelöscht werden soll, um sie durch eine neue Version zu ersetzen.)
+
+**Hinweis zum Download von Dateien:**
+Über das URL-Pattern `/documents/{collectionId}/{recordId}/{fileUri}` stehen Dateien zum Download zur Verfügung.
 
 ## Authentifizierung
 
