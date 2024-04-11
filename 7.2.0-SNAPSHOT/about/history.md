@@ -16,6 +16,16 @@ Release TT.MM.JJJJ
 
 #### IGE-NG
 
+Ab der Version 7.1.1 erhalten die Indizes neue Namen, um die mehrfach-Indizierung desselben Katalogs in einen Elasticsearch Cluster zu unterstützen. Nach der Aktualisierung muss neu indiziert werden und im iBus die alten Indizes deaktiviert bzw. gelöscht und die neuen Indizes aktiviert werden.
+
+Die neuen Indizes haben die Form: `<CATALOG_ID>_<TYPE>_<TARGET_NAME>_<TIMESTAMP>` 
+
+Hier ein Beispiel:
+```
+vorheriger Index: ingridcatalog_data_20240411144526557
+     neuer Index: ingridcatalog_data_internesportal_20240411144526557
+```
+
 ### Wichtige Änderungen
 
 
