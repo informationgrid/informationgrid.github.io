@@ -57,7 +57,6 @@ Alle APIs sind mit OAuth 2.0 über Keycloak gesichert. Um mit Endpunkten zu inte
 | *$KEYCLOAK_HOST* | Keycloak Host e.g. `https://keycloak.informationgrid.eu` |
 | *$REALM* | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
 | *$CLIENTID* | Keycloak client ID  (e.g. "ige-ng-frontend") |
-| *$CLIENTSECRET* | Keycloak client secret (e.g. "admin") |
 | *$USERNAME* | Benutzername (InGird Editor Login) |
 | *$PASSWORD* | Passwort (InGrid Editor Login) |
 | Grant type | Type: Password Credential |
@@ -69,7 +68,7 @@ Alle APIs sind mit OAuth 2.0 über Keycloak gesichert. Um mit Endpunkten zu inte
 ### Token anfragen
 In diesem Abschnitt wird beschrieben, wie Sie Zugangstoken und Refresh-Token via *cURL* erhalten können.
 
-Ersetzen Sie folgende Variable und führen Sie cURL aus: `$KEYCLOAK_HOST`, `$REALM`, `$USERNAME`, `$PASSWORD`, `$CLIENTID`, `$CLIENTSECRET`
+Ersetzen Sie folgende Variable und führen Sie cURL aus: `$KEYCLOAK_HOST`, `$REALM`, `$USERNAME`, `$PASSWORD`, `$CLIENTID`
 ```
 curl -X POST
     $KEYCLOAK_HOST/realms/$REALM/protocol/openid-connect/token
@@ -78,7 +77,6 @@ curl -X POST
     -d password=$PASSWORD
     -d grant_type=password
     -d client_id=$CLIENTID
-    -d client_secret=$CLIENTSECRET
 ```
 
 Die Antwort ist ein JSON-Objekt, das unter anderem **Access-Token** und **Refresh-Token** enthält. Beispiel einer Antwort:
@@ -91,6 +89,30 @@ Die Antwort ist ein JSON-Objekt, das unter anderem **Access-Token** und **Refres
     "token_type": "Bearer",
     "not-before-policy": 1632732926,
     "session_state": "1afef5ee-272c-4c4a-a181-3da38b432bac",
+    "scope": "email profile"
+}
+```
+
+Das `access_token` ist für 60 Sekunden gültig und kann mit dem `refresh_token` aktualisiert werden. Beispiel: 
+```
+curl -X POST
+    $KEYCLOAK_HOST/realms/$REALM/protocol/openid-connect/token
+    -H 'Content-Type: application/x-www-form-urlencoded'
+    -d grant_type=refresh_token
+    -d client_id=$CLIENTID
+    -d refresh_token=$REFRESH_TOKEN_FROM_PREVIOUS_CURL
+```
+
+Die Antword ist ein JSON-Object mit einem neuen `access_token`:
+```
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia...",
+    "expires_in": 60,
+    "refresh_expires_in": 1800,
+    "refresh_token": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwi...",
+    "token_type": "Bearer",
+    "not-before-policy": 1632732926,
+    "session_state": "c9c4c5e3-7f94-41f4-8a2c-c8e4c6d66a73",
     "scope": "email profile"
 }
 ```
