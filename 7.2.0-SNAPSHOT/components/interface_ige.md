@@ -12,6 +12,13 @@ Unterstützte Schnittstellen:
 * OGC Records API
 
 ## Konfiguration
+Um die Schnittstelle einzurichten, muss bei der Installation die Umgebungsvariable `SWAGGER_SERVERS` gesetzt werden. 
+* Dafür gilt folgendere Syntax:
+  * `SWAGGER_SERVERS=<url1>::<description1>,<url2>::<description2>`
+* Beispiel:
+  * `SWAGGER_SERVERS=https://swagger-server.de::Beschreibung` 
+
+### Spring Profile 
 Mit dem Profil `csw-t` kann der IGE-NG um eine schreibende CSW-t Schnittstelle (POST Methode) für INSERT, UPDATE & DELETE erweitert werden. 
 
 Mit dem Profil `ogc-api` kann der IGE-NG um eine schreibende OGC konforme Schnittstelle erweitert werden. 
