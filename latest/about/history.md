@@ -27,6 +27,36 @@ vorheriger Index: ingridcatalog_data_20240411144526557
 
 ### Liste der Änderungen
 
+InGrid Editor
+
+- [Feature] "Veröffentlichungsrecht" wird nicht in Index gemappt und kann nicht gesucht werden im Portal ([REDMINE-6235](https://redmine.informationgrid.eu/issues/6235))
+- [Feature] IGE-NG: iBus spezifischer Index beim Export an verschiedene iBusse ([REDMINE-6171](https://redmine.informationgrid.eu/issues/6171))
+
+InGrid
+
+- [Feature] Portal Cache per default deaktivieren ([REDMINE-6188](https://redmine.informationgrid.eu/issues/6188))
+- [Feature] CSW Schnittstelle, OGC Darstellung: Erweiterung der Angabe der Links zu Diensten mit einer Protokoll Angabe ([REDMINE-5951](https://redmine.informationgrid.eu/issues/5951))
+- [Feature] Klassifikation des Dienstes - Ergänzung angezeigte Dienstklassifizierung ([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
+- [Feature] Fehlerbehebung der ATOM Download Service Schnittstelle ([REDMINE-4771](https://redmine.informationgrid.eu/issues/4771))
+- [Bug] Löschen aus Index kann zu Fehler führen ([REDMINE-6181](https://redmine.informationgrid.eu/issues/6181))
+- [Bug] Vorschaubilder für untergeordnete Objekte der Datensätze erscheinen nicht im Portal ([REDMINE-6170](https://redmine.informationgrid.eu/issues/6170))
+- [Bug] IGE: Importfehler ([REDMINE-6116](https://redmine.informationgrid.eu/issues/6116))
+- [Bug] "Nach Ort suchen" im Portal funktioniert nicht ([REDMINE-6036](https://redmine.informationgrid.eu/issues/6036))
+
+Profil RLP
+
+- [Feature] Portal: "Kataloge" -> "Themen" ([REDMINE-6156](https://redmine.informationgrid.eu/issues/6156))
+
+Profil UPSH
+
+- [Feature] Bezeichnung der Objektklassen im Portal / Editor? ([REDMINE-6061](https://redmine.informationgrid.eu/issues/6061))
+- [Bug] Editor: geometry context bei Export nicht berücksichtigt ([REDMINE-6162](https://redmine.informationgrid.eu/issues/6162))
+
+Profil UVP
+
+- [Feature] IGE-NG: Einschränkung der Orts-Suche prüfen und ggf. anpassen ([REDMINE-793](https://redmine.informationgrid.eu/issues/793))
+- [Bug] UVP: Anpassung des Legenden-Handling auf der Karte ([REDMINE-6158](https://redmine.informationgrid.eu/issues/6158))
+
 ## Version 7.1.0
 
 Release 27.03.2024
