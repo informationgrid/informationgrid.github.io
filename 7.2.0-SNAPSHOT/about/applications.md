@@ -27,7 +27,9 @@ InGrid bringt alle Komponenten für den Aufbau eines Opendata Portals mit. Der l
 
 Die Daten können über das angeschlossene Portal recherchiert werden oder im DCAT-AP.DE Format über eine GOVDATA.de kompatible REST Schnittstelle abgegeben werden.
 
-
+* [mCLOUD: Suche offener Daten auf der Mobilitätsplattform des BMDV](https://mcloud.de).
+Aus der mCLOUD gehen zentrale Technologien in der InGrid Plattform auf, wie z.B. die Harvester-Komponente, mit der verschiedenste Datenquellen geharvestet und in den OpenData Pool des Portals aufgenommen werden. Mittels verschiedener Konfigurationen und Erweiterungen im GUI können komfortabel Prioritäten und Spezialitäten beim Harvesting der verschiedenen Quellen gesteuert werden (Deduplizierung, Filter, Ergänzungen).
+Weiterhin geht die ausgefeilte Ortssuche mittels Indexierung, Verschneidung und Darstellung nach Relevanz im InGrid Portal auf.
 
 ### Einsatz als Intranet GeoPortal
 
@@ -45,6 +47,8 @@ InGrid unterstützt die Erfassung und Publikation von Umweltverträglichkeitspr�
 Über die flexible Komponenten-Architektur kann InGrid auch als reines Erfassungstool für offene Daten verwendet werden.
 
 * [Zentraler Open Data Editor des Bundes (im Aufbau)](https://editor.opendata.bund.de/index.html)
+* [mCLOUD: Erfassung offener Daten für die Mobilitätsplattform des BMDV](https://mcloud.de).
+Das OpenData Profil der mCLOUD dient als Basis für zukünftige Erfassung und Pflege von Open Data Pools mit dem InGrid Editor.
  
 ### Einsatz als allgemeines Verwaltungsportal
 
