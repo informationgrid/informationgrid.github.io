@@ -72,9 +72,8 @@ Mit dem Spring Profile `ogc-distributions-api` kann die OGC Erweiterung freigesc
 | DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?uri={fileUri}` |
 
 **Hinweis zu DELETE Distributions**:
-Wenn die Metadaten bzgl. einer Datei aus ein Datensatz entfernt werden, dann werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind.
-Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig, da die Datei bereits in den "_trash_" Ordner verschoben wurde.
-Das Löschen von Dateien ist auch möglich ohne den Datensatz upzudaten. (Zum Beispiel wenn eine Datei gelöscht werden soll, um sie durch eine neue Version zu ersetzen.)
+Wenn die Metadaten bzgl. einer Distribution (Daten/Datei) aus einem Datensatz entfernt werden, werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind. Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig.
+Das Löschen von Daten/Dateien ist aber dennoch über die API möglich, zum Beispiel wenn eine Datei gelöscht werden soll, um sie durch eine neue Version zu ersetzen. Dabei wird der Metadatensatz nicht verändert.
 
 **Hinweis zum Download von Dateien:**
 Über das URL-Pattern `/documents/{collectionId}/{recordId}/{fileUri}` stehen Dateien zum Download zur Verfügung.
