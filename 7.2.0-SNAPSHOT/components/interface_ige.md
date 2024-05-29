@@ -53,10 +53,10 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
 
-### OGC Distributions API (für Datein)
-Dieser Abschnitt beschreibt die Endpunkte, um Datein von einem Datensatz zu verwalten. 
+### OGC Distributions API (für Daten/Dateien)
+Dieser Abschnitt beschreibt die Endpunkte, um Dateien von einem Datensatz zu verwalten. 
 Dabei sind die Endpunkte ausschließlich für die Verwaltung von Dateien zuständig. 
-Der Datensatz muss vor dem Hochladen einer Datei um die Metainformation der Datei ergänzt werden. Dies geschieht seperat über die OGC Records API.
+Der Datensatz muss vor dem Hochladen einer Datei um die Metainformation der Datei ergänzt werden. Dies geschieht separat über die OGC Records API.
 Ist eine Datei nicht in einem Datensatz vermerkt (oder mehr als einmal vermerkt), wird die Upload-Transaktion abgebrochen.
 
 Ob eine Datei in einem Datensatz vermerkt ist, wird profilspezifisch geprüft.
