@@ -13,6 +13,8 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.1.0. Release Notes
 
 Release 16.05.2024
 
+### Liste der Änderungen
+
 InGrid
 
 - [Feature] IGE: Anpassung der Liste "AdV-Produktgruppe" ([REDMINE-6019](https://redmine.informationgrid.eu/issues/6019))
@@ -88,6 +90,8 @@ Profil UVP
 
 Release 08.04.2024
 
+### Liste der Änderungen
+
 Profile UVP
 
 - [Bug] Fehler bei der Indizierung ([REDMINE-6296](https://redmine.informationgrid.eu/issues/6296))
@@ -95,6 +99,8 @@ Profile UVP
 ## Version 7.1.0.1
 
 Release 03.04.2024
+
+### Liste der Änderungen
 
 Profile UPSH
 
