@@ -7,7 +7,57 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.1.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.0.0](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 7.1.3
 
+### Wichtige Änderungen
+
+[InGrid] Hochwertige Datensätze (HVD)
+
+Objekte der Kategorie Geodatensatz können mit der Checkbox HVD als Hochwertiger Datensatz gekennzeichnet werden.
+Darüber hinaus kann die Kennzeichung in DCAT-AP.de ausgegegeben werden.
+
+
+([REDMINE-6076](https://redmine.informationgrid.eu/issues/6076))
+([REDMINE-6164](https://redmine.informationgrid.eu/issues/6164))
+
+[Profil LfU Bayern] Daten-Dienste Kopplung
+
+Als Teil der Profilumsetzung des Profil's LfU Bayern können im Editor mehrere Datensätze miteinander gekoppelt werden.
+
+([REDMINE-6256](https://redmine.informationgrid.eu/issues/6256))
+
+![InGrid Editor: "Daten-Dienste Kopplungt"](../images/713_ige-ng_object_data-service-connection.png "InGrid Editor: "Daten-Dienste Kopplung"")
+<figcaption class="figcaption">InGrid Editor: "Daten-Dienste Kopplung"</figcaption>
+
+
+
+InGrid
+
+- [Feature] Kennzeichnung HVD Metadaten - Ausgabe über DCAT-AP ([REDMINE-6164](https://redmine.informationgrid.eu/issues/6164))
+- [Feature] IGE: Schlagwort-Auswahlfeld mit HVD-Kategorien (Basis-Funktionalität) ([REDMINE-6076](https://redmine.informationgrid.eu/issues/6076))
+- [Feature] Bessere visuelle Unterscheidung Darstellungs- und Downloaddienste für "URL des Zugangs" ([REDMINE-6063](https://redmine.informationgrid.eu/issues/6063))
+- [Feature] CSW Schnittstelle, OGC Darstellung: Erweiterung der Angabe der Links zu Diensten mit einer Protokoll Angabe ([REDMINE-5951](https://redmine.informationgrid.eu/issues/5951))
+- [Bug] 'Herstellungsprozess' field should show multiple entries in Ingrid Portal  ([REDMINE-6203](https://redmine.informationgrid.eu/issues/6203))
+
+Profile BASt
+
+- [Feature] Anpassungen *internes* Portal ([REDMINE-6293](https://redmine.informationgrid.eu/issues/6293))
+- [Bug] Anpassung der Ansicht der Datensammlung ([REDMINE-6147](https://redmine.informationgrid.eu/issues/6147))
+
+Profil LUBW
+
+- [Feature] Neue Stöberkategorie “Open Data” ([REDMINE-6256](https://redmine.informationgrid.eu/issues/6256))
+
+Profil LfU Bayern
+
+- [Feature] Funktion GetCapabilities Aktualisieren für Dienste herausnehmen ([REDMINE-6343](https://redmine.informationgrid.eu/issues/6343))
+- [Feature] ISO-Ansicht im Editor ([REDMINE-6342](https://redmine.informationgrid.eu/issues/6342))
+- [Feature] Daten-Dienste-Kopplung: neue Komponente für Erfassung der Layer ([REDMINE-6084](https://redmine.informationgrid.eu/issues/6084))
+
+### Komponenten
+
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.1.3/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/7.1.3/))
 
 ## Version 7.1.2
 
@@ -17,14 +67,8 @@ Release 16.05.2024
 
 InGrid
 
-- [Feature] IGE: Anpassung der Liste "AdV-Produktgruppe" ([REDMINE-6019](https://redmine.informationgrid.eu/issues/6019))
 - [Bug]  The values of the field 'Informationsgegenstand' in a document of type 'Organisationseinheit'  are missing in the HMDK portal   ([REDMINE-6292](https://redmine.informationgrid.eu/issues/6292))
 - [Bug] Berechnung der zu exportierenden Datensätze fehlerhaft ([REDMINE-6283](https://redmine.informationgrid.eu/issues/6283))
-- [Bug] Überprüfung von Umlauten in der URL ([REDMINE-6231](https://redmine.informationgrid.eu/issues/6231))
-
-Profil BASt
-
-- [Bug] Anpassungen Editor: "Datensammlung" statt "Datenbank" ([REDMINE-6255](https://redmine.informationgrid.eu/issues/6255))
 
 Profil LfU Bayern
 
@@ -56,35 +100,23 @@ vorheriger Index: ingridcatalog_data_20240411144526557
 
 ### Liste der Änderungen
 
-InGrid Editor
+InGrid
 
-- [Feature] "Veröffentlichungsrecht" wird nicht in Index gemappt und kann nicht gesucht werden im Portal ([REDMINE-6235](https://redmine.informationgrid.eu/issues/6235))
-- [Feature] IGE-NG: iBus spezifischer Index beim Export an verschiedene iBusse ([REDMINE-6171](https://redmine.informationgrid.eu/issues/6171))
+Get history for version 7.1.1
 
 InGrid
 
-- [Feature] Portal Cache per default deaktivieren ([REDMINE-6188](https://redmine.informationgrid.eu/issues/6188))
-- [Feature] CSW Schnittstelle, OGC Darstellung: Erweiterung der Angabe der Links zu Diensten mit einer Protokoll Angabe ([REDMINE-5951](https://redmine.informationgrid.eu/issues/5951))
-- [Feature] Klassifikation des Dienstes - Ergänzung angezeigte Dienstklassifizierung ([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
-- [Feature] Fehlerbehebung der ATOM Download Service Schnittstelle ([REDMINE-4771](https://redmine.informationgrid.eu/issues/4771))
+- [Feature] iBus spezifischer Index beim Export an verschiedene iBusse ([REDMINE-6171](https://redmine.informationgrid.eu/issues/6171))
 - [Bug] Löschen aus Index kann zu Fehler führen ([REDMINE-6181](https://redmine.informationgrid.eu/issues/6181))
-- [Bug] Vorschaubilder für untergeordnete Objekte der Datensätze erscheinen nicht im Portal ([REDMINE-6170](https://redmine.informationgrid.eu/issues/6170))
-- [Bug] IGE: Importfehler ([REDMINE-6116](https://redmine.informationgrid.eu/issues/6116))
+- [Bug] Vorschaubilder für untergeordnete Objekte der Datensätze erscheinen nicht im Portal... ([REDMINE-6170](https://redmine.informationgrid.eu/issues/6170))
+- [Bug] Importfehler ([REDMINE-6116](https://redmine.informationgrid.eu/issues/6116))
 - [Bug] "Nach Ort suchen" im Portal funktioniert nicht ([REDMINE-6036](https://redmine.informationgrid.eu/issues/6036))
 
-Profil RLP
+UPSH
 
-- [Feature] Portal: "Kataloge" -> "Themen" ([REDMINE-6156](https://redmine.informationgrid.eu/issues/6156))
-
-Profil UPSH
-
-- [Feature] Bezeichnung der Objektklassen im Portal / Editor? ([REDMINE-6061](https://redmine.informationgrid.eu/issues/6061))
 - [Bug] Editor: geometry context bei Export nicht berücksichtigt ([REDMINE-6162](https://redmine.informationgrid.eu/issues/6162))
 
-Profil UVP
 
-- [Feature] IGE-NG: Einschränkung der Orts-Suche prüfen und ggf. anpassen ([REDMINE-793](https://redmine.informationgrid.eu/issues/793))
-- [Bug] UVP: Anpassung des Legenden-Handling auf der Karte ([REDMINE-6158](https://redmine.informationgrid.eu/issues/6158))
 
 ## Version 7.1.0.2
 
