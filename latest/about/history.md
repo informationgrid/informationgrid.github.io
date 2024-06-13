@@ -9,9 +9,11 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.1.0. Release Notes
 
 ## Version 7.1.3
 
+Release 04.06.2024
+
 ### Wichtige Änderungen
 
-[InGrid] Hochwertige Datensätze (HVD)
+#### [InGrid] Hochwertige Datensätze (HVD)
 
 Objekte der Kategorie Geodatensatz können mit der Checkbox HVD als Hochwertiger Datensatz gekennzeichnet werden.
 Darüber hinaus kann die Kennzeichung in DCAT-AP.de ausgegegeben werden.
@@ -20,7 +22,7 @@ Darüber hinaus kann die Kennzeichung in DCAT-AP.de ausgegegeben werden.
 ([REDMINE-6076](https://redmine.informationgrid.eu/issues/6076))
 ([REDMINE-6164](https://redmine.informationgrid.eu/issues/6164))
 
-[Profil LfU Bayern] Daten-Dienste Kopplung
+#### [Profil LfU Bayern] Daten-Dienste Kopplung
 
 Als Teil der Profilumsetzung des Profil's LfU Bayern können im Editor mehrere Datensätze miteinander gekoppelt werden.
 
@@ -39,7 +41,7 @@ InGrid
 - [Feature] CSW Schnittstelle, OGC Darstellung: Erweiterung der Angabe der Links zu Diensten mit einer Protokoll Angabe ([REDMINE-5951](https://redmine.informationgrid.eu/issues/5951))
 - [Bug] 'Herstellungsprozess' field should show multiple entries in Ingrid Portal  ([REDMINE-6203](https://redmine.informationgrid.eu/issues/6203))
 
-Profile BASt
+Profil BASt
 
 - [Feature] Anpassungen *internes* Portal ([REDMINE-6293](https://redmine.informationgrid.eu/issues/6293))
 - [Bug] Anpassung der Ansicht der Datensammlung ([REDMINE-6147](https://redmine.informationgrid.eu/issues/6147))
@@ -102,10 +104,6 @@ vorheriger Index: ingridcatalog_data_20240411144526557
 
 InGrid
 
-Get history for version 7.1.1
-
-InGrid
-
 - [Feature] iBus spezifischer Index beim Export an verschiedene iBusse ([REDMINE-6171](https://redmine.informationgrid.eu/issues/6171))
 - [Bug] Löschen aus Index kann zu Fehler führen ([REDMINE-6181](https://redmine.informationgrid.eu/issues/6181))
 - [Bug] Vorschaubilder für untergeordnete Objekte der Datensätze erscheinen nicht im Portal... ([REDMINE-6170](https://redmine.informationgrid.eu/issues/6170))
@@ -124,7 +122,7 @@ Release 08.04.2024
 
 ### Liste der Änderungen
 
-Profile UVP
+Profil UVP
 
 - [Bug] Fehler bei der Indizierung ([REDMINE-6296](https://redmine.informationgrid.eu/issues/6296))
 
@@ -134,7 +132,7 @@ Release 03.04.2024
 
 ### Liste der Änderungen
 
-Profile UPSH
+Profil UPSH
 
 - [Bug] Editor: geometry context bei Export nicht berücksichtigt ([REDMINE-6162](https://redmine.informationgrid.eu/issues/6162))
 
