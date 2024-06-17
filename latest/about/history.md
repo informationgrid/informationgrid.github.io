@@ -24,7 +24,7 @@ Darüber hinaus kann die Kennzeichung in DCAT-AP.de ausgegegeben werden.
 
 #### [Profil LfU Bayern] Daten-Dienste Kopplung
 
-Als Teil der Profilumsetzung des Profil's LfU Bayern können im Editor mehrere Datensätze miteinander gekoppelt werden.
+Als Teil der Profilumsetzung des Profils LfU Bayern können im Editor zu einem gekoppelten Datensatz mehrere Layer angegeben werden.
 
 ([REDMINE-6256](https://redmine.informationgrid.eu/issues/6256))
 
