@@ -26,7 +26,7 @@ Darüber hinaus kann die Kennzeichung in DCAT-AP.de ausgegegeben werden.
 
 Als Teil der Profilumsetzung des Profils LfU Bayern können im Editor zu einem gekoppelten Datensatz mehrere Layer angegeben werden.
 
-([REDMINE-6256](https://redmine.informationgrid.eu/issues/6256))
+([REDMINE-6084](https://redmine.informationgrid.eu/issues/6084))
 
 ![InGrid Editor: "Daten-Dienste Kopplungt"](../images/713_ige-ng_object_data-service-connection.png "InGrid Editor: "Daten-Dienste Kopplung"")
 <figcaption class="figcaption">InGrid Editor: "Daten-Dienste Kopplung"</figcaption>
