@@ -27,7 +27,7 @@ Mit dem Profil `ogc-api` kann der IGE-NG um eine schreibende OGC konforme Schnit
 ## Endpunkte im Überblick
 Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu erreichen. Es dient als Hilfestellung für Testanfragen und gibt detailierte Auskunft über Anfrage-Parameter und Pfad-Struktur.
 
-* https://ige-ng.informationgrid.eu/swagger-ui/index.html
+* [https://ige-ng.informationgrid.eu/swagger-ui/index.html](https://ige-ng.informationgrid.eu/swagger-ui/index.html)
 
     Um einen API-Endpunkt über die Swagger-Benutzeroberfläche zu testen, müssen Sie den zuständigen Server auswählen (Dropdown-Menü "Server") und ein gültiges Bearer-Token eingeben (Schaltfläche "Authorise").
 
