@@ -46,10 +46,6 @@ Profil BASt
 - [Feature] Anpassungen *internes* Portal ([REDMINE-6293](https://redmine.informationgrid.eu/issues/6293))
 - [Bug] Anpassung der Ansicht der Datensammlung ([REDMINE-6147](https://redmine.informationgrid.eu/issues/6147))
 
-Profil LUBW
-
-- [Feature] Neue Stöberkategorie “Open Data” ([REDMINE-6256](https://redmine.informationgrid.eu/issues/6256))
-
 Profil LfU Bayern
 
 - [Feature] Funktion GetCapabilities Aktualisieren für Dienste herausnehmen ([REDMINE-6343](https://redmine.informationgrid.eu/issues/6343))
