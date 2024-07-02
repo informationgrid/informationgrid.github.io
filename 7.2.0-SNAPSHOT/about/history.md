@@ -14,6 +14,33 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
+#### Elasticsearch
+
+Es wird jetzt die derzeit aktuellste Version 8.14.1 von Elasticsearch unterstützt. Für die Anpassung ist Folgendes zu tun:
+* Aktualisierung der `docker-compose.yml`-Datei (siehe weiter unten)
+* Anpassung der Konfiguration zu Elasticsearch in den iPlugs und im iBus
+  * Anstelle des Ports `9300` wird nun `9200` verwendet
+  * Analyse der Konfigurationsdateien configuration.override.properties (iPlugs), application-default.properties (iBus), docker-compose.yml
+* Aktivierung der Indizes nach neuer Indizierung
+  * durch die Entfernung des Index-Typs, kann sich der Name des Indexes verändert haben, und somit die Erkennung im iBus, ob dieser aktiviert wurde oder nicht
+
+Hier ist eine Beispielkonfiguration für eine Elasticsearch 8 Instanz:
+```yaml
+elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.1
+    restart: unless-stopped
+    environment:
+      - cluster.name=ingrid
+      - discovery.type=single-node
+      - cluster.routing.allocation.disk.threshold_enabled=false
+      - http.host=0.0.0.0
+      - transport.host=0.0.0.0
+      - http.cors.enabled=true
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+    volumes:
+      ...
+```
+
 #### IGE-NG
 
 Ab der Version 7.1.1 erhalten die Indizes neue Namen, um die mehrfach-Indizierung desselben Katalogs in einen Elasticsearch Cluster zu unterstützen. Nach der Aktualisierung muss neu indiziert werden und im iBus die alten Indizes deaktiviert bzw. gelöscht und die neuen Indizes aktiviert werden.
