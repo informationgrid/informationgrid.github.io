@@ -12,6 +12,13 @@ Unterstützte Schnittstellen:
 * OGC Records API
 
 ## Konfiguration
+Um die Schnittstelle einzurichten, muss bei der Installation die Umgebungsvariable `SWAGGER_SERVERS` gesetzt werden. 
+* Dafür gilt folgendere Syntax:
+  * `SWAGGER_SERVERS=<url1>::<description1>,<url2>::<description2>`
+* Beispiel:
+  * `SWAGGER_SERVERS=https://swagger-server.de::Beschreibung` 
+
+### Spring Profile 
 Mit dem Profil `csw-t` kann der IGE-NG um eine schreibende CSW-t Schnittstelle (POST Methode) für INSERT, UPDATE & DELETE erweitert werden. 
 
 Mit dem Profil `ogc-api` kann der IGE-NG um eine schreibende OGC konforme Schnittstelle erweitert werden. 
@@ -26,25 +33,50 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 
 ### CSW-t Transaction
 
-| Method | Type | Description |
-|--------|------|-------------|
+| Method | Type  | Description                                                                                                                                    |
+|--------|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | POST   | CSW-t | INSERT, UPDATE & DELETE transaction <br> Endpoint:  `/api/cswt` <br> Example: `../api/cswt?SERVICE=CSW&REQUEST=Transaction&catalog=CATALOG_ID` |
 
 ### OGC Records APIs
 
-| Method | Type | Description |
-|--------|------|-------------|
-| GET | Landing Page | Get general information about OGC API Records <br>Endpoint: `/api/ogc` |
-| GET | Conformance | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance` |
-| GET | Collections | Get multiple collections <br>Endpoint: `/api/ogc/collections` |
-| GET | Collection | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}` |
-| GET | Records | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items` |
-| GET | Record | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
-| POST | Records | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items` |
-| PUT | Record | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
-| DELETE | Record | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| Method | Type          | Description                                                                                                                                                                             |
+|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | Landing Page  | Get general information about OGC API Records <br>Endpoint: `/api/ogc`                                                                                                                  |
+| GET    | Conformance   | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance`                                                                                                           |
+| GET    | Collections   | Get multiple collections <br>Endpoint: `/api/ogc/collections`                                                                                                                           |
+| GET    | Collection    | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}`                                                                                                     |
+| GET    | Records       | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                          |
+| GET    | Record        | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                            |
+| POST   | Records       | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                     |
+| PUT    | Record        | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| DELETE | Record        | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                       |
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
+
+### OGC Distributions API (für Daten/Dateien)
+Dieser Abschnitt beschreibt die Endpunkte, um Dateien von einem Datensatz zu verwalten. 
+Dabei sind die Endpunkte ausschließlich für die Verwaltung von Dateien zuständig. 
+Der Datensatz muss vor dem Hochladen einer Datei um die Metainformation der Datei ergänzt werden. Dies geschieht separat über die OGC Records API.
+Ist eine Datei nicht in einem Datensatz vermerkt (oder mehr als einmal vermerkt), wird die Upload-Transaktion abgebrochen.
+
+Ob eine Datei in einem Datensatz vermerkt ist, wird profilspezifisch geprüft.
+Folgenden Katalog-Profile werden unterstützt: `uvp`, `bmi` & `ingrid`
+
+Mit dem Spring Profile `ogc-distributions-api` kann die OGC Erweiterung freigeschaltet werden.
+
+> **_NOTE:_** Nur veröffentliche Datensätze ohne Bearbeitungsversion können um Dateien ergänzt werden.
+
+| Method | Type          | Description                                                                                                                                                     |
+|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                  |
+| DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?uri={fileUri}` |
+
+**Hinweis zu DELETE Distributions**:
+Wenn die Metadaten bzgl. einer Distribution (Daten/Datei) aus einem Datensatz entfernt werden, werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind. Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig.
+Das Löschen von Daten/Dateien ist aber dennoch über die API möglich, zum Beispiel wenn eine Datei gelöscht werden soll, um sie durch eine neue Version zu ersetzen. Dabei wird der Metadatensatz nicht verändert.
+
+**Hinweis zum Download von Dateien:**
+Über das URL-Pattern `/documents/{collectionId}/{recordId}/{fileUri}` stehen Dateien zum Download zur Verfügung.
 
 ## Authentifizierung
 
@@ -52,16 +84,16 @@ Alle APIs sind mit OAuth 2.0 über Keycloak gesichert. Um mit Endpunkten zu inte
 
 Überblick über die erforderlichen Variablen und Berechtigungsnachweise:
 
-| Variable | Description |
-|----------|-------------|
-| *$KEYCLOAK_HOST* | Keycloak Host e.g. `https://keycloak.informationgrid.eu` |
-| *$REALM* | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
-| *$CLIENTID* | Keycloak client ID  (e.g. "ige-ng-frontend") |
-| *$USERNAME* | Benutzername (InGird Editor Login) |
-| *$PASSWORD* | Passwort (InGrid Editor Login) |
-| Grant type | Type: Password Credential |
-| Access Token URL | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token |
-| Refresh Token URL | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token |
+| Variable          | Description                                                                                                                          |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| *$KEYCLOAK_HOST*  | Keycloak Host e.g. `https://keycloak.informationgrid.eu`                                                                             |
+| *$REALM*          | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
+| *$CLIENTID*       | Keycloak client ID  (e.g. "ige-ng-frontend")                                                                                         |
+| *$USERNAME*       | Benutzername (InGird Editor Login)                                                                                                   |
+| *$PASSWORD*       | Passwort (InGrid Editor Login)                                                                                                       |
+| Grant type        | Type: Password Credential                                                                                                            |
+| Access Token URL  | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token                                                                        |
+| Refresh Token URL | `KEYCLOAK_HOST`/realms/`$REALM`/protocol/openid-connect/token                                                                        |
 
 > **_NOTE:_** Zugangstokens sind 1 Minute lang gültig. Nach Ablauf der Gültigkeitsdauer muss das Token mit einem Refresh-Token aufgefrischt werden.
 
@@ -181,6 +213,6 @@ curl --location 'https://ige-ng.informationgrid.eu/api/cswt?SERVICE=CSW&REQUEST=
 In dem Tag `<csw:Transaction>` können mehrere Dokument-Anfragen gesammelt werden.
 * Klammern Sie ein Dokument mit `<csw:Insert>`, um es als neues Dokument hinzuzufügen.
 * Klammern Sie ein Dokument mit `<csw:Update>`, um ein bestehendes Dokument zu aktualisieren. 
-* Klammern Sie eine Dokument-Id mit `<csw:Delete>` (siehe nachfolgendes Beispiel), um ein bestehendes Dokument zu löschen.
+* Klammern Sie eine Dokument-Id mit `<csw:Delete>`, um ein bestehendes Dokument zu löschen.
 
 Mehr Informationen bzgl. ISO 19139 (2007) konformen Transaktionen und deren Struktur finden Sie unter dem Kapitel "CSW Schnittstelle".

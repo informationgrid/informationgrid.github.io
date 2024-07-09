@@ -138,10 +138,18 @@ Die Benutzer können über Umgebungsvariablen oder die config.override.propertie
 | credentials.admin | CREDENTIALS_ADMIN | credentials.admin=schulz=>password-schulz                        |
 | credentials.user  | CREDENTIALS_USER  | CREDENTIALS_USER=meier=>password-meier,schmidt=>password-schmidt |
 
+
 Mehrere Zugänge werden durch "," getrennt. Das Passwort kann als Klartext, MD5 oder CRYPT angegeben werden.
 
 Ein `admin` hat Rechte auf alles, wohingegen ein `user` nur auf die REST-Schnittstelle Zugriff hat, über welche die Codelisten angefragt werden können.
 
+### Ignorieren von Codelist-Updates
+
+Verwaltet man ein oder mehrere Codelisten selbst, so kann es zu unerwünschten Ergebnissen führen, wenn nach einem Update dieselbe Codeliste eventuell verändert wird. Dies kann unterbunden werden, indem die Codelisten definiert werden, die vom Update ausgeschlossen werden sollen.
+
+| Property          | Umgebungsvariable | Beispiel                                                         |
+|-------------------|-------------------|------------------------------------------------------------------|
+| codelists.ignore  | CODELISTS_IGNORE  | CODELISTS_IGNORE=100,200                                         |
 
 ## REST-API
 
