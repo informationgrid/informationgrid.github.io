@@ -90,6 +90,51 @@ InGrid in Version 7.2.0 ermöglicht den Import von Datensätzen im DCAT-AP.de Fo
 
 ([REDMINE-6379](https://redmine.informationgrid.eu/issues/6379))
 
+#### [UPSH] 3D Darstellung
+
+Für das Umweltportal Schleswig-Holstein unterstützt der Kartenclient ab sofort eine 3D-Darstellung von Objekten auf der Karte.
+
+![Portal: "3D Darstellung"](../images/720_portal_map_upsh_3d.png "Portal: "3D Darstellung"")
+<figcaption class="figcaption">Portal: "3D Darstellung"</figcaption>
+
+([REDMINE-5943](https://redmine.informationgrid.eu/issues/5943))
+
+#### [LUBW] Klassifikation des Dienstes
+
+Die Klassifikation eines Dienstes ist mit dieser InGrid Version visull direkt zu identifizeieren. Der jeweilige Dienst wird bereits bei der Auswahl im Dropdown-Menu ersichtlich da der jeweilige Dienst am Ende der gewünschten Auswahl, in Klammern gesetzt, hinterlegt ist.
+
+![InGrid Editor: "Klassifikation des Dienstes"](../images/720_ingrid-editor_object_classification.png "InGrid Editor: "Klassifikation des Dienstes"")
+<figcaption class="figcaption">InGrid Editor: "Klassifikation des Dienstes"</figcaption>
+
+([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
+
+#### [BASt] Open-Data Datensätze
+
+Ist ein Datensatz als "Open Data" gekennzeichnet ist wird die Verschlagwortung "Open Data" obligatorisch.
+Außerdem werden folgende Felder optional:
+
+  *  Raumbezug
+  *  Koordinatenreferenzsystem (ggf. prüfen gegen ISO, ob möglich)
+  *  Identifikator der Datenquelle
+  *  Fachliche Grundlage
+
+![InGrid Editor: "Open-Data Datensätze Hinweis"](../images/720_ingrid-editor_object_open-data-required-1.png "InGrid Editor: "Open-Data Datensätze Hinweis"")
+<figcaption class="figcaption">InGrid Editor: "Open-Data Datensätze Hinweis"</figcaption>
+
+![InGrid Editor: "Open-Data Required"](../images/720_ingrid-editor_object_open-data-required-2.png "InGrid Editor: "Open-Data Required"")
+<figcaption class="figcaption">InGrid Editor: "Open-Data Required"</figcaption>
+
+([REDMINE-6334](https://redmine.informationgrid.eu/issues/6334))
+
+
+#### [LfU Bayern] Anonymisierung
+
+Die über einen CSW-Request Erhaltenen Informationen können Personenbezogenendaten enthalten. Mit der aktuellen Version kann nun im Ingrid Editor so konfiguriert werden, dass Felder die solche Daten enthalten nicht mit ausgegeben werden und damit anonymisiert sind.
+
+![InGrid Editor: "Anonymisierung"](../images/720_ingrid-editor_catalogue_lfubayern_anonymization.png "InGrid Editor: "Anonymisierung"")
+<figcaption class="figcaption">InGrid Editor: "Anonymisierung"</figcaption>
+
+([REDMINE-6253](https://redmine.informationgrid.eu/issues/6253))
 
 ### Liste der Änderungen
 
