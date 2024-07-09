@@ -58,7 +58,7 @@ vorheriger Index: ingridcatalog_data_20240411144526557
 
 #### [InGrid] Darstellungs- und Downloaddienste
 
-Die Portal Suche und Ergebnisseite eines Objektes ist für eine bessere visuelle Dartellung angepasst. Die Unterscheidung Darstellungs- und Downloaddienste im Bereich "URL des Zugangs" ist nun explizit vermerkt und so besser zu identifizieren.
+Die Portal-Suche und die Ergebnisseite eines Objektes ist für eine bessere visuelle Dartellung angepasst. Die Unterscheidung Darstellungs- und Downloaddienste im Bereich "URL des Zugangs" wurde um einen jeweils zutreffenden Vermerk ergänzt und ist so besser zu identifizieren.
 
 ![Portal: "Darstellungs- und Downloaddienste"](../images/720_portal_ingrid_search.png "Portal: "Darstellungs- und Downloaddienste"")
 <figcaption class="figcaption">Portal: "Darstellungs- und Downloaddienste"</figcaption>
@@ -75,7 +75,7 @@ InGrid geht mit der Zeit. Die für InGrid notwendige Indizierungskomponente Elas
 #### [InGrid Editor] Export an verschiende IBusse
 
 Beim Export an verschiedene IBusse werden je IBus verschiedene Indexe in der gleichen Elasticsearch Instanz indiziert.
-Die Indexe können dann im IBus-GUI je nach Kontext des IBus (Internet/Intranet/Intranet technisch) an- bzw. abgeschaltet werden. Die Indizes können dementsprechend anhand der jeweiligen Bezeichnung identfiziert werden. Die jeweilige Bezeichung des Indices setzt sich dann folgendermaßen zusammen:
+Die Indexe können dann im IBus-GUI je nach Kontext des IBus (Internet/Intranet/Intranet technisch) an- bzw. abgeschaltet werden und können dementsprechend anhand der jeweiligen Bezeichnung identfiziert werden. Die jeweilige Bezeichung des Indices setzt sich dann folgendermaßen zusammen:
 
   * Katalog-ID
   * Kategorie (data/address)
@@ -86,22 +86,25 @@ Die Indexe können dann im IBus-GUI je nach Kontext des IBus (Internet/Intranet/
 
 #### [InGrid Editor] DCAT-AP-de import
 
-InGrid in Version 7.2.0 ermöglicht den Import von Datensätzen im DCAT-AP.de Format. Es werden Titel, Beschreibung, Adresse und Distributions ins Open-Data Profil importiert.
+InGrid in Version 7.2.0 ermöglicht den Import von Datensätzen im DCAT-AP.de Format. Es werden Titel, Beschreibung, Adresse und Distribution ins Open-Data Profil importiert.
 
 ([REDMINE-6379](https://redmine.informationgrid.eu/issues/6379))
 
 #### [UPSH] 3D Darstellung
 
-Für das Umweltportal Schleswig-Holstein unterstützt der Kartenclient ab sofort eine 3D-Darstellung von Objekten auf der Karte.
+Für das Umweltportal Profil von Schleswig-Holstein wurde die 3D-Dartellung der Karte umgesetzt.
 
-![Portal: "3D Darstellung"](../images/720_portal_map_upsh_3d.png "Portal: "3D Darstellung"")
+![Portal: "3D Darstellung Auswahl"](../images/720_portal_map_upsh_3d_1.png "Portal: "3D Darstellung Auswahl"")
+<figcaption class="figcaption">Portal: "3D Darstellung Auswahl"</figcaption>
+
+![Portal: "3D Darstellung"](../images/720_portal_map_upsh_3d_2.png "Portal: "3D Darstellung"")
 <figcaption class="figcaption">Portal: "3D Darstellung"</figcaption>
 
 ([REDMINE-5943](https://redmine.informationgrid.eu/issues/5943))
 
 #### [LUBW] Klassifikation des Dienstes
 
-Die Klassifikation eines Dienstes ist mit dieser InGrid Version visull direkt zu identifizeieren. Der jeweilige Dienst wird bereits bei der Auswahl im Dropdown-Menu ersichtlich da der jeweilige Dienst am Ende der gewünschten Auswahl, in Klammern gesetzt, hinterlegt ist.
+Die Klassifikation eines Dienstes kann mit dieser InGrid Version visuell direkt identifiziert werden. Sie ist in Klammern im Auswahltext zu sehen.
 
 ![InGrid Editor: "Klassifikation des Dienstes"](../images/720_ingrid-editor_object_classification.png "InGrid Editor: "Klassifikation des Dienstes"")
 <figcaption class="figcaption">InGrid Editor: "Klassifikation des Dienstes"</figcaption>
@@ -110,7 +113,7 @@ Die Klassifikation eines Dienstes ist mit dieser InGrid Version visull direkt zu
 
 #### [BASt] Open-Data Datensätze
 
-Ist ein Datensatz als "Open Data" gekennzeichnet ist wird die Verschlagwortung "Open Data" obligatorisch.
+Ist ein Datensatz als "Open Data" gekennzeichnet wird die Verschlagwortung "Open Data" obligatorisch.
 Außerdem werden folgende Felder optional:
 
   *  Raumbezug
@@ -129,7 +132,7 @@ Außerdem werden folgende Felder optional:
 
 #### [LfU Bayern] Anonymisierung
 
-Die über einen CSW-Request Erhaltenen Informationen können Personenbezogenendaten enthalten. Mit der aktuellen Version kann nun im Ingrid Editor so konfiguriert werden, dass Felder die solche Daten enthalten nicht mit ausgegeben werden und damit anonymisiert sind.
+Die über einen CSW-Request erhaltenen Informationen können Personenbezogenedaten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
 
 ![InGrid Editor: "Anonymisierung"](../images/720_ingrid-editor_catalogue_lfubayern_anonymization.png "InGrid Editor: "Anonymisierung"")
 <figcaption class="figcaption">InGrid Editor: "Anonymisierung"</figcaption>
