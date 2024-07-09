@@ -117,7 +117,7 @@ Ist ein Datensatz als "Open Data" gekennzeichnet wird die Verschlagwortung "Open
 Außerdem werden folgende Felder optional:
 
   *  Raumbezug
-  *  Koordinatenreferenzsystem (ggf. prüfen gegen ISO, ob möglich)
+  *  Koordinatenreferenzsystem
   *  Identifikator der Datenquelle
   *  Fachliche Grundlage
 
