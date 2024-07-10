@@ -56,15 +56,14 @@ vorheriger Index: ingridcatalog_data_20240411144526557
 ### Wichtige Änderungen
 
 
-#### [InGrid] Darstellungs- und Downloaddienste
+#### [InGrid] Klassifikation des Dienstes
 
-Die Portal-Suche und die Ergebnisseite eines Objektes ist für eine bessere visuelle Dartellung angepasst. Die Unterscheidung Darstellungs- und Downloaddienste im Bereich "URL des Zugangs" wurde um einen jeweils zutreffenden Vermerk ergänzt und ist so besser zu identifizieren.
+Die Klassifikation eines Dienstes kann mit dieser InGrid Version visuell direkt identifiziert werden. Sie ist in Klammern im Auswahltext zu sehen.
 
-![Portal: "Darstellungs- und Downloaddienste"](../images/720_portal_ingrid_search.png "Portal: "Darstellungs- und Downloaddienste"")
-<figcaption class="figcaption">Portal: "Darstellungs- und Downloaddienste"</figcaption>
+![InGrid Editor: "Klassifikation des Dienstes"](../images/720_ingrid-editor_object_classification.png "InGrid Editor: "Klassifikation des Dienstes"")
+<figcaption class="figcaption">InGrid Editor: "Klassifikation des Dienstes"</figcaption>
 
-
-([REDMINE-6063](https://redmine.informationgrid.eu/issues/6063))
+([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
 
 #### [InGrid] Upgrade Elasticsearch auf Version 8.14.1
 
@@ -90,6 +89,16 @@ InGrid in Version 7.2.0 ermöglicht den Import von Datensätzen im DCAT-AP.de Fo
 
 ([REDMINE-6379](https://redmine.informationgrid.eu/issues/6379))
 
+#### [LUBW] Darstellungs- und Downloaddienste
+
+Die Portal-Suche und die Ergebnisseite eines Objektes ist für eine bessere visuelle Dartellung angepasst. Die Unterscheidung Darstellungs- und Downloaddienste im Bereich "URL des Zugangs" wurde um einen jeweils zutreffenden Vermerk ergänzt und ist so besser zu identifizieren.
+
+![Portal: "Darstellungs- und Downloaddienste"](../images/720_portal_ingrid_search.png "Portal: "Darstellungs- und Downloaddienste"")
+<figcaption class="figcaption">Portal: "Darstellungs- und Downloaddienste"</figcaption>
+
+
+([REDMINE-6063](https://redmine.informationgrid.eu/issues/6063))
+
 #### [UPSH] 3D Darstellung
 
 Für das Umweltportal Profil von Schleswig-Holstein wurde die 3D-Dartellung der Karte umgesetzt.
@@ -102,14 +111,7 @@ Für das Umweltportal Profil von Schleswig-Holstein wurde die 3D-Dartellung der 
 
 ([REDMINE-5943](https://redmine.informationgrid.eu/issues/5943))
 
-#### [LUBW] Klassifikation des Dienstes
 
-Die Klassifikation eines Dienstes kann mit dieser InGrid Version visuell direkt identifiziert werden. Sie ist in Klammern im Auswahltext zu sehen.
-
-![InGrid Editor: "Klassifikation des Dienstes"](../images/720_ingrid-editor_object_classification.png "InGrid Editor: "Klassifikation des Dienstes"")
-<figcaption class="figcaption">InGrid Editor: "Klassifikation des Dienstes"</figcaption>
-
-([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
 
 #### [LfU Bayern] Anonymisierung
 
@@ -150,7 +152,6 @@ InGrid
 - [Feature] Upgrade Elasticsearch auf Version 8.x. ([REDMINE-6119](https://redmine.informationgrid.eu/issues/6119))
 - [Feature] Umstellung der iBus Kommunikation mit ElasticSearch von TCP Port 9300 auf HTTP/HTTPS Port 9200 ([REDMINE-6102](https://redmine.informationgrid.eu/issues/6102))
 - [Feature] IGE: Schlagwort-Auswahlfeld mit HVD-Kategorien (Basis-Funktionalität) ([REDMINE-6076](https://redmine.informationgrid.eu/issues/6076))
-- [Feature] Bessere visuelle Unterscheidung Darstellungs- und Downloaddienste für "URL des Zugangs" ([REDMINE-6063](https://redmine.informationgrid.eu/issues/6063))
 - [Feature] IGE: Anpassung der Liste "AdV-Produktgruppe" ([REDMINE-6019](https://redmine.informationgrid.eu/issues/6019))
 - [Feature] CSW Schnittstelle, OGC Darstellung: Erweiterung der Angabe der Links zu Diensten mit einer Protokoll Angabe ([REDMINE-5951](https://redmine.informationgrid.eu/issues/5951))
 - [Feature] Klassifikation des Dienstes - Ergänzung angezeigte Dienstklassifizierung ([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
@@ -210,6 +211,7 @@ Profil LUBW
 
 - [Feature] Neue Stöberkategorie “Open Data” ([REDMINE-6256](https://redmine.informationgrid.eu/issues/6256))
 - [Feature] Profil IGE-NG für die LUBW umsetzen ([REDMINE-5592](https://redmine.informationgrid.eu/issues/5592))
+- [Feature] Bessere visuelle Unterscheidung Darstellungs- und Downloaddienste für "URL des Zugangs" ([REDMINE-6063](https://redmine.informationgrid.eu/issues/6063))
 
 Profil LfU Bayern
 
