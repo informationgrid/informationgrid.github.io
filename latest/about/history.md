@@ -71,7 +71,7 @@ InGrid geht mit der Zeit. Die für InGrid notwendige Indizierungskomponente Elas
 
 ([REDMINE-6119](https://redmine.informationgrid.eu/issues/6119)) ([REDMINE-6102](https://redmine.informationgrid.eu/issues/6102))
 
-#### [InGrid Editor] Export an verschiende IBusse
+#### [InGrid Editor] Export an verschiedene IBusse
 
 Beim Export an verschiedene IBusse werden je IBus verschiedene Indexe in der gleichen Elasticsearch Instanz indiziert.
 Die Indexe können dann im IBus-GUI je nach Kontext des IBus (Internet/Intranet/Intranet technisch) an- bzw. abgeschaltet werden und können dementsprechend anhand der jeweiligen Bezeichnung identfiziert werden. Die jeweilige Bezeichung des Indices setzt sich dann folgendermaßen zusammen:
@@ -115,7 +115,7 @@ Für das Umweltportal Profil von Schleswig-Holstein wurde die 3D-Dartellung der 
 
 #### [LfU Bayern] Anonymisierung
 
-Die über einen CSW-Request erhaltenen Informationen können personenbezogenedaten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
+Die über einen CSW-Request erhaltenen Informationen können personenbezogene Daten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
 
 ![InGrid Editor: "Anonymisierung"](../images/720_ingrid-editor_catalogue_lfubayern_anonymization.png "InGrid Editor: "Anonymisierung"")
 <figcaption class="figcaption">InGrid Editor: "Anonymisierung"</figcaption>
