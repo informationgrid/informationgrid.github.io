@@ -20,7 +20,7 @@ Es wird jetzt die derzeit aktuellste Version 8.14.1 von Elasticsearch unterstüt
 * Aktualisierung der `docker-compose.yml`-Datei (siehe weiter unten)
 * Anpassung der Konfiguration zu Elasticsearch in den iPlugs und im iBus
   * Anstelle des Ports `9300` wird nun `9200` verwendet
-  * Analyse der Konfigurationsdateien configuration.override.properties (iPlugs), application-default.properties (iBus), docker-compose.yml
+  * Gegebenenfalls Anpassungen der Konfigurationsdateien, sofern hier der Elasticsearch Port gesetzt wird. Das kann die Konfigurationsdteien configuration.override.properties (iPlugs), application-default.properties (iBus) oder docker-compose.yml betreffen.
 * Aktivierung der Indizes nach neuer Indizierung
   * durch die Entfernung des Index-Typs, kann sich der Name des Indexes verändert haben, und somit die Erkennung im iBus, ob dieser aktiviert wurde oder nicht
 
@@ -111,28 +111,9 @@ Die Klassifikation eines Dienstes kann mit dieser InGrid Version visuell direkt 
 
 ([REDMINE-5760](https://redmine.informationgrid.eu/issues/5760))
 
-#### [BASt] Open-Data Datensätze
-
-Ist ein Datensatz als "Open Data" gekennzeichnet wird die Verschlagwortung "Open Data" obligatorisch.
-Außerdem werden folgende Felder optional:
-
-  *  Raumbezug
-  *  Koordinatenreferenzsystem
-  *  Identifikator der Datenquelle
-  *  Fachliche Grundlage
-
-![InGrid Editor: "Open-Data Datensätze Hinweis"](../images/720_ingrid-editor_object_open-data-required-1.png "InGrid Editor: "Open-Data Datensätze Hinweis"")
-<figcaption class="figcaption">InGrid Editor: "Open-Data Datensätze Hinweis"</figcaption>
-
-![InGrid Editor: "Open-Data Required"](../images/720_ingrid-editor_object_open-data-required-2.png "InGrid Editor: "Open-Data Required"")
-<figcaption class="figcaption">InGrid Editor: "Open-Data Required"</figcaption>
-
-([REDMINE-6334](https://redmine.informationgrid.eu/issues/6334))
-
-
 #### [LfU Bayern] Anonymisierung
 
-Die über einen CSW-Request erhaltenen Informationen können Personenbezogenedaten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
+Die über einen CSW-Request erhaltenen Informationen können personenbezogenedaten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
 
 ![InGrid Editor: "Anonymisierung"](../images/720_ingrid-editor_catalogue_lfubayern_anonymization.png "InGrid Editor: "Anonymisierung"")
 <figcaption class="figcaption">InGrid Editor: "Anonymisierung"</figcaption>
