@@ -91,7 +91,7 @@ InGrid in Version 7.2.0 ermöglicht den Import von Datensätzen im DCAT-AP.de Fo
 
 #### [LUBW] Darstellungs- und Downloaddienste
 
-Die Portal-Suche und die Ergebnisseite eines Objektes ist für eine bessere visuelle Dartellung angepasst. Die Unterscheidung Darstellungs- und Downloaddienste im Bereich "URL des Zugangs" wurde um einen jeweils zutreffenden Vermerk ergänzt und ist so besser zu identifizieren.
+Die Portal-Suche und die Ergebnisseite eines Objektes wurde für eine bessere visuelle Dartellung angepasst. Die Unterscheidung "Darstellungs- und Downloaddienste" im Bereich "URL des Zugangs" wurde um einen jeweils zutreffenden Vermerk ergänzt und ist so besser zu identifizieren.
 
 ![Portal: "Darstellungs- und Downloaddienste"](../images/720_portal_ingrid_search.png "Portal: "Darstellungs- und Downloaddienste"")
 <figcaption class="figcaption">Portal: "Darstellungs- und Downloaddienste"</figcaption>
@@ -115,7 +115,7 @@ Für das Umweltportal Profil von Schleswig-Holstein wurde die 3D-Dartellung der 
 
 #### [LfU Bayern] Anonymisierung
 
-Die über einen CSW-Request erhaltenen Informationen können personenbezogene Daten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
+Die über einen CSW-Request angeforderten Informationen können personenbezogene Daten enthalten. Das Verhalten eines Katalogs kann im InGrid Edtior nun so angepasst werden, dass diese Daten anonymisiert werden.
 
 ![InGrid Editor: "Anonymisierung"](../images/720_ingrid-editor_catalogue_lfubayern_anonymization.png "InGrid Editor: "Anonymisierung"")
 <figcaption class="figcaption">InGrid Editor: "Anonymisierung"</figcaption>
