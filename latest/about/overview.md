@@ -38,29 +38,29 @@ Die InGrid-Softwarekomponenten werden im Rahmen des Projekts "InGrid - Pflege un
 Aus der öffentlichen Verwaltung sind folgende Partner beteiligt:
 
 - Niedersachsen: Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
-- Bund: Bundesanstalt für Wasserbau
+- Bund: Bundesanstalt für Wasserbau (BAW)
 - Bund: Informationstechnikzentrum Bund (ITZBund) im Auftrag der Wasser- und
 Schifffahrtsverwaltung des Bundes (WSV) im Geschäftsbereich des
-Bundesministeriums für Verkehr und digitale Infrastruktur (BMVI)
+Bundesministeriums für Verkehr und digitale Infrastruktur (BMDV)
 - Baden-Württemberg: Ministerium für Umwelt, Klima und Energiewirtschaft Baden-Württemberg
 - Bayern: Bayerisches Staatsministerium für Umwelt und Verbraucherschutz
 - Berlin: Berliner Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt
 - Brandenburg: Ministerium für Landwirtschaft, Umwelt und Klimaschutz (MLUK) des Landes Brandenburg
 - Bremen: Landesamt GeoInformation Bremen
 - Hamburg: Behörde für Umwelt, Klima, Energie und Agrarwirtschaft (BUKEA)
-- Hessen: Hessisches Ministerium für Umwelt, Klimaschutz, Landwirtschaft und
-Verbraucherschutz
+- Hessen: Hessisches Ministerium für Landwirtschaft und Umwelt, Weinbau, Forsten, Jagd und Heimat
 - Mecklenburg-Vorpommern: Landesamt für Umwelt, Naturschutz und Geologie Mecklenburg-Vorpommern (LUNG)
 - Nordrhein-Westfalen: Ministerium für Umwelt, Naturschutz und Verkehr des Landes Nordrhein-Westfalen
 - Rheinland-Pfalz: Ministerium für Klimaschutz, Umwelt, Energie und Mobilität des Landes Rheinland-Pfalz
 - Saarland: Ministerium für Umwelt, Klima, Mobilität, Agrar und Verbraucherschutz
 - Sachsen: Sächsisches Landesamt für Umwelt, Landwirtschaft und Geologie
-- Sachsen-Anhalt: Ministerium für Umwelt, Landwirtschaft und Energie
+- Sachsen-Anhalt: Ministerium für Wissenschaft, Energie, Klimaschutz und Umwelt des Landes Sachsen-Anhalt
 - Schleswig-Holstein: Ministerium für Energiewende, Klimaschutz, Umwelt und Natur des Landes Schleswig-Holstein
 - Thüringen: Thüringer Ministerium für Umwelt, Energie und Naturschutz (TMUEN)
 - Bund: Bundesamt für Kartographie und Geodäsie (BKG) (Assoziiert)
+- Bund: Bundesanstalt für Straßenwesen (BASt) (Assoziiert)
 
-Die Firma [wemove digital solutions GmbH](http://www.wemove.com/) betreut als Partner aus der Wirtschaft die technische Projekt-Infrastruktur.
+Die Firmen [wemove digital solutions GmbH](https://www.wemove.com/) und [IT-Service Torsten Wolff ](https://it-service-magdeburg.de/) betreuen als Partner aus der Wirtschaft die technische Projekt-Infrastruktur.
 
 Im Rahmen des Projektes wird die Software InGrid gepflegt und weiter entwickelt.
 
