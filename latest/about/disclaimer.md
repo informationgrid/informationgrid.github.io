@@ -13,6 +13,7 @@ E-Mail: vkoopuis@informationgrid.eu
 ### Projektpartner Öffentliche Verwaltung:
 
 - Niedersachsen: Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
+- Bund: Bundesanstalt für Wasserbau (BAW)
 - Bund: Informationstechnikzentrum Bund/WSV
 - Baden-Württemberg: Ministerium für Umwelt, Klima und Energiewirtschaft
 - Bayern: Staatsministerium für Umwelt und Verbraucherschutz
@@ -30,6 +31,7 @@ E-Mail: vkoopuis@informationgrid.eu
 - Schleswig-Holstein: Ministerium für Energiewende, Landwirtschaft, Umwelt und ländliche Räume
 - Thüringen: Ministerium für Umwelt, Energie und Naturschutz
 - Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
+- Bund: Bundesanstalt für Straßenwesen (BASt) (Assoziiert)
 
 ### Projektpartner Wirtschaft:
 
@@ -39,7 +41,12 @@ D-60314 Frankfurt am Main<br>
 Tel.: +49 69 759 003 - 0<br>
 E-Mail: ingrid@wemove.com
 
-Geschäftsführer: Joachim Müller und Stefan Hartmann
+IT-Service Torsten Wolff<br>
+Brandenburger Straße 9<br>
+Forum Gestaltung - Kultur- und Kreativwirtschaftszentrum<br>
+39104 Magdeburg<br>
+Telefon:	+49 391 99044 800<br>
+E-Mail:	info@it-service-magdeburg.de
 
 ## Allgemeine inhaltliche Veranwortung / Haftung
 
