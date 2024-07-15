@@ -30,7 +30,7 @@ E-Mail: vkoopuis@informationgrid.eu
 - Sachsen-Anhalt: Ministerium für Umwelt, Landwirtschaft und Energie des Landes
 - Schleswig-Holstein: Ministerium für Energiewende, Landwirtschaft, Umwelt und ländliche Räume
 - Thüringen: Ministerium für Umwelt, Energie und Naturschutz
-- Bund: Bundesamt für Kartographie und Geodäsie (Assoziiert)
+- Bund: Bundesamt für Kartographie und Geodäsie (BKG) (Assoziiert)
 - Bund: Bundesanstalt für Straßenwesen (BASt) (Assoziiert)
 
 ### Projektpartner Wirtschaft:
