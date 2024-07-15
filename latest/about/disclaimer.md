@@ -14,7 +14,7 @@ E-Mail: vkoopuis@informationgrid.eu
 
 - Niedersachsen: Ministerium für Umwelt, Energie und Klimaschutz (Federführung)
 - Bund: Bundesanstalt für Wasserbau (BAW)
-- Bund: Informationstechnikzentrum Bund/WSV
+- Bund: Informationstechnikzentrum Bund/WSV (ITZBund)
 - Baden-Württemberg: Ministerium für Umwelt, Klima und Energiewirtschaft
 - Bayern: Staatsministerium für Umwelt und Verbraucherschutz
 - Berlin: Senatsverwaltung für Umwelt, Verkehr und Klimaschutz
