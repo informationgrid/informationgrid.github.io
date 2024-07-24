@@ -122,6 +122,15 @@ Die über einen CSW-Request angeforderten Informationen können personenbezogene
 
 ([REDMINE-6253](https://redmine.informationgrid.eu/issues/6253))
 
+#### Einstellung von iPlugs
+
+Die folgenden iPlugs werden nicht mehr weiterentwickelt:
+
+* iPlug-Excel
+* iPlug-XML
+
+Da seit längerer Zeit kein Bedarf an diese Komponenten bestand, werden diese aus dem Entwicklungs- und Releaseprozess entfernt. 
+
 ### Liste der Änderungen
 
 IGE-NG
@@ -267,11 +276,9 @@ Profil UVP
 - IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/7.2.0/))
 - IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/7.2.0/))
 - IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.2.0/))
-- IPLUG-EXCEL ([download](https://distributions.informationgrid.eu/ingrid-iplug-excel/7.2.0/))
 - IPLUG-IGE ([download](https://distributions.informationgrid.eu/ingrid-iplug-ige/7.2.0/))
 - IPLUG-OPENSEARCH ([download](https://distributions.informationgrid.eu/ingrid-iplug-opensearch/7.2.0/))
 - IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/7.2.0/))
 - IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/7.2.0/))
 - IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/7.2.0/))
-- IPLUG-XML ([download](https://distributions.informationgrid.eu/ingrid-iplug-xml/7.2.0/))
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.0/))
