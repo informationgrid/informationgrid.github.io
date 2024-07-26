@@ -7,6 +7,48 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.2.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 7.2.1
+
+Release 25.07.2024
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] MAPCLIENT: Admin-GUI: Bearbeitung mehrerer Layer verbessern ([REDMINE-6594](https://redmine.informationgrid.eu/issues/6594))
+- [Bug] Codelist Repository (5200) ISO Einträge fehlen ([REDMINE-6607](https://redmine.informationgrid.eu/issues/6607))
+- [Bug] Fehler wenn Favorit bei "INSPIRE - priority data set" ([REDMINE-6579](https://redmine.informationgrid.eu/issues/6579))
+- [Bug] dataSourceName wird nicht korrekt ausgegeben ([REDMINE-6564](https://redmine.informationgrid.eu/issues/6564))
+- [Bug] Falsche Anzeige Personenname bei den Adressen im "Katalogbaum" ([REDMINE-6539](https://redmine.informationgrid.eu/issues/6539))
+- [Bug] Fehler beim INSPIRE Auswahl bei Informationssystem ([REDMINE-6535](https://redmine.informationgrid.eu/issues/6535))
+- [Bug] URL Pflege - Allgemeines Leserecht ermöglicht Änderungen an Daten, an denen kein Schreibrecht besteht ([REDMINE-6525](https://redmine.informationgrid.eu/issues/6525))
+- [Bug] Platzhalter im Suchfeld aktualisieren ([REDMINE-6518](https://redmine.informationgrid.eu/issues/6518))
+- [Bug] Fehlermeldung bei Abmeldung ([REDMINE-6486](https://redmine.informationgrid.eu/issues/6486))
+
+Profil BKG
+
+- [Feature] AdV-MIS: Portalausgabe: Zeitbezug - anders betiteln ([REDMINE-6516](https://redmine.informationgrid.eu/issues/6516))
+
+Profil HMDK
+
+- [Bug] "Kartenlinks" werden nicht im Portal angezeigt ([REDMINE-6399](https://redmine.informationgrid.eu/issues/6399))
+
+Profil BASt
+
+- [Feature] Umbenennung Button "Alle Einschränkungen löschen" ([REDMINE-6517](https://redmine.informationgrid.eu/issues/6517))
+- [Feature] Email Betreff von automatischen Benachrichtgungen flexibilisieren ([REDMINE-6483](https://redmine.informationgrid.eu/issues/6483))
+
+Profil LUBW
+
+- [Feature] Anlegen der Seite "Erklärung zur Barrierefreiheit" ([REDMINE-6548](https://redmine.informationgrid.eu/issues/6548))
+
+### Komponenten
+
+- CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/7.2.1/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.2.1/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.1/))
+- IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.2.1/))
+
 
 ## Version 7.2.0
 
