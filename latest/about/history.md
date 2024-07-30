@@ -13,6 +13,10 @@ Release 25.07.2024
 
 ### Liste der Änderungen
 
+IGE-NG
+
+- [Bug] URL Pflege - Allgemeines Leserecht ermöglicht Änderungen an Daten, an denen kein Schreibrecht besteht ([REDMINE-6525](https://redmine.informationgrid.eu/issues/6525))
+
 InGrid
 
 - [Feature] MAPCLIENT: Admin-GUI: Bearbeitung mehrerer Layer verbessern ([REDMINE-6594](https://redmine.informationgrid.eu/issues/6594))
@@ -21,7 +25,6 @@ InGrid
 - [Bug] dataSourceName wird nicht korrekt ausgegeben ([REDMINE-6564](https://redmine.informationgrid.eu/issues/6564))
 - [Bug] Falsche Anzeige Personenname bei den Adressen im "Katalogbaum" ([REDMINE-6539](https://redmine.informationgrid.eu/issues/6539))
 - [Bug] Fehler beim INSPIRE Auswahl bei Informationssystem ([REDMINE-6535](https://redmine.informationgrid.eu/issues/6535))
-- [Bug] URL Pflege - Allgemeines Leserecht ermöglicht Änderungen an Daten, an denen kein Schreibrecht besteht ([REDMINE-6525](https://redmine.informationgrid.eu/issues/6525))
 - [Bug] Platzhalter im Suchfeld aktualisieren ([REDMINE-6518](https://redmine.informationgrid.eu/issues/6518))
 - [Bug] Fehlermeldung bei Abmeldung ([REDMINE-6486](https://redmine.informationgrid.eu/issues/6486))
 
