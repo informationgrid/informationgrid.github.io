@@ -7,6 +7,40 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.2.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 7.2.2
+
+Release 11.08.2024
+
+InGrid
+
+- [Bug] getRecord-Anfrage im iBus nicht eindeutig ([REDMINE-6637](https://redmine.informationgrid.eu/issues/6637))
+- [Bug] CSW OGC Schnittstelle - Koordinaten in falscher Reihenfolge ([REDMINE-6611](https://redmine.informationgrid.eu/issues/6611))
+- [Bug]  OGC Schema zeigt keine BB bei Geodatendiensten ([REDMINE-6533](https://redmine.informationgrid.eu/issues/6533))
+- [Bug] IPlug-SE log4j doppelte libraries ([REDMINE-6524](https://redmine.informationgrid.eu/issues/6524))
+- [Bug] Platzhalter im Suchfeld aktualisieren ([REDMINE-6518](https://redmine.informationgrid.eu/issues/6518))
+
+Profil BASt
+
+- [Feature] "Ähnliche Begriffe" ausblenden ([REDMINE-6614](https://redmine.informationgrid.eu/issues/6614))
+
+Profil LfU Bayern
+
+- [Feature] "Datenquelle" beim Export hinzufügen ([REDMINE-6620](https://redmine.informationgrid.eu/issues/6620))
+
+Profil RLP
+
+- [Bug] Account anlegen - Request Error Diagnostics ([REDMINE-6626](https://redmine.informationgrid.eu/issues/6626))
+
+Profil NUMIS
+
+- [Bug] Druckfunktion Kartenviewer ([REDMINE-5095](https://redmine.informationgrid.eu/issues/5095))
+
+### Komponenten
+
+- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/7.2.2/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.2.2/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.2.2/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.2/))
 
 ## Version 7.2.1.1
 
