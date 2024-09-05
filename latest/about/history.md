@@ -42,6 +42,14 @@ Profil NUMIS
 - INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.2.2/))
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.2/))
 
+## Version 7.2.1.2
+
+Release 05.09.2024
+
+InGrid
+
+- [Bug] Hochgeladene entpackte ZIP-Dateien beim Veröffentlichen gelöscht ([REDMINE-6767](https://redmine.informationgrid.eu/issues/6767))
+
 ## Version 7.2.1.1
 
 Release 02.08.2024
