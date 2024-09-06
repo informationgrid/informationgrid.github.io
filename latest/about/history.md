@@ -42,6 +42,14 @@ Profil NUMIS
 - INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.2.2/))
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.2/))
 
+## Version 7.2.1.3
+
+Release 06.09.2024
+
+InGrid
+
+- [Bug] Kopieren von Verfahren mit archivierten Dateien unvollständig ([REDMINE-6787](https://redmine.informationgrid.eu/issues/6787))
+
 ## Version 7.2.1.2
 
 Release 05.09.2024
