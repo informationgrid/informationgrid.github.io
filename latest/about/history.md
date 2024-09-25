@@ -7,40 +7,49 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.2.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
-## Version 7.2.2
+## version 7.2.3
 
-Release 11.08.2024
+Release 25.09.2024
 
 InGrid
 
-- [Bug] getRecord-Anfrage im iBus nicht eindeutig ([REDMINE-6637](https://redmine.informationgrid.eu/issues/6637))
-- [Bug] CSW OGC Schnittstelle - Koordinaten in falscher Reihenfolge ([REDMINE-6611](https://redmine.informationgrid.eu/issues/6611))
-- [Bug]  OGC Schema zeigt keine BB bei Geodatendiensten ([REDMINE-6533](https://redmine.informationgrid.eu/issues/6533))
-- [Bug] IPlug-SE log4j doppelte libraries ([REDMINE-6524](https://redmine.informationgrid.eu/issues/6524))
-- [Bug] Platzhalter im Suchfeld aktualisieren ([REDMINE-6518](https://redmine.informationgrid.eu/issues/6518))
+- [Feature] Button "Registrieren" im Portal herausnehmen ([REDMINE-6779](https://redmine.informationgrid.eu/issues/6779))
+- [Feature] Aktive Ortsfilter im Portal besser darstellen ([REDMINE-6760](https://redmine.informationgrid.eu/issues/6760))
+- [Feature] HVD-Darstellung im Portal ([REDMINE-6674](https://redmine.informationgrid.eu/issues/6674))
+- [Feature] "Kopieren"-Button an bestimmter Stelle im Portal anfügen ([REDMINE-6642](https://redmine.informationgrid.eu/issues/6642))
+- [Feature] Aufruf der Operation - Anpassung ähnlich #4570 umsetzen ([REDMINE-6636](https://redmine.informationgrid.eu/issues/6636))
+- [Feature] MAPCLIENT: Integration Streckenlocator EBA ins GeoPortal.EBA ([REDMINE-6595](https://redmine.informationgrid.eu/issues/6595))
+- [Bug] Hochgeladene entpackte ZIP-Dateien beim Veröffentlichen gelöscht ([REDMINE-6767](https://redmine.informationgrid.eu/issues/6767))
+- [Bug] Portal: Tooltip in der Adresshierarchie korrigieren ([REDMINE-6765](https://redmine.informationgrid.eu/issues/6765))
+- [Bug] Interner Fehler im CSW bei Suchen mit räumlicher Einschränkung ([REDMINE-6739](https://redmine.informationgrid.eu/issues/6739))
+- [Bug] Abbildung Adresshierarchie mit mehreren Ebenen im Portal korrigieren ([REDMINE-6727](https://redmine.informationgrid.eu/issues/6727))
+- [Bug] 7.2.1: Tabelle der Raumbezüge verschoben ([REDMINE-6689](https://redmine.informationgrid.eu/issues/6689))
 
 Profil BASt
 
-- [Feature] "Ähnliche Begriffe" ausblenden ([REDMINE-6614](https://redmine.informationgrid.eu/issues/6614))
+- [Feature] Seitenname im Portal anpassen ([REDMINE-6740](https://redmine.informationgrid.eu/issues/6740))
 
-Profil LfU Bayern
+Profil BKG
 
-- [Feature] "Datenquelle" beim Export hinzufügen ([REDMINE-6620](https://redmine.informationgrid.eu/issues/6620))
+- [Feature] Portal: Facetten - Mehrfachselektion ermöglichen (AdVMIS und BKG-MIS) ([REDMINE-3841](https://redmine.informationgrid.eu/issues/3841))
+
+Profil MetaVer
+
+- [Feature] Sortierreihenfolge für Anbieter in der Facettierung ändern ([REDMINE-3255](https://redmine.informationgrid.eu/issues/3255))
 
 Profil RLP
 
-- [Bug] Account anlegen - Request Error Diagnostics ([REDMINE-6626](https://redmine.informationgrid.eu/issues/6626))
+- [Bug] Anzeige der Adressen im Portal ([REDMINE-6773](https://redmine.informationgrid.eu/issues/6773))
 
-Profil NUMIS
+Profil UVP
 
-- [Bug] Druckfunktion Kartenviewer ([REDMINE-5095](https://redmine.informationgrid.eu/issues/5095))
+- [Bug] Kopieren von Verfahren mit archivierten Dateien unvollständig ([REDMINE-6787](https://redmine.informationgrid.eu/issues/6787))
 
 ### Komponenten
 
-- IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/7.2.2/))
-- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.2.2/))
-- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.2.2/))
-- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.2/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.2.3/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.3/))
+
 
 ## Version 7.2.1.3
 
