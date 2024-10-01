@@ -20,7 +20,7 @@ InGrid
 
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.2.3.1/))
 
-## version 7.2.3
+## Version 7.2.3
 
 Release 25.09.2024
 
