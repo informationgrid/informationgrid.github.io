@@ -201,7 +201,7 @@ curl --location 'https://ige-ng.informationgrid.eu/api/cswt?SERVICE=CSW&REQUEST=
         <csw:Constraint version="2.0.0">
             <ogc:Filter>
                 <ogc:PropertyIsEqualTo>
-                    <ogc:PropertyName>apiso:identifier</ogc:PropertyName>
+                    <ogc:PropertyName>apsio:identifier</ogc:PropertyName>
                     <ogc:Literal>E6D08246-2B08-4551-8B99-8F75CCBBAD45</ogc:Literal>
                 </ogc:PropertyIsEqualTo>
             </ogc:Filter>
