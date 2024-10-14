@@ -26,7 +26,7 @@ Release 02.10.2024
 
 #### [InGrid] HVD-Darstellung im Portal
 
-Für alle Profile wurde die Facette "Ergebnistypen" um die Auswahl "HVD" ergänzt. Außerdem sind mit dieser Version die als HVD gekennzeichnete Objekte in der Suche erkennbar durch ein "offenens Scchloss" Icon und in der Detail-Ansicht im Bereich "Schlagworte" gennant.
+Für alle Profile wurde die Facette "Ergebnistypen" um die Auswahl "HVD" ergänzt. Außerdem sind mit dieser Version die als HVD gekennzeichneten Objekte in der Suche erkennbar durch ein "offenens Schloss"-Icon. In der Detailansicht sind diese im Bereich "Schlagworte" genannt.
 
 ![Portal Suche: "HVD-Darstellung im Portal"](../images/731_portal_search_hvd_1.png "Portal Suche: "HVD-Darstellung im Portal"")
 <figcaption class="figcaption">Portal Suche: "HVD-Darstellung im Portal"</figcaption>
@@ -39,7 +39,7 @@ Für alle Profile wurde die Facette "Ergebnistypen" um die Auswahl "HVD" ergänz
 #### [InGrid] Bereitstellen von Daten für alle Profile
 
 Was bisher UVP vorbehalten war ist jetzt auch für alle Profile eingerichtet. Einem Metadatensatz können über einen Upload weitere Dateien hinzugefügt werden. 
-Die Angabe des Dateiformats ist obligatorisch.
+Die Angabe des Dateiformats ist erforderlich.
 
 ![Editor - Dateien: "Bereitstellen von Daten für alle Profile"](../images/731_editor_data_upload-file_1.png "Editor - Dateien: "Bereitstellen von Daten für alle Profile"")
 <figcaption class="figcaption">Editor - Dateien: "Bereitstellen von Daten für alle Profile"</figcaption>
@@ -66,7 +66,7 @@ Der Harvester ist nun Teil des InGrid-Projekts!
 
 #### [InGrid] Aufruf der Operation
 
-Das Feld "Operation" zeigt nun durch den InGrid Editor bereitgestellte Information an
+Das Feld "Operation" zeigt nun durch den InGrid Editor bereitgestellte Informationen an.
 
 ![Portal: "Aufruf der Operation"](../images/731_search_detail_operation.png "Portal: "Aufruf der Operation"")
 <figcaption class="figcaption">Portal: "Aufruf der Operation""</figcaption>
