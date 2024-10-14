@@ -21,6 +21,58 @@ InGrid
 
 Release 02.10.2024
 
+### Wichtige Änderungen
+
+
+#### [InGrid] HVD-Darstellung im Portal
+
+Für alle Profile wurde die Facette "Ergebnistypen" um die Auswahl "HVD" ergänzt. Außerdem sind mit dieser Version die als HVD gekennzeichnete Objekte in der Suche erkennbar durch ein "offenens Scchloss" Icon und in der Detail-Ansicht im Bereich "Schlagworte" gennant.
+
+![Portal Suche: "HVD-Darstellung im Portal"](../images/731_portal_search_hvd_1.png "Portal Suche: "HVD-Darstellung im Portal"")
+<figcaption class="figcaption">Portal Suche: "HVD-Darstellung im Portal"</figcaption>
+
+![Portal Suche - Detailansicht: "HVD-Darstellung im Portal"](../images/731_portal_search-detail_hvd_2.png "Portal Suche - Detailansicht: "HVD-Darstellung im Portal"")
+<figcaption class="figcaption">Portal Suche - Detailansicht: "HVD-Darstellung im Portal"</figcaption>
+
+([REDMINE-6674](https://redmine.informationgrid.eu/issues/6674))
+
+#### [InGrid] Bereitstellen von Daten für alle Profile
+
+Was bisher UVP vorbehalten war ist jetzt auch für alle Profile eingerichtet. Einem Metadatensatz können über einen Upload weitere Dateien hinzugefügt werden. 
+Die Angabe des Dateiformats ist obligatorisch.
+
+![Editor - Dateien: "Bereitstellen von Daten für alle Profile"](../images/731_editor_data_upload-file_1.png "Editor - Dateien: "Bereitstellen von Daten für alle Profile"")
+<figcaption class="figcaption">Editor - Dateien: "Bereitstellen von Daten für alle Profile"</figcaption>
+
+![Editor - Dateien Hochladen: "Bereitstellen von Daten für alle Profile"](../images/731_editor_data_upload-file_2.png "Editor - Dateien Hochladen: "Bereitstellen von Daten für alle Profile"")
+<figcaption class="figcaption">Editor - Dateien Hochladen: "Bereitstellen von Daten für alle Profile"</figcaption>
+
+![Editor - Dateien Bearbeiten: "Bereitstellen von Daten für alle Profile"](../images/731_editor_data_upload-file_3.png "Editor - Dateien Bearbeiten: "Bereitstellen von Daten für alle Profile"")
+<figcaption class="figcaption">Editor - Dateien Bearbeiten: "Bereitstellen von Daten für alle Profile"</figcaption>
+
+![Editor - Dateien Eintrag Bearbeiten: "Bereitstellen von Daten für alle Profile"](../images/731_editor_data_upload-file_4.png "Editor - Eintrag Bearbeiten: "Bereitstellen von Daten für alle Profile"")
+<figcaption class="figcaption">Editor - Eintrag Bearbeiten: "Bereitstellen von Daten für alle Profile"</figcaption>
+
+([REDMINE-6204](https://redmine.informationgrid.eu/issues/6204))
+
+#### [InGrid] Integration Harvester
+
+Der Harvester ist nun Teil des InGrid-Projekts!
+
+![Harvester: "Der Harvester ist nun Teil des InGrid-Projekts"](../images/731_harvester.png "Harvester: "Der Harvester ist nun Teil des InGrid-Projekts"")
+<figcaption class="figcaption">Harvester: "Der Harvester ist nun Teil des InGrid-Projekts"</figcaption>
+
+([REDMINE-5562](https://redmine.informationgrid.eu/issues/5562))
+
+#### [InGrid] Aufruf der Operation
+
+Das Feld "Operation" zeigt nun durch den InGrid Editor bereitgestellte Information an
+
+![Portal: "Aufruf der Operation"](../images/731_search_detail_operation.png "Portal: "Aufruf der Operation"")
+<figcaption class="figcaption">Portal: "Aufruf der Operation""</figcaption>
+
+([REDMINE-6636](https://redmine.informationgrid.eu/issues/6636))
+
 ### Liste der Änderungen
 
 InGrid Editor
