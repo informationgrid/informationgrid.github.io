@@ -75,14 +75,14 @@ Mit dem Spring Profile `ogc-distributions-api` kann die OGC Erweiterung freigesc
 | Method | Type          | Description                                                                                                                                                     |
 |--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                  |
-| DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?uri={fileUri}` |
+| DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?filename={filename}` |
 
 **Hinweis zu DELETE Distributions**:
-Wenn die Metadaten bzgl. einer Distribution (Daten/Datei) aus einem Datensatz entfernt werden, werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind. Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig.
-Das Löschen von Daten/Dateien ist aber dennoch über die API möglich, zum Beispiel wenn eine Datei gelöscht werden soll, um sie durch eine neue Version zu ersetzen. Dabei wird der Metadatensatz nicht verändert.
+Wenn die Metadaten bzgl. einer Distribution (Daten/Datei) aus einem Datensatz entfernt werden, dann werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind. Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig.
+Das Löschen von Distributionen ist auch möglich ohne den Datensatz upzudaten. (Zum Beispiel wenn eine Distribution gelöscht werden soll, um sie durch eine neue Version zu ersetzen.)
 
 **Hinweis zum Download von Dateien:**
-Über das URL-Pattern `/documents/{collectionId}/{recordId}/{fileUri}` stehen Dateien zum Download zur Verfügung.
+Über das URL-Pattern `/documents/{collectionId}/{recordId}/{filename}` stehen Dateien zum Download zur Verfügung.
 
 ## Authentifizierung
 
