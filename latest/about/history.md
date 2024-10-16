@@ -7,6 +7,31 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.3.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 7.3.2
+
+InGrid
+
+- [Feature] "Kopieren"-Button an bestimmter Stelle im Portal anfügen ([REDMINE-6642](https://redmine.informationgrid.eu/issues/6642))
+- [Bug] Adressreferenzen werden als gelöscht angezeigt ([REDMINE-6901](https://redmine.informationgrid.eu/issues/6901))
+- [Bug] Portal: Wandlung URL in Hyperlink in Fließtext - Abbruch an Umlaut "ä"  ([REDMINE-6833](https://redmine.informationgrid.eu/issues/6833))
+
+Profil BASt
+
+- [Bug] Anpassung der Facetten greift nicht mehr? ([REDMINE-6887](https://redmine.informationgrid.eu/issues/6887))
+
+Profil BKG
+
+- [Bug] AdV-MIS: Filterung "Sonstige Dienste" funktioniert nicht erwartungsgemäß ([REDMINE-6892](https://redmine.informationgrid.eu/issues/6892))
+
+
+Profil MetaVer
+
+- [Bug] Sortierung ohne Suchbegriff bevorteilt die Ergebnisse aus Hamburg ([REDMINE-6888](https://redmine.informationgrid.eu/issues/6888))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.3.2/))
+
 
 ## Version  7.3.1
 
