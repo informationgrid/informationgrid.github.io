@@ -34,30 +34,30 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 ### CSW-t Transaction
 
 | Method | Type  | Description                                                                                                                                    |
-|--------|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | POST   | CSW-t | INSERT, UPDATE & DELETE transaction <br> Endpoint:  `/api/cswt` <br> Example: `../api/cswt?SERVICE=CSW&REQUEST=Transaction&catalog=CATALOG_ID` |
 
 ### OGC Records APIs
 
-| Method | Type          | Description                                                                                                                                                                             |
-|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GET    | Landing Page  | Get general information about OGC API Records <br>Endpoint: `/api/ogc`                                                                                                                  |
-| GET    | Conformance   | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance`                                                                                                           |
-| GET    | Collections   | Get multiple collections <br>Endpoint: `/api/ogc/collections`                                                                                                                           |
-| GET    | Collection    | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}`                                                                                                     |
-| GET    | Records       | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                          |
-| GET    | Record        | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                            |
-| POST   | Records       | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                     |
-| PUT    | Record        | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
-| DELETE | Record        | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                       |
+| Method | Type         | Description                                                                                                                                                                             |
+| ------ | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | Landing Page | Get general information about OGC API Records <br>Endpoint: `/api/ogc`                                                                                                                  |
+| GET    | Conformance  | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance`                                                                                                           |
+| GET    | Collections  | Get multiple collections <br>Endpoint: `/api/ogc/collections`                                                                                                                           |
+| GET    | Collection   | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}`                                                                                                     |
+| GET    | Records      | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                          |
+| GET    | Record       | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                            |
+| POST   | Records      | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                     |
+| PUT    | Record       | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| DELETE | Record       | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                       |
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
 
 ### Dokumente verschieben
 Der InGrid-Editor ermöglicht die Sortierung von Dokumenten in einer Ordnerstruktur. Um dies auch über eine API-Schnittstelle zu ermöglichen, wurde ein Endpunkt implementiert, der das Verschieben innerhalb der Ordnerstruktur erlaubt. Die OGC API for Records wurde wie folgt erweitert.
-| Method | Type | Description |
-|--------|------|-------------|
-| POST    | Dokumente verschieben  | Unter Angabe von `recordId` und `folderId` kann einen Dokument einem Ordner zugewiesen werden. <br>Endpoint: `/api/ogc/collections/ogctestcatalog/items/actions/move` <br>Beispiel für ein RequestBody:<br>[{ "recordId": "`recordId`", "folderId": "`folderId`" }] |
+| Method | Type                  | Description                                                                                                                                                                                                                                                         |
+| ------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| POST   | Dokumente verschieben | Unter Angabe von `recordId` und `folderId` kann einen Dokument einem Ordner zugewiesen werden. <br>Endpoint: `/api/ogc/collections/ogctestcatalog/items/actions/move` <br>Beispiel für ein RequestBody:<br>[{ "recordId": "`recordId`", "folderId": "`folderId`" }] |
 
 ### OGC Distributions API (für Daten/Dateien)
 Dieser Abschnitt beschreibt die Endpunkte, um Dateien von einem Datensatz zu verwalten. 
@@ -72,9 +72,9 @@ Mit dem Spring Profile `ogc-distributions-api` kann die OGC Erweiterung freigesc
 
 > **_NOTE:_** Nur veröffentliche Datensätze ohne Bearbeitungsversion können um Dateien ergänzt werden.
 
-| Method | Type          | Description                                                                                                                                                     |
-|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                  |
+| Method | Type          | Description                                                                                                                                                           |
+| ------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                        |
 | DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?filename={filename}` |
 
 **Hinweis zu DELETE Distributions**:
@@ -91,7 +91,7 @@ Alle APIs sind mit OAuth 2.0 über Keycloak gesichert. Um mit Endpunkten zu inte
 Überblick über die erforderlichen Variablen und Berechtigungsnachweise:
 
 | Variable          | Description                                                                                                                          |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | *$KEYCLOAK_HOST*  | Keycloak Host e.g. `https://keycloak.informationgrid.eu`                                                                             |
 | *$REALM*          | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
 | *$CLIENTID*       | Keycloak client ID  (e.g. "ige-ng-frontend")                                                                                         |
