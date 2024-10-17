@@ -55,6 +55,7 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 
 ### Dokumente verschieben
 Der InGrid-Editor ermöglicht die Sortierung von Dokumenten in einer Ordnerstruktur. Um dies auch über eine API-Schnittstelle zu ermöglichen, wurde ein Endpunkt implementiert, der das Verschieben innerhalb der Ordnerstruktur erlaubt. Die OGC API for Records wurde wie folgt erweitert.
+
 | Method | Type                  | Description                                                                                                                                                                                                                                                         |
 | ------ | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | POST   | Dokumente verschieben | Unter Angabe von `recordId` und `folderId` kann einen Dokument einem Ordner zugewiesen werden. <br>Endpoint: `/api/ogc/collections/ogctestcatalog/items/actions/move` <br>Beispiel für ein RequestBody:<br>[{ "recordId": "`recordId`", "folderId": "`folderId`" }] |
