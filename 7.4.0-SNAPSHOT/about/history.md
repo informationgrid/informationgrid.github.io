@@ -14,7 +14,15 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
-...
+#### Keycloak
+
+Mit der Aktualisierung von Kecloak auf die Version 26.0.2 ändert sich auch die Konfiguration. Hierzu muss im docker-compose.yml folgendes geändert werden:
+
+* `KEYCLOAK_ADMIN` umbenennen zu `KC_BOOTSTRAP_ADMIN_USERNAME`
+* `KEYCLOAK_ADMIN_PASSWORD` umbenennen zu `KC_BOOTSTRAP_ADMIN_PASSWORD`
+* `KC_HOSTNAME` bekommt den Wert von `KC_HOSTNAME_URL`
+* `KC_HOSTNAME_URL` und `KC_HOSTNAME_STRICT_HTTPS` entfernen
+
 
 ### Sicherheitsrelevante Änderungen
 
