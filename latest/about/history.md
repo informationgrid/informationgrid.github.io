@@ -7,6 +7,36 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.3.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+
+## Version 7.3.3
+
+Release 07.11.2024
+
+InGrid
+
+- [Feature] MAPCLIENT: Einstellung der Maßstabs-Begrenzung ([REDMINE-6909](https://redmine.informationgrid.eu/issues/6909))
+- [Feature] Konsolidierung von Schlagworten im Metadatensatz ([REDMINE-5376](https://redmine.informationgrid.eu/issues/5376))
+- [Bug] Facettierung fehlerhaft ([REDMINE-6925](https://redmine.informationgrid.eu/issues/6925))
+- [Bug] Sehr viele Warnungen im iBus ([REDMINE-6924](https://redmine.informationgrid.eu/issues/6924))
+- [Bug] Schemavalidierung bei Testsuite GDI-DE schlägt fehl ([REDMINE-6922](https://redmine.informationgrid.eu/issues/6922))
+- [Bug] Fehler im Verweise-Dialog, wenn Favoriten für "Typ" gesetzt sind ([REDMINE-6913](https://redmine.informationgrid.eu/issues/6913))
+- [Bug] Geodatensatz nicht schemakonform aufgrund von Polygon_ID, Fehlermeldung bei Harvesting ([REDMINE-6896](https://redmine.informationgrid.eu/issues/6896))
+
+Profil LUBW
+
+- [Bug] OAC-Suche funktioniert nicht mehr ([REDMINE-6977](https://redmine.informationgrid.eu/issues/6977))
+- [Bug] PORTAL: CSV-Download funktioniert nicht mehr ([REDMINE-6961](https://redmine.informationgrid.eu/issues/6961))
+
+Profil UVP
+
+- [Feature] Portal: Filterung nach Aktualität, Ergebnisliste verändern ([REDMINE-6793](https://redmine.informationgrid.eu/issues/6793))
+
+### Komponenten
+
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.3.3/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.3.3/))
+
+
 ## Version 7.3.2.1
 
 Release 22.10.2024
