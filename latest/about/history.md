@@ -8,6 +8,30 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.3.0. Release Notes
 [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 7.3.4
+
+Release 26.11.2024
+
+InGrid
+
+- [Feature] Ergänzung von Email Adressen durch "mailto:" im DCAT-AP.DE Export ergänzt ([REDMINE-6425](https://redmine.informationgrid.eu/issues/6425))
+- [Feature] OGC API - Verschieben von Ressourcen über PUT Methode ([REDMINE-6361](https://redmine.informationgrid.eu/issues/6361))
+- [Bug] DCAT-AP.DE Schnittstelle gibt ggf. ungültige URLs zurück ([REDMINE-7067](https://redmine.informationgrid.eu/issues/7067))
+
+Profil KRZN
+
+- [Feature] Suchfunktion "Nach Ort Suchen" deaktivieren ([REDMINE-6991](https://redmine.informationgrid.eu/issues/6991))
+
+Profil LfU Bayern
+
+- [Bug] Fehler bei Auswahl mehrerer Datensätze zum Export ([REDMINE-7024](https://redmine.informationgrid.eu/issues/7024))
+
+### Komponenten
+
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/7.3.4/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.3.4/))
+
+
 ## Version 7.3.3
 
 Release 07.11.2024
