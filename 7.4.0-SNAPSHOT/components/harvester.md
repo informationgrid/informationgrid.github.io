@@ -102,7 +102,7 @@ Klicken Sie auf `SPEICHERN` um die Konfiguration zu übernehmen.
 
 ### Datenbank
 
-> **Hinweis**: Sie können entweder den Verbindungsstring angeben oder die Felder `URL`, `Port` und `Datenbank-Name` ausfüllen. Der Verbindungsstring hat höhere Priorität.
+> **Hinweis**: Sie können entweder den `Verbindungsstring` angeben oder die Felder `URL`, `Port` und `Datenbank-Name` ausfüllen. Der Verbindungsstring hat höhere Priorität.
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -203,7 +203,7 @@ Wenn Sie einen Harvester anklicken, erhalten Sie einen Überblick über die letz
 - Harvester bearbeiten
 - Harvester entfernen
 
-### Beispiel: CSW Harvester
+## Ausfüllhilfe: CSW Harvester
 
 Im folgenden Abschnitt finden Sie Beschreibungen und Ausfüllhilfen zu den einzelnen Feldern von einen CSW Harvester.
 
@@ -216,7 +216,7 @@ Im folgenden Abschnitt finden Sie Beschreibungen und Ausfüllhilfen zu den einze
 | Beschreibung                | Beschreibung von dem Harvester <br>Beispielwert: `data-server.de`  |
 | Priorität                   | Die Priorität gegenüber anderen Harvester bei Deduplizierung (profilabhängig) <br>Beispielwert: `5` |
 
-#### Ausfüllhilfe: Allgemeine Einstellungen
+### Allgemeine Einstellungen
 
 | Feldname                    | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -224,7 +224,7 @@ Im folgenden Abschnitt finden Sie Beschreibungen und Ausfüllhilfen zu den einze
 | Start Datensatz             | Definieren Sie mit welchen Datensatz gestartet werden soll.  <br>Beispielwert: `1` |
 | Katalog-Identifier          | TODO |
 
-#### Ausfüllhilfe: CSW Einstellungen
+### CSW Einstellungen
 
 | Feldname                    | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -237,7 +237,7 @@ Im folgenden Abschnitt finden Sie Beschreibungen und Ausfüllhilfen zu den einze
 | Toleranz: Polygon vereinfachen | Optional können sehr detaillierte Polygone vereinfacht werden, um die Speichergröße zu reduzieren. <br>Beispielwert: `0,0001`                                            |
 | Planstatus                  | Ermöglicht das Filtern von Datensätze nach Planstatus (relevant in Profile `diplanung`) <br>Beispielwert: `festgestellt` |
 
-#### Ausfüllhilfe: Filter und Regeln
+### Filter und Regeln
 
 | Feldname                    | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -275,7 +275,7 @@ Beispiel für einen Record Filter:
 </ogc:Filter>
 ``` 
 
-#### Ausfüllhilfe: Weitere Einstellungen
+### Weitere Einstellungen
 
 Für einen Harvester kann ein zusätzlicher `Mapping-Code` hinterlegt werden, um die Elasticsearch Einträge vor dem Speicher anzupassen. Dafür werden Vorkenntnisse über das Elasticsearch Mapping benötigt.
 
