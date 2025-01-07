@@ -14,9 +14,9 @@ Ein speziell entwickeltes, benutzerfreundliches Interface erlaubt die Konfigurat
 
 Zur Installation kann das folgende Docker-Image verwendet werden:
 
-https://docker-registry.wemove.com/ingrid-harvester
+[docker-registry.wemove.com/ingrid-harvester](https://docker-registry.wemove.com/ingrid-harvester)
 
-Neben dem Harvester muss zusätzlich eine **Datenbank** und **Elasticsearch** eingerichtet werden. 
+> **Wichtig**: Neben dem Harvester muss zusätzlich eine **Datenbank** und **Elasticsearch** eingerichtet werden. 
 
 ### Allgemeine Hinweise
 
@@ -50,6 +50,7 @@ In einem Docker-Setup sollten diese Dateien vom Hostsystem in den Container gema
 | server/users.json                             | /opt/ingrid/harvester/server/users.json                          | Konfiguration von Benutzer und Passwort         |
 | server/config.json                            | /opt/ingrid/harvester/server/config.json                         | Konfiguration des Harvester                     |
 | server/config-general.json                    | /opt/ingrid/harvester/server/config-general.json                 | Allgemeine Einstellungen (Elasticsearch, Postgres, ...) |
+| server/mappings.json                          | /opt/ingrid/harvester/server/mappings.json                       | Mapping der Datenformate |
 | client/src/assets/config.json                 | /opt/ingrid/harvester/server/app/webapp/assets/config.json       | Einstellungen des Clients                       |
 
 ### Umgebungsvariablen
@@ -85,28 +86,27 @@ Einige allgemeine Einstellungen können auch über Umgebungsvariablen konfigurie
 
 ## Konfiguration
 
-Unter dem Menupunkt **Konfiguration** muss der Harvester eingerichtet werden. Dabei können Sie folgende Konfiguration vornehmen:
-  * [Datenbank](#datenbank-konfigurieren)
-  * [Elasticsearch](#elasticsearch-konfigurieren)
-  * [Zusätzliche Einstellungen](#zusätzliche-einstellungen-konfigurieren)
-  * [Checks](#checks-konfigurieren)
-  * [Index-Backup](#index-backup-konfigurieren)
-  * [Harvesting Differenzen](#harvesting-differenzen-konfigurieren)
-  * [E-Mail-Einstellungen](#e-mail-einstellungen-konfigurieren)
+Unter dem Menupunkt **Konfiguration** kann der Harvester eingerichtet werden. Dabei können Sie folgende Konfiguration vornehmen:
+  * [Datenbank](#datenbank)
+  * [Elasticsearch](#elasticsearch)
+  * [Zusätzliche Einstellungen](#zusätzliche-einstellungen)
+  * [Checks](#checks)
+  * [Index-Backup](#index-backup)
+  * [Harvesting Differenzen](#harvesting-differenzen)
+  * [E-Mail-Einstellungen](#e-mail-einstellungen)
 
 Klicken Sie auf `SPEICHERN` um die Konfiguration zu übernehmen.
 
 > **Tipp**: Da eine Datenbank und Elasticsearch für den Harvester unabdingbar sind, ist es wichtig die Verbindung zur Datenbank und zu Elasticsearch korrekt zu konfigurieren und zu testen. Klicken Sie dafür auf den entsprechenden Button `VERBINDUNG TESTEN`. 
 
-### Datenbank konfigurieren
 
-Unter dem Menu-Punkt **Konfiguration** finden Sie den Formularabschnitt **Datenbank**. 
+### Datenbank
 
-> **Hinweis**: Sie können entweder den Verbindungsstring angeben oder die Felder `URL`, `URL` und `URL` ausfüllen. Der Verbindungsstring hat höhere Priorität.
+> **Hinweis**: Sie können entweder den Verbindungsstring angeben oder die Felder `URL`, `Port` und `Datenbank-Name` ausfüllen. Der Verbindungsstring hat höhere Priorität.
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
-| Verbindungsstring           | Über dem Verbindungsstring ist die Datenbank zu erreichen  <br>Beispielwert: `localhost:5432/database-name` |
+| Verbindungsstring           | Über dem Verbindungsstring ist die Datenbank zu erreichen <br>Beispielwert: `localhost:5432/database-name` |
 | URL                         | Unter der URL ist die Datenbank erreichbar  <br>Beispielwert: `localhost` |
 | Port                        | Unter dem Port ist die Datenbank erreichbar  <br>Beispielwert: `5432` |
 | Datenbank-Name              | Der Name der Datenbank  <br>Beispielwert: `database-name`         |
@@ -116,9 +116,7 @@ Unter dem Menu-Punkt **Konfiguration** finden Sie den Formularabschnitt **Datenb
 
 Um die Verbindung zur Datenbank zu prüfen, klicken Sie auf den Button `VERBINDUNG TESTEN`. 
 
-### Elasticsearch konfigurieren
-
-Unter dem Menu-Punkt **Konfiguration** finden Sie den Formularabschnitt **Elasticsearch**.
+### Elasticsearch
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -135,7 +133,7 @@ Unter dem Menu-Punkt **Konfiguration** finden Sie den Formularabschnitt **Elasti
 
 Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBINDUNG TESTEN`. 
 
-### Zusätzliche Einstellungen konfigurieren
+### Zusätzliche Einstellungen
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -145,7 +143,7 @@ Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBI
 | Unautorisierte Verbindungen über Proxy erlauben | Checkbox, die es ermöglicht alle Verbindungen über Proxy unabhängig vom SSL-Status zu erlauben <br>Default: `false` |
 | Portal URL                  | URL vom Portal, das auf die vereinheitlichten Daten zu greift <br>Beispielwert: `https://dein-portal.anwendung.de` |
 
-### Checks konfigurieren
+### Checks
 
 | Formular-Feld                 | Beschreibung                                                      |
 |-------------------------------|-------------------------------------------------------------------|
@@ -154,7 +152,7 @@ Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBI
 | Index Check aktivieren        |  Toggle-Switch, um regelmäßige Index Checks durchzuführen <br>Beispielwert: `true` |
 | Cron Expression (Index Check) | Cron Expression, um zeitliche Durchführung von Index Checks zu planen <br>Beispielwert: `10 04 * * *` |
 
-### Index-Backup konfigurieren
+### Index-Backup
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -163,7 +161,7 @@ Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBI
 | Index (RegExp)              | TODO <br>Beispielwert: `harvester_statistic\|url_check_history\|index_check_history` |
 | Verzeichnis                 | Das Verzeichnis, unter dem die Backups abgespeichert werden sollen |
 
-### Harvesting Differenzen konfigurieren
+### Harvesting Differenzen
 
 Wenn bereits bestehende Datensätze im laufenden Harvesting nicht vorhanden sind, dann kann eine Differenz (in Prozent) definiert werden, um eine Benachrichtigung per E-Mail zu verschicken bzw. das Harvesting abzubrechen. Aktivieren/deaktivieren Sie dafür die entsprechende Option und definieren Sie einen Prozentwert wann die Aktion ausgeführt werden soll.
 
@@ -174,7 +172,7 @@ Wenn bereits bestehende Datensätze im laufenden Harvesting nicht vorhanden sind
 | Harvesting Abbruch aktivieren | Toggle-Switch, um Harvesting abzubrechen, wenn erwartet Datensätze fehlen <br>Beispielwert: `true` |
 | Harvesting abbrechen ab einer Differenz von | Beispielwert: `10` %                              |
 
-### E-Mail-Einstellungen konfigurieren
+### E-Mail-Einstellungen
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
@@ -192,7 +190,7 @@ Wenn bereits bestehende Datensätze im laufenden Harvesting nicht vorhanden sind
 
 Unter dem Menu-Punkt **Konfiguration > Mapping (Datenformat)** können Mappings hinzugefügt werden, um den Index einheitlich zu halten (e.g. "atom", "Atom Feed" und "AtomFeed" sollen als "ATOM" gespeichert werden).
 
-## Harvest Prozesse einrichten
+## Harvester Prozesse hinzufügen
 
 Unter dem Menu-Punkt **Harvester** finden Sie alle hinzugefügten Harvester-Prozesse. Um eine neue Harvester anzulegen, klicken Sie auf `HINZUFÜGEN`. Nun öffnet sich eine Dialog, der Sie dabei unterstützt einen Harvester anzulegen. Wählen Sie zunächst den Typ der Datenquelle aus und füllen Sie die entsprechenden Felder aus. Schließen Sie den Prozess ab in dem Sie auf `ANLEGEN` klicken. 
 Nach dem Sie einen Harvester angelegt haben, ist dieser in der Liste zu finden. Über den Schieberegler auf der rechten Seite kann ein Harvester aktiviert oder deaktiviert werden.
@@ -235,7 +233,7 @@ Im folgenden Abschnitt finden Sie Beschreibungen und Ausfüllhilfen zu den einze
 | Anzahl paralleler Abfragen  | Um den Harvest-Prozess zu beschleunigen kann eine Anzahl von parallelen Abfragen definiert werden <br>Beispielwert: `6` |
 | Harvesting Modus            | Bei Harvesting kann zwischen folgenden Modi gewählt werden: <ul><li>`Standard`: Eine vereinfachte Abfrage, die zusätzlich Dienst nicht auflöst. </li><li>`Separat (langsam)`: Enthaltene Dienste (WFS und WMS Distributionen) werden zusätzlich aufgelöst. Dieser Prozess ist zeitintensiver. Zusätzlich kann die max. Dienste pro Anfrage definiert werden.</li></ul> |
 | Max. Dienste pro Anfrage    | Relevant für den Modus `Separat`, um maximale Anzahl an Dienste pro Anfrage zu definieren <br>Beispielwert: `30`                                             |
-| WFS/WMS auflösen            |  <br>Beispielwert: `ja`                                            |
+| WFS/WMS auflösen            | Enthaltene WFS/WMS Dienste auflösen <br>Beispielwert: `ja (langsam)` |
 | Toleranz: Polygon vereinfachen | Optional können sehr detaillierte Polygone vereinfacht werden, um die Speichergröße zu reduzieren. <br>Beispielwert: `0,0001`                                            |
 | Planstatus                  | Ermöglicht das Filtern von Datensätze nach Planstatus (relevant in Profile `diplanung`) <br>Beispielwert: `festgestellt` |
 
