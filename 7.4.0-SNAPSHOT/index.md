@@ -87,6 +87,8 @@ menu:
         href: components/iplug_xml.html
       - title: iPlug BLP
         href: components/iplug_blp.html
+      - title: InGrid Harvester
+        href: components/harvester.html
       - title: Schnittstellenkomponenten
         type: header
       - title: Such-Schnittstelle
