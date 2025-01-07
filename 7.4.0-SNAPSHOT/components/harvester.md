@@ -137,7 +137,7 @@ Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBI
 
 | Formular-Feld               | Beschreibung                                                      |
 |-----------------------------|-------------------------------------------------------------------|
-| Offset Cron-Jobs in Minuten | TODO <br>Beispielwert: `0`                                        |
+| Offset Cron-Jobs in Minuten | Dieses Feld ermöglicht die zeitversetzte Ausführung von Harvester-Prozessen, um gleichzeitige Abläufe bei parallelem Betrieb in mehreren Umgebungen (z. B. Produktion und Entwicklung) zu vermeiden. <br>Beispielwert: `0`                                        |
 | Log-Level für fehlende Format-Mappings | Definieren Sie das Log-Level für fehlende Format_Mappings <br>Default: `WARNING` |
 | Proxy URL                   | Proxy für den Harvester                                           |
 | Unautorisierte Verbindungen über Proxy erlauben | Checkbox, die es ermöglicht alle Verbindungen über Proxy unabhängig vom SSL-Status zu erlauben <br>Default: `false` |
