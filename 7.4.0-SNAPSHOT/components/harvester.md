@@ -80,7 +80,7 @@ Einige allgemeine Einstellungen können auch über Umgebungsvariablen konfigurie
 | PORTAL_URL                  | Basis-URL zur Anzeige der Portal-Website (ohne abschließenden Slash) |
 | PROXY_URL                   | URL mit Anmeldedaten und Port, falls erforderlich                |
 | ALLOW_ALL_UNAUTHORIZED      | Ob alle Verbindungen unabhängig vom SSL-Status erlaubt werden sollen |
-| IMPORTER_PROFILE            | Profil, das für die Anwendung verwendet wird: diplanung, mcloud |
+| IMPORTER_PROFILE            | Profil, das für die Anwendung verwendet wird: ingrid, diplanung, mcloud |
 | BASE_URL                    | Unterpfad, unter dem der Harvester bereitgestellt wird, wenn nicht unter `/` |
 
 
@@ -139,7 +139,7 @@ Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBI
 |-----------------------------|-------------------------------------------------------------------|
 | Offset Cron-Jobs in Minuten | TODO <br>Beispielwert: `0`                                        |
 | Log-Level für fehlende Format-Mappings | Definieren Sie das Log-Level für fehlende Format_Mappings <br>Default: `WARNING` |
-| Proxy URL                   | TODO                                                              |
+| Proxy URL                   | Proxy für den Harvester                                           |
 | Unautorisierte Verbindungen über Proxy erlauben | Checkbox, die es ermöglicht alle Verbindungen über Proxy unabhängig vom SSL-Status zu erlauben <br>Default: `false` |
 | Portal URL                  | URL vom Portal, das auf die vereinheitlichten Daten zu greift <br>Beispielwert: `https://dein-portal.anwendung.de` |
 
@@ -158,7 +158,7 @@ Um die Verbindung zu Elasticsearch zu prüfen, klicken Sie auf den Button `VERBI
 |-----------------------------|-------------------------------------------------------------------|
 | Index-Backup aktivieren     | Toggle-Switch, um regelmäßige Index-Backups durchzuführen <br>Beispielwert: `true` |
 | Cron Expression             | Cron Expression, um zeitliche Durchführung von Backups zu planen <br>Beispielwert: `10 04 * * *` |
-| Index (RegExp)              | TODO <br>Beispielwert: `harvester_statistic\|url_check_history\|index_check_history` |
+| Index (RegExp)              | Regulärer Ausdruck zur Selektion der zu sichernden Indizes <br>Beispielwert: `harvester_statistic|url_check_history|index_check_history` |
 | Verzeichnis                 | Das Verzeichnis, unter dem die Backups abgespeichert werden sollen |
 
 ### Harvesting Differenzen
@@ -188,11 +188,18 @@ Wenn bereits bestehende Datensätze im laufenden Harvesting nicht vorhanden sind
 
 ## Mapping (Datenformate) definieren
 
-Unter dem Menu-Punkt **Konfiguration > Mapping (Datenformat)** können Mappings hinzugefügt werden, um den Index einheitlich zu halten (e.g. "atom", "Atom Feed" und "AtomFeed" sollen als "ATOM" gespeichert werden).
+Unter dem Menu-Punkt **Konfiguration > Mapping (Datenformat)** können Mappings hinzugefügt werden, um den Index einheitlich zu halten (z.B. "atom", "Atom Feed" und "AtomFeed" sollen als "ATOM" gespeichert werden).
 
 ## Harvester Prozesse hinzufügen
 
-Unter dem Menu-Punkt **Harvester** finden Sie alle hinzugefügten Harvester-Prozesse. Um eine neue Harvester anzulegen, klicken Sie auf `HINZUFÜGEN`. Nun öffnet sich eine Dialog, der Sie dabei unterstützt einen Harvester anzulegen. Wählen Sie zunächst den Typ der Datenquelle aus und füllen Sie die entsprechenden Felder aus. Schließen Sie den Prozess ab in dem Sie auf `ANLEGEN` klicken. 
+Unter dem Menu-Punkt **Harvester** finden Sie alle hinzugefügten Harvester-Prozesse. Um eine neue Harvester anzulegen, klicken Sie auf `HINZUFÜGEN`. Nun öffnet sich eine Dialog, der Sie dabei unterstützt einen Harvester anzulegen. 
+
+1. Wählen Sie zunächst den Typ der Datenquelle aus. 
+   - Die verfügbaren Typen sind vom Profil abhängig.
+2. Füllen Sie die entsprechenden Felder aus. 
+   - Ausfüllhilfen finden sie im Abschnitt [Ausfüllhilfe: CSW Harvester](#ausfüllhilfe-csw-harvester). 
+3. Klicken Sie auf `ANLEGEN`, um den Prozess abzuschließen. 
+
 Nach dem Sie einen Harvester angelegt haben, ist dieser in der Liste zu finden. Über den Schieberegler auf der rechten Seite kann ein Harvester aktiviert oder deaktiviert werden.
 
 Wenn Sie einen Harvester anklicken, erhalten Sie einen Überblick über die letzten Aktivitäten. Sie können zwischen folgenden Optionen wählen:
@@ -231,7 +238,7 @@ Im folgenden Abschnitt finden Sie Beschreibungen und Ausfüllhilfen zu den einze
 | HTTP Methode                | Anfragemethode an den CSW Dienst <br>Beispielwert: `POST`         |
 | GetRecords URL              | URL von der GetRecords Schnittstelle <br>Beispielwert: `https://gdk.gdi-de.org/gdi-de/srv/ger/csw` |
 | Anzahl paralleler Abfragen  | Um den Harvest-Prozess zu beschleunigen kann eine Anzahl von parallelen Abfragen definiert werden <br>Beispielwert: `6` |
-| Harvesting Modus            | Bei Harvesting kann zwischen folgenden Modi gewählt werden: <ul><li>`Standard`: Eine vereinfachte Abfrage, die zusätzlich Dienst nicht auflöst. </li><li>`Separat (langsam)`: Enthaltene Dienste (WFS und WMS Distributionen) werden zusätzlich aufgelöst. Dieser Prozess ist zeitintensiver. Zusätzlich kann die max. Dienste pro Anfrage definiert werden.</li></ul> |
+| Harvesting Modus            | Bei Harvesting kann zwischen folgenden Modi gewählt werden: <br>- `Standard`: Eine vereinfachte Abfrage, die zusätzlich Dienst nicht auflöst. <br>- `Separat (langsam)`: Enthaltene Dienste (WFS und WMS Distributionen) werden zusätzlich aufgelöst. Dieser Prozess ist zeitintensiver. Zusätzlich kann die max. Dienste pro Anfrage definiert werden. |
 | Max. Dienste pro Anfrage    | Relevant für den Modus `Separat`, um maximale Anzahl an Dienste pro Anfrage zu definieren <br>Beispielwert: `30`                                             |
 | WFS/WMS auflösen            | Enthaltene WFS/WMS Dienste auflösen <br>Beispielwert: `ja (langsam)` |
 | Toleranz: Polygon vereinfachen | Optional können sehr detaillierte Polygone vereinfacht werden, um die Speichergröße zu reduzieren. <br>Beispielwert: `0,0001`                                            |
