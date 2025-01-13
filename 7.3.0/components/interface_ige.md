@@ -34,22 +34,22 @@ Eine ausführliche Dokumentation der Endpunkte ist über das **Swagger-UI** zu e
 ### CSW-t Transaction
 
 | Method | Type  | Description                                                                                                                                    |
-| ------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+|--------|-------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | POST   | CSW-t | INSERT, UPDATE & DELETE transaction <br> Endpoint:  `/api/cswt` <br> Example: `../api/cswt?SERVICE=CSW&REQUEST=Transaction&catalog=CATALOG_ID` |
 
 ### OGC Records APIs
 
-| Method | Type         | Description                                                                                                                                                                             |
-| ------ | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | Landing Page | Get general information about OGC API Records <br>Endpoint: `/api/ogc`                                                                                                                  |
-| GET    | Conformance  | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance`                                                                                                           |
-| GET    | Collections  | Get multiple collections <br>Endpoint: `/api/ogc/collections`                                                                                                                           |
-| GET    | Collection   | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}`                                                                                                     |
-| GET    | Records      | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                          |
-| GET    | Record       | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                            |
-| POST   | Records      | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                     |
-| PUT    | Record       | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
-| DELETE | Record       | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                       |
+| Method | Type          | Description                                                                                                                                                                             |
+|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET    | Landing Page  | Get general information about OGC API Records <br>Endpoint: `/api/ogc`                                                                                                                  |
+| GET    | Conformance   | Get conformance class of OGC API Records <br>Endpoint: `/api/ogc/conformance`                                                                                                           |
+| GET    | Collections   | Get multiple collections <br>Endpoint: `/api/ogc/collections`                                                                                                                           |
+| GET    | Collection    | Get collection by collection-ID <br>Endpoint: `/api/ogc/collections/{collectionId}`                                                                                                     |
+| GET    | Records       | Get multiple records of a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                          |
+| GET    | Record        | Get record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                            |
+| POST   | Records       | Insert multiple records into a collection <br>Endpoint: `/api/ogc/collections/{collectionId}/items`                                                                                     |
+| PUT    | Record        | Replace/update an existing resource in a collection with a replacement resource with the same resource identifier. <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}` |
+| DELETE | Record        | Delete a record by record-ID <br>Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}`                                                                                       |
 
 > **NOTE:** Collection verweist auf einen Katalog. Record verweist auf ein Dokument (dataset, address).
 
@@ -73,17 +73,17 @@ Mit dem Spring Profile `ogc-distributions-api` kann die OGC Erweiterung freigesc
 
 > **_NOTE:_** Nur veröffentliche Datensätze ohne Bearbeitungsversion können um Dateien ergänzt werden.
 
-| Method | Type          | Description                                                                                                                                                           |
-| ------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                        |
-| DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?filename={filename}` |
+| Method | Type          | Description                                                                                                                                                     |
+|--------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| POST   | Distributions | Upload von Dateien (only file upload; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions`                  |
+| DELETE | Distributions | Löschen einer Datei (only file deletion; no document updates) <br> Endpoint: `/api/ogc/collections/{collectionId}/items/{recordId}/distributions?uri={fileUri}` |
 
 **Hinweis zu DELETE Distributions**:
-Wenn die Metadaten bzgl. einer Distribution (Daten/Datei) aus einem Datensatz entfernt werden, dann werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind. Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig.
-Das Löschen von Distributionen ist auch möglich ohne den Datensatz upzudaten. (Zum Beispiel wenn eine Distribution gelöscht werden soll, um sie durch eine neue Version zu ersetzen.)
+Wenn die Metadaten bzgl. einer Distribution (Daten/Datei) aus einem Datensatz entfernt werden, werden im Anschluss alle Dateien gelöscht, die nicht mehr Teil des Datensatzes sind. Ein explizites Löschen über die OGC Resource API ist dann nicht mehr nötig.
+Das Löschen von Daten/Dateien ist aber dennoch über die API möglich, zum Beispiel wenn eine Datei gelöscht werden soll, um sie durch eine neue Version zu ersetzen. Dabei wird der Metadatensatz nicht verändert.
 
 **Hinweis zum Download von Dateien:**
-Über das URL-Pattern `/documents/{collectionId}/{recordId}/{filename}` stehen Dateien zum Download zur Verfügung.
+Über das URL-Pattern `/documents/{collectionId}/{recordId}/{fileUri}` stehen Dateien zum Download zur Verfügung.
 
 ## Authentifizierung
 
@@ -92,7 +92,7 @@ Alle APIs sind mit OAuth 2.0 über Keycloak gesichert. Um mit Endpunkten zu inte
 Überblick über die erforderlichen Variablen und Berechtigungsnachweise:
 
 | Variable          | Description                                                                                                                          |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | *$KEYCLOAK_HOST*  | Keycloak Host e.g. `https://keycloak.informationgrid.eu`                                                                             |
 | *$REALM*          | Legen Sie den Keycloak-Realm fest, der eine Reihe von Benutzern, Anmeldeinformationen, Rollen und Gruppen verwaltet (e.g. "InGrid"). |
 | *$CLIENTID*       | Keycloak client ID  (e.g. "ige-ng-frontend")                                                                                         |
