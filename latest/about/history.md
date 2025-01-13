@@ -110,32 +110,9 @@ Wenn das Merkmal Open Data gewählt wurde, dann wurden alle Zugriffsbeschränkun
 
 #### [InGrid] Schlagwort-Suche im Portal
 
-Eine Suche nach den Schlagworten von ISO-Themen­kategorien lieferte keine Ergebnise. Einw Suche nach den Schlagworten von ISO-Themen­kategorien im Portal ist mit Version 7.4.0 nun ermöglicht
+Eine Suche nach den Schlagworten von ISO-Themen­kategorien lieferte keine Ergebnise. Eine Suche nach den Schlagworten von ISO-Themen­kategorien im Portal ist mit Version 7.4.0 nun umgesetzt.
 
 ([REDMINE-6471](https://redmine.informationgrid.eu/issues/6471))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Liste der Änderungen
 
