@@ -35,12 +35,107 @@ Die Konfiguration sollte dann folgendermaßen aussehen:
   - KC_PROXY_HEADERS=xforwarded
 ```
 
-
-### Sicherheitsrelevante Änderungen
-
-...
-
 ### Wichtige Änderungen
+
+#### [InGrid] Umgestaltung "Merkmale"-Bereich
+
+Die Ansicht der Merkmale eines Datensatzes wurde überarbeitet. Anstatt Checkboxen können nun mittels Buttons die gewünschten Merkmale markiert werden. Wenn gewünscht werden nur markierte angezeigt
+
+![InGrid Editor: "Merkmale: Auswahl"](../images/740_ige-ng_object_attributes_1.png "InGrid Editor: "Merkmale: Auswahl"")
+<figcaption class="figcaption">InGrid Editor: "Merkmale: Auswahl"</figcaption>
+
+![InGrid Editor: "Merkmale: Beschränkte Auswahl"](../images/740_ige-ng_object_attributes_2.png "InGrid Editor: "Merkmale: Beschränkte Auswahl"")
+<figcaption class="figcaption">InGrid Editor: "Merkmale: Beschränkte Auswahl"</figcaption>
+
+([REDMINE-6823](https://redmine.informationgrid.eu/issues/6823))
+
+#### [InGrid] Herkunft der Daten detaillierter erfassen
+
+Einem Objekt können nun komplexere Beschreibungen bezüglich der Datengrundlage bzw. die Herkunft hinzugefügt werden. Im Abschnitt "Fachbezug" kann unter "Datengrundlage/Herkunft" zwischen "Geodatensatz" und "Freie Beschreibung" gewählt werden.
+
+![InGrid Editor: "Herkunft der Daten: Auswahl"](../images/740_ige-ng_daten-grundlage_1.png "InGrid Editor: "Herkunft der Daten Auswahl"")
+<figcaption class="figcaption">InGrid Editor: "Herkunft der Daten Auswahl"</figcaption>
+
+![InGrid Editor: "Herkunft der Daten: Freie Beschreibung"](../images/740_ige-ng_daten-grundlage_2.png "Herkunft der Daten: "Freie Beschreibung"")
+<figcaption class="figcaption">Herkunft der Daten: "Freie Beschreibung"</figcaption>
+
+([REDMINE-2601](https://redmine.informationgrid.eu/issues/2601))
+
+#### [InGrid] CSV Export
+
+Der CSV Export wurde um Felder für die Ausgabe erweitert. Über die SQL Suche können neben der Standardspalten zusätliche Spalten erzeugt und mit Daten für den CSV Export befüllt werden.
+
+![InGrid Editor: "CSV Export, SQL-Abfrage"](../images/740_ige-ng_sql-csv_1.png "InGrid Editor: "CSV Export, SQL-Abfrage"")
+<figcaption class="figcaption">InGrid Editor: "CSV Export, SQL-Abfrage"</figcaption>
+
+![InGrid Editor: "CSV Export"](../images/740_ige-ng_sql-csv_2.png "InGrid Editor: "CSV Export"")
+<figcaption class="figcaption">InGrid Editor: "CSV Export"</figcaption>
+
+([REDMINE-5830](https://redmine.informationgrid.eu/issues/5830))
+
+#### [InGrid] Schlagwort Konsolidierung
+
+Schlagworte können mit der Funktion "Schlagworte Konsolidieren" überprüft werden. Schlagworte die frei Verwendet werden, aber in ähnlicherweise vorhanden sind (GEMET, UMTHES und weitere) können auf diese Weise einfacher wiederverwendet werden.
+
+![InGrid Editor: "Schlagwort Konsolidierung: Auswahl"](../images/740_ige-ng_schlagworte-konsolidierung_1.png "InGrid Editor: "Schlagwort Konsolidierung: Auswahl"")
+<figcaption class="figcaption">InGrid Editor: "Schlagwort Konsolidierung: Auswahl"</figcaption>
+
+![InGrid Editor: "Schlagwort Konsolidierung: Übersicht"](../images/740_ige-ng_schlagworte-konsolidierung_2.png "InGrid Editor: "Schlagwort Konsolidierung: Übersicht"")
+<figcaption class="figcaption">InGrid Editor: "Schlagwort Konsolidierung: Übersicht"</figcaption>
+
+([REDMINE-5376](https://redmine.informationgrid.eu/issues/5376))
+
+
+#### [Profil LUBW] Verlinkung auf "Leichte Sprache" und "Gebärdensprache"
+
+Die für die Barrierefreiheit zur Verfügung gestellten Informationen können nun über entsprechende Icons abgerufen werden
+
+![Portal: "Barrierefreiheit"](../images/740_portal_accessiblity_icons.png "Portal: "Barrierefreiheit"")
+<figcaption class="figcaption">Portal: "Barrierefreiheit"</figcaption>
+
+([REDMINE-6549](https://redmine.informationgrid.eu/issues/6549))
+
+#### [Profil BASt] "Kopieren"-Button
+
+![Portal: "Kopier-Button bei Fachinformationen"](../images/740_portal_detail-view_copy-path-button.png "Portal: "Kopier-Button bei Fachinformationen"")
+<figcaption class="figcaption">Portal: "Kopier-Button bei Fachinformationen"</figcaption>
+
+([REDMINE-6642](https://redmine.informationgrid.eu/issues/6642))
+
+#### [InGrid] Zusätzlichen Eintrag setzen
+
+Wenn das Merkmal Open Data gewählt wurde, dann wurden alle Zugriffsbeschränkungen entfernt. Das ist nicht immer Korrekt. Der Eintrag "Es gelten keine Zugriffsbeschränkungen" wird bei Anlegen eines neuen Metadatensatzes automatisch gesetzt.
+
+([REDMINE-6403](https://redmine.informationgrid.eu/issues/6403))
+
+#### [InGrid] Schlagwort-Suche im Portal
+
+Eine Suche nach den Schlagworten von ISO-Themen­kategorien lieferte keine Ergebnise. Einw Suche nach den Schlagworten von ISO-Themen­kategorien im Portal ist mit Version 7.4.0 nun ermöglicht
+
+([REDMINE-6471](https://redmine.informationgrid.eu/issues/6471))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Liste der Änderungen
 
