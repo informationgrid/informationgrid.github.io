@@ -185,15 +185,11 @@ Profil BASt
 - [Bug] Verlinkungen, Layout auf "Fehler 404"-Seite korrigieren; deaktiviere Kontakt im internen Portal ([REDMINE-7100](https://redmine.informationgrid.eu/issues/7100))
 - [Bug] Anpassung der Facetten greift nicht mehr? ([REDMINE-6887](https://redmine.informationgrid.eu/issues/6887))
 
-Profil BAW
-
-- [Support] Portal: Kartenansicht wieder aktivieren ([REDMINE-6702](https://redmine.informationgrid.eu/issues/6702))
-
 Profil BKG
 
-- [Support] AdV-MIS: Dopplung der HVD-Kategorie in Detailbeschreibung ([REDMINE-6988](https://redmine.informationgrid.eu/issues/6988))
 - [Feature] IGE: separater Katalog für MD-Sprache Englisch ([REDMINE-6951](https://redmine.informationgrid.eu/issues/6951))
 - [Feature] User-Flexibilisierung für Harvester-Komponente umsetzen ([REDMINE-6850](https://redmine.informationgrid.eu/issues/6850))
+- [Bug] AdV-MIS: Dopplung der HVD-Kategorie in Detailbeschreibung ([REDMINE-6988](https://redmine.informationgrid.eu/issues/6988))
 - [Bug] AdV-MIS: Filterung "Sonstige Dienste" funktioniert nicht erwartungsgemäß ([REDMINE-6892](https://redmine.informationgrid.eu/issues/6892))
 
 Profil HMDK
@@ -212,7 +208,6 @@ Profil KRZN
 
 Profil LUBW
 
-- [Support] Login-Seiten umstellen ([REDMINE-6853](https://redmine.informationgrid.eu/issues/6853))
 - [Feature] Einfügen zweier Logos in die Kopfzeile der RIPS-Metadaten sowie der verlinkten Seiten ([REDMINE-6549](https://redmine.informationgrid.eu/issues/6549))
 - [Bug] Fehlermeldung im IGE-NG "Cannot read properties of undefined (reading '_componentRefs')" ([REDMINE-7032](https://redmine.informationgrid.eu/issues/7032))
 - [Bug] 138 Datensätze sind nicht schemavalide ([REDMINE-6996](https://redmine.informationgrid.eu/issues/6996))
