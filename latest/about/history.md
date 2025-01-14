@@ -75,7 +75,7 @@ Der CSV Export wurde um Felder für die Ausgabe erweitert. Über die SQL Suche k
 
 #### [InGrid] Schlagwort Konsolidierung
 
-Schlagworte können mit der Funktion "Schlagworte Konsolidieren" überprüft werden. Schlagworte die frei Verwendet werden, aber in ähnlicherweise vorhanden sind (GEMET, UMTHES und weitere) können auf diese Weise einfacher wiederverwendet werden.
+Schlagworte können mit der Funktion "Schlagworte Konsolidieren" überprüft werden. Schlagworte die frei verwendet werden, aber in ähnlicherweise vorhanden sind (GEMET, UMTHES und weitere) können auf diese Weise einfacher wiederverwendet werden.
 
 ![InGrid Editor: "Schlagwort Konsolidierung: Auswahl"](../images/740_ige-ng_schlagworte-konsolidierung_1.png "InGrid Editor: "Schlagwort Konsolidierung: Auswahl"")
 <figcaption class="figcaption">InGrid Editor: "Schlagwort Konsolidierung: Auswahl"</figcaption>
@@ -97,7 +97,7 @@ Die für die Barrierefreiheit zur Verfügung gestellten Informationen können nu
 
 #### [Profil BASt] "Kopieren"-Button
 
-Der unter "Speicherort" genannte Pfad im Bereich fachinformationen kann recht lang werden. Um das Handling zu erleichtern kann nun einfach mit klicken auf den Kopier-Button der Pfad kopiert werden.
+Der unter "Speicherort" genannte Pfad im Bereich "Fachinformationen" kann recht lang werden. Um das Handling zu erleichtern kann nun einfach mit klicken auf den Kopier-Button der Pfad kopiert werden.
 
 ![Portal: "Kopier-Button bei Fachinformationen"](../images/740_portal_detail-view_copy-path-button.png "Portal: "Kopier-Button bei Fachinformationen"")
 <figcaption class="figcaption">Portal: "Kopier-Button bei Fachinformationen"</figcaption>
