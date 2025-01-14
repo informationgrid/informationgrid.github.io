@@ -39,7 +39,7 @@ Die Konfiguration sollte dann folgendermaßen aussehen:
 
 #### [InGrid] Umgestaltung "Merkmale"-Bereich
 
-Die Ansicht der Merkmale eines Datensatzes wurde überarbeitet. Anstatt Checkboxen können nun mittels Buttons die gewünschten Merkmale markiert werden. Wenn gewünscht werden nur markierte angezeigt
+Die Ansicht der Merkmale eines Datensatzes wurde überarbeitet. Anstatt Checkboxen können nun mittels Buttons die gewünschten Merkmale markiert werden. Wenn gewünscht werden nur markierte Merkmale angezeigt.
 
 ![InGrid Editor: "Merkmale: Auswahl"](../images/740_ige-ng_object_attributes_1.png "InGrid Editor: "Merkmale: Auswahl"")
 <figcaption class="figcaption">InGrid Editor: "Merkmale: Auswahl"</figcaption>
@@ -51,7 +51,7 @@ Die Ansicht der Merkmale eines Datensatzes wurde überarbeitet. Anstatt Checkbox
 
 #### [InGrid] Herkunft der Daten detaillierter erfassen
 
-Einem Objekt können nun komplexere Beschreibungen bezüglich der Datengrundlage bzw. die Herkunft hinzugefügt werden. Im Abschnitt "Fachbezug" kann unter "Datengrundlage/Herkunft" zwischen "Geodatensatz" und "Freie Beschreibung" gewählt werden.
+Einem Objekt können nun komplexere Beschreibungen bezüglich der Datengrundlage bzw. der Herkunft hinzugefügt werden. Im Abschnitt "Fachbezug" kann unter "Datengrundlage/Herkunft" zwischen "Geodatensatz" und "Freie Beschreibung" gewählt werden.
 
 ![InGrid Editor: "Herkunft der Daten: Auswahl"](../images/740_ige-ng_daten-grundlage_1.png "InGrid Editor: "Herkunft der Daten Auswahl"")
 <figcaption class="figcaption">InGrid Editor: "Herkunft der Daten Auswahl"</figcaption>
@@ -88,7 +88,7 @@ Schlagworte können mit der Funktion "Schlagworte Konsolidieren" überprüft wer
 
 #### [Profil LUBW] Verlinkung auf "Leichte Sprache" und "Gebärdensprache"
 
-Die für die Barrierefreiheit zur Verfügung gestellten Informationen können nun über entsprechende Icons abgerufen werden
+Die für die Barrierefreiheit zur Verfügung gestellten Informationen können nun über entsprechende Icons für "Leichte Sprache" und "Gebärdensprache" abgerufen werden
 
 ![Portal: "Barrierefreiheit"](../images/740_portal_accessiblity_icons.png "Portal: "Barrierefreiheit"")
 <figcaption class="figcaption">Portal: "Barrierefreiheit"</figcaption>
@@ -97,6 +97,8 @@ Die für die Barrierefreiheit zur Verfügung gestellten Informationen können nu
 
 #### [Profil BASt] "Kopieren"-Button
 
+Der unter "Speicherort" genannte Pfad im Bereich fachinformationen kann recht lang werden. Um das Handling zu erleichtern kann nun einfach mit klicken auf den Kopier-Button der Pfad kopiert werden.
+
 ![Portal: "Kopier-Button bei Fachinformationen"](../images/740_portal_detail-view_copy-path-button.png "Portal: "Kopier-Button bei Fachinformationen"")
 <figcaption class="figcaption">Portal: "Kopier-Button bei Fachinformationen"</figcaption>
 
@@ -104,13 +106,13 @@ Die für die Barrierefreiheit zur Verfügung gestellten Informationen können nu
 
 #### [InGrid] Zusätzlichen Eintrag setzen
 
-Wenn das Merkmal Open Data gewählt wurde, dann wurden alle Zugriffsbeschränkungen entfernt. Das ist nicht immer Korrekt. Der Eintrag "Es gelten keine Zugriffsbeschränkungen" wird bei Anlegen eines neuen Metadatensatzes automatisch gesetzt.
+Wenn das Merkmal "Open Data" gewählt wurde, dann wurden alle Zugriffsbeschränkungen entfernt. Das ist nicht immer Korrekt. Der Eintrag "Es gelten keine Zugriffsbeschränkungen" wird bei Anlegen eines neuen Metadatensatzes automatisch gesetzt.
 
 ([REDMINE-6403](https://redmine.informationgrid.eu/issues/6403))
 
 #### [InGrid] Schlagwort-Suche im Portal
 
-Eine Suche nach den Schlagworten von ISO-Themen­kategorien lieferte keine Ergebnise. Eine Suche nach den Schlagworten von ISO-Themen­kategorien im Portal ist mit Version 7.4.0 nun umgesetzt.
+Die Suche im Portal berücksichtigt nun auch Schlagworte von ISO-Themen­kategorien.
 
 ([REDMINE-6471](https://redmine.informationgrid.eu/issues/6471))
 
