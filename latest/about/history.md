@@ -8,6 +8,31 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.4.0. Release Notes
 [7.3.x](/7.3.0/about/history.html), [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 7.4.1
+
+### Liste der Änderungen
+
+InGrid Editor
+
+- [Bug] Validierungsfehler über die OGC API (POST & PUT Methode) ([REDMINE-7224](https://redmine.informationgrid.eu/issues/7224))
+
+Profil HMDK
+
+- [Bug] Anzeige "HVD" wird nicht an "Offene Lizenz" angepasst,  ([REDMINE-7217](https://redmine.informationgrid.eu/issues/7217))
+
+Profil LUBW
+
+- [Bug] Automatische Indizierung im IGE-NG funktioniert nicht ([REDMINE-7201](https://redmine.informationgrid.eu/issues/7201))
+
+Profil MetaVer
+
+- [Bug] Die Sortierung der Vorschaugrafiken funktioniert nicht ([REDMINE-7193](https://redmine.informationgrid.eu/issues/7193))
+
+Profil UVP
+
+- [Bug] UVP-Verfahren - Portal - Darstellungsfehler in der Adresse ([REDMINE-6021](https://redmine.informationgrid.eu/issues/6021))
+
+
 ## Version 7.4.0
 
 Release 10.01.2025
