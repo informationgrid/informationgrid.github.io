@@ -10,6 +10,8 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.4.0. Release Notes
 
 ## Version 7.4.1
 
+Release 22.01.2025
+
 ### Liste der Änderungen
 
 InGrid Editor
