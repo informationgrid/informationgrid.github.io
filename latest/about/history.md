@@ -14,6 +14,10 @@ Release 22.01.2025
 
 ### Liste der Änderungen
 
+InGrid
+
+- [Feature] Anpassung Messwerteclient: Parameter-Filter: Zusammenfassung von Parametern mit gleichem Namen aber unterschiedlicher ID; Entfernen des Parameter-Sliders ([REDMINE-7244](https://redmine.informationgrid.eu/issues/7244))
+
 InGrid Editor
 
 - [Bug] Validierungsfehler über die OGC API (POST & PUT Methode) ([REDMINE-7224](https://redmine.informationgrid.eu/issues/7224))
@@ -33,6 +37,10 @@ Profil MetaVer
 Profil UVP
 
 - [Bug] UVP-Verfahren - Portal - Darstellungsfehler in der Adresse ([REDMINE-6021](https://redmine.informationgrid.eu/issues/6021))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.4.1/))
 
 
 ## Version 7.4.0
