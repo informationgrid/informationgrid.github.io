@@ -8,6 +8,34 @@ Diese Release Notes betreffen ausschließlich die Versionen 7.4.0. Release Notes
 [7.3.x](/7.3.0/about/history.html), [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
 
+## Version 7.4.2
+
+Release 05.02.2025
+
+### Liste der Änderungen
+
+InGrid
+
+- [Feature] MAPCLIENT: W3W an neue API anpassen ([REDMINE-7262](https://redmine.informationgrid.eu/issues/7262))
+- [Feature] MAPCLIENT: Streckenlocator - Darstellung von Fehlermeldung aus dem Response ([REDMINE-7273](https://redmine.informationgrid.eu/issues/7273))
+- [Bug] Migrationstask für HVD fixen ([REDMINE-7274](https://redmine.informationgrid.eu/issues/7274))
+- [Bug] Indexfeld access_constraint mit "Y" statt "true" befüllen ([REDMINE-7275](https://redmine.informationgrid.eu/issues/7275))
+- [Bug] Fehler beim Wechsel zu Adressen für Autoren ([REDMINE-7301](https://redmine.informationgrid.eu/issues/7301))
+- [Bug] Fehler bei der Aktualisierung der extern gekoppelten Daten mit layerNames ([REDMINE-7302](https://redmine.informationgrid.eu/issues/7302))
+
+InGrid Editor
+
+- [Bug] Datendownloads unter Verweise können jetzt nicht mehr zum Bearbeiten geöffnet werden, wenn die eingetragenen links / und oder Erläuterungen zu lang sind ([REDMINE-7263](https://redmine.informationgrid.eu/issues/7263))
+- [Bug] Toolbar Buttons disabled nach dem man Auswahlmode schließt  ([REDMINE-7281](https://redmine.informationgrid.eu/issues/7281))
+
+Profil LUBW
+
+- [Bug] Fehlerhafter CSV-Export: capabilites_download_url korrekt befüllen ([REDMINE-7280](https://redmine.informationgrid.eu/issues/7280))
+
+### Komponenten
+
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.4.2/))
+
 ## Version 7.4.1
 
 Release 22.01.2025
