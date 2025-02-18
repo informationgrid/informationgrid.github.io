@@ -16,6 +16,10 @@ Release TT.MM.JJJJ
 
 ### Wichtige Änderungen
 
+#### Änderungen im Datenschema
+
+Dies ist wichtig, damit SQL Suchen bei Änderungen im internen Datenschema angepasst werden können.
+
 ### Liste der Änderungen
 
 ### Komponenten
