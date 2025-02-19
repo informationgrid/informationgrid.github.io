@@ -14,6 +14,13 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
+Aktuell muss der Zugriff auf den Atom-Feed Client im Apache angepasst werden. Dazu muss folgende Weiterleitung eingerichtet werden:
+
+```shell
+RewriteRule ^/interface-search/dls$ /interface-search/dls/ [R,L]
+```
+
+
 ### Wichtige Änderungen
 
 #### Änderungen im Datenschema
