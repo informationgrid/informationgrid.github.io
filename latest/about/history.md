@@ -242,6 +242,7 @@ InGrid Editor
 - [Bug] Symbolkatalog default wird nicht angezeigt ([REDMINE-7177](https://redmine.informationgrid.eu/issues/7177))
 - [Bug] Button in der Vergleichsansicht  ([REDMINE-7122](https://redmine.informationgrid.eu/issues/7122))
 - [Bug] Es fehlen Addressen beim importieren ([REDMINE-7118](https://redmine.informationgrid.eu/issues/7118))
+- [Bug] Dateigröße bei Uploads richtig darstellen ([REDMINE-7046](https://redmine.informationgrid.eu/issues/7046))
 
 Profil BASt
 
