@@ -115,15 +115,15 @@ Profil UVP
 ### Komponenten
 
 - CODELIST-REPOSITORY ([download](https://distributions.informationgrid.eu/ingrid-codelist-repository/7.5.0/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.5.0/))
+- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.5.0/))
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/7.5.0/))
+- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/7.5.0/))
 - IPLUG-CSW-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-csw-dsc/7.5.0/))
 - IPLUG-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-dsc/7.5.0/))
-- IPLUG-BLP ([download](https://distributions.informationgrid.eu/ingrid-iplug-blp/7.5.0/))
-- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.5.0/))
-- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/7.5.0/))
-- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/7.5.0/))
-- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/7.5.0/))
-- INTERFACE-CSW ([download](https://distributions.informationgrid.eu/ingrid-interface-csw/7.5.0/))
 - IPLUG-SE ([download](https://distributions.informationgrid.eu/ingrid-iplug-se/7.5.0/))
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/7.5.0/))
+- IPLUG-WFS-DSC ([download](https://distributions.informationgrid.eu/ingrid-iplug-wfs-dsc/7.5.0/))
 - PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.5.0/))
 
 
