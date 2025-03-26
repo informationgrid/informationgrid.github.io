@@ -38,7 +38,6 @@ Hamburger Metadaten Katalog
 
 InGrid
 
-- [Support] Veraltete InGrid-Komponenten entfernen ([REDMINE-7391](https://redmine.informationgrid.eu/issues/7391))
 - [Feature] "Weitere rechtliche Grundlagen" -> "Rechtliche Grundlagen" ([REDMINE-5392](https://redmine.informationgrid.eu/issues/5392))
 - [Feature] IGE: Katalogverwaltung: Erklärtext vereinheitlichen für toolbar buttons ([REDMINE-6933](https://redmine.informationgrid.eu/issues/6933))
 - [Feature] Datensatzverweise werden erst nach Indexierung sichtbar ([REDMINE-6963](https://redmine.informationgrid.eu/issues/6963))
@@ -97,7 +96,7 @@ Profil KRZN
 
 Profil LUBW
 
-- [Support] Möglichkeit alle Metadatensätze mittels OGC Records API aus InGrid abzurufen. ([REDMINE-7078](https://redmine.informationgrid.eu/issues/7078))
+- [Feature] Möglichkeit alle Metadatensätze mittels OGC Records API aus InGrid abzurufen. ([REDMINE-7078](https://redmine.informationgrid.eu/issues/7078))
 - [Feature] Anpassung der Portal-Kategorie „Umwelt-Daten und -Karten Online“ ([REDMINE-7350](https://redmine.informationgrid.eu/issues/7350))
 - [Bug] Automatische Indizierung im IGE-NG funktioniert nicht ([REDMINE-7201](https://redmine.informationgrid.eu/issues/7201))
 - [Bug] Fehlerhafter CSV-Export: capabilites_download_url korrekt befüllen ([REDMINE-7280](https://redmine.informationgrid.eu/issues/7280))
@@ -109,11 +108,10 @@ Profil MetaVer
 Profil UVP
 
 - [Feature] Umsetzungsticket Archivierung von Verfahren ([REDMINE-6778](https://redmine.informationgrid.eu/issues/6778))
-- [Feature] Regression Fehler: Checkbox "Erst mit Beginn des Auslegungszeitraums veröffentlichen" nicht sichtbar ([REDMINE-7335](https://redmine.informationgrid.eu/issues/7335))
-- [Feature] TEST: Regression Fehler: Checkbox "Erst mit Beginn des Auslegungszeitraums veröffentlichen" nicht sichtbar ([REDMINE-7336](https://redmine.informationgrid.eu/issues/7336))
 - [Feature] Archivierung für Autoren ausblenden ([REDMINE-7377](https://redmine.informationgrid.eu/issues/7377))
 - [Feature] Automatische Aktualisierung des Index bei der Archivierung ([REDMINE-7378](https://redmine.informationgrid.eu/issues/7378))
 - [Feature] Überarbeitung des Textes bei der Bestätigung Archivierung ([REDMINE-7448](https://redmine.informationgrid.eu/issues/7448))
+- [Bug] Regression Fehler: Checkbox "Erst mit Beginn des Auslegungszeitraums veröffentlichen" nicht sichtbar ([REDMINE-7335](https://redmine.informationgrid.eu/issues/7335))
 - [Bug] UVP-Verfahren - Portal - Darstellungsfehler in der Adresse ([REDMINE-6021](https://redmine.informationgrid.eu/issues/6021))
 - [Bug] Monitoring: Fehler bei Synchronisation mit Zabbix Monitoring ([REDMINE-7340](https://redmine.informationgrid.eu/issues/7340))
 - [Bug] Fehler bei der Veröffentlichung von Adressen ([REDMINE-7370](https://redmine.informationgrid.eu/issues/7370))
