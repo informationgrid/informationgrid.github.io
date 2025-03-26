@@ -14,11 +14,17 @@ Release 21.03.2025
 
 ### Hinweise für die Aktualisierung
 
+#### Interface-Search
+
 Aktuell muss der Zugriff auf den Atom-Feed Client im Apache angepasst werden. Dazu muss folgende Weiterleitung eingerichtet werden:
 
 ```shell
 RewriteRule ^/interface-search/dls$ /interface-search/dls/ [R,L]
 ```
+
+#### Codelist-Repository
+
+Die Angabe von MD5 Passwörtern hat sich geändert. Anstatt diese mit dem Präfix "MD5:" zu versehen, wird nur noch das (32-Zeichen lange) Passwort angegeben.
 
 ### Wichtige Änderungen
 
