@@ -50,7 +50,43 @@ Die Angabe von MD5 Passwörtern hat sich geändert. Anstatt diese mit dem Präfi
 
 ### Wichtige Änderungen
 
-... kommt in Kürze
+#### [InGrid] Der Harvester
+
+Das InGrid Universum erhält eine neue Komponente! :heart_eyes: :smiley: :star2: 
+Der InGrid Harvester ist eine eigenständige Softwarekomponente, die – wie der Name bereits andeutet – Daten aus diversen Quellen „erntet“ und in einem Speicher, den Elasticsearch-Indizes, zur weiteren Verarbeitung bereitstellt. Dadurch wird sichergestellt, dass die Daten jederzeit in einem einheitlichen Format verfügbar sind.
+=> Zur [Dokumentation](https://www.ingrid-oss.eu/latest/components/harvester.html)
+
+![InGrid Harvester: "Login"](../images/750_harvester_login.png "InGrid Harvester: Login"")
+<figcaption class="figcaption">InGrid Harvester: "Login"</figcaption>
+
+![InGrid Harvester: "Willkommen!"](../images/750_harvester_welcome-screen.png "InGrid Harvester: "Willkommen"")
+<figcaption class="figcaption">InGrid Harvester: "Willkommen!"</figcaption>
+
+([REDMINE-6823](https://redmine.informationgrid.eu/issues/7318))
+
+#### [InGrid Editor] Archivierung
+
+Datensätze bzw.Verfahren können ab sofort archivert werden! 
+
+![InGrid Editor: "Archivierung"](../images/750_ingrid-editor_object_archive.png "InGrid Editor: "Archivierung"")
+<figcaption class="figcaption">InGrid Editor: "Archivierung"</figcaption>
+
+![InGrid Editor: "Verhalten der Archivierung"](../images/750_ingrid-editor_catalog_behaviour_archive.png "InGrid Editor: "Verhalten der Archivierung"")
+<figcaption class="figcaption">InGrid Editor: "Verhalten der Archivierung"</figcaption>
+
+([REDMINE-6823](https://redmine.informationgrid.eu/issues/6778))
+
+#### [InGrid Editor] Archivierung
+
+Der InGrid Editor unterstützt nun die Erstellung englischsprachiger Datensätze. Damit können auch englischsprachige Kataloge erfasst werden.
+
+![InGrid Editor: "Englischsprachiger Katalog"](../images/750_ingrid-editor_object_EN.png "InGrid Editor: "Englischsprachiger Katalog"")
+<figcaption class="figcaption">InGrid Editor: "Englischsprachiger Katalog"</figcaption>
+
+![InGrid Editor: "Englischsprachiger Katalogkonfiguration"](../images/750_ingrid-editor_catalog_config_EN.png "InGrid Editor: "Englischsprachiger Katalogkonfiguration"")
+<figcaption class="figcaption">InGrid Editor: "Englischsprachiger Katalogkonfiguration"</figcaption>
+
+([REDMINE-6823](https://redmine.informationgrid.eu/issues/6951))
 
 ### Liste der Änderungen
 
