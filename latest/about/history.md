@@ -76,7 +76,7 @@ Datensätze bzw.Verfahren können ab sofort archivert werden!
 
 ([REDMINE-6823](https://redmine.informationgrid.eu/issues/6778))
 
-#### [InGrid Editor] Archivierung
+#### [InGrid Editor] Englische Sprache
 
 Der InGrid Editor unterstützt nun die Erstellung englischsprachiger Datensätze. Damit können auch englischsprachige Kataloge erfasst werden.
 
