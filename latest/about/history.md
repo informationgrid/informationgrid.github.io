@@ -7,6 +7,48 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 7.5.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.4.x](/7.4.0/about/history.html), [7.3.x](/7.3.0/about/history.html), [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 7.5.2
+
+Release 23.05.2025
+
+InGrid
+
+- [Bug] Account anlegen - Request Error Diagnostics ([REDMINE-6626](https://redmine.informationgrid.eu/issues/6626))
+- [Bug] IGE: Verhalten für Feld "Art des Dienstes" für AtomFeeds anpassen ([REDMINE-7510](https://redmine.informationgrid.eu/issues/7510))
+- [Bug] Abbrechen des Dialogs für InVeKoS setzt alle Merkmale zurück ([REDMINE-7536](https://redmine.informationgrid.eu/issues/7536))
+- [Bug] Anzeige des Index und des Suchergebnisses funktioniert nicht ([REDMINE-7539](https://redmine.informationgrid.eu/issues/7539))
+- [Bug] Fehler bei Zeige in Karte Funktionalität ([REDMINE-7559](https://redmine.informationgrid.eu/issues/7559))
+- [Bug] Fehler bei Verknüpfung eines Geodatensatzes in Datengrundlage ([REDMINE-7560](https://redmine.informationgrid.eu/issues/7560))
+- [Bug] Darstellung des Distributorkontaktes nicht korrekt (war: Fehlende Adressangaben in den RIPS-Metadaten) ([REDMINE-7589](https://redmine.informationgrid.eu/issues/7589))
+- [Bug] Ortsuche funktioniert nicht ([REDMINE-7616](https://redmine.informationgrid.eu/issues/7616))
+- [Bug] Versionskonflikt: "Trotzdem Speichern..."-Option feuert immer wieder den Versionskonflikt-Dialog ([REDMINE-7653](https://redmine.informationgrid.eu/issues/7653))
+- [Bug] Thesaurus WFS_GNDE liefert keine Ergebnisse ([REDMINE-7656](https://redmine.informationgrid.eu/issues/7656))
+- [Bug] Deaktivierte Verhalten werden nicht vollständig entfernt ([REDMINE-7695](https://redmine.informationgrid.eu/issues/7695))
+- [Bug] Abschnitt Datengrundlage/Herkunft in Geodatensatz - Beim ISO-Import werden interne Referenzierungen nicht aufgelöst ([REDMINE-7740](https://redmine.informationgrid.eu/issues/7740))
+
+InGrid Installation Saarland
+
+- [Bug] Importer liest keine HVD Kategorie ([REDMINE-7727](https://redmine.informationgrid.eu/issues/7727))
+
+Profil BASt
+
+- [Feature] Aktualisierung Hilfetexte ([REDMINE-7502](https://redmine.informationgrid.eu/issues/7502))
+
+Profil BKG
+
+- [Feature] AdV-MIS: Portal: Radiobutton "Sonstiges" unter Facette "Produktgruppe" entfernen ([REDMINE-6941](https://redmine.informationgrid.eu/issues/6941))
+- [Feature] Portal: Facette HVD einrichten ([REDMINE-6942](https://redmine.informationgrid.eu/issues/6942))
+
+Profil UVP
+
+- [Bug] Archivierung kann zu fehlerhaften Verfahren führen ([REDMINE-7541](https://redmine.informationgrid.eu/issues/7541))
+
+### Komponenten
+
+- IPLUG-SNS ([download](https://distributions.informationgrid.eu/ingrid-iplug-sns/7.5.2/))
+- IBUS ([download](https://distributions.informationgrid.eu/ingrid-ibus/7.5.2/))
+- PORTAL ([download](https://distributions.informationgrid.eu/ingrid-portal/7.5.2/))
+
 ## Version 7.5.1.1
 
 Release 04.04.2025
