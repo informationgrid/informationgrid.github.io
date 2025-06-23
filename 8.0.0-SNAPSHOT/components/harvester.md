@@ -154,6 +154,41 @@ networks:
     driver: "bridge"
 ```
 
+### Direkte Installation
+
+Um den Harvester direkt auf einem System zu installieren, müssen folgende Vorbedingungen erfüllt sein:
+* Elasticsearch (>= v6)
+* PostgreSQL (>= v14)
+* NodeJS (>= v20)
+
+Die Installation des Harvesters (z.B. nach `/opt/ingrid/harvester`) erfolgt dann mit diesen Schritten:
+
+#### Harvester clonen und bauen
+```
+git clone https://github.com/informationgrid/ingrid-harvester
+cd ingrid-harvester/server
+npm ci
+npm run build
+cd ../client
+npm ci
+npm run prod
+```
+
+#### Harvester installieren
+```
+mkdir -p /opt/ingrid/harvester
+cp server/package*.json /opt/ingrid/harvester/
+cp -r server/build/* /opt/ingrid/harvester/
+cp -r client/dist/webapp /opt/ingrid/harvester/server/app/webapp
+cd /opt/ingrid/harvester
+npm run install-production
+```
+
+#### Harvester starten
+```
+export IMPORTER_PROFILE=ingrid
+node app/index.js
+```
 
 ## Konfiguration
 
