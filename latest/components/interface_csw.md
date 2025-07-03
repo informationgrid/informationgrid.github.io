@@ -426,40 +426,7 @@ abgerufen werden. Existiert keine Datei mit entsprechender Erweiterung, wird die
 
 ### Einschränkung der Ergebnismenge auf Partner, Anbieter oder iPlug.
 
-Die Einschränkung auf Partner, Anbieter oder iPlug in der CSW Schnittstelle kann über die CSW Service URL vorgenommen werden.
-
-Dazu wird der Service URL per GET Parameter die entsprechende Einschränkung mitgegeben.
-
-z.B. liefert
-
-{% highlight text %}
-http://dev.informationgrid.eu/csw202?partner=ni
-{% endhighlight %}
-
-ausschließlich Ergebnisse des Partners "ni" zurück. Weitere gültige Parameter sind
-
-- `provider` Filterung nach einem bestimmten Anbieter(kürzel)
-- `iplug`  Filterung nach einer bestimmten iPlug-ID
-
-Bei entsprechender Konfiguration eines vorgeschalteten Web-Servers (URL-rewrite) kann die Einschränkung auch in den Pfad integriert werden. Die Service-URL könnte dann auch so aussehen:
-
-{% highlight text %}
-http://dev.informationgrid.eu/csw/partner/bund
-{% endhighlight %}
-
-Konfigurationsbeispiel Apache Konfiguration:
-
-```apacheconf
-RewriteEngine on
-# Die folgende Regel schreibt die Anfragen an csw um und leitet sie wie
-# einen Proxy-Request an 8083:csw weiter:
-
-RewriteRule ^/csw/partner/(.*) http://127.0.0.1:8083/csw?%{QUERY_STRING}&partner=$1 [P]
-RewriteRule ^/csw/provider/(.*) http://127.0.0.1:8083/csw?%{QUERY_STRING}&provider=$1 [P]
-```
-
-Die Einschränkungen können auch direkt in der CSW Anfrage formuliert werden. Intern ist es tatsächlich so, dass die Einschränkungen in der URL in eine Einschränkung innerhalb der Filter-Query der CSW Anfrage umgesetzt werden.
-
+Die Einschränkungen auf Partner, Anbieter oder iPlug in der CSW Schnittstelle können über die CSW Anfrage vorgenommen werden. 
 Beispiel einer *GetRecords* Anfrage mit Filterung nach *iplug* per POST XML. Als Content Type des Requests muss *application/xml* angegeben werden.
 Auf die gleiche Art und Weise kann auch per *partner* oder *provider* gefiltert werden.
 
