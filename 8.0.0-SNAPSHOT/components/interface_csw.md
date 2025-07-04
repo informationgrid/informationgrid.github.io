@@ -193,16 +193,16 @@ Ein Auszug aus einer INSERT-Aktion sieht folgendermaßen aus:
 
 ```xml
 <csw:Transaction service="CSW" version="2.0.2" xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-publication.xsd">
+                 xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-publication.xsd">
     <csw:Insert>
         <gmd:MD_Metadata xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd"
-            xmlns:gco="http://www.isotc211.org/2005/gco">
+                         xmlns:gco="http://www.isotc211.org/2005/gco">
             <gmd:fileIdentifier>
                 <gco:CharacterString>4915275a-733a-47cd-b1a6-1a3f1e976948</gco:CharacterString>
             </gmd:fileIdentifier>
             <gmd:language>
                 <gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#LanguageCode"
-                    codeListValue="ger">ger</gmd:LanguageCode>
+                                  codeListValue="ger">ger</gmd:LanguageCode>
             </gmd:language>
             <gmd:parentIdentifier>
                 <gco:CharacterString>A3E10CDE-45BF-4D95-BA60-0EDE6777XXXX</gco:CharacterString>
@@ -303,9 +303,9 @@ Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <soapenv:Body>
-    <GetCapabilities xmlns="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" outputSchema="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" />
-  </soapenv:Body>
+    <soapenv:Body>
+        <GetCapabilities xmlns="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" outputSchema="http://www.opengis.net/cat/csw/2.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" />
+    </soapenv:Body>
 </soapenv:Envelope>
 ```
 
@@ -337,17 +337,17 @@ Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <GetRecords  xmlns="http://www.opengis.net/cat/csw/2.0.2" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:apiso="http://www.opengis.net/cat/csw/apiso/1.0" xmlns:ows="http://www.opengis.net/ows" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/"  xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" service="CSW" version="2.0.2" resultType="results" outputFormat="application/xml" outputSchema="http://www.isotc211.org/2005/gmd" startPosition="1" maxRecords="10">
-  <Query typeNames="gmd:MD_Metadata">
-    <ElementSetName typeNames="">full</ElementSetName>
-    <Constraint version="1.1.0">
-       <ogc:Filter>
-          <ogc:PropertyIsLike escapeChar="\" singleChar="?" wildCard="*">
-             <ogc:PropertyName>AnyText</ogc:PropertyName>
-             <ogc:Literal>wasser</ogc:Literal>
-          </ogc:PropertyIsLike>
-       </ogc:Filter>
-    </Constraint>
-  </Query>
+    <Query typeNames="gmd:MD_Metadata">
+        <ElementSetName typeNames="">full</ElementSetName>
+        <Constraint version="1.1.0">
+            <ogc:Filter>
+                <ogc:PropertyIsLike escapeChar="\" singleChar="?" wildCard="*">
+                    <ogc:PropertyName>AnyText</ogc:PropertyName>
+                    <ogc:Literal>wasser</ogc:Literal>
+                </ogc:PropertyIsLike>
+            </ogc:Filter>
+        </Constraint>
+    </Query>
 </GetRecords>
 ```
 
@@ -364,12 +364,12 @@ Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als 
 
 ```xml
 <GetRecordById xmlns="http://www.opengis.net/cat/csw/2.0.2"
-service="CSW" version="2.0.2"
-outputSchema="http://www.opengis.net/cat/csw/2.0.2"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" >
-   <Id>98E56BC3-20EC-43A7-8270-1352F0A53AD4</Id>
-   <ElementSetName>full</ElementSetName>
+               service="CSW" version="2.0.2"
+               outputSchema="http://www.opengis.net/cat/csw/2.0.2"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2" >
+    <Id>98E56BC3-20EC-43A7-8270-1352F0A53AD4</Id>
+    <ElementSetName>full</ElementSetName>
 </GetRecordById>
 ```
 
@@ -387,9 +387,9 @@ Der Endpoint für den XML Request ergibt sich aus der Capabilities Antwort. Als 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <DescribeRecord xmlns="http://www.opengis.net/cat/csw/2.0.2"
-xmlns:gmd="http://www.isotc211.org/2005/gmd"
-schemaLanguage="http://www.w3.org/XML/Schema"
-service="CSW" version="2.0.2">
+                xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                schemaLanguage="http://www.w3.org/XML/Schema"
+                service="CSW" version="2.0.2">
 </DescribeRecord>
 ```
 
@@ -426,52 +426,19 @@ abgerufen werden. Existiert keine Datei mit entsprechender Erweiterung, wird die
 
 ### Einschränkung der Ergebnismenge auf Partner, Anbieter oder iPlug.
 
-Die Einschränkung auf Partner, Anbieter oder iPlug in der CSW Schnittstelle kann über die CSW Service URL vorgenommen werden.
-
-Dazu wird der Service URL per GET Parameter die entsprechende Einschränkung mitgegeben.
-
-z.B. liefert
-
-{% highlight text %}
-http://dev.informationgrid.eu/csw202?partner=ni
-{% endhighlight %}
-
-ausschließlich Ergebnisse des Partners "ni" zurück. Weitere gültige Parameter sind
-
-- `provider` Filterung nach einem bestimmten Anbieter(kürzel)
-- `iplug`  Filterung nach einer bestimmten iPlug-ID
-
-Bei entsprechender Konfiguration eines vorgeschalteten Web-Servers (URL-rewrite) kann die Einschränkung auch in den Pfad integriert werden. Die Service-URL könnte dann auch so aussehen:
-
-{% highlight text %}
-http://dev.informationgrid.eu/csw/partner/bund
-{% endhighlight %}
-
-Konfigurationsbeispiel Apache Konfiguration:
-
-```apacheconf
-RewriteEngine on
-# Die folgende Regel schreibt die Anfragen an csw um und leitet sie wie
-# einen Proxy-Request an 8083:csw weiter:
-
-RewriteRule ^/csw/partner/(.*) http://127.0.0.1:8083/csw?%{QUERY_STRING}&partner=$1 [P]
-RewriteRule ^/csw/provider/(.*) http://127.0.0.1:8083/csw?%{QUERY_STRING}&provider=$1 [P]
-```
-
-Die Einschränkungen können auch direkt in der CSW Anfrage formuliert werden. Intern ist es tatsächlich so, dass die Einschränkungen in der URL in eine Einschränkung innerhalb der Filter-Query der CSW Anfrage umgesetzt werden.
-
+Die Einschränkungen auf Partner, Anbieter oder iPlug in der CSW Schnittstelle können über die CSW Anfrage vorgenommen werden.
 Beispiel einer *GetRecords* Anfrage mit Filterung nach *iplug* per POST XML. Als Content Type des Requests muss *application/xml* angegeben werden.
 Auf die gleiche Art und Weise kann auch per *partner* oder *provider* gefiltert werden.
 
 ```xml
 <csw:GetRecords xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
-    xmlns="http://www.opengis.net/cat/csw/2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:ogc="http://www.opengis.net/ogc" xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:ows="http://www.opengis.net/ows" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="CSW" version="2.0.2"
-    maxRecords="10" startPosition="1" resultType="results" outputFormat="application/xml"
-    outputSchema="http://www.isotc211.org/2005/gmd"
-    xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd">
+                xmlns="http://www.opengis.net/cat/csw/2.0.2" xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:ogc="http://www.opengis.net/ogc" xmlns:dct="http://purl.org/dc/terms/"
+                xmlns:ows="http://www.opengis.net/ows" xmlns:gml="http://www.opengis.net/gml" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="CSW" version="2.0.2"
+                maxRecords="10" startPosition="1" resultType="results" outputFormat="application/xml"
+                outputSchema="http://www.isotc211.org/2005/gmd"
+                xsi:schemaLocation="http://www.opengis.net/cat/csw/2.0.2 http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd">
     <csw:Query typeNames="gmd:MD_Metadata">
         <csw:ElementSetName typeNames="">full</csw:ElementSetName>
         <Constraint version="1.1.0">
@@ -490,22 +457,22 @@ Eine Filterung mehrerer iPlugs ist dann wie folgt möglich:
 
 ```xml
     <csw:Query typeNames="gmd:MD_Metadata">
-        <csw:ElementSetName typeNames="">full</csw:ElementSetName>
-        <Constraint version="1.1.0">
-            <ogc:Filter>
-                <ogc:Or>
-                    <ogc:PropertyIsEqualTo>
-                        <ogc:PropertyName>iplug</ogc:PropertyName>
-                        <ogc:Literal>/ingrid-group:ige-iplug-HH</ogc:Literal>
-                    </ogc:PropertyIsEqualTo>
-                    <ogc:PropertyIsEqualTo>
-                        <ogc:PropertyName>iplug</ogc:PropertyName>
-                        <ogc:Literal>/ingrid-group:ige-iplug-HB</ogc:Literal>
-                    </ogc:PropertyIsEqualTo>
-                </ogc:Or>
-            </ogc:Filter>
-        </Constraint>
-    </csw:Query>
+    <csw:ElementSetName typeNames="">full</csw:ElementSetName>
+    <Constraint version="1.1.0">
+        <ogc:Filter>
+            <ogc:Or>
+                <ogc:PropertyIsEqualTo>
+                    <ogc:PropertyName>iplug</ogc:PropertyName>
+                    <ogc:Literal>/ingrid-group:ige-iplug-HH</ogc:Literal>
+                </ogc:PropertyIsEqualTo>
+                <ogc:PropertyIsEqualTo>
+                    <ogc:PropertyName>iplug</ogc:PropertyName>
+                    <ogc:Literal>/ingrid-group:ige-iplug-HB</ogc:Literal>
+                </ogc:PropertyIsEqualTo>
+            </ogc:Or>
+        </ogc:Filter>
+    </Constraint>
+</csw:Query>
 ```
 
 **Hinweis**
