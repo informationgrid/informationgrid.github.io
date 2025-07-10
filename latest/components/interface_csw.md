@@ -160,7 +160,7 @@ Hier wird die Kommunikation zum iBus definiert, an dem sich die anzusprechenden 
 | Feld                           | Beschreibung                                             |
 |--------------------------------|----------------------------------------------------------|
 | Client Proxy ID                | Eindeutige ID des iPlugs  |
-| iBus IP	                     | IP Adresse unter der der iBus erreichbar ist  |
+| iBus IP	                      | IP Adresse unter der der iBus erreichbar ist  |
 | iBus port                      | Port der vom iBus verwendet wird  |
 | iBus proxy id                  | Eindeutige ID des iBus  |
 
@@ -223,9 +223,9 @@ Mit dem InGrid iBus harvester, können iPlugs aus eine InGrid System in der CSW 
 
 Ablauf:
 
-- Mit der Angabe der Kommunikations-Daten für den iBus werden alle iPlugs, die am iBus abgeschlossen sind gelistet
+- Mit der Angabe der Kommunikations-Daten für den iBus werden alle iPlugs gelistet, die am iBus abgeschlossen sind
 - ein oder mehrere iPlugs können aktiviert werden
-- Bestimmte Eigenschaften, wie die abzusetzende InGrid?-Query und Abfrage-Paraneter können in der Detailansicht des iPlugs editiert werden
+- Bestimmte Eigenschaften, wie die abzusetzende InGrid?-Query und Abfrage-Parameter können in der Detailansicht des iPlugs editiert werden
 
 **GDI-DE test data harvester**
 
@@ -489,6 +489,15 @@ oder
 http://metaver.de/csw?service=CSW&version=2.0.2&request=GetRecords&resultType=results&outputFormat=application/xml&startPosition=1&maxRecords=1&typeNames=gmd:MD_Metadata&elementSetName=full&CONSTRAINTLANGUAGE=Filter&constraint_language_version=1.1.0&constraint=<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc"><ogc:PropertyIsEqualTo><ogc:PropertyName>apiso:partner</ogc:PropertyName><ogc:Literal>hb</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
 {% endhighlight %}
 
+
+### Wie bekomme ich eine Liste aller iPlugs, die in der CSW-Schnittstelle indexiert sind?
+Es gibt verschiedene Möglichkeiten, eine Liste aller iPlugs zu erhalten, die in der CSW Schnittstelle indexiert sind:
+
+1. **Über die CSW Konfiguration**: In der Konfiguration einer hinzugefügten iBus-Instanz werden alle verfügbaren iPlugs aufgelistet.
+2. **Über die iBus Schnittstelle**: In der iBus-Admin GUI werden ebenfalls alle iPlugs angezeigt, die am iBus angemeldet sind. Siehe auch [iBus Konfiguration](./ibus.md#konfiguration)
+ 
+**Hinweis**
+iPlugs aus dem [IGE-NG Editor](../ige-ng) verwenden standardmäßig das Präfix 'ige-ng_', um die Indizes besser zu identifizieren und Kollisionen mit bestehenden Indizes zu vermeiden.
 
 ### Wie kann ich das Ausgabeformat (outputSchema) der Antwort meiner Anfrage bestimmen?
 Standardmäßig ist das Ausgabeformat auf ISO (GMD, http://www.isotc211.org/2005/gmd) eingestellt, wenn bei der Anfrage keine explizite Festlegung erfolgt oder wenn das GMD-Format explizit angefragt wird.
