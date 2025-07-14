@@ -43,7 +43,7 @@ Beispiel für `user.json`:
 
 ### Konfigurationsdateien
 
-In einem Docker-Setup können diese Dateien vom Hostsystem in den Container gemappt werden, um sie über Neustarts zu persistieren.
+In einem Docker-Setup sollten diese Dateien vom Hostsystem in den Container gemappt werden.
 
 | Speicherort der Konfigurationsdatei (Projekt) | Speicherort der Konfigurationsdatei (Docker-Container)           | Zweck                                           |
 |-----------------------------------------------|------------------------------------------------------------------|-------------------------------------------------|
@@ -83,112 +83,6 @@ Einige allgemeine Einstellungen können auch über Umgebungsvariablen konfigurie
 | IMPORTER_PROFILE            | Profil, das für die Anwendung verwendet wird: ingrid, diplanung, mcloud |
 | BASE_URL                    | Unterpfad, unter dem der Harvester bereitgestellt wird, wenn nicht unter `/` |
 
-### Installation mit docker compose
-
-Eine Beispiel-Installation mit docker compose kann etwa so aussehen:
-```
-services:
-  harvester:
-    image: docker-registry.wemove.com/ingrid-harvester:latest
-    restart: unless-stopped
-    environment:
-     - NODE_ENV=production
-     #- BASE_URL=/harvester/
-     - IMPORTER_PROFILE=ingrid
-     - ADMIN_PASSWORD=admin
-     - ELASTIC_URL=http://elastic:9200
-     - ELASTIC_VERSION=8
-     - ELASTIC_USER=elastic
-     - ELASTIC_PASSWORD=
-     - ELASTIC_ALIAS=harvester-alias
-     - ELASTIC_PREFIX=harvester_
-     - DB_URL=postgres
-     - DB_PORT=5432
-     - DB_NAME=harvester
-     - DB_USER=admin
-     - DB_PASSWORD=admin
-    volumes:
-       - /etc/localtime:/etc/localtime:ro
-       - ./harvester/config/config.json:/opt/ingrid/harvester/server/config.json
-       - ./harvester/config/client_config.json:/opt/ingrid/harvester/server/app/webapp/assets/config.json
-       - ./harvester/logs:/opt/ingrid/harvester/server/logs
-    networks:
-      - ingrid-network
-
-  postgres:
-    image: postgres:15.7
-    restart: unless-stopped
-    environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=admin
-      - PGDATA=/pgdata
-    volumes:
-      - ./postgres/_data/pgdata:/pgdata
-      - ./postgres/init-db:/docker-entrypoint-initdb.d
-    networks:
-      - ingrid-network
-
-  elastic:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.1
-    restart: unless-stopped
-    environment:
-      - cluster.name=ingrid
-      - discovery.type=single-node
-      - cluster.routing.allocation.disk.threshold_enabled=false
-      - http.host=0.0.0.0
-      - transport.host=0.0.0.0
-      - http.cors.enabled=true
-      - xpack.security.enabled=false
-      - "ES_JAVA_OPTS=-Xms2g -Xmx2g -Dlog4j2.formatMsgNoLookups=true"
-      # Hotfix #3292 
-      - "LOG4J_FORMAT_MSG_NO_LOOKUPS=true"
-    deploy:
-      resources:
-        limits:
-          memory: 3072M
-    networks:
-      - ingrid-network
-
-networks:
-  ingrid-network:
-    driver: "bridge"
-```
-
-### Direkte Installation
-
-Um den Harvester direkt auf einem System zu installieren, müssen folgende Vorbedingungen erfüllt sein:
-* Elasticsearch (>= v6)
-* PostgreSQL (>= v14)
-* NodeJS (>= v20)
-
-Die Installation des Harvesters (z.B. nach `/opt/ingrid/harvester`) erfolgt dann mit diesen Schritten:
-
-#### Harvester clonen und bauen
-```
-git clone https://github.com/informationgrid/ingrid-harvester
-cd ingrid-harvester/server
-npm ci
-npm run build
-cd ../client
-npm ci
-npm run prod
-```
-
-#### Harvester installieren
-```
-mkdir -p /opt/ingrid/harvester
-cp server/package*.json /opt/ingrid/harvester/
-cp -r server/build/* /opt/ingrid/harvester/
-cp -r client/dist/webapp /opt/ingrid/harvester/server/app/webapp
-cd /opt/ingrid/harvester
-npm run install-production
-```
-
-#### Harvester starten
-```
-export IMPORTER_PROFILE=ingrid
-node app/index.js
-```
 
 ## Konfiguration
 
