@@ -17,6 +17,50 @@ Release 04.07.2025
 
 ### Wichtige Änderungen
 
+#### [InGrid] Das neue Portal
+
+Neues Portal im alten Gewand! Das Backend des Portals wurde mit dem modernen Backend GRAV CMS ersetzt und bietet eine Vielzahl neuer Features. Neben Umfangreicher Detailinformationen bzgl. des laufenden Systems können nun Bereiche über den Browser eingestellt die zuvor entweder ausschließlich über das Command-Line-Interface (CLI) durchgeführt werden konnten oder eine Anpassung des Profils erforderten. Herauszustellen ist dabei vor allem der Abschnitt "Pages". Hier können die User einige Inhalte der Seite verändert werden zu zuvor nur über Anpassungen des Profils möglich waren.
+Es wurde darauf geachtet die Arbeitsweise mit dem Portal (Suche, Karten, Kataloge bzw. Themenübersicht etc.) wie gewohnt stattfinden kann.
+
+![InGrid Portal: "Startseite"](../images/800_portal_landingpage.png "InGrid Portal: Startseite"")
+<figcaption class="figcaption">InGrid Portal: "Startseite"</figcaption>
+
+![InGrid Portal: "Admin"](../images/800_portal_admin_landingpage.png "InGrid Portal: "Admin"")
+<figcaption class="figcaption">InGrid Portal: "Admin"</figcaption>
+
+
+![InGrid Portal: "Admin Pages für die individuelle Anpassung der Inhalte"](../images/800_portal_admin_pages.png "InGrid Portal: "Admin Pages für die individuelle Anpassung der Inhalte"")
+<figcaption class="figcaption">InGrid Portal: "Admin Pages für die individuelle Anpassung der Inhalte"</figcaption>
+
+([REDMINE-5686](https://redmine.informationgrid.eu/issues/5686))
+
+#### [InGrid Portal] Erweiterte Ausgabe im Feld "Datengrundlage/Herkunft"
+
+Im Editor wurde das Formularfeld Datengrundlage/Herkunft erweitert, siehe Feature #[2601](https://redmine.informationgrid.eu/issues/2601), so dass konkrete Geodatensätze referenziert werden können, deren Daten die Datengrundlage für einen Datensatz bilden, z.B. bei der Angabe der Quelldatensätze, der im INSPIRE-Datenschema vorliegenden Datensätze. Diese Felder werden nun auch im Portal auf der Detailseite ab Version 8 abgebildet.
+
+![InGrid Portal: "Datengrundlage/Herkunft"](../images/800_portal_suche_detail_data-origin.png "InGrid Portal: Datengrundlage/Herkunft"")
+<figcaption class="figcaption">InGrid Portal: "Datengrundlage/Herkunft"</figcaption>
+
+![InGrid Editor: "Datengrundlage/Herkunft"](../images/800_ingrid_editor_data_object_origin.png "InGrid Editor: Datengrundlage/Herkunft"")
+<figcaption class="figcaption">InGrid Editor: "Datengrundlage/Herkunft"</figcaption>
+
+([REDMINE-7433](https://redmine.informationgrid.eu/issues/7433))
+
+#### [InGrid  Editor] Ablegen der values im Datenmodell
+
+Um den CSV-Export nutzerfreundlicher zu gestalten, werden künftig die Klartextwerte der Codelisteneinträge direkt im Datenmodell gespeichert – das verbessert die Lesbarkeit und ermöglicht auch gezielte SQL-Suchen nach Klartextwerten. Diese Erweiterung betrifft die Select- und Autocomplete-Komponenten.
+
+![InGrid Editor: "JSON-View"](../images/800_ingrid_editor_data_object_json-view_key-value-codelist.png "InGrid Editor: JSON-View"")
+<figcaption class="figcaption">InGrid Editor: "JSON View"</figcaption>
+
+([REDMINE-5838](https://redmine.informationgrid.eu/issues/5838))
+
+#### [InGrid Editor] Partieller JSON Import
+
+Um Datensätze zu aktualisieren musste bisher das Dokument zuerst exportiert und anschließend modifiziert wieder hochgeladen werden. 
+Mit Version 8.0.0 können nun gezielt die Änderungen eingepflegt werden. Das einpflegen der Änderungen folgt den Regelungen für JSON-Patch und JSON-Merge ( RFC 6902 und RFC 7386).
+
+([REDMINE-7856](https://redmine.informationgrid.eu/issues/7856))
 
 ### Liste der Änderungen
 
