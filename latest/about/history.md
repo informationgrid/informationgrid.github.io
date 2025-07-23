@@ -127,7 +127,6 @@ Profil BKG
 
 Profil KRZN
 
-- [Test] Testen des Exports für interne Datensätze ([REDMINE-7143](https://redmine.informationgrid.eu/issues/7143))
 - [Feature] Anpassung des Zoom-Feldes ([REDMINE-7537](https://redmine.informationgrid.eu/issues/7537))
 
 Profil LfU Bayern
@@ -154,7 +153,6 @@ Profil Saarland
 
 Profil UVP
 
-- [Support] Performance Verbesserung beim Virus-Scan Prozess ([REDMINE-6081](https://redmine.informationgrid.eu/issues/6081))
 - [Feature] Erweiterung des UVP Monitorings um die Verfahrensseiten ([REDMINE-6218](https://redmine.informationgrid.eu/issues/6218))
 - [Feature] Umstellung Portal auf Neue Portal Technologie - UVP-VERBUND ([REDMINE-7061](https://redmine.informationgrid.eu/issues/7061))
 - [Feature] Zugriff auf Geofabrik Karten für UVP-VERBUND und METAVER trennen ([REDMINE-7814](https://redmine.informationgrid.eu/issues/7814))
