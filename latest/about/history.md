@@ -19,8 +19,8 @@ Release 04.07.2025
 
 #### [InGrid] Das neue Portal
 
-Neues Portal im alten Gewand! Das Backend des Portals wurde mit dem modernen Backend GRAV CMS ersetzt und bietet eine Vielzahl neuer Features. Neben Umfangreicher Detailinformationen bzgl. des laufenden Systems können nun Bereiche über den Browser eingestellt die zuvor entweder ausschließlich über das Command-Line-Interface (CLI) durchgeführt werden konnten oder eine Anpassung des Profils erforderten. Herauszustellen ist dabei vor allem der Abschnitt "Pages". Hier können die User einige Inhalte der Seite verändert werden zu zuvor nur über Anpassungen des Profils möglich waren.
-Es wurde darauf geachtet die Arbeitsweise mit dem Portal (Suche, Karten, Kataloge bzw. Themenübersicht etc.) wie gewohnt stattfinden kann.
+Neues Portal im alten Gewand! Das Backend des Portals wurde mit dem modernen Backend GRAV CMS ersetzt, das eine Vielzahl neuer Features bietet. Neben umfangreicher Detailinformationen bzgl. des laufenden Systems können nun Bereiche über den Browser eingestellt und editiert werden die zuvor entweder ausschließlich über das Command-Line-Interface (CLI) durchgeführt werden konnten oder eine Anpassung des Profils erforderten.
+Herauszustellen ist dabei vor allem der Abschnitt “Pages”. Hier können die User einige Inhalte ihres Portals eigenständig verändern, deren Anpassung bis Version 7.5 ausschließlich mittels Anpassungen des Profils möglich waren. Die Arbeitsweise mit dem Portal, also mit der Suche, den Detailinformationen oder Katalogen bzw. mit der Themenübersicht , ist unverändert, so dass hier ein Reibungsloser Übergang im Umgang mit dem Portal gewährt wird.
 
 ![InGrid Portal: "Startseite"](../images/800_portal_landingpage.png "InGrid Portal: Startseite"")
 <figcaption class="figcaption">InGrid Portal: "Startseite"</figcaption>
