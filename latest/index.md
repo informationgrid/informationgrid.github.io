@@ -77,14 +77,8 @@ menu:
         href: components/iplug_se.html
       - title: iPlug CSW
         href: components/iplug_dsc_csw.html
-      - title: iPlug OpenSearch
-        href: components/iplug_opensearch.html
       - title: iPlug WFS
         href: components/iplug_dsc_wfs.html
-      - title: iPlug Excel
-        href: components/iplug_excel.html
-      - title: iPlug XML
-        href: components/iplug_xml.html
       - title: iPlug BLP
         href: components/iplug_blp.html
       - title: InGrid Harvester
@@ -151,10 +145,7 @@ published: true
 - [iPlug DSC](components/iplug_dsc_scripted.html) - Indexierung von Datenbankinhalten
 - [iPlug SE (Search Engine)](components/iplug_se.html) - Indexierung von Webseiten
 - [iPlug CSW](components/iplug_dsc_csw.html) - Indexierung von CSW-Diensten (Catalog Service Web)
-- [iPlug OpenSearch](components/iplug_opensearch.html) - Anbindung von externen OpenSearch Schnittstellen
 - [iPlug WFS](components/iplug_dsc_wfs.html) - Indexierung von WFS-Diensten (Web Feature Service)
-- [iPlug Excel](components/iplug_excel.html) - Indexierung von Excel Dateien
-- [iPlug XML](components/iplug_xml.html) - Indexierung vom XML Daten
 - [iPlug BLP](components/iplug_blp.html) - Indexierung von Bauleitplanungsdaten aus einer Excel Datei
 
 ### Schnittstellenkomponenten

@@ -62,6 +62,16 @@ Mit Version 8.0.0 können nun gezielt die Änderungen eingepflegt werden. Das ei
 
 ([REDMINE-7856](https://redmine.informationgrid.eu/issues/7856))
 
+### Veraltete Komponenten
+
+Die folgenden Komponenten werden nicht mehr weiterentwickelt:
+
+* iPlug-Excel
+* iPlug-Opensearch
+* iPlug-XML
+
+Das Portal-Classic wird noch in der Version 7.5.x weiterhin unterstützt, um kritische Fehler zu beheben.
+
 ### Liste der Änderungen
 
 InGrid
