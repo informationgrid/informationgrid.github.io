@@ -19,8 +19,11 @@ Release 04.07.2025
 
 #### [InGrid] Das neue Portal
 
-Neues Portal im alten Gewand! Das Backend des Portals wurde mit dem modernen Backend GRAV CMS ersetzt, das eine Vielzahl neuer Features bietet. Neben umfangreicher Detailinformationen bzgl. des laufenden Systems können nun Bereiche über den Browser eingestellt und editiert werden die zuvor entweder ausschließlich über das Command-Line-Interface (CLI) durchgeführt werden konnten oder eine Anpassung des Profils erforderten.
-Herauszustellen ist dabei vor allem der Abschnitt “Pages”. Hier können die User einige Inhalte ihres Portals eigenständig verändern, deren Anpassung bis Version 7.5 ausschließlich mittels Anpassungen des Profils möglich waren. Die Arbeitsweise mit dem Portal, also mit der Suche, den Detailinformationen oder Katalogen bzw. mit der Themenübersicht , ist unverändert, so dass hier ein Reibungsloser Übergang im Umgang mit dem Portal gewährt wird.
+Neues Portal im alten Gewand! Das Backend des Portals wurde mit dem modernen Backend GRAV CMS ersetzt, das eine Vielzahl neuer Features bietet.
+
+Neben umfangreicher Detailinformationen bzgl. des laufenden Systems können nun Bereiche über den Browser eingestellt und editiert werden, die zuvor entweder ausschließlich über das Command-Line-Interface (CLI) oder durch eine Anpassung des Profils durchgeführt werden konnten.
+
+Herauszustellen ist dabei vor allem der Abschnitt “Pages”. Hier können die User Inhalte ihres Portals eigenständig verändern, deren Anpassung bis Version 7.5 ausschließlich mittels Anpassungen des Profils möglich war. Die Arbeitsweise mit dem Portal, also mit der Suche, den Detailinformationen oder Katalogen bzw. mit der Themenübersicht , ist unverändert, so dass hier ein reibungsloser Übergang im Umgang mit dem Portal gewährt wird.
 
 ![InGrid Portal: "Startseite"](../images/800_portal_landingpage.png "InGrid Portal: Startseite"")
 <figcaption class="figcaption">InGrid Portal: "Startseite"</figcaption>
@@ -36,7 +39,9 @@ Herauszustellen ist dabei vor allem der Abschnitt “Pages”. Hier können die 
 
 #### [InGrid Portal] Erweiterte Ausgabe im Feld "Datengrundlage/Herkunft"
 
-Im Editor wurde das Formularfeld Datengrundlage/Herkunft erweitert, siehe Feature #[2601](https://redmine.informationgrid.eu/issues/2601), so dass konkrete Geodatensätze referenziert werden können, deren Daten die Datengrundlage für einen Datensatz bilden, z.B. bei der Angabe der Quelldatensätze, der im INSPIRE-Datenschema vorliegenden Datensätze. Diese Felder werden nun auch im Portal auf der Detailseite ab Version 8 abgebildet.
+Im Editor wurde das Formularfeld Datengrundlage/Herkunft erweitert, siehe Feature #[2601](https://redmine.informationgrid.eu/issues/2601), so dass konkrete Geodatensätze referenziert werden können, deren Daten die Grundlage des Datensatzes bilden. So z.B. bei der Angabe der Quelldatensätze der im INSPIRE-Datenschema vorliegenden Metadaten.
+
+Diese Felder werden nun auch im Portal auf der Detailseite ab Version 8 abgebildet.
 
 ![InGrid Portal: "Datengrundlage/Herkunft"](../images/800_portal_suche_detail_data-origin.png "InGrid Portal: Datengrundlage/Herkunft"")
 <figcaption class="figcaption">InGrid Portal: "Datengrundlage/Herkunft"</figcaption>
@@ -46,9 +51,9 @@ Im Editor wurde das Formularfeld Datengrundlage/Herkunft erweitert, siehe Featur
 
 ([REDMINE-7433](https://redmine.informationgrid.eu/issues/7433))
 
-#### [InGrid  Editor] Ablegen der values im Datenmodell
+#### [InGrid  Editor] Ablegen der Codelist-Values im Datenmodell
 
-Um den CSV-Export nutzerfreundlicher zu gestalten, werden künftig die Klartextwerte der Codelisteneinträge direkt im Datenmodell gespeichert – das verbessert die Lesbarkeit und ermöglicht auch gezielte SQL-Suchen nach Klartextwerten. Diese Erweiterung betrifft die Select- und Autocomplete-Komponenten.
+Um den CSV-Export nutzerfreundlicher zu gestalten, werden künftig die Klartextwerte der Codelisteneinträge direkt im Datenmodell gespeichert – das verbessert die Lesbarkeit und ermöglicht auch gezielte SQL-Suchen nach Klartextwerten. Diese Erweiterung betrifft die Select- und Autocomplete-Abschnitte.
 
 ![InGrid Editor: "JSON-View"](../images/800_ingrid_editor_data_object_json-view_key-value-codelist.png "InGrid Editor: JSON-View"")
 <figcaption class="figcaption">InGrid Editor: "JSON View"</figcaption>
@@ -57,10 +62,16 @@ Um den CSV-Export nutzerfreundlicher zu gestalten, werden künftig die Klartextw
 
 #### [InGrid Editor] Partieller JSON Import
 
-Um Datensätze zu aktualisieren musste bisher das Dokument zuerst exportiert und anschließend modifiziert wieder hochgeladen werden. 
-Mit Version 8.0.0 können nun gezielt die Änderungen eingepflegt werden. Das einpflegen der Änderungen folgt den Regelungen für JSON-Patch und JSON-Merge ( RFC 6902 und RFC 7386).
+Um Datensätze zu aktualisieren musste bisher das Dokument zuerst exportiert und anschließend modifiziert wieder importiert werden. 
+Mit Version 8.0.0 können nun gezielt die Änderungen eingepflegt werden. Das Einpflegen der Änderungen folgt den Regeln für JSON-Patch und JSON-Merge ( RFC 6902 und RFC 7386).
 
 ([REDMINE-7856](https://redmine.informationgrid.eu/issues/7856))
+
+#### [InGrid MVIS] Upgrade auf Elasticsearch 8
+
+Der Messwerte Client wurde auf Elasticsearch 8 aktualisiert und liegt damit wieder innerhalb der Support Matrix.
+
+([REDMINE-7701](https://redmine.informationgrid.eu/issues/7701))
 
 ### Veraltete Komponenten
 
