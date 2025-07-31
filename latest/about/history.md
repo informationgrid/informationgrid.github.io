@@ -7,6 +7,40 @@ description: "InGrid: Indexieren, Recherchieren, Visualisieren, Teilen"
 Diese Release Notes betreffen ausschließlich die Versionen 8.0.0. Release Notes älterer Versionen können hier eingesehen werden:
 [7.5.x](/7.5.0/about/history.html), [7.4.x](/7.4.0/about/history.html), [7.3.x](/7.3.0/about/history.html), [7.2.x](/7.2.0/about/history.html), [7.1.x](/7.1.0/about/history.html), [7.0.x](/7.0.0/about/history.html), [6.3.x](/6.3.0/about/history.html), [6.2.x](/6.2.0/about/history.html), [6.1.x](/6.1.0/about/history.html), [6.0.x](/6.0.0/about/history.html), [5.14.x](/5.14.0/about/history.html), [5.13.x](/5.13.0/about/history.html), [5.12.x](/5.12.0/about/history.html), [5.11.x](/5.11.0/about/history.html), [5.10.x](/5.10.0/about/history.html), [5.9.x](/5.9.0/about/history.html), [5.8.x](/5.8.0/about/history.html), [5.7.x](/5.7.0/about/history.html), [5.6.x](/5.6.0/about/history.html), [5.5.x](/5.5.0/about/history.html), [5.4.x](/5.4.0/about/history.html), [5.3.x](/5.3.0/about/history.html), [5.2.x](/5.2.0/about/history.html), [5.1.x](/5.1.0/about/history.html), [5.0.x](/5.0.0/about/history.html)
 
+## Version 8.0.1.1
+
+Release 30.07.2025
+
+InGrid
+
+- [Bug] Migration kann zu falschen Datensatzänderungen führen ([REDMINE-8050](https://redmine.informationgrid.eu/issues/8050))
+
+
+## Version 8.0.1
+
+Release 29.07.2025
+
+InGrid
+
+- [Feature] Capabilities-Assistent in Diensten, auf denen jemand nur Leserechte hat, ausblenden ([REDMINE-8038](https://redmine.informationgrid.eu/issues/8038))
+- [Feature] Stacktraces aus Fehlerresponses entfernen ([REDMINE-5773](https://redmine.informationgrid.eu/issues/5773))
+- [Bug] Fehler beim Erstellen eines Benutzer ([REDMINE-8041](https://redmine.informationgrid.eu/issues/8041))
+- [Bug] JSON-Schema-Validierung Fehler bei Literatur- MD mit Dateiupload ([REDMINE-8030](https://redmine.informationgrid.eu/issues/8030))
+- [Bug] Schlagworte konsolidieren funktioniert nicht für Autoren ([REDMINE-8016](https://redmine.informationgrid.eu/issues/8016))
+- [Bug] Open Search rdf Paging Links enhalten keine Page Aufrufe ([REDMINE-8007](https://redmine.informationgrid.eu/issues/8007))
+
+Profil LfU Bayern
+
+- [Feature] Filterung/Kennzeichnung von WWA-AB-Daten im LfU-Bayern Portal ([REDMINE-7548](https://redmine.informationgrid.eu/issues/7548))
+
+Profil UVP
+
+- [Bug] Default Codeliste für UVP-Nummer führt zu Fehler ([REDMINE-7952](https://redmine.informationgrid.eu/issues/7952))
+
+### Komponenten
+
+- INTERFACE-SEARCH ([download](https://distributions.informationgrid.eu/ingrid-interface-search/8.0.1/))
+
 
 ## Version 8.0.0
 
