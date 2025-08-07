@@ -51,7 +51,7 @@ Release 04.07.2025
 #### Portal in Version 8 benötigt Anpassungen
 
 Mit dem neuen Portal (siehe [REDMINE-5686](https://redmine.informationgrid.eu/issues/5686) ) ändert sich auch die Konfiguration im Container Kontext.
-Die Abhängigkeiten zu einer Datenbank entfällt da es sich um ein Flat-File-CMS handelt und daher alle Website Inhalte in Form statischer Dateien auf dem Server gespeichert werden. Das erfordert Anpassungen für das Routing und benötigt Erweiterungen die FastCGI ermöglichen.
+Die Abhängigkeiten zu einer Datenbank entfällt da es sich um ein Flat-File-CMS handelt und daher alle Website Inhalte in Form statischer Dateien auf dem Server gespeichert werden. Das erfordert Anpassungen für das Routing und benötigt Erweiterungen die FastCGI ermöglichen. Wenn in der Konfiguration kein Administrator festgelegt wurde, muss beim erstmaligen aufrufen des Portals ein Admin erstellt werden. Um das zu vermeiden empfiehlt es sich vor dem erstmaligen starten unter dem gemappten user Pfad die Admin Konfiguration zu hinterlegen (siehe Beispiel weiter unten).
 
 
 In einer Docker Compose Umgebung muss die User Umgebung und sollten die Logs gemappt sein. Außerdem werden die InGrid Komponenten mittels der InGrid-API angesteuert die wiederum eine Verbindung zum Elastic Search herstellt.
@@ -224,6 +224,29 @@ LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so
 #LoadModule proxy_fdpass_module modules/mod_proxy_fdpass.so
 LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
 
+```
+
+##### Erstellung eines Admins
+
+In `user/config/accounts/admin.yaml` kann ein Admin festgelegt werden. Im Feld `hashed_password` ist ein bcrypt gehashtes Passwort zu hinterlegen:
+
+```admin.yaml
+state: enabled
+email: webmaster@ingrid-portal.de
+fullname: Administrator
+title: Administrator
+hashed_password: $2y$10$99bX3uInb3PEg3.L/KiItOVQ3u3JS.iPzPj9DhvMK3aHyM.FMpizi
+language: en
+content_editor: default
+twofa_enabled: false
+twofa_secret: JXR6OAS6RR4XVCCVTVV4YLEHBHSNZNLH
+avatar: {  }
+access:
+  site:
+    login: true
+  admin:
+    login: true
+    super: true
 ```
 
 ### Wichtige Änderungen
