@@ -48,6 +48,183 @@ Release 04.07.2025
 
 ### Hinweise für die Aktualisierung
 
+#### Portal in Version 8 benötigt Anpassungen
+
+Mit dem neuen Portal (siehe [REDMINE-5686](https://redmine.informationgrid.eu/issues/5686) ) ändert sich auch die Konfiguration im Container Kontext.
+Die Abhängigkeiten zu einer Datenbank entfällt da es sich um ein Flat-File-CMS handelt und daher alle Website Inhalte in Form statischer Dateien auf dem Server gespeichert werden. Das erfordert Anpassungen für das Routing und benötigt Erweiterungen die FastCGI ermöglichen.
+
+
+In einer Docker Compose Umgebung muss die User Umgebung und sollten die Logs gemappt sein. Außerdem werden die InGrid Komponenten mittels der InGrid-API angesteuert die wiederum eine Verbindung zum Elastic Search herstellt.
+
+##### Anpassungen der docker-compose.yml
+
+Beispiel Konfiguration in einer gedockerten Umgebung (Beispiele für das Routing Nginx/Httpd siehe unten):
+
+```
+  ingrid-api:
+    image: docker-registry.wemove.com/ingrid-api:8.0.0
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Berlin
+      - ES_HOST=elastic
+      - ES_USERNAME=elastic
+      - ES_PASSWORD=admin
+      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,address=*:8476,server=y,suspend=n
+    networks:
+      - informationgrid-network
+
+  portal:
+    image: docker-registry.wemove.com/ingrid-portal:8.0.0
+    restart: unless-stopped
+    volumes:
+      - ./grav:/var/www/portal
+      - ./portal/logs:/var/www/portal/logs
+      - ./portal/user/:/var/www/portal/user/
+    environment:
+      - GRAV_FOLDER=portal
+      - INGRID_API=http://ingrid-api:8080/
+      - CODELIST_API=http://codelist-repo:8080/rest/getCodelists
+      - CODELIST_USER=admin
+      - CODELIST_PASS=admin
+      - MARKDOWN_AUTO_LINE_BREAKS=true
+      #- THEME_COPY_PAGES_INIT=true
+      - ENABLE_SCHEDULER_RSS=false
+      - ENABLE_MVIS=false
+      - ENABLE_FOOTER_BANNER=true
+    networks:
+      - informationgrid-network
+```
+
+Außerdem muss der GravCMS Ordner für den Webserver zur Verfügung stehen:
+
+Beispielkonfiguration für Nginx:
+
+```docker-compose.yml
+  nginx:
+    image: nginx:1.28
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Berlin
+      # nginx conf
+      - NGINX_HOST=${HOST}
+    volumes:
+      - ./nginx/www:/var/www
+      - ./nginx/auth:/etc/nginx/auth
+      - ./nginx/conf.d:/etc/nginx/templates
+      - ./ige-ng/upload:/tmp/ingrid/upload-ige-ng
+      - ./grav:/var/www/portal
+    ports:
+      - 80:80
+    networks:
+      - informationgrid-network
+```
+
+Beispielkonfiguration für Httpd:
+
+```
+  apache:
+    image: httpd:2.4
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ./apache/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./apache/vhost.conf:/usr/local/apache2/conf/extra/vhost.conf
+      - ./apache/passwdfile.ingrid:/etc/apache2/passwdfile.ingrid
+      - ./apache/passwdfile.phpmyadmin:/etc/apache2/passwdfile.phpmyadmin
+      - ./ige-ng/upload:/tmp/ingrid/upload-ige-ng
+      - ./grav:/var/www/portal
+      - ./portal/user:/var/www/portal/user
+
+```
+
+##### Anpassungen des Routings
+
+###### Beispiel Nginx
+
+Anpassungen des Virtualhost des Nginx
+
+```nginx/default.conf
+    # Routing zum Portal
+    location / {
+        #limit_req zone=one burst=5 delay=3;
+        auth_basic "Restricted Content";
+        auth_basic_user_file /etc/nginx/auth/passwdfile.ingrid;
+
+        root /var/www/portal;
+
+        index index.php index.html index.htm;
+
+        if (!-e $request_filename) { rewrite ^ /index.php last; }
+        try_files $uri $uri/ /index.php?$query_string;
+
+        ## Begin - Security
+        # deny all direct access for these folders
+        location ~* /(\.git|cache|bin|logs|backup|tests)/.*$ { return 403; }
+        # deny running scripts inside core system folders
+        location ~* /(system|vendor)/.*\.(txt|xml|md|html|yaml|yml|php|pl|py|cgi|twig|sh|bat)$ { return 403; }
+        # deny running scripts inside user folder
+        location ~* /user/.*\.(txt|md|yaml|yml|php|pl|py|cgi|twig|sh|bat)$ { return 403; }
+        # deny access to specific files in the root folder
+        location ~ /(LICENSE\.txt|composer\.lock|composer\.json|nginx\.conf|web\.config|htaccess\.txt|\.htaccess) { return 403; }
+        ## End - Security
+
+        if ($request_method !~ ^(GET|HEAD|POST)$ ) {
+           return 405;
+        }
+
+        location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|webp|woff2)$ {
+           expires 2d;
+           add_header Cache-Control "public, no-transform, max-age=31536000";
+        }
+
+        location ~ \.php$ {
+        # Choose either a socket or TCP/IP address
+        # fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+        # fastcgi_pass unix:/var/run/php5-fpm.sock; #legacy
+        fastcgi_pass portal:9000;
+
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
+        }
+
+    }
+```
+
+###### Beispiel Httpd
+
+Beispiel für eine httpd Konfiguration:
+
+```vhost.conf
+  DocumentRoot /var/www/portal-ng
+
+  ProxyPassMatch ^/(.*\.php(/.*)?)$ fcgi://portal-ng:9000/var/www/portal-ng/$1
+  DirectoryIndex /index.php index.php
+
+  <Directory /var/www>
+      AllowOverride All
+      Options FollowSymlinks
+      Satisfy Any
+      Require all granted
+  </Directory>
+
+  ProxyRequests Off
+
+```
+
+Das fastCGI Modul muss geladen werden.
+
+```httpd.conf
+#LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so
+#LoadModule proxy_scgi_module modules/mod_proxy_scgi.so
+#LoadModule proxy_fdpass_module modules/mod_proxy_fdpass.so
+LoadModule proxy_wstunnel_module modules/mod_proxy_wstunnel.so
+
+```
 
 ### Wichtige Änderungen
 
