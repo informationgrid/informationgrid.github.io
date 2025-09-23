@@ -404,10 +404,10 @@ atom.download.opensearch.definition.extension=/opensearch-description/{servicefe
 atom.download.opensearch.get.results.template=/service/{servicefeed-uuid}?q={searchTerms}
 
 # atom download service: opensearch describe spatial dataset url template
-atom.download.opensearch.describe.spatial.dataset.template=/dataset/{servicefeed-uuid}/?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;language={language?}
+atom.download.opensearch.describe.spatial.dataset.template=/dataset/{servicefeed-uuid}?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;language={language?}
 
 # atom download service: opensearch get spatial dataset url template
-atom.download.opensearch.get.spatial.dataset.template=/get-dataset/{servicefeed-uuid}/?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;crs={inspire_dls:crs?}&amp;language={language?}
+atom.download.opensearch.get.spatial.dataset.template=/get-dataset/{servicefeed-uuid}?spatial_dataset_identifier_code={inspire_dls:spatial_dataset_identifier_code?}&amp;spatial_dataset_identifier_namespace={inspire_dls:spatial_dataset_identifier_namespace?}&amp;crs={inspire_dls:crs?}&amp;language={language?}
 
 # atom download service: comma separated supported languages other languages will be ignored
 atom.download.opensearch.supported.languages=de
