@@ -14,6 +14,20 @@ Release TT.MM.JJJJ
 
 ### Hinweise für die Aktualisierung
 
+#### Interface-Search
+
+Durch die Aktualisierung der Interface-Search Komponenten muss die Konfiguration angepasst werden.
+Aus der Datei `interface-search.properties`  muss das Zeichen '/' vor dem `?` aus den folgenden Einträgen entfernt werden:
+
+* atom.download.opensearch.describe.spatial.dataset.template
+* atom.download.opensearch.get.spatial.dataset.template
+
+Ein korrekter Eintrag sieht bspw. so aus:
+
+```
+atom.download.opensearch.describe.spatial.dataset.template=/dataset/{servicefeed-uuid}?spatial_dataset_identifier_code=...
+```
+
 ### Wichtige Änderungen
 
 ### Liste der Änderungen
