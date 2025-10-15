@@ -1,5 +1,10 @@
+> ⚠️ Deprecated: This repository is no longer maintained.
+> The active version lives here: https://github.com/informationgrid/ingrid-oss.eu
+
 InGrid Documentation
 ====================
+
+https://archive.ingrid-oss.eu
 
 http://informationgrid.github.io/
 
