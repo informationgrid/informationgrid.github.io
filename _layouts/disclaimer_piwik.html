@@ -29,6 +29,21 @@
   {% assign thisVersion = path[0] %}
   {% assign latestVersion = site.versions | first %}
 
+  <!-- Deprecation hint to new documentation 
+  =========================================== -->
+  <div style="background: #00ff006b; font-size: x-large; padding: 20px; color: #0d0d0d;">
+    <div class="container">
+      <aside>
+        <strong>Diese Dokumentation ist veraltet.</strong>
+        <br>
+        Die aktuelle Dokumentation finden Sie unter 
+        <strong>
+          <a href="https://www.ingrid-oss.eu">ingrid-oss.eu</a>
+        </strong>.
+      </aside>
+    </div>
+  </div>
+
   <!-- Main navigation
   =========================================== -->
   <header class="navbar navbar-static-top bs-docs-nav" id="top">
